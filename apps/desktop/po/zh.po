@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 18:46\n"
+"PO-Revision-Date: 2026-11-17 21:37\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -22,25 +22,26 @@ msgstr ""
 #, rust-format
 msgid "Specto is licensed under either of the {apache} or the {mit}, at your option.\n\n"
 "It comes with no warranty of any kind."
-msgstr ""
+msgstr "Specto 依据 {apache} 或 {mit} 授权,由您任选其一。\n\n"
+"本软件不提供任何形式的担保。"
 
 #: src/main.rs:163
 msgid "The Specto contributors"
-msgstr ""
+msgstr "Specto 贡献者"
 
 #: src/main.rs:164
 msgid "© 2026 The Specto contributors"
-msgstr ""
+msgstr "© 2026 Specto 贡献者"
 
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:173
 msgid "hayro (rendering)"
-msgstr ""
+msgstr "hayro(渲染)"
 
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:175
 msgid "lopdf (saving)"
-msgstr ""
+msgstr "lopdf(保存)"
 
 #: src/main.rs:177
 msgid "Built with"
@@ -49,16 +50,16 @@ msgstr ""
 #: src/main.rs:207
 #, rust-format
 msgid "Quit {app}"
-msgstr ""
+msgstr "退出 {app}"
 
 #: src/main.rs:208 src/window.rs:251
 #, rust-format
 msgid "About {app}"
-msgstr ""
+msgstr "关于 {app}"
 
 #: src/main.rs:225 src/window.rs:152
 msgid "Open…"
-msgstr ""
+msgstr "打开…"
 
 #: src/main.rs:227 src/window.rs:213
 msgid "Save"
@@ -66,15 +67,15 @@ msgstr ""
 
 #: src/main.rs:228 src/window.rs:214
 msgid "Save As…"
-msgstr ""
+msgstr "另存为…"
 
 #: src/main.rs:229 src/window.rs:216
 msgid "Export Selected Pages…"
-msgstr ""
+msgstr "导出所选页面…"
 
 #: src/main.rs:232 src/window.rs:219
 msgid "Print…"
-msgstr ""
+msgstr "打印…"
 
 #: src/main.rs:233 src/properties.rs:201 src/window.rs:220
 msgid "Properties"
@@ -82,15 +83,15 @@ msgstr ""
 
 #: src/main.rs:235
 msgid "Close Window"
-msgstr ""
+msgstr "关闭窗口"
 
 #: src/main.rs:240 src/window/actions.rs:93
 msgid "Undo"
-msgstr ""
+msgstr "撤销"
 
 #: src/main.rs:241 src/window/actions.rs:97
 msgid "Redo"
-msgstr ""
+msgstr "重做"
 
 #: src/main.rs:244
 msgid "Copy"
@@ -98,31 +99,31 @@ msgstr ""
 
 #: src/main.rs:245
 msgid "Select All"
-msgstr ""
+msgstr "全选"
 
 #: src/main.rs:248 src/window.rs:234
 msgid "Insert Pages from File…"
-msgstr ""
+msgstr "从文件插入页面…"
 
 #: src/main.rs:249 src/window.rs:228
 msgid "Delete Pages"
-msgstr ""
+msgstr "删除页面"
 
 #: src/main.rs:252
 msgid "Find…"
-msgstr ""
+msgstr "查找…"
 
 #: src/main.rs:253
 msgid "Find Next"
-msgstr ""
+msgstr "查找下一个"
 
 #: src/main.rs:254
 msgid "Find Previous"
-msgstr ""
+msgstr "查找上一个"
 
 #: src/main.rs:259 src/window.rs:267
 msgid "Single Page"
-msgstr ""
+msgstr "单页"
 
 #: src/main.rs:260 src/window.rs:268
 msgid "Continuous"
@@ -130,47 +131,47 @@ msgstr ""
 
 #: src/main.rs:261 src/window.rs:269
 msgid "Two Pages"
-msgstr ""
+msgstr "双页"
 
 #: src/main.rs:263 src/window.rs:270
 msgid "Two Pages, Continuous"
-msgstr ""
+msgstr "双页连续"
 
 #: src/main.rs:267 src/window.rs:278
 msgid "Show Cover Page Alone"
-msgstr ""
+msgstr "单独显示封面"
 
 #: src/main.rs:269 src/window.rs:295
 msgid "Actual Size"
-msgstr ""
+msgstr "实际大小"
 
 #: src/main.rs:270 src/window.rs:293
 msgid "Fit Width"
-msgstr ""
+msgstr "适合宽度"
 
 #: src/main.rs:271 src/window.rs:294
 msgid "Fit Page"
-msgstr ""
+msgstr "适合页面"
 
 #: src/main.rs:272 src/window.rs:300
 msgid "Zoom In"
-msgstr ""
+msgstr "放大"
 
 #: src/main.rs:273 src/window.rs:301
 msgid "Zoom Out"
-msgstr ""
+msgstr "缩小"
 
 #: src/main.rs:276
 msgid "Show Sidebar"
-msgstr ""
+msgstr "显示侧边栏"
 
 #: src/main.rs:277 src/window.rs:755
 msgid "Thumbnails"
-msgstr ""
+msgstr "缩略图"
 
 #: src/main.rs:278 src/window.rs:780
 msgid "Contents"
-msgstr ""
+msgstr "目录"
 
 #: src/main.rs:279 src/window.rs:796 src/window/markup.rs:200
 msgid "Markup"
@@ -178,23 +179,23 @@ msgstr ""
 
 #: src/main.rs:284
 msgid "Previous Page"
-msgstr ""
+msgstr "上一页"
 
 #: src/main.rs:285
 msgid "Next Page"
-msgstr ""
+msgstr "下一页"
 
 #: src/main.rs:288
 msgid "First Page"
-msgstr ""
+msgstr "首页"
 
 #: src/main.rs:289
 msgid "Last Page"
-msgstr ""
+msgstr "末页"
 
 #: src/main.rs:291
 msgid "Go to Page…"
-msgstr ""
+msgstr "转到页面…"
 
 #: src/main.rs:293
 msgid "Back"
@@ -206,15 +207,15 @@ msgstr ""
 
 #: src/main.rs:300 src/window.rs:226
 msgid "Rotate Left"
-msgstr ""
+msgstr "向左旋转"
 
 #: src/main.rs:301 src/window.rs:227
 msgid "Rotate Right"
-msgstr ""
+msgstr "向右旋转"
 
 #: src/main.rs:304
 msgid "Show Markup Toolbar"
-msgstr ""
+msgstr "显示标注工具栏"
 
 #: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
@@ -226,27 +227,27 @@ msgstr ""
 
 #: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
-msgstr ""
+msgstr "删除线"
 
 #: src/main.rs:310 src/window.rs:242
 msgid "Highlight Form Fields"
-msgstr ""
+msgstr "高亮表单字段"
 
 #: src/main.rs:311 src/window.rs:245
 msgid "Reset Form"
-msgstr ""
+msgstr "重置表单"
 
 #: src/main.rs:316
 msgid "File"
-msgstr ""
+msgstr "文件"
 
 #: src/main.rs:317
 msgid "Edit"
-msgstr ""
+msgstr "编辑"
 
 #: src/main.rs:318
 msgid "View"
-msgstr ""
+msgstr "视图"
 
 #: src/main.rs:319
 msgid "Go"
@@ -254,11 +255,11 @@ msgstr ""
 
 #: src/main.rs:320
 msgid "Tools"
-msgstr ""
+msgstr "工具"
 
 #: src/main.rs:322
 msgid "Help"
-msgstr ""
+msgstr "帮助"
 
 #: src/markup_list.rs:47
 msgid "Drawing"
@@ -266,11 +267,11 @@ msgstr ""
 
 #: src/markup_list.rs:48
 msgid "Rectangle"
-msgstr ""
+msgstr "矩形"
 
 #: src/markup_list.rs:49
 msgid "Ellipse"
-msgstr ""
+msgstr "椭圆"
 
 #: src/markup_list.rs:50
 msgid "Line"
@@ -302,23 +303,23 @@ msgstr ""
 
 #: src/markup_list.rs:97
 msgid "Highlights, drawings and notes are listed here"
-msgstr ""
+msgstr "高亮、绘图和注释将列在此处"
 
 #: src/print.rs:135
 msgid "printing failed"
-msgstr ""
+msgstr "打印失败"
 
 #: src/print.rs:267
 msgid "couldn't open the file"
-msgstr ""
+msgstr "无法打开文件"
 
 #: src/properties.rs:36
 msgid "File Name"
-msgstr ""
+msgstr "文件名"
 
 #: src/properties.rs:37
 msgid "Folder"
-msgstr ""
+msgstr "文件夹"
 
 #: src/properties.rs:38
 msgid "Title"
@@ -326,116 +327,116 @@ msgstr ""
 
 #: src/properties.rs:39
 msgid "Author"
-msgstr ""
+msgstr "作者"
 
 #: src/properties.rs:40
 msgid "Subject"
-msgstr ""
+msgstr "主题"
 
 #: src/properties.rs:41
 msgid "Keywords"
-msgstr ""
+msgstr "关键词"
 
 #. Translators: the program a document was written in.
 #: src/properties.rs:43
 msgid "Created With"
-msgstr ""
+msgstr "创建程序"
 
 #. Translators: the program that turned a document into a PDF.
 #: src/properties.rs:45
 msgid "PDF Producer"
-msgstr ""
+msgstr "PDF 生成程序"
 
 #: src/properties.rs:46
 msgid "Created"
-msgstr ""
+msgstr "创建时间"
 
 #: src/properties.rs:47
 msgid "Modified"
-msgstr ""
+msgstr "修改时间"
 
 #: src/properties.rs:48
 msgid "Pages"
-msgstr ""
+msgstr "页数"
 
 #: src/properties.rs:49
 msgid "Page Size"
-msgstr ""
+msgstr "页面大小"
 
 #: src/properties.rs:51
 msgid "File Size"
-msgstr ""
+msgstr "文件大小"
 
 #: src/properties.rs:54
 msgid "PDF Version"
-msgstr ""
+msgstr "PDF 版本"
 
 #: src/properties.rs:56
 msgid "Protection"
-msgstr ""
+msgstr "保护"
 
 #: src/properties.rs:58
 msgid "Password to open"
-msgstr ""
+msgstr "打开密码"
 
 #: src/properties.rs:59
 msgid "Encrypted, opens without a password"
-msgstr ""
+msgstr "已加密,无需密码即可打开"
 
 #: src/properties.rs:60
 msgid "None"
-msgstr ""
+msgstr "无"
 
 #: src/properties.rs:65
 msgid "Not Allowed"
-msgstr ""
+msgstr "不允许"
 
 #: src/properties.rs:73
 msgid "Printing"
-msgstr ""
+msgstr "打印"
 
 #: src/properties.rs:74
 msgid "Copying text and pictures"
-msgstr ""
+msgstr "复制文字和图片"
 
 #: src/properties.rs:75
 msgid "Changing the pages"
-msgstr ""
+msgstr "更改页面"
 
 #: src/properties.rs:78
 msgid "Marking up and filling in forms"
-msgstr ""
+msgstr "批注和填写表单"
 
 #. Translators: a page size in inches, "8.5 × 11 in".
 #: src/properties.rs:140
 #, rust-format
 msgid "{width} × {height} in"
-msgstr ""
+msgstr "{width} × {height} 英寸"
 
 #. Translators: a page size in millimeters, "210 × 297 mm".
 #: src/properties.rs:147
 #, rust-format
 msgid "{width} × {height} mm"
-msgstr ""
+msgstr "{width} × {height} 毫米"
 
 #. Translators: a page size and the name of the paper, "297 × 210 mm (A4,
 #. landscape)".
 #: src/properties.rs:158
 #, rust-format
 msgid "{size} ({paper}, landscape)"
-msgstr ""
+msgstr "{size}({paper},横向)"
 
 #. Translators: a page size and the name of the paper, "210 × 297 mm (A4)".
 #: src/properties.rs:163
 #, rust-format
 msgid "{size} ({paper})"
-msgstr ""
+msgstr "{size}({paper})"
 
 #. Translators: {size} is the size of the first page, "210 × 297 mm (A4)".
 #: src/properties.rs:179
 #, rust-format
 msgid "{size}, other pages differ"
-msgstr ""
+msgstr "{size},其他页面大小不同"
 
 #: src/signatures.rs:344
 msgid "Clear"
@@ -443,7 +444,7 @@ msgstr ""
 
 #: src/signatures.rs:356
 msgid "Sign with the mouse or the touchpad"
-msgstr ""
+msgstr "使用鼠标或触摸板签名"
 
 #: src/signatures.rs:364
 msgid "Draw"
@@ -451,15 +452,15 @@ msgstr ""
 
 #: src/signatures.rs:381
 msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
-msgstr ""
+msgstr "在白纸上签名,拍下照片,然后选择该照片。纸张背景会被去除,只保留墨迹。"
 
 #: src/signatures.rs:388
 msgid "Choose Picture…"
-msgstr ""
+msgstr "选择图片…"
 
 #: src/signatures.rs:395
 msgid "To the left, faint strokes are kept, and more of the paper's shadows. To the right, only what is dark."
-msgstr ""
+msgstr "向左调节会保留较淡的笔画,以及更多纸张的阴影;向右调节则只保留深色部分。"
 
 #: src/signatures.rs:398
 msgid "Ink as in the picture"
@@ -467,11 +468,11 @@ msgstr ""
 
 #: src/signatures.rs:399
 msgid "Black ink"
-msgstr ""
+msgstr "黑色墨水"
 
 #: src/signatures.rs:400
 msgid "Blue ink"
-msgstr ""
+msgstr "蓝色墨水"
 
 #: src/signatures.rs:403
 msgid "Faint"
@@ -487,11 +488,11 @@ msgstr ""
 
 #: src/signatures.rs:439
 msgid "Move the slider until the paper is gone and the strokes are whole."
-msgstr ""
+msgstr "移动滑块,直到纸张背景消失且笔画完整。"
 
 #: src/signatures.rs:441
 msgid "No ink found in this picture. Move the slider to the left."
-msgstr ""
+msgstr "在此图片中未找到墨迹。请将滑块向左移动。"
 
 #: src/signatures.rs:458
 msgid "Pictures"
@@ -499,7 +500,7 @@ msgstr ""
 
 #: src/signatures.rs:463
 msgid "Choose a Picture of a Signature"
-msgstr ""
+msgstr "选择签名图片"
 
 #: src/signatures.rs:480 src/window/files.rs:420 src/window/files.rs:522
 #: src/window/files.rs:751
@@ -512,15 +513,15 @@ msgstr ""
 
 #: src/signatures.rs:510
 msgid "New Signature"
-msgstr ""
+msgstr "新建签名"
 
 #: src/window.rs:148
 msgid "Open a PDF"
-msgstr ""
+msgstr "打开 PDF"
 
 #: src/window.rs:149
 msgid "Drop a file here or choose one"
-msgstr ""
+msgstr "将文件拖放到此处,或选择一个文件"
 
 #: src/window.rs:162
 msgid "Recent"
@@ -537,11 +538,11 @@ msgstr ""
 
 #: src/window.rs:258
 msgid "Main Menu"
-msgstr ""
+msgstr "主菜单"
 
 #: src/window.rs:285
 msgid "Page Layout"
-msgstr ""
+msgstr "页面布局"
 
 #: src/window.rs:306
 msgid "Zoom"
@@ -550,7 +551,7 @@ msgstr ""
 #: src/window.rs:317
 #, rust-format
 msgid "Go to Page ({shortcut})"
-msgstr ""
+msgstr "跳转到页面 ({shortcut})"
 
 #: src/window.rs:330
 msgid "Search"
@@ -558,135 +559,135 @@ msgstr ""
 
 #: src/window.rs:342
 msgid "Previous Match (Shift+Enter)"
-msgstr ""
+msgstr "上一个匹配项 (Shift+Enter)"
 
 #: src/window.rs:349
 msgid "Next Match (Enter)"
-msgstr ""
+msgstr "下一个匹配项 (Enter)"
 
 #: src/window.rs:371
 #, rust-format
 msgid "Search ({shortcut})"
-msgstr ""
+msgstr "搜索 ({shortcut})"
 
 #: src/window.rs:900
 #, rust-format
 msgid "Links of this kind aren't opened: {address}"
-msgstr ""
+msgstr "不会打开此类链接:{address}"
 
 #: src/window.rs:909
 #, rust-format
 msgid "Couldn't open link: {error}"
-msgstr ""
+msgstr "无法打开链接:{error}"
 
 #. Translators: a keyboard shortcut as tooltips show it, the
 #. Control key with another.
 #: src/window.rs:960
 #, rust-format
 msgid "Ctrl+{key}"
-msgstr ""
+msgstr "Ctrl+{key}"
 
 #: src/window/actions.rs:103
 #, rust-format
 msgid "{n} page — Edited"
 msgid_plural "{n} pages — Edited"
-msgstr[0] ""
+msgstr[0] "{n} 页 — 已编辑"
 
 #: src/window/actions.rs:105 src/window/pages.rs:133
 #, rust-format
 msgid "{n} page"
 msgid_plural "{n} pages"
-msgstr[0] ""
+msgstr[0] "{n} 页"
 
 #. Translators: follows the box with the page number: "3 of 120".
 #: src/window/actions.rs:111
 #, rust-format
 msgid "of {pages}"
-msgstr ""
+msgstr "/ {pages}"
 
 #. Translators: follows the box with a printed page number:
 #. "iv (4 of 120)".
 #: src/window/actions.rs:511
 #, rust-format
 msgid "({position} of {pages})"
-msgstr ""
+msgstr "(第 {position} 页,共 {pages} 页)"
 
 #: src/window/files.rs:8
 #, rust-format
 msgid "Couldn't read “{name}”: {error}"
-msgstr ""
+msgstr "无法读取“{name}”:{error}"
 
 #: src/window/files.rs:15
 #, rust-format
 msgid "Couldn't save “{name}”: {error}"
-msgstr ""
+msgstr "无法保存“{name}”:{error}"
 
 #: src/window/files.rs:23
 msgid "PDF documents"
-msgstr ""
+msgstr "PDF 文档"
 
 #: src/window/files.rs:54
 msgid "reading failed"
-msgstr ""
+msgstr "读取失败"
 
 #: src/window/files.rs:98 src/window/files.rs:102
 msgid "saving failed"
-msgstr ""
+msgstr "保存失败"
 
 #: src/window/files.rs:175
 msgid "the document's password is needed"
-msgstr ""
+msgstr "需要输入文档密码"
 
 #: src/window/files.rs:177
 #, rust-format
 msgid "{app} can't save this document correctly yet"
-msgstr ""
+msgstr "{app} 暂时无法正确保存此文档"
 
 #: src/window/files.rs:249 src/window/pages.rs:405
 #, rust-format
 msgid "Couldn't open “{name}”: {error}"
-msgstr ""
+msgstr "无法打开“{name}”:{error}"
 
 #: src/window/files.rs:323
 #, rust-format
 msgid "“{name}” was moved or deleted. Saving writes it again."
-msgstr ""
+msgstr "“{name}”已被移动或删除。保存将重新写入该文件。"
 
 #: src/window/files.rs:332
 #, rust-format
 msgid "“{name}” was changed by another program. Reloading discards your edits."
-msgstr ""
+msgstr "“{name}”已被其他程序修改。重新加载将丢弃您的编辑。"
 
 #: src/window/files.rs:335
 msgid "_Reload"
-msgstr ""
+msgstr "重新加载(_R)"
 
 #: src/window/files.rs:413
 msgid "File Changed on Disk"
-msgstr ""
+msgstr "文件已在磁盘上被更改"
 
 #: src/window/files.rs:415
 #, rust-format
 msgid "“{name}” was changed by another program after it was opened. Saving replaces those changes with this document."
-msgstr ""
+msgstr "“{name}”在打开后被其他程序更改。保存将用当前文档覆盖这些更改。"
 
 #: src/window/files.rs:421
 msgid "_Save Anyway"
-msgstr ""
+msgstr "仍然保存(_S)"
 
 #: src/window/files.rs:514
 #, rust-format
 msgid "The password was incorrect. Enter the password for “{name}”."
-msgstr ""
+msgstr "密码不正确。请输入“{name}”的密码。"
 
 #: src/window/files.rs:518
 #, rust-format
 msgid "“{name}” is protected with a password."
-msgstr ""
+msgstr "“{name}”受密码保护。"
 
 #: src/window/files.rs:520
 msgid "Password Required"
-msgstr ""
+msgstr "需要密码"
 
 #: src/window/files.rs:523
 msgid "_Unlock"
@@ -695,20 +696,20 @@ msgstr ""
 #: src/window/files.rs:611
 #, rust-format
 msgid "Couldn't print: {error}"
-msgstr ""
+msgstr "无法打印:{error}"
 
 #: src/window/files.rs:656
 msgid "Save As"
-msgstr ""
+msgstr "另存为"
 
 #: src/window/files.rs:744
 msgid "Save Changes?"
-msgstr ""
+msgstr "是否保存更改?"
 
 #: src/window/files.rs:746
 #, rust-format
 msgid "“{name}” has unsaved changes. Changes that aren't saved will be lost."
-msgstr ""
+msgstr "“{name}”有未保存的更改。未保存的更改将会丢失。"
 
 #: src/window/files.rs:752
 msgid "_Discard"
@@ -716,7 +717,7 @@ msgstr ""
 
 #: src/window/files.rs:774
 msgid "Open PDF"
-msgstr ""
+msgstr "打开 PDF"
 
 #: src/window/markup.rs:36
 #, rust-format
@@ -725,19 +726,19 @@ msgstr ""
 
 #: src/window/markup.rs:50
 msgid "Draw freehand"
-msgstr ""
+msgstr "自由绘制"
 
 #: src/window/markup.rs:51
 msgid "Draw rectangles"
-msgstr ""
+msgstr "绘制矩形"
 
 #: src/window/markup.rs:52
 msgid "Draw ellipses"
-msgstr ""
+msgstr "绘制椭圆"
 
 #: src/window/markup.rs:53
 msgid "Draw lines"
-msgstr ""
+msgstr "绘制直线"
 
 #: src/window/markup.rs:54
 msgid "Add text: click where it goes"
@@ -757,15 +758,15 @@ msgstr ""
 
 #: src/window/markup.rs:121
 msgid "Sans-serif"
-msgstr ""
+msgstr "无衬线体"
 
 #: src/window/markup.rs:122
 msgid "Serif"
-msgstr ""
+msgstr "衬线体"
 
 #: src/window/markup.rs:123
 msgid "Monospace"
-msgstr ""
+msgstr "等宽字体"
 
 #: src/window/markup.rs:149
 msgid "Font"
@@ -781,31 +782,31 @@ msgstr ""
 
 #: src/window/markup.rs:167
 msgid "Text size in points"
-msgstr ""
+msgstr "文字大小(磅)"
 
 #: src/window/markup.rs:228
 msgid "Yellow"
-msgstr ""
+msgstr "黄色"
 
 #: src/window/markup.rs:229
 msgid "Green"
-msgstr ""
+msgstr "绿色"
 
 #: src/window/markup.rs:230
 msgid "Blue"
-msgstr ""
+msgstr "蓝色"
 
 #: src/window/markup.rs:231
 msgid "Pink"
-msgstr ""
+msgstr "粉色"
 
 #: src/window/markup.rs:232
 msgid "Purple"
-msgstr ""
+msgstr "紫色"
 
 #: src/window/markup.rs:233
 msgid "Red"
-msgstr ""
+msgstr "红色"
 
 #: src/window/markup.rs:234
 msgid "Black"
@@ -813,189 +814,189 @@ msgstr ""
 
 #: src/window/markup.rs:556
 msgid "Select the text to mark first"
-msgstr ""
+msgstr "请先选择要标记的文字"
 
 #: src/window/markup.rs:602
 msgid "Place this signature: click where it goes"
-msgstr ""
+msgstr "放置此签名:点击要放置的位置"
 
 #: src/window/markup.rs:614
 msgid "Delete this signature"
-msgstr ""
+msgstr "删除此签名"
 
 #: src/window/markup.rs:630
 msgid "New Signature…"
-msgstr ""
+msgstr "新建签名…"
 
 #: src/window/markup.rs:659
 msgid "Click where the signature goes"
-msgstr ""
+msgstr "点击签名要放置的位置"
 
 #: src/window/markup.rs:1544 src/window/markup.rs:1571
 #: src/window/markup.rs:1664 src/window/markup.rs:1717
 #, rust-format
 msgid "Couldn't change the annotation: {error}"
-msgstr ""
+msgstr "无法更改批注:{error}"
 
 #: src/window/pages.rs:27
 #, rust-format
 msgid "Undo Rotate Page"
 msgid_plural "Undo Rotate {n} Pages"
-msgstr[0] ""
+msgstr[0] "撤销旋转 {n} 页"
 
 #: src/window/pages.rs:30
 #, rust-format
 msgid "Undo Delete Page"
 msgid_plural "Undo Delete {n} Pages"
-msgstr[0] ""
+msgstr[0] "撤销删除 {n} 页"
 
 #: src/window/pages.rs:32
 #, rust-format
 msgid "Undo Move Page"
 msgid_plural "Undo Move {n} Pages"
-msgstr[0] ""
+msgstr[0] "撤销移动 {n} 页"
 
 #: src/window/pages.rs:34
 #, rust-format
 msgid "Undo Insert Page"
 msgid_plural "Undo Insert {n} Pages"
-msgstr[0] ""
+msgstr[0] "撤销插入 {n} 页"
 
 #: src/window/pages.rs:36
 msgid "Undo Highlight"
-msgstr ""
+msgstr "撤销高亮"
 
 #: src/window/pages.rs:37
 msgid "Undo Underline"
-msgstr ""
+msgstr "撤销下划线"
 
 #: src/window/pages.rs:38
 msgid "Undo Strikethrough"
-msgstr ""
+msgstr "撤销删除线"
 
 #: src/window/pages.rs:39
 msgid "Undo Drawing"
-msgstr ""
+msgstr "撤销绘图"
 
 #: src/window/pages.rs:40
 msgid "Undo Rectangle"
-msgstr ""
+msgstr "撤销矩形"
 
 #: src/window/pages.rs:41
 msgid "Undo Ellipse"
-msgstr ""
+msgstr "撤销椭圆"
 
 #: src/window/pages.rs:42
 msgid "Undo Line"
-msgstr ""
+msgstr "撤销直线"
 
 #: src/window/pages.rs:43
 msgid "Undo Note"
-msgstr ""
+msgstr "撤销注释"
 
 #: src/window/pages.rs:44
 msgid "Undo Text Box"
-msgstr ""
+msgstr "撤销文本框"
 
 #: src/window/pages.rs:45
 msgid "Undo Add Annotation"
-msgstr ""
+msgstr "撤销添加批注"
 
 #: src/window/pages.rs:46
 msgid "Undo Delete Annotation"
-msgstr ""
+msgstr "撤销删除批注"
 
 #: src/window/pages.rs:47
 msgid "Undo Change Annotation"
-msgstr ""
+msgstr "撤销修改批注"
 
 #: src/window/pages.rs:48
 msgid "Undo Fill In Field"
-msgstr ""
+msgstr "撤销填写字段"
 
 #: src/window/pages.rs:49
 msgid "Undo Reset Form"
-msgstr ""
+msgstr "撤销重置表单"
 
 #: src/window/pages.rs:57
 #, rust-format
 msgid "Redo Rotate Page"
 msgid_plural "Redo Rotate {n} Pages"
-msgstr[0] ""
+msgstr[0] "重做旋转 {n} 页"
 
 #: src/window/pages.rs:60
 #, rust-format
 msgid "Redo Delete Page"
 msgid_plural "Redo Delete {n} Pages"
-msgstr[0] ""
+msgstr[0] "重做删除 {n} 页"
 
 #: src/window/pages.rs:62
 #, rust-format
 msgid "Redo Move Page"
 msgid_plural "Redo Move {n} Pages"
-msgstr[0] ""
+msgstr[0] "重做移动 {n} 页"
 
 #: src/window/pages.rs:64
 #, rust-format
 msgid "Redo Insert Page"
 msgid_plural "Redo Insert {n} Pages"
-msgstr[0] ""
+msgstr[0] "重做插入 {n} 页"
 
 #: src/window/pages.rs:66
 msgid "Redo Highlight"
-msgstr ""
+msgstr "重做高亮"
 
 #: src/window/pages.rs:67
 msgid "Redo Underline"
-msgstr ""
+msgstr "重做下划线"
 
 #: src/window/pages.rs:68
 msgid "Redo Strikethrough"
-msgstr ""
+msgstr "重做删除线"
 
 #: src/window/pages.rs:69
 msgid "Redo Drawing"
-msgstr ""
+msgstr "重做绘图"
 
 #: src/window/pages.rs:70
 msgid "Redo Rectangle"
-msgstr ""
+msgstr "重做矩形"
 
 #: src/window/pages.rs:71
 msgid "Redo Ellipse"
-msgstr ""
+msgstr "重做椭圆"
 
 #: src/window/pages.rs:72
 msgid "Redo Line"
-msgstr ""
+msgstr "重做直线"
 
 #: src/window/pages.rs:73
 msgid "Redo Note"
-msgstr ""
+msgstr "重做注释"
 
 #: src/window/pages.rs:74
 msgid "Redo Text Box"
-msgstr ""
+msgstr "重做文本框"
 
 #: src/window/pages.rs:75
 msgid "Redo Add Annotation"
-msgstr ""
+msgstr "重做添加批注"
 
 #: src/window/pages.rs:76
 msgid "Redo Delete Annotation"
-msgstr ""
+msgstr "重做删除批注"
 
 #: src/window/pages.rs:77
 msgid "Redo Change Annotation"
-msgstr ""
+msgstr "重做更改批注"
 
 #: src/window/pages.rs:78
 msgid "Redo Fill In Field"
-msgstr ""
+msgstr "重做填写字段"
 
 #: src/window/pages.rs:79
 msgid "Redo Reset Form"
-msgstr ""
+msgstr "重做重置表单"
 
 #: src/window/pages.rs:119
 #, rust-format
@@ -1010,44 +1011,44 @@ msgstr ""
 #: src/window/pages.rs:199
 #, rust-format
 msgid "Couldn't delete the annotation: {error}"
-msgstr ""
+msgstr "无法删除批注:{error}"
 
 #: src/window/pages.rs:260
 #, rust-format
 msgid "Couldn't copy the pages: {error}"
-msgstr ""
+msgstr "无法复制页面:{error}"
 
 #: src/window/pages.rs:314
 msgid "Insert Pages from File"
-msgstr ""
+msgstr "从文件插入页面"
 
 #: src/window/pages.rs:447
 msgid "Export Selected Pages"
-msgstr ""
+msgstr "导出所选页面"
 
 #: src/window/pages.rs:480
 #, rust-format
 msgid "Exported {n} page to “{name}”"
 msgid_plural "Exported {n} pages to “{name}”"
-msgstr[0] ""
+msgstr[0] "已将 {n} 个页面导出到“{name}”"
 
 #: src/window/search.rs:187
 msgid "No matches"
-msgstr ""
+msgstr "无匹配项"
 
 #: src/window/search.rs:188
 msgid "Searching…"
-msgstr ""
+msgstr "正在搜索…"
 
 #: src/window/search.rs:193
 #, rust-format
 msgid "{current} of {total}"
-msgstr ""
+msgstr "第 {current} 项,共 {total} 项"
 
 #. Translators: the search is still running, so there may be
 #. more matches than {total}.
 #: src/window/search.rs:197
 #, rust-format
 msgid "{current} of {total}…"
-msgstr ""
+msgstr "第 {current} 项,共 {total} 项…"
 

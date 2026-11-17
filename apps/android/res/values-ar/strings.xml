@@ -9,146 +9,146 @@
 -->
 <resources>
     <!-- Buttons that many dialogs share. -->
-    <string name="cancel">Cancel</string>
-    <string name="close">Close</string>
+    <string name="cancel">إلغاء</string>
+    <string name="close">إغلاق</string>
     <string name="open">Open</string>
-    <string name="save">Save</string>
-    <string name="save_as">Save as</string>
-    <string name="discard">Discard</string>
-    <string name="delete">Delete</string>
+    <string name="save">حفظ</string>
+    <string name="save_as">حفظ باسم</string>
+    <string name="discard">تجاهل</string>
+    <string name="delete">حذف</string>
     <string name="share">Share</string>
-    <string name="select_all">Select all</string>
+    <string name="select_all">تحديد الكل</string>
     <!-- Describes the ⋮ button to screen readers. -->
     <string name="more">More</string>
-    <string name="back">Back</string>
+    <string name="back">رجوع</string>
     <!-- The top bar. -->
-    <string name="back_to_document">Back to document</string>
-    <string name="contents_and_pages">Contents and pages</string>
+    <string name="back_to_document">العودة إلى المستند</string>
+    <string name="contents_and_pages">المحتويات والصفحات</string>
     <!-- Beside the document's name while it has unsaved changes. -->
-    <string name="edited">Edited</string>
+    <string name="edited">معدَّل</string>
     <string name="search">Search</string>
     <!-- The ⋮ menu. -->
-    <string name="menu_open">Open</string>
-    <string name="menu_share">Share</string>
-    <string name="menu_print">Print</string>
-    <string name="menu_go_to_page">Go to page</string>
-    <string name="menu_properties">Properties</string>
-    <string name="menu_highlight_fields">Highlight form fields</string>
-    <string name="menu_reset_form">Reset form</string>
-    <string name="menu_settings">Settings</string>
+    <string name="menu_open">فتح</string>
+    <string name="menu_share">مشاركة</string>
+    <string name="menu_print">طباعة</string>
+    <string name="menu_go_to_page">الانتقال إلى صفحة</string>
+    <string name="menu_properties">الخصائص</string>
+    <string name="menu_highlight_fields">إبراز حقول النموذج</string>
+    <string name="menu_reset_form">إعادة تعيين النموذج</string>
+    <string name="menu_settings">الإعدادات</string>
     <!-- Closes the document and returns to the start screen. -->
-    <string name="menu_close">Close</string>
-    <string name="undo_rotate">Undo rotate</string>
-    <string name="undo_delete">Undo delete</string>
-    <string name="undo_move">Undo move</string>
-    <string name="undo_insert">Undo insert</string>
-    <string name="undo_add_annotation">Undo add annotation</string>
-    <string name="undo_remove_annotation">Undo delete annotation</string>
-    <string name="undo_change_annotation">Undo change annotation</string>
-    <string name="undo_fill_field">Undo fill in field</string>
-    <string name="undo_reset_form">Undo reset form</string>
-    <string name="redo_rotate">Redo rotate</string>
-    <string name="redo_delete">Redo delete</string>
-    <string name="redo_move">Redo move</string>
-    <string name="redo_insert">Redo insert</string>
-    <string name="redo_add_annotation">Redo add annotation</string>
-    <string name="redo_remove_annotation">Redo delete annotation</string>
-    <string name="redo_change_annotation">Redo change annotation</string>
-    <string name="redo_fill_field">Redo fill in field</string>
-    <string name="redo_reset_form">Redo reset form</string>
+    <string name="menu_close">إغلاق</string>
+    <string name="undo_rotate">التراجع عن التدوير</string>
+    <string name="undo_delete">التراجع عن الحذف</string>
+    <string name="undo_move">التراجع عن النقل</string>
+    <string name="undo_insert">التراجع عن الإدراج</string>
+    <string name="undo_add_annotation">التراجع عن إضافة التعليق</string>
+    <string name="undo_remove_annotation">التراجع عن حذف التعليق</string>
+    <string name="undo_change_annotation">التراجع عن تغيير التعليق</string>
+    <string name="undo_fill_field">التراجع عن ملء الحقل</string>
+    <string name="undo_reset_form">التراجع عن تصفير الاستمارة</string>
+    <string name="redo_rotate">إعادة التدوير</string>
+    <string name="redo_delete">إعادة الحذف</string>
+    <string name="redo_move">إعادة النقل</string>
+    <string name="redo_insert">إعادة الإدراج</string>
+    <string name="redo_add_annotation">إعادة إضافة التعليق</string>
+    <string name="redo_remove_annotation">إعادة حذف التعليق</string>
+    <string name="redo_change_annotation">إعادة تغيير التعليق</string>
+    <string name="redo_fill_field">إعادة ملء الحقل</string>
+    <string name="redo_reset_form">إعادة تصفير الاستمارة</string>
     <!-- The start screen. -->
-    <string name="open_pdf">Open PDF</string>
+    <string name="open_pdf">افتح ملف PDF</string>
     <string name="recent">Recent</string>
     <!-- Where the reader left off in a recent document. -->
-    <string name="recent_page">Page %1$d</string>
-    <string name="recent_page_of">Page %1$d of %2$d</string>
+    <string name="recent_page">الصفحة %1$d</string>
+    <string name="recent_page_of">الصفحة %1$d من %2$d</string>
     <!-- Where the reader left off, and how long ago: "Page 12 of 240 · 2 hours ago". -->
     <string name="recent_summary">%1$s · %2$s</string>
     <!-- Opening a document. -->
     <!-- What a document without a name is called. -->
     <string name="unnamed_document">PDF</string>
-    <string name="could_not_open">Couldn\'t open this file</string>
-    <string name="open_another">Open another PDF</string>
-    <string name="password_protected">%1$s is password protected</string>
-    <string name="password_needed">A password is needed to open %1$s.</string>
-    <string name="password_title">Password required</string>
-    <string name="password_prompt">Enter the password to open %1$s.</string>
-    <string name="password_label">Password</string>
-    <string name="password_wrong">That password didn\'t work.</string>
+    <string name="could_not_open">تعذّر فتح هذا الملف</string>
+    <string name="open_another">افتح ملف PDF آخر</string>
+    <string name="password_protected">‏%1$s محمي بكلمة سر</string>
+    <string name="password_needed">يلزم إدخال كلمة سر لفتح %1$s.</string>
+    <string name="password_title">كلمة السر مطلوبة</string>
+    <string name="password_prompt">أدخل كلمة السر لفتح %1$s.</string>
+    <string name="password_label">كلمة السر</string>
+    <string name="password_wrong">كلمة السر هذه غير صحيحة.</string>
     <!-- Pages and Contents. -->
-    <string name="tab_pages">Pages</string>
-    <string name="tab_contents">Contents</string>
+    <string name="tab_pages">الصفحات</string>
+    <string name="tab_contents">المحتويات</string>
     <string name="collapse">Collapse</string>
     <string name="expand">Expand</string>
     <!-- What a long press on a page in the page grid does, for screen readers. -->
     <string name="pick">Pick</string>
     <!-- Follows the finger while pages are dragged to another place. -->
     <plurals name="pages_dragged">
-        <item quantity="zero">%d pages</item>
-        <item quantity="one">%d page</item>
-        <item quantity="two">%d pages</item>
-        <item quantity="few">%d pages</item>
-        <item quantity="many">%d pages</item>
-        <item quantity="other">%d pages</item>
+        <item quantity="zero">لا صفحات</item>
+        <item quantity="one">صفحة واحدة</item>
+        <item quantity="two">صفحتان</item>
+        <item quantity="few">%d صفحات</item>
+        <item quantity="many">%d صفحة</item>
+        <item quantity="other">%d صفحة</item>
     </plurals>
     <!-- Links that lead out of the document. -->
-    <string name="link_open_title">Open this link?</string>
-    <string name="link_blocked_title">This link can\'t be opened</string>
+    <string name="link_open_title">أتريد فتح هذا الرابط؟</string>
+    <string name="link_blocked_title">تعذّر فتح هذا الرابط</string>
     <!-- "Go to page". -->
-    <string name="go_to_title">Go to page</string>
+    <string name="go_to_title">انتقل إلى صفحة</string>
     <!-- The field's label, with the first and last page number: "Page (i–240)". -->
-    <string name="go_to_label">Page (%1$s–%2$s)</string>
+    <string name="go_to_label">الصفحة (%1$s–%2$s)</string>
     <!-- Which page a typed page number is, counted from the first. -->
-    <string name="go_to_position">Page %1$d of %2$d</string>
-    <string name="go_to_position_hint">Or a position, 1–%1$d</string>
+    <string name="go_to_position">الصفحة %1$d من %2$d</string>
+    <string name="go_to_position_hint">أو موضع، 1–%1$d</string>
     <string name="go">Go</string>
     <!-- Search. -->
-    <string name="close_search">Close search</string>
-    <string name="previous_match">Previous match</string>
-    <string name="next_match">Next match</string>
+    <string name="close_search">أغلق البحث</string>
+    <string name="previous_match">المطابقة السابقة</string>
+    <string name="next_match">المطابقة التالية</string>
     <!-- Which match is shown: "3 of 17". -->
-    <string name="search_count">%1$d of %2$d</string>
+    <string name="search_count">%1$d من %2$d</string>
     <!-- The same while the document is still being searched. -->
-    <string name="search_count_so_far">%1$d of %2$d…</string>
+    <string name="search_count_so_far">%1$d من %2$d…</string>
     <!-- Still searching, nothing found yet. -->
     <string name="search_running">…</string>
-    <string name="no_matches">No matches</string>
+    <string name="no_matches">لا توجد مطابقات</string>
     <!-- Selected text. -->
     <!-- Marks the selected text: with a highlighter, or a line under or through it. -->
     <string name="highlight">Highlight</string>
-    <string name="underline">Underline</string>
-    <string name="strike_through">Strike through</string>
+    <string name="underline">تسطير</string>
+    <string name="strike_through">شطب</string>
     <!-- Tells screen readers that an annotation (a mark on the text, a note, a drawing) is picked. -->
-    <string name="annotation_selected">Annotation selected</string>
-    <string name="could_not_delete_annotation">Couldn\'t delete the annotation: %1$s</string>
+    <string name="annotation_selected">حوشية محددة</string>
+    <string name="could_not_delete_annotation">تعذر حذف الحاشية: %1$s</string>
     <!-- Titles of the dialogs that fill in a field of a form, where the form has no name for it. -->
-    <string name="field_text_title">Fill in field</string>
+    <string name="field_text_title">املأ الحقل</string>
     <string name="field_choice_title">Choose</string>
     <string name="field_done">Done</string>
     <!-- The line of a menu of a form that takes text of one\'s own instead of one of its options. -->
-    <string name="field_own_text">Or type your own</string>
+    <string name="field_own_text">أو اكتب نصك الخاص</string>
     <!-- How many characters a field holds of how many it takes, such as 3 / 10. -->
     <string name="field_length">%1$d / %2$d</string>
     <string name="copy">Copy</string>
-    <string name="copied">Copied</string>
-    <string name="too_much_to_copy">That is too much text to copy at once</string>
-    <string name="too_much_to_share">That is too much text to share at once</string>
+    <string name="copied">نُسخ</string>
+    <string name="too_much_to_copy">هذا نص أطول من أن يُنسخ دفعة واحدة</string>
+    <string name="too_much_to_share">هذا نص أطول من أن يُشارك دفعة واحدة</string>
     <!-- What the clipboard calls text copied from a document. -->
-    <string name="clip_label">Text from a PDF</string>
+    <string name="clip_label">نص من ملف PDF</string>
     <!-- Tells screen readers that text is selected on the page. -->
-    <string name="text_selected">Text selected</string>
+    <string name="text_selected">نص محدد</string>
     <!-- The page view. -->
-    <string name="still_drawing">Still drawing this page</string>
+    <string name="still_drawing">ما زال رسم هذه الصفحة جاريًا</string>
     <!-- The view menu. -->
     <!-- Describes the view button: "View: Single page". -->
-    <string name="view_description">View: %1$s</string>
-    <string name="layout_single_page">Single page</string>
+    <string name="view_description">العرض: %1$s</string>
+    <string name="layout_single_page">صفحة واحدة</string>
     <string name="layout_continuous">Continuous</string>
-    <string name="layout_two_pages">Two pages</string>
-    <string name="layout_two_pages_continuous">Two pages, continuous</string>
-    <string name="first_page_alone">First page alone</string>
-    <string name="fit_page">Fit page</string>
-    <string name="fit_width">Fit width</string>
+    <string name="layout_two_pages">صفحتان</string>
+    <string name="layout_two_pages_continuous">صفحتان، متواصلتان</string>
+    <string name="first_page_alone">الصفحة الأولى منفردة</string>
+    <string name="fit_page">ملاءمة الصفحة</string>
+    <string name="fit_width">ملاءمة العرض</string>
     <!-- Tells screen readers which menu item is ticked. -->
     <string name="chosen">Chosen</string>
     <!-- Editing pages. -->
@@ -161,57 +161,57 @@
         <item quantity="many">%d selected</item>
         <item quantity="other">%d selected</item>
     </plurals>
-    <string name="clear_selection">Clear selection</string>
-    <string name="rotate_left">Rotate left</string>
-    <string name="rotate_right">Rotate right</string>
-    <string name="delete_pages">Delete pages</string>
-    <string name="unsaved_title">Save changes?</string>
-    <string name="unsaved_text">The changes to the pages of %1$s are lost unless you save them.</string>
-    <string name="saving">Saving…</string>
+    <string name="clear_selection">مسح التحديد</string>
+    <string name="rotate_left">تدوير لليسار</string>
+    <string name="rotate_right">تدوير لليمين</string>
+    <string name="delete_pages">حذف الصفحات</string>
+    <string name="unsaved_title">أتريد حفظ التغييرات؟</string>
+    <string name="unsaved_text">ستفقد التغييرات التي أجريتها على صفحات %1$s ما لم تحفظها.</string>
+    <string name="saving">يحفظ…</string>
     <!-- With what went wrong, as the system or the PDF library put it (in English). -->
-    <string name="could_not_save">Couldn\'t save: %1$s</string>
-    <string name="could_not_save_there">Couldn\'t save there. This is the edited copy.</string>
+    <string name="could_not_save">تعذّر الحفظ: %1$s</string>
+    <string name="could_not_save_there">تعذّر الحفظ هناك. هذه هي النسخة المحرّرة.</string>
     <!-- Sharing and printing. -->
-    <string name="could_not_share">Couldn\'t share this file</string>
-    <string name="preparing_to_print">Preparing to print…</string>
-    <string name="could_not_print">Couldn\'t print: %1$s</string>
+    <string name="could_not_share">تعذّرت مشاركة هذا الملف</string>
+    <string name="preparing_to_print">يحضّر للطباعة…</string>
+    <string name="could_not_print">تعذّرت الطباعة: %1$s</string>
     <!-- Properties. -->
-    <string name="property_file_name">File name</string>
+    <string name="property_file_name">اسم الملف</string>
     <string name="property_title">Title</string>
-    <string name="property_author">Author</string>
+    <string name="property_author">المؤلف</string>
     <string name="property_subject">Subject</string>
-    <string name="property_keywords">Keywords</string>
-    <string name="property_creator">Created with</string>
-    <string name="property_producer">PDF producer</string>
+    <string name="property_keywords">الكلمات المفتاحية</string>
+    <string name="property_creator">أُنشئ بواسطة</string>
+    <string name="property_producer">منتج PDF</string>
     <string name="property_created">Created</string>
     <string name="property_modified">Modified</string>
-    <string name="property_pages">Pages</string>
-    <string name="property_page_size">Page size</string>
-    <string name="property_file_size">File size</string>
-    <string name="property_pdf_version">PDF version</string>
+    <string name="property_pages">الصفحات</string>
+    <string name="property_page_size">حجم الصفحة</string>
+    <string name="property_file_size">حجم الملف</string>
+    <string name="property_pdf_version">إصدار PDF</string>
     <!-- Width and height of a page in millimetres: "210 × 297 mm". -->
-    <string name="page_size_mm">%1$d × %2$d mm</string>
+    <string name="page_size_mm">%1$d × %2$d مم</string>
     <!-- The same in inches, for paper sizes defined in them: "8.5 × 11 in". -->
-    <string name="page_size_in">%1$s × %2$s in</string>
+    <string name="page_size_in">%1$s × %2$s بوصة</string>
     <!-- A size with the name of the paper: "210 × 297 mm (A4)". -->
     <string name="page_size_named">%1$s (%2$s)</string>
-    <string name="page_size_named_landscape">%1$s (%2$s, landscape)</string>
+    <string name="page_size_named_landscape">%1$s (%2$s، أفقي)</string>
     <!-- The size of the first page, when not all pages have it. -->
-    <string name="page_size_others_differ">%1$s; other pages differ</string>
+    <string name="page_size_others_differ">%1$s؛ الصفحات الأخرى مختلفة</string>
     <!-- Settings. -->
-    <string name="setting_keep_screen_on">Keep the screen on</string>
+    <string name="setting_keep_screen_on">إبقاء الشاشة مضاءة</string>
     <plurals name="setting_keep_screen_on_detail">
-        <item quantity="zero">While a document is open, for %d minutes after the last touch</item>
-        <item quantity="one">While a document is open, for %d minute after the last touch</item>
-        <item quantity="two">While a document is open, for %d minutes after the last touch</item>
-        <item quantity="few">While a document is open, for %d minutes after the last touch</item>
-        <item quantity="many">While a document is open, for %d minutes after the last touch</item>
-        <item quantity="other">While a document is open, for %d minutes after the last touch</item>
+        <item quantity="zero">أثناء فتح مستند، لمدة %d دقيقة بعد آخر لمسة</item>
+        <item quantity="one">أثناء فتح مستند، لمدة دقيقة واحدة بعد آخر لمسة</item>
+        <item quantity="two">أثناء فتح مستند، لمدة دقيقتين بعد آخر لمسة</item>
+        <item quantity="few">أثناء فتح مستند، لمدة %d دقائق بعد آخر لمسة</item>
+        <item quantity="many">أثناء فتح مستند، لمدة %d دقيقة بعد آخر لمسة</item>
+        <item quantity="other">أثناء فتح مستند، لمدة %d دقيقة بعد آخر لمسة</item>
     </plurals>
-    <string name="setting_volume_keys">Volume keys turn pages</string>
-    <string name="setting_volume_keys_detail">Volume down goes on, volume up goes back</string>
-    <string name="crash_log">Crash log</string>
-    <string name="crash_log_empty">Nothing went wrong so far</string>
+    <string name="setting_volume_keys">مفاتيح الصوت تقلّب الصفحات</string>
+    <string name="setting_volume_keys_detail">خفض الصوت للصفحة التالية، ورفعه للصفحة السابقة</string>
+    <string name="crash_log">سجل الأعطال</string>
+    <string name="crash_log_empty">لم يحدث أي خطأ حتى الآن</string>
     <!-- With the date of the newest entry. -->
     <string name="crash_log_detail">Last entry %1$s. Kept on this device; nothing is sent unless you share it.</string>
 </resources>

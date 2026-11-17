@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 18:46\n"
+"PO-Revision-Date: 2026-11-17 21:37\n"
 "Last-Translator: \n"
 "Language-Team: Hungarian\n"
 "Language: hu_HU\n"
@@ -22,25 +22,26 @@ msgstr ""
 #, rust-format
 msgid "Specto is licensed under either of the {apache} or the {mit}, at your option.\n\n"
 "It comes with no warranty of any kind."
-msgstr ""
+msgstr "A Specto az {apache} vagy az {mit} alatt van licencelve, tetszés szerint.\n\n"
+"Semmilyen jótállás nem jár hozzá."
 
 #: src/main.rs:163
 msgid "The Specto contributors"
-msgstr ""
+msgstr "A Specto közreműködői"
 
 #: src/main.rs:164
 msgid "© 2026 The Specto contributors"
-msgstr ""
+msgstr "© 2026 A Specto közreműködői"
 
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:173
 msgid "hayro (rendering)"
-msgstr ""
+msgstr "hayro (megjelenítés)"
 
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:175
 msgid "lopdf (saving)"
-msgstr ""
+msgstr "lopdf (mentés)"
 
 #: src/main.rs:177
 msgid "Built with"
@@ -49,16 +50,16 @@ msgstr ""
 #: src/main.rs:207
 #, rust-format
 msgid "Quit {app}"
-msgstr ""
+msgstr "{app} bezárása"
 
 #: src/main.rs:208 src/window.rs:251
 #, rust-format
 msgid "About {app}"
-msgstr ""
+msgstr "A(z) {app} névjegye"
 
 #: src/main.rs:225 src/window.rs:152
 msgid "Open…"
-msgstr ""
+msgstr "Megnyitás…"
 
 #: src/main.rs:227 src/window.rs:213
 msgid "Save"
@@ -66,15 +67,15 @@ msgstr ""
 
 #: src/main.rs:228 src/window.rs:214
 msgid "Save As…"
-msgstr ""
+msgstr "Mentés másként…"
 
 #: src/main.rs:229 src/window.rs:216
 msgid "Export Selected Pages…"
-msgstr ""
+msgstr "Kijelölt oldalak exportálása…"
 
 #: src/main.rs:232 src/window.rs:219
 msgid "Print…"
-msgstr ""
+msgstr "Nyomtatás…"
 
 #: src/main.rs:233 src/properties.rs:201 src/window.rs:220
 msgid "Properties"
@@ -82,15 +83,15 @@ msgstr ""
 
 #: src/main.rs:235
 msgid "Close Window"
-msgstr ""
+msgstr "Ablak bezárása"
 
 #: src/main.rs:240 src/window/actions.rs:93
 msgid "Undo"
-msgstr ""
+msgstr "Visszavonás"
 
 #: src/main.rs:241 src/window/actions.rs:97
 msgid "Redo"
-msgstr ""
+msgstr "Újra"
 
 #: src/main.rs:244
 msgid "Copy"
@@ -98,31 +99,31 @@ msgstr ""
 
 #: src/main.rs:245
 msgid "Select All"
-msgstr ""
+msgstr "Összes kijelölése"
 
 #: src/main.rs:248 src/window.rs:234
 msgid "Insert Pages from File…"
-msgstr ""
+msgstr "Oldalak beszúrása fájlból…"
 
 #: src/main.rs:249 src/window.rs:228
 msgid "Delete Pages"
-msgstr ""
+msgstr "Oldalak törlése"
 
 #: src/main.rs:252
 msgid "Find…"
-msgstr ""
+msgstr "Keresés…"
 
 #: src/main.rs:253
 msgid "Find Next"
-msgstr ""
+msgstr "Következő találat"
 
 #: src/main.rs:254
 msgid "Find Previous"
-msgstr ""
+msgstr "Előző találat"
 
 #: src/main.rs:259 src/window.rs:267
 msgid "Single Page"
-msgstr ""
+msgstr "Egy oldal"
 
 #: src/main.rs:260 src/window.rs:268
 msgid "Continuous"
@@ -130,43 +131,43 @@ msgstr ""
 
 #: src/main.rs:261 src/window.rs:269
 msgid "Two Pages"
-msgstr ""
+msgstr "Két oldal"
 
 #: src/main.rs:263 src/window.rs:270
 msgid "Two Pages, Continuous"
-msgstr ""
+msgstr "Két oldal, folyamatos"
 
 #: src/main.rs:267 src/window.rs:278
 msgid "Show Cover Page Alone"
-msgstr ""
+msgstr "Címlap külön megjelenítése"
 
 #: src/main.rs:269 src/window.rs:295
 msgid "Actual Size"
-msgstr ""
+msgstr "Tényleges méret"
 
 #: src/main.rs:270 src/window.rs:293
 msgid "Fit Width"
-msgstr ""
+msgstr "Szélességhez igazítás"
 
 #: src/main.rs:271 src/window.rs:294
 msgid "Fit Page"
-msgstr ""
+msgstr "Oldalhoz igazítás"
 
 #: src/main.rs:272 src/window.rs:300
 msgid "Zoom In"
-msgstr ""
+msgstr "Nagyítás"
 
 #: src/main.rs:273 src/window.rs:301
 msgid "Zoom Out"
-msgstr ""
+msgstr "Kicsinyítés"
 
 #: src/main.rs:276
 msgid "Show Sidebar"
-msgstr ""
+msgstr "Oldalsáv megjelenítése"
 
 #: src/main.rs:277 src/window.rs:755
 msgid "Thumbnails"
-msgstr ""
+msgstr "Bélyegképek"
 
 #: src/main.rs:278 src/window.rs:780
 msgid "Contents"
@@ -178,23 +179,23 @@ msgstr ""
 
 #: src/main.rs:284
 msgid "Previous Page"
-msgstr ""
+msgstr "Előző oldal"
 
 #: src/main.rs:285
 msgid "Next Page"
-msgstr ""
+msgstr "Következő oldal"
 
 #: src/main.rs:288
 msgid "First Page"
-msgstr ""
+msgstr "Első oldal"
 
 #: src/main.rs:289
 msgid "Last Page"
-msgstr ""
+msgstr "Utolsó oldal"
 
 #: src/main.rs:291
 msgid "Go to Page…"
-msgstr ""
+msgstr "Ugrás oldalra…"
 
 #: src/main.rs:293
 msgid "Back"
@@ -206,15 +207,15 @@ msgstr ""
 
 #: src/main.rs:300 src/window.rs:226
 msgid "Rotate Left"
-msgstr ""
+msgstr "Forgatás balra"
 
 #: src/main.rs:301 src/window.rs:227
 msgid "Rotate Right"
-msgstr ""
+msgstr "Forgatás jobbra"
 
 #: src/main.rs:304
 msgid "Show Markup Toolbar"
-msgstr ""
+msgstr "Jelölőeszköztár megjelenítése"
 
 #: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
@@ -226,27 +227,27 @@ msgstr ""
 
 #: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
-msgstr ""
+msgstr "Áthúzás"
 
 #: src/main.rs:310 src/window.rs:242
 msgid "Highlight Form Fields"
-msgstr ""
+msgstr "Űrlapmezők kiemelése"
 
 #: src/main.rs:311 src/window.rs:245
 msgid "Reset Form"
-msgstr ""
+msgstr "Űrlap visszaállítása"
 
 #: src/main.rs:316
 msgid "File"
-msgstr ""
+msgstr "Fájl"
 
 #: src/main.rs:317
 msgid "Edit"
-msgstr ""
+msgstr "Szerkesztés"
 
 #: src/main.rs:318
 msgid "View"
-msgstr ""
+msgstr "Nézet"
 
 #: src/main.rs:319
 msgid "Go"
@@ -254,11 +255,11 @@ msgstr ""
 
 #: src/main.rs:320
 msgid "Tools"
-msgstr ""
+msgstr "Eszközök"
 
 #: src/main.rs:322
 msgid "Help"
-msgstr ""
+msgstr "Súgó"
 
 #: src/markup_list.rs:47
 msgid "Drawing"
@@ -266,11 +267,11 @@ msgstr ""
 
 #: src/markup_list.rs:48
 msgid "Rectangle"
-msgstr ""
+msgstr "Téglalap"
 
 #: src/markup_list.rs:49
 msgid "Ellipse"
-msgstr ""
+msgstr "Ellipszis"
 
 #: src/markup_list.rs:50
 msgid "Line"
@@ -290,35 +291,35 @@ msgstr ""
 
 #: src/markup_list.rs:59
 msgid "Shape"
-msgstr ""
+msgstr "Alakzat"
 
 #: src/markup_list.rs:60
 msgid "Attachment"
-msgstr ""
+msgstr "Melléklet"
 
 #: src/markup_list.rs:96
 msgid "No Markup"
-msgstr ""
+msgstr "Nincsenek jelölések"
 
 #: src/markup_list.rs:97
 msgid "Highlights, drawings and notes are listed here"
-msgstr ""
+msgstr "A kiemelések, rajzok és jegyzetek itt jelennek meg"
 
 #: src/print.rs:135
 msgid "printing failed"
-msgstr ""
+msgstr "a nyomtatás sikertelen"
 
 #: src/print.rs:267
 msgid "couldn't open the file"
-msgstr ""
+msgstr "a fájl nem nyitható meg"
 
 #: src/properties.rs:36
 msgid "File Name"
-msgstr ""
+msgstr "Fájlnév"
 
 #: src/properties.rs:37
 msgid "Folder"
-msgstr ""
+msgstr "Mappa"
 
 #: src/properties.rs:38
 msgid "Title"
@@ -326,61 +327,61 @@ msgstr ""
 
 #: src/properties.rs:39
 msgid "Author"
-msgstr ""
+msgstr "Szerző"
 
 #: src/properties.rs:40
 msgid "Subject"
-msgstr ""
+msgstr "Tárgy"
 
 #: src/properties.rs:41
 msgid "Keywords"
-msgstr ""
+msgstr "Kulcsszavak"
 
 #. Translators: the program a document was written in.
 #: src/properties.rs:43
 msgid "Created With"
-msgstr ""
+msgstr "Létrehozó alkalmazás"
 
 #. Translators: the program that turned a document into a PDF.
 #: src/properties.rs:45
 msgid "PDF Producer"
-msgstr ""
+msgstr "PDF-készítő"
 
 #: src/properties.rs:46
 msgid "Created"
-msgstr ""
+msgstr "Létrehozva"
 
 #: src/properties.rs:47
 msgid "Modified"
-msgstr ""
+msgstr "Módosítva"
 
 #: src/properties.rs:48
 msgid "Pages"
-msgstr ""
+msgstr "Oldalak"
 
 #: src/properties.rs:49
 msgid "Page Size"
-msgstr ""
+msgstr "Oldalméret"
 
 #: src/properties.rs:51
 msgid "File Size"
-msgstr ""
+msgstr "Fájlméret"
 
 #: src/properties.rs:54
 msgid "PDF Version"
-msgstr ""
+msgstr "PDF-verzió"
 
 #: src/properties.rs:56
 msgid "Protection"
-msgstr ""
+msgstr "Védelem"
 
 #: src/properties.rs:58
 msgid "Password to open"
-msgstr ""
+msgstr "Jelszó a megnyitáshoz"
 
 #: src/properties.rs:59
 msgid "Encrypted, opens without a password"
-msgstr ""
+msgstr "Titkosítva, jelszó nélkül megnyitható"
 
 #: src/properties.rs:60
 msgid "None"
@@ -388,54 +389,54 @@ msgstr ""
 
 #: src/properties.rs:65
 msgid "Not Allowed"
-msgstr ""
+msgstr "Nem engedélyezett"
 
 #: src/properties.rs:73
 msgid "Printing"
-msgstr ""
+msgstr "Nyomtatás"
 
 #: src/properties.rs:74
 msgid "Copying text and pictures"
-msgstr ""
+msgstr "Szövegek és képek másolása"
 
 #: src/properties.rs:75
 msgid "Changing the pages"
-msgstr ""
+msgstr "Oldalak módosítása"
 
 #: src/properties.rs:78
 msgid "Marking up and filling in forms"
-msgstr ""
+msgstr "Jegyzetelés és űrlapok kitöltése"
 
 #. Translators: a page size in inches, "8.5 × 11 in".
 #: src/properties.rs:140
 #, rust-format
 msgid "{width} × {height} in"
-msgstr ""
+msgstr "{width} × {height} hüvelyk"
 
 #. Translators: a page size in millimeters, "210 × 297 mm".
 #: src/properties.rs:147
 #, rust-format
 msgid "{width} × {height} mm"
-msgstr ""
+msgstr "{width} × {height} mm"
 
 #. Translators: a page size and the name of the paper, "297 × 210 mm (A4,
 #. landscape)".
 #: src/properties.rs:158
 #, rust-format
 msgid "{size} ({paper}, landscape)"
-msgstr ""
+msgstr "{size} ({paper}, fekvő)"
 
 #. Translators: a page size and the name of the paper, "210 × 297 mm (A4)".
 #: src/properties.rs:163
 #, rust-format
 msgid "{size} ({paper})"
-msgstr ""
+msgstr "{size} ({paper})"
 
 #. Translators: {size} is the size of the first page, "210 × 297 mm (A4)".
 #: src/properties.rs:179
 #, rust-format
 msgid "{size}, other pages differ"
-msgstr ""
+msgstr "{size}, a többi oldal eltér"
 
 #: src/signatures.rs:344
 msgid "Clear"
@@ -443,7 +444,7 @@ msgstr ""
 
 #: src/signatures.rs:356
 msgid "Sign with the mouse or the touchpad"
-msgstr ""
+msgstr "Aláírás egérrel vagy érintőpaddal"
 
 #: src/signatures.rs:364
 msgid "Draw"
@@ -451,7 +452,7 @@ msgstr ""
 
 #: src/signatures.rs:381
 msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
-msgstr ""
+msgstr "Írd alá magad fehér papíron, fényképezd le, majd válaszd ki a képet. A papír eltűnik, a tinta marad."
 
 #: src/signatures.rs:388
 msgid "Choose Picture…"
@@ -459,7 +460,7 @@ msgstr ""
 
 #: src/signatures.rs:395
 msgid "To the left, faint strokes are kept, and more of the paper's shadows. To the right, only what is dark."
-msgstr ""
+msgstr "Balra a halvány vonások és a papír több árnyéka is megmarad. Jobbra csak a sötét részek."
 
 #: src/signatures.rs:398
 msgid "Ink as in the picture"
@@ -467,11 +468,11 @@ msgstr ""
 
 #: src/signatures.rs:399
 msgid "Black ink"
-msgstr ""
+msgstr "Fekete tinta"
 
 #: src/signatures.rs:400
 msgid "Blue ink"
-msgstr ""
+msgstr "Kék tinta"
 
 #: src/signatures.rs:403
 msgid "Faint"
@@ -487,11 +488,11 @@ msgstr ""
 
 #: src/signatures.rs:439
 msgid "Move the slider until the paper is gone and the strokes are whole."
-msgstr ""
+msgstr "Mozgasd a csúszkát, amíg a papír el nem tűnik, és a vonások teljesek nem lesznek."
 
 #: src/signatures.rs:441
 msgid "No ink found in this picture. Move the slider to the left."
-msgstr ""
+msgstr "Nem található tinta ezen a képen. Mozgasd a csúszkát balra."
 
 #: src/signatures.rs:458
 msgid "Pictures"
@@ -499,7 +500,7 @@ msgstr ""
 
 #: src/signatures.rs:463
 msgid "Choose a Picture of a Signature"
-msgstr ""
+msgstr "Válassz egy képet az aláírásról"
 
 #: src/signatures.rs:480 src/window/files.rs:420 src/window/files.rs:522
 #: src/window/files.rs:751
@@ -512,15 +513,15 @@ msgstr ""
 
 #: src/signatures.rs:510
 msgid "New Signature"
-msgstr ""
+msgstr "Új aláírás"
 
 #: src/window.rs:148
 msgid "Open a PDF"
-msgstr ""
+msgstr "PDF megnyitása"
 
 #: src/window.rs:149
 msgid "Drop a file here or choose one"
-msgstr ""
+msgstr "Húzz ide egy fájlt, vagy válassz egyet"
 
 #: src/window.rs:162
 msgid "Recent"
@@ -537,7 +538,7 @@ msgstr ""
 
 #: src/window.rs:258
 msgid "Main Menu"
-msgstr ""
+msgstr "Főmenü"
 
 #: src/window.rs:285
 msgid "Page Layout"
@@ -550,7 +551,7 @@ msgstr ""
 #: src/window.rs:317
 #, rust-format
 msgid "Go to Page ({shortcut})"
-msgstr ""
+msgstr "Ugrás oldalra ({shortcut})"
 
 #: src/window.rs:330
 msgid "Search"
@@ -558,74 +559,74 @@ msgstr ""
 
 #: src/window.rs:342
 msgid "Previous Match (Shift+Enter)"
-msgstr ""
+msgstr "Előző találat (Shift+Enter)"
 
 #: src/window.rs:349
 msgid "Next Match (Enter)"
-msgstr ""
+msgstr "Következő találat (Enter)"
 
 #: src/window.rs:371
 #, rust-format
 msgid "Search ({shortcut})"
-msgstr ""
+msgstr "Keresés ({shortcut})"
 
 #: src/window.rs:900
 #, rust-format
 msgid "Links of this kind aren't opened: {address}"
-msgstr ""
+msgstr "Az ilyen típusú hivatkozásokat nem nyitjuk meg: {address}"
 
 #: src/window.rs:909
 #, rust-format
 msgid "Couldn't open link: {error}"
-msgstr ""
+msgstr "Nem sikerült megnyitni a hivatkozást: {error}"
 
 #. Translators: a keyboard shortcut as tooltips show it, the
 #. Control key with another.
 #: src/window.rs:960
 #, rust-format
 msgid "Ctrl+{key}"
-msgstr ""
+msgstr "Ctrl+{key}"
 
 #: src/window/actions.rs:103
 #, rust-format
 msgid "{n} page — Edited"
 msgid_plural "{n} pages — Edited"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{n} oldal — Szerkesztve"
+msgstr[1] "{n} oldal — Szerkesztve"
 
 #: src/window/actions.rs:105 src/window/pages.rs:133
 #, rust-format
 msgid "{n} page"
 msgid_plural "{n} pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{n} oldal"
+msgstr[1] "{n} oldal"
 
 #. Translators: follows the box with the page number: "3 of 120".
 #: src/window/actions.rs:111
 #, rust-format
 msgid "of {pages}"
-msgstr ""
+msgstr "/ {pages}"
 
 #. Translators: follows the box with a printed page number:
 #. "iv (4 of 120)".
 #: src/window/actions.rs:511
 #, rust-format
 msgid "({position} of {pages})"
-msgstr ""
+msgstr "({position}. / {pages})"
 
 #: src/window/files.rs:8
 #, rust-format
 msgid "Couldn't read “{name}”: {error}"
-msgstr ""
+msgstr "Nem sikerült beolvasni a(z) „{name}” fájlt: {error}"
 
 #: src/window/files.rs:15
 #, rust-format
 msgid "Couldn't save “{name}”: {error}"
-msgstr ""
+msgstr "Nem sikerült menteni a(z) „{name}” fájlt: {error}"
 
 #: src/window/files.rs:23
 msgid "PDF documents"
-msgstr ""
+msgstr "PDF-dokumentumok"
 
 #: src/window/files.rs:54
 msgid "reading failed"
@@ -647,17 +648,17 @@ msgstr ""
 #: src/window/files.rs:249 src/window/pages.rs:405
 #, rust-format
 msgid "Couldn't open “{name}”: {error}"
-msgstr ""
+msgstr "Nem sikerült megnyitni a(z) „{name}” fájlt: {error}"
 
 #: src/window/files.rs:323
 #, rust-format
 msgid "“{name}” was moved or deleted. Saving writes it again."
-msgstr ""
+msgstr "A(z) „{name}” fájlt áthelyezték vagy törölték. Mentéskor újra létrejön."
 
 #: src/window/files.rs:332
 #, rust-format
 msgid "“{name}” was changed by another program. Reloading discards your edits."
-msgstr ""
+msgstr "A(z) „{name}” fájlt egy másik program módosította. Az újratöltés elveti a szerkesztéseit."
 
 #: src/window/files.rs:335
 msgid "_Reload"
@@ -665,12 +666,12 @@ msgstr ""
 
 #: src/window/files.rs:413
 msgid "File Changed on Disk"
-msgstr ""
+msgstr "A fájl megváltozott a lemezen"
 
 #: src/window/files.rs:415
 #, rust-format
 msgid "“{name}” was changed by another program after it was opened. Saving replaces those changes with this document."
-msgstr ""
+msgstr "A(z) „{name}” fájlt egy másik program módosította a megnyitása után. A mentés felülírja ezeket a módosításokat ezzel a dokumentummal."
 
 #: src/window/files.rs:421
 msgid "_Save Anyway"
@@ -684,11 +685,11 @@ msgstr ""
 #: src/window/files.rs:518
 #, rust-format
 msgid "“{name}” is protected with a password."
-msgstr ""
+msgstr "A(z) „{name}” jelszóval védett."
 
 #: src/window/files.rs:520
 msgid "Password Required"
-msgstr ""
+msgstr "Jelszó szükséges"
 
 #: src/window/files.rs:523
 msgid "_Unlock"
@@ -697,20 +698,20 @@ msgstr ""
 #: src/window/files.rs:611
 #, rust-format
 msgid "Couldn't print: {error}"
-msgstr ""
+msgstr "Nem sikerült a nyomtatás: {error}"
 
 #: src/window/files.rs:656
 msgid "Save As"
-msgstr ""
+msgstr "Mentés másként"
 
 #: src/window/files.rs:744
 msgid "Save Changes?"
-msgstr ""
+msgstr "Menti a módosításokat?"
 
 #: src/window/files.rs:746
 #, rust-format
 msgid "“{name}” has unsaved changes. Changes that aren't saved will be lost."
-msgstr ""
+msgstr "A(z) „{name}” fájlnak nem mentett módosításai vannak. A nem mentett módosítások elvesznek."
 
 #: src/window/files.rs:752
 msgid "_Discard"
@@ -718,7 +719,7 @@ msgstr ""
 
 #: src/window/files.rs:774
 msgid "Open PDF"
-msgstr ""
+msgstr "PDF megnyitása"
 
 #: src/window/markup.rs:36
 #, rust-format
@@ -727,19 +728,19 @@ msgstr ""
 
 #: src/window/markup.rs:50
 msgid "Draw freehand"
-msgstr ""
+msgstr "Szabadkézi rajzolás"
 
 #: src/window/markup.rs:51
 msgid "Draw rectangles"
-msgstr ""
+msgstr "Téglalapok rajzolása"
 
 #: src/window/markup.rs:52
 msgid "Draw ellipses"
-msgstr ""
+msgstr "Ellipszisek rajzolása"
 
 #: src/window/markup.rs:53
 msgid "Draw lines"
-msgstr ""
+msgstr "Vonalak rajzolása"
 
 #: src/window/markup.rs:54
 msgid "Add text: click where it goes"
@@ -763,249 +764,249 @@ msgstr ""
 
 #: src/window/markup.rs:122
 msgid "Serif"
-msgstr ""
+msgstr "Talpas"
 
 #: src/window/markup.rs:123
 msgid "Monospace"
-msgstr ""
+msgstr "Egyközű"
 
 #: src/window/markup.rs:149
 msgid "Font"
-msgstr ""
+msgstr "Betűtípus"
 
 #: src/window/markup.rs:153
 msgid "Bold"
-msgstr ""
+msgstr "Félkövér"
 
 #: src/window/markup.rs:157
 msgid "Italic"
-msgstr ""
+msgstr "Dőlt"
 
 #: src/window/markup.rs:167
 msgid "Text size in points"
-msgstr ""
+msgstr "Szövegméret pontban"
 
 #: src/window/markup.rs:228
 msgid "Yellow"
-msgstr ""
+msgstr "Sárga"
 
 #: src/window/markup.rs:229
 msgid "Green"
-msgstr ""
+msgstr "Zöld"
 
 #: src/window/markup.rs:230
 msgid "Blue"
-msgstr ""
+msgstr "Kék"
 
 #: src/window/markup.rs:231
 msgid "Pink"
-msgstr ""
+msgstr "Rózsaszín"
 
 #: src/window/markup.rs:232
 msgid "Purple"
-msgstr ""
+msgstr "Lila"
 
 #: src/window/markup.rs:233
 msgid "Red"
-msgstr ""
+msgstr "Piros"
 
 #: src/window/markup.rs:234
 msgid "Black"
-msgstr ""
+msgstr "Fekete"
 
 #: src/window/markup.rs:556
 msgid "Select the text to mark first"
-msgstr ""
+msgstr "Először jelölje ki a megjelölendő szöveget"
 
 #: src/window/markup.rs:602
 msgid "Place this signature: click where it goes"
-msgstr ""
+msgstr "Aláírás elhelyezése: kattintson oda, ahová kerülnie kell"
 
 #: src/window/markup.rs:614
 msgid "Delete this signature"
-msgstr ""
+msgstr "Aláírás törlése"
 
 #: src/window/markup.rs:630
 msgid "New Signature…"
-msgstr ""
+msgstr "Új aláírás…"
 
 #: src/window/markup.rs:659
 msgid "Click where the signature goes"
-msgstr ""
+msgstr "Kattintson oda, ahová az aláírás kerül"
 
 #: src/window/markup.rs:1544 src/window/markup.rs:1571
 #: src/window/markup.rs:1664 src/window/markup.rs:1717
 #, rust-format
 msgid "Couldn't change the annotation: {error}"
-msgstr ""
+msgstr "Nem sikerült módosítani a megjegyzést: {error}"
 
 #: src/window/pages.rs:27
 #, rust-format
 msgid "Undo Rotate Page"
 msgid_plural "Undo Rotate {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Oldal elforgatásának visszavonása"
+msgstr[1] "{n} oldal elforgatásának visszavonása"
 
 #: src/window/pages.rs:30
 #, rust-format
 msgid "Undo Delete Page"
 msgid_plural "Undo Delete {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Oldal törlésének visszavonása"
+msgstr[1] "{n} oldal törlésének visszavonása"
 
 #: src/window/pages.rs:32
 #, rust-format
 msgid "Undo Move Page"
 msgid_plural "Undo Move {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Oldal áthelyezésének visszavonása"
+msgstr[1] "{n} oldal áthelyezésének visszavonása"
 
 #: src/window/pages.rs:34
 #, rust-format
 msgid "Undo Insert Page"
 msgid_plural "Undo Insert {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Oldal beszúrásának visszavonása"
+msgstr[1] "{n} oldal beszúrásának visszavonása"
 
 #: src/window/pages.rs:36
 msgid "Undo Highlight"
-msgstr ""
+msgstr "Kiemelés visszavonása"
 
 #: src/window/pages.rs:37
 msgid "Undo Underline"
-msgstr ""
+msgstr "Aláhúzás visszavonása"
 
 #: src/window/pages.rs:38
 msgid "Undo Strikethrough"
-msgstr ""
+msgstr "Áthúzás visszavonása"
 
 #: src/window/pages.rs:39
 msgid "Undo Drawing"
-msgstr ""
+msgstr "Rajz visszavonása"
 
 #: src/window/pages.rs:40
 msgid "Undo Rectangle"
-msgstr ""
+msgstr "Téglalap visszavonása"
 
 #: src/window/pages.rs:41
 msgid "Undo Ellipse"
-msgstr ""
+msgstr "Ellipszis visszavonása"
 
 #: src/window/pages.rs:42
 msgid "Undo Line"
-msgstr ""
+msgstr "Vonal visszavonása"
 
 #: src/window/pages.rs:43
 msgid "Undo Note"
-msgstr ""
+msgstr "Jegyzet visszavonása"
 
 #: src/window/pages.rs:44
 msgid "Undo Text Box"
-msgstr ""
+msgstr "Szövegdoboz visszavonása"
 
 #: src/window/pages.rs:45
 msgid "Undo Add Annotation"
-msgstr ""
+msgstr "Megjegyzés hozzáadásának visszavonása"
 
 #: src/window/pages.rs:46
 msgid "Undo Delete Annotation"
-msgstr ""
+msgstr "Megjegyzés törlésének visszavonása"
 
 #: src/window/pages.rs:47
 msgid "Undo Change Annotation"
-msgstr ""
+msgstr "Megjegyzés módosításának visszavonása"
 
 #: src/window/pages.rs:48
 msgid "Undo Fill In Field"
-msgstr ""
+msgstr "Mező kitöltésének visszavonása"
 
 #: src/window/pages.rs:49
 msgid "Undo Reset Form"
-msgstr ""
+msgstr "Űrlap visszaállításának visszavonása"
 
 #: src/window/pages.rs:57
 #, rust-format
 msgid "Redo Rotate Page"
 msgid_plural "Redo Rotate {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Oldal elforgatásának újra végrehajtása"
+msgstr[1] "{n} oldal elforgatásának újra végrehajtása"
 
 #: src/window/pages.rs:60
 #, rust-format
 msgid "Redo Delete Page"
 msgid_plural "Redo Delete {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Oldal törlésének újra végrehajtása"
+msgstr[1] "{n} oldal törlésének újra végrehajtása"
 
 #: src/window/pages.rs:62
 #, rust-format
 msgid "Redo Move Page"
 msgid_plural "Redo Move {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Oldal áthelyezésének újra végrehajtása"
+msgstr[1] "{n} oldal áthelyezésének újra végrehajtása"
 
 #: src/window/pages.rs:64
 #, rust-format
 msgid "Redo Insert Page"
 msgid_plural "Redo Insert {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Oldal beszúrásának újra végrehajtása"
+msgstr[1] "{n} oldal beszúrásának újra végrehajtása"
 
 #: src/window/pages.rs:66
 msgid "Redo Highlight"
-msgstr ""
+msgstr "Kiemelés újra végrehajtása"
 
 #: src/window/pages.rs:67
 msgid "Redo Underline"
-msgstr ""
+msgstr "Aláhúzás ismételt végrehajtása"
 
 #: src/window/pages.rs:68
 msgid "Redo Strikethrough"
-msgstr ""
+msgstr "Áthúzás ismételt végrehajtása"
 
 #: src/window/pages.rs:69
 msgid "Redo Drawing"
-msgstr ""
+msgstr "Rajz ismételt végrehajtása"
 
 #: src/window/pages.rs:70
 msgid "Redo Rectangle"
-msgstr ""
+msgstr "Téglalap ismételt végrehajtása"
 
 #: src/window/pages.rs:71
 msgid "Redo Ellipse"
-msgstr ""
+msgstr "Ellipszis ismételt végrehajtása"
 
 #: src/window/pages.rs:72
 msgid "Redo Line"
-msgstr ""
+msgstr "Vonal ismételt végrehajtása"
 
 #: src/window/pages.rs:73
 msgid "Redo Note"
-msgstr ""
+msgstr "Jegyzet ismételt végrehajtása"
 
 #: src/window/pages.rs:74
 msgid "Redo Text Box"
-msgstr ""
+msgstr "Szövegdoboz ismételt végrehajtása"
 
 #: src/window/pages.rs:75
 msgid "Redo Add Annotation"
-msgstr ""
+msgstr "Megjegyzés hozzáadásának ismételt végrehajtása"
 
 #: src/window/pages.rs:76
 msgid "Redo Delete Annotation"
-msgstr ""
+msgstr "Megjegyzés törlésének ismételt végrehajtása"
 
 #: src/window/pages.rs:77
 msgid "Redo Change Annotation"
-msgstr ""
+msgstr "Megjegyzés módosításának ismételt végrehajtása"
 
 #: src/window/pages.rs:78
 msgid "Redo Fill In Field"
-msgstr ""
+msgstr "Mező kitöltésének ismételt végrehajtása"
 
 #: src/window/pages.rs:79
 msgid "Redo Reset Form"
-msgstr ""
+msgstr "Űrlap visszaállításának ismételt végrehajtása"
 
 #: src/window/pages.rs:119
 #, rust-format
@@ -1020,45 +1021,45 @@ msgstr ""
 #: src/window/pages.rs:199
 #, rust-format
 msgid "Couldn't delete the annotation: {error}"
-msgstr ""
+msgstr "Nem sikerült törölni a megjegyzést: {error}"
 
 #: src/window/pages.rs:260
 #, rust-format
 msgid "Couldn't copy the pages: {error}"
-msgstr ""
+msgstr "Nem sikerült átmásolni az oldalakat: {error}"
 
 #: src/window/pages.rs:314
 msgid "Insert Pages from File"
-msgstr ""
+msgstr "Oldalak beszúrása fájlból"
 
 #: src/window/pages.rs:447
 msgid "Export Selected Pages"
-msgstr ""
+msgstr "Kijelölt oldalak exportálása"
 
 #: src/window/pages.rs:480
 #, rust-format
 msgid "Exported {n} page to “{name}”"
 msgid_plural "Exported {n} pages to “{name}”"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{n} oldal exportálva ide: „{name}”"
+msgstr[1] "{n} oldal exportálva ide: „{name}”"
 
 #: src/window/search.rs:187
 msgid "No matches"
-msgstr ""
+msgstr "Nincs találat"
 
 #: src/window/search.rs:188
 msgid "Searching…"
-msgstr ""
+msgstr "Keresés…"
 
 #: src/window/search.rs:193
 #, rust-format
 msgid "{current} of {total}"
-msgstr ""
+msgstr "{current}/{total}"
 
 #. Translators: the search is still running, so there may be
 #. more matches than {total}.
 #: src/window/search.rs:197
 #, rust-format
 msgid "{current} of {total}…"
-msgstr ""
+msgstr "{current}/{total}…"
 
