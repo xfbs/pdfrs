@@ -18,6 +18,7 @@ mod forms;
 mod preview;
 mod search;
 mod text;
+mod trim;
 
 use std::collections::{HashMap, HashSet};
 use std::ops::Range;
@@ -25,7 +26,7 @@ use std::sync::Arc;
 
 use specto_annot::Annotation;
 use specto_doc::{AnnotId, Edit, EditDoc, PageAnnotChanges, PageRef, Rotation, SourceId, Version};
-use specto_geom::{PageGeometry, ViewPoint};
+use specto_geom::{Crop, PageGeometry, PdfBox, ViewPoint};
 use specto_render::OpenError;
 use specto_render::scheduler::Scheduler;
 use specto_render::tile::DocId;
@@ -39,9 +40,11 @@ pub use forms::{FieldClick, FieldHover};
 pub use preview::LinkPreview;
 pub use search::{Indexed, SearchStatus};
 pub use text::TextLayer;
+pub use trim::Measured;
 
 use search::{Indexer, Search};
 use text::TextCache;
+use trim::Measurer;
 
 /// The file a document is opened from, which is its first source.
 pub const MAIN: SourceId = SourceId(0);
@@ -89,6 +92,9 @@ struct Source {
     labels: Option<PageLabels>,
     /// Every page's text prepared for searching, filled in the background.
     index: Vec<Option<SearchText>>,
+    /// The box of what each page draws (`None` for a page that draws nothing), for trimming
+    /// margins. Measured in the background when first needed.
+    content: Option<Vec<Option<PdfBox>>>,
 }
 
 impl Source {
@@ -115,6 +121,7 @@ impl Source {
             geometries: opened.pages,
             links: HashMap::new(),
             annots: HashMap::new(),
+            content: None,
         })
     }
 }
@@ -160,6 +167,10 @@ pub struct Session {
     indexer: Option<Arc<Indexer>>,
     /// The current search, if any.
     search: Option<Search>,
+    /// The margins of pages are trimmed in the view.
+    trim: bool,
+    /// The thread measuring what pages draw, if one was started and not stopped.
+    measurer: Option<Arc<Measurer>>,
 }
 
 impl Session {
@@ -178,7 +189,7 @@ impl Session {
         let edit = EditDoc::from_source(MAIN, source.geometries.len() as u32);
         let sources = vec![source];
         let variants = HashMap::new();
-        let pages = view_pages(&edit, &sources, &variants);
+        let pages = view_pages(&edit, &sources, &variants, &[]);
         let mut session = Self {
             sources,
             labels,
@@ -197,6 +208,8 @@ impl Session {
             picked: None,
             indexer: None,
             search: None,
+            trim: false,
+            measurer: None,
         };
         // Fields whose values the file leaves to the reader to show get their looks now.
         if session.form_fields().iter().any(|f| f.unshown) {
@@ -233,6 +246,7 @@ impl Session {
             scheduler.close(v.doc_id);
         }
         self.stop_indexing();
+        self.stop_measuring();
     }
 
     /// The file opened, parsed: its metadata, outline and so on.
@@ -330,24 +344,30 @@ impl Session {
 }
 
 /// The viewer's pages for the pages of `edit`: each rendered from its file, or from the copy of it
-/// in `variants`, which has the one page.
+/// in `variants`, which has the one page. Each shows the part of it in `crops` at its position, or
+/// all of it.
 fn view_pages(
     edit: &EditDoc,
     sources: &[Source],
     variants: &HashMap<FilePage, annots::Variant>,
+    crops: &[Option<Crop>],
 ) -> Vec<ViewPage> {
     edit.pages()
         .iter()
-        .map(|p| {
+        .enumerate()
+        .map(|(position, p)| {
             let source = &sources[p.source.0 as usize];
             let (doc, page) = match variants.get(&(p.source, p.page)) {
                 Some(v) => (v.doc_id, 0),
                 None => (source.doc_id, p.page),
             };
+            let crop = crops.get(position).copied().flatten();
+            let geometry = source.geometries[p.page as usize];
             ViewPage {
                 doc,
                 page,
-                geometry: source.geometries[p.page as usize],
+                geometry: crop.map_or(geometry, |c| geometry.cropped(c)),
+                crop,
                 rotation: p.rotation,
             }
         })
@@ -668,7 +688,8 @@ impl Session {
     /// Selections and search results hold positions, so the selection is dropped and the search
     /// runs again.
     fn pages_changed(&mut self) -> bool {
-        let pages = view_pages(&self.edit, &self.sources, &self.variants);
+        let crops = self.crops();
+        let pages = view_pages(&self.edit, &self.sources, &self.variants, &crops);
         let sources = &self.sources;
         self.labels = PageLabels::of_pages(self.edit.pages().iter().map(|p| {
             (
@@ -691,5 +712,6 @@ impl Session {
 impl Drop for Session {
     fn drop(&mut self) {
         self.stop_indexing();
+        self.stop_measuring();
     }
 }

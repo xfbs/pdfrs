@@ -3,14 +3,16 @@
 //! Everything engine-specific stays behind [`Document`] so that the rest of the code base never
 //! sees hayro types. See `docs/ARCHITECTURE.md` ("Rendering pipeline").
 
+mod bounds;
 mod hayro_backend;
 pub mod scheduler;
 pub mod tile;
 
+pub use bounds::ContentBounds;
 pub use hayro_backend::HayroDocument;
 #[doc(hidden)]
 pub use hayro_backend::check_geometry_matches_hayro;
-pub use specto_geom::{DeviceIntRect, DeviceIntSize, PageGeometry, Rotation};
+pub use specto_geom::{Crop, DeviceIntRect, DeviceIntSize, PageGeometry, Rotation};
 
 /// Which parts of a page to draw.
 ///
@@ -34,6 +36,8 @@ pub struct RenderRequest {
     pub scale: f64,
     /// Clockwise rotation on top of the page's own `/Rotate`.
     pub rotation: Rotation,
+    /// The part of the page to show, if not all of it.
+    pub crop: Option<Crop>,
     pub content: Content,
     /// Background as straight (non-premultiplied) RGBA, or `None` for transparent.
     pub background: Option<[u8; 4]>,
@@ -49,6 +53,7 @@ impl RenderRequest {
             page,
             scale,
             rotation: Rotation::None,
+            crop: None,
             content: Content::default(),
             background: Some([255, 255, 255, 255]),
             region: None,

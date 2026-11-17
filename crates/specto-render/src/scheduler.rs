@@ -533,15 +533,19 @@ fn render_tile(
     let local = docs.get_mut(&key.doc).expect("just inserted");
     local.pages_seen.insert(key.page);
 
-    let geometry = local
+    let mut geometry = local
         .doc
         .page_geometry(key.page as usize)
         .ok_or(RenderError::PageOutOfRange(key.page as usize))?;
+    if let Some(crop) = key.crop {
+        geometry = geometry.cropped(crop);
+    }
     let region = key
         .region(&geometry)
         .ok_or(RenderError::RegionOutOfBounds)?;
     let mut request = RenderRequest::page(key.page as usize, key.scale.get());
     request.rotation = key.rotation;
+    request.crop = key.crop;
     request.content = key.content;
     request.region = Some(region);
 
@@ -568,6 +572,7 @@ mod tests {
             doc: DocId(doc),
             page,
             rotation: Rotation::None,
+            crop: None,
             content: Content::PageOnly,
             scale: TileScale::from_level(0),
             tx,

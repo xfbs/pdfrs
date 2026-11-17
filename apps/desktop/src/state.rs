@@ -1,4 +1,4 @@
-//! Per-file view state (page, position, zoom, layout, sidebar), remembered across sessions in
+//! Per-file view state (page, position, zoom, layout, trimmed margins, sidebar), remembered across sessions in
 //! `$XDG_STATE_HOME/specto/view-state.ini`.
 
 use std::path::PathBuf;
@@ -16,6 +16,7 @@ pub struct Saved {
     pub sidebar: bool,
     /// "thumbnails" or "outline".
     pub sidebar_page: String,
+    pub trim_margins: bool,
 }
 
 fn path() -> PathBuf {
@@ -50,6 +51,7 @@ pub fn load(uri: &str) -> Option<Saved> {
         },
         sidebar: f.boolean(uri, "sidebar").unwrap_or(true),
         sidebar_page: string("sidebar-page").unwrap_or_else(|| "thumbnails".into()),
+        trim_margins: f.boolean(uri, "trim-margins").unwrap_or(false),
     })
 }
 
@@ -65,6 +67,7 @@ pub fn save(uri: &str, saved: &Saved) {
     f.set_double(uri, "zoom", v.zoom);
     f.set_boolean(uri, "sidebar", saved.sidebar);
     f.set_string(uri, "sidebar-page", &saved.sidebar_page);
+    f.set_boolean(uri, "trim-margins", saved.trim_margins);
     let now = glib::real_time() / 1_000_000;
     f.set_int64(uri, "last-used", now);
 

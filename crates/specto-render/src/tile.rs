@@ -2,7 +2,7 @@
 
 use std::collections::HashMap;
 
-use specto_geom::{DeviceIntRect, PageGeometry, Rotation};
+use specto_geom::{Crop, DeviceIntRect, PageGeometry, Rotation};
 
 use crate::Content;
 
@@ -93,6 +93,8 @@ pub struct TileKey {
     pub page: u32,
     /// Extra clockwise rotation on top of the page's `/Rotate`.
     pub rotation: Rotation,
+    /// The part of the page shown, if not all of it.
+    pub crop: Option<Crop>,
     pub content: Content,
     pub scale: TileScale,
     pub tx: u32,
@@ -102,6 +104,8 @@ pub struct TileKey {
 impl TileKey {
     /// The tile's pixel rectangle within the full page bitmap at its scale, or `None` if the tile
     /// lies outside the page.
+    ///
+    /// `geometry` is the page as shown, cropped but without the extra rotation.
     pub fn region(&self, geometry: &PageGeometry) -> Option<DeviceIntRect> {
         let full = geometry.rotated(self.rotation).pixel_size(self.scale.get());
         let (x, y) = (self.tx * TILE_SIZE, self.ty * TILE_SIZE);
@@ -116,40 +120,6 @@ impl TileKey {
             )
                 .into(),
         ))
-    }
-
-    /// The key as plain numbers, for FFI: `[doc, page, rotation (quarter turns), content, scale,
-    /// tx, ty]`.
-    pub fn to_raw(&self) -> [u32; 7] {
-        [
-            self.doc.raw(),
-            self.page,
-            self.rotation.quarter_turns() as u32,
-            match self.content {
-                Content::PageAndAnnotations => 0,
-                Content::PageOnly => 1,
-            },
-            self.scale.raw(),
-            self.tx,
-            self.ty,
-        ]
-    }
-
-    /// Inverse of [`to_raw`](Self::to_raw). `None` for an unknown content value.
-    pub fn from_raw(raw: [u32; 7]) -> Option<Self> {
-        Some(Self {
-            doc: DocId::from_raw(raw[0]),
-            page: raw[1],
-            rotation: Rotation::from_quarter_turns(raw[2] as i64),
-            content: match raw[3] {
-                0 => Content::PageAndAnnotations,
-                1 => Content::PageOnly,
-                _ => return None,
-            },
-            scale: TileScale::from_raw(raw[4]),
-            tx: raw[5],
-            ty: raw[6],
-        })
     }
 }
 
@@ -313,6 +283,7 @@ mod tests {
             doc: DocId(0),
             page,
             rotation: Rotation::None,
+            crop: None,
             content: Content::PageOnly,
             scale,
             tx: 0,
@@ -344,14 +315,6 @@ mod tests {
         assert_eq!(TileScale::exact(2.0), TileScale::from_level(2));
         assert_eq!(TileScale::exact(1.81).level(), None);
         assert!((TileScale::exact(1.81).get() - 1.81).abs() < 1e-5);
-        let k = TileKey {
-            rotation: Rotation::Cw270,
-            content: Content::PageOnly,
-            tx: 3,
-            ty: 9,
-            ..key(7, 3)
-        };
-        assert_eq!(TileKey::from_raw(k.to_raw()), Some(k));
     }
 
     #[test]

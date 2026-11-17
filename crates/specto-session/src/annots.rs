@@ -444,8 +444,10 @@ impl Session {
                 changed = true;
             }
         }
-        if changed {
-            let pages = view_pages(&self.edit, &self.sources, &self.variants);
+        // With the margins trimmed, an annotation may make its page bigger.
+        if changed || self.trim {
+            let crops = self.crops();
+            let pages = view_pages(&self.edit, &self.sources, &self.variants, &crops);
             self.viewer.set_page_sources(pages);
         }
     }

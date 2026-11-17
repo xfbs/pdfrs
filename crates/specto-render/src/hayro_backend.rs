@@ -128,10 +128,13 @@ impl Document for HayroDocument {
     }
 
     fn render(&self, req: &RenderRequest) -> Result<Bitmap, RenderError> {
-        let geometry = self
+        let mut geometry = self
             .page_geometry(req.page)
-            .ok_or(RenderError::PageOutOfRange(req.page))?
-            .rotated(req.rotation);
+            .ok_or(RenderError::PageOutOfRange(req.page))?;
+        if let Some(crop) = req.crop {
+            geometry = geometry.cropped(crop);
+        }
+        let geometry = geometry.rotated(req.rotation);
         let full = geometry.pixel_size(req.scale);
         let region = req.region.unwrap_or_else(|| DeviceIntRect::from_size(full));
         if region.is_empty() || region.max.x > full.width || region.max.y > full.height {

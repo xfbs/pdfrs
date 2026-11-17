@@ -2064,3 +2064,33 @@ fn a_draft_outlives_the_session() {
     assert!(!open().restore_draft(&store, "book".into()).unwrap());
     std::fs::remove_dir_all(dir).unwrap();
 }
+
+#[test]
+fn trimming_margins() {
+    let (tx, rx) = mpsc::channel();
+    let listener = Arc::new(Listener(Mutex::new(tx)));
+    let session = ViewSession::open(text_pdf(), None, 1 << 20, listener).unwrap();
+    session.set_viewport(216.0, 316.0, 2.0);
+    session.set_view_mode(ViewMode::Paged);
+    let shape = |s: &ViewSession| {
+        let r = s.frame().pages[0].rect;
+        r.height / r.width
+    };
+    let whole = shape(&session);
+    assert!(!session.trim_margins());
+
+    // The page is measured in the background, and the listener hears when it is trimmed. Its text
+    // is wider than tall, so the page becomes so too.
+    session.set_trim_margins(true);
+    assert!(session.trim_margins());
+    let deadline = Instant::now() + Duration::from_secs(10);
+    while shape(&session) == whole {
+        assert!(Instant::now() < deadline, "the page is trimmed");
+        let _ = rx.recv_timeout(Duration::from_millis(100));
+    }
+    assert!(shape(&session) < 1.0, "{}", shape(&session));
+
+    session.set_trim_margins(false);
+    assert!(!session.trim_margins());
+    assert_eq!(shape(&session), whole);
+}

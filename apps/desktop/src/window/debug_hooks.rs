@@ -366,6 +366,7 @@ impl Window {
                 .collect();
             // [page of the file, rotation in degrees, file] per position.
             json.raw("edit_pages", &format!("[{}]", pages.join(", ")))
+                .bool("trim_margins", d.trim_margins())
                 .bool("modified", d.edit().is_modified())
                 .num("cache_tiles", d.cache.len() as f64)
                 .num("cache_bytes", d.cache.bytes() as f64)
@@ -519,6 +520,11 @@ impl Window {
                 .bool("cover_alone", v.settings().cover_alone)
                 .str("zoom_mode", v.zoom_mode().name())
                 .num("zoom", v.zoom());
+            // The current page as shown, in points.
+            if let Some(p) = v.pages().get(v.current_page()) {
+                let size = p.displayed().size();
+                json.raw("page_size", &format!("[{}, {}]", size.width, size.height));
+            }
         });
         json.finish()
     }

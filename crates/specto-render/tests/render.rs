@@ -1,11 +1,12 @@
 use std::sync::mpsc;
 use std::time::Duration;
 
+use specto_geom::{PdfBox, PdfPoint};
 use specto_render::scheduler::Scheduler;
 use specto_render::tile::{TileKey, TileScale, level_for_scale, level_scale, tiles_covering};
 use specto_render::{
-    Bitmap, Content, DeviceIntRect, Document, HayroDocument, OpenError, RenderRequest, Rotation,
-    check_geometry_matches_hayro,
+    Bitmap, Content, ContentBounds, Crop, DeviceIntRect, Document, HayroDocument, OpenError,
+    RenderRequest, Rotation, check_geometry_matches_hayro,
 };
 
 /// One page with a media box of 200 by 100 points: a red triangle covering the lower-right half
@@ -14,7 +15,11 @@ use specto_render::{
 /// `extra` is spliced into the page dictionary (such as `/Rotate 90`). Offsets in the xref are
 /// deliberately wrong, and hayro recovers by scanning.
 fn sample_pdf(extra: &str) -> Vec<u8> {
-    let content = "1 0 0 rg 0 0 m 200 0 l 200 100 l f";
+    sample_pdf_drawing("1 0 0 rg 0 0 m 200 0 l 200 100 l f", extra)
+}
+
+/// [`sample_pdf`] with `content` as what the page draws.
+fn sample_pdf_drawing(content: &str, extra: &str) -> Vec<u8> {
     let ap = "0 0 1 rg 0 0 20 20 re f";
     format!(
         "%PDF-1.7\n\
@@ -133,6 +138,62 @@ fn rotated_page_puts_content_where_expected() {
 }
 
 #[test]
+fn a_cropped_page_is_that_part_of_the_whole() {
+    let doc = open("");
+    let crop = Crop::new(PdfBox::new(
+        PdfPoint::new(5.0, 10.0),
+        PdfPoint::new(105.0, 95.0),
+    ));
+    for rotation in [Rotation::None, Rotation::Cw90] {
+        let mut req = RenderRequest::page(0, 2.0);
+        req.rotation = rotation;
+        let full = doc.render(&req).unwrap();
+        req.crop = Some(crop);
+        let part = doc.render(&req).unwrap();
+        // 100 by 85 points, at 2 pixels a point. Its top-left is 5 points in and 5 down on the
+        // page as it is, or 10 in and 5 down turned a quarter clockwise.
+        let (size, at) = match rotation {
+            Rotation::None => ((200, 170), (10, 10)),
+            _ => ((170, 200), (20, 10)),
+        };
+        assert_eq!((part.width, part.height), size);
+        for y in 0..part.height {
+            for x in 0..part.width {
+                let (a, b) = (pixel(&part, x, y), pixel(&full, at.0 + x, at.1 + y));
+                let max = (0..4).map(|c| a[c].abs_diff(b[c])).max().unwrap();
+                assert!(max <= 2, "{rotation:?} pixel ({x},{y}): {a:?} vs {b:?}");
+            }
+        }
+    }
+}
+
+#[test]
+fn the_box_of_what_a_page_draws() {
+    // A white background, a black rectangle, and a blue page clipped to a corner, besides the
+    // blue square annotation at 10 to 30 by 70 to 90.
+    let content = "1 1 1 rg 0 0 200 100 re f 0 0 0 rg 50 20 30 40 re f \
+                   q 0 0 10 10 re W n 0 0 1 rg 0 0 200 100 re f Q";
+    let doc = HayroDocument::open(sample_pdf_drawing(content, ""), None).unwrap();
+    let found = ContentBounds::new(doc.pdf()).page(0).unwrap();
+    assert_eq!(
+        (found.min.x, found.min.y, found.max.x, found.max.y),
+        (0.0, 0.0, 80.0, 90.0)
+    );
+
+    // Nothing drawn but in white, and no such page.
+    let blank = HayroDocument::open(sample_pdf_drawing("1 1 1 rg 0 0 200 100 re f", ""), None);
+    let blank = blank.unwrap();
+    let mut bounds = ContentBounds::new(blank.pdf());
+    let annotation = bounds.page(0).unwrap();
+    assert_eq!(
+        (annotation.min.x, annotation.max.y),
+        (10.0, 90.0),
+        "only the annotation"
+    );
+    assert_eq!(bounds.page(1), None);
+}
+
+#[test]
 fn extra_rotation_equals_page_rotate() {
     let plain = open("");
     let rotated = open("/Rotate 270");
@@ -191,6 +252,7 @@ fn scheduler_renders_requested_tiles() {
             doc: opened.id,
             page: 0,
             rotation: Rotation::None,
+            crop: None,
             content: Content::PageAndAnnotations,
             scale,
             tx,
@@ -219,6 +281,7 @@ fn scheduler_does_not_rerender_uncollected_tiles() {
         doc: opened.id,
         page: 0,
         rotation: Rotation::None,
+        crop: None,
         content: Content::PageOnly,
         scale: TileScale::from_level(0),
         tx: 0,
@@ -281,6 +344,7 @@ fn slow_pages_get_an_extra_worker_and_render_one_tile_at_a_time() {
         doc,
         page: 0,
         rotation: Rotation::None,
+        crop: None,
         content: Content::PageOnly,
         scale: TileScale::exact(scale),
         tx,
@@ -332,6 +396,7 @@ fn clients_have_separate_queues_and_results() {
         doc,
         page: 0,
         rotation: Rotation::None,
+        crop: None,
         content: Content::PageOnly,
         scale: TileScale::from_level(2),
         tx,
@@ -375,6 +440,7 @@ fn scheduler_drops_closed_documents() {
         doc: opened.id,
         page: 0,
         rotation: Rotation::None,
+        crop: None,
         content: Content::PageOnly,
         scale: TileScale::from_level(0),
         tx: 0,
@@ -418,4 +484,66 @@ fn corpus_geometry_matches_hayro() {
         failures.len(),
         failures.join("\n")
     );
+}
+
+/// Finds the box of what every page of the corpus draws, and how long that takes.
+///
+/// Run with `cargo test --release -p specto-render corpus_content_bounds -- --ignored --nocapture`.
+#[test]
+#[ignore = "needs corpus/files (run corpus/fetch.sh)"]
+fn corpus_content_bounds() {
+    let dir = std::path::Path::new(env!("CARGO_MANIFEST_DIR")).join("../../corpus/files");
+    let mut stack = vec![dir];
+    let (mut pages, mut empty, mut trimmed_area, mut full) = (0usize, 0usize, 0.0f64, 0usize);
+    let mut slowest: Vec<(f64, String)> = Vec::new();
+    let start = std::time::Instant::now();
+    while let Some(d) = stack.pop() {
+        for e in std::fs::read_dir(&d).unwrap() {
+            let p = e.unwrap().path();
+            if p.is_dir() {
+                stack.push(p);
+                continue;
+            }
+            if p.extension().is_none_or(|e| e != "pdf") {
+                continue;
+            }
+            let Ok(doc) = HayroDocument::open(std::fs::read(&p).unwrap(), None) else {
+                continue;
+            };
+            let mut bounds = specto_render::ContentBounds::new(doc.pdf());
+            for i in 0..doc.page_count().min(50) {
+                let t = std::time::Instant::now();
+                let found =
+                    std::panic::catch_unwind(std::panic::AssertUnwindSafe(|| bounds.page(i)));
+                let ms = t.elapsed().as_secs_f64() * 1000.0;
+                slowest.push((ms, format!("{} page {}", p.display(), i + 1)));
+                pages += 1;
+                let visible = doc.page_geometry(i).unwrap().visible_box();
+                match found {
+                    Ok(Some(b)) => {
+                        let share = (b.width() * b.height()) / (visible.width() * visible.height());
+                        trimmed_area += 1.0 - share;
+                        if share > 0.98 {
+                            full += 1;
+                        }
+                    }
+                    _ => empty += 1,
+                }
+            }
+        }
+    }
+    slowest.sort_by(|a, b| b.0.total_cmp(&a.0));
+    let total: f64 = slowest.iter().map(|s| s.0).sum();
+    let median = slowest[slowest.len() / 2].0;
+    println!(
+        "{pages} pages in {:.1} s, {total:.0} ms measuring, median {median:.2} ms",
+        start.elapsed().as_secs_f64()
+    );
+    println!(
+        "empty {empty}, nearly whole page {full}, area trimmed on average {:.0}%",
+        trimmed_area / (pages - empty) as f64 * 100.0
+    );
+    for (ms, what) in slowest.iter().take(10) {
+        println!("{ms:8.1} ms {what}");
+    }
 }

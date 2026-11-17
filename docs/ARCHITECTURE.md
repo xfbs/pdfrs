@@ -261,7 +261,7 @@ search (run again). What doesn't change with editing is cached by page of the
 file, not by position.
 
 The session has no toolkit, no pixels, and no threads of its own apart from the
-search indexer. A frontend adds what differs between the apps:
+search indexer and the thread that measures pages for trimming their margins. A frontend adds what differs between the apps:
 
 - **Tiles.** The desktop keeps GTK textures in a tile cache. Android keeps the
   ids of bitmaps that Kotlin owns. Each asks the viewer for a frame and
@@ -273,6 +273,17 @@ search indexer. A frontend adds what differs between the apps:
   channel to the main loop, and Android locks the session where it is.
 - **Threads.** The desktop holds its session on the main thread. Android holds
   it in a mutex, since Kotlin calls from several threads.
+
+Trimmed margins are a crop of each page's geometry. The box of what a page
+draws comes from interpreting its content without rasterizing it, which takes a
+fraction of a millisecond for most pages, on a thread of its own. What is drawn
+in white counts as nothing, and so does what is clipped away. The session turns
+those boxes into steady crops: one set of margins for pages at even positions
+and one for odd positions, each the narrowest of most pages. A page that draws
+further out gets as much as it needs. The crop is part of the tile key, so the
+render workers draw the same part of the page that the viewer lays out, and
+hit-testing, selection and annotations follow from the geometry. A scan is one
+image across the whole page, so it isn't trimmed.
 
 ## The viewer
 
@@ -299,10 +310,9 @@ to request, and when to redraw.
 - **Request order.** Visible placeholders come first, then visible sharp tiles,
   then the placeholders of neighboring pages, then a band of half a viewport
   above and below.
-- **Tile keys are plain data**, seven numbers, with the scale in fixed point.
-  Page rectangles are sized from the same quantized scale, so exact tiles
-  always map one to one. This lets Android key its bitmaps by those numbers on
-  the Kotlin side.
+- **Tile keys are plain data**, integers only: the scale in fixed point, and a
+  page's crop in hundredths of a point. Page rectangles are sized from the
+  same quantized scale, so exact tiles always map one to one.
 - **Text pages** are supplied through a trait, so the viewer doesn't decide how
   they are cached. The session caches them by page of the file.
 - **Swipe paging**, used on Android. In the paged layouts all spreads are laid

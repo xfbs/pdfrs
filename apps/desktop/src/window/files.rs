@@ -378,6 +378,7 @@ impl Window {
             return;
         }
         let view = doc.borrow().viewer.view_state();
+        let trim_margins = doc.borrow().trim_margins();
         let sidebar_page = inner
             .sidebar_stack
             .borrow()
@@ -386,6 +387,7 @@ impl Window {
         drop(doc);
         self.set_document(Rc::new(RefCell::new(document)), tiles);
         inner.canvas.update_viewer(|v| v.restore_view_state(&view));
+        self.set_trim_margins(trim_margins);
         if let Some(page) = sidebar_page
             && inner.sidebar_stack.borrow().is_some()
         {
@@ -446,6 +448,7 @@ impl Window {
             );
         }
         inner.split.set_show_sidebar(saved.sidebar);
+        self.set_trim_margins(saved.trim_margins);
     }
 
     pub(super) fn save_state(&self) {
@@ -455,6 +458,7 @@ impl Window {
             return;
         };
         let view = doc.borrow().viewer.view_state();
+        let trim_margins = doc.borrow().trim_margins();
         let sidebar_page = inner
             .sidebar_stack
             .borrow()
@@ -467,6 +471,7 @@ impl Window {
                 view,
                 sidebar: inner.split.shows_sidebar(),
                 sidebar_page,
+                trim_margins,
             },
         );
     }

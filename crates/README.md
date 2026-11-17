@@ -41,7 +41,8 @@ contents, links and page labels.
 ## specto-render
 
 Renders pages into tiles with hayro. Rendering happens on background threads,
-and finished tiles are kept in a cache.
+and finished tiles are kept in a cache. It also finds the box of what a page
+draws, for trimming margins.
 
 ## specto-text
 

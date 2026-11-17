@@ -12,6 +12,7 @@ const DOCUMENT_ACTIONS: &[&str] = &[
     "fit-page",
     "layout",
     "cover-alone",
+    "trim-margins",
     "go-to-page",
     "next-page",
     "previous-page",
@@ -436,6 +437,19 @@ impl Window {
                     .unwrap_or(false);
                 action.set_state(&on.to_variant());
                 inner.canvas.update_viewer(|v| v.set_cover_alone(on));
+            })
+            .build()]);
+
+        let weak = Rc::downgrade(&self.0);
+        window.add_action_entries([gio::ActionEntry::builder("trim-margins")
+            .state(false.to_variant())
+            .activate(move |_, action, _| {
+                let Some(inner) = weak.upgrade() else { return };
+                let on = !action
+                    .state()
+                    .and_then(|s| s.get::<bool>())
+                    .unwrap_or(false);
+                Window(inner).set_trim_margins(on);
             })
             .build()]);
 

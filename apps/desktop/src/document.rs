@@ -22,7 +22,7 @@ use specto_session::{Options, Session};
 use specto_source::PdfData;
 use specto_view::placeholder_level;
 
-pub use specto_session::{Indexed, MAIN, PageBundle, SaveJob, TextLayer};
+pub use specto_session::{Indexed, MAIN, Measured, PageBundle, SaveJob, TextLayer};
 
 const CACHE_BUDGET: usize = 384 << 20;
 
@@ -183,6 +183,27 @@ impl Document {
         self.session
             .start_indexing(from, move |page| tx.send_blocking(page).is_ok())
             .then_some(rx)
+    }
+
+    /// Shows the pages with their margins trimmed, or whole. Returns whether that changed.
+    pub fn set_trim_margins(&mut self, on: bool) -> bool {
+        self.session.set_trim_margins(on) && self.pages_resized()
+    }
+
+    /// Starts measuring what the pages draw in a background thread, if their margins are trimmed
+    /// and some aren't measured yet.
+    ///
+    /// The receiver gets each file's measurements, to pass to `measured`.
+    pub fn start_measuring(&mut self) -> Option<async_channel::Receiver<Measured>> {
+        let (tx, rx) = async_channel::unbounded();
+        self.session
+            .start_measuring(move |file| tx.send_blocking(file).is_ok())
+            .then_some(rx)
+    }
+
+    /// Takes in a file's measurements. Returns whether the pages shown changed.
+    pub fn measured(&mut self, file: Measured) -> bool {
+        self.session.measured(file) && self.pages_resized()
     }
 
     // Editing
@@ -459,6 +480,12 @@ impl Document {
         if let Ok(mut l) = self.placeholder_levels.write() {
             *l = levels;
         }
+    }
+
+    /// The pages changed size, but are the same pages in the same places.
+    fn pages_resized(&mut self) -> bool {
+        self.update_placeholder_levels();
+        true
     }
 
     /// The session's page list changed: updates what here depends on it.

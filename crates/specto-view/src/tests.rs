@@ -19,6 +19,7 @@ fn page(i: u32, w: f64, h: f64) -> ViewPage {
             None,
             Rotation::None,
         ),
+        crop: None,
         rotation: Rotation::None,
     }
 }

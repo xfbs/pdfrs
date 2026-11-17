@@ -158,6 +158,18 @@ impl PageGeometry {
         self.rotation
     }
 
+    /// The same page with only what is within `crop` visible.
+    ///
+    /// Where the two don't overlap, the page stays as it is.
+    pub fn cropped(self, crop: Crop) -> Self {
+        match self.visible.intersection(&crop.to_box()) {
+            Some(visible) if visible.width() > 0.0 && visible.height() > 0.0 => {
+                Self { visible, ..self }
+            }
+            _ => self,
+        }
+    }
+
     /// The visible area in PDF user space.
     pub fn visible_box(&self) -> PdfBox {
         self.visible
@@ -223,6 +235,26 @@ impl PageGeometry {
         self.pdf_to_page()
             .inverse()
             .expect("page transform is a rotation plus flip, always invertible")
+    }
+}
+
+/// A part of a page that the view is limited to, such as the page without its margins.
+///
+/// In PDF user space, in hundredths of a point, so that it can be part of a key: hashable, and the
+/// same box wherever it is turned back into points.
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord)]
+pub struct Crop([i32; 4]);
+
+impl Crop {
+    pub fn new(area: PdfBox) -> Self {
+        let b = normalize(area);
+        let q = |v: f64| (v * 100.0).round().clamp(i32::MIN as f64, i32::MAX as f64) as i32;
+        Self([q(b.min.x), q(b.min.y), q(b.max.x), q(b.max.y)])
+    }
+
+    pub fn to_box(self) -> PdfBox {
+        let [x0, y0, x1, y1] = self.0.map(|v| f64::from(v) / 100.0);
+        PdfBox::new(PdfPoint::new(x0, y0), PdfPoint::new(x1, y1))
     }
 }
 

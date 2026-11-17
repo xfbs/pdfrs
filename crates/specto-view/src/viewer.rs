@@ -1,6 +1,7 @@
 use specto_geom::{
-    DeviceIntRect, DevicePoint, DeviceRect, LayoutPoint, LayoutRect, LayoutVector, PageGeometry,
-    PagePoint, PageSize, PdfBox, PdfPoint, Rotation, ViewPoint, ViewRect, ViewSize, ViewVector,
+    Crop, DeviceIntRect, DevicePoint, DeviceRect, LayoutPoint, LayoutRect, LayoutVector,
+    PageGeometry, PagePoint, PageSize, PdfBox, PdfPoint, Rotation, ViewPoint, ViewRect, ViewSize,
+    ViewVector,
 };
 use specto_render::Content;
 use std::time::{Duration, Instant};
@@ -25,8 +26,10 @@ const FLICK_VELOCITY: f64 = 250.0;
 pub struct ViewPage {
     pub doc: DocId,
     pub page: u32,
-    /// Geometry as stored in the file (its own `/Rotate` included).
+    /// Geometry as stored in the file (its own `/Rotate` included), with `crop` applied.
     pub geometry: PageGeometry,
+    /// The part of the page shown, if not all of it, as with margins trimmed.
+    pub crop: Option<Crop>,
     /// Extra clockwise rotation (the user's "rotate page").
     pub rotation: Rotation,
 }
@@ -560,10 +563,32 @@ impl Viewer {
         }
     }
 
+    /// Replaces the page list with the same pages, each showing another part of itself, as when
+    /// margins are trimmed.
+    ///
+    /// What is at the top of the viewport stays there, as far as it is still shown.
+    pub fn set_page_areas(&mut self, pages: Vec<ViewPage>) {
+        let place = self.place();
+        let at = self.pages.get(place.page).map(|p| {
+            let g = p.displayed();
+            let y = place.offset * g.size().height;
+            g.page_to_pdf().transform_point(PagePoint::new(0.0, y))
+        });
+        self.set_pages(pages);
+        if let (Some(at), Some(p)) = (at, self.pages.get(place.page)) {
+            let g = p.displayed();
+            let y = g.pdf_to_page().transform_point(at).y;
+            self.go_to_place(Place {
+                page: place.page,
+                offset: y / g.size().height,
+            });
+        }
+    }
+
     /// Replaces the page list with one of the same pages in the same sizes that are only rendered
     /// from elsewhere (another document, or another page of one): nothing moves.
     ///
-    /// If a size did change, this is [`set_pages`](Self::set_pages).
+    /// If a size did change, this is [`set_page_areas`](Self::set_page_areas).
     pub fn set_page_sources(&mut self, pages: Vec<ViewPage>) {
         let same = pages.len() == self.pages.len()
             && pages
@@ -573,7 +598,7 @@ impl Viewer {
         if same {
             self.pages = pages;
         } else {
-            self.set_pages(pages);
+            self.set_page_areas(pages);
         }
     }
 
@@ -835,6 +860,7 @@ impl Viewer {
             doc: page.doc,
             page: page.page,
             rotation: page.rotation,
+            crop: page.crop,
             content: self.settings.content,
             scale: TileScale::from_level(placeholder_level(&page.displayed())?),
             tx: 0,
@@ -1067,6 +1093,7 @@ impl Viewer {
                     doc: page.doc,
                     page: page.page,
                     rotation: page.rotation,
+                    crop: page.crop,
                     content: self.settings.content,
                     scale,
                     tx,

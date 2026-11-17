@@ -264,7 +264,10 @@ fn menubar() -> gio::Menu {
                 "win.layout::two-page-continuous",
             ),
         ]),
-        section(&[(&gettext("Show Cover Page Alone"), "win.cover-alone")]),
+        section(&[
+            (&gettext("Show Cover Page Alone"), "win.cover-alone"),
+            (&gettext("Trim Margins"), "win.trim-margins"),
+        ]),
         section(&[
             (&gettext("Actual Size"), "win.zoom-actual"),
             (&gettext("Fit Width"), "win.fit-width"),

@@ -25,10 +25,13 @@ Tests (run some by naming them, such as `zoom layouts`):
   doesn't matter, unknown pages are refused
 - layouts: all four keep the current page. Two-page shows two pages. Cover
   page alone
+- trim_margins: the page shrinks to what it draws and its color fills more of
+  the window, on the same page, and is whole again when turned off
 - zoom: actual size, in, out, fit page (the whole page visible), limits
   5% and 3200% and rendering there
 - sidebar: hiding it, the Contents tab
-- remembers_state: page, layout, zoom and sidebar survive closing the app
+- remembers_state: page, layout, zoom, trimmed margins and sidebar survive
+  closing the app
 - broken_file: an error message, and the app keeps running
 - two_windows: one window per file, navigated independently
 - rotate_and_undo: Ctrl+Right and Ctrl+Left turn the current page, both
@@ -825,6 +828,41 @@ def test_layouts(ctx):
     check(s["layout"] == "two-page", s)
 
 
+def test_trim_margins(ctx):
+    w = ctx.app([ctx.pages]).window()
+    w.settled()
+    target = 4
+    w.action("debug-go-to", gvariant_str(LABELS[target]))
+    w.action("layout", gvariant_str("single"))
+    w.action("fit-page")
+    s = w.settled("page 5", lambda s: s["page"] == target and s["zoom_mode"] == "fit-page")
+    check(s["page_size"] == [612, 792] and not s["trim_margins"], s)
+    whole = w.showing(target, "whole")[target]
+    # The page is measured in the background, then trimmed to its colored
+    # area and title with a little room around them.
+    w.action("trim-margins")
+    s = w.settled("trimmed", lambda s: s["page_size"][0] < 612)
+    width, height = s["page_size"]
+    check(s["trim_margins"] and s["page"] == target, s)
+    check(550 <= width <= 560 and 730 <= height <= 745, s)
+    trimmed = w.showing(target, "trimmed")[target]
+    check(trimmed > whole + 0.05, f"the colored area grew from {whole:.2f} to {trimmed:.2f}")
+    # Every thumbnail in the sidebar is drawn again, trimmed too: those at
+    # least half in the window.
+    shown = [p for p, x, y, w, h in s["thumbnails"] if y + h / 2 < s["height"] and y + h / 2 > 0]
+    deadline = time.time() + 10
+    while True:
+        c = w.colours("trimmed-thumbnails")
+        missing = [p for p in shown if c.get(p, 0) < 0.005]
+        if not missing or time.time() > deadline:
+            break
+        time.sleep(0.3)
+    check(shown and not missing, f"thumbnails {missing} not drawn: {fmt(c)}")
+    w.action("trim-margins")
+    s = w.settled("whole again", lambda s: s["page_size"] == [612, 792])
+    check(not s["trim_margins"] and s["page"] == target, s)
+
+
 def test_zoom(ctx):
     w = ctx.app([ctx.pages]).window()
     w.settled()
@@ -873,12 +911,16 @@ def test_remembers_state(ctx):
     w.action("layout", gvariant_str("two-page"))
     w.action("zoom-actual")
     w.action("sidebar-page", gvariant_str("outline"))
-    before = w.settled("changes", lambda s: s["layout"] == "two-page" and s["zoom_mode"] == "fixed")
+    w.action("trim-margins")
+    before = w.settled(
+        "changes",
+        lambda s: s["layout"] == "two-page" and s["zoom_mode"] == "fixed" and s["trim_margins"],
+    )
     app.quit()
 
     w = ctx.app([ctx.pages]).window()
     s = w.settled("restored state", lambda s: s["layout"] == "two-page")
-    for key in ("page", "layout", "zoom_mode", "zoom", "sidebar", "sidebar_page"):
+    for key in ("page", "layout", "zoom_mode", "zoom", "sidebar", "sidebar_page", "trim_margins"):
         check(s[key] == before[key], f"{key}: {s[key]!r}, before closing {before[key]!r}")
 
 

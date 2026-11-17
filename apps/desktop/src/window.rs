@@ -278,6 +278,7 @@ impl Window {
                 Some(&gettext("Show Cover Page Alone")),
                 Some("win.cover-alone"),
             );
+            m.append(Some(&gettext("Trim Margins")), Some("win.trim-margins"));
             m
         });
         let layout_button = gtk::MenuButton::builder()
@@ -715,6 +716,14 @@ impl Window {
 
     fn set_document(&self, document: SharedDocument, tiles: async_channel::Receiver<()>) {
         let inner = &self.0;
+        // A document opens with its pages whole.
+        if let Some(a) = inner
+            .window
+            .lookup_action("trim-margins")
+            .and_downcast::<gio::SimpleAction>()
+        {
+            a.set_state(&false.to_variant());
+        }
         let name = document.borrow().name.clone();
         inner.window.set_title(Some(&name));
         inner.title.set_title(&name);

@@ -184,6 +184,7 @@ mod tests {
                 doc: DocId::from_raw(0),
                 page,
                 rotation: Rotation::None,
+                crop: None,
                 content: Content::PageOnly,
                 scale: TileScale::from_level(0),
                 tx: 0,

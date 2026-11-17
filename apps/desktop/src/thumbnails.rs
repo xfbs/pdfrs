@@ -380,6 +380,15 @@ impl Sidebar {
 
     /// Redraws visible thumbnails (after new tiles arrived).
     pub fn refresh(&self) {
+        self.each_thumbnail(|t| t.queue_draw());
+    }
+
+    /// Sizes the thumbnails again, after the pages changed size.
+    pub fn resize(&self) {
+        self.each_thumbnail(|t| t.queue_resize());
+    }
+
+    fn each_thumbnail(&self, f: impl Fn(&Thumbnail)) {
         let mut child = self.list.first_child();
         while let Some(row) = child {
             if let Some(t) = row
@@ -387,7 +396,7 @@ impl Sidebar {
                 .and_then(|col| col.first_child())
                 .and_downcast::<Thumbnail>()
             {
-                t.queue_draw();
+                f(&t);
             }
             child = row.next_sibling();
         }

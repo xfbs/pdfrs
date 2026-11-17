@@ -21,6 +21,7 @@ pub mod hot;
 mod jni;
 mod search;
 mod tiles;
+mod trim;
 
 use std::collections::HashMap;
 use std::sync::atomic::{AtomicU64, Ordering};
@@ -1754,6 +1755,21 @@ impl ViewSession {
         viewer.set_layout_mode(layout);
         viewer.set_cover_alone(cover_alone);
         viewer.set_zoom_mode(fit);
+    }
+
+    /// Shows the pages with their margins trimmed, or whole, keeping the place.
+    ///
+    /// Pages are trimmed once what they draw is measured, in a background thread, and
+    /// [`ViewListener::tiles_ready`] is called then.
+    pub fn set_trim_margins(&self, on: bool) {
+        let mut state = self.shared.lock();
+        state.session.set_trim_margins(on);
+        trim::start_measuring(&self.shared, &mut state);
+    }
+
+    /// Whether the pages are shown with their margins trimmed.
+    pub fn trim_margins(&self) -> bool {
+        self.shared.lock().session.trim_margins()
     }
 
     /// Where the reader is, to be stored and passed to [`restore_view`](Self::restore_view) the

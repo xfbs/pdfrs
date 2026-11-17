@@ -82,21 +82,13 @@ point to [DECISIONS.md](DECISIONS.md).
 - [x] Desktop: Properties dialog, with how the file is protected
 - [x] Back and forward after a jump, in the viewer and on the desktop
 - [x] Desktop: a preview of where a link leads, on resting the pointer on it
+- [x] Trim margins: pages shown by the box of what they draw, steady in size
+  for left and right pages, in the viewer and on the desktop
 - [ ] Upstream in hayro: decode images only for the region and resolution
   being drawn. One tile of a 212-megapixel JPEG 2000 page still costs 4.5 GB
   and 10 seconds at 100%, which no scheduling can fix.
 - [ ] Confirm the HiDPI sharpness by eye, on the Mac at scale 2 and on a real
   Linux display with fractional scaling.
-- [ ] Trim margins: a view option that lays pages out by the box of what is
-  drawn on them, not by the crop box. It matters most on a phone, where white
-  margins take up to a third of the width. It only crops the view. Open
-  questions:
-  - Where the box comes from. The text layer's positions are cheap but miss
-    figures, and scans entirely. Candidates are the bounds of everything drawn,
-    collected the way the text layer collects glyphs, or the pixels of the
-    placeholder tile that aren't background.
-  - How to keep it steady from page to page. One box per document, or one each
-    for left and right pages, would be steadier than one per page.
 - [ ] The fonts of a document in the Properties dialog. They need a walk over
   every page's resources in the background.
 - [ ] Bookmarks set by the reader, listed with the contents. Decide where they
@@ -319,8 +311,8 @@ point to [DECISIONS.md](DECISIONS.md).
 - [ ] Back after a jump: the system's Back returns to where a link or outline
   entry was followed from. The shared code keeps the places and has the calls
   for it.
-- [ ] Trim margins: a switch in the view menu, remembered per document. Depends
-  on the task in M1.
+- [ ] Trim margins: a switch in the view menu for the paged view mode,
+  remembered per document. The FFI has the calls.
 - [ ] Bookmarks in the Pages and Contents view. Depends on the task in M1.
 - [ ] Document properties follow-ups: how the file is protected, and its fonts.
 

@@ -107,6 +107,10 @@ below refer to the files by these names:
   between them.
 - Switching layouts on page 50 of LONG stays on about page 50.
 - Show Cover Page Alone: page 1 alone, then 2 and 3, 4 and 5, and so on.
+- Trim Margins on a book or a paper: after a moment the pages lose their
+  margins and keep a steady size from page to page, the text near the top of
+  the window stays there, and a cover or full-page figure is shown whole. Text
+  selection, links and markup land where the pointer is.
 - Resizing the window at fit width keeps the view at the same place in the
   document.
 
