@@ -1,0 +1,1040 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR The Specto contributors
+# This file is distributed under the same license as the specto package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: specto\n"
+"Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
+"PO-Revision-Date: 2026-11-17 17:35+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"POT-Creation-Date: \n"
+"X-Generator: Poedit 2.2.3\n"
+"Last-Translator: Stephan Paternotte\n"
+"Language: nl\n"
+
+#. Translators: {apache} and {mit} are the names of the two licenses,
+#. which stay in English and become links.
+#: src/main.rs:130
+msgid ""
+"Specto is licensed under either of the {apache} or the {mit}, at your "
+"option.\n"
+"\n"
+"It comes with no warranty of any kind."
+msgstr ""
+"Specto is naar keuze gelicentieerd onder de {apache} of de {mit}.\n"
+"\n"
+"Het wordt geleverd zonder enige vorm van garantie."
+
+#: src/main.rs:149
+msgid "The Specto contributors"
+msgstr "Bijdragen aan Specto"
+
+#: src/main.rs:150
+msgid "© 2026 The Specto contributors"
+msgstr "© 2026 De bijdragers aan Specto"
+
+#. Translators: what the library is used for stays in brackets.
+#: src/main.rs:159
+msgid "hayro (rendering)"
+msgstr "hayro (weergave)"
+
+#. Translators: what the library is used for stays in brackets.
+#: src/main.rs:161
+msgid "lopdf (saving)"
+msgstr "lopdf (opslaan)"
+
+#: src/main.rs:163
+msgid "Built with"
+msgstr "Gebouwd met"
+
+#: src/main.rs:193
+msgid "Quit {app}"
+msgstr "{app} afsluiten"
+
+#: src/main.rs:194 src/window.rs:251
+msgid "About {app}"
+msgstr "Over {app}"
+
+#: src/main.rs:211 src/window.rs:152
+msgid "Open…"
+msgstr "Openen…"
+
+#: src/main.rs:213 src/window.rs:213
+msgid "Save"
+msgstr "Opslaan"
+
+#: src/main.rs:214 src/window.rs:214
+msgid "Save As…"
+msgstr "Opslaan als…"
+
+#: src/main.rs:215 src/window.rs:216
+msgid "Export Selected Pages…"
+msgstr "Geselecteerde pagina's exporteren…"
+
+#: src/main.rs:218 src/window.rs:219
+msgid "Print…"
+msgstr "Afdrukken…"
+
+#: src/main.rs:219 src/properties.rs:201 src/window.rs:220
+msgid "Properties"
+msgstr "Eigenschappen"
+
+#: src/main.rs:221
+msgid "Close Window"
+msgstr "Venster sluiten"
+
+#: src/main.rs:226 src/window/actions.rs:93
+msgid "Undo"
+msgstr "Ongedaan maken"
+
+#: src/main.rs:227 src/window/actions.rs:97
+msgid "Redo"
+msgstr "Opnieuw"
+
+#: src/main.rs:230
+msgid "Copy"
+msgstr "Kopiëren"
+
+#: src/main.rs:231
+msgid "Select All"
+msgstr "Alles selecteren"
+
+#: src/main.rs:234 src/window.rs:234
+msgid "Insert Pages from File…"
+msgstr "Pagina's invoegen vanuit bestand…"
+
+#: src/main.rs:235 src/window.rs:228
+msgid "Delete Pages"
+msgstr "Pagina's verwijderen"
+
+#: src/main.rs:238
+msgid "Find…"
+msgstr "Zoeken…"
+
+#: src/main.rs:239
+msgid "Find Next"
+msgstr "Volgende zoeken"
+
+#: src/main.rs:240
+msgid "Find Previous"
+msgstr "Vorige zoeken"
+
+#: src/main.rs:245 src/window.rs:267
+msgid "Single Page"
+msgstr "Enkele pagina"
+
+#: src/main.rs:246 src/window.rs:268
+msgid "Continuous"
+msgstr "Doorlopend"
+
+#: src/main.rs:247 src/window.rs:269
+msgid "Two Pages"
+msgstr "Twee pagina's"
+
+#: src/main.rs:249 src/window.rs:270
+msgid "Two Pages, Continuous"
+msgstr "Twee pagina's, doorlopend"
+
+#: src/main.rs:253 src/window.rs:278
+msgid "Show Cover Page Alone"
+msgstr "Titelpagina apart weergeven"
+
+#: src/main.rs:255 src/window.rs:295
+msgid "Actual Size"
+msgstr "Ware grootte"
+
+#: src/main.rs:256 src/window.rs:293
+msgid "Fit Width"
+msgstr "Breedte passend"
+
+#: src/main.rs:257 src/window.rs:294
+msgid "Fit Page"
+msgstr "Pagina passend"
+
+#: src/main.rs:258 src/window.rs:300
+msgid "Zoom In"
+msgstr "Inzoomen"
+
+#: src/main.rs:259 src/window.rs:301
+msgid "Zoom Out"
+msgstr "Uitzoomen"
+
+#: src/main.rs:262
+msgid "Show Sidebar"
+msgstr "Zijbalk weergeven"
+
+#: src/main.rs:263 src/window.rs:743
+msgid "Thumbnails"
+msgstr "Miniaturen"
+
+#: src/main.rs:264 src/window.rs:768
+msgid "Contents"
+msgstr "Inhoud"
+
+#: src/main.rs:265 src/window.rs:784 src/window/markup.rs:200
+msgid "Markup"
+msgstr "Opmaak"
+
+#: src/main.rs:270
+msgid "Previous Page"
+msgstr "Vorige pagina"
+
+#: src/main.rs:271
+msgid "Next Page"
+msgstr "Volgende pagina"
+
+#: src/main.rs:274
+msgid "First Page"
+msgstr "Eerste pagina"
+
+#: src/main.rs:275
+msgid "Last Page"
+msgstr "Laatste pagina"
+
+#: src/main.rs:277
+msgid "Go to Page…"
+msgstr "Ga naar pagina…"
+
+#: src/main.rs:282 src/window.rs:226
+msgid "Rotate Left"
+msgstr "Linksom roteren"
+
+#: src/main.rs:283 src/window.rs:227
+msgid "Rotate Right"
+msgstr "Rechtsom roteren"
+
+#: src/main.rs:286
+msgid "Show Markup Toolbar"
+msgstr "Werkbalk Opmaak weergeven"
+
+#: src/main.rs:287 src/markup_list.rs:43 src/window/markup.rs:27
+msgid "Highlight"
+msgstr "Markeren"
+
+#: src/main.rs:288 src/markup_list.rs:44 src/window/markup.rs:28
+msgid "Underline"
+msgstr "Onderstrepen"
+
+#: src/main.rs:289 src/markup_list.rs:45 src/window/markup.rs:29
+msgid "Strikethrough"
+msgstr "Doorhalen"
+
+#: src/main.rs:292 src/window.rs:242
+msgid "Highlight Form Fields"
+msgstr "Invoervelden markeren"
+
+#: src/main.rs:293 src/window.rs:245
+msgid "Reset Form"
+msgstr "Formulier herstellen"
+
+#: src/main.rs:298
+msgid "File"
+msgstr "Bestand"
+
+#: src/main.rs:299
+msgid "Edit"
+msgstr "Bewerken"
+
+#: src/main.rs:300
+msgid "View"
+msgstr "Weergave"
+
+#: src/main.rs:301
+msgid "Go"
+msgstr "Gaan"
+
+#: src/main.rs:302
+msgid "Tools"
+msgstr "Hulpmiddelen"
+
+#: src/main.rs:304
+msgid "Help"
+msgstr "Hulp"
+
+#: src/markup_list.rs:47
+msgid "Drawing"
+msgstr "Tekening"
+
+#: src/markup_list.rs:48
+msgid "Rectangle"
+msgstr "Rechthoek"
+
+#: src/markup_list.rs:49
+msgid "Ellipse"
+msgstr "Ellips"
+
+#: src/markup_list.rs:50
+msgid "Line"
+msgstr "Lijn"
+
+#: src/markup_list.rs:51 src/markup_list.rs:56
+msgid "Note"
+msgstr "Notitie"
+
+#: src/markup_list.rs:52 src/markup_list.rs:57
+msgid "Text"
+msgstr "Tekst"
+
+#: src/markup_list.rs:53 src/markup_list.rs:58
+msgid "Stamp"
+msgstr "Stempel"
+
+#: src/markup_list.rs:59
+msgid "Shape"
+msgstr "Vorm"
+
+#: src/markup_list.rs:60
+msgid "Attachment"
+msgstr "Bijlage"
+
+#: src/markup_list.rs:96
+msgid "No Markup"
+msgstr "Geen opmaak"
+
+#: src/markup_list.rs:97
+msgid "Highlights, drawings and notes are listed here"
+msgstr "Markeringen, tekeningen en notities staan hier weergegeven"
+
+#: src/print.rs:135
+msgid "printing failed"
+msgstr "afdrukken is mislukt"
+
+#: src/print.rs:267
+msgid "couldn't open the file"
+msgstr "kan het bestand niet openen"
+
+#: src/properties.rs:36
+msgid "File Name"
+msgstr "Bestandsnaam"
+
+#: src/properties.rs:37
+msgid "Folder"
+msgstr "Map"
+
+#: src/properties.rs:38
+msgid "Title"
+msgstr "Titel"
+
+#: src/properties.rs:39
+msgid "Author"
+msgstr "Auteur"
+
+#: src/properties.rs:40
+msgid "Subject"
+msgstr "Onderwerp"
+
+#: src/properties.rs:41
+msgid "Keywords"
+msgstr "Steekwoorden"
+
+#. Translators: the program a document was written in.
+#: src/properties.rs:43
+msgid "Created With"
+msgstr "Aangemaakt met"
+
+#. Translators: the program that turned a document into a PDF.
+#: src/properties.rs:45
+msgid "PDF Producer"
+msgstr "PDF-producent"
+
+#: src/properties.rs:46
+msgid "Created"
+msgstr "Aangemaakt"
+
+#: src/properties.rs:47
+msgid "Modified"
+msgstr "Gewijzigd"
+
+#: src/properties.rs:48
+msgid "Pages"
+msgstr "Pagina's"
+
+#: src/properties.rs:49
+msgid "Page Size"
+msgstr "Pagiangroofte"
+
+#: src/properties.rs:51
+msgid "File Size"
+msgstr "Bestandsgrootte"
+
+#: src/properties.rs:54
+msgid "PDF Version"
+msgstr "PDF-versie"
+
+#: src/properties.rs:56
+msgid "Protection"
+msgstr "Beveiliging"
+
+#: src/properties.rs:58
+msgid "Password to open"
+msgstr "Wachtwoord om te openen"
+
+#: src/properties.rs:59
+msgid "Encrypted, opens without a password"
+msgstr "Versleuteld, opent zonder wachtwoord"
+
+#: src/properties.rs:60
+msgid "None"
+msgstr "Geen"
+
+#: src/properties.rs:65
+msgid "Not Allowed"
+msgstr "Niet toegestaan"
+
+#: src/properties.rs:73
+msgid "Printing"
+msgstr "Afdrukken"
+
+#: src/properties.rs:74
+msgid "Copying text and pictures"
+msgstr "Tekst en afbeeldingen kopiëren"
+
+#: src/properties.rs:75
+msgid "Changing the pages"
+msgstr "Pagina's wijzigen"
+
+#: src/properties.rs:78
+msgid "Marking up and filling in forms"
+msgstr "Formulieren opmaken en invullen"
+
+#. Translators: a page size in inches, "8.5 × 11 in".
+#: src/properties.rs:140
+msgid "{width} × {height} in"
+msgstr "{width} × {height} in"
+
+#. Translators: a page size in millimeters, "210 × 297 mm".
+#: src/properties.rs:147
+msgid "{width} × {height} mm"
+msgstr "{width} × {height} mm"
+
+#. Translators: a page size and the name of the paper, "297 × 210 mm (A4,
+#. landscape)".
+#: src/properties.rs:158
+msgid "{size} ({paper}, landscape)"
+msgstr "{size} ({paper}, liggend)"
+
+#. Translators: a page size and the name of the paper, "210 × 297 mm (A4)".
+#: src/properties.rs:163
+msgid "{size} ({paper})"
+msgstr "{size} ({paper})"
+
+#. Translators: {size} is the size of the first page, "210 × 297 mm (A4)".
+#: src/properties.rs:179
+msgid "{size}, other pages differ"
+msgstr "{size}, andere pagina's verschillen"
+
+#: src/signatures.rs:344
+msgid "Clear"
+msgstr "Wissen"
+
+#: src/signatures.rs:356
+msgid "Sign with the mouse or the touchpad"
+msgstr "Ondertekenen met de muis of het touchpad"
+
+#: src/signatures.rs:364
+msgid "Draw"
+msgstr "Tekenen"
+
+#: src/signatures.rs:381
+msgid ""
+"Sign on white paper, take a picture of it, and choose that picture. The "
+"paper is taken away, and the ink stays."
+msgstr ""
+"Handtekening op wit papier, maak er een foto van en kies die foto. Het "
+"papier wordt weggenomen en de inkt blijft."
+
+#: src/signatures.rs:388
+msgid "Choose Picture…"
+msgstr "Afbeelding kiezen…"
+
+#: src/signatures.rs:395
+msgid ""
+"To the left, faint strokes are kept, and more of the paper's shadows. To the "
+"right, only what is dark."
+msgstr ""
+"Aan de linkerkant blijven vage streken behouden en meer schaduwen van het "
+"papier. Rechts alleen wat donker is."
+
+#: src/signatures.rs:398
+msgid "Ink as in the picture"
+msgstr "Inkt zoals in de afbeelding"
+
+#: src/signatures.rs:399
+msgid "Black ink"
+msgstr "Zwarte inkt"
+
+#: src/signatures.rs:400
+msgid "Blue ink"
+msgstr "Blauwe inkt"
+
+#: src/signatures.rs:403
+msgid "Faint"
+msgstr "Vaag"
+
+#: src/signatures.rs:405
+msgid "Dark"
+msgstr "Donker"
+
+#: src/signatures.rs:416
+msgid "From a Picture"
+msgstr "Vanuit een afbeelding"
+
+#: src/signatures.rs:439
+msgid "Move the slider until the paper is gone and the strokes are whole."
+msgstr ""
+"Beweeg de schuifregelaar totdat het papier verdwenen is en de streken een "
+"geheel vormen."
+
+#: src/signatures.rs:441
+msgid "No ink found in this picture. Move the slider to the left."
+msgstr ""
+"Geen inkt gevonden in deze afbeelding. Beweeg de schuifregelaar naar links."
+
+#: src/signatures.rs:458
+msgid "Pictures"
+msgstr "Afbeeldingen"
+
+#: src/signatures.rs:463
+msgid "Choose a Picture of a Signature"
+msgstr "Kies een afbeelding van een handtekening"
+
+#: src/signatures.rs:480 src/window/files.rs:420 src/window/files.rs:522
+#: src/window/files.rs:751
+msgid "_Cancel"
+msgstr "_Annuleren"
+
+#: src/signatures.rs:482 src/window/files.rs:753
+msgid "_Save"
+msgstr "_Opslaan"
+
+#: src/signatures.rs:510
+msgid "New Signature"
+msgstr "Nieuwe handtekening"
+
+#: src/window.rs:148
+msgid "Open a PDF"
+msgstr "Open een PDF"
+
+#: src/window.rs:149
+msgid "Drop a file here or choose one"
+msgstr "Sleep een bestand hierheen of kies er een"
+
+#: src/window.rs:162
+msgid "Recent"
+msgstr "Recent"
+
+#: src/window.rs:188
+msgid "Thumbnails (F9)"
+msgstr "Miniaturen (F9)"
+
+#: src/window.rs:200
+msgid "Open ({shortcut})"
+msgstr "Openen ({shortcut})"
+
+#: src/window.rs:258
+msgid "Main Menu"
+msgstr "Hoofdmenu"
+
+#: src/window.rs:285
+msgid "Page Layout"
+msgstr "Pagina-opmaak"
+
+#: src/window.rs:306
+msgid "Zoom"
+msgstr "Zoom"
+
+#: src/window.rs:317
+msgid "Go to Page ({shortcut})"
+msgstr "Ga naar pagina ({shortcut})"
+
+#: src/window.rs:330
+msgid "Search"
+msgstr "Zoeken"
+
+#: src/window.rs:342
+msgid "Previous Match (Shift+Enter)"
+msgstr "Vorige overeenkomst (Shift+Enter)"
+
+#: src/window.rs:349
+msgid "Next Match (Enter)"
+msgstr "Volgende overeenkomst (Enter)"
+
+#: src/window.rs:371
+msgid "Search ({shortcut})"
+msgstr "Zoeken ({shortcut})"
+
+#: src/window.rs:887
+msgid "Links of this kind aren't opened: {address}"
+msgstr "Dit type links kan niet worden geopend: {address}"
+
+#: src/window.rs:896
+msgid "Couldn't open link: {error}"
+msgstr "Kan link niet openen: {error}"
+
+#. Translators: a keyboard shortcut as tooltips show it, the
+#. Control key with another.
+#: src/window.rs:947
+msgid "Ctrl+{key}"
+msgstr "Ctrl+{key}"
+
+#: src/window/actions.rs:103
+msgid "{n} page — Edited"
+msgid_plural "{n} pages — Edited"
+msgstr[0] "{n} pagina — Bewerkt"
+msgstr[1] "{n} pagina's — Bewerkt"
+
+#: src/window/actions.rs:105 src/window/pages.rs:133
+msgid "{n} page"
+msgid_plural "{n} pages"
+msgstr[0] "{n} pagina"
+msgstr[1] "{n} pagina's"
+
+#. Translators: follows the box with the page number: "3 of 120".
+#: src/window/actions.rs:111
+msgid "of {pages}"
+msgstr "van {pages}"
+
+#. Translators: follows the box with a printed page number:
+#. "iv (4 of 120)".
+#: src/window/actions.rs:483
+msgid "({position} of {pages})"
+msgstr "({position} van {pages})"
+
+#: src/window/files.rs:8
+msgid "Couldn't read “{name}”: {error}"
+msgstr "Kan “{name}” niet lezen: {error}"
+
+#: src/window/files.rs:15
+msgid "Couldn't save “{name}”: {error}"
+msgstr "Kan “{name}” niet opslaan: {error}"
+
+#: src/window/files.rs:23
+msgid "PDF documents"
+msgstr "PDF-documenten"
+
+#: src/window/files.rs:54
+msgid "reading failed"
+msgstr "lezen is mislukt"
+
+#: src/window/files.rs:98 src/window/files.rs:102
+msgid "saving failed"
+msgstr "opslaan is mislukt"
+
+#: src/window/files.rs:175
+msgid "the document's password is needed"
+msgstr "het wachtwoord van het document is vereist"
+
+#: src/window/files.rs:177
+msgid "{app} can't save this document correctly yet"
+msgstr "{app} kan dit document nog niet goed opslaan"
+
+#: src/window/files.rs:249 src/window/pages.rs:405
+msgid "Couldn't open “{name}”: {error}"
+msgstr "Kan “{name}” niet openen: {error}"
+
+#: src/window/files.rs:323
+msgid "“{name}” was moved or deleted. Saving writes it again."
+msgstr "“{name}” is verplaatst of verwijderd. Opslaan schrijft het opnieuw."
+
+#: src/window/files.rs:332
+msgid "“{name}” was changed by another program. Reloading discards your edits."
+msgstr ""
+"“{name}” is door een ander programma gewijzigd. Opnieuw laden gooit uw "
+"bewerkingen weg."
+
+#: src/window/files.rs:335
+msgid "_Reload"
+msgstr "Opnieuw _laden"
+
+#: src/window/files.rs:413
+msgid "File Changed on Disk"
+msgstr "Bestand op schijf gewijzigd"
+
+#: src/window/files.rs:415
+msgid ""
+"“{name}” was changed by another program after it was opened. Saving replaces "
+"those changes with this document."
+msgstr ""
+"“{name}” is door een ander programma gewijzigd nadat het werd geopend. "
+"Opslaan vervangt die wijzigingen met dit document."
+
+#: src/window/files.rs:421
+msgid "_Save Anyway"
+msgstr "_Toch opslaan"
+
+#: src/window/files.rs:514
+msgid "The password was incorrect. Enter the password for “{name}”."
+msgstr "Het wachtwoord is onjuist. Voer het wachtwoord in voor “{name}”."
+
+#: src/window/files.rs:518
+msgid "“{name}” is protected with a password."
+msgstr "“{name}” is beveiligd met een wachtwoord."
+
+#: src/window/files.rs:520
+msgid "Password Required"
+msgstr "Wachtwoord vereist"
+
+#: src/window/files.rs:523
+msgid "_Unlock"
+msgstr "_Ontgrendelen"
+
+#: src/window/files.rs:611
+msgid "Couldn't print: {error}"
+msgstr "Kan niet afdrukken: {error}"
+
+#: src/window/files.rs:656
+msgid "Save As"
+msgstr "Opslaan als"
+
+#: src/window/files.rs:744
+msgid "Save Changes?"
+msgstr "Wijzigingen opslaan?"
+
+#: src/window/files.rs:746
+msgid "“{name}” has unsaved changes. Changes that aren't saved will be lost."
+msgstr ""
+"“{name}” bevat niet-opgeslagen wijzigingen. Niet-opgeslagen wijzigingen gaan "
+"verloren."
+
+#: src/window/files.rs:752
+msgid "_Discard"
+msgstr "_Weggooien"
+
+#: src/window/files.rs:774
+msgid "Open PDF"
+msgstr "Open PDF"
+
+#: src/window/markup.rs:36
+msgid ""
+"{tool}: marks the selected text, and what is selected from now on "
+"({shortcut} marks once)"
+msgstr ""
+"{tool}: markeert de geselecteerd tekst en wat vanaf nu wordt geselecteerd "
+"({shortcut} markeert een keer)"
+
+#: src/window/markup.rs:50
+msgid "Draw freehand"
+msgstr "Tekenen uit de vrije hand"
+
+#: src/window/markup.rs:51
+msgid "Draw rectangles"
+msgstr "Rechthoeken tekenen"
+
+#: src/window/markup.rs:52
+msgid "Draw ellipses"
+msgstr "Ellipsen tekenen"
+
+#: src/window/markup.rs:53
+msgid "Draw lines"
+msgstr "Lijnen tekenen"
+
+#: src/window/markup.rs:54
+msgid "Add text: click where it goes"
+msgstr "Tekst toevoegen: klik de positie"
+
+#: src/window/markup.rs:55
+msgid "Add notes: click where one goes"
+msgstr "Notities toevoegen: klik de positie"
+
+#: src/window/markup.rs:98
+msgid "Color"
+msgstr "Kleur"
+
+#: src/window/markup.rs:113
+msgid "Signature"
+msgstr "Handtekening"
+
+#: src/window/markup.rs:121
+msgid "Sans-serif"
+msgstr "Schreefloos"
+
+#: src/window/markup.rs:122
+msgid "Serif"
+msgstr "Schreefletter"
+
+#: src/window/markup.rs:123
+msgid "Monospace"
+msgstr "Vaste breedte"
+
+#: src/window/markup.rs:149
+msgid "Font"
+msgstr "Lettertype"
+
+#: src/window/markup.rs:153
+msgid "Bold"
+msgstr "Vet"
+
+#: src/window/markup.rs:157
+msgid "Italic"
+msgstr "Cursief"
+
+#: src/window/markup.rs:167
+msgid "Text size in points"
+msgstr "Lettergrootte in pt"
+
+#: src/window/markup.rs:228
+msgid "Yellow"
+msgstr "Geel"
+
+#: src/window/markup.rs:229
+msgid "Green"
+msgstr "Groen"
+
+#: src/window/markup.rs:230
+msgid "Blue"
+msgstr "Blauw"
+
+#: src/window/markup.rs:231
+msgid "Pink"
+msgstr "Rose"
+
+#: src/window/markup.rs:232
+msgid "Purple"
+msgstr "Paars"
+
+#: src/window/markup.rs:233
+msgid "Red"
+msgstr "Rood"
+
+#: src/window/markup.rs:234
+msgid "Black"
+msgstr "Zwart"
+
+#: src/window/markup.rs:556
+msgid "Select the text to mark first"
+msgstr "Selecteer eerst de te markeren tekst"
+
+#: src/window/markup.rs:602
+msgid "Place this signature: click where it goes"
+msgstr "Deze handtekening plaatsen: klik de positie"
+
+#: src/window/markup.rs:614
+msgid "Delete this signature"
+msgstr "Deze handtekening verwijderen"
+
+#: src/window/markup.rs:630
+msgid "New Signature…"
+msgstr "Nieuwe handtekening…"
+
+#: src/window/markup.rs:659
+msgid "Click where the signature goes"
+msgstr "Klik de positie van de handtekening"
+
+#: src/window/markup.rs:1544 src/window/markup.rs:1571
+#: src/window/markup.rs:1664 src/window/markup.rs:1717
+msgid "Couldn't change the annotation: {error}"
+msgstr "Kan de annotatie niet wijzigen: {error}"
+
+#: src/window/pages.rs:27
+msgid "Undo Rotate Page"
+msgid_plural "Undo Rotate {n} Pages"
+msgstr[0] "Pagina roteren ongedaan maken"
+msgstr[1] "{n} pagina's roteren ongedaan maken"
+
+#: src/window/pages.rs:30
+msgid "Undo Delete Page"
+msgid_plural "Undo Delete {n} Pages"
+msgstr[0] "Pagina verwijderen ongedaan maken"
+msgstr[1] "{n} pagina's verwijderen ongedaan maken"
+
+#: src/window/pages.rs:32
+msgid "Undo Move Page"
+msgid_plural "Undo Move {n} Pages"
+msgstr[0] "Pagina verplaatsen ongedaan maken"
+msgstr[1] "{n} pagina's verplaatsen ongedaan maken"
+
+#: src/window/pages.rs:34
+msgid "Undo Insert Page"
+msgid_plural "Undo Insert {n} Pages"
+msgstr[0] "Pagina invoegen ongedaan maken"
+msgstr[1] "{n} pagina's invoegen ongedaan maken"
+
+#: src/window/pages.rs:36
+msgid "Undo Highlight"
+msgstr "Markering ongedaan maken"
+
+#: src/window/pages.rs:37
+msgid "Undo Underline"
+msgstr "Onderstreping ongedaan maken"
+
+#: src/window/pages.rs:38
+msgid "Undo Strikethrough"
+msgstr "Doorhaling ongedaan maken"
+
+#: src/window/pages.rs:39
+msgid "Undo Drawing"
+msgstr "Tekening ongedaan maken"
+
+#: src/window/pages.rs:40
+msgid "Undo Rectangle"
+msgstr "Rechthoek ongedaan maken"
+
+#: src/window/pages.rs:41
+msgid "Undo Ellipse"
+msgstr "Ellips ongedaan maken"
+
+#: src/window/pages.rs:42
+msgid "Undo Line"
+msgstr "Lijn ongedaan maken"
+
+#: src/window/pages.rs:43
+msgid "Undo Note"
+msgstr "Notitie ongedaan maken"
+
+#: src/window/pages.rs:44
+msgid "Undo Text Box"
+msgstr "Tekstkader ongedaan maken"
+
+#: src/window/pages.rs:45
+msgid "Undo Add Annotation"
+msgstr "Annotatie toevoegen ongedaan maken"
+
+#: src/window/pages.rs:46
+msgid "Undo Delete Annotation"
+msgstr "Annotatie verwijderen ongedaan maken"
+
+#: src/window/pages.rs:47
+msgid "Undo Change Annotation"
+msgstr "Annotatie wijzigen ongedaan maken"
+
+#: src/window/pages.rs:48
+msgid "Undo Fill In Field"
+msgstr "Veld invullen ongedaan maken"
+
+#: src/window/pages.rs:49
+msgid "Undo Reset Form"
+msgstr "Formulier herstellen ongedaan maken"
+
+#: src/window/pages.rs:57
+msgid "Redo Rotate Page"
+msgid_plural "Redo Rotate {n} Pages"
+msgstr[0] "Pagina roteren ongedaan maken"
+msgstr[1] "{n} pagina's roteren ongedaan maken"
+
+#: src/window/pages.rs:60
+msgid "Redo Delete Page"
+msgid_plural "Redo Delete {n} Pages"
+msgstr[0] "Pagina verwijderen ongedaan maken"
+msgstr[1] "{n} pagina's verwijderen ongedaan maken"
+
+#: src/window/pages.rs:62
+msgid "Redo Move Page"
+msgid_plural "Redo Move {n} Pages"
+msgstr[0] "Pagina opnieuw verplaatsen"
+msgstr[1] "{n} pagina's opnieuw verplaatsen"
+
+#: src/window/pages.rs:64
+msgid "Redo Insert Page"
+msgid_plural "Redo Insert {n} Pages"
+msgstr[0] "Pagina opnieuw invoegen"
+msgstr[1] "{n} pagina's opnieuw invoegen"
+
+#: src/window/pages.rs:66
+msgid "Redo Highlight"
+msgstr "Markering opnieuw uitvoeren"
+
+#: src/window/pages.rs:67
+msgid "Redo Underline"
+msgstr "Onderstreping opnieuw uitvoeren"
+
+#: src/window/pages.rs:68
+msgid "Redo Strikethrough"
+msgstr "Doorhaling opnieuw uitvoeren"
+
+#: src/window/pages.rs:69
+msgid "Redo Drawing"
+msgstr "Tekening opnieuw uitvoeren"
+
+#: src/window/pages.rs:70
+msgid "Redo Rectangle"
+msgstr "Rechthoek opnieuw uitvoeren"
+
+#: src/window/pages.rs:71
+msgid "Redo Ellipse"
+msgstr "Ellips opnieuw uitvoeren"
+
+#: src/window/pages.rs:72
+msgid "Redo Line"
+msgstr "Lijn opnieuw uitvoeren"
+
+#: src/window/pages.rs:73
+msgid "Redo Note"
+msgstr "Notitie opnieuw toevoegen"
+
+#: src/window/pages.rs:74
+msgid "Redo Text Box"
+msgstr "Tekstkader opnieuw toevoegen"
+
+#: src/window/pages.rs:75
+msgid "Redo Add Annotation"
+msgstr "Annotatie opnieuw toevoegen"
+
+#: src/window/pages.rs:76
+msgid "Redo Delete Annotation"
+msgstr "Annotatie opnieuw verwijderen"
+
+#: src/window/pages.rs:77
+msgid "Redo Change Annotation"
+msgstr "Annotatie opnieuw wijzigen"
+
+#: src/window/pages.rs:78
+msgid "Redo Fill In Field"
+msgstr "Veld opnieuw invullen"
+
+#: src/window/pages.rs:79
+msgid "Redo Reset Form"
+msgstr "Formulier opnieuw herstellen"
+
+#: src/window/pages.rs:119
+msgid "page {page}"
+msgstr "pagina {page}"
+
+#: src/window/pages.rs:131
+msgid "pages {pages}"
+msgstr "pagina's {pages}"
+
+#: src/window/pages.rs:199
+msgid "Couldn't delete the annotation: {error}"
+msgstr "Kan de annotatie niet verwijderen: {error}"
+
+#: src/window/pages.rs:260
+msgid "Couldn't copy the pages: {error}"
+msgstr "Kan de pagina's niet kopiëren: {error}"
+
+#: src/window/pages.rs:314
+msgid "Insert Pages from File"
+msgstr "Pagina's invoegen vanuit bestand"
+
+#: src/window/pages.rs:447
+msgid "Export Selected Pages"
+msgstr "Geselecteerde pagina's exporteren"
+
+#: src/window/pages.rs:480
+msgid "Exported {n} page to “{name}”"
+msgid_plural "Exported {n} pages to “{name}”"
+msgstr[0] "{n} pagina geëxporteerd naar “{name}”"
+msgstr[1] "{n} pagina's geëxporteerd naar “{name}”"
+
+#: src/window/search.rs:187
+msgid "No matches"
+msgstr "Geen overeenkomst"
+
+#: src/window/search.rs:188
+msgid "Searching…"
+msgstr "Zoeken…"
+
+#: src/window/search.rs:193
+msgid "{current} of {total}"
+msgstr "{current} van {total}"
+
+#. Translators: the search is still running, so there may be
+#. more matches than {total}.
+#: src/window/search.rs:197
+msgid "{current} of {total}…"
+msgstr "{current} van {total}…"
