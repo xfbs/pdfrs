@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  German. What each text is for is explained in `values/strings.xml`, which
-  this file follows line for line.
+  Everything the app says, in English. A translation is a copy of this file
+  in `values-<language>` (German: `values-de`); TranslationsTest checks that
+  each has every text, with the same placeholders.
+
+  The UI tests find buttons and menu items by these texts, and the unit tests
+  read this file (EnglishTexts.kt): change a text and its tests change too.
 -->
 <resources>
+    <!-- Buttons that many dialogs share. -->
     <string name="cancel">Abbrechen</string>
     <string name="close">Schließen</string>
     <string name="open">Öffnen</string>
@@ -13,14 +18,16 @@
     <string name="delete">Löschen</string>
     <string name="share">Teilen</string>
     <string name="select_all">Alles auswählen</string>
+    <!-- Describes the ⋮ button to screen readers. -->
     <string name="more">Mehr</string>
     <string name="back">Zurück</string>
-
+    <!-- The top bar. -->
     <string name="back_to_document">Zurück zum Dokument</string>
     <string name="contents_and_pages">Inhalt und Seiten</string>
+    <!-- Beside the document's name while it has unsaved changes. -->
     <string name="edited">Bearbeitet</string>
     <string name="search">Suchen</string>
-
+    <!-- The ⋮ menu. -->
     <string name="menu_open">Öffnen</string>
     <string name="menu_share">Teilen</string>
     <string name="menu_print">Drucken</string>
@@ -29,6 +36,7 @@
     <string name="menu_highlight_fields">Formularfelder hervorheben</string>
     <string name="menu_reset_form">Formular zurücksetzen</string>
     <string name="menu_settings">Einstellungen</string>
+    <!-- Closes the document and returns to the start screen. -->
     <string name="menu_close">Schließen</string>
     <string name="undo_rotate">Drehen rückgängig machen</string>
     <string name="undo_delete">Löschen rückgängig machen</string>
@@ -48,13 +56,16 @@
     <string name="redo_change_annotation">Ändern der Anmerkung wiederholen</string>
     <string name="redo_fill_field">Ausfüllen des Felds wiederholen</string>
     <string name="redo_reset_form">Zurücksetzen des Formulars wiederholen</string>
-
+    <!-- The start screen. -->
     <string name="open_pdf">PDF öffnen</string>
     <string name="recent">Zuletzt geöffnet</string>
+    <!-- Where the reader left off in a recent document. -->
     <string name="recent_page">Seite %1$d</string>
     <string name="recent_page_of">Seite %1$d von %2$d</string>
+    <!-- Where the reader left off, and how long ago: "Page 12 of 240 · 2 hours ago". -->
     <string name="recent_summary">%1$s · %2$s</string>
-
+    <!-- Opening a document. -->
+    <!-- What a document without a name is called. -->
     <string name="unnamed_document">PDF</string>
     <string name="could_not_open">Diese Datei konnte nicht geöffnet werden</string>
     <string name="open_another">Anderes PDF öffnen</string>
@@ -64,53 +75,68 @@
     <string name="password_prompt">Passwort zum Öffnen von %1$s eingeben.</string>
     <string name="password_label">Passwort</string>
     <string name="password_wrong">Dieses Passwort war nicht richtig.</string>
-
+    <!-- Pages and Contents. -->
     <string name="tab_pages">Seiten</string>
     <string name="tab_contents">Inhalt</string>
     <string name="collapse">Einklappen</string>
     <string name="expand">Ausklappen</string>
+    <!-- What a long press on a page in the page grid does, for screen readers. -->
     <string name="pick">Auswählen</string>
+    <!-- Follows the finger while pages are dragged to another place. -->
     <plurals name="pages_dragged">
         <item quantity="one">%d Seite</item>
         <item quantity="other">%d Seiten</item>
     </plurals>
-
+    <!-- Links that lead out of the document. -->
     <string name="link_open_title">Diesen Link öffnen?</string>
     <string name="link_blocked_title">Dieser Link kann nicht geöffnet werden</string>
-
+    <!-- "Go to page". -->
     <string name="go_to_title">Gehe zu Seite</string>
+    <!-- The field's label, with the first and last page number: "Page (i–240)". -->
     <string name="go_to_label">Seite (%1$s–%2$s)</string>
+    <!-- Which page a typed page number is, counted from the first. -->
     <string name="go_to_position">Seite %1$d von %2$d</string>
     <string name="go_to_position_hint">Oder eine Position, 1–%1$d</string>
     <string name="go">Los</string>
-
+    <!-- Search. -->
     <string name="close_search">Suche schließen</string>
     <string name="previous_match">Vorheriger Treffer</string>
     <string name="next_match">Nächster Treffer</string>
+    <!-- Which match is shown: "3 of 17". -->
     <string name="search_count">%1$d von %2$d</string>
+    <!-- The same while the document is still being searched. -->
     <string name="search_count_so_far">%1$d von %2$d…</string>
+    <!-- Still searching, nothing found yet. -->
     <string name="search_running">…</string>
     <string name="no_matches">Keine Treffer</string>
-
+    <!-- Selected text. -->
+    <!-- Marks the selected text: with a highlighter, or a line under or through it. -->
     <string name="highlight">Hervorheben</string>
     <string name="underline">Unterstreichen</string>
     <string name="strike_through">Durchstreichen</string>
+    <!-- Tells screen readers that an annotation (a mark on the text, a note, a drawing) is picked. -->
     <string name="annotation_selected">Anmerkung ausgewählt</string>
     <string name="could_not_delete_annotation">Die Anmerkung konnte nicht gelöscht werden: %1$s</string>
+    <!-- Titles of the dialogs that fill in a field of a form, where the form has no name for it. -->
     <string name="field_text_title">Feld ausfüllen</string>
     <string name="field_choice_title">Auswählen</string>
     <string name="field_done">Fertig</string>
+    <!-- The line of a menu of a form that takes text of one\'s own instead of one of its options. -->
     <string name="field_own_text">Oder eigenen Text eingeben</string>
+    <!-- How many characters a field holds of how many it takes, such as 3 / 10. -->
     <string name="field_length">%1$d / %2$d</string>
     <string name="copy">Kopieren</string>
     <string name="copied">Kopiert</string>
     <string name="too_much_to_copy">Das ist zu viel Text, um ihn auf einmal zu kopieren</string>
     <string name="too_much_to_share">Das ist zu viel Text, um ihn auf einmal zu teilen</string>
+    <!-- What the clipboard calls text copied from a document. -->
     <string name="clip_label">Text aus einem PDF</string>
+    <!-- Tells screen readers that text is selected on the page. -->
     <string name="text_selected">Text ausgewählt</string>
-
+    <!-- The page view. -->
     <string name="still_drawing">Diese Seite wird noch gezeichnet</string>
-
+    <!-- The view menu. -->
+    <!-- Describes the view button: "View: Single page". -->
     <string name="view_description">Ansicht: %1$s</string>
     <string name="layout_single_page">Einzelne Seite</string>
     <string name="layout_continuous">Fortlaufend</string>
@@ -119,8 +145,10 @@
     <string name="first_page_alone">Erste Seite einzeln</string>
     <string name="fit_page">Ganze Seite</string>
     <string name="fit_width">Seitenbreite</string>
+    <!-- Tells screen readers which menu item is ticked. -->
     <string name="chosen">Ausgewählt</string>
-
+    <!-- Editing pages. -->
+    <!-- How many pages are picked: short, it shares a phone's top bar with four buttons. -->
     <plurals name="pages_selected">
         <item quantity="one">%d ausgewählt</item>
         <item quantity="other">%d ausgewählt</item>
@@ -132,13 +160,14 @@
     <string name="unsaved_title">Änderungen speichern?</string>
     <string name="unsaved_text">Die Änderungen an den Seiten von %1$s gehen verloren, wenn sie nicht gespeichert werden.</string>
     <string name="saving">Wird gespeichert…</string>
+    <!-- With what went wrong, as the system or the PDF library put it (in English). -->
     <string name="could_not_save">Speichern nicht möglich: %1$s</string>
     <string name="could_not_save_there">Dort konnte nicht gespeichert werden. Dies ist die bearbeitete Kopie.</string>
-
+    <!-- Sharing and printing. -->
     <string name="could_not_share">Diese Datei konnte nicht geteilt werden</string>
     <string name="preparing_to_print">Drucken wird vorbereitet…</string>
     <string name="could_not_print">Drucken nicht möglich: %1$s</string>
-
+    <!-- Properties. -->
     <string name="property_file_name">Dateiname</string>
     <string name="property_title">Titel</string>
     <string name="property_author">Autor</string>
@@ -152,12 +181,16 @@
     <string name="property_page_size">Seitengröße</string>
     <string name="property_file_size">Dateigröße</string>
     <string name="property_pdf_version">PDF-Version</string>
+    <!-- Width and height of a page in millimetres: "210 × 297 mm". -->
     <string name="page_size_mm">%1$d × %2$d mm</string>
+    <!-- The same in inches, for paper sizes defined in them: "8.5 × 11 in". -->
     <string name="page_size_in">%1$s × %2$s Zoll</string>
+    <!-- A size with the name of the paper: "210 × 297 mm (A4)". -->
     <string name="page_size_named">%1$s (%2$s)</string>
     <string name="page_size_named_landscape">%1$s (%2$s, Querformat)</string>
+    <!-- The size of the first page, when not all pages have it. -->
     <string name="page_size_others_differ">%1$s; andere Seiten weichen ab</string>
-
+    <!-- Settings. -->
     <string name="setting_keep_screen_on">Bildschirm eingeschaltet lassen</string>
     <plurals name="setting_keep_screen_on_detail">
         <item quantity="one">Solange ein Dokument geöffnet ist, für %d Minute nach der letzten Berührung</item>
@@ -167,5 +200,6 @@
     <string name="setting_volume_keys_detail">Leiser blättert weiter, lauter zurück</string>
     <string name="crash_log">Absturzprotokoll</string>
     <string name="crash_log_empty">Bisher ist nichts schiefgegangen</string>
+    <!-- With the date of the newest entry. -->
     <string name="crash_log_detail">Letzter Eintrag: %1$s. Bleibt auf diesem Gerät; nichts wird gesendet, außer es wird geteilt.</string>
 </resources>

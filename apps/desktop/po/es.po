@@ -1,0 +1,1065 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: specto\n"
+"Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
+"PO-Revision-Date: 2026-11-17 19:16\n"
+"Last-Translator: \n"
+"Language-Team: Spanish\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: specto\n"
+"X-Crowdin-Project-ID: 947337\n"
+"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-File: /apps/desktop/po/specto.pot\n"
+"X-Crowdin-File-ID: 15\n"
+
+#. Translators: {apache} and {mit} are the names of the two licenses,
+#. which stay in English and become links.
+#: src/main.rs:144
+#, rust-format
+msgid "Specto is licensed under either of the {apache} or the {mit}, at your option.\n\n"
+"It comes with no warranty of any kind."
+msgstr "Specto se distribuye bajo la {apache} o la {mit}, a su elección.\n\n"
+"Se ofrece sin garantía de ningún tipo."
+
+#: src/main.rs:163
+msgid "The Specto contributors"
+msgstr "Los colaboradores de Specto"
+
+#: src/main.rs:164
+msgid "© 2026 The Specto contributors"
+msgstr "© 2026 Los colaboradores de Specto"
+
+#. Translators: what the library is used for stays in brackets.
+#: src/main.rs:173
+msgid "hayro (rendering)"
+msgstr "hayro (renderizado)"
+
+#. Translators: what the library is used for stays in brackets.
+#: src/main.rs:175
+msgid "lopdf (saving)"
+msgstr "lopdf (guardado)"
+
+#: src/main.rs:177
+msgid "Built with"
+msgstr "Desarrollado con"
+
+#: src/main.rs:207
+#, rust-format
+msgid "Quit {app}"
+msgstr "Salir de {app}"
+
+#: src/main.rs:208 src/window.rs:251
+#, rust-format
+msgid "About {app}"
+msgstr "Acerca de {app}"
+
+#: src/main.rs:225 src/window.rs:152
+msgid "Open…"
+msgstr "Abrir…"
+
+#: src/main.rs:227 src/window.rs:213
+msgid "Save"
+msgstr "Guardar"
+
+#: src/main.rs:228 src/window.rs:214
+msgid "Save As…"
+msgstr "Guardar como…"
+
+#: src/main.rs:229 src/window.rs:216
+msgid "Export Selected Pages…"
+msgstr "Exportar páginas seleccionadas…"
+
+#: src/main.rs:232 src/window.rs:219
+msgid "Print…"
+msgstr "Imprimir…"
+
+#: src/main.rs:233 src/properties.rs:201 src/window.rs:220
+msgid "Properties"
+msgstr "Propiedades"
+
+#: src/main.rs:235
+msgid "Close Window"
+msgstr "Cerrar ventana"
+
+#: src/main.rs:240 src/window/actions.rs:93
+msgid "Undo"
+msgstr "Deshacer"
+
+#: src/main.rs:241 src/window/actions.rs:97
+msgid "Redo"
+msgstr "Rehacer"
+
+#: src/main.rs:244
+msgid "Copy"
+msgstr "Copiar"
+
+#: src/main.rs:245
+msgid "Select All"
+msgstr "Seleccionar todo"
+
+#: src/main.rs:248 src/window.rs:234
+msgid "Insert Pages from File…"
+msgstr "Insertar páginas desde un archivo…"
+
+#: src/main.rs:249 src/window.rs:228
+msgid "Delete Pages"
+msgstr "Eliminar páginas"
+
+#: src/main.rs:252
+msgid "Find…"
+msgstr "Buscar…"
+
+#: src/main.rs:253
+msgid "Find Next"
+msgstr "Buscar siguiente"
+
+#: src/main.rs:254
+msgid "Find Previous"
+msgstr "Buscar anterior"
+
+#: src/main.rs:259 src/window.rs:267
+msgid "Single Page"
+msgstr "Página única"
+
+#: src/main.rs:260 src/window.rs:268
+msgid "Continuous"
+msgstr "Continua"
+
+#: src/main.rs:261 src/window.rs:269
+msgid "Two Pages"
+msgstr "Dos páginas"
+
+#: src/main.rs:263 src/window.rs:270
+msgid "Two Pages, Continuous"
+msgstr "Dos páginas, continua"
+
+#: src/main.rs:267 src/window.rs:278
+msgid "Show Cover Page Alone"
+msgstr "Mostrar la portada sola"
+
+#: src/main.rs:269 src/window.rs:295
+msgid "Actual Size"
+msgstr "Tamaño real"
+
+#: src/main.rs:270 src/window.rs:293
+msgid "Fit Width"
+msgstr "Ajustar al ancho"
+
+#: src/main.rs:271 src/window.rs:294
+msgid "Fit Page"
+msgstr "Ajustar a la página"
+
+#: src/main.rs:272 src/window.rs:300
+msgid "Zoom In"
+msgstr "Ampliar"
+
+#: src/main.rs:273 src/window.rs:301
+msgid "Zoom Out"
+msgstr "Reducir"
+
+#: src/main.rs:276
+msgid "Show Sidebar"
+msgstr "Mostrar barra lateral"
+
+#: src/main.rs:277 src/window.rs:755
+msgid "Thumbnails"
+msgstr "Miniaturas"
+
+#: src/main.rs:278 src/window.rs:780
+msgid "Contents"
+msgstr "Índice"
+
+#: src/main.rs:279 src/window.rs:796 src/window/markup.rs:200
+msgid "Markup"
+msgstr "Anotaciones"
+
+#: src/main.rs:284
+msgid "Previous Page"
+msgstr "Página anterior"
+
+#: src/main.rs:285
+msgid "Next Page"
+msgstr "Página siguiente"
+
+#: src/main.rs:288
+msgid "First Page"
+msgstr "Primera página"
+
+#: src/main.rs:289
+msgid "Last Page"
+msgstr "Última página"
+
+#: src/main.rs:291
+msgid "Go to Page…"
+msgstr "Ir a la página…"
+
+#: src/main.rs:293
+msgid "Back"
+msgstr "Atrás"
+
+#: src/main.rs:294
+msgid "Forward"
+msgstr "Adelante"
+
+#: src/main.rs:300 src/window.rs:226
+msgid "Rotate Left"
+msgstr "Girar a la izquierda"
+
+#: src/main.rs:301 src/window.rs:227
+msgid "Rotate Right"
+msgstr "Girar a la derecha"
+
+#: src/main.rs:304
+msgid "Show Markup Toolbar"
+msgstr "Mostrar barra de anotaciones"
+
+#: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
+msgid "Highlight"
+msgstr "Resaltado"
+
+#: src/main.rs:306 src/markup_list.rs:44 src/window/markup.rs:28
+msgid "Underline"
+msgstr "Subrayado"
+
+#: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
+msgid "Strikethrough"
+msgstr "Tachado"
+
+#: src/main.rs:310 src/window.rs:242
+msgid "Highlight Form Fields"
+msgstr "Resaltar campos de formulario"
+
+#: src/main.rs:311 src/window.rs:245
+msgid "Reset Form"
+msgstr "Restablecer formulario"
+
+#: src/main.rs:316
+msgid "File"
+msgstr "Archivo"
+
+#: src/main.rs:317
+msgid "Edit"
+msgstr "Editar"
+
+#: src/main.rs:318
+msgid "View"
+msgstr "Ver"
+
+#: src/main.rs:319
+msgid "Go"
+msgstr "Ir"
+
+#: src/main.rs:320
+msgid "Tools"
+msgstr "Herramientas"
+
+#: src/main.rs:322
+msgid "Help"
+msgstr "Ayuda"
+
+#: src/markup_list.rs:47
+msgid "Drawing"
+msgstr "Dibujo"
+
+#: src/markup_list.rs:48
+msgid "Rectangle"
+msgstr "Rectángulo"
+
+#: src/markup_list.rs:49
+msgid "Ellipse"
+msgstr "Elipse"
+
+#: src/markup_list.rs:50
+msgid "Line"
+msgstr "Línea"
+
+#: src/markup_list.rs:51 src/markup_list.rs:56
+msgid "Note"
+msgstr "Nota"
+
+#: src/markup_list.rs:52 src/markup_list.rs:57
+msgid "Text"
+msgstr "Texto"
+
+#: src/markup_list.rs:53 src/markup_list.rs:58
+msgid "Stamp"
+msgstr "Sello"
+
+#: src/markup_list.rs:59
+msgid "Shape"
+msgstr "Forma"
+
+#: src/markup_list.rs:60
+msgid "Attachment"
+msgstr "Adjunto"
+
+#: src/markup_list.rs:96
+msgid "No Markup"
+msgstr "Sin anotaciones"
+
+#: src/markup_list.rs:97
+msgid "Highlights, drawings and notes are listed here"
+msgstr "Aquí se muestran los resaltados, los dibujos y las notas"
+
+#: src/print.rs:135
+msgid "printing failed"
+msgstr "error al imprimir"
+
+#: src/print.rs:267
+msgid "couldn't open the file"
+msgstr "no se pudo abrir el archivo"
+
+#: src/properties.rs:36
+msgid "File Name"
+msgstr "Nombre del archivo"
+
+#: src/properties.rs:37
+msgid "Folder"
+msgstr "Carpeta"
+
+#: src/properties.rs:38
+msgid "Title"
+msgstr "Título"
+
+#: src/properties.rs:39
+msgid "Author"
+msgstr "Autor"
+
+#: src/properties.rs:40
+msgid "Subject"
+msgstr "Asunto"
+
+#: src/properties.rs:41
+msgid "Keywords"
+msgstr "Palabras clave"
+
+#. Translators: the program a document was written in.
+#: src/properties.rs:43
+msgid "Created With"
+msgstr "Creado con"
+
+#. Translators: the program that turned a document into a PDF.
+#: src/properties.rs:45
+msgid "PDF Producer"
+msgstr "Productor del PDF"
+
+#: src/properties.rs:46
+msgid "Created"
+msgstr "Creado"
+
+#: src/properties.rs:47
+msgid "Modified"
+msgstr "Modificado"
+
+#: src/properties.rs:48
+msgid "Pages"
+msgstr "Páginas"
+
+#: src/properties.rs:49
+msgid "Page Size"
+msgstr "Tamaño de página"
+
+#: src/properties.rs:51
+msgid "File Size"
+msgstr "Tamaño del archivo"
+
+#: src/properties.rs:54
+msgid "PDF Version"
+msgstr "Versión de PDF"
+
+#: src/properties.rs:56
+msgid "Protection"
+msgstr "Protección"
+
+#: src/properties.rs:58
+msgid "Password to open"
+msgstr "Contraseña para abrir"
+
+#: src/properties.rs:59
+msgid "Encrypted, opens without a password"
+msgstr "Cifrado, se abre sin contraseña"
+
+#: src/properties.rs:60
+msgid "None"
+msgstr "Ninguna"
+
+#: src/properties.rs:65
+msgid "Not Allowed"
+msgstr "No permitido"
+
+#: src/properties.rs:73
+msgid "Printing"
+msgstr "Imprimir"
+
+#: src/properties.rs:74
+msgid "Copying text and pictures"
+msgstr "Copiar texto e imágenes"
+
+#: src/properties.rs:75
+msgid "Changing the pages"
+msgstr "Modificar las páginas"
+
+#: src/properties.rs:78
+msgid "Marking up and filling in forms"
+msgstr "Anotar y rellenar formularios"
+
+#. Translators: a page size in inches, "8.5 × 11 in".
+#: src/properties.rs:140
+#, rust-format
+msgid "{width} × {height} in"
+msgstr "{width} × {height} pulg"
+
+#. Translators: a page size in millimeters, "210 × 297 mm".
+#: src/properties.rs:147
+#, rust-format
+msgid "{width} × {height} mm"
+msgstr ""
+
+#. Translators: a page size and the name of the paper, "297 × 210 mm (A4,
+#. landscape)".
+#: src/properties.rs:158
+#, rust-format
+msgid "{size} ({paper}, landscape)"
+msgstr "{size} ({paper}, horizontal)"
+
+#. Translators: a page size and the name of the paper, "210 × 297 mm (A4)".
+#: src/properties.rs:163
+#, rust-format
+msgid "{size} ({paper})"
+msgstr ""
+
+#. Translators: {size} is the size of the first page, "210 × 297 mm (A4)".
+#: src/properties.rs:179
+#, rust-format
+msgid "{size}, other pages differ"
+msgstr "{size}, las demás páginas difieren"
+
+#: src/signatures.rs:344
+msgid "Clear"
+msgstr "Limpiar"
+
+#: src/signatures.rs:356
+msgid "Sign with the mouse or the touchpad"
+msgstr "Firme con el ratón o el panel táctil"
+
+#: src/signatures.rs:364
+msgid "Draw"
+msgstr "Dibujar"
+
+#: src/signatures.rs:381
+msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
+msgstr "Firme en papel blanco, tome una foto y elija esa imagen. El papel se elimina y queda la tinta."
+
+#: src/signatures.rs:388
+msgid "Choose Picture…"
+msgstr "Elegir imagen…"
+
+#: src/signatures.rs:395
+msgid "To the left, faint strokes are kept, and more of the paper's shadows. To the right, only what is dark."
+msgstr "Hacia la izquierda se conservan los trazos tenues y más sombras del papel. Hacia la derecha, solo lo oscuro."
+
+#: src/signatures.rs:398
+msgid "Ink as in the picture"
+msgstr "Tinta como en la imagen"
+
+#: src/signatures.rs:399
+msgid "Black ink"
+msgstr "Tinta negra"
+
+#: src/signatures.rs:400
+msgid "Blue ink"
+msgstr "Tinta azul"
+
+#: src/signatures.rs:403
+msgid "Faint"
+msgstr "Tenue"
+
+#: src/signatures.rs:405
+msgid "Dark"
+msgstr "Oscuro"
+
+#: src/signatures.rs:416
+msgid "From a Picture"
+msgstr "Desde una imagen"
+
+#: src/signatures.rs:439
+msgid "Move the slider until the paper is gone and the strokes are whole."
+msgstr "Mueva el control deslizante hasta que el papel desaparezca y los trazos queden completos."
+
+#: src/signatures.rs:441
+msgid "No ink found in this picture. Move the slider to the left."
+msgstr "No se encontró tinta en esta imagen. Mueva el control deslizante hacia la izquierda."
+
+#: src/signatures.rs:458
+msgid "Pictures"
+msgstr "Imágenes"
+
+#: src/signatures.rs:463
+msgid "Choose a Picture of a Signature"
+msgstr "Elegir una imagen de una firma"
+
+#: src/signatures.rs:480 src/window/files.rs:420 src/window/files.rs:522
+#: src/window/files.rs:751
+msgid "_Cancel"
+msgstr "_Cancelar"
+
+#: src/signatures.rs:482 src/window/files.rs:753
+msgid "_Save"
+msgstr "_Guardar"
+
+#: src/signatures.rs:510
+msgid "New Signature"
+msgstr "Nueva firma"
+
+#: src/window.rs:148
+msgid "Open a PDF"
+msgstr "Abrir un PDF"
+
+#: src/window.rs:149
+msgid "Drop a file here or choose one"
+msgstr "Suelte un archivo aquí o elija uno"
+
+#: src/window.rs:162
+msgid "Recent"
+msgstr "Recientes"
+
+#: src/window.rs:188
+msgid "Thumbnails (F9)"
+msgstr "Miniaturas (F9)"
+
+#: src/window.rs:200
+#, rust-format
+msgid "Open ({shortcut})"
+msgstr "Abrir ({shortcut})"
+
+#: src/window.rs:258
+msgid "Main Menu"
+msgstr "Menú principal"
+
+#: src/window.rs:285
+msgid "Page Layout"
+msgstr "Disposición de página"
+
+#: src/window.rs:306
+msgid "Zoom"
+msgstr "Ampliación"
+
+#: src/window.rs:317
+#, rust-format
+msgid "Go to Page ({shortcut})"
+msgstr "Ir a la página ({shortcut})"
+
+#: src/window.rs:330
+msgid "Search"
+msgstr "Buscar"
+
+#: src/window.rs:342
+msgid "Previous Match (Shift+Enter)"
+msgstr "Coincidencia anterior (Mayús+Intro)"
+
+#: src/window.rs:349
+msgid "Next Match (Enter)"
+msgstr "Coincidencia siguiente (Intro)"
+
+#: src/window.rs:371
+#, rust-format
+msgid "Search ({shortcut})"
+msgstr "Buscar ({shortcut})"
+
+#: src/window.rs:900
+#, rust-format
+msgid "Links of this kind aren't opened: {address}"
+msgstr "Los enlaces de este tipo no se abren: {address}"
+
+#: src/window.rs:909
+#, rust-format
+msgid "Couldn't open link: {error}"
+msgstr "No se pudo abrir el enlace: {error}"
+
+#. Translators: a keyboard shortcut as tooltips show it, the
+#. Control key with another.
+#: src/window.rs:960
+#, rust-format
+msgid "Ctrl+{key}"
+msgstr ""
+
+#: src/window/actions.rs:103
+#, rust-format
+msgid "{n} page — Edited"
+msgid_plural "{n} pages — Edited"
+msgstr[0] "{n} página — Editado"
+msgstr[1] "{n} páginas — Editado"
+
+#: src/window/actions.rs:105 src/window/pages.rs:133
+#, rust-format
+msgid "{n} page"
+msgid_plural "{n} pages"
+msgstr[0] "{n} página"
+msgstr[1] "{n} páginas"
+
+#. Translators: follows the box with the page number: "3 of 120".
+#: src/window/actions.rs:111
+#, rust-format
+msgid "of {pages}"
+msgstr "de {pages}"
+
+#. Translators: follows the box with a printed page number:
+#. "iv (4 of 120)".
+#: src/window/actions.rs:511
+#, rust-format
+msgid "({position} of {pages})"
+msgstr "({position} de {pages})"
+
+#: src/window/files.rs:8
+#, rust-format
+msgid "Couldn't read “{name}”: {error}"
+msgstr "No se pudo leer «{name}»: {error}"
+
+#: src/window/files.rs:15
+#, rust-format
+msgid "Couldn't save “{name}”: {error}"
+msgstr "No se pudo guardar «{name}»: {error}"
+
+#: src/window/files.rs:23
+msgid "PDF documents"
+msgstr "Documentos PDF"
+
+#: src/window/files.rs:54
+msgid "reading failed"
+msgstr "error de lectura"
+
+#: src/window/files.rs:98 src/window/files.rs:102
+msgid "saving failed"
+msgstr "error al guardar"
+
+#: src/window/files.rs:175
+msgid "the document's password is needed"
+msgstr "se necesita la contraseña del documento"
+
+#: src/window/files.rs:177
+#, rust-format
+msgid "{app} can't save this document correctly yet"
+msgstr "{app} aún no puede guardar correctamente este documento"
+
+#: src/window/files.rs:249 src/window/pages.rs:405
+#, rust-format
+msgid "Couldn't open “{name}”: {error}"
+msgstr "No se pudo abrir «{name}»: {error}"
+
+#: src/window/files.rs:323
+#, rust-format
+msgid "“{name}” was moved or deleted. Saving writes it again."
+msgstr "«{name}» se movió o se eliminó. Al guardar se escribe de nuevo."
+
+#: src/window/files.rs:332
+#, rust-format
+msgid "“{name}” was changed by another program. Reloading discards your edits."
+msgstr "Otro programa modificó «{name}». Al recargar se descartan sus cambios."
+
+#: src/window/files.rs:335
+msgid "_Reload"
+msgstr "_Recargar"
+
+#: src/window/files.rs:413
+msgid "File Changed on Disk"
+msgstr "El archivo cambió en el disco"
+
+#: src/window/files.rs:415
+#, rust-format
+msgid "“{name}” was changed by another program after it was opened. Saving replaces those changes with this document."
+msgstr "Otro programa modificó «{name}» después de abrirlo. Al guardar, esos cambios se sustituyen por este documento."
+
+#: src/window/files.rs:421
+msgid "_Save Anyway"
+msgstr "_Guardar de todos modos"
+
+#: src/window/files.rs:514
+#, rust-format
+msgid "The password was incorrect. Enter the password for “{name}”."
+msgstr "La contraseña no es correcta. Introduzca la contraseña de «{name}»."
+
+#: src/window/files.rs:518
+#, rust-format
+msgid "“{name}” is protected with a password."
+msgstr "«{name}» está protegido con contraseña."
+
+#: src/window/files.rs:520
+msgid "Password Required"
+msgstr "Se requiere contraseña"
+
+#: src/window/files.rs:523
+msgid "_Unlock"
+msgstr "_Desbloquear"
+
+#: src/window/files.rs:611
+#, rust-format
+msgid "Couldn't print: {error}"
+msgstr "No se pudo imprimir: {error}"
+
+#: src/window/files.rs:656
+msgid "Save As"
+msgstr "Guardar como"
+
+#: src/window/files.rs:744
+msgid "Save Changes?"
+msgstr "¿Guardar los cambios?"
+
+#: src/window/files.rs:746
+#, rust-format
+msgid "“{name}” has unsaved changes. Changes that aren't saved will be lost."
+msgstr "«{name}» tiene cambios sin guardar. Los cambios que no se guarden se perderán."
+
+#: src/window/files.rs:752
+msgid "_Discard"
+msgstr "_Descartar"
+
+#: src/window/files.rs:774
+msgid "Open PDF"
+msgstr "Abrir PDF"
+
+#: src/window/markup.rs:36
+#, rust-format
+msgid "{tool}: marks the selected text, and what is selected from now on ({shortcut} marks once)"
+msgstr "{tool}: marca el texto seleccionado y el que se seleccione a partir de ahora ({shortcut} marca una sola vez)"
+
+#: src/window/markup.rs:50
+msgid "Draw freehand"
+msgstr "Dibujar a mano alzada"
+
+#: src/window/markup.rs:51
+msgid "Draw rectangles"
+msgstr "Dibujar rectángulos"
+
+#: src/window/markup.rs:52
+msgid "Draw ellipses"
+msgstr "Dibujar elipses"
+
+#: src/window/markup.rs:53
+msgid "Draw lines"
+msgstr "Dibujar líneas"
+
+#: src/window/markup.rs:54
+msgid "Add text: click where it goes"
+msgstr "Añadir texto: haga clic donde debe ir"
+
+#: src/window/markup.rs:55
+msgid "Add notes: click where one goes"
+msgstr "Añadir notas: haga clic donde debe ir cada una"
+
+#: src/window/markup.rs:98
+msgid "Color"
+msgstr ""
+
+#: src/window/markup.rs:113
+msgid "Signature"
+msgstr "Firma"
+
+#: src/window/markup.rs:121
+msgid "Sans-serif"
+msgstr "Sin serifa"
+
+#: src/window/markup.rs:122
+msgid "Serif"
+msgstr "Con serifa"
+
+#: src/window/markup.rs:123
+msgid "Monospace"
+msgstr "Monoespaciada"
+
+#: src/window/markup.rs:149
+msgid "Font"
+msgstr "Tipografía"
+
+#: src/window/markup.rs:153
+msgid "Bold"
+msgstr "Negrita"
+
+#: src/window/markup.rs:157
+msgid "Italic"
+msgstr "Cursiva"
+
+#: src/window/markup.rs:167
+msgid "Text size in points"
+msgstr "Tamaño del texto en puntos"
+
+#: src/window/markup.rs:228
+msgid "Yellow"
+msgstr "Amarillo"
+
+#: src/window/markup.rs:229
+msgid "Green"
+msgstr "Verde"
+
+#: src/window/markup.rs:230
+msgid "Blue"
+msgstr "Azul"
+
+#: src/window/markup.rs:231
+msgid "Pink"
+msgstr "Rosa"
+
+#: src/window/markup.rs:232
+msgid "Purple"
+msgstr "Morado"
+
+#: src/window/markup.rs:233
+msgid "Red"
+msgstr "Rojo"
+
+#: src/window/markup.rs:234
+msgid "Black"
+msgstr "Negro"
+
+#: src/window/markup.rs:556
+msgid "Select the text to mark first"
+msgstr "Seleccione primero el texto que quiere marcar"
+
+#: src/window/markup.rs:602
+msgid "Place this signature: click where it goes"
+msgstr "Colocar esta firma: haga clic donde debe ir"
+
+#: src/window/markup.rs:614
+msgid "Delete this signature"
+msgstr "Eliminar esta firma"
+
+#: src/window/markup.rs:630
+msgid "New Signature…"
+msgstr "Nueva firma…"
+
+#: src/window/markup.rs:659
+msgid "Click where the signature goes"
+msgstr "Haga clic donde debe ir la firma"
+
+#: src/window/markup.rs:1544 src/window/markup.rs:1571
+#: src/window/markup.rs:1664 src/window/markup.rs:1717
+#, rust-format
+msgid "Couldn't change the annotation: {error}"
+msgstr "No se pudo modificar la anotación: {error}"
+
+#: src/window/pages.rs:27
+#, rust-format
+msgid "Undo Rotate Page"
+msgid_plural "Undo Rotate {n} Pages"
+msgstr[0] "Deshacer rotación de página"
+msgstr[1] "Deshacer rotación de {n} páginas"
+
+#: src/window/pages.rs:30
+#, rust-format
+msgid "Undo Delete Page"
+msgid_plural "Undo Delete {n} Pages"
+msgstr[0] "Deshacer eliminación de página"
+msgstr[1] "Deshacer eliminación de {n} páginas"
+
+#: src/window/pages.rs:32
+#, rust-format
+msgid "Undo Move Page"
+msgid_plural "Undo Move {n} Pages"
+msgstr[0] "Deshacer movimiento de página"
+msgstr[1] "Deshacer movimiento de {n} páginas"
+
+#: src/window/pages.rs:34
+#, rust-format
+msgid "Undo Insert Page"
+msgid_plural "Undo Insert {n} Pages"
+msgstr[0] "Deshacer inserción de página"
+msgstr[1] "Deshacer inserción de {n} páginas"
+
+#: src/window/pages.rs:36
+msgid "Undo Highlight"
+msgstr "Deshacer resaltado"
+
+#: src/window/pages.rs:37
+msgid "Undo Underline"
+msgstr "Deshacer subrayado"
+
+#: src/window/pages.rs:38
+msgid "Undo Strikethrough"
+msgstr "Deshacer tachado"
+
+#: src/window/pages.rs:39
+msgid "Undo Drawing"
+msgstr "Deshacer dibujo"
+
+#: src/window/pages.rs:40
+msgid "Undo Rectangle"
+msgstr "Deshacer rectángulo"
+
+#: src/window/pages.rs:41
+msgid "Undo Ellipse"
+msgstr "Deshacer elipse"
+
+#: src/window/pages.rs:42
+msgid "Undo Line"
+msgstr "Deshacer línea"
+
+#: src/window/pages.rs:43
+msgid "Undo Note"
+msgstr "Deshacer nota"
+
+#: src/window/pages.rs:44
+msgid "Undo Text Box"
+msgstr "Deshacer cuadro de texto"
+
+#: src/window/pages.rs:45
+msgid "Undo Add Annotation"
+msgstr "Deshacer anotación"
+
+#: src/window/pages.rs:46
+msgid "Undo Delete Annotation"
+msgstr "Deshacer eliminación de anotación"
+
+#: src/window/pages.rs:47
+msgid "Undo Change Annotation"
+msgstr "Deshacer cambio de anotación"
+
+#: src/window/pages.rs:48
+msgid "Undo Fill In Field"
+msgstr "Deshacer relleno de campo"
+
+#: src/window/pages.rs:49
+msgid "Undo Reset Form"
+msgstr "Deshacer restablecimiento del formulario"
+
+#: src/window/pages.rs:57
+#, rust-format
+msgid "Redo Rotate Page"
+msgid_plural "Redo Rotate {n} Pages"
+msgstr[0] "Rehacer rotación de página"
+msgstr[1] "Rehacer rotación de {n} páginas"
+
+#: src/window/pages.rs:60
+#, rust-format
+msgid "Redo Delete Page"
+msgid_plural "Redo Delete {n} Pages"
+msgstr[0] "Rehacer eliminación de página"
+msgstr[1] "Rehacer eliminación de {n} páginas"
+
+#: src/window/pages.rs:62
+#, rust-format
+msgid "Redo Move Page"
+msgid_plural "Redo Move {n} Pages"
+msgstr[0] "Rehacer movimiento de página"
+msgstr[1] "Rehacer movimiento de {n} páginas"
+
+#: src/window/pages.rs:64
+#, rust-format
+msgid "Redo Insert Page"
+msgid_plural "Redo Insert {n} Pages"
+msgstr[0] "Rehacer inserción de página"
+msgstr[1] "Rehacer inserción de {n} páginas"
+
+#: src/window/pages.rs:66
+msgid "Redo Highlight"
+msgstr "Rehacer resaltado"
+
+#: src/window/pages.rs:67
+msgid "Redo Underline"
+msgstr "Rehacer subrayado"
+
+#: src/window/pages.rs:68
+msgid "Redo Strikethrough"
+msgstr "Rehacer tachado"
+
+#: src/window/pages.rs:69
+msgid "Redo Drawing"
+msgstr "Rehacer dibujo"
+
+#: src/window/pages.rs:70
+msgid "Redo Rectangle"
+msgstr "Rehacer rectángulo"
+
+#: src/window/pages.rs:71
+msgid "Redo Ellipse"
+msgstr "Rehacer elipse"
+
+#: src/window/pages.rs:72
+msgid "Redo Line"
+msgstr "Rehacer línea"
+
+#: src/window/pages.rs:73
+msgid "Redo Note"
+msgstr "Rehacer nota"
+
+#: src/window/pages.rs:74
+msgid "Redo Text Box"
+msgstr "Rehacer cuadro de texto"
+
+#: src/window/pages.rs:75
+msgid "Redo Add Annotation"
+msgstr "Rehacer anotación"
+
+#: src/window/pages.rs:76
+msgid "Redo Delete Annotation"
+msgstr "Rehacer eliminación de anotación"
+
+#: src/window/pages.rs:77
+msgid "Redo Change Annotation"
+msgstr "Rehacer cambio de anotación"
+
+#: src/window/pages.rs:78
+msgid "Redo Fill In Field"
+msgstr "Rehacer relleno de campo"
+
+#: src/window/pages.rs:79
+msgid "Redo Reset Form"
+msgstr "Rehacer restablecimiento del formulario"
+
+#: src/window/pages.rs:119
+#, rust-format
+msgid "page {page}"
+msgstr "página {page}"
+
+#: src/window/pages.rs:131
+#, rust-format
+msgid "pages {pages}"
+msgstr "páginas {pages}"
+
+#: src/window/pages.rs:199
+#, rust-format
+msgid "Couldn't delete the annotation: {error}"
+msgstr "No se pudo eliminar la anotación: {error}"
+
+#: src/window/pages.rs:260
+#, rust-format
+msgid "Couldn't copy the pages: {error}"
+msgstr "No se pudieron copiar las páginas: {error}"
+
+#: src/window/pages.rs:314
+msgid "Insert Pages from File"
+msgstr "Insertar páginas desde un archivo"
+
+#: src/window/pages.rs:447
+msgid "Export Selected Pages"
+msgstr "Exportar páginas seleccionadas"
+
+#: src/window/pages.rs:480
+#, rust-format
+msgid "Exported {n} page to “{name}”"
+msgid_plural "Exported {n} pages to “{name}”"
+msgstr[0] "Se exportó {n} página a «{name}»"
+msgstr[1] "Se exportaron {n} páginas a «{name}»"
+
+#: src/window/search.rs:187
+msgid "No matches"
+msgstr "Sin coincidencias"
+
+#: src/window/search.rs:188
+msgid "Searching…"
+msgstr "Buscando…"
+
+#: src/window/search.rs:193
+#, rust-format
+msgid "{current} of {total}"
+msgstr "{current} de {total}"
+
+#. Translators: the search is still running, so there may be
+#. more matches than {total}.
+#: src/window/search.rs:197
+#, rust-format
+msgid "{current} of {total}…"
+msgstr "{current} de {total}…"
+

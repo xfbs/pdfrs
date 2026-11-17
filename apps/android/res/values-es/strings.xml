@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Everything the app says, in English. A translation is a copy of this file
+  in `values-<language>` (German: `values-de`); TranslationsTest checks that
+  each has every text, with the same placeholders.
+
+  The UI tests find buttons and menu items by these texts, and the unit tests
+  read this file (EnglishTexts.kt): change a text and its tests change too.
+-->
+<resources>
+    <!-- Buttons that many dialogs share. -->
+    <string name="cancel">Cancelar</string>
+    <string name="close">Cerrar</string>
+    <string name="open">Abrir</string>
+    <string name="save">Guardar</string>
+    <string name="save_as">Guardar como</string>
+    <string name="discard">Descartar</string>
+    <string name="delete">Eliminar</string>
+    <string name="share">Compartir</string>
+    <string name="select_all">Seleccionar todo</string>
+    <!-- Describes the ⋮ button to screen readers. -->
+    <string name="more">Más</string>
+    <string name="back">Atrás</string>
+    <!-- The top bar. -->
+    <string name="back_to_document">Volver al documento</string>
+    <string name="contents_and_pages">Índice y páginas</string>
+    <!-- Beside the document's name while it has unsaved changes. -->
+    <string name="edited">Editado</string>
+    <string name="search">Buscar</string>
+    <!-- The ⋮ menu. -->
+    <string name="menu_open">Abrir</string>
+    <string name="menu_share">Compartir</string>
+    <string name="menu_print">Imprimir</string>
+    <string name="menu_go_to_page">Ir a la página</string>
+    <string name="menu_properties">Propiedades</string>
+    <string name="menu_highlight_fields">Resaltar campos del formulario</string>
+    <string name="menu_reset_form">Restablecer formulario</string>
+    <string name="menu_settings">Ajustes</string>
+    <!-- Closes the document and returns to the start screen. -->
+    <string name="menu_close">Cerrar</string>
+    <string name="undo_rotate">Deshacer rotación</string>
+    <string name="undo_delete">Deshacer eliminación</string>
+    <string name="undo_move">Deshacer movimiento</string>
+    <string name="undo_insert">Deshacer inserción</string>
+    <string name="undo_add_annotation">Deshacer anotación</string>
+    <string name="undo_remove_annotation">Deshacer eliminación de anotación</string>
+    <string name="undo_change_annotation">Deshacer cambio de anotación</string>
+    <string name="undo_fill_field">Deshacer relleno de campo</string>
+    <string name="undo_reset_form">Deshacer restablecimiento del formulario</string>
+    <string name="redo_rotate">Rehacer rotación</string>
+    <string name="redo_delete">Rehacer eliminación</string>
+    <string name="redo_move">Rehacer movimiento</string>
+    <string name="redo_insert">Rehacer inserción</string>
+    <string name="redo_add_annotation">Rehacer anotación</string>
+    <string name="redo_remove_annotation">Rehacer eliminación de anotación</string>
+    <string name="redo_change_annotation">Rehacer cambio de anotación</string>
+    <string name="redo_fill_field">Rehacer relleno de campo</string>
+    <string name="redo_reset_form">Rehacer restablecimiento del formulario</string>
+    <!-- The start screen. -->
+    <string name="open_pdf">Abrir PDF</string>
+    <string name="recent">Recientes</string>
+    <!-- Where the reader left off in a recent document. -->
+    <string name="recent_page">Página %1$d</string>
+    <string name="recent_page_of">Página %1$d de %2$d</string>
+    <!-- Where the reader left off, and how long ago: "Page 12 of 240 · 2 hours ago". -->
+    <string name="recent_summary">%1$s · %2$s</string>
+    <!-- Opening a document. -->
+    <!-- What a document without a name is called. -->
+    <string name="unnamed_document">PDF</string>
+    <string name="could_not_open">No se pudo abrir este archivo</string>
+    <string name="open_another">Abrir otro PDF</string>
+    <string name="password_protected">%1$s está protegido con contraseña</string>
+    <string name="password_needed">Se necesita una contraseña para abrir %1$s.</string>
+    <string name="password_title">Se requiere contraseña</string>
+    <string name="password_prompt">Introduce la contraseña para abrir %1$s.</string>
+    <string name="password_label">Contraseña</string>
+    <string name="password_wrong">La contraseña no es correcta.</string>
+    <!-- Pages and Contents. -->
+    <string name="tab_pages">Páginas</string>
+    <string name="tab_contents">Índice</string>
+    <string name="collapse">Contraer</string>
+    <string name="expand">Expandir</string>
+    <!-- What a long press on a page in the page grid does, for screen readers. -->
+    <string name="pick">Seleccionar</string>
+    <!-- Follows the finger while pages are dragged to another place. -->
+    <plurals name="pages_dragged">
+        <item quantity="one">%d página</item>
+        <item quantity="other">%d páginas</item>
+    </plurals>
+    <!-- Links that lead out of the document. -->
+    <string name="link_open_title">¿Abrir este enlace?</string>
+    <string name="link_blocked_title">Este enlace no se puede abrir</string>
+    <!-- "Go to page". -->
+    <string name="go_to_title">Ir a la página</string>
+    <!-- The field's label, with the first and last page number: "Page (i–240)". -->
+    <string name="go_to_label">Página (%1$s–%2$s)</string>
+    <!-- Which page a typed page number is, counted from the first. -->
+    <string name="go_to_position">Página %1$d de %2$d</string>
+    <string name="go_to_position_hint">O una posición, 1–%1$d</string>
+    <string name="go">Ir</string>
+    <!-- Search. -->
+    <string name="close_search">Cerrar búsqueda</string>
+    <string name="previous_match">Coincidencia anterior</string>
+    <string name="next_match">Coincidencia siguiente</string>
+    <!-- Which match is shown: "3 of 17". -->
+    <string name="search_count">%1$d de %2$d</string>
+    <!-- The same while the document is still being searched. -->
+    <string name="search_count_so_far">%1$d de %2$d…</string>
+    <!-- Still searching, nothing found yet. -->
+    <string name="search_running">…</string>
+    <string name="no_matches">Sin coincidencias</string>
+    <!-- Selected text. -->
+    <!-- Marks the selected text: with a highlighter, or a line under or through it. -->
+    <string name="highlight">Resaltar</string>
+    <string name="underline">Subrayar</string>
+    <string name="strike_through">Tachar</string>
+    <!-- Tells screen readers that an annotation (a mark on the text, a note, a drawing) is picked. -->
+    <string name="annotation_selected">Anotación seleccionada</string>
+    <string name="could_not_delete_annotation">No se pudo eliminar la anotación: %1$s</string>
+    <!-- Titles of the dialogs that fill in a field of a form, where the form has no name for it. -->
+    <string name="field_text_title">Rellenar campo</string>
+    <string name="field_choice_title">Elegir</string>
+    <string name="field_done">Listo</string>
+    <!-- The line of a menu of a form that takes text of one\'s own instead of one of its options. -->
+    <string name="field_own_text">O escribe otro texto</string>
+    <!-- How many characters a field holds of how many it takes, such as 3 / 10. -->
+    <string name="field_length">%1$d / %2$d</string>
+    <string name="copy">Copiar</string>
+    <string name="copied">Copiado</string>
+    <string name="too_much_to_copy">Es demasiado texto para copiarlo de una vez</string>
+    <string name="too_much_to_share">Es demasiado texto para compartirlo de una vez</string>
+    <!-- What the clipboard calls text copied from a document. -->
+    <string name="clip_label">Texto de un PDF</string>
+    <!-- Tells screen readers that text is selected on the page. -->
+    <string name="text_selected">Texto seleccionado</string>
+    <!-- The page view. -->
+    <string name="still_drawing">Esta página aún se está dibujando</string>
+    <!-- The view menu. -->
+    <!-- Describes the view button: "View: Single page". -->
+    <string name="view_description">Vista: %1$s</string>
+    <string name="layout_single_page">Página única</string>
+    <string name="layout_continuous">Continua</string>
+    <string name="layout_two_pages">Dos páginas</string>
+    <string name="layout_two_pages_continuous">Dos páginas, continua</string>
+    <string name="first_page_alone">Primera página sola</string>
+    <string name="fit_page">Ajustar a la página</string>
+    <string name="fit_width">Ajustar al ancho</string>
+    <!-- Tells screen readers which menu item is ticked. -->
+    <string name="chosen">Seleccionado</string>
+    <!-- Editing pages. -->
+    <!-- How many pages are picked: short, it shares a phone's top bar with four buttons. -->
+    <plurals name="pages_selected">
+        <item quantity="one">%d seleccionada</item>
+        <item quantity="other">%d seleccionadas</item>
+    </plurals>
+    <string name="clear_selection">Anular selección</string>
+    <string name="rotate_left">Girar a la izquierda</string>
+    <string name="rotate_right">Girar a la derecha</string>
+    <string name="delete_pages">Eliminar páginas</string>
+    <string name="unsaved_title">¿Guardar los cambios?</string>
+    <string name="unsaved_text">Los cambios en las páginas de %1$s se perderán si no se guardan.</string>
+    <string name="saving">Guardando…</string>
+    <!-- With what went wrong, as the system or the PDF library put it (in English). -->
+    <string name="could_not_save">No se pudo guardar: %1$s</string>
+    <string name="could_not_save_there">No se pudo guardar ahí. Esta es la copia editada.</string>
+    <!-- Sharing and printing. -->
+    <string name="could_not_share">No se pudo compartir este archivo</string>
+    <string name="preparing_to_print">Preparando la impresión…</string>
+    <string name="could_not_print">No se pudo imprimir: %1$s</string>
+    <!-- Properties. -->
+    <string name="property_file_name">Nombre del archivo</string>
+    <string name="property_title">Título</string>
+    <string name="property_author">Autor</string>
+    <string name="property_subject">Asunto</string>
+    <string name="property_keywords">Palabras clave</string>
+    <string name="property_creator">Creado con</string>
+    <string name="property_producer">Productor del PDF</string>
+    <string name="property_created">Creado</string>
+    <string name="property_modified">Modificado</string>
+    <string name="property_pages">Páginas</string>
+    <string name="property_page_size">Tamaño de página</string>
+    <string name="property_file_size">Tamaño del archivo</string>
+    <string name="property_pdf_version">Versión de PDF</string>
+    <!-- Width and height of a page in millimetres: "210 × 297 mm". -->
+    <string name="page_size_mm">%1$d × %2$d mm</string>
+    <!-- The same in inches, for paper sizes defined in them: "8.5 × 11 in". -->
+    <string name="page_size_in">%1$s × %2$s pulg</string>
+    <!-- A size with the name of the paper: "210 × 297 mm (A4)". -->
+    <string name="page_size_named">%1$s (%2$s)</string>
+    <string name="page_size_named_landscape">%1$s (%2$s, horizontal)</string>
+    <!-- The size of the first page, when not all pages have it. -->
+    <string name="page_size_others_differ">%1$s; las demás páginas difieren</string>
+    <!-- Settings. -->
+    <string name="setting_keep_screen_on">Mantener la pantalla encendida</string>
+    <plurals name="setting_keep_screen_on_detail">
+        <item quantity="one">Mientras haya un documento abierto, durante %d minuto tras el último toque</item>
+        <item quantity="other">Mientras haya un documento abierto, durante %d minutos tras el último toque</item>
+    </plurals>
+    <string name="setting_volume_keys">Pasar página con las teclas de volumen</string>
+    <string name="setting_volume_keys_detail">Bajar volumen avanza, subir volumen retrocede</string>
+    <string name="crash_log">Registro de fallos</string>
+    <string name="crash_log_empty">Hasta ahora no ha fallado nada</string>
+    <!-- With the date of the newest entry. -->
+    <string name="crash_log_detail">Última entrada: %1$s. Se guarda en este dispositivo; no se envía nada a menos que lo compartas.</string>
+</resources>

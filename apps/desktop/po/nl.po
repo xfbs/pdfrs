@@ -1,35 +1,28 @@
-# Dutch translation of Specto.
-# Copyright (C) 2026 The Specto contributors
-# This file is distributed under the same license as the specto package.
-# Stephan Paternotte, 2026.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-11-17 17:35+0100\n"
-"Last-Translator: Stephan Paternotte\n"
-"Language-Team: \n"
-"Language: nl\n"
+"PO-Revision-Date: 2026-11-17 19:16\n"
+"Last-Translator: \n"
+"Language-Team: Dutch\n"
+"Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Crowdin-Project: specto\n"
+"X-Crowdin-Project-ID: 947337\n"
+"X-Crowdin-Language: nl\n"
+"X-Crowdin-File: /apps/desktop/po/specto.pot\n"
+"X-Crowdin-File-ID: 15\n"
 
 #. Translators: {apache} and {mit} are the names of the two licenses,
 #. which stay in English and become links.
 #: src/main.rs:144
 #, rust-format
-msgid ""
-"Specto is licensed under either of the {apache} or the {mit}, at your "
-"option.\n"
-"\n"
+msgid "Specto is licensed under either of the {apache} or the {mit}, at your option.\n\n"
 "It comes with no warranty of any kind."
-msgstr ""
-"Specto is naar keuze gelicentieerd onder de {apache} of de {mit}.\n"
-"\n"
+msgstr "Specto is naar keuze gelicentieerd onder de {apache} of de {mit}.\n\n"
 "Het wordt geleverd zonder enige vorm van garantie."
 
 #: src/main.rs:163
@@ -458,24 +451,16 @@ msgid "Draw"
 msgstr "Tekenen"
 
 #: src/signatures.rs:381
-msgid ""
-"Sign on white paper, take a picture of it, and choose that picture. The "
-"paper is taken away, and the ink stays."
-msgstr ""
-"Handtekening op wit papier, maak er een foto van en kies die foto. Het "
-"papier wordt weggenomen en de inkt blijft."
+msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
+msgstr "Handtekening op wit papier, maak er een foto van en kies die foto. Het papier wordt weggenomen en de inkt blijft."
 
 #: src/signatures.rs:388
 msgid "Choose Picture…"
 msgstr "Afbeelding kiezen…"
 
 #: src/signatures.rs:395
-msgid ""
-"To the left, faint strokes are kept, and more of the paper's shadows. To the "
-"right, only what is dark."
-msgstr ""
-"Aan de linkerkant blijven vage streken behouden en meer schaduwen van het "
-"papier. Rechts alleen wat donker is."
+msgid "To the left, faint strokes are kept, and more of the paper's shadows. To the right, only what is dark."
+msgstr "Aan de linkerkant blijven vage streken behouden en meer schaduwen van het papier. Rechts alleen wat donker is."
 
 #: src/signatures.rs:398
 msgid "Ink as in the picture"
@@ -503,14 +488,11 @@ msgstr "Vanuit een afbeelding"
 
 #: src/signatures.rs:439
 msgid "Move the slider until the paper is gone and the strokes are whole."
-msgstr ""
-"Beweeg de schuifregelaar totdat het papier verdwenen is en de streken een "
-"geheel vormen."
+msgstr "Beweeg de schuifregelaar totdat het papier verdwenen is en de streken een geheel vormen."
 
 #: src/signatures.rs:441
 msgid "No ink found in this picture. Move the slider to the left."
-msgstr ""
-"Geen inkt gevonden in deze afbeelding. Beweeg de schuifregelaar naar links."
+msgstr "Geen inkt gevonden in deze afbeelding. Beweeg de schuifregelaar naar links."
 
 #: src/signatures.rs:458
 msgid "Pictures"
@@ -676,9 +658,7 @@ msgstr "“{name}” is verplaatst of verwijderd. Opslaan schrijft het opnieuw."
 #: src/window/files.rs:332
 #, rust-format
 msgid "“{name}” was changed by another program. Reloading discards your edits."
-msgstr ""
-"“{name}” is door een ander programma gewijzigd. Opnieuw laden gooit uw "
-"bewerkingen weg."
+msgstr "“{name}” is door een ander programma gewijzigd. Opnieuw laden gooit uw bewerkingen weg."
 
 #: src/window/files.rs:335
 msgid "_Reload"
@@ -690,12 +670,8 @@ msgstr "Bestand op schijf gewijzigd"
 
 #: src/window/files.rs:415
 #, rust-format
-msgid ""
-"“{name}” was changed by another program after it was opened. Saving replaces "
-"those changes with this document."
-msgstr ""
-"“{name}” is door een ander programma gewijzigd nadat het werd geopend. "
-"Opslaan vervangt die wijzigingen met dit document."
+msgid "“{name}” was changed by another program after it was opened. Saving replaces those changes with this document."
+msgstr "“{name}” is door een ander programma gewijzigd nadat het werd geopend. Opslaan vervangt die wijzigingen met dit document."
 
 #: src/window/files.rs:421
 msgid "_Save Anyway"
@@ -735,9 +711,7 @@ msgstr "Wijzigingen opslaan?"
 #: src/window/files.rs:746
 #, rust-format
 msgid "“{name}” has unsaved changes. Changes that aren't saved will be lost."
-msgstr ""
-"“{name}” bevat niet-opgeslagen wijzigingen. Niet-opgeslagen wijzigingen gaan "
-"verloren."
+msgstr "“{name}” bevat niet-opgeslagen wijzigingen. Niet-opgeslagen wijzigingen gaan verloren."
 
 #: src/window/files.rs:752
 msgid "_Discard"
@@ -745,16 +719,12 @@ msgstr "_Weggooien"
 
 #: src/window/files.rs:774
 msgid "Open PDF"
-msgstr "Open PDF"
+msgstr "PDF openen"
 
 #: src/window/markup.rs:36
 #, rust-format
-msgid ""
-"{tool}: marks the selected text, and what is selected from now on "
-"({shortcut} marks once)"
-msgstr ""
-"{tool}: markeert de geselecteerde tekst en wat vanaf nu wordt geselecteerd "
-"({shortcut} markeert een keer)"
+msgid "{tool}: marks the selected text, and what is selected from now on ({shortcut} marks once)"
+msgstr "{tool}: markeert de geselecteerde tekst en wat vanaf nu wordt geselecteerd ({shortcut} markeert een keer)"
 
 #: src/window/markup.rs:50
 msgid "Draw freehand"
@@ -1092,3 +1062,4 @@ msgstr "{current} van {total}"
 #, rust-format
 msgid "{current} of {total}…"
 msgstr "{current} van {total}…"
+
