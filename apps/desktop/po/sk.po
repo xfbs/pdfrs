@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 18:46\n"
+"PO-Revision-Date: 2026-11-17 21:37\n"
 "Last-Translator: \n"
 "Language-Team: Slovak\n"
 "Language: sk_SK\n"
@@ -22,25 +22,26 @@ msgstr ""
 #, rust-format
 msgid "Specto is licensed under either of the {apache} or the {mit}, at your option.\n\n"
 "It comes with no warranty of any kind."
-msgstr ""
+msgstr "Specto je licencované buď pod {apache}, alebo pod {mit}, podľa vášho výberu.\n\n"
+"Poskytuje sa bez akejkoľvek záruky."
 
 #: src/main.rs:163
 msgid "The Specto contributors"
-msgstr ""
+msgstr "Prispievatelia projektu Specto"
 
 #: src/main.rs:164
 msgid "© 2026 The Specto contributors"
-msgstr ""
+msgstr "© 2026 Prispievatelia projektu Specto"
 
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:173
 msgid "hayro (rendering)"
-msgstr ""
+msgstr "hayro (vykresľovanie)"
 
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:175
 msgid "lopdf (saving)"
-msgstr ""
+msgstr "lopdf (ukladanie)"
 
 #: src/main.rs:177
 msgid "Built with"
@@ -49,16 +50,16 @@ msgstr ""
 #: src/main.rs:207
 #, rust-format
 msgid "Quit {app}"
-msgstr ""
+msgstr "Ukončiť {app}"
 
 #: src/main.rs:208 src/window.rs:251
 #, rust-format
 msgid "About {app}"
-msgstr ""
+msgstr "O aplikácii {app}"
 
 #: src/main.rs:225 src/window.rs:152
 msgid "Open…"
-msgstr ""
+msgstr "Otvoriť…"
 
 #: src/main.rs:227 src/window.rs:213
 msgid "Save"
@@ -66,15 +67,15 @@ msgstr ""
 
 #: src/main.rs:228 src/window.rs:214
 msgid "Save As…"
-msgstr ""
+msgstr "Uložiť ako…"
 
 #: src/main.rs:229 src/window.rs:216
 msgid "Export Selected Pages…"
-msgstr ""
+msgstr "Exportovať vybrané strany…"
 
 #: src/main.rs:232 src/window.rs:219
 msgid "Print…"
-msgstr ""
+msgstr "Tlačiť…"
 
 #: src/main.rs:233 src/properties.rs:201 src/window.rs:220
 msgid "Properties"
@@ -82,15 +83,15 @@ msgstr ""
 
 #: src/main.rs:235
 msgid "Close Window"
-msgstr ""
+msgstr "Zavrieť okno"
 
 #: src/main.rs:240 src/window/actions.rs:93
 msgid "Undo"
-msgstr ""
+msgstr "Späť"
 
 #: src/main.rs:241 src/window/actions.rs:97
 msgid "Redo"
-msgstr ""
+msgstr "Znova"
 
 #: src/main.rs:244
 msgid "Copy"
@@ -98,31 +99,31 @@ msgstr ""
 
 #: src/main.rs:245
 msgid "Select All"
-msgstr ""
+msgstr "Vybrať všetko"
 
 #: src/main.rs:248 src/window.rs:234
 msgid "Insert Pages from File…"
-msgstr ""
+msgstr "Vložiť strany zo súboru…"
 
 #: src/main.rs:249 src/window.rs:228
 msgid "Delete Pages"
-msgstr ""
+msgstr "Odstrániť strany"
 
 #: src/main.rs:252
 msgid "Find…"
-msgstr ""
+msgstr "Hľadať…"
 
 #: src/main.rs:253
 msgid "Find Next"
-msgstr ""
+msgstr "Hľadať ďalšie"
 
 #: src/main.rs:254
 msgid "Find Previous"
-msgstr ""
+msgstr "Hľadať predchádzajúce"
 
 #: src/main.rs:259 src/window.rs:267
 msgid "Single Page"
-msgstr ""
+msgstr "Jedna strana"
 
 #: src/main.rs:260 src/window.rs:268
 msgid "Continuous"
@@ -130,43 +131,43 @@ msgstr ""
 
 #: src/main.rs:261 src/window.rs:269
 msgid "Two Pages"
-msgstr ""
+msgstr "Dve strany"
 
 #: src/main.rs:263 src/window.rs:270
 msgid "Two Pages, Continuous"
-msgstr ""
+msgstr "Dve strany, súvislé"
 
 #: src/main.rs:267 src/window.rs:278
 msgid "Show Cover Page Alone"
-msgstr ""
+msgstr "Zobraziť titulnú stranu samostatne"
 
 #: src/main.rs:269 src/window.rs:295
 msgid "Actual Size"
-msgstr ""
+msgstr "Skutočná veľkosť"
 
 #: src/main.rs:270 src/window.rs:293
 msgid "Fit Width"
-msgstr ""
+msgstr "Prispôsobiť šírke"
 
 #: src/main.rs:271 src/window.rs:294
 msgid "Fit Page"
-msgstr ""
+msgstr "Prispôsobiť strane"
 
 #: src/main.rs:272 src/window.rs:300
 msgid "Zoom In"
-msgstr ""
+msgstr "Priblížiť"
 
 #: src/main.rs:273 src/window.rs:301
 msgid "Zoom Out"
-msgstr ""
+msgstr "Oddialiť"
 
 #: src/main.rs:276
 msgid "Show Sidebar"
-msgstr ""
+msgstr "Zobraziť bočný panel"
 
 #: src/main.rs:277 src/window.rs:755
 msgid "Thumbnails"
-msgstr ""
+msgstr "Miniatúry"
 
 #: src/main.rs:278 src/window.rs:780
 msgid "Contents"
@@ -178,23 +179,23 @@ msgstr ""
 
 #: src/main.rs:284
 msgid "Previous Page"
-msgstr ""
+msgstr "Predchádzajúca strana"
 
 #: src/main.rs:285
 msgid "Next Page"
-msgstr ""
+msgstr "Nasledujúca strana"
 
 #: src/main.rs:288
 msgid "First Page"
-msgstr ""
+msgstr "Prvá strana"
 
 #: src/main.rs:289
 msgid "Last Page"
-msgstr ""
+msgstr "Posledná strana"
 
 #: src/main.rs:291
 msgid "Go to Page…"
-msgstr ""
+msgstr "Prejsť na stranu…"
 
 #: src/main.rs:293
 msgid "Back"
@@ -206,15 +207,15 @@ msgstr ""
 
 #: src/main.rs:300 src/window.rs:226
 msgid "Rotate Left"
-msgstr ""
+msgstr "Otočiť doľava"
 
 #: src/main.rs:301 src/window.rs:227
 msgid "Rotate Right"
-msgstr ""
+msgstr "Otočiť doprava"
 
 #: src/main.rs:304
 msgid "Show Markup Toolbar"
-msgstr ""
+msgstr "Zobraziť panel nástrojov na značkovanie"
 
 #: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
@@ -226,27 +227,27 @@ msgstr ""
 
 #: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
-msgstr ""
+msgstr "Preškrtnutie"
 
 #: src/main.rs:310 src/window.rs:242
 msgid "Highlight Form Fields"
-msgstr ""
+msgstr "Zvýrazniť polia formulára"
 
 #: src/main.rs:311 src/window.rs:245
 msgid "Reset Form"
-msgstr ""
+msgstr "Obnoviť formulár"
 
 #: src/main.rs:316
 msgid "File"
-msgstr ""
+msgstr "Súbor"
 
 #: src/main.rs:317
 msgid "Edit"
-msgstr ""
+msgstr "Upraviť"
 
 #: src/main.rs:318
 msgid "View"
-msgstr ""
+msgstr "Zobraziť"
 
 #: src/main.rs:319
 msgid "Go"
@@ -254,11 +255,11 @@ msgstr ""
 
 #: src/main.rs:320
 msgid "Tools"
-msgstr ""
+msgstr "Nástroje"
 
 #: src/main.rs:322
 msgid "Help"
-msgstr ""
+msgstr "Pomocník"
 
 #: src/markup_list.rs:47
 msgid "Drawing"
@@ -266,11 +267,11 @@ msgstr ""
 
 #: src/markup_list.rs:48
 msgid "Rectangle"
-msgstr ""
+msgstr "Obdĺžnik"
 
 #: src/markup_list.rs:49
 msgid "Ellipse"
-msgstr ""
+msgstr "Elipsa"
 
 #: src/markup_list.rs:50
 msgid "Line"
@@ -298,27 +299,27 @@ msgstr ""
 
 #: src/markup_list.rs:96
 msgid "No Markup"
-msgstr ""
+msgstr "Žiadne anotácie"
 
 #: src/markup_list.rs:97
 msgid "Highlights, drawings and notes are listed here"
-msgstr ""
+msgstr "Zvýraznenia, kresby a poznámky sa zobrazia tu"
 
 #: src/print.rs:135
 msgid "printing failed"
-msgstr ""
+msgstr "tlač zlyhala"
 
 #: src/print.rs:267
 msgid "couldn't open the file"
-msgstr ""
+msgstr "súbor sa nepodarilo otvoriť"
 
 #: src/properties.rs:36
 msgid "File Name"
-msgstr ""
+msgstr "Názov súboru"
 
 #: src/properties.rs:37
 msgid "Folder"
-msgstr ""
+msgstr "Priečinok"
 
 #: src/properties.rs:38
 msgid "Title"
@@ -326,61 +327,61 @@ msgstr ""
 
 #: src/properties.rs:39
 msgid "Author"
-msgstr ""
+msgstr "Autor"
 
 #: src/properties.rs:40
 msgid "Subject"
-msgstr ""
+msgstr "Predmet"
 
 #: src/properties.rs:41
 msgid "Keywords"
-msgstr ""
+msgstr "Kľúčové slová"
 
 #. Translators: the program a document was written in.
 #: src/properties.rs:43
 msgid "Created With"
-msgstr ""
+msgstr "Vytvorené v"
 
 #. Translators: the program that turned a document into a PDF.
 #: src/properties.rs:45
 msgid "PDF Producer"
-msgstr ""
+msgstr "Tvorca PDF"
 
 #: src/properties.rs:46
 msgid "Created"
-msgstr ""
+msgstr "Vytvorené"
 
 #: src/properties.rs:47
 msgid "Modified"
-msgstr ""
+msgstr "Upravené"
 
 #: src/properties.rs:48
 msgid "Pages"
-msgstr ""
+msgstr "Stránky"
 
 #: src/properties.rs:49
 msgid "Page Size"
-msgstr ""
+msgstr "Veľkosť stránky"
 
 #: src/properties.rs:51
 msgid "File Size"
-msgstr ""
+msgstr "Veľkosť súboru"
 
 #: src/properties.rs:54
 msgid "PDF Version"
-msgstr ""
+msgstr "Verzia PDF"
 
 #: src/properties.rs:56
 msgid "Protection"
-msgstr ""
+msgstr "Ochrana"
 
 #: src/properties.rs:58
 msgid "Password to open"
-msgstr ""
+msgstr "Heslo na otvorenie"
 
 #: src/properties.rs:59
 msgid "Encrypted, opens without a password"
-msgstr ""
+msgstr "Šifrované, otvára sa bez hesla"
 
 #: src/properties.rs:60
 msgid "None"
@@ -388,54 +389,54 @@ msgstr ""
 
 #: src/properties.rs:65
 msgid "Not Allowed"
-msgstr ""
+msgstr "Nepovolené"
 
 #: src/properties.rs:73
 msgid "Printing"
-msgstr ""
+msgstr "Tlač"
 
 #: src/properties.rs:74
 msgid "Copying text and pictures"
-msgstr ""
+msgstr "Kopírovanie textu a obrázkov"
 
 #: src/properties.rs:75
 msgid "Changing the pages"
-msgstr ""
+msgstr "Úprava stránok"
 
 #: src/properties.rs:78
 msgid "Marking up and filling in forms"
-msgstr ""
+msgstr "Označovanie a vypĺňanie formulárov"
 
 #. Translators: a page size in inches, "8.5 × 11 in".
 #: src/properties.rs:140
 #, rust-format
 msgid "{width} × {height} in"
-msgstr ""
+msgstr "{width} × {height} palcov"
 
 #. Translators: a page size in millimeters, "210 × 297 mm".
 #: src/properties.rs:147
 #, rust-format
 msgid "{width} × {height} mm"
-msgstr ""
+msgstr "{width} × {height} mm"
 
 #. Translators: a page size and the name of the paper, "297 × 210 mm (A4,
 #. landscape)".
 #: src/properties.rs:158
 #, rust-format
 msgid "{size} ({paper}, landscape)"
-msgstr ""
+msgstr "{size} ({paper}, na šírku)"
 
 #. Translators: a page size and the name of the paper, "210 × 297 mm (A4)".
 #: src/properties.rs:163
 #, rust-format
 msgid "{size} ({paper})"
-msgstr ""
+msgstr "{size} ({paper})"
 
 #. Translators: {size} is the size of the first page, "210 × 297 mm (A4)".
 #: src/properties.rs:179
 #, rust-format
 msgid "{size}, other pages differ"
-msgstr ""
+msgstr "{size}, ostatné stránky sa líšia"
 
 #: src/signatures.rs:344
 msgid "Clear"
@@ -443,7 +444,7 @@ msgstr ""
 
 #: src/signatures.rs:356
 msgid "Sign with the mouse or the touchpad"
-msgstr ""
+msgstr "Podpíšte sa myšou alebo touchpadom"
 
 #: src/signatures.rs:364
 msgid "Draw"
@@ -451,11 +452,11 @@ msgstr ""
 
 #: src/signatures.rs:381
 msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
-msgstr ""
+msgstr "Podpíšte sa na biely papier, odfoťte ho a vyberte túto fotografiu. Papier sa odstráni a zostane len atrament."
 
 #: src/signatures.rs:388
 msgid "Choose Picture…"
-msgstr ""
+msgstr "Vybrať obrázok…"
 
 #: src/signatures.rs:395
 msgid "To the left, faint strokes are kept, and more of the paper's shadows. To the right, only what is dark."
@@ -463,15 +464,15 @@ msgstr ""
 
 #: src/signatures.rs:398
 msgid "Ink as in the picture"
-msgstr ""
+msgstr "Atrament ako na obrázku"
 
 #: src/signatures.rs:399
 msgid "Black ink"
-msgstr ""
+msgstr "Čierny atrament"
 
 #: src/signatures.rs:400
 msgid "Blue ink"
-msgstr ""
+msgstr "Modrý atrament"
 
 #: src/signatures.rs:403
 msgid "Faint"
@@ -487,11 +488,11 @@ msgstr ""
 
 #: src/signatures.rs:439
 msgid "Move the slider until the paper is gone and the strokes are whole."
-msgstr ""
+msgstr "Posúvajte posuvník, kým papier nezmizne a ťahy nebudú celistvé."
 
 #: src/signatures.rs:441
 msgid "No ink found in this picture. Move the slider to the left."
-msgstr ""
+msgstr "Na tomto obrázku sa nenašiel žiadny atrament. Posuňte posuvník doľava."
 
 #: src/signatures.rs:458
 msgid "Pictures"
@@ -499,7 +500,7 @@ msgstr ""
 
 #: src/signatures.rs:463
 msgid "Choose a Picture of a Signature"
-msgstr ""
+msgstr "Vyberte obrázok podpisu"
 
 #: src/signatures.rs:480 src/window/files.rs:420 src/window/files.rs:522
 #: src/window/files.rs:751
@@ -512,11 +513,11 @@ msgstr ""
 
 #: src/signatures.rs:510
 msgid "New Signature"
-msgstr ""
+msgstr "Nový podpis"
 
 #: src/window.rs:148
 msgid "Open a PDF"
-msgstr ""
+msgstr "Otvoriť PDF"
 
 #: src/window.rs:149
 msgid "Drop a file here or choose one"
@@ -524,7 +525,7 @@ msgstr ""
 
 #: src/window.rs:162
 msgid "Recent"
-msgstr ""
+msgstr "Nedávne"
 
 #: src/window.rs:188
 msgid "Thumbnails (F9)"
@@ -537,7 +538,7 @@ msgstr ""
 
 #: src/window.rs:258
 msgid "Main Menu"
-msgstr ""
+msgstr "Hlavná ponuka"
 
 #: src/window.rs:285
 msgid "Page Layout"
@@ -550,7 +551,7 @@ msgstr ""
 #: src/window.rs:317
 #, rust-format
 msgid "Go to Page ({shortcut})"
-msgstr ""
+msgstr "Prejsť na stranu ({shortcut})"
 
 #: src/window.rs:330
 msgid "Search"
@@ -558,78 +559,78 @@ msgstr ""
 
 #: src/window.rs:342
 msgid "Previous Match (Shift+Enter)"
-msgstr ""
+msgstr "Predchádzajúci výsledok (Shift+Enter)"
 
 #: src/window.rs:349
 msgid "Next Match (Enter)"
-msgstr ""
+msgstr "Nasledujúci výsledok (Enter)"
 
 #: src/window.rs:371
 #, rust-format
 msgid "Search ({shortcut})"
-msgstr ""
+msgstr "Hľadať ({shortcut})"
 
 #: src/window.rs:900
 #, rust-format
 msgid "Links of this kind aren't opened: {address}"
-msgstr ""
+msgstr "Odkazy tohto druhu sa neotvárajú: {address}"
 
 #: src/window.rs:909
 #, rust-format
 msgid "Couldn't open link: {error}"
-msgstr ""
+msgstr "Odkaz sa nepodarilo otvoriť: {error}"
 
 #. Translators: a keyboard shortcut as tooltips show it, the
 #. Control key with another.
 #: src/window.rs:960
 #, rust-format
 msgid "Ctrl+{key}"
-msgstr ""
+msgstr "Ctrl+{key}"
 
 #: src/window/actions.rs:103
 #, rust-format
 msgid "{n} page — Edited"
 msgid_plural "{n} pages — Edited"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "{n} strana — upravené"
+msgstr[1] "{n} strany — upravené"
+msgstr[2] "{n} strany — upravené"
+msgstr[3] "{n} strán — upravené"
 
 #: src/window/actions.rs:105 src/window/pages.rs:133
 #, rust-format
 msgid "{n} page"
 msgid_plural "{n} pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "{n} strana"
+msgstr[1] "{n} strany"
+msgstr[2] "{n} strany"
+msgstr[3] "{n} strán"
 
 #. Translators: follows the box with the page number: "3 of 120".
 #: src/window/actions.rs:111
 #, rust-format
 msgid "of {pages}"
-msgstr ""
+msgstr "z {pages}"
 
 #. Translators: follows the box with a printed page number:
 #. "iv (4 of 120)".
 #: src/window/actions.rs:511
 #, rust-format
 msgid "({position} of {pages})"
-msgstr ""
+msgstr "({position} z {pages})"
 
 #: src/window/files.rs:8
 #, rust-format
 msgid "Couldn't read “{name}”: {error}"
-msgstr ""
+msgstr "Súbor „{name}“ sa nepodarilo prečítať: {error}"
 
 #: src/window/files.rs:15
 #, rust-format
 msgid "Couldn't save “{name}”: {error}"
-msgstr ""
+msgstr "Súbor „{name}“ sa nepodarilo uložiť: {error}"
 
 #: src/window/files.rs:23
 msgid "PDF documents"
-msgstr ""
+msgstr "Dokumenty PDF"
 
 #: src/window/files.rs:54
 msgid "reading failed"
@@ -651,17 +652,17 @@ msgstr ""
 #: src/window/files.rs:249 src/window/pages.rs:405
 #, rust-format
 msgid "Couldn't open “{name}”: {error}"
-msgstr ""
+msgstr "Súbor „{name}“ sa nepodarilo otvoriť: {error}"
 
 #: src/window/files.rs:323
 #, rust-format
 msgid "“{name}” was moved or deleted. Saving writes it again."
-msgstr ""
+msgstr "Súbor „{name}“ bol premiestnený alebo odstránený. Uložením sa zapíše znova."
 
 #: src/window/files.rs:332
 #, rust-format
 msgid "“{name}” was changed by another program. Reloading discards your edits."
-msgstr ""
+msgstr "Súbor „{name}“ bol zmenený iným programom. Opätovným načítaním sa vaše úpravy zahodia."
 
 #: src/window/files.rs:335
 msgid "_Reload"
@@ -669,12 +670,12 @@ msgstr ""
 
 #: src/window/files.rs:413
 msgid "File Changed on Disk"
-msgstr ""
+msgstr "Súbor bol na disku zmenený"
 
 #: src/window/files.rs:415
 #, rust-format
 msgid "“{name}” was changed by another program after it was opened. Saving replaces those changes with this document."
-msgstr ""
+msgstr "Súbor „{name}“ bol po otvorení zmenený iným programom. Uložením sa tieto zmeny nahradia týmto dokumentom."
 
 #: src/window/files.rs:421
 msgid "_Save Anyway"
@@ -688,11 +689,11 @@ msgstr ""
 #: src/window/files.rs:518
 #, rust-format
 msgid "“{name}” is protected with a password."
-msgstr ""
+msgstr "Súbor „{name}“ je chránený heslom."
 
 #: src/window/files.rs:520
 msgid "Password Required"
-msgstr ""
+msgstr "Vyžaduje sa heslo"
 
 #: src/window/files.rs:523
 msgid "_Unlock"
@@ -701,7 +702,7 @@ msgstr ""
 #: src/window/files.rs:611
 #, rust-format
 msgid "Couldn't print: {error}"
-msgstr ""
+msgstr "Tlač sa nepodarila: {error}"
 
 #: src/window/files.rs:656
 msgid "Save As"
@@ -714,7 +715,7 @@ msgstr ""
 #: src/window/files.rs:746
 #, rust-format
 msgid "“{name}” has unsaved changes. Changes that aren't saved will be lost."
-msgstr ""
+msgstr "Súbor „{name}“ obsahuje neuložené zmeny. Zmeny, ktoré nie sú uložené, sa stratia."
 
 #: src/window/files.rs:752
 msgid "_Discard"
@@ -722,7 +723,7 @@ msgstr ""
 
 #: src/window/files.rs:774
 msgid "Open PDF"
-msgstr ""
+msgstr "Otvoriť PDF"
 
 #: src/window/markup.rs:36
 #, rust-format
@@ -751,7 +752,7 @@ msgstr ""
 
 #: src/window/markup.rs:55
 msgid "Add notes: click where one goes"
-msgstr ""
+msgstr "Pridať poznámky: kliknite tam, kam patrí"
 
 #: src/window/markup.rs:98
 msgid "Color"
@@ -759,125 +760,125 @@ msgstr ""
 
 #: src/window/markup.rs:113
 msgid "Signature"
-msgstr ""
+msgstr "Podpis"
 
 #: src/window/markup.rs:121
 msgid "Sans-serif"
-msgstr ""
+msgstr "Bezpätkové"
 
 #: src/window/markup.rs:122
 msgid "Serif"
-msgstr ""
+msgstr "Pätkové"
 
 #: src/window/markup.rs:123
 msgid "Monospace"
-msgstr ""
+msgstr "Neproporcionálne"
 
 #: src/window/markup.rs:149
 msgid "Font"
-msgstr ""
+msgstr "Písmo"
 
 #: src/window/markup.rs:153
 msgid "Bold"
-msgstr ""
+msgstr "Tučné"
 
 #: src/window/markup.rs:157
 msgid "Italic"
-msgstr ""
+msgstr "Kurzíva"
 
 #: src/window/markup.rs:167
 msgid "Text size in points"
-msgstr ""
+msgstr "Veľkosť textu v bodoch"
 
 #: src/window/markup.rs:228
 msgid "Yellow"
-msgstr ""
+msgstr "Žltá"
 
 #: src/window/markup.rs:229
 msgid "Green"
-msgstr ""
+msgstr "Zelená"
 
 #: src/window/markup.rs:230
 msgid "Blue"
-msgstr ""
+msgstr "Modrá"
 
 #: src/window/markup.rs:231
 msgid "Pink"
-msgstr ""
+msgstr "Ružová"
 
 #: src/window/markup.rs:232
 msgid "Purple"
-msgstr ""
+msgstr "Fialová"
 
 #: src/window/markup.rs:233
 msgid "Red"
-msgstr ""
+msgstr "Červená"
 
 #: src/window/markup.rs:234
 msgid "Black"
-msgstr ""
+msgstr "Čierna"
 
 #: src/window/markup.rs:556
 msgid "Select the text to mark first"
-msgstr ""
+msgstr "Najprv vyberte text, ktorý chcete označiť"
 
 #: src/window/markup.rs:602
 msgid "Place this signature: click where it goes"
-msgstr ""
+msgstr "Umiestniť tento podpis: kliknite tam, kam patrí"
 
 #: src/window/markup.rs:614
 msgid "Delete this signature"
-msgstr ""
+msgstr "Odstrániť tento podpis"
 
 #: src/window/markup.rs:630
 msgid "New Signature…"
-msgstr ""
+msgstr "Nový podpis…"
 
 #: src/window/markup.rs:659
 msgid "Click where the signature goes"
-msgstr ""
+msgstr "Kliknite tam, kam patrí podpis"
 
 #: src/window/markup.rs:1544 src/window/markup.rs:1571
 #: src/window/markup.rs:1664 src/window/markup.rs:1717
 #, rust-format
 msgid "Couldn't change the annotation: {error}"
-msgstr ""
+msgstr "Anotáciu sa nepodarilo zmeniť: {error}"
 
 #: src/window/pages.rs:27
 #, rust-format
 msgid "Undo Rotate Page"
 msgid_plural "Undo Rotate {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Vrátiť späť otočenie strany"
+msgstr[1] "Vrátiť späť otočenie {n} strán"
+msgstr[2] "Vrátiť späť otočenie {n} strán"
+msgstr[3] "Vrátiť späť otočenie {n} strán"
 
 #: src/window/pages.rs:30
 #, rust-format
 msgid "Undo Delete Page"
 msgid_plural "Undo Delete {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Vrátiť späť odstránenie strany"
+msgstr[1] "Vrátiť späť odstránenie {n} strán"
+msgstr[2] "Vrátiť späť odstránenie {n} strán"
+msgstr[3] "Vrátiť späť odstránenie {n} strán"
 
 #: src/window/pages.rs:32
 #, rust-format
 msgid "Undo Move Page"
 msgid_plural "Undo Move {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Vrátiť späť presunutie strany"
+msgstr[1] "Vrátiť späť presunutie {n} strán"
+msgstr[2] "Vrátiť späť presunutie {n} strán"
+msgstr[3] "Vrátiť späť presunutie {n} strán"
 
 #: src/window/pages.rs:34
 #, rust-format
 msgid "Undo Insert Page"
 msgid_plural "Undo Insert {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Vrátiť späť vloženie strany"
+msgstr[1] "Vrátiť späť vloženie {n} strán"
+msgstr[2] "Vrátiť späť vloženie {n} strán"
+msgstr[3] "Vrátiť späť vloženie {n} strán"
 
 #: src/window/pages.rs:36
 msgid "Undo Highlight"
@@ -917,59 +918,59 @@ msgstr ""
 
 #: src/window/pages.rs:45
 msgid "Undo Add Annotation"
-msgstr ""
+msgstr "Vrátiť späť pridanie anotácie"
 
 #: src/window/pages.rs:46
 msgid "Undo Delete Annotation"
-msgstr ""
+msgstr "Vrátiť späť odstránenie anotácie"
 
 #: src/window/pages.rs:47
 msgid "Undo Change Annotation"
-msgstr ""
+msgstr "Vrátiť späť zmenu anotácie"
 
 #: src/window/pages.rs:48
 msgid "Undo Fill In Field"
-msgstr ""
+msgstr "Vrátiť späť vyplnenie poľa"
 
 #: src/window/pages.rs:49
 msgid "Undo Reset Form"
-msgstr ""
+msgstr "Vrátiť späť obnovenie formulára"
 
 #: src/window/pages.rs:57
 #, rust-format
 msgid "Redo Rotate Page"
 msgid_plural "Redo Rotate {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Znova vykonať otočenie strany"
+msgstr[1] "Znova vykonať otočenie {n} strán"
+msgstr[2] "Znova vykonať otočenie {n} strán"
+msgstr[3] "Znova vykonať otočenie {n} strán"
 
 #: src/window/pages.rs:60
 #, rust-format
 msgid "Redo Delete Page"
 msgid_plural "Redo Delete {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Znova vykonať odstránenie strany"
+msgstr[1] "Znova vykonať odstránenie {n} strán"
+msgstr[2] "Znova vykonať odstránenie {n} strán"
+msgstr[3] "Znova vykonať odstránenie {n} strán"
 
 #: src/window/pages.rs:62
 #, rust-format
 msgid "Redo Move Page"
 msgid_plural "Redo Move {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Znova vykonať presunutie strany"
+msgstr[1] "Znova vykonať presunutie {n} strán"
+msgstr[2] "Znova vykonať presunutie {n} strán"
+msgstr[3] "Znova vykonať presunutie {n} strán"
 
 #: src/window/pages.rs:64
 #, rust-format
 msgid "Redo Insert Page"
 msgid_plural "Redo Insert {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Znova vykonať vloženie strany"
+msgstr[1] "Znova vykonať vloženie {n} strán"
+msgstr[2] "Znova vykonať vloženie {n} strán"
+msgstr[3] "Znova vykonať vloženie {n} strán"
 
 #: src/window/pages.rs:66
 msgid "Redo Highlight"
@@ -997,35 +998,35 @@ msgstr ""
 
 #: src/window/pages.rs:72
 msgid "Redo Line"
-msgstr ""
+msgstr "Znova vrátiť čiaru"
 
 #: src/window/pages.rs:73
 msgid "Redo Note"
-msgstr ""
+msgstr "Znova vrátiť poznámku"
 
 #: src/window/pages.rs:74
 msgid "Redo Text Box"
-msgstr ""
+msgstr "Znova vrátiť textové pole"
 
 #: src/window/pages.rs:75
 msgid "Redo Add Annotation"
-msgstr ""
+msgstr "Znova vrátiť pridanie anotácie"
 
 #: src/window/pages.rs:76
 msgid "Redo Delete Annotation"
-msgstr ""
+msgstr "Znova vrátiť odstránenie anotácie"
 
 #: src/window/pages.rs:77
 msgid "Redo Change Annotation"
-msgstr ""
+msgstr "Znova vrátiť zmenu anotácie"
 
 #: src/window/pages.rs:78
 msgid "Redo Fill In Field"
-msgstr ""
+msgstr "Znova vrátiť vyplnenie poľa"
 
 #: src/window/pages.rs:79
 msgid "Redo Reset Form"
-msgstr ""
+msgstr "Znova vrátiť obnovenie formulára"
 
 #: src/window/pages.rs:119
 #, rust-format
@@ -1040,47 +1041,47 @@ msgstr ""
 #: src/window/pages.rs:199
 #, rust-format
 msgid "Couldn't delete the annotation: {error}"
-msgstr ""
+msgstr "Anotáciu sa nepodarilo odstrániť: {error}"
 
 #: src/window/pages.rs:260
 #, rust-format
 msgid "Couldn't copy the pages: {error}"
-msgstr ""
+msgstr "Strany sa nepodarilo skopírovať: {error}"
 
 #: src/window/pages.rs:314
 msgid "Insert Pages from File"
-msgstr ""
+msgstr "Vložiť strany zo súboru"
 
 #: src/window/pages.rs:447
 msgid "Export Selected Pages"
-msgstr ""
+msgstr "Exportovať vybrané strany"
 
 #: src/window/pages.rs:480
 #, rust-format
 msgid "Exported {n} page to “{name}”"
 msgid_plural "Exported {n} pages to “{name}”"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Exportovaná {n} strana do „{name}“"
+msgstr[1] "Exportované {n} strany do „{name}“"
+msgstr[2] "Exportovaných {n} strán do „{name}“"
+msgstr[3] "Exportovaných {n} strán do „{name}“"
 
 #: src/window/search.rs:187
 msgid "No matches"
-msgstr ""
+msgstr "Žiadne zhody"
 
 #: src/window/search.rs:188
 msgid "Searching…"
-msgstr ""
+msgstr "Hľadá sa…"
 
 #: src/window/search.rs:193
 #, rust-format
 msgid "{current} of {total}"
-msgstr ""
+msgstr "{current} z {total}"
 
 #. Translators: the search is still running, so there may be
 #. more matches than {total}.
 #: src/window/search.rs:197
 #, rust-format
 msgid "{current} of {total}…"
-msgstr ""
+msgstr "{current} z {total}…"
 

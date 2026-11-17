@@ -9,7 +9,7 @@
 -->
 <resources>
     <!-- Buttons that many dialogs share. -->
-    <string name="cancel">Cancel</string>
+    <string name="cancel">Odustani</string>
     <string name="close">Close</string>
     <string name="open">Open</string>
     <string name="save">Save</string>
@@ -22,102 +22,102 @@
     <string name="more">More</string>
     <string name="back">Back</string>
     <!-- The top bar. -->
-    <string name="back_to_document">Back to document</string>
+    <string name="back_to_document">Natrag na dokument</string>
     <string name="contents_and_pages">Contents and pages</string>
     <!-- Beside the document's name while it has unsaved changes. -->
-    <string name="edited">Edited</string>
+    <string name="edited">Uređeno</string>
     <string name="search">Search</string>
     <!-- The ⋮ menu. -->
-    <string name="menu_open">Open</string>
+    <string name="menu_open">Otvori</string>
     <string name="menu_share">Share</string>
-    <string name="menu_print">Print</string>
-    <string name="menu_go_to_page">Go to page</string>
+    <string name="menu_print">Ispiši</string>
+    <string name="menu_go_to_page">Idi na stranicu</string>
     <string name="menu_properties">Properties</string>
-    <string name="menu_highlight_fields">Highlight form fields</string>
-    <string name="menu_reset_form">Reset form</string>
-    <string name="menu_settings">Settings</string>
+    <string name="menu_highlight_fields">Istakni polja obrasca</string>
+    <string name="menu_reset_form">Poništi obrazac</string>
+    <string name="menu_settings">Postavke</string>
     <!-- Closes the document and returns to the start screen. -->
-    <string name="menu_close">Close</string>
-    <string name="undo_rotate">Undo rotate</string>
-    <string name="undo_delete">Undo delete</string>
-    <string name="undo_move">Undo move</string>
-    <string name="undo_insert">Undo insert</string>
-    <string name="undo_add_annotation">Undo add annotation</string>
-    <string name="undo_remove_annotation">Undo delete annotation</string>
-    <string name="undo_change_annotation">Undo change annotation</string>
-    <string name="undo_fill_field">Undo fill in field</string>
-    <string name="undo_reset_form">Undo reset form</string>
+    <string name="menu_close">Zatvori</string>
+    <string name="undo_rotate">Poništi rotaciju</string>
+    <string name="undo_delete">Poništi brisanje</string>
+    <string name="undo_move">Poništi premještanje</string>
+    <string name="undo_insert">Poništi umetanje</string>
+    <string name="undo_add_annotation">Poništi dodavanje bilješke</string>
+    <string name="undo_remove_annotation">Poništi brisanje bilješke</string>
+    <string name="undo_change_annotation">Poništi promjenu bilješke</string>
+    <string name="undo_fill_field">Poništi ispunjavanje polja</string>
+    <string name="undo_reset_form">Poništi resetiranje obrasca</string>
     <string name="redo_rotate">Redo rotate</string>
-    <string name="redo_delete">Redo delete</string>
-    <string name="redo_move">Redo move</string>
-    <string name="redo_insert">Redo insert</string>
-    <string name="redo_add_annotation">Redo add annotation</string>
-    <string name="redo_remove_annotation">Redo delete annotation</string>
-    <string name="redo_change_annotation">Redo change annotation</string>
-    <string name="redo_fill_field">Redo fill in field</string>
-    <string name="redo_reset_form">Redo reset form</string>
+    <string name="redo_delete">Ponovi brisanje</string>
+    <string name="redo_move">Ponovi premještanje</string>
+    <string name="redo_insert">Ponovi umetanje</string>
+    <string name="redo_add_annotation">Ponovi dodavanje bilješke</string>
+    <string name="redo_remove_annotation">Ponovi brisanje bilješke</string>
+    <string name="redo_change_annotation">Ponovi promjenu bilješke</string>
+    <string name="redo_fill_field">Ponovi ispunjavanje polja</string>
+    <string name="redo_reset_form">Ponovi resetiranje obrasca</string>
     <!-- The start screen. -->
-    <string name="open_pdf">Open PDF</string>
+    <string name="open_pdf">Otvori PDF</string>
     <string name="recent">Recent</string>
     <!-- Where the reader left off in a recent document. -->
-    <string name="recent_page">Page %1$d</string>
-    <string name="recent_page_of">Page %1$d of %2$d</string>
+    <string name="recent_page">Stranica %1$d</string>
+    <string name="recent_page_of">Stranica %1$d od %2$d</string>
     <!-- Where the reader left off, and how long ago: "Page 12 of 240 · 2 hours ago". -->
     <string name="recent_summary">%1$s · %2$s</string>
     <!-- Opening a document. -->
     <!-- What a document without a name is called. -->
     <string name="unnamed_document">PDF</string>
-    <string name="could_not_open">Couldn\'t open this file</string>
-    <string name="open_another">Open another PDF</string>
-    <string name="password_protected">%1$s is password protected</string>
+    <string name="could_not_open">Ova se datoteka ne može otvoriti</string>
+    <string name="open_another">Otvori drugi PDF</string>
+    <string name="password_protected">%1$s je zaštićen lozinkom</string>
     <string name="password_needed">A password is needed to open %1$s.</string>
-    <string name="password_title">Password required</string>
+    <string name="password_title">Potrebna je lozinka</string>
     <string name="password_prompt">Enter the password to open %1$s.</string>
-    <string name="password_label">Password</string>
+    <string name="password_label">Lozinka</string>
     <string name="password_wrong">That password didn\'t work.</string>
     <!-- Pages and Contents. -->
-    <string name="tab_pages">Pages</string>
-    <string name="tab_contents">Contents</string>
+    <string name="tab_pages">Stranice</string>
+    <string name="tab_contents">Sadržaj</string>
     <string name="collapse">Collapse</string>
     <string name="expand">Expand</string>
     <!-- What a long press on a page in the page grid does, for screen readers. -->
     <string name="pick">Pick</string>
     <!-- Follows the finger while pages are dragged to another place. -->
     <plurals name="pages_dragged">
-        <item quantity="one">%d page</item>
-        <item quantity="few">%d pages</item>
-        <item quantity="other">%d pages</item>
+        <item quantity="one">%d stranica</item>
+        <item quantity="few">%d stranice</item>
+        <item quantity="other">%d stranica</item>
     </plurals>
     <!-- Links that lead out of the document. -->
     <string name="link_open_title">Open this link?</string>
     <string name="link_blocked_title">This link can\'t be opened</string>
     <!-- "Go to page". -->
-    <string name="go_to_title">Go to page</string>
+    <string name="go_to_title">Idi na stranicu</string>
     <!-- The field's label, with the first and last page number: "Page (i–240)". -->
-    <string name="go_to_label">Page (%1$s–%2$s)</string>
+    <string name="go_to_label">Stranica (%1$s–%2$s)</string>
     <!-- Which page a typed page number is, counted from the first. -->
-    <string name="go_to_position">Page %1$d of %2$d</string>
+    <string name="go_to_position">Stranica %1$d od %2$d</string>
     <string name="go_to_position_hint">Or a position, 1–%1$d</string>
     <string name="go">Go</string>
     <!-- Search. -->
     <string name="close_search">Close search</string>
-    <string name="previous_match">Previous match</string>
-    <string name="next_match">Next match</string>
+    <string name="previous_match">Prethodno podudaranje</string>
+    <string name="next_match">Sljedeće podudaranje</string>
     <!-- Which match is shown: "3 of 17". -->
-    <string name="search_count">%1$d of %2$d</string>
+    <string name="search_count">%1$d od %2$d</string>
     <!-- The same while the document is still being searched. -->
     <string name="search_count_so_far">%1$d of %2$d…</string>
     <!-- Still searching, nothing found yet. -->
     <string name="search_running">…</string>
-    <string name="no_matches">No matches</string>
+    <string name="no_matches">Nema podudaranja</string>
     <!-- Selected text. -->
     <!-- Marks the selected text: with a highlighter, or a line under or through it. -->
     <string name="highlight">Highlight</string>
-    <string name="underline">Underline</string>
+    <string name="underline">Podcrtavanje</string>
     <string name="strike_through">Strike through</string>
     <!-- Tells screen readers that an annotation (a mark on the text, a note, a drawing) is picked. -->
-    <string name="annotation_selected">Annotation selected</string>
-    <string name="could_not_delete_annotation">Couldn\'t delete the annotation: %1$s</string>
+    <string name="annotation_selected">Bilješka odabrana</string>
+    <string name="could_not_delete_annotation">Brisanje bilješke nije uspjelo: %1$s</string>
     <!-- Titles of the dialogs that fill in a field of a form, where the form has no name for it. -->
     <string name="field_text_title">Fill in field</string>
     <string name="field_choice_title">Choose</string>
@@ -127,81 +127,81 @@
     <!-- How many characters a field holds of how many it takes, such as 3 / 10. -->
     <string name="field_length">%1$d / %2$d</string>
     <string name="copy">Copy</string>
-    <string name="copied">Copied</string>
-    <string name="too_much_to_copy">That is too much text to copy at once</string>
-    <string name="too_much_to_share">That is too much text to share at once</string>
+    <string name="copied">Kopirano</string>
+    <string name="too_much_to_copy">Previše je teksta za kopiranje odjednom</string>
+    <string name="too_much_to_share">Previše je teksta za dijeljenje odjednom</string>
     <!-- What the clipboard calls text copied from a document. -->
-    <string name="clip_label">Text from a PDF</string>
+    <string name="clip_label">Tekst iz PDF-a</string>
     <!-- Tells screen readers that text is selected on the page. -->
-    <string name="text_selected">Text selected</string>
+    <string name="text_selected">Tekst odabran</string>
     <!-- The page view. -->
     <string name="still_drawing">Still drawing this page</string>
     <!-- The view menu. -->
     <!-- Describes the view button: "View: Single page". -->
     <string name="view_description">View: %1$s</string>
-    <string name="layout_single_page">Single page</string>
-    <string name="layout_continuous">Continuous</string>
-    <string name="layout_two_pages">Two pages</string>
-    <string name="layout_two_pages_continuous">Two pages, continuous</string>
-    <string name="first_page_alone">First page alone</string>
-    <string name="fit_page">Fit page</string>
-    <string name="fit_width">Fit width</string>
+    <string name="layout_single_page">Jedna stranica</string>
+    <string name="layout_continuous">Neprekidno</string>
+    <string name="layout_two_pages">Dvije stranice</string>
+    <string name="layout_two_pages_continuous">Dvije stranice, neprekidno</string>
+    <string name="first_page_alone">Prva stranica sama</string>
+    <string name="fit_page">Prilagodi stranici</string>
+    <string name="fit_width">Prilagodi širini</string>
     <!-- Tells screen readers which menu item is ticked. -->
     <string name="chosen">Chosen</string>
     <!-- Editing pages. -->
     <!-- How many pages are picked: short, it shares a phone's top bar with four buttons. -->
     <plurals name="pages_selected">
-        <item quantity="one">%d selected</item>
-        <item quantity="few">%d selected</item>
-        <item quantity="other">%d selected</item>
+        <item quantity="one">%d odabrana</item>
+        <item quantity="few">%d odabrane</item>
+        <item quantity="other">%d odabrano</item>
     </plurals>
-    <string name="clear_selection">Clear selection</string>
-    <string name="rotate_left">Rotate left</string>
-    <string name="rotate_right">Rotate right</string>
-    <string name="delete_pages">Delete pages</string>
-    <string name="unsaved_title">Save changes?</string>
-    <string name="unsaved_text">The changes to the pages of %1$s are lost unless you save them.</string>
-    <string name="saving">Saving…</string>
+    <string name="clear_selection">Poništi odabir</string>
+    <string name="rotate_left">Zakreni ulijevo</string>
+    <string name="rotate_right">Zakreni udesno</string>
+    <string name="delete_pages">Izbriši stranice</string>
+    <string name="unsaved_title">Spremiti promjene?</string>
+    <string name="unsaved_text">Promjene na stranicama datoteke %1$s bit će izgubljene ako ih ne spremite.</string>
+    <string name="saving">Spremanje…</string>
     <!-- With what went wrong, as the system or the PDF library put it (in English). -->
-    <string name="could_not_save">Couldn\'t save: %1$s</string>
-    <string name="could_not_save_there">Couldn\'t save there. This is the edited copy.</string>
+    <string name="could_not_save">Spremanje nije uspjelo: %1$s</string>
+    <string name="could_not_save_there">Spremanje na to mjesto nije uspjelo. Ovo je uređena kopija.</string>
     <!-- Sharing and printing. -->
-    <string name="could_not_share">Couldn\'t share this file</string>
-    <string name="preparing_to_print">Preparing to print…</string>
-    <string name="could_not_print">Couldn\'t print: %1$s</string>
+    <string name="could_not_share">Dijeljenje ove datoteke nije uspjelo</string>
+    <string name="preparing_to_print">Priprema za ispis…</string>
+    <string name="could_not_print">Ispis nije uspio: %1$s</string>
     <!-- Properties. -->
-    <string name="property_file_name">File name</string>
-    <string name="property_title">Title</string>
-    <string name="property_author">Author</string>
-    <string name="property_subject">Subject</string>
-    <string name="property_keywords">Keywords</string>
-    <string name="property_creator">Created with</string>
-    <string name="property_producer">PDF producer</string>
-    <string name="property_created">Created</string>
-    <string name="property_modified">Modified</string>
-    <string name="property_pages">Pages</string>
-    <string name="property_page_size">Page size</string>
-    <string name="property_file_size">File size</string>
-    <string name="property_pdf_version">PDF version</string>
+    <string name="property_file_name">Naziv datoteke</string>
+    <string name="property_title">Naslov</string>
+    <string name="property_author">Autor</string>
+    <string name="property_subject">Predmet</string>
+    <string name="property_keywords">Ključne riječi</string>
+    <string name="property_creator">Izrađeno u</string>
+    <string name="property_producer">PDF producent</string>
+    <string name="property_created">Stvoreno</string>
+    <string name="property_modified">Izmijenjeno</string>
+    <string name="property_pages">Stranice</string>
+    <string name="property_page_size">Veličina stranice</string>
+    <string name="property_file_size">Veličina datoteke</string>
+    <string name="property_pdf_version">PDF verzija</string>
     <!-- Width and height of a page in millimetres: "210 × 297 mm". -->
     <string name="page_size_mm">%1$d × %2$d mm</string>
     <!-- The same in inches, for paper sizes defined in them: "8.5 × 11 in". -->
     <string name="page_size_in">%1$s × %2$s in</string>
     <!-- A size with the name of the paper: "210 × 297 mm (A4)". -->
     <string name="page_size_named">%1$s (%2$s)</string>
-    <string name="page_size_named_landscape">%1$s (%2$s, landscape)</string>
+    <string name="page_size_named_landscape">%1$s (%2$s, položeno)</string>
     <!-- The size of the first page, when not all pages have it. -->
-    <string name="page_size_others_differ">%1$s; other pages differ</string>
+    <string name="page_size_others_differ">%1$s; ostale stranice se razlikuju</string>
     <!-- Settings. -->
-    <string name="setting_keep_screen_on">Keep the screen on</string>
+    <string name="setting_keep_screen_on">Drži zaslon uključenim</string>
     <plurals name="setting_keep_screen_on_detail">
-        <item quantity="one">While a document is open, for %d minute after the last touch</item>
-        <item quantity="few">While a document is open, for %d minutes after the last touch</item>
-        <item quantity="other">While a document is open, for %d minutes after the last touch</item>
+        <item quantity="one">Dok je dokument otvoren, %d minutu nakon posljednjeg dodira</item>
+        <item quantity="few">Dok je dokument otvoren, %d minute nakon posljednjeg dodira</item>
+        <item quantity="other">Dok je dokument otvoren, %d minuta nakon posljednjeg dodira</item>
     </plurals>
-    <string name="setting_volume_keys">Volume keys turn pages</string>
-    <string name="setting_volume_keys_detail">Volume down goes on, volume up goes back</string>
-    <string name="crash_log">Crash log</string>
+    <string name="setting_volume_keys">Tipke za glasnoću okreću stranice</string>
+    <string name="setting_volume_keys_detail">Stišavanje ide naprijed, pojačavanje ide natrag</string>
+    <string name="crash_log">Zapisnik rušenja</string>
     <string name="crash_log_empty">Nothing went wrong so far</string>
     <!-- With the date of the newest entry. -->
     <string name="crash_log_detail">Last entry %1$s. Kept on this device; nothing is sent unless you share it.</string>

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 18:46\n"
+"PO-Revision-Date: 2026-11-17 21:37\n"
 "Last-Translator: \n"
 "Language-Team: Romanian\n"
 "Language: ro_RO\n"
@@ -22,15 +22,16 @@ msgstr ""
 #, rust-format
 msgid "Specto is licensed under either of the {apache} or the {mit}, at your option.\n\n"
 "It comes with no warranty of any kind."
-msgstr ""
+msgstr "Specto este licențiat fie sub {apache}, fie sub {mit}, la alegerea dumneavoastră.\n\n"
+"Programul nu oferă nicio garanție de niciun fel."
 
 #: src/main.rs:163
 msgid "The Specto contributors"
-msgstr ""
+msgstr "Contribuitorii Specto"
 
 #: src/main.rs:164
 msgid "© 2026 The Specto contributors"
-msgstr ""
+msgstr "© 2026 Contribuitorii Specto"
 
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:173
@@ -49,16 +50,16 @@ msgstr ""
 #: src/main.rs:207
 #, rust-format
 msgid "Quit {app}"
-msgstr ""
+msgstr "Ieșire din {app}"
 
 #: src/main.rs:208 src/window.rs:251
 #, rust-format
 msgid "About {app}"
-msgstr ""
+msgstr "Despre {app}"
 
 #: src/main.rs:225 src/window.rs:152
 msgid "Open…"
-msgstr ""
+msgstr "Deschide…"
 
 #: src/main.rs:227 src/window.rs:213
 msgid "Save"
@@ -66,15 +67,15 @@ msgstr ""
 
 #: src/main.rs:228 src/window.rs:214
 msgid "Save As…"
-msgstr ""
+msgstr "Salvează ca…"
 
 #: src/main.rs:229 src/window.rs:216
 msgid "Export Selected Pages…"
-msgstr ""
+msgstr "Exportă paginile selectate…"
 
 #: src/main.rs:232 src/window.rs:219
 msgid "Print…"
-msgstr ""
+msgstr "Tipărește…"
 
 #: src/main.rs:233 src/properties.rs:201 src/window.rs:220
 msgid "Properties"
@@ -82,15 +83,15 @@ msgstr ""
 
 #: src/main.rs:235
 msgid "Close Window"
-msgstr ""
+msgstr "Închide fereastra"
 
 #: src/main.rs:240 src/window/actions.rs:93
 msgid "Undo"
-msgstr ""
+msgstr "Anulează"
 
 #: src/main.rs:241 src/window/actions.rs:97
 msgid "Redo"
-msgstr ""
+msgstr "Refă"
 
 #: src/main.rs:244
 msgid "Copy"
@@ -98,31 +99,31 @@ msgstr ""
 
 #: src/main.rs:245
 msgid "Select All"
-msgstr ""
+msgstr "Selectează tot"
 
 #: src/main.rs:248 src/window.rs:234
 msgid "Insert Pages from File…"
-msgstr ""
+msgstr "Inserează pagini din fișier…"
 
 #: src/main.rs:249 src/window.rs:228
 msgid "Delete Pages"
-msgstr ""
+msgstr "Șterge paginile"
 
 #: src/main.rs:252
 msgid "Find…"
-msgstr ""
+msgstr "Caută…"
 
 #: src/main.rs:253
 msgid "Find Next"
-msgstr ""
+msgstr "Caută următorul"
 
 #: src/main.rs:254
 msgid "Find Previous"
-msgstr ""
+msgstr "Caută anteriorul"
 
 #: src/main.rs:259 src/window.rs:267
 msgid "Single Page"
-msgstr ""
+msgstr "O singură pagină"
 
 #: src/main.rs:260 src/window.rs:268
 msgid "Continuous"
@@ -130,43 +131,43 @@ msgstr ""
 
 #: src/main.rs:261 src/window.rs:269
 msgid "Two Pages"
-msgstr ""
+msgstr "Două pagini"
 
 #: src/main.rs:263 src/window.rs:270
 msgid "Two Pages, Continuous"
-msgstr ""
+msgstr "Două pagini, continuu"
 
 #: src/main.rs:267 src/window.rs:278
 msgid "Show Cover Page Alone"
-msgstr ""
+msgstr "Afișează coperta separat"
 
 #: src/main.rs:269 src/window.rs:295
 msgid "Actual Size"
-msgstr ""
+msgstr "Dimensiune reală"
 
 #: src/main.rs:270 src/window.rs:293
 msgid "Fit Width"
-msgstr ""
+msgstr "Potrivire la lățime"
 
 #: src/main.rs:271 src/window.rs:294
 msgid "Fit Page"
-msgstr ""
+msgstr "Potrivire la pagină"
 
 #: src/main.rs:272 src/window.rs:300
 msgid "Zoom In"
-msgstr ""
+msgstr "Mărire"
 
 #: src/main.rs:273 src/window.rs:301
 msgid "Zoom Out"
-msgstr ""
+msgstr "Micșorare"
 
 #: src/main.rs:276
 msgid "Show Sidebar"
-msgstr ""
+msgstr "Afișează bara laterală"
 
 #: src/main.rs:277 src/window.rs:755
 msgid "Thumbnails"
-msgstr ""
+msgstr "Miniaturi"
 
 #: src/main.rs:278 src/window.rs:780
 msgid "Contents"
@@ -178,23 +179,23 @@ msgstr ""
 
 #: src/main.rs:284
 msgid "Previous Page"
-msgstr ""
+msgstr "Pagina anterioară"
 
 #: src/main.rs:285
 msgid "Next Page"
-msgstr ""
+msgstr "Pagina următoare"
 
 #: src/main.rs:288
 msgid "First Page"
-msgstr ""
+msgstr "Prima pagină"
 
 #: src/main.rs:289
 msgid "Last Page"
-msgstr ""
+msgstr "Ultima pagină"
 
 #: src/main.rs:291
 msgid "Go to Page…"
-msgstr ""
+msgstr "Mergi la pagina…"
 
 #: src/main.rs:293
 msgid "Back"
@@ -206,15 +207,15 @@ msgstr ""
 
 #: src/main.rs:300 src/window.rs:226
 msgid "Rotate Left"
-msgstr ""
+msgstr "Rotire la stânga"
 
 #: src/main.rs:301 src/window.rs:227
 msgid "Rotate Right"
-msgstr ""
+msgstr "Rotire la dreapta"
 
 #: src/main.rs:304
 msgid "Show Markup Toolbar"
-msgstr ""
+msgstr "Afișează bara de instrumente pentru adnotări"
 
 #: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
@@ -226,27 +227,27 @@ msgstr ""
 
 #: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
-msgstr ""
+msgstr "Tăiere cu linie"
 
 #: src/main.rs:310 src/window.rs:242
 msgid "Highlight Form Fields"
-msgstr ""
+msgstr "Evidențiază câmpurile formularului"
 
 #: src/main.rs:311 src/window.rs:245
 msgid "Reset Form"
-msgstr ""
+msgstr "Resetează formularul"
 
 #: src/main.rs:316
 msgid "File"
-msgstr ""
+msgstr "Fișier"
 
 #: src/main.rs:317
 msgid "Edit"
-msgstr ""
+msgstr "Editare"
 
 #: src/main.rs:318
 msgid "View"
-msgstr ""
+msgstr "Vizualizare"
 
 #: src/main.rs:319
 msgid "Go"
@@ -254,11 +255,11 @@ msgstr ""
 
 #: src/main.rs:320
 msgid "Tools"
-msgstr ""
+msgstr "Instrumente"
 
 #: src/main.rs:322
 msgid "Help"
-msgstr ""
+msgstr "Ajutor"
 
 #: src/markup_list.rs:47
 msgid "Drawing"
@@ -266,11 +267,11 @@ msgstr ""
 
 #: src/markup_list.rs:48
 msgid "Rectangle"
-msgstr ""
+msgstr "Dreptunghi"
 
 #: src/markup_list.rs:49
 msgid "Ellipse"
-msgstr ""
+msgstr "Elipsă"
 
 #: src/markup_list.rs:50
 msgid "Line"
@@ -298,27 +299,27 @@ msgstr ""
 
 #: src/markup_list.rs:96
 msgid "No Markup"
-msgstr ""
+msgstr "Fără adnotări"
 
 #: src/markup_list.rs:97
 msgid "Highlights, drawings and notes are listed here"
-msgstr ""
+msgstr "Evidențierile, desenele și notele sunt listate aici"
 
 #: src/print.rs:135
 msgid "printing failed"
-msgstr ""
+msgstr "tipărirea a eșuat"
 
 #: src/print.rs:267
 msgid "couldn't open the file"
-msgstr ""
+msgstr "fișierul nu a putut fi deschis"
 
 #: src/properties.rs:36
 msgid "File Name"
-msgstr ""
+msgstr "Nume fișier"
 
 #: src/properties.rs:37
 msgid "Folder"
-msgstr ""
+msgstr "Dosar"
 
 #: src/properties.rs:38
 msgid "Title"
@@ -326,61 +327,61 @@ msgstr ""
 
 #: src/properties.rs:39
 msgid "Author"
-msgstr ""
+msgstr "Autor"
 
 #: src/properties.rs:40
 msgid "Subject"
-msgstr ""
+msgstr "Subiect"
 
 #: src/properties.rs:41
 msgid "Keywords"
-msgstr ""
+msgstr "Cuvinte-cheie"
 
 #. Translators: the program a document was written in.
 #: src/properties.rs:43
 msgid "Created With"
-msgstr ""
+msgstr "Creat cu"
 
 #. Translators: the program that turned a document into a PDF.
 #: src/properties.rs:45
 msgid "PDF Producer"
-msgstr ""
+msgstr "Producător PDF"
 
 #: src/properties.rs:46
 msgid "Created"
-msgstr ""
+msgstr "Creat la"
 
 #: src/properties.rs:47
 msgid "Modified"
-msgstr ""
+msgstr "Modificat la"
 
 #: src/properties.rs:48
 msgid "Pages"
-msgstr ""
+msgstr "Pagini"
 
 #: src/properties.rs:49
 msgid "Page Size"
-msgstr ""
+msgstr "Dimensiune pagină"
 
 #: src/properties.rs:51
 msgid "File Size"
-msgstr ""
+msgstr "Dimensiune fișier"
 
 #: src/properties.rs:54
 msgid "PDF Version"
-msgstr ""
+msgstr "Versiune PDF"
 
 #: src/properties.rs:56
 msgid "Protection"
-msgstr ""
+msgstr "Protecție"
 
 #: src/properties.rs:58
 msgid "Password to open"
-msgstr ""
+msgstr "Parolă pentru deschidere"
 
 #: src/properties.rs:59
 msgid "Encrypted, opens without a password"
-msgstr ""
+msgstr "Criptat, se deschide fără parolă"
 
 #: src/properties.rs:60
 msgid "None"
@@ -392,50 +393,50 @@ msgstr ""
 
 #: src/properties.rs:73
 msgid "Printing"
-msgstr ""
+msgstr "Imprimare"
 
 #: src/properties.rs:74
 msgid "Copying text and pictures"
-msgstr ""
+msgstr "Copierea textului și a imaginilor"
 
 #: src/properties.rs:75
 msgid "Changing the pages"
-msgstr ""
+msgstr "Modificarea paginilor"
 
 #: src/properties.rs:78
 msgid "Marking up and filling in forms"
-msgstr ""
+msgstr "Adnotarea și completarea formularelor"
 
 #. Translators: a page size in inches, "8.5 × 11 in".
 #: src/properties.rs:140
 #, rust-format
 msgid "{width} × {height} in"
-msgstr ""
+msgstr "{width} × {height} in"
 
 #. Translators: a page size in millimeters, "210 × 297 mm".
 #: src/properties.rs:147
 #, rust-format
 msgid "{width} × {height} mm"
-msgstr ""
+msgstr "{width} × {height} mm"
 
 #. Translators: a page size and the name of the paper, "297 × 210 mm (A4,
 #. landscape)".
 #: src/properties.rs:158
 #, rust-format
 msgid "{size} ({paper}, landscape)"
-msgstr ""
+msgstr "{size} ({paper}, peisaj)"
 
 #. Translators: a page size and the name of the paper, "210 × 297 mm (A4)".
 #: src/properties.rs:163
 #, rust-format
 msgid "{size} ({paper})"
-msgstr ""
+msgstr "{size} ({paper})"
 
 #. Translators: {size} is the size of the first page, "210 × 297 mm (A4)".
 #: src/properties.rs:179
 #, rust-format
 msgid "{size}, other pages differ"
-msgstr ""
+msgstr "{size}, celelalte pagini diferă"
 
 #: src/signatures.rs:344
 msgid "Clear"
@@ -443,7 +444,7 @@ msgstr ""
 
 #: src/signatures.rs:356
 msgid "Sign with the mouse or the touchpad"
-msgstr ""
+msgstr "Semnați cu mouse-ul sau cu touchpad-ul"
 
 #: src/signatures.rs:364
 msgid "Draw"
@@ -467,11 +468,11 @@ msgstr ""
 
 #: src/signatures.rs:399
 msgid "Black ink"
-msgstr ""
+msgstr "Cerneală neagră"
 
 #: src/signatures.rs:400
 msgid "Blue ink"
-msgstr ""
+msgstr "Cerneală albastră"
 
 #: src/signatures.rs:403
 msgid "Faint"
@@ -495,11 +496,11 @@ msgstr ""
 
 #: src/signatures.rs:458
 msgid "Pictures"
-msgstr ""
+msgstr "Imagini"
 
 #: src/signatures.rs:463
 msgid "Choose a Picture of a Signature"
-msgstr ""
+msgstr "Alegeți o imagine cu o semnătură"
 
 #: src/signatures.rs:480 src/window/files.rs:420 src/window/files.rs:522
 #: src/window/files.rs:751
@@ -512,11 +513,11 @@ msgstr ""
 
 #: src/signatures.rs:510
 msgid "New Signature"
-msgstr ""
+msgstr "Semnătură nouă"
 
 #: src/window.rs:148
 msgid "Open a PDF"
-msgstr ""
+msgstr "Deschideți un PDF"
 
 #: src/window.rs:149
 msgid "Drop a file here or choose one"
@@ -528,7 +529,7 @@ msgstr ""
 
 #: src/window.rs:188
 msgid "Thumbnails (F9)"
-msgstr ""
+msgstr "Miniaturi (F9)"
 
 #: src/window.rs:200
 #, rust-format
@@ -537,7 +538,7 @@ msgstr ""
 
 #: src/window.rs:258
 msgid "Main Menu"
-msgstr ""
+msgstr "Meniul principal"
 
 #: src/window.rs:285
 msgid "Page Layout"
@@ -550,7 +551,7 @@ msgstr ""
 #: src/window.rs:317
 #, rust-format
 msgid "Go to Page ({shortcut})"
-msgstr ""
+msgstr "Salt la pagină ({shortcut})"
 
 #: src/window.rs:330
 msgid "Search"
@@ -558,26 +559,26 @@ msgstr ""
 
 #: src/window.rs:342
 msgid "Previous Match (Shift+Enter)"
-msgstr ""
+msgstr "Rezultatul anterior (Shift+Enter)"
 
 #: src/window.rs:349
 msgid "Next Match (Enter)"
-msgstr ""
+msgstr "Rezultatul următor (Enter)"
 
 #: src/window.rs:371
 #, rust-format
 msgid "Search ({shortcut})"
-msgstr ""
+msgstr "Căutare ({shortcut})"
 
 #: src/window.rs:900
 #, rust-format
 msgid "Links of this kind aren't opened: {address}"
-msgstr ""
+msgstr "Legăturile de acest fel nu sunt deschise: {address}"
 
 #: src/window.rs:909
 #, rust-format
 msgid "Couldn't open link: {error}"
-msgstr ""
+msgstr "Legătura nu a putut fi deschisă: {error}"
 
 #. Translators: a keyboard shortcut as tooltips show it, the
 #. Control key with another.
@@ -590,44 +591,44 @@ msgstr ""
 #, rust-format
 msgid "{n} page — Edited"
 msgid_plural "{n} pages — Edited"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "{n} pagină — Editat"
+msgstr[1] "{n} pagini — Editat"
+msgstr[2] "{n} de pagini — Editat"
 
 #: src/window/actions.rs:105 src/window/pages.rs:133
 #, rust-format
 msgid "{n} page"
 msgid_plural "{n} pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "{n} pagină"
+msgstr[1] "{n} pagini"
+msgstr[2] "{n} de pagini"
 
 #. Translators: follows the box with the page number: "3 of 120".
 #: src/window/actions.rs:111
 #, rust-format
 msgid "of {pages}"
-msgstr ""
+msgstr "din {pages}"
 
 #. Translators: follows the box with a printed page number:
 #. "iv (4 of 120)".
 #: src/window/actions.rs:511
 #, rust-format
 msgid "({position} of {pages})"
-msgstr ""
+msgstr "({position} din {pages})"
 
 #: src/window/files.rs:8
 #, rust-format
 msgid "Couldn't read “{name}”: {error}"
-msgstr ""
+msgstr "Nu s-a putut citi „{name}”: {error}"
 
 #: src/window/files.rs:15
 #, rust-format
 msgid "Couldn't save “{name}”: {error}"
-msgstr ""
+msgstr "Nu s-a putut salva „{name}”: {error}"
 
 #: src/window/files.rs:23
 msgid "PDF documents"
-msgstr ""
+msgstr "Documente PDF"
 
 #: src/window/files.rs:54
 msgid "reading failed"
@@ -644,17 +645,17 @@ msgstr ""
 #: src/window/files.rs:177
 #, rust-format
 msgid "{app} can't save this document correctly yet"
-msgstr ""
+msgstr "{app} nu poate salva încă corect acest document"
 
 #: src/window/files.rs:249 src/window/pages.rs:405
 #, rust-format
 msgid "Couldn't open “{name}”: {error}"
-msgstr ""
+msgstr "Nu s-a putut deschide „{name}”: {error}"
 
 #: src/window/files.rs:323
 #, rust-format
 msgid "“{name}” was moved or deleted. Saving writes it again."
-msgstr ""
+msgstr "„{name}” a fost mutat sau șters. Salvarea îl va scrie din nou."
 
 #: src/window/files.rs:332
 #, rust-format
@@ -667,7 +668,7 @@ msgstr ""
 
 #: src/window/files.rs:413
 msgid "File Changed on Disk"
-msgstr ""
+msgstr "Fișier modificat pe disc"
 
 #: src/window/files.rs:415
 #, rust-format
@@ -686,11 +687,11 @@ msgstr ""
 #: src/window/files.rs:518
 #, rust-format
 msgid "“{name}” is protected with a password."
-msgstr ""
+msgstr "„{name}” este protejat cu parolă."
 
 #: src/window/files.rs:520
 msgid "Password Required"
-msgstr ""
+msgstr "Parolă necesară"
 
 #: src/window/files.rs:523
 msgid "_Unlock"
@@ -699,7 +700,7 @@ msgstr ""
 #: src/window/files.rs:611
 #, rust-format
 msgid "Couldn't print: {error}"
-msgstr ""
+msgstr "Nu s-a putut imprima: {error}"
 
 #: src/window/files.rs:656
 msgid "Save As"
@@ -720,7 +721,7 @@ msgstr ""
 
 #: src/window/files.rs:774
 msgid "Open PDF"
-msgstr ""
+msgstr "Deschide PDF"
 
 #: src/window/markup.rs:36
 #, rust-format
@@ -729,19 +730,19 @@ msgstr ""
 
 #: src/window/markup.rs:50
 msgid "Draw freehand"
-msgstr ""
+msgstr "Desenează liber"
 
 #: src/window/markup.rs:51
 msgid "Draw rectangles"
-msgstr ""
+msgstr "Desenează dreptunghiuri"
 
 #: src/window/markup.rs:52
 msgid "Draw ellipses"
-msgstr ""
+msgstr "Desenează elipse"
 
 #: src/window/markup.rs:53
 msgid "Draw lines"
-msgstr ""
+msgstr "Desenează linii"
 
 #: src/window/markup.rs:54
 msgid "Add text: click where it goes"
@@ -761,141 +762,141 @@ msgstr ""
 
 #: src/window/markup.rs:121
 msgid "Sans-serif"
-msgstr ""
+msgstr "Sans-serif"
 
 #: src/window/markup.rs:122
 msgid "Serif"
-msgstr ""
+msgstr "Serif"
 
 #: src/window/markup.rs:123
 msgid "Monospace"
-msgstr ""
+msgstr "Monospațiat"
 
 #: src/window/markup.rs:149
 msgid "Font"
-msgstr ""
+msgstr "Font"
 
 #: src/window/markup.rs:153
 msgid "Bold"
-msgstr ""
+msgstr "Aldin"
 
 #: src/window/markup.rs:157
 msgid "Italic"
-msgstr ""
+msgstr "Cursiv"
 
 #: src/window/markup.rs:167
 msgid "Text size in points"
-msgstr ""
+msgstr "Dimensiunea textului în puncte"
 
 #: src/window/markup.rs:228
 msgid "Yellow"
-msgstr ""
+msgstr "Galben"
 
 #: src/window/markup.rs:229
 msgid "Green"
-msgstr ""
+msgstr "Verde"
 
 #: src/window/markup.rs:230
 msgid "Blue"
-msgstr ""
+msgstr "Albastru"
 
 #: src/window/markup.rs:231
 msgid "Pink"
-msgstr ""
+msgstr "Roz"
 
 #: src/window/markup.rs:232
 msgid "Purple"
-msgstr ""
+msgstr "Violet"
 
 #: src/window/markup.rs:233
 msgid "Red"
-msgstr ""
+msgstr "Roșu"
 
 #: src/window/markup.rs:234
 msgid "Black"
-msgstr ""
+msgstr "Negru"
 
 #: src/window/markup.rs:556
 msgid "Select the text to mark first"
-msgstr ""
+msgstr "Selectați mai întâi textul de marcat"
 
 #: src/window/markup.rs:602
 msgid "Place this signature: click where it goes"
-msgstr ""
+msgstr "Plasați această semnătură: faceți clic unde dorită să fie amplasată"
 
 #: src/window/markup.rs:614
 msgid "Delete this signature"
-msgstr ""
+msgstr "Ștergeți această semnătură"
 
 #: src/window/markup.rs:630
 msgid "New Signature…"
-msgstr ""
+msgstr "Semnătură nouă…"
 
 #: src/window/markup.rs:659
 msgid "Click where the signature goes"
-msgstr ""
+msgstr "Faceți clic unde dorită să fie semnătura"
 
 #: src/window/markup.rs:1544 src/window/markup.rs:1571
 #: src/window/markup.rs:1664 src/window/markup.rs:1717
 #, rust-format
 msgid "Couldn't change the annotation: {error}"
-msgstr ""
+msgstr "Nu s-a putut modifica adnotarea: {error}"
 
 #: src/window/pages.rs:27
 #, rust-format
 msgid "Undo Rotate Page"
 msgid_plural "Undo Rotate {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Anulează rotirea paginii"
+msgstr[1] "Anulează rotirea a {n} pagini"
+msgstr[2] "Anulează rotirea a {n} de pagini"
 
 #: src/window/pages.rs:30
 #, rust-format
 msgid "Undo Delete Page"
 msgid_plural "Undo Delete {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Anulează ștergerea paginii"
+msgstr[1] "Anulează ștergerea a {n} pagini"
+msgstr[2] "Anulează ștergerea a {n} de pagini"
 
 #: src/window/pages.rs:32
 #, rust-format
 msgid "Undo Move Page"
 msgid_plural "Undo Move {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Anulează mutarea paginii"
+msgstr[1] "Anulează mutarea a {n} pagini"
+msgstr[2] "Anulează mutarea a {n} de pagini"
 
 #: src/window/pages.rs:34
 #, rust-format
 msgid "Undo Insert Page"
 msgid_plural "Undo Insert {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Anulează inserarea paginii"
+msgstr[1] "Anulează inserarea a {n} pagini"
+msgstr[2] "Anulează inserarea a {n} de pagini"
 
 #: src/window/pages.rs:36
 msgid "Undo Highlight"
-msgstr ""
+msgstr "Anulează evidențierea"
 
 #: src/window/pages.rs:37
 msgid "Undo Underline"
-msgstr ""
+msgstr "Anulează sublinierea"
 
 #: src/window/pages.rs:38
 msgid "Undo Strikethrough"
-msgstr ""
+msgstr "Anulează tăierea textului cu o linie"
 
 #: src/window/pages.rs:39
 msgid "Undo Drawing"
-msgstr ""
+msgstr "Anulează desenul"
 
 #: src/window/pages.rs:40
 msgid "Undo Rectangle"
-msgstr ""
+msgstr "Anulează dreptunghiul"
 
 #: src/window/pages.rs:41
 msgid "Undo Ellipse"
-msgstr ""
+msgstr "Anulează elipsa"
 
 #: src/window/pages.rs:42
 msgid "Undo Line"
@@ -903,173 +904,173 @@ msgstr ""
 
 #: src/window/pages.rs:43
 msgid "Undo Note"
-msgstr ""
+msgstr "Anulează nota"
 
 #: src/window/pages.rs:44
 msgid "Undo Text Box"
-msgstr ""
+msgstr "Anulează caseta de text"
 
 #: src/window/pages.rs:45
 msgid "Undo Add Annotation"
-msgstr ""
+msgstr "Anulează adăugarea adnotării"
 
 #: src/window/pages.rs:46
 msgid "Undo Delete Annotation"
-msgstr ""
+msgstr "Anulează ștergerea adnotării"
 
 #: src/window/pages.rs:47
 msgid "Undo Change Annotation"
-msgstr ""
+msgstr "Anulează modificarea adnotării"
 
 #: src/window/pages.rs:48
 msgid "Undo Fill In Field"
-msgstr ""
+msgstr "Anulează completarea câmpului"
 
 #: src/window/pages.rs:49
 msgid "Undo Reset Form"
-msgstr ""
+msgstr "Anulează resetarea formularului"
 
 #: src/window/pages.rs:57
 #, rust-format
 msgid "Redo Rotate Page"
 msgid_plural "Redo Rotate {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Refă rotirea paginii"
+msgstr[1] "Refă rotirea a {n} pagini"
+msgstr[2] "Refă rotirea a {n} de pagini"
 
 #: src/window/pages.rs:60
 #, rust-format
 msgid "Redo Delete Page"
 msgid_plural "Redo Delete {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Refă ștergerea paginii"
+msgstr[1] "Refă ștergerea a {n} pagini"
+msgstr[2] "Refă ștergerea a {n} de pagini"
 
 #: src/window/pages.rs:62
 #, rust-format
 msgid "Redo Move Page"
 msgid_plural "Redo Move {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Refă mutarea paginii"
+msgstr[1] "Refă mutarea a {n} pagini"
+msgstr[2] "Refă mutarea a {n} de pagini"
 
 #: src/window/pages.rs:64
 #, rust-format
 msgid "Redo Insert Page"
 msgid_plural "Redo Insert {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Refă inserarea paginii"
+msgstr[1] "Refă inserarea a {n} pagini"
+msgstr[2] "Refă inserarea a {n} de pagini"
 
 #: src/window/pages.rs:66
 msgid "Redo Highlight"
-msgstr ""
+msgstr "Refă evidențierea"
 
 #: src/window/pages.rs:67
 msgid "Redo Underline"
-msgstr ""
+msgstr "Refă sublinierea"
 
 #: src/window/pages.rs:68
 msgid "Redo Strikethrough"
-msgstr ""
+msgstr "Refă tăierea cu linie"
 
 #: src/window/pages.rs:69
 msgid "Redo Drawing"
-msgstr ""
+msgstr "Refă desenul"
 
 #: src/window/pages.rs:70
 msgid "Redo Rectangle"
-msgstr ""
+msgstr "Refă dreptunghiul"
 
 #: src/window/pages.rs:71
 msgid "Redo Ellipse"
-msgstr ""
+msgstr "Refă elipsa"
 
 #: src/window/pages.rs:72
 msgid "Redo Line"
-msgstr ""
+msgstr "Refă linia"
 
 #: src/window/pages.rs:73
 msgid "Redo Note"
-msgstr ""
+msgstr "Refă nota"
 
 #: src/window/pages.rs:74
 msgid "Redo Text Box"
-msgstr ""
+msgstr "Refă caseta de text"
 
 #: src/window/pages.rs:75
 msgid "Redo Add Annotation"
-msgstr ""
+msgstr "Refă adăugarea adnotării"
 
 #: src/window/pages.rs:76
 msgid "Redo Delete Annotation"
-msgstr ""
+msgstr "Refă ștergerea adnotării"
 
 #: src/window/pages.rs:77
 msgid "Redo Change Annotation"
-msgstr ""
+msgstr "Refă modificarea adnotării"
 
 #: src/window/pages.rs:78
 msgid "Redo Fill In Field"
-msgstr ""
+msgstr "Refă completarea câmpului"
 
 #: src/window/pages.rs:79
 msgid "Redo Reset Form"
-msgstr ""
+msgstr "Refă resetarea formularului"
 
 #: src/window/pages.rs:119
 #, rust-format
 msgid "page {page}"
-msgstr ""
+msgstr "pagina {page}"
 
 #: src/window/pages.rs:131
 #, rust-format
 msgid "pages {pages}"
-msgstr ""
+msgstr "paginile {pages}"
 
 #: src/window/pages.rs:199
 #, rust-format
 msgid "Couldn't delete the annotation: {error}"
-msgstr ""
+msgstr "Adnotarea nu a putut fi ștearsă: {error}"
 
 #: src/window/pages.rs:260
 #, rust-format
 msgid "Couldn't copy the pages: {error}"
-msgstr ""
+msgstr "Paginile nu au putut fi copiate: {error}"
 
 #: src/window/pages.rs:314
 msgid "Insert Pages from File"
-msgstr ""
+msgstr "Inserează pagini din fișier"
 
 #: src/window/pages.rs:447
 msgid "Export Selected Pages"
-msgstr ""
+msgstr "Exportă paginile selectate"
 
 #: src/window/pages.rs:480
 #, rust-format
 msgid "Exported {n} page to “{name}”"
 msgid_plural "Exported {n} pages to “{name}”"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "S-a exportat {n} pagină în „{name}”"
+msgstr[1] "S-au exportat {n} pagini în „{name}”"
+msgstr[2] "S-au exportat {n} de pagini în „{name}”"
 
 #: src/window/search.rs:187
 msgid "No matches"
-msgstr ""
+msgstr "Nicio potrivire"
 
 #: src/window/search.rs:188
 msgid "Searching…"
-msgstr ""
+msgstr "Se caută…"
 
 #: src/window/search.rs:193
 #, rust-format
 msgid "{current} of {total}"
-msgstr ""
+msgstr "{current} din {total}"
 
 #. Translators: the search is still running, so there may be
 #. more matches than {total}.
 #: src/window/search.rs:197
 #, rust-format
 msgid "{current} of {total}…"
-msgstr ""
+msgstr "{current} din {total}…"
 

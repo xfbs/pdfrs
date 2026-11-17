@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 18:46\n"
+"PO-Revision-Date: 2026-11-17 21:37\n"
 "Last-Translator: \n"
 "Language-Team: Latvian\n"
 "Language: lv_LV\n"
@@ -22,25 +22,26 @@ msgstr ""
 #, rust-format
 msgid "Specto is licensed under either of the {apache} or the {mit}, at your option.\n\n"
 "It comes with no warranty of any kind."
-msgstr ""
+msgstr "Specto ir licencēts saskaņā ar {apache} vai {mit} pēc jūsu izvēles.\n\n"
+"Tam nav nekādas garantijas."
 
 #: src/main.rs:163
 msgid "The Specto contributors"
-msgstr ""
+msgstr "Specto veidotāji"
 
 #: src/main.rs:164
 msgid "© 2026 The Specto contributors"
-msgstr ""
+msgstr "© 2026 Specto veidotāji"
 
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:173
 msgid "hayro (rendering)"
-msgstr ""
+msgstr "hayro (attēlošana)"
 
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:175
 msgid "lopdf (saving)"
-msgstr ""
+msgstr "lopdf (saglabāšana)"
 
 #: src/main.rs:177
 msgid "Built with"
@@ -49,80 +50,80 @@ msgstr ""
 #: src/main.rs:207
 #, rust-format
 msgid "Quit {app}"
-msgstr ""
+msgstr "Aizvērt {app}"
 
 #: src/main.rs:208 src/window.rs:251
 #, rust-format
 msgid "About {app}"
-msgstr ""
+msgstr "Par {app}"
 
 #: src/main.rs:225 src/window.rs:152
 msgid "Open…"
-msgstr ""
+msgstr "Atvērt…"
 
 #: src/main.rs:227 src/window.rs:213
 msgid "Save"
-msgstr ""
+msgstr "Saglabāt"
 
 #: src/main.rs:228 src/window.rs:214
 msgid "Save As…"
-msgstr ""
+msgstr "Saglabāt kā…"
 
 #: src/main.rs:229 src/window.rs:216
 msgid "Export Selected Pages…"
-msgstr ""
+msgstr "Eksportēt atlasītās lapas…"
 
 #: src/main.rs:232 src/window.rs:219
 msgid "Print…"
-msgstr ""
+msgstr "Drukāt…"
 
 #: src/main.rs:233 src/properties.rs:201 src/window.rs:220
 msgid "Properties"
-msgstr ""
+msgstr "Rekvizīti"
 
 #: src/main.rs:235
 msgid "Close Window"
-msgstr ""
+msgstr "Aizvērt logu"
 
 #: src/main.rs:240 src/window/actions.rs:93
 msgid "Undo"
-msgstr ""
+msgstr "Atsaukt"
 
 #: src/main.rs:241 src/window/actions.rs:97
 msgid "Redo"
-msgstr ""
+msgstr "Atcelt atsaukšanu"
 
 #: src/main.rs:244
 msgid "Copy"
-msgstr ""
+msgstr "Kopēt"
 
 #: src/main.rs:245
 msgid "Select All"
-msgstr ""
+msgstr "Atlasīt visu"
 
 #: src/main.rs:248 src/window.rs:234
 msgid "Insert Pages from File…"
-msgstr ""
+msgstr "Ievietot lapas no faila…"
 
 #: src/main.rs:249 src/window.rs:228
 msgid "Delete Pages"
-msgstr ""
+msgstr "Dzēst lapas"
 
 #: src/main.rs:252
 msgid "Find…"
-msgstr ""
+msgstr "Meklēt…"
 
 #: src/main.rs:253
 msgid "Find Next"
-msgstr ""
+msgstr "Meklēt nākamo"
 
 #: src/main.rs:254
 msgid "Find Previous"
-msgstr ""
+msgstr "Meklēt iepriekšējo"
 
 #: src/main.rs:259 src/window.rs:267
 msgid "Single Page"
-msgstr ""
+msgstr "Viena lapa"
 
 #: src/main.rs:260 src/window.rs:268
 msgid "Continuous"
@@ -130,43 +131,43 @@ msgstr ""
 
 #: src/main.rs:261 src/window.rs:269
 msgid "Two Pages"
-msgstr ""
+msgstr "Divas lapas"
 
 #: src/main.rs:263 src/window.rs:270
 msgid "Two Pages, Continuous"
-msgstr ""
+msgstr "Divas lapas, nepārtraukti"
 
 #: src/main.rs:267 src/window.rs:278
 msgid "Show Cover Page Alone"
-msgstr ""
+msgstr "Rādīt vāka lapu atsevišķi"
 
 #: src/main.rs:269 src/window.rs:295
 msgid "Actual Size"
-msgstr ""
+msgstr "Faktiskais izmērs"
 
 #: src/main.rs:270 src/window.rs:293
 msgid "Fit Width"
-msgstr ""
+msgstr "Ietilpināt platumā"
 
 #: src/main.rs:271 src/window.rs:294
 msgid "Fit Page"
-msgstr ""
+msgstr "Ietilpināt lapu"
 
 #: src/main.rs:272 src/window.rs:300
 msgid "Zoom In"
-msgstr ""
+msgstr "Pietuvināt"
 
 #: src/main.rs:273 src/window.rs:301
 msgid "Zoom Out"
-msgstr ""
+msgstr "Attālināt"
 
 #: src/main.rs:276
 msgid "Show Sidebar"
-msgstr ""
+msgstr "Rādīt sānjoslu"
 
 #: src/main.rs:277 src/window.rs:755
 msgid "Thumbnails"
-msgstr ""
+msgstr "Sīktēli"
 
 #: src/main.rs:278 src/window.rs:780
 msgid "Contents"
@@ -178,23 +179,23 @@ msgstr ""
 
 #: src/main.rs:284
 msgid "Previous Page"
-msgstr ""
+msgstr "Iepriekšējā lapa"
 
 #: src/main.rs:285
 msgid "Next Page"
-msgstr ""
+msgstr "Nākamā lapa"
 
 #: src/main.rs:288
 msgid "First Page"
-msgstr ""
+msgstr "Pirmā lapa"
 
 #: src/main.rs:289
 msgid "Last Page"
-msgstr ""
+msgstr "Pēdējā lapa"
 
 #: src/main.rs:291
 msgid "Go to Page…"
-msgstr ""
+msgstr "Doties uz lapu…"
 
 #: src/main.rs:293
 msgid "Back"
@@ -206,15 +207,15 @@ msgstr ""
 
 #: src/main.rs:300 src/window.rs:226
 msgid "Rotate Left"
-msgstr ""
+msgstr "Pagriezt pa kreisi"
 
 #: src/main.rs:301 src/window.rs:227
 msgid "Rotate Right"
-msgstr ""
+msgstr "Pagriezt pa labi"
 
 #: src/main.rs:304
 msgid "Show Markup Toolbar"
-msgstr ""
+msgstr "Rādīt anotēšanas rīkjoslu"
 
 #: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
@@ -230,23 +231,23 @@ msgstr ""
 
 #: src/main.rs:310 src/window.rs:242
 msgid "Highlight Form Fields"
-msgstr ""
+msgstr "Izcelt veidlapas laukus"
 
 #: src/main.rs:311 src/window.rs:245
 msgid "Reset Form"
-msgstr ""
+msgstr "Atiestatīt veidlapu"
 
 #: src/main.rs:316
 msgid "File"
-msgstr ""
+msgstr "Fails"
 
 #: src/main.rs:317
 msgid "Edit"
-msgstr ""
+msgstr "Rediģēt"
 
 #: src/main.rs:318
 msgid "View"
-msgstr ""
+msgstr "Skats"
 
 #: src/main.rs:319
 msgid "Go"
@@ -254,11 +255,11 @@ msgstr ""
 
 #: src/main.rs:320
 msgid "Tools"
-msgstr ""
+msgstr "Rīki"
 
 #: src/main.rs:322
 msgid "Help"
-msgstr ""
+msgstr "Palīdzība"
 
 #: src/markup_list.rs:47
 msgid "Drawing"
@@ -266,11 +267,11 @@ msgstr ""
 
 #: src/markup_list.rs:48
 msgid "Rectangle"
-msgstr ""
+msgstr "Taisnstūris"
 
 #: src/markup_list.rs:49
 msgid "Ellipse"
-msgstr ""
+msgstr "Elipse"
 
 #: src/markup_list.rs:50
 msgid "Line"
@@ -298,11 +299,11 @@ msgstr ""
 
 #: src/markup_list.rs:96
 msgid "No Markup"
-msgstr ""
+msgstr "Nav atzīmju"
 
 #: src/markup_list.rs:97
 msgid "Highlights, drawings and notes are listed here"
-msgstr ""
+msgstr "Izcēlumi, zīmējumi un piezīmes tiek uzskaitīti šeit"
 
 #: src/print.rs:135
 msgid "printing failed"
@@ -314,11 +315,11 @@ msgstr ""
 
 #: src/properties.rs:36
 msgid "File Name"
-msgstr ""
+msgstr "Faila nosaukums"
 
 #: src/properties.rs:37
 msgid "Folder"
-msgstr ""
+msgstr "Mape"
 
 #: src/properties.rs:38
 msgid "Title"
@@ -326,116 +327,116 @@ msgstr ""
 
 #: src/properties.rs:39
 msgid "Author"
-msgstr ""
+msgstr "Autors"
 
 #: src/properties.rs:40
 msgid "Subject"
-msgstr ""
+msgstr "Temats"
 
 #: src/properties.rs:41
 msgid "Keywords"
-msgstr ""
+msgstr "Atslēgvārdi"
 
 #. Translators: the program a document was written in.
 #: src/properties.rs:43
 msgid "Created With"
-msgstr ""
+msgstr "Izveidots ar"
 
 #. Translators: the program that turned a document into a PDF.
 #: src/properties.rs:45
 msgid "PDF Producer"
-msgstr ""
+msgstr "PDF veidotājs"
 
 #: src/properties.rs:46
 msgid "Created"
-msgstr ""
+msgstr "Izveidots"
 
 #: src/properties.rs:47
 msgid "Modified"
-msgstr ""
+msgstr "Mainīts"
 
 #: src/properties.rs:48
 msgid "Pages"
-msgstr ""
+msgstr "Lapas"
 
 #: src/properties.rs:49
 msgid "Page Size"
-msgstr ""
+msgstr "Lapas izmērs"
 
 #: src/properties.rs:51
 msgid "File Size"
-msgstr ""
+msgstr "Faila izmērs"
 
 #: src/properties.rs:54
 msgid "PDF Version"
-msgstr ""
+msgstr "PDF versija"
 
 #: src/properties.rs:56
 msgid "Protection"
-msgstr ""
+msgstr "Aizsardzība"
 
 #: src/properties.rs:58
 msgid "Password to open"
-msgstr ""
+msgstr "Parole atvēršanai"
 
 #: src/properties.rs:59
 msgid "Encrypted, opens without a password"
-msgstr ""
+msgstr "Šifrēts, atveras bez paroles"
 
 #: src/properties.rs:60
 msgid "None"
-msgstr ""
+msgstr "Nav"
 
 #: src/properties.rs:65
 msgid "Not Allowed"
-msgstr ""
+msgstr "Nav atļauts"
 
 #: src/properties.rs:73
 msgid "Printing"
-msgstr ""
+msgstr "Drukāšana"
 
 #: src/properties.rs:74
 msgid "Copying text and pictures"
-msgstr ""
+msgstr "Teksta un attēlu kopēšana"
 
 #: src/properties.rs:75
 msgid "Changing the pages"
-msgstr ""
+msgstr "Lapu mainīšana"
 
 #: src/properties.rs:78
 msgid "Marking up and filling in forms"
-msgstr ""
+msgstr "Atzīmēšana un veidlapu aizpildīšana"
 
 #. Translators: a page size in inches, "8.5 × 11 in".
 #: src/properties.rs:140
 #, rust-format
 msgid "{width} × {height} in"
-msgstr ""
+msgstr "{width} × {height} collas"
 
 #. Translators: a page size in millimeters, "210 × 297 mm".
 #: src/properties.rs:147
 #, rust-format
 msgid "{width} × {height} mm"
-msgstr ""
+msgstr "{width} × {height} mm"
 
 #. Translators: a page size and the name of the paper, "297 × 210 mm (A4,
 #. landscape)".
 #: src/properties.rs:158
 #, rust-format
 msgid "{size} ({paper}, landscape)"
-msgstr ""
+msgstr "{size} ({paper}, ainava)"
 
 #. Translators: a page size and the name of the paper, "210 × 297 mm (A4)".
 #: src/properties.rs:163
 #, rust-format
 msgid "{size} ({paper})"
-msgstr ""
+msgstr "{size} ({paper})"
 
 #. Translators: {size} is the size of the first page, "210 × 297 mm (A4)".
 #: src/properties.rs:179
 #, rust-format
 msgid "{size}, other pages differ"
-msgstr ""
+msgstr "{size}, citu lapu izmēri atšķiras"
 
 #: src/signatures.rs:344
 msgid "Clear"
@@ -451,15 +452,15 @@ msgstr ""
 
 #: src/signatures.rs:381
 msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
-msgstr ""
+msgstr "Parakstieties uz balta papīra, nofotografējiet to un izvēlieties šo attēlu. Papīrs tiks noņemts, bet tinte paliks."
 
 #: src/signatures.rs:388
 msgid "Choose Picture…"
-msgstr ""
+msgstr "Izvēlēties attēlu…"
 
 #: src/signatures.rs:395
 msgid "To the left, faint strokes are kept, and more of the paper's shadows. To the right, only what is dark."
-msgstr ""
+msgstr "Pa kreisi tiek saglabātas vājas svītras un vairāk papīra ēnu. Pa labi — tikai tas, kas ir tumšs."
 
 #: src/signatures.rs:398
 msgid "Ink as in the picture"
@@ -467,11 +468,11 @@ msgstr ""
 
 #: src/signatures.rs:399
 msgid "Black ink"
-msgstr ""
+msgstr "Melna tinte"
 
 #: src/signatures.rs:400
 msgid "Blue ink"
-msgstr ""
+msgstr "Zila tinte"
 
 #: src/signatures.rs:403
 msgid "Faint"
@@ -495,11 +496,11 @@ msgstr ""
 
 #: src/signatures.rs:458
 msgid "Pictures"
-msgstr ""
+msgstr "Attēli"
 
 #: src/signatures.rs:463
 msgid "Choose a Picture of a Signature"
-msgstr ""
+msgstr "Izvēlieties paraksta attēlu"
 
 #: src/signatures.rs:480 src/window/files.rs:420 src/window/files.rs:522
 #: src/window/files.rs:751
@@ -512,15 +513,15 @@ msgstr ""
 
 #: src/signatures.rs:510
 msgid "New Signature"
-msgstr ""
+msgstr "Jauns paraksts"
 
 #: src/window.rs:148
 msgid "Open a PDF"
-msgstr ""
+msgstr "Atvērt PDF"
 
 #: src/window.rs:149
 msgid "Drop a file here or choose one"
-msgstr ""
+msgstr "Nometiet failu šeit vai izvēlieties kādu"
 
 #: src/window.rs:162
 msgid "Recent"
@@ -537,7 +538,7 @@ msgstr ""
 
 #: src/window.rs:258
 msgid "Main Menu"
-msgstr ""
+msgstr "Galvenā izvēlne"
 
 #: src/window.rs:285
 msgid "Page Layout"
@@ -550,7 +551,7 @@ msgstr ""
 #: src/window.rs:317
 #, rust-format
 msgid "Go to Page ({shortcut})"
-msgstr ""
+msgstr "Pāriet uz lapu ({shortcut})"
 
 #: src/window.rs:330
 msgid "Search"
@@ -558,76 +559,76 @@ msgstr ""
 
 #: src/window.rs:342
 msgid "Previous Match (Shift+Enter)"
-msgstr ""
+msgstr "Iepriekšējais atbilstības rezultāts (Shift+Enter)"
 
 #: src/window.rs:349
 msgid "Next Match (Enter)"
-msgstr ""
+msgstr "Nākamais atbilstības rezultāts (Enter)"
 
 #: src/window.rs:371
 #, rust-format
 msgid "Search ({shortcut})"
-msgstr ""
+msgstr "Meklēt ({shortcut})"
 
 #: src/window.rs:900
 #, rust-format
 msgid "Links of this kind aren't opened: {address}"
-msgstr ""
+msgstr "Šāda veida saites netiek atvērtas: {address}"
 
 #: src/window.rs:909
 #, rust-format
 msgid "Couldn't open link: {error}"
-msgstr ""
+msgstr "Neizdevās atvērt saiti: {error}"
 
 #. Translators: a keyboard shortcut as tooltips show it, the
 #. Control key with another.
 #: src/window.rs:960
 #, rust-format
 msgid "Ctrl+{key}"
-msgstr ""
+msgstr "Ctrl+{key}"
 
 #: src/window/actions.rs:103
 #, rust-format
 msgid "{n} page — Edited"
 msgid_plural "{n} pages — Edited"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "{n} lapu — Rediģēts"
+msgstr[1] "{n} lapa — Rediģēts"
+msgstr[2] "{n} lapas — Rediģēts"
 
 #: src/window/actions.rs:105 src/window/pages.rs:133
 #, rust-format
 msgid "{n} page"
 msgid_plural "{n} pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "{n} lapu"
+msgstr[1] "{n} lapa"
+msgstr[2] "{n} lapas"
 
 #. Translators: follows the box with the page number: "3 of 120".
 #: src/window/actions.rs:111
 #, rust-format
 msgid "of {pages}"
-msgstr ""
+msgstr "no {pages}"
 
 #. Translators: follows the box with a printed page number:
 #. "iv (4 of 120)".
 #: src/window/actions.rs:511
 #, rust-format
 msgid "({position} of {pages})"
-msgstr ""
+msgstr "({position} no {pages})"
 
 #: src/window/files.rs:8
 #, rust-format
 msgid "Couldn't read “{name}”: {error}"
-msgstr ""
+msgstr "Neizdevās nolasīt “{name}”: {error}"
 
 #: src/window/files.rs:15
 #, rust-format
 msgid "Couldn't save “{name}”: {error}"
-msgstr ""
+msgstr "Neizdevās saglabāt “{name}”: {error}"
 
 #: src/window/files.rs:23
 msgid "PDF documents"
-msgstr ""
+msgstr "PDF dokumenti"
 
 #: src/window/files.rs:54
 msgid "reading failed"
@@ -644,17 +645,17 @@ msgstr ""
 #: src/window/files.rs:177
 #, rust-format
 msgid "{app} can't save this document correctly yet"
-msgstr ""
+msgstr "{app} vēl nevar pareizi saglabāt šo dokumentu"
 
 #: src/window/files.rs:249 src/window/pages.rs:405
 #, rust-format
 msgid "Couldn't open “{name}”: {error}"
-msgstr ""
+msgstr "Neizdevās atvērt “{name}”: {error}"
 
 #: src/window/files.rs:323
 #, rust-format
 msgid "“{name}” was moved or deleted. Saving writes it again."
-msgstr ""
+msgstr "“{name}” tika pārvietots vai izdzēsts. Saglabājot tas tiks ierakstīts atkārtoti."
 
 #: src/window/files.rs:332
 #, rust-format
@@ -667,7 +668,7 @@ msgstr ""
 
 #: src/window/files.rs:413
 msgid "File Changed on Disk"
-msgstr ""
+msgstr "Fails diskā ir mainīts"
 
 #: src/window/files.rs:415
 #, rust-format
@@ -686,11 +687,11 @@ msgstr ""
 #: src/window/files.rs:518
 #, rust-format
 msgid "“{name}” is protected with a password."
-msgstr ""
+msgstr "“{name}” ir aizsargāts ar paroli."
 
 #: src/window/files.rs:520
 msgid "Password Required"
-msgstr ""
+msgstr "Nepieciešama parole"
 
 #: src/window/files.rs:523
 msgid "_Unlock"
@@ -699,7 +700,7 @@ msgstr ""
 #: src/window/files.rs:611
 #, rust-format
 msgid "Couldn't print: {error}"
-msgstr ""
+msgstr "Neizdevās izdrukāt: {error}"
 
 #: src/window/files.rs:656
 msgid "Save As"
@@ -707,7 +708,7 @@ msgstr ""
 
 #: src/window/files.rs:744
 msgid "Save Changes?"
-msgstr ""
+msgstr "Vai saglabāt izmaiņas?"
 
 #: src/window/files.rs:746
 #, rust-format
@@ -720,7 +721,7 @@ msgstr ""
 
 #: src/window/files.rs:774
 msgid "Open PDF"
-msgstr ""
+msgstr "Atvērt PDF"
 
 #: src/window/markup.rs:36
 #, rust-format
@@ -761,15 +762,15 @@ msgstr ""
 
 #: src/window/markup.rs:121
 msgid "Sans-serif"
-msgstr ""
+msgstr "Bezserifu"
 
 #: src/window/markup.rs:122
 msgid "Serif"
-msgstr ""
+msgstr "Serifu"
 
 #: src/window/markup.rs:123
 msgid "Monospace"
-msgstr ""
+msgstr "Vienplatuma"
 
 #: src/window/markup.rs:149
 msgid "Font"
@@ -785,35 +786,35 @@ msgstr ""
 
 #: src/window/markup.rs:167
 msgid "Text size in points"
-msgstr ""
+msgstr "Teksta izmērs punktos"
 
 #: src/window/markup.rs:228
 msgid "Yellow"
-msgstr ""
+msgstr "Dzeltens"
 
 #: src/window/markup.rs:229
 msgid "Green"
-msgstr ""
+msgstr "Zaļš"
 
 #: src/window/markup.rs:230
 msgid "Blue"
-msgstr ""
+msgstr "Zils"
 
 #: src/window/markup.rs:231
 msgid "Pink"
-msgstr ""
+msgstr "Rozā"
 
 #: src/window/markup.rs:232
 msgid "Purple"
-msgstr ""
+msgstr "Violets"
 
 #: src/window/markup.rs:233
 msgid "Red"
-msgstr ""
+msgstr "Sarkans"
 
 #: src/window/markup.rs:234
 msgid "Black"
-msgstr ""
+msgstr "Melns"
 
 #: src/window/markup.rs:556
 msgid "Select the text to mark first"
@@ -821,25 +822,25 @@ msgstr ""
 
 #: src/window/markup.rs:602
 msgid "Place this signature: click where it goes"
-msgstr ""
+msgstr "Novietot šo parakstu: noklikšķiniet vietā, kur tas jānovieto"
 
 #: src/window/markup.rs:614
 msgid "Delete this signature"
-msgstr ""
+msgstr "Dzēst šo parakstu"
 
 #: src/window/markup.rs:630
 msgid "New Signature…"
-msgstr ""
+msgstr "Jauns paraksts…"
 
 #: src/window/markup.rs:659
 msgid "Click where the signature goes"
-msgstr ""
+msgstr "Noklikšķiniet vietā, kur jānovieto paraksts"
 
 #: src/window/markup.rs:1544 src/window/markup.rs:1571
 #: src/window/markup.rs:1664 src/window/markup.rs:1717
 #, rust-format
 msgid "Couldn't change the annotation: {error}"
-msgstr ""
+msgstr "Neizdevās mainīt anotāciju: {error}"
 
 #: src/window/pages.rs:27
 #, rust-format
@@ -854,136 +855,136 @@ msgstr[2] ""
 msgid "Undo Delete Page"
 msgid_plural "Undo Delete {n} Pages"
 msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[1] "Atsaukt lapas dzēšanu"
+msgstr[2] "Atsaukt {n} lapu dzēšanu"
 
 #: src/window/pages.rs:32
 #, rust-format
 msgid "Undo Move Page"
 msgid_plural "Undo Move {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Atsaukt {n} lapu pārvietošanu"
+msgstr[1] "Atsaukt lapas pārvietošanu"
+msgstr[2] "Atsaukt {n} lapu pārvietošanu"
 
 #: src/window/pages.rs:34
 #, rust-format
 msgid "Undo Insert Page"
 msgid_plural "Undo Insert {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Atsaukt {n} lapu ievietošanu"
+msgstr[1] "Atsaukt lapas ievietošanu"
+msgstr[2] "Atsaukt {n} lapu ievietošanu"
 
 #: src/window/pages.rs:36
 msgid "Undo Highlight"
-msgstr ""
+msgstr "Atsaukt izcelšanu"
 
 #: src/window/pages.rs:37
 msgid "Undo Underline"
-msgstr ""
+msgstr "Atsaukt pasvītrojumu"
 
 #: src/window/pages.rs:38
 msgid "Undo Strikethrough"
-msgstr ""
+msgstr "Atsaukt pārsvītrojumu"
 
 #: src/window/pages.rs:39
 msgid "Undo Drawing"
-msgstr ""
+msgstr "Atsaukt zīmējumu"
 
 #: src/window/pages.rs:40
 msgid "Undo Rectangle"
-msgstr ""
+msgstr "Atsaukt taisnstūri"
 
 #: src/window/pages.rs:41
 msgid "Undo Ellipse"
-msgstr ""
+msgstr "Atsaukt elipsi"
 
 #: src/window/pages.rs:42
 msgid "Undo Line"
-msgstr ""
+msgstr "Atsaukt līniju"
 
 #: src/window/pages.rs:43
 msgid "Undo Note"
-msgstr ""
+msgstr "Atsaukt piezīmi"
 
 #: src/window/pages.rs:44
 msgid "Undo Text Box"
-msgstr ""
+msgstr "Atsaukt teksta lodziņu"
 
 #: src/window/pages.rs:45
 msgid "Undo Add Annotation"
-msgstr ""
+msgstr "Atsaukt anotācijas pievienošanu"
 
 #: src/window/pages.rs:46
 msgid "Undo Delete Annotation"
-msgstr ""
+msgstr "Atsaukt anotācijas dzēšanu"
 
 #: src/window/pages.rs:47
 msgid "Undo Change Annotation"
-msgstr ""
+msgstr "Atsaukt anotācijas maiņu"
 
 #: src/window/pages.rs:48
 msgid "Undo Fill In Field"
-msgstr ""
+msgstr "Atsaukt lauka aizpildīšanu"
 
 #: src/window/pages.rs:49
 msgid "Undo Reset Form"
-msgstr ""
+msgstr "Atsaukt veidlapas atiestatīšanu"
 
 #: src/window/pages.rs:57
 #, rust-format
 msgid "Redo Rotate Page"
 msgid_plural "Redo Rotate {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Atcelt {n} lapu pagriešanas atsaukšanu"
+msgstr[1] "Atcelt lapas pagriešanas atsaukšanu"
+msgstr[2] "Atcelt {n} lapu pagriešanas atsaukšanu"
 
 #: src/window/pages.rs:60
 #, rust-format
 msgid "Redo Delete Page"
 msgid_plural "Redo Delete {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Atcelt lapu dzēšanu ({n} lapas)"
+msgstr[1] "Atcelt lapas dzēšanu"
+msgstr[2] "Atcelt {n} lapu dzēšanu"
 
 #: src/window/pages.rs:62
 #, rust-format
 msgid "Redo Move Page"
 msgid_plural "Redo Move {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Atcelt lapu pārvietošanu ({n} lapas)"
+msgstr[1] "Atcelt lapas pārvietošanu"
+msgstr[2] "Atcelt {n} lapu pārvietošanu"
 
 #: src/window/pages.rs:64
 #, rust-format
 msgid "Redo Insert Page"
 msgid_plural "Redo Insert {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Atcelt lapu ievietošanu ({n} lapas)"
+msgstr[1] "Atcelt lapas ievietošanu"
+msgstr[2] "Atcelt {n} lapu ievietošanu"
 
 #: src/window/pages.rs:66
 msgid "Redo Highlight"
-msgstr ""
+msgstr "Atcelt izcelšanu"
 
 #: src/window/pages.rs:67
 msgid "Redo Underline"
-msgstr ""
+msgstr "Atcelt pasvītrošanu"
 
 #: src/window/pages.rs:68
 msgid "Redo Strikethrough"
-msgstr ""
+msgstr "Atcelt pārsvītrošanu"
 
 #: src/window/pages.rs:69
 msgid "Redo Drawing"
-msgstr ""
+msgstr "Atcelt zīmējumu"
 
 #: src/window/pages.rs:70
 msgid "Redo Rectangle"
-msgstr ""
+msgstr "Atcelt taisnstūri"
 
 #: src/window/pages.rs:71
 msgid "Redo Ellipse"
-msgstr ""
+msgstr "Atcelt elipsi"
 
 #: src/window/pages.rs:72
 msgid "Redo Line"
@@ -999,23 +1000,23 @@ msgstr ""
 
 #: src/window/pages.rs:75
 msgid "Redo Add Annotation"
-msgstr ""
+msgstr "Atcelt anotācijas pievienošanu"
 
 #: src/window/pages.rs:76
 msgid "Redo Delete Annotation"
-msgstr ""
+msgstr "Atcelt anotācijas dzēšanu"
 
 #: src/window/pages.rs:77
 msgid "Redo Change Annotation"
-msgstr ""
+msgstr "Atcelt anotācijas maiņu"
 
 #: src/window/pages.rs:78
 msgid "Redo Fill In Field"
-msgstr ""
+msgstr "Atcelt lauka aizpildīšanu"
 
 #: src/window/pages.rs:79
 msgid "Redo Reset Form"
-msgstr ""
+msgstr "Atcelt veidlapas atiestatīšanu"
 
 #: src/window/pages.rs:119
 #, rust-format
@@ -1030,46 +1031,46 @@ msgstr ""
 #: src/window/pages.rs:199
 #, rust-format
 msgid "Couldn't delete the annotation: {error}"
-msgstr ""
+msgstr "Neizdevās dzēst anotāciju: {error}"
 
 #: src/window/pages.rs:260
 #, rust-format
 msgid "Couldn't copy the pages: {error}"
-msgstr ""
+msgstr "Neizdevās kopēt lapas: {error}"
 
 #: src/window/pages.rs:314
 msgid "Insert Pages from File"
-msgstr ""
+msgstr "Ievietot lapas no faila"
 
 #: src/window/pages.rs:447
 msgid "Export Selected Pages"
-msgstr ""
+msgstr "Eksportēt atlasītās lapas"
 
 #: src/window/pages.rs:480
 #, rust-format
 msgid "Exported {n} page to “{name}”"
 msgid_plural "Exported {n} pages to “{name}”"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Eksportētas {n} lapas uz “{name}”"
+msgstr[1] "Eksportēta {n} lapa uz “{name}”"
+msgstr[2] "Eksportētas {n} lapas uz “{name}”"
 
 #: src/window/search.rs:187
 msgid "No matches"
-msgstr ""
+msgstr "Nav atbilstību"
 
 #: src/window/search.rs:188
 msgid "Searching…"
-msgstr ""
+msgstr "Meklē…"
 
 #: src/window/search.rs:193
 #, rust-format
 msgid "{current} of {total}"
-msgstr ""
+msgstr "{current} no {total}"
 
 #. Translators: the search is still running, so there may be
 #. more matches than {total}.
 #: src/window/search.rs:197
 #, rust-format
 msgid "{current} of {total}…"
-msgstr ""
+msgstr "{current} no {total}…"
 
