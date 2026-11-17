@@ -26,7 +26,8 @@ Tests (run some by naming them, such as `zoom layouts`):
 - layouts: all four keep the current page. Two-page shows two pages. Cover
   page alone
 - trim_margins: the page shrinks to what it draws and its color fills more of
-  the window, on the same page, and is whole again when turned off
+  the window, on the same page. Continuous layouts show it whole, with the
+  switch grayed out. Whole again when turned off
 - zoom: actual size, in, out, fit page (the whole page visible), limits
   5% and 3200% and rendering there
 - sidebar: hiding it, the Contents tab
@@ -846,7 +847,9 @@ def test_trim_margins(ctx):
     check(s["trim_margins"] and s["page"] == target, s)
     check(550 <= width <= 560 and 730 <= height <= 745, s)
     trimmed = w.showing(target, "trimmed")[target]
-    check(trimmed > whole + 0.05, f"the colored area grew from {whole:.2f} to {trimmed:.2f}")
+    # The page's height sets the zoom: 792 points become about 737, so the
+    # area grows by about 15%.
+    check(trimmed > whole * 1.1, f"the colored area grew from {whole:.2f} to {trimmed:.2f}")
     # Every thumbnail in the sidebar is drawn again, trimmed too: those at
     # least half in the window.
     shown = [p for p, x, y, w, h in s["thumbnails"] if y + h / 2 < s["height"] and y + h / 2 > 0]
@@ -858,6 +861,14 @@ def test_trim_margins(ctx):
             break
         time.sleep(0.3)
     check(shown and not missing, f"thumbnails {missing} not drawn: {fmt(c)}")
+    # The continuous layouts show pages whole, and the switch is grayed out
+    # there. Back in a single page layout they are trimmed again.
+    w.action("layout", gvariant_str("continuous"))
+    s = w.settled("continuous", lambda s: s["layout"] == "continuous")
+    check(s["page_size"] == [612, 792] and s["trim_margins"] and not s["trim_enabled"], s)
+    w.action("layout", gvariant_str("single"))
+    s = w.settled("single again", lambda s: s["page_size"] == [width, height])
+    check(s["trim_enabled"] and s["page"] == target, s)
     w.action("trim-margins")
     s = w.settled("whole again", lambda s: s["page_size"] == [612, 792])
     check(not s["trim_margins"] and s["page"] == target, s)

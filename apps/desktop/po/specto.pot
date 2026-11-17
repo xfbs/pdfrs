@@ -88,11 +88,11 @@ msgstr ""
 msgid "Close Window"
 msgstr ""
 
-#: src/main.rs:240 src/window/actions.rs:94
+#: src/main.rs:240 src/window/actions.rs:93
 msgid "Undo"
 msgstr ""
 
-#: src/main.rs:241 src/window/actions.rs:98
+#: src/main.rs:241 src/window/actions.rs:97
 msgid "Redo"
 msgstr ""
 
@@ -581,31 +581,31 @@ msgstr ""
 msgid "Search ({shortcut})"
 msgstr ""
 
-#: src/window.rs:909
+#: src/window.rs:910
 #, rust-format
 msgid "Links of this kind aren't opened: {address}"
 msgstr ""
 
-#: src/window.rs:918
+#: src/window.rs:919
 #, rust-format
 msgid "Couldn't open link: {error}"
 msgstr ""
 
 #. Translators: a keyboard shortcut as tooltips show it, the
 #. Control key with another.
-#: src/window.rs:969
+#: src/window.rs:970
 #, rust-format
 msgid "Ctrl+{key}"
 msgstr ""
 
-#: src/window/actions.rs:104
+#: src/window/actions.rs:103
 #, rust-format
 msgid "{n} page — Edited"
 msgid_plural "{n} pages — Edited"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/window/actions.rs:106 src/window/pages.rs:133
+#: src/window/actions.rs:105 src/window/pages.rs:133
 #, rust-format
 msgid "{n} page"
 msgid_plural "{n} pages"
@@ -613,14 +613,14 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. Translators: follows the box with the page number: "3 of 120".
-#: src/window/actions.rs:112
+#: src/window/actions.rs:111
 #, rust-format
 msgid "of {pages}"
 msgstr ""
 
 #. Translators: follows the box with a printed page number:
 #. "iv (4 of 120)".
-#: src/window/actions.rs:525
+#: src/window/actions.rs:535
 #, rust-format
 msgid "({position} of {pages})"
 msgstr ""
@@ -656,7 +656,7 @@ msgstr ""
 msgid "{app} can't save this document correctly yet"
 msgstr ""
 
-#: src/window/files.rs:249 src/window/pages.rs:472
+#: src/window/files.rs:249 src/window/pages.rs:423
 #, rust-format
 msgid "Couldn't open “{name}”: {error}"
 msgstr ""
@@ -1043,15 +1043,15 @@ msgstr ""
 msgid "Couldn't copy the pages: {error}"
 msgstr ""
 
-#: src/window/pages.rs:380
+#: src/window/pages.rs:332
 msgid "Insert Pages from File"
 msgstr ""
 
-#: src/window/pages.rs:514
+#: src/window/pages.rs:465
 msgid "Export Selected Pages"
 msgstr ""
 
-#: src/window/pages.rs:547
+#: src/window/pages.rs:498
 #, rust-format
 msgid "Exported {n} page to “{name}”"
 msgid_plural "Exported {n} pages to “{name}”"

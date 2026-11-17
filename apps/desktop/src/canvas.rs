@@ -622,10 +622,13 @@ impl Canvas {
         };
         let place = |v: &Viewer| (v.scroll_offset(), v.zoom(), v.layout_mode());
         let moved = {
-            let viewer = &mut doc.borrow_mut().viewer;
-            let before = place(viewer);
-            f(viewer);
-            place(viewer) != before
+            let mut d = doc.borrow_mut();
+            let before = place(&d.viewer);
+            f(&mut d.viewer);
+            // Pages coming into view with their margins trimmed are measured before they are laid
+            // out.
+            d.trim_shown();
+            place(&d.viewer) != before
         };
         // What a link's preview points at moves with the view.
         if moved {

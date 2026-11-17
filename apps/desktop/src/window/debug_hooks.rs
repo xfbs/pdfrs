@@ -367,6 +367,11 @@ impl Window {
             // [page of the file, rotation in degrees, file] per position.
             json.raw("edit_pages", &format!("[{}]", pages.join(", ")))
                 .bool("trim_margins", d.trim_margins())
+                // Whether the Trim Margins switch can be used.
+                .bool(
+                    "trim_enabled",
+                    (inner.window.lookup_action("trim-margins")).is_some_and(|a| a.is_enabled()),
+                )
                 .bool("modified", d.edit().is_modified())
                 .num("cache_tiles", d.cache.len() as f64)
                 .num("cache_bytes", d.cache.bytes() as f64)

@@ -82,8 +82,9 @@ point to [DECISIONS.md](DECISIONS.md).
 - [x] Desktop: Properties dialog, with how the file is protected
 - [x] Back and forward after a jump, in the viewer and on the desktop
 - [x] Desktop: a preview of where a link leads, on resting the pointer on it
-- [x] Trim margins: pages shown by the box of what they draw, steady in size
-  for left and right pages, in the viewer and on the desktop
+- [x] Trim margins: each page shown by the box of what it draws, measured as it
+  is shown, in the single and two page layouts, in the viewer and on the
+  desktop
 - [ ] Upstream in hayro: decode images only for the region and resolution
   being drawn. One tile of a 212-megapixel JPEG 2000 page still costs 4.5 GB
   and 10 seconds at 100%, which no scheduling can fix.

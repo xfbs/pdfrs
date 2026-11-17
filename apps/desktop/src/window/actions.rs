@@ -12,7 +12,6 @@ const DOCUMENT_ACTIONS: &[&str] = &[
     "fit-page",
     "layout",
     "cover-alone",
-    "trim-margins",
     "go-to-page",
     "next-page",
     "previous-page",
@@ -127,6 +126,16 @@ impl Window {
         }
     }
 
+    /// Enables Trim Margins in the layouts that show pages trimmed.
+    pub(super) fn update_trim_action(&self) {
+        let enabled = (self.0.canvas.with_viewer(|v| v.crops_pages())).unwrap_or(false);
+        if let Some(a) =
+            (self.0.window.lookup_action("trim-margins")).and_downcast::<gio::SimpleAction>()
+        {
+            a.set_enabled(enabled);
+        }
+    }
+
     pub(super) fn set_document_actions_enabled(&self, enabled: bool) {
         for w in &self.0.document_widgets {
             w.set_visible(enabled);
@@ -142,6 +151,7 @@ impl Window {
             }
         }
         self.update_history_actions();
+        self.update_trim_action();
         // Those for a form only where there is one.
         let form = enabled
             && (self.0.document.borrow().as_ref()).is_some_and(|d| d.borrow_mut().has_form());

@@ -261,7 +261,7 @@ search (run again). What doesn't change with editing is cached by page of the
 file, not by position.
 
 The session has no toolkit, no pixels, and no threads of its own apart from the
-search indexer and the thread that measures pages for trimming their margins. A frontend adds what differs between the apps:
+search indexer. A frontend adds what differs between the apps:
 
 - **Tiles.** The desktop keeps GTK textures in a tile cache. Android keeps the
   ids of bitmaps that Kotlin owns. Each asks the viewer for a frame and
@@ -274,16 +274,19 @@ search indexer and the thread that measures pages for trimming their margins. A 
 - **Threads.** The desktop holds its session on the main thread. Android holds
   it in a mutex, since Kotlin calls from several threads.
 
-Trimmed margins are a crop of each page's geometry. The box of what a page
-draws comes from interpreting its content without rasterizing it, which takes a
-fraction of a millisecond for most pages, on a thread of its own. What is drawn
-in white counts as nothing, and so does what is clipped away. The session turns
-those boxes into steady crops: one set of margins for pages at even positions
-and one for odd positions, each the narrowest of most pages. A page that draws
-further out gets as much as it needs. The crop is part of the tile key, so the
-render workers draw the same part of the page that the viewer lays out, and
-hit-testing, selection and annotations follow from the geometry. A scan is one
-image across the whole page, so it isn't trimmed.
+Trimmed margins are a crop of each page's geometry, to the box of what the page
+draws with a little room around it. The box comes from interpreting the page's
+content without rasterizing it. What is drawn in white counts as nothing, and
+so does what is clipped away. A page is measured when it is about to be shown,
+with the two pages before and after the current spread, on the frontend's
+thread like the text layer: a fraction of a millisecond for most pages. Only
+the layouts of single pages and pairs show pages trimmed, since they fit each
+spread to the window on its own and a page may have any size. The continuous
+layouts show pages whole, so nothing measures a whole document. The crop is
+part of the tile key, so the render workers draw the same part of the page that
+the viewer lays out, and hit-testing, selection and annotations follow from the
+geometry. Thumbnails show pages whole. A scan is one image across the whole
+page, so it isn't trimmed.
 
 ## The viewer
 

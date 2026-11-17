@@ -22,7 +22,7 @@ use specto_session::{Options, Session};
 use specto_source::PdfData;
 use specto_view::placeholder_level;
 
-pub use specto_session::{Indexed, MAIN, Measured, PageBundle, SaveJob, TextLayer};
+pub use specto_session::{Indexed, MAIN, PageBundle, SaveJob, TextLayer};
 
 const CACHE_BUDGET: usize = 384 << 20;
 
@@ -141,7 +141,7 @@ impl Document {
         let thumbnails = self
             .thumbnails_shown
             .iter()
-            .filter_map(|&i| self.viewer.placeholder_key(i))
+            .filter_map(|&i| self.viewer.thumbnail_key(i))
             .filter(|k| !self.cache.contains(k));
         let all = self.canvas_requests.iter().copied().chain(thumbnails);
         self.client
@@ -190,20 +190,10 @@ impl Document {
         self.session.set_trim_margins(on) && self.pages_resized()
     }
 
-    /// Starts measuring what the pages draw in a background thread, if their margins are trimmed
-    /// and some aren't measured yet.
-    ///
-    /// The receiver gets each file's measurements, to pass to `measured`.
-    pub fn start_measuring(&mut self) -> Option<async_channel::Receiver<Measured>> {
-        let (tx, rx) = async_channel::unbounded();
-        self.session
-            .start_measuring(move |file| tx.send_blocking(file).is_ok())
-            .then_some(rx)
-    }
-
-    /// Takes in a file's measurements. Returns whether the pages shown changed.
-    pub fn measured(&mut self, file: Measured) -> bool {
-        self.session.measured(file) && self.pages_resized()
+    /// Measures the pages about to be shown, if they are shown trimmed and aren't measured yet.
+    /// Returns whether pages changed size.
+    pub fn trim_shown(&mut self) -> bool {
+        self.session.trim_shown() && self.pages_resized()
     }
 
     // Editing
@@ -469,12 +459,12 @@ impl Document {
         Some(edit)
     }
 
-    /// Updates the placeholder levels the tile cache keeps longest.
+    /// Updates the placeholder levels the tile cache keeps longest: those of the pages as laid out,
+    /// and of the pages whole for their thumbnails.
     fn update_placeholder_levels(&self) {
-        let levels = self
-            .viewer
-            .pages()
-            .iter()
+        let v = &self.viewer;
+        let levels = (v.pages().iter().copied())
+            .chain((0..v.page_count()).filter_map(|i| v.page_whole(i)))
             .filter_map(|p| placeholder_level(&p.displayed()))
             .collect();
         if let Ok(mut l) = self.placeholder_levels.write() {

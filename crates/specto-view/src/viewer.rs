@@ -26,9 +26,11 @@ const FLICK_VELOCITY: f64 = 250.0;
 pub struct ViewPage {
     pub doc: DocId,
     pub page: u32,
-    /// Geometry as stored in the file (its own `/Rotate` included), with `crop` applied.
+    /// Geometry as stored in the file (its own `/Rotate` included). The pages the viewer lays out
+    /// ([`Viewer::pages`]) have `crop` applied to it.
     pub geometry: PageGeometry,
-    /// The part of the page shown, if not all of it, as with margins trimmed.
+    /// The part of the page to show in the layouts of single pages and pairs, if not all of it, as
+    /// with margins trimmed. The continuous layouts show pages whole.
     pub crop: Option<Crop>,
     /// Extra clockwise rotation (the user's "rotate page").
     pub rotation: Rotation,
@@ -195,6 +197,9 @@ const SAME_PLACE: f64 = 0.05;
 /// UI-agnostic viewer state: layout, zoom and scrolling, plus planning which tiles to draw and
 /// request. Frontends feed it input and draw its [`Frame`]s.
 pub struct Viewer {
+    /// The pages as given, with their crops.
+    given: Vec<ViewPage>,
+    /// The pages as laid out: cropped in the layouts that crop, whole in the others.
     pages: Vec<ViewPage>,
     sizes: Vec<PageSize>,
     settings: Settings,
@@ -285,6 +290,7 @@ fn remember(places: &mut Vec<Place>, place: Place) {
 impl Viewer {
     pub fn new(pages: Vec<ViewPage>, settings: Settings) -> Self {
         let mut v = Self {
+            given: Vec::new(),
             pages: Vec::new(),
             sizes: Vec::new(),
             settings,
@@ -316,8 +322,14 @@ impl Viewer {
 
     // Queries
 
+    /// The pages as laid out, with the crop applied where the layout crops.
     pub fn pages(&self) -> &[ViewPage] {
         &self.pages
+    }
+
+    /// Whether the layout shows the part of each page its crop says, as opposed to whole pages.
+    pub fn crops_pages(&self) -> bool {
+        !self.mode.is_continuous()
     }
 
     pub fn page_count(&self) -> usize {
@@ -552,9 +564,9 @@ impl Viewer {
     /// Replaces the page list (after reorder, delete, merge, rotate), trying to keep the current
     /// page in view.
     pub fn set_pages(&mut self, pages: Vec<ViewPage>) {
+        self.given = pages;
         let keep = self.current_page();
-        self.sizes = pages.iter().map(|p| p.displayed().size()).collect();
-        self.pages = pages;
+        self.lay_out_pages();
         self.regroup();
         if !self.pages.is_empty() {
             self.show_page(keep.min(self.pages.len() - 1));
@@ -563,18 +575,32 @@ impl Viewer {
         }
     }
 
-    /// Replaces the page list with the same pages, each showing another part of itself, as when
-    /// margins are trimmed.
+    /// Replaces the page list with the same pages, each with another part of itself to show, as
+    /// when margins are trimmed. Returns whether what is shown changed.
     ///
     /// What is at the top of the viewport stays there, as far as it is still shown.
-    pub fn set_page_areas(&mut self, pages: Vec<ViewPage>) {
+    pub fn set_page_areas(&mut self, pages: Vec<ViewPage>) -> bool {
+        if pages == self.given {
+            return false;
+        }
+        self.given = pages;
         let place = self.place();
         let at = self.pages.get(place.page).map(|p| {
             let g = p.displayed();
             let y = place.offset * g.size().height;
             g.page_to_pdf().transform_point(PagePoint::new(0.0, y))
         });
-        self.set_pages(pages);
+        let before = std::mem::take(&mut self.pages);
+        self.lay_out_pages();
+        if self.pages == before {
+            return false;
+        }
+        self.regroup();
+        if self.pages.is_empty() {
+            self.relayout(None);
+            return true;
+        }
+        self.show_page(place.page.min(self.pages.len() - 1));
         if let (Some(at), Some(p)) = (at, self.pages.get(place.page)) {
             let g = p.displayed();
             let y = g.pdf_to_page().transform_point(at).y;
@@ -583,6 +609,7 @@ impl Viewer {
                 offset: y / g.size().height,
             });
         }
+        true
     }
 
     /// Replaces the page list with one of the same pages in the same sizes that are only rendered
@@ -590,16 +617,31 @@ impl Viewer {
     ///
     /// If a size did change, this is [`set_page_areas`](Self::set_page_areas).
     pub fn set_page_sources(&mut self, pages: Vec<ViewPage>) {
-        let same = pages.len() == self.pages.len()
-            && pages
-                .iter()
-                .zip(&self.sizes)
-                .all(|(p, size)| p.displayed().size() == *size);
+        let same = pages.len() == self.given.len()
+            && pages.iter().zip(&self.given).all(|(p, q)| {
+                p.geometry == q.geometry && p.crop == q.crop && p.rotation == q.rotation
+            });
         if same {
-            self.pages = pages;
+            self.given = pages;
+            self.lay_out_pages();
         } else {
             self.set_page_areas(pages);
         }
+    }
+
+    /// The pages as given, laid out as the layout shows them: cropped or whole.
+    fn lay_out_pages(&mut self) {
+        let crop = self.crops_pages();
+        self.pages = (self.given.iter())
+            .map(|p| match p.crop {
+                Some(c) if crop => ViewPage {
+                    geometry: p.geometry.cropped(c),
+                    ..*p
+                },
+                _ => ViewPage { crop: None, ..*p },
+            })
+            .collect();
+        self.sizes = self.pages.iter().map(|p| p.displayed().size()).collect();
     }
 
     /// Viewport size in logical pixels and the device scale factor (such as 2.0 on a Retina
@@ -631,6 +673,7 @@ impl Viewer {
         }
         let page = self.current_page();
         self.mode = mode;
+        self.lay_out_pages();
         self.regroup();
         self.show_page(page);
     }
@@ -801,6 +844,7 @@ impl Viewer {
         }
         self.mode = state.layout;
         self.settings.cover_alone = state.cover_alone;
+        self.lay_out_pages();
         self.regroup();
         self.zoom_mode = state.zoom_mode;
         if state.zoom.is_finite() {
@@ -853,9 +897,23 @@ impl Viewer {
     }
 
     /// The low-resolution whole-page tile for page `i`, shown while sharp tiles load. Also suitable
-    /// for thumbnails, so both share one render.
+    /// for thumbnails of a page that isn't cropped, so both share one render.
     pub fn placeholder_key(&self, i: usize) -> Option<TileKey> {
-        let page = self.pages.get(i)?;
+        self.placeholder_of(self.pages.get(i)?)
+    }
+
+    /// Page `i` whole, as thumbnails show it, whatever part of it the layout shows.
+    pub fn page_whole(&self, i: usize) -> Option<ViewPage> {
+        self.given.get(i).map(|p| ViewPage { crop: None, ..*p })
+    }
+
+    /// The low-resolution tile of page `i` whole, for its thumbnail. The same as its placeholder
+    /// unless the page is cropped.
+    pub fn thumbnail_key(&self, i: usize) -> Option<TileKey> {
+        self.placeholder_of(&self.page_whole(i)?)
+    }
+
+    fn placeholder_of(&self, page: &ViewPage) -> Option<TileKey> {
         Some(TileKey {
             doc: page.doc,
             page: page.page,

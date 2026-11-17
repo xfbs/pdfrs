@@ -7,9 +7,9 @@ use std::time::{Duration, Instant};
 use specto_doc::Rotation;
 use specto_geom::{PdfPoint, ViewSize};
 use specto_render::scheduler::Scheduler;
-use specto_session::{Indexed, MAIN, Measured, Options, Session};
+use specto_session::{Indexed, MAIN, Options, Session};
 use specto_source::Target;
-use specto_view::{Selection, TextPages};
+use specto_view::{LayoutMode, Selection, TextPages};
 
 /// A file of `pages` pages of 200 by 300 points.
 ///
@@ -1956,21 +1956,6 @@ fn a_draft_brings_the_edits_back() {
     }
 }
 
-/// Runs the measuring thread until it is done, as a frontend would. Returns how many files it
-/// measured.
-fn measure(session: &mut Session) -> usize {
-    let (tx, rx) = mpsc::channel::<Measured>();
-    if !session.start_measuring(move |file| tx.send(file).is_ok()) {
-        return 0;
-    }
-    let mut files = 0;
-    while let Ok(file) = rx.recv_timeout(Duration::from_secs(30)) {
-        session.measured(file);
-        files += 1;
-    }
-    files
-}
-
 #[test]
 fn trimming_margins() {
     use specto_annot::Color;
@@ -1978,63 +1963,70 @@ fn trimming_margins() {
     use specto_session::DraftKind;
 
     let scheduler = Scheduler::new(1, || {});
-    let mut session = open(&scheduler, book(4, "alpha"));
+    let mut session = open(&scheduler, book(6, "alpha"));
+    session.viewer.set_layout_mode(LayoutMode::SinglePage);
     let whole = PageSize::new(200.0, 300.0);
     let size = |s: &Session, i: usize| s.viewer.pages()[i].displayed().size();
     let crop = |s: &Session, i: usize| s.viewer.pages()[i].crop.map(|c| c.to_box());
 
-    // Nothing to measure while the margins aren't trimmed.
-    assert_eq!(measure(&mut session), 0);
-
     // A stroke at the bottom right of the second page, far from its text.
+    session.viewer.go_to_page(1);
     let at = |s: &Session, x, y| s.viewer.pdf_to_view(1, PdfPoint::new(x, y)).unwrap();
     let start = at(&session, 170.0, 20.0);
     assert!(session.begin_draft(DraftKind::Ink, Color::new(1.0, 0.0, 0.0), 2.0, start));
     session.extend_draft(start + ViewVector::new(10.0, 10.0));
     assert!(session.finish_draft());
+    session.viewer.go_to_page(0);
+    assert!(!session.trim_shown(), "not trimmed yet");
 
-    // Pages are trimmed once they are measured.
+    // The page shown and the next two are measured and trimmed at once, the rest when they come.
     assert!(session.set_trim_margins(true));
     assert!(session.trim_margins());
-    assert_eq!(size(&session, 0), whole);
-    assert_eq!(measure(&mut session), 1);
-    assert_eq!(measure(&mut session), 0, "measured already");
-    for i in 0..4 {
-        assert!(size(&session, i).width < 200.0 && size(&session, i).height < 300.0);
-    }
-    // The text, at 20 points in from the left and up to 266 points up, is all shown.
     let first = crop(&session, 0).unwrap();
+    // The text, at 20 points in from the left and up to 266 points up, is all shown.
     assert!(
         first.min.x < 20.0 && first.max.y > 266.0 && first.min.y > 100.0,
         "{first:?}"
     );
-    assert_eq!(
-        size(&session, 0),
-        size(&session, 2),
-        "steady from page to page"
-    );
-    // So is the stroke.
+    assert!(size(&session, 0).width < 200.0 && size(&session, 0).height < 300.0);
+    assert!(crop(&session, 2).is_some() && crop(&session, 3).is_none());
+    session.viewer.go_to_page(3);
+    assert!(session.trim_shown());
+    assert!(!session.trim_shown(), "measured already");
+    assert!(crop(&session, 3).is_some() && crop(&session, 5).is_some());
+    // The stroke is shown too.
     let second = crop(&session, 1).unwrap();
     assert!(second.min.y < 20.0 && second.max.x > 180.0, "{second:?}");
-    // Its text is where it shows.
-    let text = session
-        .viewer
+    // Text is where it shows.
+    session.viewer.go_to_page(0);
+    let text = (session.viewer)
         .pdf_to_view(0, PdfPoint::new(30.0, 255.0))
         .unwrap();
     assert_eq!(session.viewer.hit_test(text).map(|(page, _)| page), Some(0));
 
-    // Pages of another file are trimmed once that is measured too.
-    let (other, _) = session
-        .add_source(&scheduler, book(2, "beta").into(), None)
-        .unwrap();
-    assert_eq!(session.insert(4, &[other]), Some(4..6));
-    assert_eq!(crop(&session, 4), None);
-    assert_eq!(measure(&mut session), 1);
-    assert!(crop(&session, 4).is_some());
+    // The continuous layouts show pages whole, and measure nothing.
+    session.viewer.set_layout_mode(LayoutMode::Continuous);
+    assert!((0..6).all(|i| crop(&session, i).is_none() && size(&session, i) == whole));
+    let (other, _) = (session.add_source(&scheduler, book(2, "beta").into(), None)).unwrap();
+    assert_eq!(session.insert(6, &[other]), Some(6..8));
+    session.viewer.go_to_page(7);
+    assert!(!session.trim_shown());
+    // The others show them trimmed again, pages of another file too.
+    session.viewer.set_layout_mode(LayoutMode::TwoPage);
+    assert_eq!(crop(&session, 0).unwrap(), first);
+    session.viewer.go_to_page(7);
+    assert!(session.trim_shown());
+    assert!(crop(&session, 7).is_some());
+    // A thumbnail shows the page whole.
+    let thumbnail = session.viewer.page_whole(7).unwrap();
+    assert_eq!(
+        (thumbnail.crop, thumbnail.displayed().size()),
+        (None, whole)
+    );
 
     // And shown whole again.
     assert!(session.set_trim_margins(false));
     assert!(!session.set_trim_margins(false));
-    assert!((0..6).all(|i| crop(&session, i).is_none() && size(&session, i) == whole));
+    assert!((0..8).all(|i| crop(&session, i).is_none() && size(&session, i) == whole));
     session.close(&scheduler);
 }

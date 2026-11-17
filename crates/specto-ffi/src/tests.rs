@@ -2067,7 +2067,7 @@ fn a_draft_outlives_the_session() {
 
 #[test]
 fn trimming_margins() {
-    let (tx, rx) = mpsc::channel();
+    let (tx, _rx) = mpsc::channel();
     let listener = Arc::new(Listener(Mutex::new(tx)));
     let session = ViewSession::open(text_pdf(), None, 1 << 20, listener).unwrap();
     session.set_viewport(216.0, 316.0, 2.0);
@@ -2079,16 +2079,19 @@ fn trimming_margins() {
     let whole = shape(&session);
     assert!(!session.trim_margins());
 
-    // The page is measured in the background, and the listener hears when it is trimmed. Its text
-    // is wider than tall, so the page becomes so too.
+    // The page is measured as it is shown. Its text is wider than tall, so the page becomes so
+    // too. Thumbnails show it whole.
     session.set_trim_margins(true);
     assert!(session.trim_margins());
-    let deadline = Instant::now() + Duration::from_secs(10);
-    while shape(&session) == whole {
-        assert!(Instant::now() < deadline, "the page is trimmed");
-        let _ = rx.recv_timeout(Duration::from_millis(100));
-    }
     assert!(shape(&session) < 1.0, "{}", shape(&session));
+    let sizes = session.page_sizes();
+    assert_eq!(sizes[0].height / sizes[0].width, whole);
+
+    // Scrolling pages show them whole.
+    session.set_view_mode(ViewMode::Continuous);
+    assert_eq!(shape(&session), whole);
+    session.set_view_mode(ViewMode::Paged);
+    assert!(shape(&session) < 1.0);
 
     session.set_trim_margins(false);
     assert!(!session.trim_margins());

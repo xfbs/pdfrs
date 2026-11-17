@@ -771,10 +771,10 @@ impl Session {
     }
 
     /// Like [`overlay`](Self::overlay), for the page drawn `width` by `height` with its top left
-    /// corner at the origin: a thumbnail.
+    /// corner at the origin: a thumbnail, which shows the page whole.
     pub fn overlay_in(&mut self, position: usize, width: f64, height: f64) -> Vec<ViewShape> {
         let annotations = self.floating(position);
-        let Some(page) = self.viewer.pages().get(position) else {
+        let Some(page) = self.viewer.page_whole(position) else {
             return Vec::new();
         };
         let geometry = page.displayed();

@@ -863,6 +863,7 @@ impl Window {
     fn view_changed(&self) {
         self.place_typing();
         self.update_history_actions();
+        self.update_trim_action();
         let inner = &self.0;
         let Some((page, zoom, mode, cover)) = inner.canvas.with_viewer(|v| {
             (

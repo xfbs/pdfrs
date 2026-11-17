@@ -67,7 +67,7 @@ mod imp {
                 return;
             };
             let mut d = doc.borrow_mut();
-            let key = d.viewer.placeholder_key(page);
+            let key = d.viewer.thumbnail_key(page);
             // The annotations the app draws itself, as on the page view.
             let overlay = d
                 .session
@@ -88,7 +88,7 @@ mod imp {
         fn aspect(&self) -> Option<f64> {
             let doc = self.document.borrow().clone()?;
             let d = doc.borrow();
-            let page = d.viewer.pages().get(self.page.get()?)?;
+            let page = d.viewer.page_whole(self.page.get()?)?;
             let s = page.displayed().size();
             Some(s.height / s.width)
         }
@@ -380,15 +380,6 @@ impl Sidebar {
 
     /// Redraws visible thumbnails (after new tiles arrived).
     pub fn refresh(&self) {
-        self.each_thumbnail(|t| t.queue_draw());
-    }
-
-    /// Sizes the thumbnails again, after the pages changed size.
-    pub fn resize(&self) {
-        self.each_thumbnail(|t| t.queue_resize());
-    }
-
-    fn each_thumbnail(&self, f: impl Fn(&Thumbnail)) {
         let mut child = self.list.first_child();
         while let Some(row) = child {
             if let Some(t) = row
@@ -396,7 +387,7 @@ impl Sidebar {
                 .and_then(|col| col.first_child())
                 .and_downcast::<Thumbnail>()
             {
-                f(&t);
+                t.queue_draw();
             }
             child = row.next_sibling();
         }

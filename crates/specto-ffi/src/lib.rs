@@ -21,7 +21,6 @@ pub mod hot;
 mod jni;
 mod search;
 mod tiles;
-mod trim;
 
 use std::collections::HashMap;
 use std::sync::atomic::{AtomicU64, Ordering};
@@ -629,6 +628,8 @@ impl Shared {
     }
 
     fn frame(&self, state: &mut State) -> Frame {
+        // Pages coming into view with their margins trimmed are measured before they are laid out.
+        state.session.trim_shown();
         let State {
             session,
             tiles,
@@ -665,13 +666,13 @@ impl Shared {
                     .collect(),
             })
             .collect();
-        // Thumbnails are the pages' placeholder tiles, so the page view and the thumbnail grid
-        // share one render. They are requested after everything the page view wants: the scheduler
-        // has one queue, and each frame replaces it.
+        // Thumbnails show pages whole, and are the placeholder tiles of pages that aren't trimmed,
+        // so the page view and the thumbnail grid share one render. They are requested after
+        // everything the page view wants: the scheduler has one queue, and each frame replaces it.
         let (thumbnail_first, count) = *thumbnails;
         let thumbnail_ids = (thumbnail_first..thumbnail_first.saturating_add(count))
             .map(|page| {
-                let Some(key) = viewer.placeholder_key(page as usize) else {
+                let Some(key) = viewer.thumbnail_key(page as usize) else {
                     return 0;
                 };
                 tiles.use_tile(&key).unwrap_or_else(|| {
@@ -720,11 +721,7 @@ impl Shared {
         for (slot, position) in (thumbnail_first..thumbnail_first.saturating_add(count)).enumerate()
         {
             let position = position as usize;
-            let size = session
-                .viewer
-                .pages()
-                .get(position)
-                .map(|p| p.displayed().size());
+            let size = (session.viewer.page_whole(position)).map(|p| p.displayed().size());
             let Some(size) = size.filter(|s| s.width > 0.0) else {
                 continue;
             };
@@ -848,7 +845,9 @@ impl Shared {
                 .pages()
                 .iter()
                 .position(|p| p.doc == key.doc && p.page == key.page);
-            position.is_some_and(|i| viewer.placeholder_key(i) == Some(*key))
+            position.is_some_and(|i| {
+                viewer.placeholder_key(i) == Some(*key) || viewer.thumbnail_key(i) == Some(*key)
+            })
         })
     }
 }
@@ -1659,14 +1658,12 @@ impl ViewSession {
         })
     }
 
-    /// Sizes of all pages as displayed, for the thumbnail grid's cells for instance.
+    /// Sizes of all pages whole (not trimmed), for the thumbnail grid's cells for instance.
     pub fn page_sizes(&self) -> Vec<PageSize> {
         let state = self.shared.lock();
-        state
-            .session
-            .viewer
-            .pages()
-            .iter()
+        let viewer = &state.session.viewer;
+        (0..viewer.page_count())
+            .filter_map(|i| viewer.page_whole(i))
             .map(|page| {
                 let size = page.displayed().size();
                 PageSize {
@@ -1759,12 +1756,9 @@ impl ViewSession {
 
     /// Shows the pages with their margins trimmed, or whole, keeping the place.
     ///
-    /// Pages are trimmed once what they draw is measured, in a background thread, and
-    /// [`ViewListener::tiles_ready`] is called then.
+    /// Only paged views show pages trimmed. Each page is measured as it comes into view.
     pub fn set_trim_margins(&self, on: bool) {
-        let mut state = self.shared.lock();
-        state.session.set_trim_margins(on);
-        trim::start_measuring(&self.shared, &mut state);
+        self.shared.lock().session.set_trim_margins(on);
     }
 
     /// Whether the pages are shown with their margins trimmed.

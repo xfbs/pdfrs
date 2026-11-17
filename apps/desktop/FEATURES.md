@@ -25,12 +25,11 @@ Shortcuts use *Primary*, which is Ctrl on Linux and Cmd on macOS.
   scrolling
 - Layouts: single page, continuous, two pages, two pages continuous
   (*Primary*+1 to 4), optionally with the first page alone (book cover)
-- Trim Margins (the View menu and the layout menu): pages shown without their
-  empty margins. Left and right pages each keep a steady size, and a page that
-  draws further out, such as a cover or a wide table, is shown as far as it
-  needs, so nothing is cut off. Annotations count as drawn. Made for the
-  single and two page layouts: in the continuous ones the widest page sets the
-  zoom of Fit Width, so a cover that fills its page leaves the others smaller
+- Trim Margins (the View menu and the layout menu): each page shown by what it
+  draws, without its empty margins, so it fills more of the window. Nothing on
+  a page is cut off, and annotations count as drawn. In the single and two page
+  layouts only: the continuous ones show pages whole and gray the switch out.
+  Thumbnails show pages whole
 - Rotated pages and mixed page sizes shown correctly
 - Sharp on HiDPI and fractionally scaled screens: once zooming stops, pages are
   drawn at exactly the screen resolution

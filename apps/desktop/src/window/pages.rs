@@ -260,10 +260,7 @@ impl Window {
                 "Couldn't copy the pages: {error}",
                 &[("error", &e)],
             )),
-            None => {
-                self.index_for_search();
-                self.measure_pages();
-            }
+            None => self.index_for_search(),
         }
     }
 
@@ -313,8 +310,6 @@ impl Window {
     }
 
     /// Shows the pages with their margins trimmed, or whole.
-    ///
-    /// Pages are trimmed once what they draw is measured, which takes a moment in the background.
     pub(super) fn set_trim_margins(&self, on: bool) {
         let inner = &self.0;
         if let Some(a) = inner
@@ -328,51 +323,8 @@ impl Window {
             return;
         };
         if doc.borrow_mut().set_trim_margins(on) {
-            self.pages_resized();
+            inner.canvas.update_viewer(|_| {});
         }
-        self.measure_pages();
-    }
-
-    /// Measures what the pages draw, for trimming their margins, if they are trimmed and some
-    /// aren't measured yet.
-    pub(super) fn measure_pages(&self) {
-        let Some(doc) = self.0.document.borrow().clone() else {
-            return;
-        };
-        let Some(rx) = doc.borrow_mut().start_measuring() else {
-            return;
-        };
-        let weak = Rc::downgrade(&self.0);
-        let for_doc = Rc::downgrade(&doc);
-        glib::spawn_future_local(async move {
-            while let Ok(file) = rx.recv().await {
-                let (Some(inner), Some(doc)) = (weak.upgrade(), for_doc.upgrade()) else {
-                    break;
-                };
-                // The document shown may have been replaced (reloaded) meanwhile.
-                if !inner
-                    .document
-                    .borrow()
-                    .as_ref()
-                    .is_some_and(|d| Rc::ptr_eq(d, &doc))
-                {
-                    break;
-                }
-                let changed = doc.borrow_mut().measured(file);
-                if changed {
-                    Window(inner).pages_resized();
-                }
-            }
-        });
-    }
-
-    /// Updates what shows the pages after they changed size.
-    fn pages_resized(&self) {
-        let inner = &self.0;
-        if let Some(s) = inner.sidebar.borrow().as_ref() {
-            s.resize();
-        }
-        inner.canvas.update_viewer(|_| {});
     }
 
     /// Asks for a PDF and inserts its pages.
@@ -438,7 +390,6 @@ impl Window {
             })
         });
         self.index_for_search();
-        self.measure_pages();
     }
 
     /// Reads and opens `file` as a source of `doc`, asking for its password if it has one.

@@ -40,11 +40,9 @@ pub use forms::{FieldClick, FieldHover};
 pub use preview::LinkPreview;
 pub use search::{Indexed, SearchStatus};
 pub use text::TextLayer;
-pub use trim::Measured;
 
 use search::{Indexer, Search};
 use text::TextCache;
-use trim::Measurer;
 
 /// The file a document is opened from, which is its first source.
 pub const MAIN: SourceId = SourceId(0);
@@ -92,9 +90,9 @@ struct Source {
     labels: Option<PageLabels>,
     /// Every page's text prepared for searching, filled in the background.
     index: Vec<Option<SearchText>>,
-    /// The box of what each page draws (`None` for a page that draws nothing), for trimming
-    /// margins. Measured in the background when first needed.
-    content: Option<Vec<Option<PdfBox>>>,
+    /// The box of what pages draw (`None` for a page that draws nothing), for trimming margins.
+    /// Measured when a page is first shown trimmed.
+    content: HashMap<u32, Option<PdfBox>>,
 }
 
 impl Source {
@@ -121,7 +119,7 @@ impl Source {
             geometries: opened.pages,
             links: HashMap::new(),
             annots: HashMap::new(),
-            content: None,
+            content: HashMap::new(),
         })
     }
 }
@@ -169,8 +167,6 @@ pub struct Session {
     search: Option<Search>,
     /// The margins of pages are trimmed in the view.
     trim: bool,
-    /// The thread measuring what pages draw, if one was started and not stopped.
-    measurer: Option<Arc<Measurer>>,
 }
 
 impl Session {
@@ -209,7 +205,6 @@ impl Session {
             indexer: None,
             search: None,
             trim: false,
-            measurer: None,
         };
         // Fields whose values the file leaves to the reader to show get their looks now.
         if session.form_fields().iter().any(|f| f.unshown) {
@@ -246,7 +241,6 @@ impl Session {
             scheduler.close(v.doc_id);
         }
         self.stop_indexing();
-        self.stop_measuring();
     }
 
     /// The file opened, parsed: its metadata, outline and so on.
@@ -344,8 +338,7 @@ impl Session {
 }
 
 /// The viewer's pages for the pages of `edit`: each rendered from its file, or from the copy of it
-/// in `variants`, which has the one page. Each shows the part of it in `crops` at its position, or
-/// all of it.
+/// in `variants`, which has the one page. Each has the crop in `crops` at its position, if any.
 fn view_pages(
     edit: &EditDoc,
     sources: &[Source],
@@ -361,13 +354,11 @@ fn view_pages(
                 Some(v) => (v.doc_id, 0),
                 None => (source.doc_id, p.page),
             };
-            let crop = crops.get(position).copied().flatten();
-            let geometry = source.geometries[p.page as usize];
             ViewPage {
                 doc,
                 page,
-                geometry: crop.map_or(geometry, |c| geometry.cropped(c)),
-                crop,
+                geometry: source.geometries[p.page as usize],
+                crop: crops.get(position).copied().flatten(),
                 rotation: p.rotation,
             }
         })
@@ -712,6 +703,5 @@ impl Session {
 impl Drop for Session {
     fn drop(&mut self) {
         self.stop_indexing();
-        self.stop_measuring();
     }
 }
