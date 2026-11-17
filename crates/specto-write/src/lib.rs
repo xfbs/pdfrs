@@ -1,6 +1,8 @@
 //! Saving: writes the pages of an edited document as a new PDF.
 //!
-//! A full rewrite with lopdf. The first source is the document being edited: its catalog (outline,
+//! [`write_saved`] is what saving a document uses. Where the edit only adds to the file, it appends
+//! the changes to it ([`append`]). Everything else, and everything the other functions here write,
+//! is a full rewrite with lopdf, described from here on. The first source is the document being edited: its catalog (outline,
 //! names, metadata, forms) is kept, and so is its encryption, re-applied with the original settings
 //! and passwords ([`write_unprotected`] leaves it out). Pages of other sources are copied in with
 //! everything they use.
@@ -43,6 +45,7 @@
 
 mod annots;
 mod forms;
+mod incremental;
 
 use std::collections::{BTreeMap, HashMap, HashSet};
 use std::fs::{self, File};
@@ -54,6 +57,8 @@ use lopdf::{Dictionary, Document, LoadOptions, Object, ObjectId, SaveOptions};
 use specto_doc::{FieldId, FieldValue, PageAnnotChanges, PageRef, Rotation, SourceId};
 use specto_source::hayro_syntax::object::{ObjectIdentifier, Stream as HayroStream};
 use specto_source::{LabelStyle, PageLabels, PdfData};
+
+pub use incremental::append;
 
 /// Attributes a page can inherit from its ancestors in the page tree.
 const INHERITABLE: [&[u8]; 4] = [b"Resources", b"MediaBox", b"CropBox", b"Rotate"];
@@ -120,6 +125,25 @@ pub fn write_filled(
     protected: bool,
 ) -> Result<Vec<u8>, WriteError> {
     write_as(sources, pages, annots, form, protected)
+}
+
+/// What saving writes: the main source's file with the changes appended where that is enough (see
+/// [`append`]), and otherwise the document written anew like [`write_filled`] does, with the main
+/// source's encryption kept.
+pub fn write_saved(
+    sources: &[Source],
+    pages: &[PageRef],
+    annots: &AnnotChanges,
+    form: &[(FieldId, FieldValue)],
+) -> Result<Vec<u8>, WriteError> {
+    // Whatever keeps the changes from being appended, the rewrite gets its turn, and says what is
+    // wrong if it can't be done either.
+    if let Some(main) = sources.first()
+        && let Ok(Some(out)) = append(main, pages, annots, form)
+    {
+        return Ok(out);
+    }
+    write_filled(sources, pages, annots, form, true)
 }
 
 /// Like [`write()`], but the result isn't encrypted, whether the main source is or not.
@@ -248,7 +272,7 @@ fn write_as(
             doc.save_with_options(&mut out, options)?;
         }
     }
-    verify(&out, encrypted, sources, pages)?;
+    verify(&out, encrypted, sources, pages, None)?;
     Ok(out)
 }
 
@@ -282,12 +306,14 @@ fn resource_names(r: &specto_source::hayro_syntax::page::Resources<'_>) -> Vec<V
 /// Reads `out` back and checks that it has the pages asked for, each with the same content and
 /// boxes as the page it came from.
 ///
-/// `encrypted` says whether `out` is, with the main source's passwords.
+/// `encrypted` says whether `out` is, with the main source's passwords. With `only`, just the
+/// pages at those positions are compared: for a file whose other pages are the bytes they were.
 fn verify(
     out: &[u8],
     encrypted: bool,
     sources: &[Source],
     pages: &[PageRef],
+    only: Option<&HashSet<usize>>,
 ) -> Result<(), WriteError> {
     let main = &sources[0];
     let password = main.password.filter(|_| encrypted);
@@ -306,6 +332,9 @@ fn verify(
         return Err(WriteError::Unsupported);
     }
     for (i, p) in pages.iter().enumerate() {
+        if only.is_some_and(|only| !only.contains(&i)) {
+            continue;
+        }
         let original = &originals[&p.source];
         let (Some(a), Some(b)) = (original.pages().get(p.page as usize), written_pages.get(i))
         else {
@@ -406,7 +435,7 @@ pub fn save_edited(
     annots: &AnnotChanges,
     form: &[(FieldId, FieldValue)],
 ) -> Result<(), WriteError> {
-    let data = write_filled(sources, pages, annots, form, true)?;
+    let data = write_saved(sources, pages, annots, form)?;
     replace_file(path, &data)?;
     Ok(())
 }

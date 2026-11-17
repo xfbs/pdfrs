@@ -502,6 +502,17 @@ or application form.
   `secret` still works.
 - Save As into another folder: the window shows the new name, and the original
   file is unchanged.
+- LONG: highlight a word and save. The file is a little larger than before, not
+  smaller, and it opens in other viewers with the highlight. Delete the
+  highlight and save again: the file no longer contains it, which the command
+  below shows by printing 0.
+- ENCRYPTED: highlight a word and save. Reopening asks for the password, and
+  the highlight is there.
+
+```sh
+# The number of highlights in the file.
+qpdf --qdf --object-streams=disable target/test-files/long.pdf - | grep -c "/Subtype /Highlight"
+```
 - LONG: select thumbnails 2 to 4 and 7, then Export Selected Pages. The
   suggested name is "long (pages 2-4, 7).pdf". The exported file has those four
   pages (rotated if they were) and opens in other viewers, and the window still

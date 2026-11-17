@@ -15,7 +15,7 @@ use specto_doc::{EditDoc, PageRef, SourceId};
 use specto_geom::{PdfBox, PdfPoint, PdfQuad};
 use specto_render::{Content, Document as _, HayroDocument, RenderRequest};
 use specto_source::{PdfData, SourceDocument};
-use specto_write::{AnnotChanges, Source, write_edited};
+use specto_write::{AnnotChanges, Source, append, write_edited, write_saved};
 
 const MAIN: SourceId = SourceId(0);
 const YELLOW: Color = Color::new(1.0, 0.9, 0.0);
@@ -383,6 +383,121 @@ fn what_an_encrypted_file_allows() {
             annotating: true,
         })
     );
+}
+
+/// `data` written with a cross-reference stream and its objects in object streams.
+fn compact(data: &[u8]) -> Vec<u8> {
+    let mut doc = Document::load_mem(data).unwrap();
+    let options = lopdf::SaveOptions::builder()
+        .use_object_streams(true)
+        .use_xref_streams(true)
+        .build();
+    let mut out = Vec::new();
+    doc.save_with_options(&mut out, options).unwrap();
+    out
+}
+
+/// What [`append`] makes of `edit`, if it takes it.
+fn appended(data: &[u8], password: Option<&str>, edit: &EditDoc) -> Option<Vec<u8>> {
+    let data = PdfData::from(data.to_vec());
+    let source = Source {
+        id: MAIN,
+        data: &data,
+        password,
+    };
+    append(&source, edit.pages(), &changes(edit), &[]).expect("no error")
+}
+
+#[test]
+fn new_annotations_are_appended_to_the_file() {
+    let files = [
+        (fixture(), None),
+        (compact(&fixture()), None),
+        (encrypted(&fixture(), "secret"), Some("secret")),
+        (encrypted(&fixture(), ""), None),
+    ];
+    for (original, password) in files {
+        let mut edit = EditDoc::from_source(MAIN, 2);
+        let mut highlight = markup(MarkupStyle::Highlight, 90.0, 200.0, YELLOW);
+        highlight.contents = Some("Größe".to_owned());
+        edit.add_annotation(MAIN, 1, highlight);
+        let out = appended(&original, password, &edit).expect("only something new");
+        qpdf_check(&out, password);
+
+        // The file as it was, and a little after it.
+        assert!(out.starts_with(&original));
+        assert!(out.len() < original.len() + 2000, "{}", out.len());
+        assert_eq!(
+            SourceDocument::open(out.clone(), None).is_err(),
+            password.is_some(),
+            "protected as before"
+        );
+        let annots = imported(&out, password, 1);
+        assert_eq!(annots.len(), 1);
+        assert_eq!(annots[0].annot_type(), AnnotType::Highlight);
+        assert_eq!(annots[0].contents.as_deref(), Some("Größe"));
+        assert_eq!(annots[0].appearance, Appearance::Own);
+        let [r, g, b] = pixel(&out, password, 1, 95, 715, true);
+        assert!(r > 240 && g > 215 && b < 30, "the highlight: {r} {g} {b}");
+        assert_eq!(imported(&out, password, 0).len(), 2, "page 1 as it was");
+
+        // And once more, onto what was appended.
+        let mut edit = EditDoc::from_source(MAIN, 2);
+        edit.add_annotation(MAIN, 1, markup(MarkupStyle::Underline, 350.0, 450.0, RED));
+        edit.add_annotation(MAIN, 0, markup(MarkupStyle::StrikeOut, 350.0, 450.0, RED));
+        let again = appended(&out, password, &edit).expect("only something new");
+        qpdf_check(&again, password);
+        assert!(again.starts_with(&out));
+        assert_eq!(imported(&again, password, 1).len(), 2);
+        assert_eq!(imported(&again, password, 0).len(), 3);
+    }
+}
+
+#[test]
+fn what_takes_something_away_is_not_appended() {
+    let original = fixture();
+    let data = PdfData::from(original.clone());
+    let source = Source {
+        id: MAIN,
+        data: &data,
+        password: None,
+    };
+    let added = || {
+        let mut edit = EditDoc::from_source(MAIN, 2);
+        edit.add_annotation(MAIN, 1, markup(MarkupStyle::Highlight, 90.0, 200.0, YELLOW));
+        edit
+    };
+    assert!(appended(&original, None, &added()).is_some());
+
+    // Nothing to write.
+    assert!(appended(&original, None, &EditDoc::from_source(MAIN, 2)).is_none());
+    // A page turned, moved or deleted.
+    let mut edit = added();
+    edit.rotate(&[0], specto_doc::Rotation::Cw90);
+    assert!(appended(&original, None, &edit).is_none());
+    let mut edit = added();
+    edit.move_pages(&[1], 0);
+    assert!(appended(&original, None, &edit).is_none());
+    let mut edit = added();
+    edit.delete(&[0]);
+    assert!(appended(&original, None, &edit).is_none());
+
+    // An annotation of the file deleted: it must not stay in the file for someone to dig out.
+    let on_page = imported_arcs(&original, 0);
+    let mut edit = added();
+    let id = edit.annotations(MAIN, 0, &on_page)[0].0;
+    assert!(edit.remove_annotation(id, &on_page[0]));
+    assert!(appended(&original, None, &edit).is_none());
+    let out = write_saved(&[source], edit.pages(), &changes(&edit), &[]).expect("it saves");
+    assert!(!out.starts_with(&original));
+    let needle = b"/Subtype/Square";
+    assert!(original.windows(needle.len()).any(|w| w == needle));
+    assert!(!out.windows(needle.len()).any(|w| w == needle));
+
+    // Saving appends where it can.
+    let edit = added();
+    let out = write_saved(&[source], edit.pages(), &changes(&edit), &[]).expect("it saves");
+    assert!(out.starts_with(&original));
 }
 
 #[test]

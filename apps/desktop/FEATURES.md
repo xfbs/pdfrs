@@ -260,6 +260,10 @@ Shortcuts use *Primary*, which is Ctrl on Linux and Cmd on macOS.
 - The new file is written next to the old one and then takes its place, so the
   old file is intact until the new one is complete
 - Encrypted documents stay encrypted, with the same password
+- A save that only adds markup or fills in empty form fields appends to the
+  file instead of writing it anew. That is faster for large files and keeps a
+  digital signature valid. A save that deletes or changes something writes the
+  file anew, so nothing deleted stays behind in it
 - Saved files keep the outline, links, metadata and page labels. After
   deleting, moving or inserting pages, each page keeps its label in the saved
   file too

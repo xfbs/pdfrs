@@ -493,6 +493,61 @@ fn filled_in_values_are_saved_and_show() {
 }
 
 #[test]
+fn values_for_empty_fields_are_appended_to_the_file() {
+    let original = fixture();
+    let all = read(&original);
+    let id = |name: &str| field(&all, name).id;
+    let empty = Some(FieldValue::Text(String::new()));
+    assert!([None, empty].contains(&field(&all, "name").value));
+    let data = PdfData::from(original.clone());
+    let source = Source {
+        id: MAIN,
+        data: &data,
+        password: None,
+    };
+    let pages = [PageRef::new(MAIN, 0)];
+    let none = AnnotChanges::new();
+
+    let values = [
+        (id("name"), FieldValue::Text("Ada Lovelace".to_owned())),
+        (id("agree"), FieldValue::Check(true)),
+    ];
+    let out = specto_write::append(&source, &pages, &none, &values)
+        .expect("no error")
+        .expect("the fields were empty");
+    qpdf_check(&out);
+    assert!(out.starts_with(&original));
+    let now = read(&out);
+    assert_eq!(
+        field(&now, "name").value,
+        Some(FieldValue::Text("Ada Lovelace".to_owned()))
+    );
+    assert_eq!(field(&now, "agree").value, Some(FieldValue::Check(true)));
+    let dark = |c: [u8; 3]| c.iter().all(|&v| v < 90);
+    assert!(count(&page(&out), (102, 398), (702, 728), dark) > 100);
+
+    // A value that replaces one: the old one must not stay in the file.
+    let data = PdfData::from(out.clone());
+    let source = Source {
+        id: MAIN,
+        data: &data,
+        password: None,
+    };
+    let values = [(id("name"), FieldValue::Text("Grace Hopper".to_owned()))];
+    let appended = specto_write::append(&source, &pages, &none, &values).expect("no error");
+    assert!(appended.is_none());
+    let again = specto_write::write_saved(&[source], &pages, &none, &values).expect("it saves");
+    assert!(!again.starts_with(&out));
+    let old = b"Ada Lovelace";
+    assert!(out.windows(old.len()).any(|w| w == old));
+    assert!(!again.windows(old.len()).any(|w| w == old));
+    assert_eq!(
+        field(&read(&again), "name").value,
+        Some(FieldValue::Text("Grace Hopper".to_owned()))
+    );
+}
+
+#[test]
 fn several_choices_of_a_list_are_saved_and_show() {
     // The list of colors, taking several: the first four of six show.
     let mut doc = Document::load_mem(&fixture()).unwrap();

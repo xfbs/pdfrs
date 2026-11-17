@@ -620,6 +620,10 @@ fn deleting_an_annotation_the_file_has() {
     first.selection = Some(Selection::all(2));
     assert!(first.mark_selection(MarkupStyle::Highlight, Color::new(1.0, 0.9, 0.0)));
     let file = first.save_job().write().unwrap();
+    // Only something new: appended to the file, however often it is saved.
+    let original = book(2, "alpha");
+    assert!(file.starts_with(&original) && file.len() > original.len());
+    assert_eq!(first.save_job().write().unwrap(), file);
     first.close(&scheduler);
 
     let mut session = open(&scheduler, file);

@@ -188,6 +188,8 @@ point to [DECISIONS.md](DECISIONS.md).
 - [x] Desktop: font, bold, italic and size for text boxes, in the three font
   families no PDF needs to embed
 - [x] Android: markup shows in the thumbnails
+- [x] Saves that only add markup or form values are appended to the file,
+  also for encrypted files
 - [ ] Page copies for deleted annotations are written while the user waits.
   That is fine for ordinary files. For very large ones, write them in the
   background, and keep lopdf's reading of a file between two deletions.
@@ -212,9 +214,6 @@ point to [DECISIONS.md](DECISIONS.md).
   its text in the overlay during the drag.
 - [ ] Adjusting follow-ups: handles on the sides, Shift to keep proportions,
   arrow keys to nudge, snapping, and moving several at once.
-- [ ] Incremental save, used when only annotations or form values changed. The
-  lopdf evaluation shows how, also for encrypted files (`spikes/lopdf-spike` at
-  commit 7273d64).
 - [ ] Markup list follow-ups: filling it in the background for very long
   documents, the author and date, filtering by kind, and replies.
 - [ ] Signatures from a photo: the paper isn't taken away cleanly enough yet.
@@ -243,7 +242,7 @@ point to [DECISIONS.md](DECISIONS.md).
 - [ ] Android: typing into a text field on the page instead of in a dialog,
   and a way from one field to the next from the keyboard.
 - [ ] Forms of inserted files. Only the form of the opened file is kept.
-- [ ] Saving filled forms incrementally, and an optional flattened export.
+- [ ] An optional flattened export of a filled form.
 
 ## M6: Android
 
@@ -347,8 +346,6 @@ point to [DECISIONS.md](DECISIONS.md).
 - [x] A tag builds Flatpak bundles in CI and attaches them to the same release
 - [ ] Vector printing on the desktop: send the pages themselves instead of
   images, for smaller files when printing to a file and for selectable text.
-- [ ] Encrypted incremental saves, once the incremental save exists. The full
-  rewrite already keeps a document's encryption (D9).
 - [ ] Permission flags: honor the restrictions of an owner password on editing,
   annotating and printing, with a prompt for the owner password to unlock them.
   A setting in both apps turns this off (D9). What a restriction blocks should

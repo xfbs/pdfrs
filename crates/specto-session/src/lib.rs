@@ -435,7 +435,7 @@ pub struct SaveJob {
 impl SaveJob {
     /// The new file's bytes.
     pub fn write(&self) -> Result<Vec<u8>, specto_write::WriteError> {
-        specto_write::write_filled(&self.sources(), &self.pages, &self.annots, &self.form, true)
+        specto_write::write_saved(&self.sources(), &self.pages, &self.annots, &self.form)
     }
 
     /// The new file's bytes without the document's password protection: for a print service, which

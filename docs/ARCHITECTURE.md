@@ -315,15 +315,30 @@ to request, and when to redraw.
 
 ## Saving
 
-Saving is a full rewrite of the document with lopdf. Annotations are saved as
-standard PDF annotations, never flattened into page content, as Preview does
-(see D8 in [DECISIONS.md](DECISIONS.md)).
+Saving writes the document with lopdf, in one of two ways. Annotations are
+saved as standard PDF annotations, never flattened into page content, as Preview
+does (see D8 in [DECISIONS.md](DECISIONS.md)).
+
+**Appending.** Where a save only adds to the file, the file is kept as it is
+and the objects that changed are appended to it, with a new cross-reference
+section. That is the case when the pages are untouched and all that was done is
+adding annotations and filling in fields that were empty. It is several times
+faster than a rewrite, and a digital signature over the file stays valid,
+because the bytes it covers don't change.
+
+A save that deletes or changes something the file holds is never appended: the
+old annotation or value would stay in the file for someone to dig out. Neither
+is a file that lopdf had to repair to read. Those saves rewrite the document.
+
+**Rewriting.** Everything else is a full rewrite, described below.
 
 The result is written to a temporary file and renamed into place, keeping the
 file's permissions and following symbolic links. The file that was renamed over
 stays readable through an open mapping, so the document doesn't need opening
 again after a save. Its edits stay relative to the original data, and saving
-again writes the same result.
+again writes the same result. An appended save is therefore always the file as
+it was opened plus one update, however often it is saved, and an annotation
+that was saved and then deleted is gone from the next save.
 
 Encrypted documents keep their security handler, password and permissions. The
 rewrite encrypts the result again with the same settings, including pages that
@@ -417,9 +432,6 @@ None of this exists yet. The tasks are in [TASKS.md](TASKS.md).
 - **More of forms.** A fallback font for text outside Latin and the forms of
   inserted files. On Android, lists with several choices and typing on the
   page, where a dialog asks for a field's text today.
-- **Incremental save.** When only annotations or form values changed, append to
-  the original file instead of rewriting it. This is faster and keeps existing
-  digital signatures valid.
 - **Passwords.** A dialog to add, change or remove a document's passwords (see
   D9 in [DECISIONS.md](DECISIONS.md)).
 - **More markup on Android.** It marks text today. Drawing, shapes, text boxes

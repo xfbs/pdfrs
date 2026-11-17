@@ -134,6 +134,20 @@ pub(crate) fn apply(
     Ok(())
 }
 
+/// Whether the field `id` of `doc` holds something: a text, a choice, or a box that is on.
+pub(crate) fn has_value(doc: &Document, id: FieldId) -> bool {
+    match inherited(doc, (id.0, id.1), b"V")
+        .as_ref()
+        .map(|v| resolve(doc, v))
+    {
+        None | Some(Object::Null) => false,
+        Some(Object::String(text, _)) => !text.is_empty(),
+        Some(Object::Name(name)) => name != b"Off",
+        Some(Object::Array(values)) => !values.is_empty(),
+        Some(_) => true,
+    }
+}
+
 fn set(doc: &mut Document, id: ObjectId, key: &str, value: Object) {
     if let Ok(dict) = doc.get_dictionary_mut(id) {
         dict.set(key, value);
