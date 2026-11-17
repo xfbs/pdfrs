@@ -77,14 +77,14 @@ update the template that translations start from:
 apps/desktop/po/update-pot.sh
 ```
 
-The script needs GNU gettext 0.24 or newer. It also brings the translations up
-to date with the template: new strings are added to them empty, and strings
-that are gone are dropped.
+The script needs GNU gettext 0.24 or newer. CI fails when the template isn't
+what the script writes.
 
 A translation is a file in `po/` named after its language, such as `nl.po` for
-Dutch. To start one, copy `po/specto.pot` to that name and fill it in, with
-Poedit or any other editor for such files. Only the `.po` file belongs in the
-repository. The compiled `.mo` files are built from it.
+Dutch. Translations are made on Crowdin, which gets the template from the
+repository and brings the translations up to date with it (see the
+[README](../../README.md#translations)). Only the `.po` files belong in the
+repository. The compiled `.mo` files are built from them.
 
 The app looks for its translations in `share/locale` next to the `bin`
 directory it runs from. The Flatpak build puts them there. To try a

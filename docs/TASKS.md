@@ -402,12 +402,12 @@ that users see.
   Flatpak, with a headless check that starts the app in another language
 - [x] A Dutch translation of both apps
 - [x] Translations are contributed on Crowdin
+- [x] CI fails when the translation template isn't what its script writes
 - [ ] Core: no text for users from the crates. The frontends map error kinds to
   their own translated messages instead of showing the crates' English text.
 - [ ] Numbers through the locale: page counts and the zoom percentage.
 - [ ] Desktop: translations on macOS. Check the build with Homebrew's gettext,
   which nobody has tried yet, and install the catalogs there.
-- [ ] CI: fail when the translation template isn't what its script writes.
 - [ ] Desktop: a German translation.
 - [ ] Right-to-left UI languages: check both apps under such a locale. GTK and
   Compose mirror on their own, but the sidebar side, the thumbnail strip and

@@ -10,12 +10,14 @@ packages=(
   gtk4-devel libadwaita-devel
   # Reference tools used by tests: qpdf checks the files specto-write saves.
   poppler-utils qpdf
+  # xgettext and diff, for the check of the desktop app's translation template.
+  gettext diffutils
 )
 if [[ "${1:-}" == "--headless" ]]; then
   # apps/desktop/test-ui: a compositor, a session bus, gdbus, Python with GObject
   # (the check script), and software OpenGL. For the check of the translations,
-  # msgfmt and a locale other than C, which has none.
+  # a locale other than C, which has none.
   packages+=(mutter dbus-daemon glib2 python3 python3-gobject mesa-dri-drivers)
-  packages+=(gettext glibc-langpack-en)
+  packages+=(glibc-langpack-en)
 fi
 dnf install -y --setopt=install_weak_deps=False "${packages[@]}"

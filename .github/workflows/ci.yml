@@ -42,6 +42,10 @@ jobs:
         run: cargo clippy -p specto-ffi --all-targets --target aarch64-linux-android
       - name: Test
         run: cargo test --workspace
+      - name: Translation template
+        # Crowdin gets its strings from the template, so it has to match the
+        # code.
+        run: apps/desktop/po/update-pot.sh --check
 
   deny:
     # The dependencies, against deny.toml: security advisories, licenses,
