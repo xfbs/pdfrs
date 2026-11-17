@@ -84,8 +84,8 @@ that aren't obvious from the file names:
 - `src/document.rs`: an open document, which is the shared session plus what
   belongs to GTK (the cache of tile textures)
 - `src/debug.rs`: test hooks, only enabled with `SPECTO_DEBUG=1`
-- `po/`: the template of the translatable strings, and the script that writes
-  it
+- `po/`: the translations, the template they start from, and the scripts that
+  write the template and install the translations
 - `test-ui/`: the automated checks and the script that runs them in a headless
   compositor
 - `screenshot.png`: the screenshot above, made by

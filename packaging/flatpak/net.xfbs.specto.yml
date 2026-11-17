@@ -7,6 +7,9 @@ sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
 command: specto-gtk
+# The translations stay in the app. Split off into an extension, they would be
+# missing from the bundles of a release, which hold the app alone.
+separate-locales: false
 finish-args:
   - --share=ipc
   - --socket=fallback-x11
@@ -25,6 +28,7 @@ modules:
     build-commands:
       - cargo build --release --locked -p specto-desktop
       - install -Dm755 target/release/specto-gtk -t /app/bin
+      - apps/desktop/po/install.sh /app/share/locale
       - install -Dm644 apps/desktop/data/net.xfbs.specto.desktop -t /app/share/applications
       - install -Dm644 apps/desktop/data/net.xfbs.specto.metainfo.xml -t /app/share/metainfo
       - install -Dm644 apps/desktop/data/icons/net.xfbs.specto.svg -t /app/share/icons/hicolor/scalable/apps

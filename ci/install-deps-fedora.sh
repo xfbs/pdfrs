@@ -13,7 +13,9 @@ packages=(
 )
 if [[ "${1:-}" == "--headless" ]]; then
   # apps/desktop/test-ui: a compositor, a session bus, gdbus, Python with GObject
-  # (the check script), and software OpenGL.
+  # (the check script), and software OpenGL. For the check of the translations,
+  # msgfmt and a locale other than C, which has none.
   packages+=(mutter dbus-daemon glib2 python3 python3-gobject mesa-dri-drivers)
+  packages+=(gettext glibc-langpack-en)
 fi
 dnf install -y --setopt=install_weak_deps=False "${packages[@]}"

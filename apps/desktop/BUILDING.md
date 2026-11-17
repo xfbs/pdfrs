@@ -77,7 +77,23 @@ update the template that translations start from:
 apps/desktop/po/update-pot.sh
 ```
 
-The script needs GNU gettext 0.24 or newer.
+The script needs GNU gettext 0.24 or newer. It also brings the translations up
+to date with the template: new strings are added to them empty, and strings
+that are gone are dropped.
 
-There are no translations yet. The app looks for them in `share/locale` next
-to the `bin` directory it runs from.
+A translation is a file in `po/` named after its language, such as `nl.po` for
+Dutch. To start one, copy `po/specto.pot` to that name and fill it in, with
+Poedit or any other editor for such files. Only the `.po` file belongs in the
+repository. The compiled `.mo` files are built from it.
+
+The app looks for its translations in `share/locale` next to the `bin`
+directory it runs from. The Flatpak build puts them there. To try a
+translation with a build from the source tree, install the translations next
+to it and ask for the language:
+
+```sh
+apps/desktop/po/install.sh target/share/locale
+LANGUAGE=nl cargo run -p specto-desktop
+```
+
+This needs a system language other than plain C, which has no translations.

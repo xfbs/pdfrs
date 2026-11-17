@@ -1,26 +1,27 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR The Specto contributors
+# Dutch translation of Specto.
+# Copyright (C) 2026 The Specto contributors
 # This file is distributed under the same license as the specto package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Stephan Paternotte, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
+"POT-Creation-Date: \n"
 "PO-Revision-Date: 2026-11-17 17:35+0100\n"
+"Last-Translator: Stephan Paternotte\n"
 "Language-Team: \n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"POT-Creation-Date: \n"
 "X-Generator: Poedit 2.2.3\n"
-"Last-Translator: Stephan Paternotte\n"
-"Language: nl\n"
 
 #. Translators: {apache} and {mit} are the names of the two licenses,
 #. which stay in English and become links.
-#: src/main.rs:130
+#: src/main.rs:144
+#, rust-format
 msgid ""
 "Specto is licensed under either of the {apache} or the {mit}, at your "
 "option.\n"
@@ -31,229 +32,239 @@ msgstr ""
 "\n"
 "Het wordt geleverd zonder enige vorm van garantie."
 
-#: src/main.rs:149
+#: src/main.rs:163
 msgid "The Specto contributors"
-msgstr "Bijdragen aan Specto"
+msgstr "De bijdragers aan Specto"
 
-#: src/main.rs:150
+#: src/main.rs:164
 msgid "© 2026 The Specto contributors"
 msgstr "© 2026 De bijdragers aan Specto"
 
 #. Translators: what the library is used for stays in brackets.
-#: src/main.rs:159
+#: src/main.rs:173
 msgid "hayro (rendering)"
 msgstr "hayro (weergave)"
 
 #. Translators: what the library is used for stays in brackets.
-#: src/main.rs:161
+#: src/main.rs:175
 msgid "lopdf (saving)"
 msgstr "lopdf (opslaan)"
 
-#: src/main.rs:163
+#: src/main.rs:177
 msgid "Built with"
 msgstr "Gebouwd met"
 
-#: src/main.rs:193
+#: src/main.rs:207
+#, rust-format
 msgid "Quit {app}"
 msgstr "{app} afsluiten"
 
-#: src/main.rs:194 src/window.rs:251
+#: src/main.rs:208 src/window.rs:251
+#, rust-format
 msgid "About {app}"
 msgstr "Over {app}"
 
-#: src/main.rs:211 src/window.rs:152
+#: src/main.rs:225 src/window.rs:152
 msgid "Open…"
 msgstr "Openen…"
 
-#: src/main.rs:213 src/window.rs:213
+#: src/main.rs:227 src/window.rs:213
 msgid "Save"
 msgstr "Opslaan"
 
-#: src/main.rs:214 src/window.rs:214
+#: src/main.rs:228 src/window.rs:214
 msgid "Save As…"
 msgstr "Opslaan als…"
 
-#: src/main.rs:215 src/window.rs:216
+#: src/main.rs:229 src/window.rs:216
 msgid "Export Selected Pages…"
 msgstr "Geselecteerde pagina's exporteren…"
 
-#: src/main.rs:218 src/window.rs:219
+#: src/main.rs:232 src/window.rs:219
 msgid "Print…"
 msgstr "Afdrukken…"
 
-#: src/main.rs:219 src/properties.rs:201 src/window.rs:220
+#: src/main.rs:233 src/properties.rs:201 src/window.rs:220
 msgid "Properties"
 msgstr "Eigenschappen"
 
-#: src/main.rs:221
+#: src/main.rs:235
 msgid "Close Window"
 msgstr "Venster sluiten"
 
-#: src/main.rs:226 src/window/actions.rs:93
+#: src/main.rs:240 src/window/actions.rs:93
 msgid "Undo"
 msgstr "Ongedaan maken"
 
-#: src/main.rs:227 src/window/actions.rs:97
+#: src/main.rs:241 src/window/actions.rs:97
 msgid "Redo"
 msgstr "Opnieuw"
 
-#: src/main.rs:230
+#: src/main.rs:244
 msgid "Copy"
 msgstr "Kopiëren"
 
-#: src/main.rs:231
+#: src/main.rs:245
 msgid "Select All"
 msgstr "Alles selecteren"
 
-#: src/main.rs:234 src/window.rs:234
+#: src/main.rs:248 src/window.rs:234
 msgid "Insert Pages from File…"
 msgstr "Pagina's invoegen vanuit bestand…"
 
-#: src/main.rs:235 src/window.rs:228
+#: src/main.rs:249 src/window.rs:228
 msgid "Delete Pages"
 msgstr "Pagina's verwijderen"
 
-#: src/main.rs:238
+#: src/main.rs:252
 msgid "Find…"
 msgstr "Zoeken…"
 
-#: src/main.rs:239
+#: src/main.rs:253
 msgid "Find Next"
 msgstr "Volgende zoeken"
 
-#: src/main.rs:240
+#: src/main.rs:254
 msgid "Find Previous"
 msgstr "Vorige zoeken"
 
-#: src/main.rs:245 src/window.rs:267
+#: src/main.rs:259 src/window.rs:267
 msgid "Single Page"
 msgstr "Enkele pagina"
 
-#: src/main.rs:246 src/window.rs:268
+#: src/main.rs:260 src/window.rs:268
 msgid "Continuous"
 msgstr "Doorlopend"
 
-#: src/main.rs:247 src/window.rs:269
+#: src/main.rs:261 src/window.rs:269
 msgid "Two Pages"
 msgstr "Twee pagina's"
 
-#: src/main.rs:249 src/window.rs:270
+#: src/main.rs:263 src/window.rs:270
 msgid "Two Pages, Continuous"
 msgstr "Twee pagina's, doorlopend"
 
-#: src/main.rs:253 src/window.rs:278
+#: src/main.rs:267 src/window.rs:278
 msgid "Show Cover Page Alone"
 msgstr "Titelpagina apart weergeven"
 
-#: src/main.rs:255 src/window.rs:295
+#: src/main.rs:269 src/window.rs:295
 msgid "Actual Size"
 msgstr "Ware grootte"
 
-#: src/main.rs:256 src/window.rs:293
+#: src/main.rs:270 src/window.rs:293
 msgid "Fit Width"
 msgstr "Breedte passend"
 
-#: src/main.rs:257 src/window.rs:294
+#: src/main.rs:271 src/window.rs:294
 msgid "Fit Page"
 msgstr "Pagina passend"
 
-#: src/main.rs:258 src/window.rs:300
+#: src/main.rs:272 src/window.rs:300
 msgid "Zoom In"
 msgstr "Inzoomen"
 
-#: src/main.rs:259 src/window.rs:301
+#: src/main.rs:273 src/window.rs:301
 msgid "Zoom Out"
 msgstr "Uitzoomen"
 
-#: src/main.rs:262
+#: src/main.rs:276
 msgid "Show Sidebar"
 msgstr "Zijbalk weergeven"
 
-#: src/main.rs:263 src/window.rs:743
+#: src/main.rs:277 src/window.rs:755
 msgid "Thumbnails"
 msgstr "Miniaturen"
 
-#: src/main.rs:264 src/window.rs:768
+#: src/main.rs:278 src/window.rs:780
 msgid "Contents"
 msgstr "Inhoud"
 
-#: src/main.rs:265 src/window.rs:784 src/window/markup.rs:200
+#: src/main.rs:279 src/window.rs:796 src/window/markup.rs:200
 msgid "Markup"
 msgstr "Opmaak"
 
-#: src/main.rs:270
+#: src/main.rs:284
 msgid "Previous Page"
 msgstr "Vorige pagina"
 
-#: src/main.rs:271
+#: src/main.rs:285
 msgid "Next Page"
 msgstr "Volgende pagina"
 
-#: src/main.rs:274
+#: src/main.rs:288
 msgid "First Page"
 msgstr "Eerste pagina"
 
-#: src/main.rs:275
+#: src/main.rs:289
 msgid "Last Page"
 msgstr "Laatste pagina"
 
-#: src/main.rs:277
+#: src/main.rs:291
 msgid "Go to Page…"
 msgstr "Ga naar pagina…"
 
-#: src/main.rs:282 src/window.rs:226
+#: src/main.rs:293
+msgid "Back"
+msgstr "Terug"
+
+#: src/main.rs:294
+msgid "Forward"
+msgstr "Vooruit"
+
+#: src/main.rs:300 src/window.rs:226
 msgid "Rotate Left"
 msgstr "Linksom roteren"
 
-#: src/main.rs:283 src/window.rs:227
+#: src/main.rs:301 src/window.rs:227
 msgid "Rotate Right"
 msgstr "Rechtsom roteren"
 
-#: src/main.rs:286
+#: src/main.rs:304
 msgid "Show Markup Toolbar"
 msgstr "Werkbalk Opmaak weergeven"
 
-#: src/main.rs:287 src/markup_list.rs:43 src/window/markup.rs:27
+#: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
 msgstr "Markeren"
 
-#: src/main.rs:288 src/markup_list.rs:44 src/window/markup.rs:28
+#: src/main.rs:306 src/markup_list.rs:44 src/window/markup.rs:28
 msgid "Underline"
 msgstr "Onderstrepen"
 
-#: src/main.rs:289 src/markup_list.rs:45 src/window/markup.rs:29
+#: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
 msgstr "Doorhalen"
 
-#: src/main.rs:292 src/window.rs:242
+#: src/main.rs:310 src/window.rs:242
 msgid "Highlight Form Fields"
 msgstr "Invoervelden markeren"
 
-#: src/main.rs:293 src/window.rs:245
+#: src/main.rs:311 src/window.rs:245
 msgid "Reset Form"
 msgstr "Formulier herstellen"
 
-#: src/main.rs:298
+#: src/main.rs:316
 msgid "File"
 msgstr "Bestand"
 
-#: src/main.rs:299
+#: src/main.rs:317
 msgid "Edit"
 msgstr "Bewerken"
 
-#: src/main.rs:300
+#: src/main.rs:318
 msgid "View"
 msgstr "Weergave"
 
-#: src/main.rs:301
+#: src/main.rs:319
 msgid "Go"
 msgstr "Gaan"
 
-#: src/main.rs:302
+#: src/main.rs:320
 msgid "Tools"
 msgstr "Hulpmiddelen"
 
-#: src/main.rs:304
+#: src/main.rs:322
 msgid "Help"
 msgstr "Hulp"
 
@@ -357,7 +368,7 @@ msgstr "Pagina's"
 
 #: src/properties.rs:49
 msgid "Page Size"
-msgstr "Pagiangroofte"
+msgstr "Paginagrootte"
 
 #: src/properties.rs:51
 msgid "File Size"
@@ -405,27 +416,32 @@ msgstr "Formulieren opmaken en invullen"
 
 #. Translators: a page size in inches, "8.5 × 11 in".
 #: src/properties.rs:140
+#, rust-format
 msgid "{width} × {height} in"
 msgstr "{width} × {height} in"
 
 #. Translators: a page size in millimeters, "210 × 297 mm".
 #: src/properties.rs:147
+#, rust-format
 msgid "{width} × {height} mm"
 msgstr "{width} × {height} mm"
 
 #. Translators: a page size and the name of the paper, "297 × 210 mm (A4,
 #. landscape)".
 #: src/properties.rs:158
+#, rust-format
 msgid "{size} ({paper}, landscape)"
 msgstr "{size} ({paper}, liggend)"
 
 #. Translators: a page size and the name of the paper, "210 × 297 mm (A4)".
 #: src/properties.rs:163
+#, rust-format
 msgid "{size} ({paper})"
 msgstr "{size} ({paper})"
 
 #. Translators: {size} is the size of the first page, "210 × 297 mm (A4)".
 #: src/properties.rs:179
+#, rust-format
 msgid "{size}, other pages differ"
 msgstr "{size}, andere pagina's verschillen"
 
@@ -534,6 +550,7 @@ msgid "Thumbnails (F9)"
 msgstr "Miniaturen (F9)"
 
 #: src/window.rs:200
+#, rust-format
 msgid "Open ({shortcut})"
 msgstr "Openen ({shortcut})"
 
@@ -550,6 +567,7 @@ msgid "Zoom"
 msgstr "Zoom"
 
 #: src/window.rs:317
+#, rust-format
 msgid "Go to Page ({shortcut})"
 msgstr "Ga naar pagina ({shortcut})"
 
@@ -566,30 +584,36 @@ msgid "Next Match (Enter)"
 msgstr "Volgende overeenkomst (Enter)"
 
 #: src/window.rs:371
+#, rust-format
 msgid "Search ({shortcut})"
 msgstr "Zoeken ({shortcut})"
 
-#: src/window.rs:887
+#: src/window.rs:900
+#, rust-format
 msgid "Links of this kind aren't opened: {address}"
 msgstr "Dit type links kan niet worden geopend: {address}"
 
-#: src/window.rs:896
+#: src/window.rs:909
+#, rust-format
 msgid "Couldn't open link: {error}"
 msgstr "Kan link niet openen: {error}"
 
 #. Translators: a keyboard shortcut as tooltips show it, the
 #. Control key with another.
-#: src/window.rs:947
+#: src/window.rs:960
+#, rust-format
 msgid "Ctrl+{key}"
 msgstr "Ctrl+{key}"
 
 #: src/window/actions.rs:103
+#, rust-format
 msgid "{n} page — Edited"
 msgid_plural "{n} pages — Edited"
 msgstr[0] "{n} pagina — Bewerkt"
 msgstr[1] "{n} pagina's — Bewerkt"
 
 #: src/window/actions.rs:105 src/window/pages.rs:133
+#, rust-format
 msgid "{n} page"
 msgid_plural "{n} pages"
 msgstr[0] "{n} pagina"
@@ -597,20 +621,24 @@ msgstr[1] "{n} pagina's"
 
 #. Translators: follows the box with the page number: "3 of 120".
 #: src/window/actions.rs:111
+#, rust-format
 msgid "of {pages}"
 msgstr "van {pages}"
 
 #. Translators: follows the box with a printed page number:
 #. "iv (4 of 120)".
-#: src/window/actions.rs:483
+#: src/window/actions.rs:511
+#, rust-format
 msgid "({position} of {pages})"
 msgstr "({position} van {pages})"
 
 #: src/window/files.rs:8
+#, rust-format
 msgid "Couldn't read “{name}”: {error}"
 msgstr "Kan “{name}” niet lezen: {error}"
 
 #: src/window/files.rs:15
+#, rust-format
 msgid "Couldn't save “{name}”: {error}"
 msgstr "Kan “{name}” niet opslaan: {error}"
 
@@ -631,18 +659,22 @@ msgid "the document's password is needed"
 msgstr "het wachtwoord van het document is vereist"
 
 #: src/window/files.rs:177
+#, rust-format
 msgid "{app} can't save this document correctly yet"
 msgstr "{app} kan dit document nog niet goed opslaan"
 
 #: src/window/files.rs:249 src/window/pages.rs:405
+#, rust-format
 msgid "Couldn't open “{name}”: {error}"
 msgstr "Kan “{name}” niet openen: {error}"
 
 #: src/window/files.rs:323
+#, rust-format
 msgid "“{name}” was moved or deleted. Saving writes it again."
 msgstr "“{name}” is verplaatst of verwijderd. Opslaan schrijft het opnieuw."
 
 #: src/window/files.rs:332
+#, rust-format
 msgid "“{name}” was changed by another program. Reloading discards your edits."
 msgstr ""
 "“{name}” is door een ander programma gewijzigd. Opnieuw laden gooit uw "
@@ -657,6 +689,7 @@ msgid "File Changed on Disk"
 msgstr "Bestand op schijf gewijzigd"
 
 #: src/window/files.rs:415
+#, rust-format
 msgid ""
 "“{name}” was changed by another program after it was opened. Saving replaces "
 "those changes with this document."
@@ -669,10 +702,12 @@ msgid "_Save Anyway"
 msgstr "_Toch opslaan"
 
 #: src/window/files.rs:514
+#, rust-format
 msgid "The password was incorrect. Enter the password for “{name}”."
 msgstr "Het wachtwoord is onjuist. Voer het wachtwoord in voor “{name}”."
 
 #: src/window/files.rs:518
+#, rust-format
 msgid "“{name}” is protected with a password."
 msgstr "“{name}” is beveiligd met een wachtwoord."
 
@@ -685,6 +720,7 @@ msgid "_Unlock"
 msgstr "_Ontgrendelen"
 
 #: src/window/files.rs:611
+#, rust-format
 msgid "Couldn't print: {error}"
 msgstr "Kan niet afdrukken: {error}"
 
@@ -697,6 +733,7 @@ msgid "Save Changes?"
 msgstr "Wijzigingen opslaan?"
 
 #: src/window/files.rs:746
+#, rust-format
 msgid "“{name}” has unsaved changes. Changes that aren't saved will be lost."
 msgstr ""
 "“{name}” bevat niet-opgeslagen wijzigingen. Niet-opgeslagen wijzigingen gaan "
@@ -711,11 +748,12 @@ msgid "Open PDF"
 msgstr "Open PDF"
 
 #: src/window/markup.rs:36
+#, rust-format
 msgid ""
 "{tool}: marks the selected text, and what is selected from now on "
 "({shortcut} marks once)"
 msgstr ""
-"{tool}: markeert de geselecteerd tekst en wat vanaf nu wordt geselecteerd "
+"{tool}: markeert de geselecteerde tekst en wat vanaf nu wordt geselecteerd "
 "({shortcut} markeert een keer)"
 
 #: src/window/markup.rs:50
@@ -792,7 +830,7 @@ msgstr "Blauw"
 
 #: src/window/markup.rs:231
 msgid "Pink"
-msgstr "Rose"
+msgstr "Roze"
 
 #: src/window/markup.rs:232
 msgid "Purple"
@@ -828,28 +866,33 @@ msgstr "Klik de positie van de handtekening"
 
 #: src/window/markup.rs:1544 src/window/markup.rs:1571
 #: src/window/markup.rs:1664 src/window/markup.rs:1717
+#, rust-format
 msgid "Couldn't change the annotation: {error}"
 msgstr "Kan de annotatie niet wijzigen: {error}"
 
 #: src/window/pages.rs:27
+#, rust-format
 msgid "Undo Rotate Page"
 msgid_plural "Undo Rotate {n} Pages"
 msgstr[0] "Pagina roteren ongedaan maken"
 msgstr[1] "{n} pagina's roteren ongedaan maken"
 
 #: src/window/pages.rs:30
+#, rust-format
 msgid "Undo Delete Page"
 msgid_plural "Undo Delete {n} Pages"
 msgstr[0] "Pagina verwijderen ongedaan maken"
 msgstr[1] "{n} pagina's verwijderen ongedaan maken"
 
 #: src/window/pages.rs:32
+#, rust-format
 msgid "Undo Move Page"
 msgid_plural "Undo Move {n} Pages"
 msgstr[0] "Pagina verplaatsen ongedaan maken"
 msgstr[1] "{n} pagina's verplaatsen ongedaan maken"
 
 #: src/window/pages.rs:34
+#, rust-format
 msgid "Undo Insert Page"
 msgid_plural "Undo Insert {n} Pages"
 msgstr[0] "Pagina invoegen ongedaan maken"
@@ -912,24 +955,28 @@ msgid "Undo Reset Form"
 msgstr "Formulier herstellen ongedaan maken"
 
 #: src/window/pages.rs:57
+#, rust-format
 msgid "Redo Rotate Page"
 msgid_plural "Redo Rotate {n} Pages"
-msgstr[0] "Pagina roteren ongedaan maken"
-msgstr[1] "{n} pagina's roteren ongedaan maken"
+msgstr[0] "Pagina opnieuw roteren"
+msgstr[1] "{n} pagina's opnieuw roteren"
 
 #: src/window/pages.rs:60
+#, rust-format
 msgid "Redo Delete Page"
 msgid_plural "Redo Delete {n} Pages"
-msgstr[0] "Pagina verwijderen ongedaan maken"
-msgstr[1] "{n} pagina's verwijderen ongedaan maken"
+msgstr[0] "Pagina opnieuw verwijderen"
+msgstr[1] "{n} pagina's opnieuw verwijderen"
 
 #: src/window/pages.rs:62
+#, rust-format
 msgid "Redo Move Page"
 msgid_plural "Redo Move {n} Pages"
 msgstr[0] "Pagina opnieuw verplaatsen"
 msgstr[1] "{n} pagina's opnieuw verplaatsen"
 
 #: src/window/pages.rs:64
+#, rust-format
 msgid "Redo Insert Page"
 msgid_plural "Redo Insert {n} Pages"
 msgstr[0] "Pagina opnieuw invoegen"
@@ -992,18 +1039,22 @@ msgid "Redo Reset Form"
 msgstr "Formulier opnieuw herstellen"
 
 #: src/window/pages.rs:119
+#, rust-format
 msgid "page {page}"
 msgstr "pagina {page}"
 
 #: src/window/pages.rs:131
+#, rust-format
 msgid "pages {pages}"
 msgstr "pagina's {pages}"
 
 #: src/window/pages.rs:199
+#, rust-format
 msgid "Couldn't delete the annotation: {error}"
 msgstr "Kan de annotatie niet verwijderen: {error}"
 
 #: src/window/pages.rs:260
+#, rust-format
 msgid "Couldn't copy the pages: {error}"
 msgstr "Kan de pagina's niet kopiëren: {error}"
 
@@ -1016,6 +1067,7 @@ msgid "Export Selected Pages"
 msgstr "Geselecteerde pagina's exporteren"
 
 #: src/window/pages.rs:480
+#, rust-format
 msgid "Exported {n} page to “{name}”"
 msgid_plural "Exported {n} pages to “{name}”"
 msgstr[0] "{n} pagina geëxporteerd naar “{name}”"
@@ -1030,11 +1082,13 @@ msgid "Searching…"
 msgstr "Zoeken…"
 
 #: src/window/search.rs:193
+#, rust-format
 msgid "{current} of {total}"
 msgstr "{current} van {total}"
 
 #. Translators: the search is still running, so there may be
 #. more matches than {total}.
 #: src/window/search.rs:197
+#, rust-format
 msgid "{current} of {total}…"
 msgstr "{current} van {total}…"

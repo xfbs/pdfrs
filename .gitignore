@@ -4,3 +4,5 @@
 /.claude/worktrees/
 /packaging/flatpak/cargo-sources.json
 *.pyc
+# Compiled translations: built from the .po files when installing.
+*.mo

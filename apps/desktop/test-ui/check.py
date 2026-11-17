@@ -17,6 +17,7 @@ Tests (run some by naming them, such as `zoom layouts`):
 - about: the About dialog, with the version
 - properties: the Properties dialog says what the file is: its name and
   folder, the pages and their size, the file size and how it is protected
+- translated: started in Dutch, the app shows its texts in Dutch
 - open_and_render: title, page labels in the entry, default layout, zoom and
   sidebar. The screenshot is at device resolution and shows page 1
 - navigation: next, previous, first and last page. A rotated page renders
@@ -719,6 +720,28 @@ def test_properties(ctx):
     w.screenshot("properties")
     inp.keys(Input.ESCAPE)
     w.wait("the dialog to go", lambda s: s["dialog"] == "" and s["properties"] == [])
+
+
+def test_translated(ctx):
+    # The catalogs go where a build in the source tree looks for them.
+    binary = os.path.dirname(ctx.binary)
+    po = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "po")
+    subprocess.run(
+        [os.path.join(po, "install.sh"), os.path.join(binary, "..", "share", "locale")],
+        check=True, stdout=subprocess.DEVNULL,
+    )
+    # In Dutch, whatever language the checks themselves run in. The C locale has no
+    # translations, so the app runs in one that every system has, with Dutch asked for.
+    known = subprocess.run(["locale", "-a"], capture_output=True, text=True).stdout.split()
+    check("en_US.utf8" in known, "the en_US.UTF-8 locale isn't installed")
+    ctx.env.update(LANGUAGE="nl", LC_ALL="en_US.UTF-8")
+    w = ctx.app([ctx.pages]).window()
+    s = w.settled()
+    check(s["subtitle"] == f"{PAGES} pagina's", s["subtitle"])
+    w.action("properties")
+    s = w.wait("the Properties dialog", lambda s: s["dialog"] == "Eigenschappen")
+    rows = dict(map(tuple, s["properties"]))
+    check(rows.get("Pagina's") == str(PAGES) and rows.get("Beveiliging") == "Geen", rows)
 
 
 def test_open_and_render(ctx):

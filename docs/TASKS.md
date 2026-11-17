@@ -407,14 +407,16 @@ that users see.
 - [x] Android: the app's texts are string resources
 - [x] Android: a German translation, with a unit test that holds every
   translation to the English texts
+- [x] Desktop: the translation catalogs are built and installed, also in the
+  Flatpak, with a headless check that starts the app in another language
+- [x] A Dutch translation of both apps
 - [ ] Core: no text for users from the crates. The frontends map error kinds to
   their own translated messages instead of showing the crates' English text.
 - [ ] Numbers through the locale: page counts and the zoom percentage.
-- [ ] Desktop: build and install the translation catalogs, also in the Flatpak.
-  Check the build on macOS with Homebrew's gettext, which nobody has tried yet.
+- [ ] Desktop: translations on macOS. Check the build with Homebrew's gettext,
+  which nobody has tried yet, and install the catalogs there.
 - [ ] CI: fail when the translation template isn't what its script writes.
-- [ ] Desktop: a first translation, German, to prove the pipeline, with a
-  headless check that starts the app under another locale.
+- [ ] Desktop: a German translation.
 - [ ] Right-to-left UI languages: check both apps under such a locale. GTK and
   Compose mirror on their own, but the sidebar side, the thumbnail strip and
   icons with a direction need a look. The page canvas does not mirror.
