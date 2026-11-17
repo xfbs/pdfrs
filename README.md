@@ -145,6 +145,7 @@ The tests check saved files with qpdf where it is installed.
 - [Tasks](docs/TASKS.md): the task list, by milestone
 - [Specto Desktop Features](apps/desktop/FEATURES.md) and
   [Specto Android Features](apps/android/FEATURES.md): what each app does
+- [Changelog](CHANGELOG.md): what changed in each release
 - [Specto Desktop Testing](apps/desktop/TESTING.md) and
   [Specto Android Testing](apps/android/TESTING.md): testing each app, by hand
   and automated

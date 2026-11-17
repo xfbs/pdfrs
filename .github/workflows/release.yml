@@ -14,7 +14,8 @@ on:
 jobs:
   version:
     # The version of the apps, in the file VERSION: a major and a minor number.
-    # A tag must name it, and the metainfo must have a release entry for it.
+    # A tag must name it, and the changelog and the metainfo must have an entry
+    # for it.
     runs-on: ubuntu-latest
     outputs:
       version: ${{ steps.version.outputs.version }}
@@ -35,6 +36,10 @@ jobs:
           fi
           if ! grep -q "<release version=\"$version\"" apps/desktop/data/net.xfbs.specto.metainfo.xml; then
             echo "::error::The metainfo has no release entry for $version"
+            exit 1
+          fi
+          if ! grep -Eq "^## ${version//./\\.}( |\$)" CHANGELOG.md; then
+            echo "::error::CHANGELOG.md has no section for $version"
             exit 1
           fi
 
@@ -162,8 +167,8 @@ jobs:
           if-no-files-found: error
 
   release:
-    # The GitHub release for the tag, with everything that was built and notes
-    # made from the commits since the last one.
+    # The GitHub release for the tag, with everything that was built, and the
+    # version's section of the changelog as its notes.
     if: github.ref_type == 'tag'
     needs: [version, flatpak, android]
     runs-on: ubuntu-latest
@@ -171,10 +176,38 @@ jobs:
       # To create the release and attach the files.
       contents: write
     steps:
+      - uses: actions/checkout@v4
+        with:
+          # The tags, to find the one before.
+          fetch-depth: 0
       - uses: actions/download-artifact@v4
         with:
           pattern: specto-*
           merge-multiple: true
+      - name: Notes
+        # The version's section of the changelog, up to the next heading of a
+        # version, and a link to the commits since the release before. GitHub
+        # shows every line break of release notes, so the lines a paragraph or
+        # an item is wrapped into are joined.
+        env:
+          GH_REPO: ${{ github.repository }}
+          VERSION: ${{ needs.version.outputs.version }}
+        run: |
+          awk -v version="$VERSION" '
+            /^## / { if (found) exit; if ($2 == version) { found = 1; next } }
+            !found { next }
+            /^ +[^ ]/ || (/^[^-#[:space:]]/ && text != "" && text !~ /^#/) {
+              sub(/^ +/, ""); text = text " " $0; next
+            }
+            { if (started) print text; text = $0; started = 1 }
+            END { if (started) print text }
+          ' CHANGELOG.md > notes.md
+          previous=$(git describe --tags --abbrev=0 "$GITHUB_REF_NAME^" 2>/dev/null || true)
+          if [ -n "$previous" ]; then
+            printf '\nAll changes: https://github.com/%s/compare/%s...%s\n' \
+              "$GH_REPO" "$previous" "$GITHUB_REF_NAME" >> notes.md
+          fi
+          cat notes.md
       - name: Checksums of the bundles
         run: |
           for bundle in specto-*.flatpak; do
@@ -186,5 +219,5 @@ jobs:
           GH_REPO: ${{ github.repository }}
           VERSION: ${{ needs.version.outputs.version }}
         run: |
-          gh release create "$GITHUB_REF_NAME" --verify-tag --generate-notes \
+          gh release create "$GITHUB_REF_NAME" --verify-tag --notes-file notes.md \
             --title "Specto $VERSION" specto-*.flatpak specto-*.apk specto-*.sha256

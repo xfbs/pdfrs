@@ -74,17 +74,21 @@ own version in the root `Cargo.toml`, which a release doesn't change.
 
 A tag makes a release. The workflow in `.github/workflows/release.yml` builds
 the Flatpak for x86-64 and ARM and the signed APK of the Android app, and
-attaches them to a GitHub release with their checksums, and with notes made
-from the commits since the last one. The Android build needs the release key
+attaches them to a GitHub release with their checksums. The notes of the
+release are the version's section of [CHANGELOG.md](../CHANGELOG.md), with a
+link to the commits since the release before. The Android build needs the release key
 as secrets of the repository
 ([apps/android/BUILDING.md](../apps/android/BUILDING.md)).
 
 1. Set the version in the file `VERSION`, which both apps show.
-2. In `apps/desktop/data/net.xfbs.specto.metainfo.xml`, add a release entry
-   with that version and the date on top of the others.
-3. Retake the screenshot if the window changed, with
+2. In `CHANGELOG.md`, turn the heading "Unreleased" into the version and the
+   date, such as "0.2 (2026-11-18)", and start a new "Unreleased" above it.
+3. In `apps/desktop/data/net.xfbs.specto.metainfo.xml`, add a release entry
+   with that version and the date on top of the others. Its description is a
+   sentence or two for software centers, from the changelog.
+4. Retake the screenshot if the window changed, with
    `apps/desktop/test-ui/readme-screenshot.sh`.
-4. Commit, tag and push:
+5. Commit, tag and push:
 
    ```sh
    git tag v0.1
@@ -92,7 +96,7 @@ as secrets of the repository
    ```
 
 The workflow fails if the tag doesn't name the version in `VERSION`, or if the
-metainfo has no release entry for it. "Run workflow" in the Actions tab
+changelog or the metainfo has no entry for it. "Run workflow" in the Actions tab
 builds the Flatpak bundles and the signed APK of a branch without making a
 release. They are kept with the run, to download and try.
 

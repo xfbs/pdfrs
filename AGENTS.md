@@ -61,6 +61,10 @@
 
 - A change to a feature updates the app's `FEATURES.md` in the same commit,
   and `TESTING.md` where a manual check changes.
+- A change that users notice adds an item under "Unreleased" in `CHANGELOG.md`
+  in the same commit, under the app it is in, or "Both apps". Say what they
+  can do or see now, not how it was built. Fixes count when users ran into
+  the problem.
 - `docs/TASKS.md`: within a milestone, done tasks first in the order they were
   done, then open ones. Done tasks are one line. No sizes.
 - `docs/ARCHITECTURE.md` describes what exists. Planned work goes in its
