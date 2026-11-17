@@ -167,9 +167,10 @@ generated appearance streams, as Preview does.
 Other viewers can then show, edit and delete it. Flattening into page content
 isn't the default. At most it becomes a separate export option later.
 
-## D9: Encrypted PDFs follow Preview
+## D9: Encrypted PDFs follow Preview, except for permission flags
 
-**Decision:** match what Preview does.
+**Decision:** match what Preview does with passwords. Permission flags are
+shown and not enforced.
 
 Preview's behavior, checked on a Mac:
 
@@ -190,14 +191,18 @@ What this means for Specto:
 - We need to write encrypted PDFs, not only read them. Saving again keeps the
   original algorithm, and new encryption uses AES-256. lopdf handles all of
   this, and hayro decrypts for viewing.
-- Honoring permission flags is policy, because the file is readable without the
-  owner password. We will honor them by default, like Preview, and a setting
-  will turn that off, as Evince and Okular allow too. Whether honoring should be
-  the default at all is open.
+- Permission flags are not enforced, and no setting turns enforcing on. A file
+  with only an owner password opens without one, so every reader already holds
+  the key to its content and the flags are a request to the software. Evince
+  and MuPDF ignore them by default too. A setting to enforce them would have no
+  one to turn it on, and enforcing by default would have people look for the
+  way to turn it off.
+- What the file asks for stays visible and stays in the file. Properties lists
+  what is not allowed, and saving keeps the encryption with its flags as they
+  are.
 
-**Outcome:** opening with a password, and saving with the encryption kept, are
-implemented. The password dialog, the permission flags and their setting are
-not.
+**Outcome:** opening with a password, saving with the encryption and flags
+kept, and showing the flags are implemented. The password dialog is not.
 
 ## D10: Other document formats
 
@@ -234,4 +239,3 @@ Until then, the code keeps the door open at no extra cost:
 
 - Do signed PDFs need special handling beyond saving incrementally so that
   signatures stay valid? Preview warns that edits invalidate signatures.
-- Should honoring permission flags be the default (see D9)?

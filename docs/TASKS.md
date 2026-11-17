@@ -341,12 +341,9 @@ point to [DECISIONS.md](DECISIONS.md).
 - [x] Android: a crash log, which Settings shows
 - [x] Android: a tag builds, signs and publishes the APK as a GitHub release
 - [x] A tag builds Flatpak bundles in CI and attaches them to the same release
+- [x] Permission flags: shown in Properties, kept on saving, not enforced (D9)
 - [ ] Vector printing on the desktop: send the pages themselves instead of
   images, for smaller files when printing to a file and for selectable text.
-- [ ] Permission flags: honor the restrictions of an owner password on editing,
-  annotating and printing, with a prompt for the owner password to unlock them.
-  A setting in both apps turns this off (D9). What a restriction blocks should
-  say so and point to the setting.
 - [ ] Document security dialog, like Preview's: add, change or remove the two
   passwords, saved with the document. The lopdf evaluation shows how to encrypt
   a file from scratch (`spikes/lopdf-spike` at commit 7273d64).
@@ -404,6 +401,7 @@ that users see.
 - [x] Desktop: the translation catalogs are built and installed, also in the
   Flatpak, with a headless check that starts the app in another language
 - [x] A Dutch translation of both apps
+- [x] Translations are contributed on Crowdin
 - [ ] Core: no text for users from the crates. The frontends map error kinds to
   their own translated messages instead of showing the crates' English text.
 - [ ] Numbers through the locale: page counts and the zoom percentage.
@@ -418,5 +416,3 @@ that users see.
   in a two-page spread and the swipe direction. It defaults to what the
   document states, independent of the UI language, with a toggle per document,
   since many right-to-left PDFs don't state it.
-- [ ] Decide how translations are contributed: plain files in the repository,
-  or a hosted tool such as Weblate.

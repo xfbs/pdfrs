@@ -317,6 +317,8 @@ Shortcuts use *Primary*, which is Ctrl on Linux and Cmd on macOS.
 - Protection: whether the file is encrypted, whether it needs a password to
   open, and what it asks not to be done with it (printing, copying, changing
   the pages, marking up)
+- What a file asks not to be done is shown and not enforced, and saving keeps
+  the file's protection as it is
 - The values can be selected and copied
 
 ## About

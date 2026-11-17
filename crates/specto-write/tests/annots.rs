@@ -385,6 +385,33 @@ fn what_an_encrypted_file_allows() {
     );
 }
 
+#[test]
+fn saving_keeps_what_the_file_allows() {
+    // Opens without a password, and allows only printing.
+    let original = encrypted_allowing(&fixture(), "", Permissions::PRINTABLE);
+    let allowed = SourceDocument::open(original.clone(), None)
+        .unwrap()
+        .permissions();
+    assert!(allowed.is_some_and(|p| p.printing && !p.annotating && !p.changing));
+
+    // The restrictions don't stop an edit, and both ways of saving leave them in the file.
+    let mut edit = EditDoc::from_source(MAIN, 2);
+    edit.add_annotation(MAIN, 1, markup(MarkupStyle::Highlight, 90.0, 200.0, YELLOW));
+    let out = appended(&original, None, &edit).expect("only something new");
+    assert_eq!(
+        SourceDocument::open(out, None).unwrap().permissions(),
+        allowed
+    );
+
+    edit.rotate(&[0], specto_doc::Rotation::Cw90);
+    let out = write(&original, None, &edit);
+    qpdf_check(&out, None);
+    assert_eq!(
+        SourceDocument::open(out, None).unwrap().permissions(),
+        allowed
+    );
+}
+
 /// `data` written with a cross-reference stream and its objects in object streams.
 fn compact(data: &[u8]) -> Vec<u8> {
     let mut doc = Document::load_mem(data).unwrap();
