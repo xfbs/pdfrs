@@ -8,8 +8,6 @@
   read this file (EnglishTexts.kt): change a text and its tests change too.
 -->
 <resources>
-    <string name="app_name" translatable="false">Specto</string>
-
     <!-- Buttons that many dialogs share. -->
     <string name="cancel">Annuleren</string>
     <string name="close">Sluiten</string>
@@ -23,14 +21,12 @@
     <!-- Describes the ⋮ button to screen readers. -->
     <string name="more">Meer</string>
     <string name="back">Terug</string>
-
     <!-- The top bar. -->
     <string name="back_to_document">Terug naar document</string>
     <string name="contents_and_pages">Inhoud en pagina\'s</string>
     <!-- Beside the document's name while it has unsaved changes. -->
     <string name="edited">Bewerkt</string>
     <string name="search">Zoeken</string>
-
     <!-- The ⋮ menu. -->
     <string name="menu_open">Openen</string>
     <string name="menu_share">Delen</string>
@@ -60,28 +56,25 @@
     <string name="redo_change_annotation">Annottaie opnieuw wijzigen</string>
     <string name="redo_fill_field">Veld opnieuw invoeren</string>
     <string name="redo_reset_form">Formulier opnieuw herstellen</string>
-
     <!-- The start screen. -->
-    <string name="open_pdf">Open PDF</string>
+    <string name="open_pdf">PDF openen</string>
     <string name="recent">Recent</string>
     <!-- Where the reader left off in a recent document. -->
     <string name="recent_page">Pagina %1$d</string>
     <string name="recent_page_of">Pagina %1$d van %2$d</string>
     <!-- Where the reader left off, and how long ago: "Page 12 of 240 · 2 hours ago". -->
     <string name="recent_summary">%1$s · %2$s</string>
-
     <!-- Opening a document. -->
     <!-- What a document without a name is called. -->
     <string name="unnamed_document">PDF</string>
     <string name="could_not_open">Kan dit bestand niet openen</string>
-    <string name="open_another">Open een andere PDF</string>
+    <string name="open_another">Andere PDF openen</string>
     <string name="password_protected">%1$s is beveiligd met een wachtwoord</string>
     <string name="password_needed">Er is een wachtwoord nodig om %1$s te openen.</string>
     <string name="password_title">Wachtwoord vereist</string>
     <string name="password_prompt">Voer het wachtwoord in om %1$s te openen.</string>
     <string name="password_label">Wachtwoord</string>
     <string name="password_wrong">Dat wachtwoord werkt niet.</string>
-
     <!-- Pages and Contents. -->
     <string name="tab_pages">Pagina\'s</string>
     <string name="tab_contents">Inhoud</string>
@@ -94,11 +87,9 @@
         <item quantity="one">%d pagina</item>
         <item quantity="other">%d pagina\'s</item>
     </plurals>
-
     <!-- Links that lead out of the document. -->
     <string name="link_open_title">Deze link openen?</string>
     <string name="link_blocked_title">Deze link kan niet worden geopend</string>
-
     <!-- "Go to page". -->
     <string name="go_to_title">Ga naar pagina</string>
     <!-- The field's label, with the first and last page number: "Page (i–240)". -->
@@ -107,7 +98,6 @@
     <string name="go_to_position">Pagina %1$d van %2$d</string>
     <string name="go_to_position_hint">Of een positie, 1–%1$d</string>
     <string name="go">Gaan</string>
-
     <!-- Search. -->
     <string name="close_search">Zoekopdracht sluiten</string>
     <string name="previous_match">Vorige overeenkomst</string>
@@ -119,7 +109,6 @@
     <!-- Still searching, nothing found yet. -->
     <string name="search_running">…</string>
     <string name="no_matches">Geen overeenkomst</string>
-
     <!-- Selected text. -->
     <!-- Marks the selected text: with a highlighter, or a line under or through it. -->
     <string name="highlight">Markeren</string>
@@ -144,10 +133,8 @@
     <string name="clip_label">Tekst van aan PDF</string>
     <!-- Tells screen readers that text is selected on the page. -->
     <string name="text_selected">Tekst geselecteerd</string>
-
     <!-- The page view. -->
     <string name="still_drawing">Pagina weergeven…</string>
-
     <!-- The view menu. -->
     <!-- Describes the view button: "View: Single page". -->
     <string name="view_description">Weergave: %1$s</string>
@@ -160,7 +147,6 @@
     <string name="fit_width">Breedte passend</string>
     <!-- Tells screen readers which menu item is ticked. -->
     <string name="chosen">Gekozen</string>
-
     <!-- Editing pages. -->
     <!-- How many pages are picked: short, it shares a phone's top bar with four buttons. -->
     <plurals name="pages_selected">
@@ -177,12 +163,10 @@
     <!-- With what went wrong, as the system or the PDF library put it (in English). -->
     <string name="could_not_save">Kan niet opslaan: %1$s</string>
     <string name="could_not_save_there">Kan daar niet opslaan. Dit is de bewerkte kopie.</string>
-
     <!-- Sharing and printing. -->
     <string name="could_not_share">Kan dit bestand niet delen</string>
     <string name="preparing_to_print">Afdruk voorbereiden…</string>
     <string name="could_not_print">Kan niet afdrukken: %1$s</string>
-
     <!-- Properties. -->
     <string name="property_file_name">Bestandsnaam</string>
     <string name="property_title">Titel</string>
@@ -190,7 +174,7 @@
     <string name="property_subject">Onderwerp</string>
     <string name="property_keywords">Steekwoorden</string>
     <string name="property_creator">Aangemaakt met</string>
-    <string name="property_producer">PDF producer</string>
+    <string name="property_producer">PDF-producent</string>
     <string name="property_created">Aangemaakt</string>
     <string name="property_modified">Gewijzigd</string>
     <string name="property_pages">Pagina\'s</string>
@@ -206,7 +190,6 @@
     <string name="page_size_named_landscape">%1$s (%2$s, liggend)</string>
     <!-- The size of the first page, when not all pages have it. -->
     <string name="page_size_others_differ">%1$s; andere pagina\'s verschillen</string>
-
     <!-- Settings. -->
     <string name="setting_keep_screen_on">Scherm aan houden</string>
     <plurals name="setting_keep_screen_on_detail">
@@ -220,4 +203,3 @@
     <!-- With the date of the newest entry. -->
     <string name="crash_log_detail">Laatste registratie %1$s. Op dit apparaat bewaard; er wordt niets verzonden tenzij u het deelt.</string>
 </resources>
-

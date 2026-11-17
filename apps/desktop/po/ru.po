@@ -1,0 +1,1087 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: specto\n"
+"Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
+"PO-Revision-Date: 2026-11-17 19:16\n"
+"Last-Translator: \n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
+"X-Crowdin-Project: specto\n"
+"X-Crowdin-Project-ID: 947337\n"
+"X-Crowdin-Language: ru\n"
+"X-Crowdin-File: /apps/desktop/po/specto.pot\n"
+"X-Crowdin-File-ID: 15\n"
+
+#. Translators: {apache} and {mit} are the names of the two licenses,
+#. which stay in English and become links.
+#: src/main.rs:144
+#, rust-format
+msgid "Specto is licensed under either of the {apache} or the {mit}, at your option.\n\n"
+"It comes with no warranty of any kind."
+msgstr "Specto распространяется, по вашему выбору, на условиях {apache} или {mit}.\n\n"
+"Программа поставляется без каких-либо гарантий."
+
+#: src/main.rs:163
+msgid "The Specto contributors"
+msgstr "Участники проекта Specto"
+
+#: src/main.rs:164
+msgid "© 2026 The Specto contributors"
+msgstr "© 2026 Участники проекта Specto"
+
+#. Translators: what the library is used for stays in brackets.
+#: src/main.rs:173
+msgid "hayro (rendering)"
+msgstr "hayro (отрисовка)"
+
+#. Translators: what the library is used for stays in brackets.
+#: src/main.rs:175
+msgid "lopdf (saving)"
+msgstr "lopdf (сохранение)"
+
+#: src/main.rs:177
+msgid "Built with"
+msgstr "Создано с помощью"
+
+#: src/main.rs:207
+#, rust-format
+msgid "Quit {app}"
+msgstr "Завершить {app}"
+
+#: src/main.rs:208 src/window.rs:251
+#, rust-format
+msgid "About {app}"
+msgstr "О приложении {app}"
+
+#: src/main.rs:225 src/window.rs:152
+msgid "Open…"
+msgstr "Открыть…"
+
+#: src/main.rs:227 src/window.rs:213
+msgid "Save"
+msgstr "Сохранить"
+
+#: src/main.rs:228 src/window.rs:214
+msgid "Save As…"
+msgstr "Сохранить как…"
+
+#: src/main.rs:229 src/window.rs:216
+msgid "Export Selected Pages…"
+msgstr "Экспортировать выбранные страницы…"
+
+#: src/main.rs:232 src/window.rs:219
+msgid "Print…"
+msgstr "Печать…"
+
+#: src/main.rs:233 src/properties.rs:201 src/window.rs:220
+msgid "Properties"
+msgstr "Свойства"
+
+#: src/main.rs:235
+msgid "Close Window"
+msgstr "Закрыть окно"
+
+#: src/main.rs:240 src/window/actions.rs:93
+msgid "Undo"
+msgstr "Отменить"
+
+#: src/main.rs:241 src/window/actions.rs:97
+msgid "Redo"
+msgstr "Вернуть"
+
+#: src/main.rs:244
+msgid "Copy"
+msgstr "Копировать"
+
+#: src/main.rs:245
+msgid "Select All"
+msgstr "Выделить всё"
+
+#: src/main.rs:248 src/window.rs:234
+msgid "Insert Pages from File…"
+msgstr "Вставить страницы из файла…"
+
+#: src/main.rs:249 src/window.rs:228
+msgid "Delete Pages"
+msgstr "Удалить страницы"
+
+#: src/main.rs:252
+msgid "Find…"
+msgstr "Найти…"
+
+#: src/main.rs:253
+msgid "Find Next"
+msgstr "Найти следующее"
+
+#: src/main.rs:254
+msgid "Find Previous"
+msgstr "Найти предыдущее"
+
+#: src/main.rs:259 src/window.rs:267
+msgid "Single Page"
+msgstr "Одна страница"
+
+#: src/main.rs:260 src/window.rs:268
+msgid "Continuous"
+msgstr "Непрерывно"
+
+#: src/main.rs:261 src/window.rs:269
+msgid "Two Pages"
+msgstr "Две страницы"
+
+#: src/main.rs:263 src/window.rs:270
+msgid "Two Pages, Continuous"
+msgstr "Две страницы, непрерывно"
+
+#: src/main.rs:267 src/window.rs:278
+msgid "Show Cover Page Alone"
+msgstr "Показывать обложку отдельно"
+
+#: src/main.rs:269 src/window.rs:295
+msgid "Actual Size"
+msgstr "Фактический размер"
+
+#: src/main.rs:270 src/window.rs:293
+msgid "Fit Width"
+msgstr "По ширине"
+
+#: src/main.rs:271 src/window.rs:294
+msgid "Fit Page"
+msgstr "Страница целиком"
+
+#: src/main.rs:272 src/window.rs:300
+msgid "Zoom In"
+msgstr "Увеличить"
+
+#: src/main.rs:273 src/window.rs:301
+msgid "Zoom Out"
+msgstr "Уменьшить"
+
+#: src/main.rs:276
+msgid "Show Sidebar"
+msgstr "Показывать боковую панель"
+
+#: src/main.rs:277 src/window.rs:755
+msgid "Thumbnails"
+msgstr "Миниатюры"
+
+#: src/main.rs:278 src/window.rs:780
+msgid "Contents"
+msgstr "Содержание"
+
+#: src/main.rs:279 src/window.rs:796 src/window/markup.rs:200
+msgid "Markup"
+msgstr "Пометки"
+
+#: src/main.rs:284
+msgid "Previous Page"
+msgstr "Предыдущая страница"
+
+#: src/main.rs:285
+msgid "Next Page"
+msgstr "Следующая страница"
+
+#: src/main.rs:288
+msgid "First Page"
+msgstr "Первая страница"
+
+#: src/main.rs:289
+msgid "Last Page"
+msgstr "Последняя страница"
+
+#: src/main.rs:291
+msgid "Go to Page…"
+msgstr "Перейти к странице…"
+
+#: src/main.rs:293
+msgid "Back"
+msgstr "Назад"
+
+#: src/main.rs:294
+msgid "Forward"
+msgstr "Вперёд"
+
+#: src/main.rs:300 src/window.rs:226
+msgid "Rotate Left"
+msgstr "Повернуть влево"
+
+#: src/main.rs:301 src/window.rs:227
+msgid "Rotate Right"
+msgstr "Повернуть вправо"
+
+#: src/main.rs:304
+msgid "Show Markup Toolbar"
+msgstr "Показывать панель пометок"
+
+#: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
+msgid "Highlight"
+msgstr "Выделение цветом"
+
+#: src/main.rs:306 src/markup_list.rs:44 src/window/markup.rs:28
+msgid "Underline"
+msgstr "Подчёркивание"
+
+#: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
+msgid "Strikethrough"
+msgstr "Зачёркивание"
+
+#: src/main.rs:310 src/window.rs:242
+msgid "Highlight Form Fields"
+msgstr "Подсвечивать поля формы"
+
+#: src/main.rs:311 src/window.rs:245
+msgid "Reset Form"
+msgstr "Сбросить форму"
+
+#: src/main.rs:316
+msgid "File"
+msgstr "Файл"
+
+#: src/main.rs:317
+msgid "Edit"
+msgstr "Правка"
+
+#: src/main.rs:318
+msgid "View"
+msgstr "Вид"
+
+#: src/main.rs:319
+msgid "Go"
+msgstr "Переход"
+
+#: src/main.rs:320
+msgid "Tools"
+msgstr "Инструменты"
+
+#: src/main.rs:322
+msgid "Help"
+msgstr "Справка"
+
+#: src/markup_list.rs:47
+msgid "Drawing"
+msgstr "Рисунок"
+
+#: src/markup_list.rs:48
+msgid "Rectangle"
+msgstr "Прямоугольник"
+
+#: src/markup_list.rs:49
+msgid "Ellipse"
+msgstr "Эллипс"
+
+#: src/markup_list.rs:50
+msgid "Line"
+msgstr "Линия"
+
+#: src/markup_list.rs:51 src/markup_list.rs:56
+msgid "Note"
+msgstr "Заметка"
+
+#: src/markup_list.rs:52 src/markup_list.rs:57
+msgid "Text"
+msgstr "Текст"
+
+#: src/markup_list.rs:53 src/markup_list.rs:58
+msgid "Stamp"
+msgstr "Штамп"
+
+#: src/markup_list.rs:59
+msgid "Shape"
+msgstr "Фигура"
+
+#: src/markup_list.rs:60
+msgid "Attachment"
+msgstr "Вложение"
+
+#: src/markup_list.rs:96
+msgid "No Markup"
+msgstr "Нет пометок"
+
+#: src/markup_list.rs:97
+msgid "Highlights, drawings and notes are listed here"
+msgstr "Здесь появятся выделения, рисунки и заметки"
+
+#: src/print.rs:135
+msgid "printing failed"
+msgstr "ошибка печати"
+
+#: src/print.rs:267
+msgid "couldn't open the file"
+msgstr "не удалось открыть файл"
+
+#: src/properties.rs:36
+msgid "File Name"
+msgstr "Имя файла"
+
+#: src/properties.rs:37
+msgid "Folder"
+msgstr "Папка"
+
+#: src/properties.rs:38
+msgid "Title"
+msgstr "Название"
+
+#: src/properties.rs:39
+msgid "Author"
+msgstr "Автор"
+
+#: src/properties.rs:40
+msgid "Subject"
+msgstr "Тема"
+
+#: src/properties.rs:41
+msgid "Keywords"
+msgstr "Ключевые слова"
+
+#. Translators: the program a document was written in.
+#: src/properties.rs:43
+msgid "Created With"
+msgstr "Создано в программе"
+
+#. Translators: the program that turned a document into a PDF.
+#: src/properties.rs:45
+msgid "PDF Producer"
+msgstr "Производитель PDF"
+
+#: src/properties.rs:46
+msgid "Created"
+msgstr "Создан"
+
+#: src/properties.rs:47
+msgid "Modified"
+msgstr "Изменён"
+
+#: src/properties.rs:48
+msgid "Pages"
+msgstr "Страниц"
+
+#: src/properties.rs:49
+msgid "Page Size"
+msgstr "Размер страницы"
+
+#: src/properties.rs:51
+msgid "File Size"
+msgstr "Размер файла"
+
+#: src/properties.rs:54
+msgid "PDF Version"
+msgstr "Версия PDF"
+
+#: src/properties.rs:56
+msgid "Protection"
+msgstr "Защита"
+
+#: src/properties.rs:58
+msgid "Password to open"
+msgstr "Пароль для открытия"
+
+#: src/properties.rs:59
+msgid "Encrypted, opens without a password"
+msgstr "Зашифрован, открывается без пароля"
+
+#: src/properties.rs:60
+msgid "None"
+msgstr "Нет"
+
+#: src/properties.rs:65
+msgid "Not Allowed"
+msgstr "Не разрешено"
+
+#: src/properties.rs:73
+msgid "Printing"
+msgstr "Печать"
+
+#: src/properties.rs:74
+msgid "Copying text and pictures"
+msgstr "Копирование текста и изображений"
+
+#: src/properties.rs:75
+msgid "Changing the pages"
+msgstr "Изменение страниц"
+
+#: src/properties.rs:78
+msgid "Marking up and filling in forms"
+msgstr "Пометки и заполнение форм"
+
+#. Translators: a page size in inches, "8.5 × 11 in".
+#: src/properties.rs:140
+#, rust-format
+msgid "{width} × {height} in"
+msgstr "{width} × {height} дюйм."
+
+#. Translators: a page size in millimeters, "210 × 297 mm".
+#: src/properties.rs:147
+#, rust-format
+msgid "{width} × {height} mm"
+msgstr "{width} × {height} мм"
+
+#. Translators: a page size and the name of the paper, "297 × 210 mm (A4,
+#. landscape)".
+#: src/properties.rs:158
+#, rust-format
+msgid "{size} ({paper}, landscape)"
+msgstr "{size} ({paper}, альбомная)"
+
+#. Translators: a page size and the name of the paper, "210 × 297 mm (A4)".
+#: src/properties.rs:163
+#, rust-format
+msgid "{size} ({paper})"
+msgstr ""
+
+#. Translators: {size} is the size of the first page, "210 × 297 mm (A4)".
+#: src/properties.rs:179
+#, rust-format
+msgid "{size}, other pages differ"
+msgstr "{size}, другие страницы отличаются"
+
+#: src/signatures.rs:344
+msgid "Clear"
+msgstr "Очистить"
+
+#: src/signatures.rs:356
+msgid "Sign with the mouse or the touchpad"
+msgstr "Распишитесь с помощью мыши или сенсорной панели"
+
+#: src/signatures.rs:364
+msgid "Draw"
+msgstr "Нарисовать"
+
+#: src/signatures.rs:381
+msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
+msgstr "Распишитесь на белой бумаге, сфотографируйте подпись и выберите этот снимок. Бумага будет убрана, останутся только чернила."
+
+#: src/signatures.rs:388
+msgid "Choose Picture…"
+msgstr "Выбрать изображение…"
+
+#: src/signatures.rs:395
+msgid "To the left, faint strokes are kept, and more of the paper's shadows. To the right, only what is dark."
+msgstr "Левее сохраняются бледные штрихи и больше теней на бумаге. Правее остаётся только тёмное."
+
+#: src/signatures.rs:398
+msgid "Ink as in the picture"
+msgstr "Чернила как на изображении"
+
+#: src/signatures.rs:399
+msgid "Black ink"
+msgstr "Чёрные чернила"
+
+#: src/signatures.rs:400
+msgid "Blue ink"
+msgstr "Синие чернила"
+
+#: src/signatures.rs:403
+msgid "Faint"
+msgstr "Бледное"
+
+#: src/signatures.rs:405
+msgid "Dark"
+msgstr "Тёмное"
+
+#: src/signatures.rs:416
+msgid "From a Picture"
+msgstr "Из изображения"
+
+#: src/signatures.rs:439
+msgid "Move the slider until the paper is gone and the strokes are whole."
+msgstr "Двигайте ползунок, пока бумага не исчезнет, а штрихи при этом останутся целыми."
+
+#: src/signatures.rs:441
+msgid "No ink found in this picture. Move the slider to the left."
+msgstr "На этом изображении не найдено чернил. Сдвиньте ползунок влево."
+
+#: src/signatures.rs:458
+msgid "Pictures"
+msgstr "Изображения"
+
+#: src/signatures.rs:463
+msgid "Choose a Picture of a Signature"
+msgstr "Выберите изображение подписи"
+
+#: src/signatures.rs:480 src/window/files.rs:420 src/window/files.rs:522
+#: src/window/files.rs:751
+msgid "_Cancel"
+msgstr "_Отмена"
+
+#: src/signatures.rs:482 src/window/files.rs:753
+msgid "_Save"
+msgstr "_Сохранить"
+
+#: src/signatures.rs:510
+msgid "New Signature"
+msgstr "Новая подпись"
+
+#: src/window.rs:148
+msgid "Open a PDF"
+msgstr "Откройте PDF"
+
+#: src/window.rs:149
+msgid "Drop a file here or choose one"
+msgstr "Перетащите сюда файл или выберите его"
+
+#: src/window.rs:162
+msgid "Recent"
+msgstr "Недавние"
+
+#: src/window.rs:188
+msgid "Thumbnails (F9)"
+msgstr "Миниатюры (F9)"
+
+#: src/window.rs:200
+#, rust-format
+msgid "Open ({shortcut})"
+msgstr "Открыть ({shortcut})"
+
+#: src/window.rs:258
+msgid "Main Menu"
+msgstr "Главное меню"
+
+#: src/window.rs:285
+msgid "Page Layout"
+msgstr "Расположение страниц"
+
+#: src/window.rs:306
+msgid "Zoom"
+msgstr "Масштаб"
+
+#: src/window.rs:317
+#, rust-format
+msgid "Go to Page ({shortcut})"
+msgstr "Перейти к странице ({shortcut})"
+
+#: src/window.rs:330
+msgid "Search"
+msgstr "Поиск"
+
+#: src/window.rs:342
+msgid "Previous Match (Shift+Enter)"
+msgstr "Предыдущее совпадение (Shift+Enter)"
+
+#: src/window.rs:349
+msgid "Next Match (Enter)"
+msgstr "Следующее совпадение (Enter)"
+
+#: src/window.rs:371
+#, rust-format
+msgid "Search ({shortcut})"
+msgstr "Поиск ({shortcut})"
+
+#: src/window.rs:900
+#, rust-format
+msgid "Links of this kind aren't opened: {address}"
+msgstr "Ссылки такого вида не открываются: {address}"
+
+#: src/window.rs:909
+#, rust-format
+msgid "Couldn't open link: {error}"
+msgstr "Не удалось открыть ссылку: {error}"
+
+#. Translators: a keyboard shortcut as tooltips show it, the
+#. Control key with another.
+#: src/window.rs:960
+#, rust-format
+msgid "Ctrl+{key}"
+msgstr ""
+
+#: src/window/actions.rs:103
+#, rust-format
+msgid "{n} page — Edited"
+msgid_plural "{n} pages — Edited"
+msgstr[0] "{n} страница — изменено"
+msgstr[1] "{n} страницы — изменено"
+msgstr[2] "{n} страниц — изменено"
+msgstr[3] ""
+
+#: src/window/actions.rs:105 src/window/pages.rs:133
+#, rust-format
+msgid "{n} page"
+msgid_plural "{n} pages"
+msgstr[0] "{n} страница"
+msgstr[1] "{n} страницы"
+msgstr[2] "{n} страниц"
+msgstr[3] ""
+
+#. Translators: follows the box with the page number: "3 of 120".
+#: src/window/actions.rs:111
+#, rust-format
+msgid "of {pages}"
+msgstr "из {pages}"
+
+#. Translators: follows the box with a printed page number:
+#. "iv (4 of 120)".
+#: src/window/actions.rs:511
+#, rust-format
+msgid "({position} of {pages})"
+msgstr "({position} из {pages})"
+
+#: src/window/files.rs:8
+#, rust-format
+msgid "Couldn't read “{name}”: {error}"
+msgstr "Не удалось прочитать «{name}»: {error}"
+
+#: src/window/files.rs:15
+#, rust-format
+msgid "Couldn't save “{name}”: {error}"
+msgstr "Не удалось сохранить «{name}»: {error}"
+
+#: src/window/files.rs:23
+msgid "PDF documents"
+msgstr "Документы PDF"
+
+#: src/window/files.rs:54
+msgid "reading failed"
+msgstr "ошибка чтения"
+
+#: src/window/files.rs:98 src/window/files.rs:102
+msgid "saving failed"
+msgstr "ошибка сохранения"
+
+#: src/window/files.rs:175
+msgid "the document's password is needed"
+msgstr "требуется пароль документа"
+
+#: src/window/files.rs:177
+#, rust-format
+msgid "{app} can't save this document correctly yet"
+msgstr "{app} пока не может правильно сохранить этот документ"
+
+#: src/window/files.rs:249 src/window/pages.rs:405
+#, rust-format
+msgid "Couldn't open “{name}”: {error}"
+msgstr "Не удалось открыть «{name}»: {error}"
+
+#: src/window/files.rs:323
+#, rust-format
+msgid "“{name}” was moved or deleted. Saving writes it again."
+msgstr "Файл «{name}» перемещён или удалён. При сохранении он будет записан заново."
+
+#: src/window/files.rs:332
+#, rust-format
+msgid "“{name}” was changed by another program. Reloading discards your edits."
+msgstr "Файл «{name}» изменён другой программой. При перезагрузке ваши правки будут потеряны."
+
+#: src/window/files.rs:335
+msgid "_Reload"
+msgstr "_Перезагрузить"
+
+#: src/window/files.rs:413
+msgid "File Changed on Disk"
+msgstr "Файл изменён на диске"
+
+#: src/window/files.rs:415
+#, rust-format
+msgid "“{name}” was changed by another program after it was opened. Saving replaces those changes with this document."
+msgstr "Файл «{name}» был изменён другой программой после открытия. При сохранении эти изменения будут заменены этим документом."
+
+#: src/window/files.rs:421
+msgid "_Save Anyway"
+msgstr "_Всё равно сохранить"
+
+#: src/window/files.rs:514
+#, rust-format
+msgid "The password was incorrect. Enter the password for “{name}”."
+msgstr "Неверный пароль. Введите пароль для файла «{name}»."
+
+#: src/window/files.rs:518
+#, rust-format
+msgid "“{name}” is protected with a password."
+msgstr "Файл «{name}» защищён паролем."
+
+#: src/window/files.rs:520
+msgid "Password Required"
+msgstr "Требуется пароль"
+
+#: src/window/files.rs:523
+msgid "_Unlock"
+msgstr "_Разблокировать"
+
+#: src/window/files.rs:611
+#, rust-format
+msgid "Couldn't print: {error}"
+msgstr "Не удалось напечатать: {error}"
+
+#: src/window/files.rs:656
+msgid "Save As"
+msgstr "Сохранить как"
+
+#: src/window/files.rs:744
+msgid "Save Changes?"
+msgstr "Сохранить изменения?"
+
+#: src/window/files.rs:746
+#, rust-format
+msgid "“{name}” has unsaved changes. Changes that aren't saved will be lost."
+msgstr "В файле «{name}» есть несохранённые изменения. Если их не сохранить, они будут потеряны."
+
+#: src/window/files.rs:752
+msgid "_Discard"
+msgstr "_Не сохранять"
+
+#: src/window/files.rs:774
+msgid "Open PDF"
+msgstr "Открыть PDF"
+
+#: src/window/markup.rs:36
+#, rust-format
+msgid "{tool}: marks the selected text, and what is selected from now on ({shortcut} marks once)"
+msgstr "{tool}: помечает выделенный текст и всё, что будет выделено дальше ({shortcut} помечает один раз)"
+
+#: src/window/markup.rs:50
+msgid "Draw freehand"
+msgstr "Рисовать от руки"
+
+#: src/window/markup.rs:51
+msgid "Draw rectangles"
+msgstr "Рисовать прямоугольники"
+
+#: src/window/markup.rs:52
+msgid "Draw ellipses"
+msgstr "Рисовать эллипсы"
+
+#: src/window/markup.rs:53
+msgid "Draw lines"
+msgstr "Рисовать линии"
+
+#: src/window/markup.rs:54
+msgid "Add text: click where it goes"
+msgstr "Добавить текст: щёлкните в нужном месте"
+
+#: src/window/markup.rs:55
+msgid "Add notes: click where one goes"
+msgstr "Добавить заметки: щёлкните в нужном месте"
+
+#: src/window/markup.rs:98
+msgid "Color"
+msgstr "Цвет"
+
+#: src/window/markup.rs:113
+msgid "Signature"
+msgstr "Подпись"
+
+#: src/window/markup.rs:121
+msgid "Sans-serif"
+msgstr "Без засечек"
+
+#: src/window/markup.rs:122
+msgid "Serif"
+msgstr "С засечками"
+
+#: src/window/markup.rs:123
+msgid "Monospace"
+msgstr "Моноширинный"
+
+#: src/window/markup.rs:149
+msgid "Font"
+msgstr "Шрифт"
+
+#: src/window/markup.rs:153
+msgid "Bold"
+msgstr "Полужирный"
+
+#: src/window/markup.rs:157
+msgid "Italic"
+msgstr "Курсив"
+
+#: src/window/markup.rs:167
+msgid "Text size in points"
+msgstr "Размер текста в пунктах"
+
+#: src/window/markup.rs:228
+msgid "Yellow"
+msgstr "Жёлтый"
+
+#: src/window/markup.rs:229
+msgid "Green"
+msgstr "Зелёный"
+
+#: src/window/markup.rs:230
+msgid "Blue"
+msgstr "Синий"
+
+#: src/window/markup.rs:231
+msgid "Pink"
+msgstr "Розовый"
+
+#: src/window/markup.rs:232
+msgid "Purple"
+msgstr "Фиолетовый"
+
+#: src/window/markup.rs:233
+msgid "Red"
+msgstr "Красный"
+
+#: src/window/markup.rs:234
+msgid "Black"
+msgstr "Чёрный"
+
+#: src/window/markup.rs:556
+msgid "Select the text to mark first"
+msgstr "Сначала выделите текст, который нужно пометить"
+
+#: src/window/markup.rs:602
+msgid "Place this signature: click where it goes"
+msgstr "Поставить эту подпись: щёлкните в нужном месте"
+
+#: src/window/markup.rs:614
+msgid "Delete this signature"
+msgstr "Удалить эту подпись"
+
+#: src/window/markup.rs:630
+msgid "New Signature…"
+msgstr "Новая подпись…"
+
+#: src/window/markup.rs:659
+msgid "Click where the signature goes"
+msgstr "Щёлкните там, где должна стоять подпись"
+
+#: src/window/markup.rs:1544 src/window/markup.rs:1571
+#: src/window/markup.rs:1664 src/window/markup.rs:1717
+#, rust-format
+msgid "Couldn't change the annotation: {error}"
+msgstr "Не удалось изменить аннотацию: {error}"
+
+#: src/window/pages.rs:27
+#, rust-format
+msgid "Undo Rotate Page"
+msgid_plural "Undo Rotate {n} Pages"
+msgstr[0] "Отменить поворот {n} страницы"
+msgstr[1] "Отменить поворот {n} страниц"
+msgstr[2] "Отменить поворот {n} страниц"
+msgstr[3] ""
+
+#: src/window/pages.rs:30
+#, rust-format
+msgid "Undo Delete Page"
+msgid_plural "Undo Delete {n} Pages"
+msgstr[0] "Отменить удаление {n} страницы"
+msgstr[1] "Отменить удаление {n} страниц"
+msgstr[2] "Отменить удаление {n} страниц"
+msgstr[3] ""
+
+#: src/window/pages.rs:32
+#, rust-format
+msgid "Undo Move Page"
+msgid_plural "Undo Move {n} Pages"
+msgstr[0] "Отменить перемещение {n} страницы"
+msgstr[1] "Отменить перемещение {n} страниц"
+msgstr[2] "Отменить перемещение {n} страниц"
+msgstr[3] ""
+
+#: src/window/pages.rs:34
+#, rust-format
+msgid "Undo Insert Page"
+msgid_plural "Undo Insert {n} Pages"
+msgstr[0] "Отменить вставку {n} страницы"
+msgstr[1] "Отменить вставку {n} страниц"
+msgstr[2] "Отменить вставку {n} страниц"
+msgstr[3] ""
+
+#: src/window/pages.rs:36
+msgid "Undo Highlight"
+msgstr "Отменить выделение цветом"
+
+#: src/window/pages.rs:37
+msgid "Undo Underline"
+msgstr "Отменить подчёркивание"
+
+#: src/window/pages.rs:38
+msgid "Undo Strikethrough"
+msgstr "Отменить зачёркивание"
+
+#: src/window/pages.rs:39
+msgid "Undo Drawing"
+msgstr "Отменить рисунок"
+
+#: src/window/pages.rs:40
+msgid "Undo Rectangle"
+msgstr "Отменить прямоугольник"
+
+#: src/window/pages.rs:41
+msgid "Undo Ellipse"
+msgstr "Отменить эллипс"
+
+#: src/window/pages.rs:42
+msgid "Undo Line"
+msgstr "Отменить линию"
+
+#: src/window/pages.rs:43
+msgid "Undo Note"
+msgstr "Отменить заметку"
+
+#: src/window/pages.rs:44
+msgid "Undo Text Box"
+msgstr "Отменить надпись"
+
+#: src/window/pages.rs:45
+msgid "Undo Add Annotation"
+msgstr "Отменить добавление аннотации"
+
+#: src/window/pages.rs:46
+msgid "Undo Delete Annotation"
+msgstr "Отменить удаление аннотации"
+
+#: src/window/pages.rs:47
+msgid "Undo Change Annotation"
+msgstr "Отменить изменение аннотации"
+
+#: src/window/pages.rs:48
+msgid "Undo Fill In Field"
+msgstr "Отменить заполнение поля"
+
+#: src/window/pages.rs:49
+msgid "Undo Reset Form"
+msgstr "Отменить сброс формы"
+
+#: src/window/pages.rs:57
+#, rust-format
+msgid "Redo Rotate Page"
+msgid_plural "Redo Rotate {n} Pages"
+msgstr[0] "Вернуть поворот {n} страницы"
+msgstr[1] "Вернуть поворот {n} страниц"
+msgstr[2] "Вернуть поворот {n} страниц"
+msgstr[3] ""
+
+#: src/window/pages.rs:60
+#, rust-format
+msgid "Redo Delete Page"
+msgid_plural "Redo Delete {n} Pages"
+msgstr[0] "Вернуть удаление {n} страницы"
+msgstr[1] "Вернуть удаление {n} страниц"
+msgstr[2] "Вернуть удаление {n} страниц"
+msgstr[3] ""
+
+#: src/window/pages.rs:62
+#, rust-format
+msgid "Redo Move Page"
+msgid_plural "Redo Move {n} Pages"
+msgstr[0] "Вернуть перемещение {n} страницы"
+msgstr[1] "Вернуть перемещение {n} страниц"
+msgstr[2] "Вернуть перемещение {n} страниц"
+msgstr[3] ""
+
+#: src/window/pages.rs:64
+#, rust-format
+msgid "Redo Insert Page"
+msgid_plural "Redo Insert {n} Pages"
+msgstr[0] "Вернуть вставку {n} страницы"
+msgstr[1] "Вернуть вставку {n} страниц"
+msgstr[2] "Вернуть вставку {n} страниц"
+msgstr[3] ""
+
+#: src/window/pages.rs:66
+msgid "Redo Highlight"
+msgstr "Вернуть выделение цветом"
+
+#: src/window/pages.rs:67
+msgid "Redo Underline"
+msgstr "Вернуть подчёркивание"
+
+#: src/window/pages.rs:68
+msgid "Redo Strikethrough"
+msgstr "Вернуть зачёркивание"
+
+#: src/window/pages.rs:69
+msgid "Redo Drawing"
+msgstr "Вернуть рисунок"
+
+#: src/window/pages.rs:70
+msgid "Redo Rectangle"
+msgstr "Вернуть прямоугольник"
+
+#: src/window/pages.rs:71
+msgid "Redo Ellipse"
+msgstr "Вернуть эллипс"
+
+#: src/window/pages.rs:72
+msgid "Redo Line"
+msgstr "Вернуть линию"
+
+#: src/window/pages.rs:73
+msgid "Redo Note"
+msgstr "Вернуть заметку"
+
+#: src/window/pages.rs:74
+msgid "Redo Text Box"
+msgstr "Вернуть надпись"
+
+#: src/window/pages.rs:75
+msgid "Redo Add Annotation"
+msgstr "Вернуть добавление аннотации"
+
+#: src/window/pages.rs:76
+msgid "Redo Delete Annotation"
+msgstr "Вернуть удаление аннотации"
+
+#: src/window/pages.rs:77
+msgid "Redo Change Annotation"
+msgstr "Вернуть изменение аннотации"
+
+#: src/window/pages.rs:78
+msgid "Redo Fill In Field"
+msgstr "Вернуть заполнение поля"
+
+#: src/window/pages.rs:79
+msgid "Redo Reset Form"
+msgstr "Вернуть сброс формы"
+
+#: src/window/pages.rs:119
+#, rust-format
+msgid "page {page}"
+msgstr "страница {page}"
+
+#: src/window/pages.rs:131
+#, rust-format
+msgid "pages {pages}"
+msgstr "страницы {pages}"
+
+#: src/window/pages.rs:199
+#, rust-format
+msgid "Couldn't delete the annotation: {error}"
+msgstr "Не удалось удалить аннотацию: {error}"
+
+#: src/window/pages.rs:260
+#, rust-format
+msgid "Couldn't copy the pages: {error}"
+msgstr "Не удалось скопировать страницы: {error}"
+
+#: src/window/pages.rs:314
+msgid "Insert Pages from File"
+msgstr "Вставить страницы из файла"
+
+#: src/window/pages.rs:447
+msgid "Export Selected Pages"
+msgstr "Экспортировать выбранные страницы"
+
+#: src/window/pages.rs:480
+#, rust-format
+msgid "Exported {n} page to “{name}”"
+msgid_plural "Exported {n} pages to “{name}”"
+msgstr[0] "В «{name}» экспортирована {n} страница"
+msgstr[1] "В «{name}» экспортированы {n} страницы"
+msgstr[2] "В «{name}» экспортировано {n} страниц"
+msgstr[3] ""
+
+#: src/window/search.rs:187
+msgid "No matches"
+msgstr "Нет совпадений"
+
+#: src/window/search.rs:188
+msgid "Searching…"
+msgstr "Поиск…"
+
+#: src/window/search.rs:193
+#, rust-format
+msgid "{current} of {total}"
+msgstr "{current} из {total}"
+
+#. Translators: the search is still running, so there may be
+#. more matches than {total}.
+#: src/window/search.rs:197
+#, rust-format
+msgid "{current} of {total}…"
+msgstr "{current} из {total}…"
+

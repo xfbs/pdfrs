@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Everything the app says, in English. A translation is a copy of this file
+  in `values-<language>` (German: `values-de`); TranslationsTest checks that
+  each has every text, with the same placeholders.
+
+  The UI tests find buttons and menu items by these texts, and the unit tests
+  read this file (EnglishTexts.kt): change a text and its tests change too.
+-->
+<resources>
+    <!-- Buttons that many dialogs share. -->
+    <string name="cancel">Отмена</string>
+    <string name="close">Закрыть</string>
+    <string name="open">Открыть</string>
+    <string name="save">Сохранить</string>
+    <string name="save_as">Сохранить как</string>
+    <string name="discard">Не сохранять</string>
+    <string name="delete">Удалить</string>
+    <string name="share">Поделиться</string>
+    <string name="select_all">Выбрать все</string>
+    <!-- Describes the ⋮ button to screen readers. -->
+    <string name="more">Ещё</string>
+    <string name="back">Назад</string>
+    <!-- The top bar. -->
+    <string name="back_to_document">Назад к документу</string>
+    <string name="contents_and_pages">Содержание и страницы</string>
+    <!-- Beside the document's name while it has unsaved changes. -->
+    <string name="edited">Изменено</string>
+    <string name="search">Поиск</string>
+    <!-- The ⋮ menu. -->
+    <string name="menu_open">Открыть</string>
+    <string name="menu_share">Поделиться</string>
+    <string name="menu_print">Печать</string>
+    <string name="menu_go_to_page">Перейти к странице</string>
+    <string name="menu_properties">Свойства</string>
+    <string name="menu_highlight_fields">Подсвечивать поля формы</string>
+    <string name="menu_reset_form">Сбросить форму</string>
+    <string name="menu_settings">Настройки</string>
+    <!-- Closes the document and returns to the start screen. -->
+    <string name="menu_close">Закрыть</string>
+    <string name="undo_rotate">Отменить поворот</string>
+    <string name="undo_delete">Отменить удаление</string>
+    <string name="undo_move">Отменить перемещение</string>
+    <string name="undo_insert">Отменить вставку</string>
+    <string name="undo_add_annotation">Отменить добавление аннотации</string>
+    <string name="undo_remove_annotation">Отменить удаление аннотации</string>
+    <string name="undo_change_annotation">Отменить изменение аннотации</string>
+    <string name="undo_fill_field">Отменить заполнение поля</string>
+    <string name="undo_reset_form">Отменить сброс формы</string>
+    <string name="redo_rotate">Повторить поворот</string>
+    <string name="redo_delete">Повторить удаление</string>
+    <string name="redo_move">Повторить перемещение</string>
+    <string name="redo_insert">Повторить вставку</string>
+    <string name="redo_add_annotation">Повторить добавление аннотации</string>
+    <string name="redo_remove_annotation">Повторить удаление аннотации</string>
+    <string name="redo_change_annotation">Повторить изменение аннотации</string>
+    <string name="redo_fill_field">Повторить заполнение поля</string>
+    <string name="redo_reset_form">Повторить сброс формы</string>
+    <!-- The start screen. -->
+    <string name="open_pdf">Открыть PDF</string>
+    <string name="recent">Недавние</string>
+    <!-- Where the reader left off in a recent document. -->
+    <string name="recent_page">Страница %1$d</string>
+    <string name="recent_page_of">Страница %1$d из %2$d</string>
+    <!-- Where the reader left off, and how long ago: "Page 12 of 240 · 2 hours ago". -->
+    <string name="recent_summary">%1$s · %2$s</string>
+    <!-- Opening a document. -->
+    <!-- What a document without a name is called. -->
+    <string name="unnamed_document">PDF</string>
+    <string name="could_not_open">Не удалось открыть этот файл</string>
+    <string name="open_another">Открыть другой PDF</string>
+    <string name="password_protected">Файл «%1$s» защищён паролем</string>
+    <string name="password_needed">Чтобы открыть файл «%1$s», нужен пароль.</string>
+    <string name="password_title">Требуется пароль</string>
+    <string name="password_prompt">Введите пароль, чтобы открыть файл «%1$s».</string>
+    <string name="password_label">Пароль</string>
+    <string name="password_wrong">Этот пароль не подошёл.</string>
+    <!-- Pages and Contents. -->
+    <string name="tab_pages">Страницы</string>
+    <string name="tab_contents">Содержание</string>
+    <string name="collapse">Свернуть</string>
+    <string name="expand">Развернуть</string>
+    <!-- What a long press on a page in the page grid does, for screen readers. -->
+    <string name="pick">Выбрать</string>
+    <!-- Follows the finger while pages are dragged to another place. -->
+    <plurals name="pages_dragged">
+        <item quantity="one">%d страница</item>
+        <item quantity="few">%d страницы</item>
+        <item quantity="many">%d страниц</item>
+        <item quantity="other">%d страницы</item>
+    </plurals>
+    <!-- Links that lead out of the document. -->
+    <string name="link_open_title">Открыть эту ссылку?</string>
+    <string name="link_blocked_title">Эту ссылку нельзя открыть</string>
+    <!-- "Go to page". -->
+    <string name="go_to_title">Перейти к странице</string>
+    <!-- The field's label, with the first and last page number: "Page (i–240)". -->
+    <string name="go_to_label">Страница (%1$s–%2$s)</string>
+    <!-- Which page a typed page number is, counted from the first. -->
+    <string name="go_to_position">Страница %1$d из %2$d</string>
+    <string name="go_to_position_hint">Или номер по порядку, 1–%1$d</string>
+    <string name="go">Перейти</string>
+    <!-- Search. -->
+    <string name="close_search">Закрыть поиск</string>
+    <string name="previous_match">Предыдущее совпадение</string>
+    <string name="next_match">Следующее совпадение</string>
+    <!-- Which match is shown: "3 of 17". -->
+    <string name="search_count">%1$d из %2$d</string>
+    <!-- The same while the document is still being searched. -->
+    <string name="search_count_so_far">%1$d из %2$d…</string>
+    <!-- Still searching, nothing found yet. -->
+    <string name="search_running">…</string>
+    <string name="no_matches">Нет совпадений</string>
+    <!-- Selected text. -->
+    <!-- Marks the selected text: with a highlighter, or a line under or through it. -->
+    <string name="highlight">Выделить цветом</string>
+    <string name="underline">Подчеркнуть</string>
+    <string name="strike_through">Зачеркнуть</string>
+    <!-- Tells screen readers that an annotation (a mark on the text, a note, a drawing) is picked. -->
+    <string name="annotation_selected">Аннотация выбрана</string>
+    <string name="could_not_delete_annotation">Не удалось удалить аннотацию: %1$s</string>
+    <!-- Titles of the dialogs that fill in a field of a form, where the form has no name for it. -->
+    <string name="field_text_title">Заполнить поле</string>
+    <string name="field_choice_title">Выберите</string>
+    <string name="field_done">Готово</string>
+    <!-- The line of a menu of a form that takes text of one\'s own instead of one of its options. -->
+    <string name="field_own_text">Или введите свой вариант</string>
+    <!-- How many characters a field holds of how many it takes, such as 3 / 10. -->
+    <string name="field_length">%1$d / %2$d</string>
+    <string name="copy">Копировать</string>
+    <string name="copied">Скопировано</string>
+    <string name="too_much_to_copy">Слишком много текста, чтобы скопировать за один раз</string>
+    <string name="too_much_to_share">Слишком много текста, чтобы поделиться за один раз</string>
+    <!-- What the clipboard calls text copied from a document. -->
+    <string name="clip_label">Текст из PDF</string>
+    <!-- Tells screen readers that text is selected on the page. -->
+    <string name="text_selected">Текст выделен</string>
+    <!-- The page view. -->
+    <string name="still_drawing">Страница ещё отрисовывается</string>
+    <!-- The view menu. -->
+    <!-- Describes the view button: "View: Single page". -->
+    <string name="view_description">Вид: %1$s</string>
+    <string name="layout_single_page">Одна страница</string>
+    <string name="layout_continuous">Непрерывно</string>
+    <string name="layout_two_pages">Две страницы</string>
+    <string name="layout_two_pages_continuous">Две страницы, непрерывно</string>
+    <string name="first_page_alone">Первая страница отдельно</string>
+    <string name="fit_page">Страница целиком</string>
+    <string name="fit_width">По ширине</string>
+    <!-- Tells screen readers which menu item is ticked. -->
+    <string name="chosen">Выбрано</string>
+    <!-- Editing pages. -->
+    <!-- How many pages are picked: short, it shares a phone's top bar with four buttons. -->
+    <plurals name="pages_selected">
+        <item quantity="one">Выбрано: %d</item>
+        <item quantity="few">Выбрано: %d</item>
+        <item quantity="many">Выбрано: %d</item>
+        <item quantity="other">Выбрано: %d</item>
+    </plurals>
+    <string name="clear_selection">Отменить выбор</string>
+    <string name="rotate_left">Повернуть влево</string>
+    <string name="rotate_right">Повернуть вправо</string>
+    <string name="delete_pages">Удалить страницы</string>
+    <string name="unsaved_title">Сохранить изменения?</string>
+    <string name="unsaved_text">Если не сохранить изменения страниц в файле «%1$s», они будут потеряны.</string>
+    <string name="saving">Сохранение…</string>
+    <!-- With what went wrong, as the system or the PDF library put it (in English). -->
+    <string name="could_not_save">Не удалось сохранить: %1$s</string>
+    <string name="could_not_save_there">Не удалось сохранить туда. Это изменённая копия.</string>
+    <!-- Sharing and printing. -->
+    <string name="could_not_share">Не удалось поделиться этим файлом</string>
+    <string name="preparing_to_print">Подготовка к печати…</string>
+    <string name="could_not_print">Не удалось напечатать: %1$s</string>
+    <!-- Properties. -->
+    <string name="property_file_name">Имя файла</string>
+    <string name="property_title">Название</string>
+    <string name="property_author">Автор</string>
+    <string name="property_subject">Тема</string>
+    <string name="property_keywords">Ключевые слова</string>
+    <string name="property_creator">Создано в программе</string>
+    <string name="property_producer">Производитель PDF</string>
+    <string name="property_created">Создан</string>
+    <string name="property_modified">Изменён</string>
+    <string name="property_pages">Страниц</string>
+    <string name="property_page_size">Размер страницы</string>
+    <string name="property_file_size">Размер файла</string>
+    <string name="property_pdf_version">Версия PDF</string>
+    <!-- Width and height of a page in millimetres: "210 × 297 mm". -->
+    <string name="page_size_mm">%1$d × %2$d мм</string>
+    <!-- The same in inches, for paper sizes defined in them: "8.5 × 11 in". -->
+    <string name="page_size_in">%1$s × %2$s дюйм.</string>
+    <!-- A size with the name of the paper: "210 × 297 mm (A4)". -->
+    <string name="page_size_named">%1$s (%2$s)</string>
+    <string name="page_size_named_landscape">%1$s (%2$s, альбомная)</string>
+    <!-- The size of the first page, when not all pages have it. -->
+    <string name="page_size_others_differ">%1$s; другие страницы отличаются</string>
+    <!-- Settings. -->
+    <string name="setting_keep_screen_on">Не выключать экран</string>
+    <plurals name="setting_keep_screen_on_detail">
+        <item quantity="one">Пока открыт документ, в течение %d минуты после последнего касания</item>
+        <item quantity="few">Пока открыт документ, в течение %d минут после последнего касания</item>
+        <item quantity="many">Пока открыт документ, в течение %d минут после последнего касания</item>
+        <item quantity="other">Пока открыт документ, в течение %d минуты после последнего касания</item>
+    </plurals>
+    <string name="setting_volume_keys">Листать кнопками громкости</string>
+    <string name="setting_volume_keys_detail">Уменьшение громкости листает вперёд, увеличение — назад</string>
+    <string name="crash_log">Журнал сбоев</string>
+    <string name="crash_log_empty">Пока сбоев не было</string>
+    <!-- With the date of the newest entry. -->
+    <string name="crash_log_detail">Последняя запись: %1$s. Хранится на этом устройстве; ничего не отправляется, пока вы сами этим не поделитесь.</string>
+</resources>
