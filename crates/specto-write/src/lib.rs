@@ -650,10 +650,15 @@ fn annotate(doc: &mut Document, source: SourceId, annots: &AnnotChanges) -> Resu
         return Ok(());
     }
     let pages = doc.get_pages();
-    for ((_, page), changes) in annots
+    // In the order of the pages: new objects are numbered as they are made, and the same document
+    // must be written the same every time.
+    let mut of_source: Vec<(u32, &PageAnnotChanges)> = annots
         .iter()
         .filter(|((s, _), c)| *s == source && !c.is_empty())
-    {
+        .map(|((_, page), changes)| (*page, changes))
+        .collect();
+    of_source.sort_unstable_by_key(|(page, _)| *page);
+    for (page, changes) in of_source {
         // A page that isn't there isn't written either.
         if let Some(&id) = pages.get(&(page + 1)) {
             annots::apply(doc, id, changes)?;
