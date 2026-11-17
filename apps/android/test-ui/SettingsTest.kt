@@ -109,10 +109,12 @@ class SettingsTest : AppTest() {
         )
         menu("Settings")
         compose.onNodeWithText("Last entry", substring = true).assertIsDisplayed().performClick()
+        // Which version of the app it is from goes with it, as the installed app names it.
+        val target = instrumentation.targetContext
+        val version = target.packageManager.getPackageInfo(target.packageName, 0).versionName
         compose.onNodeWithTag(CRASH_LOG_TAG)
             .assertTextContains("number 7 went wrong", substring = true)
-            // Which app and device it is from goes with it.
-            .assertTextContains("Specto 0.1 (", substring = true)
+            .assertTextContains("Specto $version (", substring = true)
         compose.onNodeWithText("Delete").performClick()
         waitForText("Nothing went wrong so far")
         assertEquals(false, log.exists())
