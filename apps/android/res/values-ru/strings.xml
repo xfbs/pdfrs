@@ -35,6 +35,7 @@
     <string name="menu_properties">Свойства</string>
     <string name="menu_highlight_fields">Подсвечивать поля формы</string>
     <string name="menu_reset_form">Сбросить форму</string>
+    <string name="menu_discard_changes">Отменить изменения</string>
     <string name="menu_settings">Настройки</string>
     <!-- Closes the document and returns to the start screen. -->
     <string name="menu_close">Закрыть</string>
@@ -163,10 +164,13 @@
     <string name="delete_pages">Удалить страницы</string>
     <string name="unsaved_title">Сохранить изменения?</string>
     <string name="unsaved_text">Если не сохранить изменения страниц в файле «%1$s», они будут потеряны.</string>
+    <string name="discard_title">Отменить изменения?</string>
+    <string name="discard_text">Изменения в документе «%1$s» с момента последнего сохранения будут потеряны.</string>
     <string name="saving">Сохранение…</string>
     <!-- With what went wrong, as the system or the PDF library put it (in English). -->
     <string name="could_not_save">Не удалось сохранить: %1$s</string>
     <string name="could_not_save_there">Не удалось сохранить туда. Это изменённая копия.</string>
+    <string name="draft_not_restored">Не удалось восстановить несохранённые изменения в документе «%1$s».</string>
     <!-- Sharing and printing. -->
     <string name="could_not_share">Не удалось поделиться этим файлом</string>
     <string name="preparing_to_print">Подготовка к печати…</string>

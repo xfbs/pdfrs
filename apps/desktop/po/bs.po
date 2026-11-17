@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 21:37\n"
+"PO-Revision-Date: 2026-11-17 22:41\n"
 "Last-Translator: \n"
 "Language-Team: Bosnian\n"
 "Language: bs_BA\n"
@@ -36,16 +36,16 @@ msgstr "© 2026 Saradnici na projektu Specto"
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:173
 msgid "hayro (rendering)"
-msgstr ""
+msgstr "hayro (iscrtavanje)"
 
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:175
 msgid "lopdf (saving)"
-msgstr ""
+msgstr "lopdf (spremanje)"
 
 #: src/main.rs:177
 msgid "Built with"
-msgstr ""
+msgstr "Izgrađeno pomoću"
 
 #: src/main.rs:207
 #, rust-format
@@ -63,7 +63,7 @@ msgstr "Otvori…"
 
 #: src/main.rs:227 src/window.rs:213
 msgid "Save"
-msgstr ""
+msgstr "Sačuvaj"
 
 #: src/main.rs:228 src/window.rs:214
 msgid "Save As…"
@@ -79,7 +79,7 @@ msgstr "Štampaj…"
 
 #: src/main.rs:233 src/properties.rs:201 src/window.rs:220
 msgid "Properties"
-msgstr ""
+msgstr "Svojstva"
 
 #: src/main.rs:235
 msgid "Close Window"
@@ -95,7 +95,7 @@ msgstr "Ponovi"
 
 #: src/main.rs:244
 msgid "Copy"
-msgstr ""
+msgstr "Kopiraj"
 
 #: src/main.rs:245
 msgid "Select All"
@@ -127,7 +127,7 @@ msgstr "Jedna stranica"
 
 #: src/main.rs:260 src/window.rs:268
 msgid "Continuous"
-msgstr ""
+msgstr "Neprekidno"
 
 #: src/main.rs:261 src/window.rs:269
 msgid "Two Pages"
@@ -171,11 +171,11 @@ msgstr "Sličice"
 
 #: src/main.rs:278 src/window.rs:780
 msgid "Contents"
-msgstr ""
+msgstr "Sadržaj"
 
 #: src/main.rs:279 src/window.rs:796 src/window/markup.rs:200
 msgid "Markup"
-msgstr ""
+msgstr "Oznake"
 
 #: src/main.rs:284
 msgid "Previous Page"
@@ -199,11 +199,11 @@ msgstr "Idi na stranicu…"
 
 #: src/main.rs:293
 msgid "Back"
-msgstr ""
+msgstr "Nazad"
 
 #: src/main.rs:294
 msgid "Forward"
-msgstr ""
+msgstr "Naprijed"
 
 #: src/main.rs:300 src/window.rs:226
 msgid "Rotate Left"
@@ -219,15 +219,15 @@ msgstr "Prikaži traku s alatima za označavanje"
 
 #: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
-msgstr ""
+msgstr "Označi"
 
 #: src/main.rs:306 src/markup_list.rs:44 src/window/markup.rs:28
 msgid "Underline"
-msgstr ""
+msgstr "Podvuci"
 
 #: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
-msgstr ""
+msgstr "Precrtaj"
 
 #: src/main.rs:310 src/window.rs:242
 msgid "Highlight Form Fields"
@@ -251,11 +251,11 @@ msgstr "Prikaz"
 
 #: src/main.rs:319
 msgid "Go"
-msgstr ""
+msgstr "Idi"
 
 #: src/main.rs:320
 msgid "Tools"
-msgstr ""
+msgstr "Alati"
 
 #: src/main.rs:322
 msgid "Help"
@@ -263,7 +263,7 @@ msgstr "Pomoć"
 
 #: src/markup_list.rs:47
 msgid "Drawing"
-msgstr ""
+msgstr "Crtanje"
 
 #: src/markup_list.rs:48
 msgid "Rectangle"
@@ -275,23 +275,23 @@ msgstr "Elipsa"
 
 #: src/markup_list.rs:50
 msgid "Line"
-msgstr ""
+msgstr "Linija"
 
 #: src/markup_list.rs:51 src/markup_list.rs:56
 msgid "Note"
-msgstr ""
+msgstr "Bilješka"
 
 #: src/markup_list.rs:52 src/markup_list.rs:57
 msgid "Text"
-msgstr ""
+msgstr "Tekst"
 
 #: src/markup_list.rs:53 src/markup_list.rs:58
 msgid "Stamp"
-msgstr ""
+msgstr "Pečat"
 
 #: src/markup_list.rs:59
 msgid "Shape"
-msgstr ""
+msgstr "Oblik"
 
 #: src/markup_list.rs:60
 msgid "Attachment"
@@ -323,7 +323,7 @@ msgstr "Fascikla"
 
 #: src/properties.rs:38
 msgid "Title"
-msgstr ""
+msgstr "Naslov"
 
 #: src/properties.rs:39
 msgid "Author"
@@ -349,11 +349,11 @@ msgstr "PDF izrađivač"
 
 #: src/properties.rs:46
 msgid "Created"
-msgstr ""
+msgstr "Kreirano"
 
 #: src/properties.rs:47
 msgid "Modified"
-msgstr ""
+msgstr "Izmijenjeno"
 
 #: src/properties.rs:48
 msgid "Pages"
@@ -385,11 +385,11 @@ msgstr "Šifrirano, otvara se bez lozinke"
 
 #: src/properties.rs:60
 msgid "None"
-msgstr ""
+msgstr "Nema"
 
 #: src/properties.rs:65
 msgid "Not Allowed"
-msgstr ""
+msgstr "Nije dozvoljeno"
 
 #: src/properties.rs:73
 msgid "Printing"
@@ -440,7 +440,7 @@ msgstr "{size}, ostale stranice se razlikuju"
 
 #: src/signatures.rs:344
 msgid "Clear"
-msgstr ""
+msgstr "Očisti"
 
 #: src/signatures.rs:356
 msgid "Sign with the mouse or the touchpad"
@@ -448,7 +448,7 @@ msgstr "Potpišite mišem ili touchpadom"
 
 #: src/signatures.rs:364
 msgid "Draw"
-msgstr ""
+msgstr "Nacrtaj"
 
 #: src/signatures.rs:381
 msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
@@ -464,7 +464,7 @@ msgstr "Lijevo se zadržavaju blijedi potezi i više sjenki papira. Desno ostaje
 
 #: src/signatures.rs:398
 msgid "Ink as in the picture"
-msgstr ""
+msgstr "Boja tinte kao na slici"
 
 #: src/signatures.rs:399
 msgid "Black ink"
@@ -476,11 +476,11 @@ msgstr "Plavo mastilo"
 
 #: src/signatures.rs:403
 msgid "Faint"
-msgstr ""
+msgstr "Blijedo"
 
 #: src/signatures.rs:405
 msgid "Dark"
-msgstr ""
+msgstr "Tamno"
 
 #: src/signatures.rs:416
 msgid "From a Picture"
@@ -496,7 +496,7 @@ msgstr "Na ovoj slici nije pronađeno mastilo. Pomjerite klizač ulijevo."
 
 #: src/signatures.rs:458
 msgid "Pictures"
-msgstr ""
+msgstr "Slike"
 
 #: src/signatures.rs:463
 msgid "Choose a Picture of a Signature"
@@ -505,11 +505,11 @@ msgstr "Odaberite sliku potpisa"
 #: src/signatures.rs:480 src/window/files.rs:420 src/window/files.rs:522
 #: src/window/files.rs:751
 msgid "_Cancel"
-msgstr ""
+msgstr "_Otkaži"
 
 #: src/signatures.rs:482 src/window/files.rs:753
 msgid "_Save"
-msgstr ""
+msgstr "_Spremi"
 
 #: src/signatures.rs:510
 msgid "New Signature"
@@ -525,7 +525,7 @@ msgstr "Ovdje ispustite datoteku ili odaberite jednu"
 
 #: src/window.rs:162
 msgid "Recent"
-msgstr ""
+msgstr "Nedavno"
 
 #: src/window.rs:188
 msgid "Thumbnails (F9)"
@@ -534,7 +534,7 @@ msgstr "Sličice (F9)"
 #: src/window.rs:200
 #, rust-format
 msgid "Open ({shortcut})"
-msgstr ""
+msgstr "Otvori ({shortcut})"
 
 #: src/window.rs:258
 msgid "Main Menu"
@@ -546,7 +546,7 @@ msgstr "Raspored stranice"
 
 #: src/window.rs:306
 msgid "Zoom"
-msgstr ""
+msgstr "Zumiranje"
 
 #: src/window.rs:317
 #, rust-format
@@ -555,7 +555,7 @@ msgstr "Idi na stranicu ({shortcut})"
 
 #: src/window.rs:330
 msgid "Search"
-msgstr ""
+msgstr "Pretraga"
 
 #: src/window.rs:342
 msgid "Previous Match (Shift+Enter)"
@@ -664,7 +664,7 @@ msgstr "“{name}” je izmijenio drugi program. Ponovnim učitavanjem odbacit �
 
 #: src/window/files.rs:335
 msgid "_Reload"
-msgstr ""
+msgstr "_Učitaj ponovo"
 
 #: src/window/files.rs:413
 msgid "File Changed on Disk"
@@ -677,12 +677,12 @@ msgstr "“{name}” je izmijenio drugi program nakon što je otvoren. Spremanje
 
 #: src/window/files.rs:421
 msgid "_Save Anyway"
-msgstr ""
+msgstr "_Ipak spremi"
 
 #: src/window/files.rs:514
 #, rust-format
 msgid "The password was incorrect. Enter the password for “{name}”."
-msgstr ""
+msgstr "Lozinka nije ispravna. Unesite lozinku za „{name}“."
 
 #: src/window/files.rs:518
 #, rust-format
@@ -695,7 +695,7 @@ msgstr "Potrebna je lozinka"
 
 #: src/window/files.rs:523
 msgid "_Unlock"
-msgstr ""
+msgstr "_Otključaj"
 
 #: src/window/files.rs:611
 #, rust-format
@@ -708,16 +708,16 @@ msgstr "Spremi kao"
 
 #: src/window/files.rs:744
 msgid "Save Changes?"
-msgstr ""
+msgstr "Spremiti promjene?"
 
 #: src/window/files.rs:746
 #, rust-format
 msgid "“{name}” has unsaved changes. Changes that aren't saved will be lost."
-msgstr ""
+msgstr "„{name}“ ima nespremljene promjene. Promjene koje nisu spremljene bit će izgubljene."
 
 #: src/window/files.rs:752
 msgid "_Discard"
-msgstr ""
+msgstr "_Odbaci"
 
 #: src/window/files.rs:774
 msgid "Open PDF"
@@ -726,7 +726,7 @@ msgstr "Otvori PDF"
 #: src/window/markup.rs:36
 #, rust-format
 msgid "{tool}: marks the selected text, and what is selected from now on ({shortcut} marks once)"
-msgstr ""
+msgstr "{tool}: označava odabrani tekst i sve što od sada odaberete ({shortcut} označava samo jednom)"
 
 #: src/window/markup.rs:50
 msgid "Draw freehand"
@@ -746,19 +746,19 @@ msgstr "Crtaj linije"
 
 #: src/window/markup.rs:54
 msgid "Add text: click where it goes"
-msgstr ""
+msgstr "Dodaj tekst: kliknite gdje ga želite postaviti"
 
 #: src/window/markup.rs:55
 msgid "Add notes: click where one goes"
-msgstr ""
+msgstr "Dodaj bilješke: kliknite gdje želite postaviti bilješku"
 
 #: src/window/markup.rs:98
 msgid "Color"
-msgstr ""
+msgstr "Boja"
 
 #: src/window/markup.rs:113
 msgid "Signature"
-msgstr ""
+msgstr "Potpis"
 
 #: src/window/markup.rs:121
 msgid "Sans-serif"
@@ -774,15 +774,15 @@ msgstr "Monospace"
 
 #: src/window/markup.rs:149
 msgid "Font"
-msgstr ""
+msgstr "Font"
 
 #: src/window/markup.rs:153
 msgid "Bold"
-msgstr ""
+msgstr "Podebljano"
 
 #: src/window/markup.rs:157
 msgid "Italic"
-msgstr ""
+msgstr "Kurziv"
 
 #: src/window/markup.rs:167
 msgid "Text size in points"
@@ -846,95 +846,95 @@ msgstr "Nije moguće promijeniti bilješku: {error}"
 #, rust-format
 msgid "Undo Rotate Page"
 msgid_plural "Undo Rotate {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Poništi rotiranje {n} stranice"
+msgstr[1] "Poništi rotiranje {n} stranice"
+msgstr[2] "Poništi rotiranje {n} stranica"
 
 #: src/window/pages.rs:30
 #, rust-format
 msgid "Undo Delete Page"
 msgid_plural "Undo Delete {n} Pages"
-msgstr[0] ""
-msgstr[1] "PoniЕЎti brisanje {n} stranice"
-msgstr[2] "PoniЕЎti brisanje {n} stranica"
+msgstr[0] "Poništi brisanje {n} stranice"
+msgstr[1] "Poništi brisanje {n} stranice"
+msgstr[2] "Poništi brisanje {n} stranica"
 
 #: src/window/pages.rs:32
 #, rust-format
 msgid "Undo Move Page"
 msgid_plural "Undo Move {n} Pages"
-msgstr[0] "PoniЕЎti premjeЕЎtanje stranice"
-msgstr[1] "PoniЕЎti premjeЕЎtanje {n} stranice"
-msgstr[2] "PoniЕЎti premjeЕЎtanje {n} stranica"
+msgstr[0] "Poništi premještanje {n} stranice"
+msgstr[1] "Poništi premještanje {n} stranice"
+msgstr[2] "Poništi premještanje {n} stranica"
 
 #: src/window/pages.rs:34
 #, rust-format
 msgid "Undo Insert Page"
 msgid_plural "Undo Insert {n} Pages"
-msgstr[0] "PoniЕЎti umetanje stranice"
-msgstr[1] "PoniЕЎti umetanje {n} stranice"
-msgstr[2] "PoniЕЎti umetanje {n} stranica"
+msgstr[0] "Poništi umetanje {n} stranice"
+msgstr[1] "Poništi umetanje {n} stranice"
+msgstr[2] "Poništi umetanje {n} stranica"
 
 #: src/window/pages.rs:36
 msgid "Undo Highlight"
-msgstr "PoniЕЎti isticanje"
+msgstr "Poništi isticanje"
 
 #: src/window/pages.rs:37
 msgid "Undo Underline"
-msgstr "PoniЕЎti podcrtavanje"
+msgstr "Poništi podcrtavanje"
 
 #: src/window/pages.rs:38
 msgid "Undo Strikethrough"
-msgstr "PoniЕЎti precrtavanje"
+msgstr "Poništi precrtavanje"
 
 #: src/window/pages.rs:39
 msgid "Undo Drawing"
-msgstr "PoniЕЎti crtanje"
+msgstr "Poništi crtanje"
 
 #: src/window/pages.rs:40
 msgid "Undo Rectangle"
-msgstr "PoniЕЎti pravougaonik"
+msgstr "Poništi pravougaonik"
 
 #: src/window/pages.rs:41
 msgid "Undo Ellipse"
-msgstr "PoniЕЎti elipsu"
+msgstr "Poništi elipsu"
 
 #: src/window/pages.rs:42
 msgid "Undo Line"
-msgstr ""
+msgstr "Poništi liniju"
 
 #: src/window/pages.rs:43
 msgid "Undo Note"
-msgstr "PoniЕЎti biljeЕЎku"
+msgstr "Poništi bilješku"
 
 #: src/window/pages.rs:44
 msgid "Undo Text Box"
-msgstr "PoniЕЎti tekstualno polje"
+msgstr "Poništi tekstualno polje"
 
 #: src/window/pages.rs:45
 msgid "Undo Add Annotation"
-msgstr "PoniЕЎti dodavanje anotacije"
+msgstr "Poništi dodavanje anotacije"
 
 #: src/window/pages.rs:46
 msgid "Undo Delete Annotation"
-msgstr "PoniЕЎti brisanje anotacije"
+msgstr "Poništi brisanje anotacije"
 
 #: src/window/pages.rs:47
 msgid "Undo Change Annotation"
-msgstr "PoniЕЎti promjenu anotacije"
+msgstr "Poništi promjenu anotacije"
 
 #: src/window/pages.rs:48
 msgid "Undo Fill In Field"
-msgstr "PoniЕЎti popunjavanje polja"
+msgstr "Poništi popunjavanje polja"
 
 #: src/window/pages.rs:49
 msgid "Undo Reset Form"
-msgstr "PoniЕЎti resetovanje obrasca"
+msgstr "Poništi resetovanje obrasca"
 
 #: src/window/pages.rs:57
 #, rust-format
 msgid "Redo Rotate Page"
 msgid_plural "Redo Rotate {n} Pages"
-msgstr[0] "Ponovi rotiranje stranice"
+msgstr[0] "Ponovi rotiranje {n} stranice"
 msgstr[1] "Ponovi rotiranje {n} stranice"
 msgstr[2] "Ponovi rotiranje {n} stranica"
 
@@ -942,7 +942,7 @@ msgstr[2] "Ponovi rotiranje {n} stranica"
 #, rust-format
 msgid "Redo Delete Page"
 msgid_plural "Redo Delete {n} Pages"
-msgstr[0] "Ponovi brisanje stranice"
+msgstr[0] "Ponovi brisanje {n} stranice"
 msgstr[1] "Ponovi brisanje {n} stranice"
 msgstr[2] "Ponovi brisanje {n} stranica"
 
@@ -950,7 +950,7 @@ msgstr[2] "Ponovi brisanje {n} stranica"
 #, rust-format
 msgid "Redo Move Page"
 msgid_plural "Redo Move {n} Pages"
-msgstr[0] "Ponovi premještanje stranice"
+msgstr[0] "Ponovi premještanje {n} stranice"
 msgstr[1] "Ponovi premještanje {n} stranice"
 msgstr[2] "Ponovi premještanje {n} stranica"
 
@@ -958,7 +958,7 @@ msgstr[2] "Ponovi premještanje {n} stranica"
 #, rust-format
 msgid "Redo Insert Page"
 msgid_plural "Redo Insert {n} Pages"
-msgstr[0] "Ponovi umetanje stranice"
+msgstr[0] "Ponovi umetanje {n} stranice"
 msgstr[1] "Ponovi umetanje {n} stranice"
 msgstr[2] "Ponovi umetanje {n} stranica"
 
@@ -988,7 +988,7 @@ msgstr "Ponovi elipsu"
 
 #: src/window/pages.rs:72
 msgid "Redo Line"
-msgstr ""
+msgstr "Ponovi liniju"
 
 #: src/window/pages.rs:73
 msgid "Redo Note"
@@ -1021,12 +1021,12 @@ msgstr "Ponovi poništavanje obrasca"
 #: src/window/pages.rs:119
 #, rust-format
 msgid "page {page}"
-msgstr ""
+msgstr "stranica {page}"
 
 #: src/window/pages.rs:131
 #, rust-format
 msgid "pages {pages}"
-msgstr ""
+msgstr "stranice {pages}"
 
 #: src/window/pages.rs:199
 #, rust-format

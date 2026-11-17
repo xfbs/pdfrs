@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 21:37\n"
+"PO-Revision-Date: 2026-11-17 22:41\n"
 "Last-Translator: \n"
 "Language-Team: Norwegian\n"
 "Language: no_NO\n"
@@ -45,7 +45,7 @@ msgstr "lopdf (lagring)"
 
 #: src/main.rs:177
 msgid "Built with"
-msgstr ""
+msgstr "Laget med"
 
 #: src/main.rs:207
 #, rust-format
@@ -63,7 +63,7 @@ msgstr "Åpne …"
 
 #: src/main.rs:227 src/window.rs:213
 msgid "Save"
-msgstr ""
+msgstr "Lagre"
 
 #: src/main.rs:228 src/window.rs:214
 msgid "Save As…"
@@ -79,7 +79,7 @@ msgstr "Skriv ut …"
 
 #: src/main.rs:233 src/properties.rs:201 src/window.rs:220
 msgid "Properties"
-msgstr ""
+msgstr "Egenskaper"
 
 #: src/main.rs:235
 msgid "Close Window"
@@ -95,7 +95,7 @@ msgstr "Gjør om"
 
 #: src/main.rs:244
 msgid "Copy"
-msgstr ""
+msgstr "Kopier"
 
 #: src/main.rs:245
 msgid "Select All"
@@ -175,7 +175,7 @@ msgstr "Innhold"
 
 #: src/main.rs:279 src/window.rs:796 src/window/markup.rs:200
 msgid "Markup"
-msgstr ""
+msgstr "Markering"
 
 #: src/main.rs:284
 msgid "Previous Page"
@@ -199,11 +199,11 @@ msgstr "Gå til side …"
 
 #: src/main.rs:293
 msgid "Back"
-msgstr ""
+msgstr "Tilbake"
 
 #: src/main.rs:294
 msgid "Forward"
-msgstr ""
+msgstr "Fremover"
 
 #: src/main.rs:300 src/window.rs:226
 msgid "Rotate Left"
@@ -219,11 +219,11 @@ msgstr "Vis markeringsverktøylinje"
 
 #: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
-msgstr ""
+msgstr "Utheving"
 
 #: src/main.rs:306 src/markup_list.rs:44 src/window/markup.rs:28
 msgid "Underline"
-msgstr ""
+msgstr "Understreking"
 
 #: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
@@ -251,7 +251,7 @@ msgstr "Vis"
 
 #: src/main.rs:319
 msgid "Go"
-msgstr ""
+msgstr "Gå"
 
 #: src/main.rs:320
 msgid "Tools"
@@ -263,7 +263,7 @@ msgstr "Hjelp"
 
 #: src/markup_list.rs:47
 msgid "Drawing"
-msgstr ""
+msgstr "Tegning"
 
 #: src/markup_list.rs:48
 msgid "Rectangle"
@@ -275,27 +275,27 @@ msgstr "Ellipse"
 
 #: src/markup_list.rs:50
 msgid "Line"
-msgstr ""
+msgstr "Linje"
 
 #: src/markup_list.rs:51 src/markup_list.rs:56
 msgid "Note"
-msgstr ""
+msgstr "Notat"
 
 #: src/markup_list.rs:52 src/markup_list.rs:57
 msgid "Text"
-msgstr ""
+msgstr "Tekst"
 
 #: src/markup_list.rs:53 src/markup_list.rs:58
 msgid "Stamp"
-msgstr ""
+msgstr "Stempel"
 
 #: src/markup_list.rs:59
 msgid "Shape"
-msgstr ""
+msgstr "Figur"
 
 #: src/markup_list.rs:60
 msgid "Attachment"
-msgstr ""
+msgstr "Vedlegg"
 
 #: src/markup_list.rs:96
 msgid "No Markup"
@@ -323,7 +323,7 @@ msgstr "Mappe"
 
 #: src/properties.rs:38
 msgid "Title"
-msgstr ""
+msgstr "Tittel"
 
 #: src/properties.rs:39
 msgid "Author"
@@ -385,7 +385,7 @@ msgstr "Kryptert, åpnes uten passord"
 
 #: src/properties.rs:60
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 #: src/properties.rs:65
 msgid "Not Allowed"
@@ -440,7 +440,7 @@ msgstr "{size}, andre sider avviker"
 
 #: src/signatures.rs:344
 msgid "Clear"
-msgstr ""
+msgstr "Tøm"
 
 #: src/signatures.rs:356
 msgid "Sign with the mouse or the touchpad"
@@ -448,7 +448,7 @@ msgstr "Signer med musen eller pekeplaten"
 
 #: src/signatures.rs:364
 msgid "Draw"
-msgstr ""
+msgstr "Tegn"
 
 #: src/signatures.rs:381
 msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
@@ -464,7 +464,7 @@ msgstr "Til venstre beholdes svake streker og mer av papirets skygger. Til høyr
 
 #: src/signatures.rs:398
 msgid "Ink as in the picture"
-msgstr ""
+msgstr "Blekk som på bildet"
 
 #: src/signatures.rs:399
 msgid "Black ink"
@@ -476,15 +476,15 @@ msgstr "Blått blekk"
 
 #: src/signatures.rs:403
 msgid "Faint"
-msgstr ""
+msgstr "Svak"
 
 #: src/signatures.rs:405
 msgid "Dark"
-msgstr ""
+msgstr "Mørk"
 
 #: src/signatures.rs:416
 msgid "From a Picture"
-msgstr ""
+msgstr "Fra et bilde"
 
 #: src/signatures.rs:439
 msgid "Move the slider until the paper is gone and the strokes are whole."
@@ -496,7 +496,7 @@ msgstr "Fant ikke noe blekk i dette bildet. Flytt glidebryteren mot venstre."
 
 #: src/signatures.rs:458
 msgid "Pictures"
-msgstr ""
+msgstr "Bilder"
 
 #: src/signatures.rs:463
 msgid "Choose a Picture of a Signature"
@@ -525,7 +525,7 @@ msgstr "Slipp en fil her eller velg en"
 
 #: src/window.rs:162
 msgid "Recent"
-msgstr ""
+msgstr "Nylige"
 
 #: src/window.rs:188
 msgid "Thumbnails (F9)"
@@ -542,11 +542,11 @@ msgstr "Hovedmeny"
 
 #: src/window.rs:285
 msgid "Page Layout"
-msgstr ""
+msgstr "Sideoppsett"
 
 #: src/window.rs:306
 msgid "Zoom"
-msgstr ""
+msgstr "Zoom"
 
 #: src/window.rs:317
 #, rust-format
@@ -555,7 +555,7 @@ msgstr "Gå til side ({shortcut})"
 
 #: src/window.rs:330
 msgid "Search"
-msgstr ""
+msgstr "Søk"
 
 #: src/window.rs:342
 msgid "Previous Match (Shift+Enter)"
@@ -568,7 +568,7 @@ msgstr "Neste treff (Enter)"
 #: src/window.rs:371
 #, rust-format
 msgid "Search ({shortcut})"
-msgstr ""
+msgstr "Søk ({shortcut})"
 
 #: src/window.rs:900
 #, rust-format
@@ -585,7 +585,7 @@ msgstr "Kunne ikke åpne lenken: {error}"
 #: src/window.rs:960
 #, rust-format
 msgid "Ctrl+{key}"
-msgstr ""
+msgstr "Ctrl+{key}"
 
 #: src/window/actions.rs:103
 #, rust-format
@@ -605,14 +605,14 @@ msgstr[1] "{n} sider"
 #: src/window/actions.rs:111
 #, rust-format
 msgid "of {pages}"
-msgstr ""
+msgstr "av {pages}"
 
 #. Translators: follows the box with a printed page number:
 #. "iv (4 of 120)".
 #: src/window/actions.rs:511
 #, rust-format
 msgid "({position} of {pages})"
-msgstr ""
+msgstr "({position} av {pages})"
 
 #: src/window/files.rs:8
 #, rust-format
@@ -662,7 +662,7 @@ msgstr "«{name}» ble endret av et annet program. Hvis du laster inn på nytt, 
 
 #: src/window/files.rs:335
 msgid "_Reload"
-msgstr ""
+msgstr "_Last inn på nytt"
 
 #: src/window/files.rs:413
 msgid "File Changed on Disk"
@@ -675,7 +675,7 @@ msgstr "«{name}» ble endret av et annet program etter at den ble åpnet. Hvis 
 
 #: src/window/files.rs:421
 msgid "_Save Anyway"
-msgstr ""
+msgstr "_Lagre likevel"
 
 #: src/window/files.rs:514
 #, rust-format
@@ -693,7 +693,7 @@ msgstr "Passord kreves"
 
 #: src/window/files.rs:523
 msgid "_Unlock"
-msgstr ""
+msgstr "_Lås opp"
 
 #: src/window/files.rs:611
 #, rust-format
@@ -702,7 +702,7 @@ msgstr "Kunne ikke skrive ut: {error}"
 
 #: src/window/files.rs:656
 msgid "Save As"
-msgstr ""
+msgstr "Lagre som"
 
 #: src/window/files.rs:744
 msgid "Save Changes?"
@@ -715,7 +715,7 @@ msgstr "«{name}» har ulagrede endringer. Endringer som ikke er lagret, går ta
 
 #: src/window/files.rs:752
 msgid "_Discard"
-msgstr ""
+msgstr "_Forkast"
 
 #: src/window/files.rs:774
 msgid "Open PDF"
@@ -724,7 +724,7 @@ msgstr "Åpne PDF"
 #: src/window/markup.rs:36
 #, rust-format
 msgid "{tool}: marks the selected text, and what is selected from now on ({shortcut} marks once)"
-msgstr ""
+msgstr "{tool}: markerer den valgte teksten og alt som velges fra nå av ({shortcut} markerer én gang)"
 
 #: src/window/markup.rs:50
 msgid "Draw freehand"
@@ -744,23 +744,23 @@ msgstr "Tegn linjer"
 
 #: src/window/markup.rs:54
 msgid "Add text: click where it goes"
-msgstr ""
+msgstr "Legg til tekst: klikk der den skal stå"
 
 #: src/window/markup.rs:55
 msgid "Add notes: click where one goes"
-msgstr ""
+msgstr "Legg til notater: klikk der et notat skal stå"
 
 #: src/window/markup.rs:98
 msgid "Color"
-msgstr ""
+msgstr "Farge"
 
 #: src/window/markup.rs:113
 msgid "Signature"
-msgstr ""
+msgstr "Signatur"
 
 #: src/window/markup.rs:121
 msgid "Sans-serif"
-msgstr ""
+msgstr "Sans-serif"
 
 #: src/window/markup.rs:122
 msgid "Serif"
@@ -870,39 +870,39 @@ msgstr[1] "Angre innsetting av {n} sider"
 
 #: src/window/pages.rs:36
 msgid "Undo Highlight"
-msgstr ""
+msgstr "Angre utheving"
 
 #: src/window/pages.rs:37
 msgid "Undo Underline"
-msgstr ""
+msgstr "Angre understreking"
 
 #: src/window/pages.rs:38
 msgid "Undo Strikethrough"
-msgstr ""
+msgstr "Angre gjennomstreking"
 
 #: src/window/pages.rs:39
 msgid "Undo Drawing"
-msgstr ""
+msgstr "Angre tegning"
 
 #: src/window/pages.rs:40
 msgid "Undo Rectangle"
-msgstr ""
+msgstr "Angre rektangel"
 
 #: src/window/pages.rs:41
 msgid "Undo Ellipse"
-msgstr ""
+msgstr "Angre Ellipse"
 
 #: src/window/pages.rs:42
 msgid "Undo Line"
-msgstr ""
+msgstr "Angre Linje"
 
 #: src/window/pages.rs:43
 msgid "Undo Note"
-msgstr ""
+msgstr "Angre Notat"
 
 #: src/window/pages.rs:44
 msgid "Undo Text Box"
-msgstr ""
+msgstr "Angre Tekstboks"
 
 #: src/window/pages.rs:45
 msgid "Undo Add Annotation"
@@ -918,7 +918,7 @@ msgstr "Angre endring av merknad"
 
 #: src/window/pages.rs:48
 msgid "Undo Fill In Field"
-msgstr ""
+msgstr "Angre Utfylling av Felt"
 
 #: src/window/pages.rs:49
 msgid "Undo Reset Form"
@@ -954,7 +954,7 @@ msgstr[1] "Gjør om innsetting av {n} sider"
 
 #: src/window/pages.rs:66
 msgid "Redo Highlight"
-msgstr ""
+msgstr "Gjør om Utheving"
 
 #: src/window/pages.rs:67
 msgid "Redo Underline"
@@ -1011,12 +1011,12 @@ msgstr "Gjør tilbakestilling av skjema om igjen"
 #: src/window/pages.rs:119
 #, rust-format
 msgid "page {page}"
-msgstr ""
+msgstr "side {page}"
 
 #: src/window/pages.rs:131
 #, rust-format
 msgid "pages {pages}"
-msgstr ""
+msgstr "sider {pages}"
 
 #: src/window/pages.rs:199
 #, rust-format

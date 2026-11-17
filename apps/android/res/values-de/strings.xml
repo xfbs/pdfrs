@@ -35,6 +35,7 @@
     <string name="menu_properties">Eigenschaften</string>
     <string name="menu_highlight_fields">Formularfelder hervorheben</string>
     <string name="menu_reset_form">Formular zurücksetzen</string>
+    <string name="menu_discard_changes">Änderungen verwerfen</string>
     <string name="menu_settings">Einstellungen</string>
     <!-- Closes the document and returns to the start screen. -->
     <string name="menu_close">Schließen</string>
@@ -159,10 +160,13 @@
     <string name="delete_pages">Seiten löschen</string>
     <string name="unsaved_title">Änderungen speichern?</string>
     <string name="unsaved_text">Die Änderungen an den Seiten von %1$s gehen verloren, wenn sie nicht gespeichert werden.</string>
+    <string name="discard_title">Änderungen verwerfen?</string>
+    <string name="discard_text">Die Änderungen an %1$s seit dem letzten Speichern gehen verloren.</string>
     <string name="saving">Wird gespeichert…</string>
     <!-- With what went wrong, as the system or the PDF library put it (in English). -->
     <string name="could_not_save">Speichern nicht möglich: %1$s</string>
     <string name="could_not_save_there">Dort konnte nicht gespeichert werden. Dies ist die bearbeitete Kopie.</string>
+    <string name="draft_not_restored">Die ungespeicherten Änderungen an %1$s konnten nicht wiederhergestellt werden.</string>
     <!-- Sharing and printing. -->
     <string name="could_not_share">Diese Datei konnte nicht geteilt werden</string>
     <string name="preparing_to_print">Drucken wird vorbereitet…</string>

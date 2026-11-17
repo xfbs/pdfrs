@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 21:37\n"
+"PO-Revision-Date: 2026-11-17 22:41\n"
 "Last-Translator: \n"
 "Language-Team: Japanese\n"
 "Language: ja_JP\n"
@@ -27,7 +27,7 @@ msgstr "Specto は、{apache} または {mit} のいずれかのもとでライ�
 
 #: src/main.rs:163
 msgid "The Specto contributors"
-msgstr ""
+msgstr "Specto の貢献者"
 
 #: src/main.rs:164
 msgid "© 2026 The Specto contributors"
@@ -36,16 +36,16 @@ msgstr "© 2026 Specto のコントリビューター"
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:173
 msgid "hayro (rendering)"
-msgstr ""
+msgstr "hayro (レンダリング)"
 
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:175
 msgid "lopdf (saving)"
-msgstr ""
+msgstr "lopdf (保存)"
 
 #: src/main.rs:177
 msgid "Built with"
-msgstr ""
+msgstr "使用ライブラリ"
 
 #: src/main.rs:207
 #, rust-format
@@ -63,7 +63,7 @@ msgstr "開く…"
 
 #: src/main.rs:227 src/window.rs:213
 msgid "Save"
-msgstr ""
+msgstr "保存"
 
 #: src/main.rs:228 src/window.rs:214
 msgid "Save As…"
@@ -79,7 +79,7 @@ msgstr "印刷…"
 
 #: src/main.rs:233 src/properties.rs:201 src/window.rs:220
 msgid "Properties"
-msgstr ""
+msgstr "プロパティ"
 
 #: src/main.rs:235
 msgid "Close Window"
@@ -175,7 +175,7 @@ msgstr "目次"
 
 #: src/main.rs:279 src/window.rs:796 src/window/markup.rs:200
 msgid "Markup"
-msgstr ""
+msgstr "マークアップ"
 
 #: src/main.rs:284
 msgid "Previous Page"
@@ -199,11 +199,11 @@ msgstr "ページへ移動…"
 
 #: src/main.rs:293
 msgid "Back"
-msgstr ""
+msgstr "戻る"
 
 #: src/main.rs:294
 msgid "Forward"
-msgstr ""
+msgstr "進む"
 
 #: src/main.rs:300 src/window.rs:226
 msgid "Rotate Left"
@@ -219,11 +219,11 @@ msgstr "マークアップツールバーを表示"
 
 #: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
-msgstr ""
+msgstr "ハイライト"
 
 #: src/main.rs:306 src/markup_list.rs:44 src/window/markup.rs:28
 msgid "Underline"
-msgstr ""
+msgstr "下線"
 
 #: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
@@ -251,7 +251,7 @@ msgstr "表示"
 
 #: src/main.rs:319
 msgid "Go"
-msgstr ""
+msgstr "移動"
 
 #: src/main.rs:320
 msgid "Tools"
@@ -263,11 +263,11 @@ msgstr "ヘルプ"
 
 #: src/markup_list.rs:47
 msgid "Drawing"
-msgstr ""
+msgstr "描画"
 
 #: src/markup_list.rs:48
 msgid "Rectangle"
-msgstr ""
+msgstr "四角形"
 
 #: src/markup_list.rs:49
 msgid "Ellipse"
@@ -275,23 +275,23 @@ msgstr "楕円"
 
 #: src/markup_list.rs:50
 msgid "Line"
-msgstr ""
+msgstr "線"
 
 #: src/markup_list.rs:51 src/markup_list.rs:56
 msgid "Note"
-msgstr ""
+msgstr "ノート"
 
 #: src/markup_list.rs:52 src/markup_list.rs:57
 msgid "Text"
-msgstr ""
+msgstr "テキスト"
 
 #: src/markup_list.rs:53 src/markup_list.rs:58
 msgid "Stamp"
-msgstr ""
+msgstr "スタンプ"
 
 #: src/markup_list.rs:59
 msgid "Shape"
-msgstr ""
+msgstr "図形"
 
 #: src/markup_list.rs:60
 msgid "Attachment"
@@ -299,7 +299,7 @@ msgstr "添付ファイル"
 
 #: src/markup_list.rs:96
 msgid "No Markup"
-msgstr ""
+msgstr "マークアップなし"
 
 #: src/markup_list.rs:97
 msgid "Highlights, drawings and notes are listed here"
@@ -307,11 +307,11 @@ msgstr "ハイライト、描画、メモがここに一覧表示されます"
 
 #: src/print.rs:135
 msgid "printing failed"
-msgstr ""
+msgstr "印刷に失敗しました"
 
 #: src/print.rs:267
 msgid "couldn't open the file"
-msgstr ""
+msgstr "ファイルを開けませんでした"
 
 #: src/properties.rs:36
 msgid "File Name"
@@ -323,7 +323,7 @@ msgstr "フォルダー"
 
 #: src/properties.rs:38
 msgid "Title"
-msgstr ""
+msgstr "タイトル"
 
 #: src/properties.rs:39
 msgid "Author"
@@ -385,7 +385,7 @@ msgstr "暗号化されていますが、パスワードなしで開けます"
 
 #: src/properties.rs:60
 msgid "None"
-msgstr ""
+msgstr "なし"
 
 #: src/properties.rs:65
 msgid "Not Allowed"
@@ -440,31 +440,31 @@ msgstr "{size}(ほかのページは異なります)"
 
 #: src/signatures.rs:344
 msgid "Clear"
-msgstr ""
+msgstr "クリア"
 
 #: src/signatures.rs:356
 msgid "Sign with the mouse or the touchpad"
-msgstr ""
+msgstr "マウスまたはタッチパッドで署名します"
 
 #: src/signatures.rs:364
 msgid "Draw"
-msgstr ""
+msgstr "描画"
 
 #: src/signatures.rs:381
 msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
-msgstr ""
+msgstr "白い紙に署名して写真を撮り、その写真を選択してください。紙の部分は取り除かれ、インクだけが残ります。"
 
 #: src/signatures.rs:388
 msgid "Choose Picture…"
-msgstr ""
+msgstr "画像を選択…"
 
 #: src/signatures.rs:395
 msgid "To the left, faint strokes are kept, and more of the paper's shadows. To the right, only what is dark."
-msgstr ""
+msgstr "左にするほど薄い線も残り、紙の影も多く残ります。右にするほど濃い部分だけが残ります。"
 
 #: src/signatures.rs:398
 msgid "Ink as in the picture"
-msgstr ""
+msgstr "インクの色を写真のままにする"
 
 #: src/signatures.rs:399
 msgid "Black ink"
@@ -476,11 +476,11 @@ msgstr "青インク"
 
 #: src/signatures.rs:403
 msgid "Faint"
-msgstr ""
+msgstr "薄い"
 
 #: src/signatures.rs:405
 msgid "Dark"
-msgstr ""
+msgstr "濃い"
 
 #: src/signatures.rs:416
 msgid "From a Picture"
@@ -488,11 +488,11 @@ msgstr "画像から作成"
 
 #: src/signatures.rs:439
 msgid "Move the slider until the paper is gone and the strokes are whole."
-msgstr ""
+msgstr "紙が消えて線がすべて残るまでスライダーを動かしてください。"
 
 #: src/signatures.rs:441
 msgid "No ink found in this picture. Move the slider to the left."
-msgstr ""
+msgstr "この画像にはインクが見つかりません。スライダーを左に動かしてください。"
 
 #: src/signatures.rs:458
 msgid "Pictures"
@@ -505,11 +505,11 @@ msgstr "署名の画像を選択"
 #: src/signatures.rs:480 src/window/files.rs:420 src/window/files.rs:522
 #: src/window/files.rs:751
 msgid "_Cancel"
-msgstr ""
+msgstr "キャンセル(_C)"
 
 #: src/signatures.rs:482 src/window/files.rs:753
 msgid "_Save"
-msgstr ""
+msgstr "保存(_S)"
 
 #: src/signatures.rs:510
 msgid "New Signature"
@@ -521,11 +521,11 @@ msgstr "PDFを開く"
 
 #: src/window.rs:149
 msgid "Drop a file here or choose one"
-msgstr ""
+msgstr "ここにファイルをドロップするか、ファイルを選択してください"
 
 #: src/window.rs:162
 msgid "Recent"
-msgstr ""
+msgstr "最近使用したファイル"
 
 #: src/window.rs:188
 msgid "Thumbnails (F9)"
@@ -534,7 +534,7 @@ msgstr "サムネイル (F9)"
 #: src/window.rs:200
 #, rust-format
 msgid "Open ({shortcut})"
-msgstr ""
+msgstr "開く ({shortcut})"
 
 #: src/window.rs:258
 msgid "Main Menu"
@@ -542,11 +542,11 @@ msgstr "メインメニュー"
 
 #: src/window.rs:285
 msgid "Page Layout"
-msgstr ""
+msgstr "ページレイアウト"
 
 #: src/window.rs:306
 msgid "Zoom"
-msgstr ""
+msgstr "ズーム"
 
 #: src/window.rs:317
 #, rust-format
@@ -555,7 +555,7 @@ msgstr "ページへ移動 ({shortcut})"
 
 #: src/window.rs:330
 msgid "Search"
-msgstr ""
+msgstr "検索"
 
 #: src/window.rs:342
 msgid "Previous Match (Shift+Enter)"
@@ -628,20 +628,20 @@ msgstr "PDF ドキュメント"
 
 #: src/window/files.rs:54
 msgid "reading failed"
-msgstr ""
+msgstr "読み込みに失敗しました"
 
 #: src/window/files.rs:98 src/window/files.rs:102
 msgid "saving failed"
-msgstr ""
+msgstr "保存に失敗しました"
 
 #: src/window/files.rs:175
 msgid "the document's password is needed"
-msgstr ""
+msgstr "ドキュメントのパスワードが必要です"
 
 #: src/window/files.rs:177
 #, rust-format
 msgid "{app} can't save this document correctly yet"
-msgstr ""
+msgstr "{app} はまだこのドキュメントを正しく保存できません"
 
 #: src/window/files.rs:249 src/window/pages.rs:405
 #, rust-format
@@ -660,7 +660,7 @@ msgstr "「{name}」は別のプログラムによって変更されました。
 
 #: src/window/files.rs:335
 msgid "_Reload"
-msgstr ""
+msgstr "再読み込み(_R)"
 
 #: src/window/files.rs:413
 msgid "File Changed on Disk"
@@ -673,7 +673,7 @@ msgstr "「{name}」は、開かれた後に別のプログラムによって変
 
 #: src/window/files.rs:421
 msgid "_Save Anyway"
-msgstr ""
+msgstr "このまま保存(_S)"
 
 #: src/window/files.rs:514
 #, rust-format
@@ -691,7 +691,7 @@ msgstr "パスワードが必要です"
 
 #: src/window/files.rs:523
 msgid "_Unlock"
-msgstr ""
+msgstr "ロック解除(_U)"
 
 #: src/window/files.rs:611
 #, rust-format
@@ -713,7 +713,7 @@ msgstr "「{name}」には未保存の変更があります。保存しなかっ
 
 #: src/window/files.rs:752
 msgid "_Discard"
-msgstr ""
+msgstr "破棄(_D)"
 
 #: src/window/files.rs:774
 msgid "Open PDF"
@@ -722,31 +722,31 @@ msgstr "PDF を開く"
 #: src/window/markup.rs:36
 #, rust-format
 msgid "{tool}: marks the selected text, and what is selected from now on ({shortcut} marks once)"
-msgstr ""
+msgstr "{tool}: 選択中のテキストと、これ以降に選択するテキストをマークします ({shortcut} で一度だけマーク)"
 
 #: src/window/markup.rs:50
 msgid "Draw freehand"
-msgstr ""
+msgstr "フリーハンドで描画"
 
 #: src/window/markup.rs:51
 msgid "Draw rectangles"
-msgstr ""
+msgstr "四角形を描画"
 
 #: src/window/markup.rs:52
 msgid "Draw ellipses"
-msgstr ""
+msgstr "楕円を描画"
 
 #: src/window/markup.rs:53
 msgid "Draw lines"
-msgstr ""
+msgstr "直線を描画"
 
 #: src/window/markup.rs:54
 msgid "Add text: click where it goes"
-msgstr ""
+msgstr "テキストを追加: 配置する場所をクリックしてください"
 
 #: src/window/markup.rs:55
 msgid "Add notes: click where one goes"
-msgstr ""
+msgstr "ノートを追加: 配置する場所をクリックしてください"
 
 #: src/window/markup.rs:98
 msgid "Color"
@@ -814,53 +814,53 @@ msgstr "黒"
 
 #: src/window/markup.rs:556
 msgid "Select the text to mark first"
-msgstr ""
+msgstr "先にマークするテキストを選択してください"
 
 #: src/window/markup.rs:602
 msgid "Place this signature: click where it goes"
-msgstr ""
+msgstr "この署名を配置: 配置する場所をクリックしてください"
 
 #: src/window/markup.rs:614
 msgid "Delete this signature"
-msgstr ""
+msgstr "この署名を削除"
 
 #: src/window/markup.rs:630
 msgid "New Signature…"
-msgstr ""
+msgstr "新しい署名…"
 
 #: src/window/markup.rs:659
 msgid "Click where the signature goes"
-msgstr ""
+msgstr "署名を配置する場所をクリックしてください"
 
 #: src/window/markup.rs:1544 src/window/markup.rs:1571
 #: src/window/markup.rs:1664 src/window/markup.rs:1717
 #, rust-format
 msgid "Couldn't change the annotation: {error}"
-msgstr ""
+msgstr "注釈を変更できませんでした: {error}"
 
 #: src/window/pages.rs:27
 #, rust-format
 msgid "Undo Rotate Page"
 msgid_plural "Undo Rotate {n} Pages"
-msgstr[0] ""
+msgstr[0] "{n} ページの回転を元に戻す"
 
 #: src/window/pages.rs:30
 #, rust-format
 msgid "Undo Delete Page"
 msgid_plural "Undo Delete {n} Pages"
-msgstr[0] ""
+msgstr[0] "{n} ページの削除を元に戻す"
 
 #: src/window/pages.rs:32
 #, rust-format
 msgid "Undo Move Page"
 msgid_plural "Undo Move {n} Pages"
-msgstr[0] ""
+msgstr[0] "{n} ページの移動を元に戻す"
 
 #: src/window/pages.rs:34
 #, rust-format
 msgid "Undo Insert Page"
 msgid_plural "Undo Insert {n} Pages"
-msgstr[0] ""
+msgstr[0] "{n} ページの挿入を元に戻す"
 
 #: src/window/pages.rs:36
 msgid "Undo Highlight"
@@ -1001,12 +1001,12 @@ msgstr "フォームのリセットをやり直す"
 #: src/window/pages.rs:119
 #, rust-format
 msgid "page {page}"
-msgstr ""
+msgstr "{page} ページ"
 
 #: src/window/pages.rs:131
 #, rust-format
 msgid "pages {pages}"
-msgstr ""
+msgstr "{pages} ページ"
 
 #: src/window/pages.rs:199
 #, rust-format

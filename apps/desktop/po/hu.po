@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 21:37\n"
+"PO-Revision-Date: 2026-11-17 22:41\n"
 "Last-Translator: \n"
 "Language-Team: Hungarian\n"
 "Language: hu_HU\n"
@@ -45,7 +45,7 @@ msgstr "lopdf (mentés)"
 
 #: src/main.rs:177
 msgid "Built with"
-msgstr ""
+msgstr "Készült ezekkel"
 
 #: src/main.rs:207
 #, rust-format
@@ -63,7 +63,7 @@ msgstr "Megnyitás…"
 
 #: src/main.rs:227 src/window.rs:213
 msgid "Save"
-msgstr ""
+msgstr "Mentés"
 
 #: src/main.rs:228 src/window.rs:214
 msgid "Save As…"
@@ -79,7 +79,7 @@ msgstr "Nyomtatás…"
 
 #: src/main.rs:233 src/properties.rs:201 src/window.rs:220
 msgid "Properties"
-msgstr ""
+msgstr "Tulajdonságok"
 
 #: src/main.rs:235
 msgid "Close Window"
@@ -95,7 +95,7 @@ msgstr "Újra"
 
 #: src/main.rs:244
 msgid "Copy"
-msgstr ""
+msgstr "Másolás"
 
 #: src/main.rs:245
 msgid "Select All"
@@ -127,7 +127,7 @@ msgstr "Egy oldal"
 
 #: src/main.rs:260 src/window.rs:268
 msgid "Continuous"
-msgstr ""
+msgstr "Folyamatos"
 
 #: src/main.rs:261 src/window.rs:269
 msgid "Two Pages"
@@ -171,11 +171,11 @@ msgstr "Bélyegképek"
 
 #: src/main.rs:278 src/window.rs:780
 msgid "Contents"
-msgstr ""
+msgstr "Tartalom"
 
 #: src/main.rs:279 src/window.rs:796 src/window/markup.rs:200
 msgid "Markup"
-msgstr ""
+msgstr "Jelölések"
 
 #: src/main.rs:284
 msgid "Previous Page"
@@ -199,11 +199,11 @@ msgstr "Ugrás oldalra…"
 
 #: src/main.rs:293
 msgid "Back"
-msgstr ""
+msgstr "Vissza"
 
 #: src/main.rs:294
 msgid "Forward"
-msgstr ""
+msgstr "Előre"
 
 #: src/main.rs:300 src/window.rs:226
 msgid "Rotate Left"
@@ -219,11 +219,11 @@ msgstr "Jelölőeszköztár megjelenítése"
 
 #: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
-msgstr ""
+msgstr "Kiemelés"
 
 #: src/main.rs:306 src/markup_list.rs:44 src/window/markup.rs:28
 msgid "Underline"
-msgstr ""
+msgstr "Aláhúzás"
 
 #: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
@@ -251,7 +251,7 @@ msgstr "Nézet"
 
 #: src/main.rs:319
 msgid "Go"
-msgstr ""
+msgstr "Ugrás"
 
 #: src/main.rs:320
 msgid "Tools"
@@ -263,7 +263,7 @@ msgstr "Súgó"
 
 #: src/markup_list.rs:47
 msgid "Drawing"
-msgstr ""
+msgstr "Rajz"
 
 #: src/markup_list.rs:48
 msgid "Rectangle"
@@ -275,19 +275,19 @@ msgstr "Ellipszis"
 
 #: src/markup_list.rs:50
 msgid "Line"
-msgstr ""
+msgstr "Vonal"
 
 #: src/markup_list.rs:51 src/markup_list.rs:56
 msgid "Note"
-msgstr ""
+msgstr "Megjegyzés"
 
 #: src/markup_list.rs:52 src/markup_list.rs:57
 msgid "Text"
-msgstr ""
+msgstr "Szöveg"
 
 #: src/markup_list.rs:53 src/markup_list.rs:58
 msgid "Stamp"
-msgstr ""
+msgstr "Bélyegző"
 
 #: src/markup_list.rs:59
 msgid "Shape"
@@ -323,7 +323,7 @@ msgstr "Mappa"
 
 #: src/properties.rs:38
 msgid "Title"
-msgstr ""
+msgstr "Cím"
 
 #: src/properties.rs:39
 msgid "Author"
@@ -385,7 +385,7 @@ msgstr "Titkosítva, jelszó nélkül megnyitható"
 
 #: src/properties.rs:60
 msgid "None"
-msgstr ""
+msgstr "Nincs"
 
 #: src/properties.rs:65
 msgid "Not Allowed"
@@ -440,7 +440,7 @@ msgstr "{size}, a többi oldal eltér"
 
 #: src/signatures.rs:344
 msgid "Clear"
-msgstr ""
+msgstr "Törlés"
 
 #: src/signatures.rs:356
 msgid "Sign with the mouse or the touchpad"
@@ -448,7 +448,7 @@ msgstr "Aláírás egérrel vagy érintőpaddal"
 
 #: src/signatures.rs:364
 msgid "Draw"
-msgstr ""
+msgstr "Rajzolás"
 
 #: src/signatures.rs:381
 msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
@@ -456,7 +456,7 @@ msgstr "Írd alá magad fehér papíron, fényképezd le, majd válaszd ki a ké
 
 #: src/signatures.rs:388
 msgid "Choose Picture…"
-msgstr ""
+msgstr "Kép kiválasztása…"
 
 #: src/signatures.rs:395
 msgid "To the left, faint strokes are kept, and more of the paper's shadows. To the right, only what is dark."
@@ -464,7 +464,7 @@ msgstr "Balra a halvány vonások és a papír több árnyéka is megmarad. Jobb
 
 #: src/signatures.rs:398
 msgid "Ink as in the picture"
-msgstr ""
+msgstr "Tinta a kép szerint"
 
 #: src/signatures.rs:399
 msgid "Black ink"
@@ -476,15 +476,15 @@ msgstr "Kék tinta"
 
 #: src/signatures.rs:403
 msgid "Faint"
-msgstr ""
+msgstr "Halvány"
 
 #: src/signatures.rs:405
 msgid "Dark"
-msgstr ""
+msgstr "Sötét"
 
 #: src/signatures.rs:416
 msgid "From a Picture"
-msgstr ""
+msgstr "Képből"
 
 #: src/signatures.rs:439
 msgid "Move the slider until the paper is gone and the strokes are whole."
@@ -496,7 +496,7 @@ msgstr "Nem található tinta ezen a képen. Mozgasd a csúszkát balra."
 
 #: src/signatures.rs:458
 msgid "Pictures"
-msgstr ""
+msgstr "Képek"
 
 #: src/signatures.rs:463
 msgid "Choose a Picture of a Signature"
@@ -505,11 +505,11 @@ msgstr "Válassz egy képet az aláírásról"
 #: src/signatures.rs:480 src/window/files.rs:420 src/window/files.rs:522
 #: src/window/files.rs:751
 msgid "_Cancel"
-msgstr ""
+msgstr "_Mégse"
 
 #: src/signatures.rs:482 src/window/files.rs:753
 msgid "_Save"
-msgstr ""
+msgstr "_Mentés"
 
 #: src/signatures.rs:510
 msgid "New Signature"
@@ -525,16 +525,16 @@ msgstr "Húzz ide egy fájlt, vagy válassz egyet"
 
 #: src/window.rs:162
 msgid "Recent"
-msgstr ""
+msgstr "Legutóbbiak"
 
 #: src/window.rs:188
 msgid "Thumbnails (F9)"
-msgstr ""
+msgstr "Bélyegképek (F9)"
 
 #: src/window.rs:200
 #, rust-format
 msgid "Open ({shortcut})"
-msgstr ""
+msgstr "Megnyitás ({shortcut})"
 
 #: src/window.rs:258
 msgid "Main Menu"
@@ -542,11 +542,11 @@ msgstr "Főmenü"
 
 #: src/window.rs:285
 msgid "Page Layout"
-msgstr ""
+msgstr "Oldalelrendezés"
 
 #: src/window.rs:306
 msgid "Zoom"
-msgstr ""
+msgstr "Nagyítás"
 
 #: src/window.rs:317
 #, rust-format
@@ -555,7 +555,7 @@ msgstr "Ugrás oldalra ({shortcut})"
 
 #: src/window.rs:330
 msgid "Search"
-msgstr ""
+msgstr "Keresés"
 
 #: src/window.rs:342
 msgid "Previous Match (Shift+Enter)"
@@ -630,20 +630,20 @@ msgstr "PDF-dokumentumok"
 
 #: src/window/files.rs:54
 msgid "reading failed"
-msgstr ""
+msgstr "az olvasás sikertelen"
 
 #: src/window/files.rs:98 src/window/files.rs:102
 msgid "saving failed"
-msgstr ""
+msgstr "a mentés sikertelen"
 
 #: src/window/files.rs:175
 msgid "the document's password is needed"
-msgstr ""
+msgstr "a dokumentum jelszava szükséges"
 
 #: src/window/files.rs:177
 #, rust-format
 msgid "{app} can't save this document correctly yet"
-msgstr ""
+msgstr "{app} még nem tudja megfelelően menteni ezt a dokumentumot"
 
 #: src/window/files.rs:249 src/window/pages.rs:405
 #, rust-format
@@ -662,7 +662,7 @@ msgstr "A(z) „{name}” fájlt egy másik program módosította. Az újratölt
 
 #: src/window/files.rs:335
 msgid "_Reload"
-msgstr ""
+msgstr "Újra_töltés"
 
 #: src/window/files.rs:413
 msgid "File Changed on Disk"
@@ -675,12 +675,12 @@ msgstr "A(z) „{name}” fájlt egy másik program módosította a megnyitása 
 
 #: src/window/files.rs:421
 msgid "_Save Anyway"
-msgstr ""
+msgstr "_Mentés mindenképp"
 
 #: src/window/files.rs:514
 #, rust-format
 msgid "The password was incorrect. Enter the password for “{name}”."
-msgstr ""
+msgstr "A jelszó helytelen volt. Adja meg a jelszót ehhez: „{name}”."
 
 #: src/window/files.rs:518
 #, rust-format
@@ -693,7 +693,7 @@ msgstr "Jelszó szükséges"
 
 #: src/window/files.rs:523
 msgid "_Unlock"
-msgstr ""
+msgstr "_Feloldás"
 
 #: src/window/files.rs:611
 #, rust-format
@@ -715,7 +715,7 @@ msgstr "A(z) „{name}” fájlnak nem mentett módosításai vannak. A nem ment
 
 #: src/window/files.rs:752
 msgid "_Discard"
-msgstr ""
+msgstr "_Elvetés"
 
 #: src/window/files.rs:774
 msgid "Open PDF"
@@ -724,7 +724,7 @@ msgstr "PDF megnyitása"
 #: src/window/markup.rs:36
 #, rust-format
 msgid "{tool}: marks the selected text, and what is selected from now on ({shortcut} marks once)"
-msgstr ""
+msgstr "{tool}: megjelöli a kijelölt szöveget és mindazt, amit ezután kijelöl ({shortcut}: egyszeri jelölés)"
 
 #: src/window/markup.rs:50
 msgid "Draw freehand"
@@ -744,23 +744,23 @@ msgstr "Vonalak rajzolása"
 
 #: src/window/markup.rs:54
 msgid "Add text: click where it goes"
-msgstr ""
+msgstr "Szöveg hozzáadása: kattintson oda, ahová kerüljön"
 
 #: src/window/markup.rs:55
 msgid "Add notes: click where one goes"
-msgstr ""
+msgstr "Jegyzetek hozzáadása: kattintson oda, ahová egy jegyzet kerüljön"
 
 #: src/window/markup.rs:98
 msgid "Color"
-msgstr ""
+msgstr "Szín"
 
 #: src/window/markup.rs:113
 msgid "Signature"
-msgstr ""
+msgstr "Aláírás"
 
 #: src/window/markup.rs:121
 msgid "Sans-serif"
-msgstr ""
+msgstr "Talpatlan"
 
 #: src/window/markup.rs:122
 msgid "Serif"
@@ -1011,12 +1011,12 @@ msgstr "Űrlap visszaállításának ismételt végrehajtása"
 #: src/window/pages.rs:119
 #, rust-format
 msgid "page {page}"
-msgstr ""
+msgstr "{page}. oldal"
 
 #: src/window/pages.rs:131
 #, rust-format
 msgid "pages {pages}"
-msgstr ""
+msgstr "{pages}. oldal"
 
 #: src/window/pages.rs:199
 #, rust-format

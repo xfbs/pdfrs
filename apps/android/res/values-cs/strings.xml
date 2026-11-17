@@ -10,31 +10,32 @@
 <resources>
     <!-- Buttons that many dialogs share. -->
     <string name="cancel">Zrušit</string>
-    <string name="close">Close</string>
-    <string name="open">Open</string>
+    <string name="close">Zavřít</string>
+    <string name="open">Otevřít</string>
     <string name="save">Uložit</string>
     <string name="save_as">Uložit jako</string>
     <string name="discard">Zahodit</string>
     <string name="delete">Smazat</string>
-    <string name="share">Share</string>
+    <string name="share">Sdílet</string>
     <string name="select_all">Vybrat vše</string>
     <!-- Describes the ⋮ button to screen readers. -->
-    <string name="more">More</string>
-    <string name="back">Back</string>
+    <string name="more">Další možnosti</string>
+    <string name="back">Zpět</string>
     <!-- The top bar. -->
     <string name="back_to_document">Zpět na dokument</string>
-    <string name="contents_and_pages">Contents and pages</string>
+    <string name="contents_and_pages">Obsah a stránky</string>
     <!-- Beside the document's name while it has unsaved changes. -->
     <string name="edited">Upraveno</string>
-    <string name="search">Search</string>
+    <string name="search">Hledat</string>
     <!-- The ⋮ menu. -->
     <string name="menu_open">Otevřít</string>
-    <string name="menu_share">Share</string>
+    <string name="menu_share">Sdílet</string>
     <string name="menu_print">Tisk</string>
     <string name="menu_go_to_page">Přejít na stranu</string>
     <string name="menu_properties">Vlastnosti</string>
     <string name="menu_highlight_fields">Zvýraznit pole formuláře</string>
     <string name="menu_reset_form">Obnovit formulář</string>
+    <string name="menu_discard_changes">Zahodit změny</string>
     <string name="menu_settings">Nastavení</string>
     <!-- Closes the document and returns to the start screen. -->
     <string name="menu_close">Zavřít</string>
@@ -58,7 +59,7 @@
     <string name="redo_reset_form">Znovu provést obnovení formuláře</string>
     <!-- The start screen. -->
     <string name="open_pdf">Otevřít PDF</string>
-    <string name="recent">Recent</string>
+    <string name="recent">Nedávné</string>
     <!-- Where the reader left off in a recent document. -->
     <string name="recent_page">Strana %1$d</string>
     <string name="recent_page_of">Strana %1$d z %2$d</string>
@@ -72,16 +73,16 @@
     <string name="password_protected">Soubor %1$s je chráněn heslem</string>
     <string name="password_needed">K otevření souboru %1$s je potřeba heslo.</string>
     <string name="password_title">Vyžadováno heslo</string>
-    <string name="password_prompt">Enter the password to open %1$s.</string>
+    <string name="password_prompt">Zadejte heslo k otevření dokumentu %1$s.</string>
     <string name="password_label">Heslo</string>
-    <string name="password_wrong">That password didn\'t work.</string>
+    <string name="password_wrong">Toto heslo nefunguje.</string>
     <!-- Pages and Contents. -->
     <string name="tab_pages">Stránky</string>
     <string name="tab_contents">Obsah</string>
-    <string name="collapse">Collapse</string>
-    <string name="expand">Expand</string>
+    <string name="collapse">Sbalit</string>
+    <string name="expand">Rozbalit</string>
     <!-- What a long press on a page in the page grid does, for screen readers. -->
-    <string name="pick">Pick</string>
+    <string name="pick">Vybrat</string>
     <!-- Follows the finger while pages are dragged to another place. -->
     <plurals name="pages_dragged">
         <item quantity="one">%d stránka</item>
@@ -90,7 +91,7 @@
         <item quantity="other">%d stránek</item>
     </plurals>
     <!-- Links that lead out of the document. -->
-    <string name="link_open_title">Open this link?</string>
+    <string name="link_open_title">Otevřít tento odkaz?</string>
     <string name="link_blocked_title">Tento odkaz nelze otevřít</string>
     <!-- "Go to page". -->
     <string name="go_to_title">Přejít na stránku</string>
@@ -98,10 +99,10 @@
     <string name="go_to_label">Stránka (%1$s–%2$s)</string>
     <!-- Which page a typed page number is, counted from the first. -->
     <string name="go_to_position">Stránka %1$d z %2$d</string>
-    <string name="go_to_position_hint">Or a position, 1–%1$d</string>
-    <string name="go">Go</string>
+    <string name="go_to_position_hint">Nebo pozice, 1–%1$d</string>
+    <string name="go">Přejít</string>
     <!-- Search. -->
-    <string name="close_search">Close search</string>
+    <string name="close_search">Zavřít hledání</string>
     <string name="previous_match">Předchozí výskyt</string>
     <string name="next_match">Další výskyt</string>
     <!-- Which match is shown: "3 of 17". -->
@@ -113,30 +114,30 @@
     <string name="no_matches">Žádné shody</string>
     <!-- Selected text. -->
     <!-- Marks the selected text: with a highlighter, or a line under or through it. -->
-    <string name="highlight">Highlight</string>
+    <string name="highlight">Zvýraznit</string>
     <string name="underline">Podtržení</string>
     <string name="strike_through">Přeškrtnutí</string>
     <!-- Tells screen readers that an annotation (a mark on the text, a note, a drawing) is picked. -->
     <string name="annotation_selected">Anotace vybrána</string>
     <string name="could_not_delete_annotation">Anotaci se nepodařilo smazat: %1$s</string>
     <!-- Titles of the dialogs that fill in a field of a form, where the form has no name for it. -->
-    <string name="field_text_title">Fill in field</string>
-    <string name="field_choice_title">Choose</string>
-    <string name="field_done">Done</string>
+    <string name="field_text_title">Vyplnit pole</string>
+    <string name="field_choice_title">Vyberte</string>
+    <string name="field_done">Hotovo</string>
     <!-- The line of a menu of a form that takes text of one\'s own instead of one of its options. -->
     <string name="field_own_text">Nebo zadejte vlastní text</string>
     <!-- How many characters a field holds of how many it takes, such as 3 / 10. -->
     <string name="field_length">%1$d / %2$d</string>
-    <string name="copy">Copy</string>
+    <string name="copy">Kopírovat</string>
     <string name="copied">Zkopírováno</string>
     <string name="too_much_to_copy">Je to příliš mnoho textu ke zkopírování najednou</string>
     <string name="too_much_to_share">Je to příliš mnoho textu ke sdílení najednou</string>
     <!-- What the clipboard calls text copied from a document. -->
-    <string name="clip_label">Text from a PDF</string>
+    <string name="clip_label">Text z PDF</string>
     <!-- Tells screen readers that text is selected on the page. -->
     <string name="text_selected">Text vybrán</string>
     <!-- The page view. -->
-    <string name="still_drawing">Still drawing this page</string>
+    <string name="still_drawing">Stránka se ještě vykresluje</string>
     <!-- The view menu. -->
     <!-- Describes the view button: "View: Single page". -->
     <string name="view_description">Zobrazení: %1$s</string>
@@ -161,23 +162,26 @@
     <string name="rotate_left">Otočit doleva</string>
     <string name="rotate_right">Otočit doprava</string>
     <string name="delete_pages">Smazat stránky</string>
-    <string name="unsaved_title">Save changes?</string>
-    <string name="unsaved_text">The changes to the pages of %1$s are lost unless you save them.</string>
+    <string name="unsaved_title">Uložit změny?</string>
+    <string name="unsaved_text">Pokud změny stránek dokumentu %1$s neuložíte, budou ztraceny.</string>
+    <string name="discard_title">Zahodit změny?</string>
+    <string name="discard_text">Změny v souboru %1$s provedené od posledního uložení budou ztraceny.</string>
     <string name="saving">Ukládání…</string>
     <!-- With what went wrong, as the system or the PDF library put it (in English). -->
     <string name="could_not_save">Nepodařilo se uložit: %1$s</string>
-    <string name="could_not_save_there">Couldn\'t save there. This is the edited copy.</string>
+    <string name="could_not_save_there">Sem nelze uložit. Toto je upravená kopie.</string>
+    <string name="draft_not_restored">Neuložené změny v souboru %1$s se nepodařilo obnovit.</string>
     <!-- Sharing and printing. -->
     <string name="could_not_share">Tento soubor se nepodařilo sdílet</string>
     <string name="preparing_to_print">Příprava tisku…</string>
     <string name="could_not_print">Nepodařilo se tisknout: %1$s</string>
     <!-- Properties. -->
     <string name="property_file_name">Název souboru</string>
-    <string name="property_title">Title</string>
+    <string name="property_title">Název</string>
     <string name="property_author">Autor</string>
-    <string name="property_subject">Subject</string>
+    <string name="property_subject">Předmět</string>
     <string name="property_keywords">Klíčová slova</string>
-    <string name="property_creator">Created with</string>
+    <string name="property_creator">Vytvořeno v</string>
     <string name="property_producer">Tvůrce PDF</string>
     <string name="property_created">Vytvořeno</string>
     <string name="property_modified">Změněno</string>
@@ -205,7 +209,7 @@
     <string name="setting_volume_keys">Tlačítka hlasitosti listují stránkami</string>
     <string name="setting_volume_keys_detail">Zeslabení hlasitosti listuje dopředu, zesílení zpět</string>
     <string name="crash_log">Záznam o pádu</string>
-    <string name="crash_log_empty">Nothing went wrong so far</string>
+    <string name="crash_log_empty">Zatím se nic nepokazilo</string>
     <!-- With the date of the newest entry. -->
-    <string name="crash_log_detail">Last entry %1$s. Kept on this device; nothing is sent unless you share it.</string>
+    <string name="crash_log_detail">Poslední záznam %1$s. Uchovává se v tomto zařízení; nic se neodesílá, pokud to sami nesdílíte.</string>
 </resources>

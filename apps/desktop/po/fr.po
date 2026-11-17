@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 19:16\n"
+"PO-Revision-Date: 2026-11-17 22:41\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
@@ -267,11 +267,11 @@ msgstr "Dessin"
 
 #: src/markup_list.rs:48
 msgid "Rectangle"
-msgstr ""
+msgstr "Rectangle"
 
 #: src/markup_list.rs:49
 msgid "Ellipse"
-msgstr ""
+msgstr "Ellipse"
 
 #: src/markup_list.rs:50
 msgid "Line"
@@ -279,7 +279,7 @@ msgstr "Ligne"
 
 #: src/markup_list.rs:51 src/markup_list.rs:56
 msgid "Note"
-msgstr ""
+msgstr "Note"
 
 #: src/markup_list.rs:52 src/markup_list.rs:57
 msgid "Text"
@@ -357,7 +357,7 @@ msgstr "Modifié"
 
 #: src/properties.rs:48
 msgid "Pages"
-msgstr ""
+msgstr "Pages"
 
 #: src/properties.rs:49
 msgid "Page Size"
@@ -373,7 +373,7 @@ msgstr "Version PDF"
 
 #: src/properties.rs:56
 msgid "Protection"
-msgstr ""
+msgstr "Protection"
 
 #: src/properties.rs:58
 msgid "Password to open"
@@ -417,7 +417,7 @@ msgstr "{width} × {height} po"
 #: src/properties.rs:147
 #, rust-format
 msgid "{width} × {height} mm"
-msgstr ""
+msgstr "{width} × {height} mm"
 
 #. Translators: a page size and the name of the paper, "297 × 210 mm (A4,
 #. landscape)".
@@ -430,7 +430,7 @@ msgstr "{size} ({paper}, paysage)"
 #: src/properties.rs:163
 #, rust-format
 msgid "{size} ({paper})"
-msgstr ""
+msgstr "{size} ({paper})"
 
 #. Translators: {size} is the size of the first page, "210 × 297 mm (A4)".
 #: src/properties.rs:179
@@ -546,7 +546,7 @@ msgstr "Disposition des pages"
 
 #: src/window.rs:306
 msgid "Zoom"
-msgstr ""
+msgstr "Zoom"
 
 #: src/window.rs:317
 #, rust-format
@@ -585,7 +585,7 @@ msgstr "Impossible d'ouvrir le lien : {error}"
 #: src/window.rs:960
 #, rust-format
 msgid "Ctrl+{key}"
-msgstr ""
+msgstr "Ctrl+{key}"
 
 #: src/window/actions.rs:103
 #, rust-format
@@ -598,8 +598,8 @@ msgstr[1] "{n} pages — Modifié"
 #, rust-format
 msgid "{n} page"
 msgid_plural "{n} pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{n} page"
+msgstr[1] "{n} pages"
 
 #. Translators: follows the box with the page number: "3 of 120".
 #: src/window/actions.rs:111
@@ -756,7 +756,7 @@ msgstr "Couleur"
 
 #: src/window/markup.rs:113
 msgid "Signature"
-msgstr ""
+msgstr "Signature"
 
 #: src/window/markup.rs:121
 msgid "Sans-serif"
@@ -1011,12 +1011,12 @@ msgstr "Rétablir la réinitialisation du formulaire"
 #: src/window/pages.rs:119
 #, rust-format
 msgid "page {page}"
-msgstr ""
+msgstr "page {page}"
 
 #: src/window/pages.rs:131
 #, rust-format
 msgid "pages {pages}"
-msgstr ""
+msgstr "pages {pages}"
 
 #: src/window/pages.rs:199
 #, rust-format

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 19:16\n"
+"PO-Revision-Date: 2026-11-17 22:41\n"
 "Last-Translator: \n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
@@ -430,7 +430,7 @@ msgstr "{size} ({paper}, альбомная)"
 #: src/properties.rs:163
 #, rust-format
 msgid "{size} ({paper})"
-msgstr ""
+msgstr "{size} ({paper})"
 
 #. Translators: {size} is the size of the first page, "210 × 297 mm (A4)".
 #: src/properties.rs:179
@@ -585,7 +585,7 @@ msgstr "Не удалось открыть ссылку: {error}"
 #: src/window.rs:960
 #, rust-format
 msgid "Ctrl+{key}"
-msgstr ""
+msgstr "Ctrl+{key}"
 
 #: src/window/actions.rs:103
 #, rust-format
@@ -594,7 +594,7 @@ msgid_plural "{n} pages — Edited"
 msgstr[0] "{n} страница — изменено"
 msgstr[1] "{n} страницы — изменено"
 msgstr[2] "{n} страниц — изменено"
-msgstr[3] ""
+msgstr[3] "{n} страниц — изменено"
 
 #: src/window/actions.rs:105 src/window/pages.rs:133
 #, rust-format
@@ -603,7 +603,7 @@ msgid_plural "{n} pages"
 msgstr[0] "{n} страница"
 msgstr[1] "{n} страницы"
 msgstr[2] "{n} страниц"
-msgstr[3] ""
+msgstr[3] "{n} страниц"
 
 #. Translators: follows the box with the page number: "3 of 120".
 #: src/window/actions.rs:111
@@ -851,7 +851,7 @@ msgid_plural "Undo Rotate {n} Pages"
 msgstr[0] "Отменить поворот {n} страницы"
 msgstr[1] "Отменить поворот {n} страниц"
 msgstr[2] "Отменить поворот {n} страниц"
-msgstr[3] ""
+msgstr[3] "Отменить поворот {n} страниц"
 
 #: src/window/pages.rs:30
 #, rust-format
@@ -860,7 +860,7 @@ msgid_plural "Undo Delete {n} Pages"
 msgstr[0] "Отменить удаление {n} страницы"
 msgstr[1] "Отменить удаление {n} страниц"
 msgstr[2] "Отменить удаление {n} страниц"
-msgstr[3] ""
+msgstr[3] "Отменить удаление {n} страниц"
 
 #: src/window/pages.rs:32
 #, rust-format
@@ -869,7 +869,7 @@ msgid_plural "Undo Move {n} Pages"
 msgstr[0] "Отменить перемещение {n} страницы"
 msgstr[1] "Отменить перемещение {n} страниц"
 msgstr[2] "Отменить перемещение {n} страниц"
-msgstr[3] ""
+msgstr[3] "Отменить перемещение {n} страниц"
 
 #: src/window/pages.rs:34
 #, rust-format
@@ -878,7 +878,7 @@ msgid_plural "Undo Insert {n} Pages"
 msgstr[0] "Отменить вставку {n} страницы"
 msgstr[1] "Отменить вставку {n} страниц"
 msgstr[2] "Отменить вставку {n} страниц"
-msgstr[3] ""
+msgstr[3] "Отменить вставку {n} страниц"
 
 #: src/window/pages.rs:36
 msgid "Undo Highlight"
@@ -943,7 +943,7 @@ msgid_plural "Redo Rotate {n} Pages"
 msgstr[0] "Вернуть поворот {n} страницы"
 msgstr[1] "Вернуть поворот {n} страниц"
 msgstr[2] "Вернуть поворот {n} страниц"
-msgstr[3] ""
+msgstr[3] "Вернуть поворот {n} страниц"
 
 #: src/window/pages.rs:60
 #, rust-format
@@ -952,7 +952,7 @@ msgid_plural "Redo Delete {n} Pages"
 msgstr[0] "Вернуть удаление {n} страницы"
 msgstr[1] "Вернуть удаление {n} страниц"
 msgstr[2] "Вернуть удаление {n} страниц"
-msgstr[3] ""
+msgstr[3] "Вернуть удаление {n} страниц"
 
 #: src/window/pages.rs:62
 #, rust-format
@@ -961,7 +961,7 @@ msgid_plural "Redo Move {n} Pages"
 msgstr[0] "Вернуть перемещение {n} страницы"
 msgstr[1] "Вернуть перемещение {n} страниц"
 msgstr[2] "Вернуть перемещение {n} страниц"
-msgstr[3] ""
+msgstr[3] "Вернуть перемещение {n} страниц"
 
 #: src/window/pages.rs:64
 #, rust-format
@@ -970,7 +970,7 @@ msgid_plural "Redo Insert {n} Pages"
 msgstr[0] "Вернуть вставку {n} страницы"
 msgstr[1] "Вернуть вставку {n} страниц"
 msgstr[2] "Вернуть вставку {n} страниц"
-msgstr[3] ""
+msgstr[3] "Вернуть вставку {n} страниц"
 
 #: src/window/pages.rs:66
 msgid "Redo Highlight"
@@ -1063,7 +1063,7 @@ msgid_plural "Exported {n} pages to “{name}”"
 msgstr[0] "В «{name}» экспортирована {n} страница"
 msgstr[1] "В «{name}» экспортированы {n} страницы"
 msgstr[2] "В «{name}» экспортировано {n} страниц"
-msgstr[3] ""
+msgstr[3] "В «{name}» экспортировано {n} страниц"
 
 #: src/window/search.rs:187
 msgid "No matches"

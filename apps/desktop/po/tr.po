@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 21:37\n"
+"PO-Revision-Date: 2026-11-17 22:41\n"
 "Last-Translator: \n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
@@ -63,7 +63,7 @@ msgstr "Aç…"
 
 #: src/main.rs:227 src/window.rs:213
 msgid "Save"
-msgstr ""
+msgstr "Kaydet"
 
 #: src/main.rs:228 src/window.rs:214
 msgid "Save As…"
@@ -79,7 +79,7 @@ msgstr "Yazdır…"
 
 #: src/main.rs:233 src/properties.rs:201 src/window.rs:220
 msgid "Properties"
-msgstr ""
+msgstr "Özellikler"
 
 #: src/main.rs:235
 msgid "Close Window"
@@ -95,7 +95,7 @@ msgstr "Yinele"
 
 #: src/main.rs:244
 msgid "Copy"
-msgstr ""
+msgstr "Kopyala"
 
 #: src/main.rs:245
 msgid "Select All"
@@ -127,7 +127,7 @@ msgstr "Tek Sayfa"
 
 #: src/main.rs:260 src/window.rs:268
 msgid "Continuous"
-msgstr ""
+msgstr "Sürekli"
 
 #: src/main.rs:261 src/window.rs:269
 msgid "Two Pages"
@@ -171,11 +171,11 @@ msgstr "Küçük Resimler"
 
 #: src/main.rs:278 src/window.rs:780
 msgid "Contents"
-msgstr ""
+msgstr "İçindekiler"
 
 #: src/main.rs:279 src/window.rs:796 src/window/markup.rs:200
 msgid "Markup"
-msgstr ""
+msgstr "İşaretleme"
 
 #: src/main.rs:284
 msgid "Previous Page"
@@ -199,11 +199,11 @@ msgstr "Sayfaya Git…"
 
 #: src/main.rs:293
 msgid "Back"
-msgstr ""
+msgstr "Geri"
 
 #: src/main.rs:294
 msgid "Forward"
-msgstr ""
+msgstr "İleri"
 
 #: src/main.rs:300 src/window.rs:226
 msgid "Rotate Left"
@@ -219,11 +219,11 @@ msgstr "İşaretleme Araç Çubuğunu Göster"
 
 #: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
-msgstr ""
+msgstr "Vurgula"
 
 #: src/main.rs:306 src/markup_list.rs:44 src/window/markup.rs:28
 msgid "Underline"
-msgstr ""
+msgstr "Altını Çiz"
 
 #: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
@@ -251,7 +251,7 @@ msgstr "Görünüm"
 
 #: src/main.rs:319
 msgid "Go"
-msgstr ""
+msgstr "Git"
 
 #: src/main.rs:320
 msgid "Tools"
@@ -263,7 +263,7 @@ msgstr "Yardım"
 
 #: src/markup_list.rs:47
 msgid "Drawing"
-msgstr ""
+msgstr "Çizim"
 
 #: src/markup_list.rs:48
 msgid "Rectangle"
@@ -275,27 +275,27 @@ msgstr "Elips"
 
 #: src/markup_list.rs:50
 msgid "Line"
-msgstr ""
+msgstr "Çizgi"
 
 #: src/markup_list.rs:51 src/markup_list.rs:56
 msgid "Note"
-msgstr ""
+msgstr "Not"
 
 #: src/markup_list.rs:52 src/markup_list.rs:57
 msgid "Text"
-msgstr ""
+msgstr "Metin"
 
 #: src/markup_list.rs:53 src/markup_list.rs:58
 msgid "Stamp"
-msgstr ""
+msgstr "Damga"
 
 #: src/markup_list.rs:59
 msgid "Shape"
-msgstr ""
+msgstr "Şekil"
 
 #: src/markup_list.rs:60
 msgid "Attachment"
-msgstr ""
+msgstr "Ek"
 
 #: src/markup_list.rs:96
 msgid "No Markup"
@@ -323,7 +323,7 @@ msgstr "Klasör"
 
 #: src/properties.rs:38
 msgid "Title"
-msgstr ""
+msgstr "Başlık"
 
 #: src/properties.rs:39
 msgid "Author"
@@ -440,7 +440,7 @@ msgstr "{size}, diğer sayfalar farklı"
 
 #: src/signatures.rs:344
 msgid "Clear"
-msgstr ""
+msgstr "Temizle"
 
 #: src/signatures.rs:356
 msgid "Sign with the mouse or the touchpad"
@@ -448,7 +448,7 @@ msgstr "Fare veya dokunmatik yüzey ile imzalayın"
 
 #: src/signatures.rs:364
 msgid "Draw"
-msgstr ""
+msgstr "Çiz"
 
 #: src/signatures.rs:381
 msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
@@ -464,7 +464,7 @@ msgstr "Solda silik çizgiler ve kağıdın gölgelerinin daha fazlası korunur.
 
 #: src/signatures.rs:398
 msgid "Ink as in the picture"
-msgstr ""
+msgstr "Resimdeki gibi mürekkep"
 
 #: src/signatures.rs:399
 msgid "Black ink"
@@ -476,11 +476,11 @@ msgstr "Mavi mürekkep"
 
 #: src/signatures.rs:403
 msgid "Faint"
-msgstr ""
+msgstr "Soluk"
 
 #: src/signatures.rs:405
 msgid "Dark"
-msgstr ""
+msgstr "Koyu"
 
 #: src/signatures.rs:416
 msgid "From a Picture"
@@ -488,7 +488,7 @@ msgstr "Resimden"
 
 #: src/signatures.rs:439
 msgid "Move the slider until the paper is gone and the strokes are whole."
-msgstr ""
+msgstr "Kâğıt kaybolana ve çizgiler bütün görünene kadar kaydırıcıyı hareket ettirin."
 
 #: src/signatures.rs:441
 msgid "No ink found in this picture. Move the slider to the left."
@@ -496,7 +496,7 @@ msgstr "Bu resimde mürekkep bulunamadı. Kaydırıcıyı sola doğru hareket et
 
 #: src/signatures.rs:458
 msgid "Pictures"
-msgstr ""
+msgstr "Resimler"
 
 #: src/signatures.rs:463
 msgid "Choose a Picture of a Signature"
@@ -521,15 +521,15 @@ msgstr "PDF Aç"
 
 #: src/window.rs:149
 msgid "Drop a file here or choose one"
-msgstr ""
+msgstr "Bir dosyayı buraya bırakın veya bir dosya seçin"
 
 #: src/window.rs:162
 msgid "Recent"
-msgstr ""
+msgstr "Son Kullanılanlar"
 
 #: src/window.rs:188
 msgid "Thumbnails (F9)"
-msgstr ""
+msgstr "Küçük Resimler (F9)"
 
 #: src/window.rs:200
 #, rust-format
@@ -542,11 +542,11 @@ msgstr "Ana Menü"
 
 #: src/window.rs:285
 msgid "Page Layout"
-msgstr ""
+msgstr "Sayfa Düzeni"
 
 #: src/window.rs:306
 msgid "Zoom"
-msgstr ""
+msgstr "Yakınlaştırma"
 
 #: src/window.rs:317
 #, rust-format
@@ -555,7 +555,7 @@ msgstr "Sayfaya Git ({shortcut})"
 
 #: src/window.rs:330
 msgid "Search"
-msgstr ""
+msgstr "Ara"
 
 #: src/window.rs:342
 msgid "Previous Match (Shift+Enter)"
@@ -630,11 +630,11 @@ msgstr "PDF belgeleri"
 
 #: src/window/files.rs:54
 msgid "reading failed"
-msgstr ""
+msgstr "okuma başarısız oldu"
 
 #: src/window/files.rs:98 src/window/files.rs:102
 msgid "saving failed"
-msgstr ""
+msgstr "kaydetme başarısız oldu"
 
 #: src/window/files.rs:175
 msgid "the document's password is needed"
@@ -662,7 +662,7 @@ msgstr "“{name}” başka bir program tarafından değiştirildi. Yeniden yük
 
 #: src/window/files.rs:335
 msgid "_Reload"
-msgstr ""
+msgstr "_Yeniden Yükle"
 
 #: src/window/files.rs:413
 msgid "File Changed on Disk"
@@ -675,7 +675,7 @@ msgstr "“{name}” açıldıktan sonra başka bir program tarafından değişt
 
 #: src/window/files.rs:421
 msgid "_Save Anyway"
-msgstr ""
+msgstr "_Yine de Kaydet"
 
 #: src/window/files.rs:514
 #, rust-format
@@ -693,7 +693,7 @@ msgstr "Parola Gerekli"
 
 #: src/window/files.rs:523
 msgid "_Unlock"
-msgstr ""
+msgstr "_Kilidi Aç"
 
 #: src/window/files.rs:611
 #, rust-format
@@ -715,7 +715,7 @@ msgstr "“{name}” dosyasında kaydedilmemiş değişiklikler var. Kaydedilmey
 
 #: src/window/files.rs:752
 msgid "_Discard"
-msgstr ""
+msgstr "_Vazgeç"
 
 #: src/window/files.rs:774
 msgid "Open PDF"
@@ -724,7 +724,7 @@ msgstr "PDF Aç"
 #: src/window/markup.rs:36
 #, rust-format
 msgid "{tool}: marks the selected text, and what is selected from now on ({shortcut} marks once)"
-msgstr ""
+msgstr "{tool}: seçili metni ve bundan sonra seçilenleri işaretler ({shortcut} bir kez işaretler)"
 
 #: src/window/markup.rs:50
 msgid "Draw freehand"
@@ -744,11 +744,11 @@ msgstr "Çizgi çiz"
 
 #: src/window/markup.rs:54
 msgid "Add text: click where it goes"
-msgstr ""
+msgstr "Metin ekle: metnin yer alacağı yere tıklayın"
 
 #: src/window/markup.rs:55
 msgid "Add notes: click where one goes"
-msgstr ""
+msgstr "Not ekle: notun yer alacağı yere tıklayın"
 
 #: src/window/markup.rs:98
 msgid "Color"
@@ -756,11 +756,11 @@ msgstr "Renk"
 
 #: src/window/markup.rs:113
 msgid "Signature"
-msgstr ""
+msgstr "İmza"
 
 #: src/window/markup.rs:121
 msgid "Sans-serif"
-msgstr ""
+msgstr "Tırnaksız"
 
 #: src/window/markup.rs:122
 msgid "Serif"
@@ -870,11 +870,11 @@ msgstr[1] "{n} Sayfa Eklemeyi Geri Al"
 
 #: src/window/pages.rs:36
 msgid "Undo Highlight"
-msgstr ""
+msgstr "Vurgulamayı Geri Al"
 
 #: src/window/pages.rs:37
 msgid "Undo Underline"
-msgstr ""
+msgstr "Altı Çizmeyi Geri Al"
 
 #: src/window/pages.rs:38
 msgid "Undo Strikethrough"
@@ -882,27 +882,27 @@ msgstr "Üstü Çizili Yapmayı Geri Al"
 
 #: src/window/pages.rs:39
 msgid "Undo Drawing"
-msgstr ""
+msgstr "Çizimi Geri Al"
 
 #: src/window/pages.rs:40
 msgid "Undo Rectangle"
-msgstr ""
+msgstr "Dikdörtgeni Geri Al"
 
 #: src/window/pages.rs:41
 msgid "Undo Ellipse"
-msgstr ""
+msgstr "Elipsi Geri Al"
 
 #: src/window/pages.rs:42
 msgid "Undo Line"
-msgstr ""
+msgstr "Çizgiyi Geri Al"
 
 #: src/window/pages.rs:43
 msgid "Undo Note"
-msgstr ""
+msgstr "Notu Geri Al"
 
 #: src/window/pages.rs:44
 msgid "Undo Text Box"
-msgstr ""
+msgstr "Metin Kutusunu Geri Al"
 
 #: src/window/pages.rs:45
 msgid "Undo Add Annotation"
@@ -918,11 +918,11 @@ msgstr "Ek Açıklama Değiştirmeyi Geri Al"
 
 #: src/window/pages.rs:48
 msgid "Undo Fill In Field"
-msgstr ""
+msgstr "Alan Doldurmayı Geri Al"
 
 #: src/window/pages.rs:49
 msgid "Undo Reset Form"
-msgstr ""
+msgstr "Form Sıfırlamayı Geri Al"
 
 #: src/window/pages.rs:57
 #, rust-format
@@ -954,7 +954,7 @@ msgstr[1] "{n} Sayfa Eklemeyi Yinele"
 
 #: src/window/pages.rs:66
 msgid "Redo Highlight"
-msgstr ""
+msgstr "Vurgulamayı Yinele"
 
 #: src/window/pages.rs:67
 msgid "Redo Underline"
@@ -1011,12 +1011,12 @@ msgstr "Formu Sıfırlamayı Yinele"
 #: src/window/pages.rs:119
 #, rust-format
 msgid "page {page}"
-msgstr ""
+msgstr "sayfa {page}"
 
 #: src/window/pages.rs:131
 #, rust-format
 msgid "pages {pages}"
-msgstr ""
+msgstr "sayfalar {pages}"
 
 #: src/window/pages.rs:199
 #, rust-format

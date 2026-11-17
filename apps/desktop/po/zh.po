@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 21:37\n"
+"PO-Revision-Date: 2026-11-17 22:41\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -45,7 +45,7 @@ msgstr "lopdf(保存)"
 
 #: src/main.rs:177
 msgid "Built with"
-msgstr ""
+msgstr "构建工具"
 
 #: src/main.rs:207
 #, rust-format
@@ -63,7 +63,7 @@ msgstr "打开…"
 
 #: src/main.rs:227 src/window.rs:213
 msgid "Save"
-msgstr ""
+msgstr "保存"
 
 #: src/main.rs:228 src/window.rs:214
 msgid "Save As…"
@@ -79,7 +79,7 @@ msgstr "打印…"
 
 #: src/main.rs:233 src/properties.rs:201 src/window.rs:220
 msgid "Properties"
-msgstr ""
+msgstr "属性"
 
 #: src/main.rs:235
 msgid "Close Window"
@@ -95,7 +95,7 @@ msgstr "重做"
 
 #: src/main.rs:244
 msgid "Copy"
-msgstr ""
+msgstr "复制"
 
 #: src/main.rs:245
 msgid "Select All"
@@ -127,7 +127,7 @@ msgstr "单页"
 
 #: src/main.rs:260 src/window.rs:268
 msgid "Continuous"
-msgstr ""
+msgstr "连续"
 
 #: src/main.rs:261 src/window.rs:269
 msgid "Two Pages"
@@ -175,7 +175,7 @@ msgstr "目录"
 
 #: src/main.rs:279 src/window.rs:796 src/window/markup.rs:200
 msgid "Markup"
-msgstr ""
+msgstr "标注"
 
 #: src/main.rs:284
 msgid "Previous Page"
@@ -199,11 +199,11 @@ msgstr "转到页面…"
 
 #: src/main.rs:293
 msgid "Back"
-msgstr ""
+msgstr "后退"
 
 #: src/main.rs:294
 msgid "Forward"
-msgstr ""
+msgstr "前进"
 
 #: src/main.rs:300 src/window.rs:226
 msgid "Rotate Left"
@@ -219,11 +219,11 @@ msgstr "显示标注工具栏"
 
 #: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
-msgstr ""
+msgstr "高亮"
 
 #: src/main.rs:306 src/markup_list.rs:44 src/window/markup.rs:28
 msgid "Underline"
-msgstr ""
+msgstr "下划线"
 
 #: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
@@ -251,7 +251,7 @@ msgstr "视图"
 
 #: src/main.rs:319
 msgid "Go"
-msgstr ""
+msgstr "跳转"
 
 #: src/main.rs:320
 msgid "Tools"
@@ -263,7 +263,7 @@ msgstr "帮助"
 
 #: src/markup_list.rs:47
 msgid "Drawing"
-msgstr ""
+msgstr "绘图"
 
 #: src/markup_list.rs:48
 msgid "Rectangle"
@@ -275,31 +275,31 @@ msgstr "椭圆"
 
 #: src/markup_list.rs:50
 msgid "Line"
-msgstr ""
+msgstr "直线"
 
 #: src/markup_list.rs:51 src/markup_list.rs:56
 msgid "Note"
-msgstr ""
+msgstr "注释"
 
 #: src/markup_list.rs:52 src/markup_list.rs:57
 msgid "Text"
-msgstr ""
+msgstr "文本"
 
 #: src/markup_list.rs:53 src/markup_list.rs:58
 msgid "Stamp"
-msgstr ""
+msgstr "图章"
 
 #: src/markup_list.rs:59
 msgid "Shape"
-msgstr ""
+msgstr "形状"
 
 #: src/markup_list.rs:60
 msgid "Attachment"
-msgstr ""
+msgstr "附件"
 
 #: src/markup_list.rs:96
 msgid "No Markup"
-msgstr ""
+msgstr "无标注"
 
 #: src/markup_list.rs:97
 msgid "Highlights, drawings and notes are listed here"
@@ -323,7 +323,7 @@ msgstr "文件夹"
 
 #: src/properties.rs:38
 msgid "Title"
-msgstr ""
+msgstr "标题"
 
 #: src/properties.rs:39
 msgid "Author"
@@ -440,7 +440,7 @@ msgstr "{size},其他页面大小不同"
 
 #: src/signatures.rs:344
 msgid "Clear"
-msgstr ""
+msgstr "清除"
 
 #: src/signatures.rs:356
 msgid "Sign with the mouse or the touchpad"
@@ -448,7 +448,7 @@ msgstr "使用鼠标或触摸板签名"
 
 #: src/signatures.rs:364
 msgid "Draw"
-msgstr ""
+msgstr "绘制"
 
 #: src/signatures.rs:381
 msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
@@ -464,7 +464,7 @@ msgstr "向左调节会保留较淡的笔画,以及更多纸张的阴影;向右�
 
 #: src/signatures.rs:398
 msgid "Ink as in the picture"
-msgstr ""
+msgstr "保留图片原有墨色"
 
 #: src/signatures.rs:399
 msgid "Black ink"
@@ -476,15 +476,15 @@ msgstr "蓝色墨水"
 
 #: src/signatures.rs:403
 msgid "Faint"
-msgstr ""
+msgstr "浅色"
 
 #: src/signatures.rs:405
 msgid "Dark"
-msgstr ""
+msgstr "深色"
 
 #: src/signatures.rs:416
 msgid "From a Picture"
-msgstr ""
+msgstr "从图片"
 
 #: src/signatures.rs:439
 msgid "Move the slider until the paper is gone and the strokes are whole."
@@ -496,7 +496,7 @@ msgstr "在此图片中未找到墨迹。请将滑块向左移动。"
 
 #: src/signatures.rs:458
 msgid "Pictures"
-msgstr ""
+msgstr "图片"
 
 #: src/signatures.rs:463
 msgid "Choose a Picture of a Signature"
@@ -505,11 +505,11 @@ msgstr "选择签名图片"
 #: src/signatures.rs:480 src/window/files.rs:420 src/window/files.rs:522
 #: src/window/files.rs:751
 msgid "_Cancel"
-msgstr ""
+msgstr "取消(_C)"
 
 #: src/signatures.rs:482 src/window/files.rs:753
 msgid "_Save"
-msgstr ""
+msgstr "保存(_S)"
 
 #: src/signatures.rs:510
 msgid "New Signature"
@@ -525,16 +525,16 @@ msgstr "将文件拖放到此处,或选择一个文件"
 
 #: src/window.rs:162
 msgid "Recent"
-msgstr ""
+msgstr "最近"
 
 #: src/window.rs:188
 msgid "Thumbnails (F9)"
-msgstr ""
+msgstr "缩略图 (F9)"
 
 #: src/window.rs:200
 #, rust-format
 msgid "Open ({shortcut})"
-msgstr ""
+msgstr "打开 ({shortcut})"
 
 #: src/window.rs:258
 msgid "Main Menu"
@@ -546,7 +546,7 @@ msgstr "页面布局"
 
 #: src/window.rs:306
 msgid "Zoom"
-msgstr ""
+msgstr "缩放"
 
 #: src/window.rs:317
 #, rust-format
@@ -555,7 +555,7 @@ msgstr "跳转到页面 ({shortcut})"
 
 #: src/window.rs:330
 msgid "Search"
-msgstr ""
+msgstr "搜索"
 
 #: src/window.rs:342
 msgid "Previous Match (Shift+Enter)"
@@ -691,7 +691,7 @@ msgstr "需要密码"
 
 #: src/window/files.rs:523
 msgid "_Unlock"
-msgstr ""
+msgstr "解锁(_U)"
 
 #: src/window/files.rs:611
 #, rust-format
@@ -713,7 +713,7 @@ msgstr "“{name}”有未保存的更改。未保存的更改将会丢失。"
 
 #: src/window/files.rs:752
 msgid "_Discard"
-msgstr ""
+msgstr "放弃(_D)"
 
 #: src/window/files.rs:774
 msgid "Open PDF"
@@ -722,7 +722,7 @@ msgstr "打开 PDF"
 #: src/window/markup.rs:36
 #, rust-format
 msgid "{tool}: marks the selected text, and what is selected from now on ({shortcut} marks once)"
-msgstr ""
+msgstr "{tool}：标记所选文本及此后选中的内容（{shortcut} 仅标记一次）"
 
 #: src/window/markup.rs:50
 msgid "Draw freehand"
@@ -742,19 +742,19 @@ msgstr "绘制直线"
 
 #: src/window/markup.rs:54
 msgid "Add text: click where it goes"
-msgstr ""
+msgstr "添加文本：点击要放置的位置"
 
 #: src/window/markup.rs:55
 msgid "Add notes: click where one goes"
-msgstr ""
+msgstr "添加注释：点击要放置的位置"
 
 #: src/window/markup.rs:98
 msgid "Color"
-msgstr ""
+msgstr "颜色"
 
 #: src/window/markup.rs:113
 msgid "Signature"
-msgstr ""
+msgstr "签名"
 
 #: src/window/markup.rs:121
 msgid "Sans-serif"
@@ -770,15 +770,15 @@ msgstr "等宽字体"
 
 #: src/window/markup.rs:149
 msgid "Font"
-msgstr ""
+msgstr "字体"
 
 #: src/window/markup.rs:153
 msgid "Bold"
-msgstr ""
+msgstr "粗体"
 
 #: src/window/markup.rs:157
 msgid "Italic"
-msgstr ""
+msgstr "斜体"
 
 #: src/window/markup.rs:167
 msgid "Text size in points"
@@ -810,7 +810,7 @@ msgstr "红色"
 
 #: src/window/markup.rs:234
 msgid "Black"
-msgstr ""
+msgstr "黑色"
 
 #: src/window/markup.rs:556
 msgid "Select the text to mark first"
@@ -1001,12 +1001,12 @@ msgstr "重做重置表单"
 #: src/window/pages.rs:119
 #, rust-format
 msgid "page {page}"
-msgstr ""
+msgstr "第 {page} 页"
 
 #: src/window/pages.rs:131
 #, rust-format
 msgid "pages {pages}"
-msgstr ""
+msgstr "第 {pages} 页"
 
 #: src/window/pages.rs:199
 #, rust-format

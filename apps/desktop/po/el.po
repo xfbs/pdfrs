@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 21:37\n"
+"PO-Revision-Date: 2026-11-17 22:41\n"
 "Last-Translator: \n"
 "Language-Team: Greek\n"
 "Language: el_GR\n"
@@ -127,7 +127,7 @@ msgstr "Μία σελίδα"
 
 #: src/main.rs:260 src/window.rs:268
 msgid "Continuous"
-msgstr ""
+msgstr "Συνεχής"
 
 #: src/main.rs:261 src/window.rs:269
 msgid "Two Pages"
@@ -171,11 +171,11 @@ msgstr "Μικρογραφίες"
 
 #: src/main.rs:278 src/window.rs:780
 msgid "Contents"
-msgstr ""
+msgstr "Περιεχόμενα"
 
 #: src/main.rs:279 src/window.rs:796 src/window/markup.rs:200
 msgid "Markup"
-msgstr ""
+msgstr "Σημειώσεις"
 
 #: src/main.rs:284
 msgid "Previous Page"
@@ -199,11 +199,11 @@ msgstr "Μετάβαση στη σελίδα…"
 
 #: src/main.rs:293
 msgid "Back"
-msgstr ""
+msgstr "Πίσω"
 
 #: src/main.rs:294
 msgid "Forward"
-msgstr ""
+msgstr "Εμπρός"
 
 #: src/main.rs:300 src/window.rs:226
 msgid "Rotate Left"
@@ -219,11 +219,11 @@ msgstr "Εμφάνιση γραμμής εργαλείων σχολιασμού"
 
 #: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
-msgstr ""
+msgstr "Επισήμανση"
 
 #: src/main.rs:306 src/markup_list.rs:44 src/window/markup.rs:28
 msgid "Underline"
-msgstr ""
+msgstr "Υπογράμμιση"
 
 #: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
@@ -251,7 +251,7 @@ msgstr "Προβολή"
 
 #: src/main.rs:319
 msgid "Go"
-msgstr ""
+msgstr "Μετάβαση"
 
 #: src/main.rs:320
 msgid "Tools"
@@ -263,7 +263,7 @@ msgstr "Βοήθεια"
 
 #: src/markup_list.rs:47
 msgid "Drawing"
-msgstr ""
+msgstr "Σχέδιο"
 
 #: src/markup_list.rs:48
 msgid "Rectangle"
@@ -275,23 +275,23 @@ msgstr "Έλλειψη"
 
 #: src/markup_list.rs:50
 msgid "Line"
-msgstr ""
+msgstr "Γραμμή"
 
 #: src/markup_list.rs:51 src/markup_list.rs:56
 msgid "Note"
-msgstr ""
+msgstr "Σημείωση"
 
 #: src/markup_list.rs:52 src/markup_list.rs:57
 msgid "Text"
-msgstr ""
+msgstr "Κείμενο"
 
 #: src/markup_list.rs:53 src/markup_list.rs:58
 msgid "Stamp"
-msgstr ""
+msgstr "Σφραγίδα"
 
 #: src/markup_list.rs:59
 msgid "Shape"
-msgstr ""
+msgstr "Σχήμα"
 
 #: src/markup_list.rs:60
 msgid "Attachment"
@@ -307,11 +307,11 @@ msgstr "Οι επισημάνσεις, τα σχέδια και οι σημει�
 
 #: src/print.rs:135
 msgid "printing failed"
-msgstr ""
+msgstr "η εκτύπωση απέτυχε"
 
 #: src/print.rs:267
 msgid "couldn't open the file"
-msgstr ""
+msgstr "δεν ήταν δυνατό το άνοιγμα του αρχείου"
 
 #: src/properties.rs:36
 msgid "File Name"
@@ -323,7 +323,7 @@ msgstr "Φάκελος"
 
 #: src/properties.rs:38
 msgid "Title"
-msgstr ""
+msgstr "Τίτλος"
 
 #: src/properties.rs:39
 msgid "Author"
@@ -385,11 +385,11 @@ msgstr "Κρυπτογραφημένο, ανοίγει χωρίς κωδικό �
 
 #: src/properties.rs:60
 msgid "None"
-msgstr ""
+msgstr "Κανένα"
 
 #: src/properties.rs:65
 msgid "Not Allowed"
-msgstr ""
+msgstr "Δεν επιτρέπεται"
 
 #: src/properties.rs:73
 msgid "Printing"
@@ -440,7 +440,7 @@ msgstr "{size}, οι υπόλοιπες σελίδες διαφέρουν"
 
 #: src/signatures.rs:344
 msgid "Clear"
-msgstr ""
+msgstr "Απαλοιφή"
 
 #: src/signatures.rs:356
 msgid "Sign with the mouse or the touchpad"
@@ -448,7 +448,7 @@ msgstr "Υπογραφή με το ποντίκι ή την επιφάνεια �
 
 #: src/signatures.rs:364
 msgid "Draw"
-msgstr ""
+msgstr "Σχεδίαση"
 
 #: src/signatures.rs:381
 msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
@@ -476,11 +476,11 @@ msgstr "Μπλε μελάνι"
 
 #: src/signatures.rs:403
 msgid "Faint"
-msgstr ""
+msgstr "Αχνό"
 
 #: src/signatures.rs:405
 msgid "Dark"
-msgstr ""
+msgstr "Σκούρο"
 
 #: src/signatures.rs:416
 msgid "From a Picture"
@@ -496,7 +496,7 @@ msgstr "Δεν βρέθηκε μελάνι σε αυτή την εικόνα. Μ
 
 #: src/signatures.rs:458
 msgid "Pictures"
-msgstr ""
+msgstr "Εικόνες"
 
 #: src/signatures.rs:463
 msgid "Choose a Picture of a Signature"
@@ -525,7 +525,7 @@ msgstr "Αφήστε ένα αρχείο εδώ ή επιλέξτε ένα"
 
 #: src/window.rs:162
 msgid "Recent"
-msgstr ""
+msgstr "Πρόσφατα"
 
 #: src/window.rs:188
 msgid "Thumbnails (F9)"
@@ -546,7 +546,7 @@ msgstr "Διάταξη σελίδας"
 
 #: src/window.rs:306
 msgid "Zoom"
-msgstr ""
+msgstr "Εστίαση"
 
 #: src/window.rs:317
 #, rust-format
@@ -555,7 +555,7 @@ msgstr "Μετάβαση στη σελίδα ({shortcut})"
 
 #: src/window.rs:330
 msgid "Search"
-msgstr ""
+msgstr "Αναζήτηση"
 
 #: src/window.rs:342
 msgid "Previous Match (Shift+Enter)"
@@ -585,7 +585,7 @@ msgstr "Αδυναμία ανοίγματος του συνδέσμου: {error}
 #: src/window.rs:960
 #, rust-format
 msgid "Ctrl+{key}"
-msgstr ""
+msgstr "Ctrl+{key}"
 
 #: src/window/actions.rs:103
 #, rust-format
@@ -630,20 +630,20 @@ msgstr "Έγγραφα PDF"
 
 #: src/window/files.rs:54
 msgid "reading failed"
-msgstr ""
+msgstr "η ανάγνωση απέτυχε"
 
 #: src/window/files.rs:98 src/window/files.rs:102
 msgid "saving failed"
-msgstr ""
+msgstr "η αποθήκευση απέτυχε"
 
 #: src/window/files.rs:175
 msgid "the document's password is needed"
-msgstr ""
+msgstr "απαιτείται ο κωδικός πρόσβασης του εγγράφου"
 
 #: src/window/files.rs:177
 #, rust-format
 msgid "{app} can't save this document correctly yet"
-msgstr ""
+msgstr "Το {app} δεν μπορεί ακόμη να αποθηκεύσει σωστά αυτό το έγγραφο"
 
 #: src/window/files.rs:249 src/window/pages.rs:405
 #, rust-format
@@ -662,7 +662,7 @@ msgstr "Το «{name}» τροποποιήθηκε από άλλο πρόγρα�
 
 #: src/window/files.rs:335
 msgid "_Reload"
-msgstr ""
+msgstr "_Επαναφόρτωση"
 
 #: src/window/files.rs:413
 msgid "File Changed on Disk"
@@ -675,12 +675,12 @@ msgstr "Το «{name}» τροποποιήθηκε από άλλο πρόγρα�
 
 #: src/window/files.rs:421
 msgid "_Save Anyway"
-msgstr ""
+msgstr "_Αποθήκευση Παρ' Όλα Αυτά"
 
 #: src/window/files.rs:514
 #, rust-format
 msgid "The password was incorrect. Enter the password for “{name}”."
-msgstr ""
+msgstr "Ο κωδικός πρόσβασης ήταν λανθασμένος. Εισαγάγετε τον κωδικό πρόσβασης για το «{name}»."
 
 #: src/window/files.rs:518
 #, rust-format
@@ -693,12 +693,12 @@ msgstr "Απαιτείται κωδικός πρόσβασης"
 
 #: src/window/files.rs:523
 msgid "_Unlock"
-msgstr ""
+msgstr "_Ξεκλείδωμα"
 
 #: src/window/files.rs:611
 #, rust-format
 msgid "Couldn't print: {error}"
-msgstr ""
+msgstr "Δεν ήταν δυνατή η εκτύπωση: {error}"
 
 #: src/window/files.rs:656
 msgid "Save As"
@@ -711,11 +711,11 @@ msgstr "Αποθήκευση αλλαγών;"
 #: src/window/files.rs:746
 #, rust-format
 msgid "“{name}” has unsaved changes. Changes that aren't saved will be lost."
-msgstr ""
+msgstr "Το «{name}» έχει μη αποθηκευμένες αλλαγές. Οι αλλαγές που δεν αποθηκεύονται θα χαθούν."
 
 #: src/window/files.rs:752
 msgid "_Discard"
-msgstr ""
+msgstr "_Απόρριψη"
 
 #: src/window/files.rs:774
 msgid "Open PDF"
@@ -724,7 +724,7 @@ msgstr "Άνοιγμα PDF"
 #: src/window/markup.rs:36
 #, rust-format
 msgid "{tool}: marks the selected text, and what is selected from now on ({shortcut} marks once)"
-msgstr ""
+msgstr "{tool}: επισημαίνει το επιλεγμένο κείμενο και οτιδήποτε επιλέγεται από εδώ και πέρα (με {shortcut} επισημαίνει μία φορά)"
 
 #: src/window/markup.rs:50
 msgid "Draw freehand"
@@ -744,11 +744,11 @@ msgstr "Σχεδίαση γραμμών"
 
 #: src/window/markup.rs:54
 msgid "Add text: click where it goes"
-msgstr ""
+msgstr "Προσθήκη κειμένου: κάντε κλικ στο σημείο όπου θα μπει"
 
 #: src/window/markup.rs:55
 msgid "Add notes: click where one goes"
-msgstr ""
+msgstr "Προσθήκη σημειώσεων: κάντε κλικ στο σημείο όπου θα μπει η καθεμία"
 
 #: src/window/markup.rs:98
 msgid "Color"
@@ -756,7 +756,7 @@ msgstr "Χρώμα"
 
 #: src/window/markup.rs:113
 msgid "Signature"
-msgstr ""
+msgstr "Υπογραφή"
 
 #: src/window/markup.rs:121
 msgid "Sans-serif"
@@ -816,23 +816,23 @@ msgstr "Μαύρο"
 
 #: src/window/markup.rs:556
 msgid "Select the text to mark first"
-msgstr ""
+msgstr "Επιλέξτε πρώτα το κείμενο που θα επισημανθεί"
 
 #: src/window/markup.rs:602
 msgid "Place this signature: click where it goes"
-msgstr ""
+msgstr "Τοποθέτηση αυτής της υπογραφής: κάντε κλικ στο σημείο όπου θα μπει"
 
 #: src/window/markup.rs:614
 msgid "Delete this signature"
-msgstr ""
+msgstr "Διαγραφή αυτής της υπογραφής"
 
 #: src/window/markup.rs:630
 msgid "New Signature…"
-msgstr ""
+msgstr "Νέα Υπογραφή…"
 
 #: src/window/markup.rs:659
 msgid "Click where the signature goes"
-msgstr ""
+msgstr "Κάντε κλικ στο σημείο όπου θα μπει η υπογραφή"
 
 #: src/window/markup.rs:1544 src/window/markup.rs:1571
 #: src/window/markup.rs:1664 src/window/markup.rs:1717
@@ -870,39 +870,39 @@ msgstr[1] "Αναίρεση εισαγωγής {n} σελίδων"
 
 #: src/window/pages.rs:36
 msgid "Undo Highlight"
-msgstr ""
+msgstr "Αναίρεση Επισήμανσης"
 
 #: src/window/pages.rs:37
 msgid "Undo Underline"
-msgstr ""
+msgstr "Αναίρεση Υπογράμμισης"
 
 #: src/window/pages.rs:38
 msgid "Undo Strikethrough"
-msgstr ""
+msgstr "Αναίρεση διακριτής διαγραφής"
 
 #: src/window/pages.rs:39
 msgid "Undo Drawing"
-msgstr ""
+msgstr "Αναίρεση σχεδίου"
 
 #: src/window/pages.rs:40
 msgid "Undo Rectangle"
-msgstr ""
+msgstr "Αναίρεση ορθογωνίου"
 
 #: src/window/pages.rs:41
 msgid "Undo Ellipse"
-msgstr ""
+msgstr "Αναίρεση έλλειψης"
 
 #: src/window/pages.rs:42
 msgid "Undo Line"
-msgstr ""
+msgstr "Αναίρεση γραμμής"
 
 #: src/window/pages.rs:43
 msgid "Undo Note"
-msgstr ""
+msgstr "Αναίρεση σημείωσης"
 
 #: src/window/pages.rs:44
 msgid "Undo Text Box"
-msgstr ""
+msgstr "Αναίρεση πλαισίου κειμένου"
 
 #: src/window/pages.rs:45
 msgid "Undo Add Annotation"
@@ -918,7 +918,7 @@ msgstr "Αναίρεση αλλαγής σχολίου"
 
 #: src/window/pages.rs:48
 msgid "Undo Fill In Field"
-msgstr ""
+msgstr "Αναίρεση συμπλήρωσης πεδίου"
 
 #: src/window/pages.rs:49
 msgid "Undo Reset Form"
@@ -954,7 +954,7 @@ msgstr[1] "Επανάληψη εισαγωγής {n} σελίδων"
 
 #: src/window/pages.rs:66
 msgid "Redo Highlight"
-msgstr ""
+msgstr "Επανάληψη επισήμανσης"
 
 #: src/window/pages.rs:67
 msgid "Redo Underline"
@@ -1011,12 +1011,12 @@ msgstr "Επανάληψη επαναφοράς φόρμας"
 #: src/window/pages.rs:119
 #, rust-format
 msgid "page {page}"
-msgstr ""
+msgstr "σελίδα {page}"
 
 #: src/window/pages.rs:131
 #, rust-format
 msgid "pages {pages}"
-msgstr ""
+msgstr "σελίδες {pages}"
 
 #: src/window/pages.rs:199
 #, rust-format

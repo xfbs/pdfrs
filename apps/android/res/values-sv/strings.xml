@@ -11,22 +11,22 @@
     <!-- Buttons that many dialogs share. -->
     <string name="cancel">Avbryt</string>
     <string name="close">Stäng</string>
-    <string name="open">Open</string>
+    <string name="open">Öppna</string>
     <string name="save">Spara</string>
     <string name="save_as">Spara som</string>
     <string name="discard">Förkasta</string>
     <string name="delete">Ta bort</string>
-    <string name="share">Share</string>
+    <string name="share">Dela</string>
     <string name="select_all">Markera allt</string>
     <!-- Describes the ⋮ button to screen readers. -->
-    <string name="more">More</string>
+    <string name="more">Mer</string>
     <string name="back">Tillbaka</string>
     <!-- The top bar. -->
     <string name="back_to_document">Tillbaka till dokumentet</string>
     <string name="contents_and_pages">Innehåll och sidor</string>
     <!-- Beside the document's name while it has unsaved changes. -->
     <string name="edited">Redigerad</string>
-    <string name="search">Search</string>
+    <string name="search">Sök</string>
     <!-- The ⋮ menu. -->
     <string name="menu_open">Öppna</string>
     <string name="menu_share">Dela</string>
@@ -35,6 +35,7 @@
     <string name="menu_properties">Egenskaper</string>
     <string name="menu_highlight_fields">Markera formulärfält</string>
     <string name="menu_reset_form">Återställ formulär</string>
+    <string name="menu_discard_changes">Förkasta ändringar</string>
     <string name="menu_settings">Inställningar</string>
     <!-- Closes the document and returns to the start screen. -->
     <string name="menu_close">Stäng</string>
@@ -58,7 +59,7 @@
     <string name="redo_reset_form">Gör om återställning av formulär</string>
     <!-- The start screen. -->
     <string name="open_pdf">Öppna PDF</string>
-    <string name="recent">Recent</string>
+    <string name="recent">Senaste</string>
     <!-- Where the reader left off in a recent document. -->
     <string name="recent_page">Sida %1$d</string>
     <string name="recent_page_of">Sida %1$d av %2$d</string>
@@ -78,10 +79,10 @@
     <!-- Pages and Contents. -->
     <string name="tab_pages">Sidor</string>
     <string name="tab_contents">Innehåll</string>
-    <string name="collapse">Collapse</string>
-    <string name="expand">Expand</string>
+    <string name="collapse">Fäll ihop</string>
+    <string name="expand">Fäll ut</string>
     <!-- What a long press on a page in the page grid does, for screen readers. -->
-    <string name="pick">Pick</string>
+    <string name="pick">Välj</string>
     <!-- Follows the finger while pages are dragged to another place. -->
     <plurals name="pages_dragged">
         <item quantity="one">%d sida</item>
@@ -97,7 +98,7 @@
     <!-- Which page a typed page number is, counted from the first. -->
     <string name="go_to_position">Sida %1$d av %2$d</string>
     <string name="go_to_position_hint">Eller en position, 1–%1$d</string>
-    <string name="go">Go</string>
+    <string name="go">Gå</string>
     <!-- Search. -->
     <string name="close_search">Stäng sökning</string>
     <string name="previous_match">Föregående träff</string>
@@ -119,13 +120,13 @@
     <string name="could_not_delete_annotation">Det gick inte att ta bort anteckningen: %1$s</string>
     <!-- Titles of the dialogs that fill in a field of a form, where the form has no name for it. -->
     <string name="field_text_title">Fyll i fält</string>
-    <string name="field_choice_title">Choose</string>
+    <string name="field_choice_title">Välj</string>
     <string name="field_done">Klar</string>
     <!-- The line of a menu of a form that takes text of one\'s own instead of one of its options. -->
     <string name="field_own_text">Eller skriv en egen text</string>
     <!-- How many characters a field holds of how many it takes, such as 3 / 10. -->
     <string name="field_length">%1$d / %2$d</string>
-    <string name="copy">Copy</string>
+    <string name="copy">Kopiera</string>
     <string name="copied">Kopierat</string>
     <string name="too_much_to_copy">Det är för mycket text för att kopiera på en gång</string>
     <string name="too_much_to_share">Det är för mycket text för att dela på en gång</string>
@@ -146,7 +147,7 @@
     <string name="fit_page">Anpassa sida</string>
     <string name="fit_width">Anpassa bredd</string>
     <!-- Tells screen readers which menu item is ticked. -->
-    <string name="chosen">Chosen</string>
+    <string name="chosen">Vald</string>
     <!-- Editing pages. -->
     <!-- How many pages are picked: short, it shares a phone's top bar with four buttons. -->
     <plurals name="pages_selected">
@@ -159,10 +160,13 @@
     <string name="delete_pages">Ta bort sidor</string>
     <string name="unsaved_title">Spara ändringar?</string>
     <string name="unsaved_text">Ändringarna av sidorna i %1$s går förlorade om du inte sparar dem.</string>
+    <string name="discard_title">Förkasta ändringar?</string>
+    <string name="discard_text">Ändringarna i %1$s sedan det senast sparades kommer att gå förlorade.</string>
     <string name="saving">Sparar…</string>
     <!-- With what went wrong, as the system or the PDF library put it (in English). -->
     <string name="could_not_save">Kunde inte spara: %1$s</string>
     <string name="could_not_save_there">Kunde inte spara där. Detta är den redigerade kopian.</string>
+    <string name="draft_not_restored">De osparade ändringarna i %1$s kunde inte återställas.</string>
     <!-- Sharing and printing. -->
     <string name="could_not_share">Kunde inte dela filen</string>
     <string name="preparing_to_print">Förbereder utskrift…</string>
@@ -176,7 +180,7 @@
     <string name="property_creator">Skapad med</string>
     <string name="property_producer">PDF-producent</string>
     <string name="property_created">Skapad</string>
-    <string name="property_modified">Modified</string>
+    <string name="property_modified">Ändrad</string>
     <string name="property_pages">Sidor</string>
     <string name="property_page_size">Sidstorlek</string>
     <string name="property_file_size">Filstorlek</string>

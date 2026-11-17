@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 21:37\n"
+"PO-Revision-Date: 2026-11-17 22:41\n"
 "Last-Translator: \n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
@@ -45,7 +45,7 @@ msgstr "lopdf (저장)"
 
 #: src/main.rs:177
 msgid "Built with"
-msgstr ""
+msgstr "사용한 기술"
 
 #: src/main.rs:207
 #, rust-format
@@ -127,7 +127,7 @@ msgstr "한 페이지"
 
 #: src/main.rs:260 src/window.rs:268
 msgid "Continuous"
-msgstr ""
+msgstr "연속"
 
 #: src/main.rs:261 src/window.rs:269
 msgid "Two Pages"
@@ -171,11 +171,11 @@ msgstr "썸네일"
 
 #: src/main.rs:278 src/window.rs:780
 msgid "Contents"
-msgstr ""
+msgstr "목차"
 
 #: src/main.rs:279 src/window.rs:796 src/window/markup.rs:200
 msgid "Markup"
-msgstr ""
+msgstr "마크업"
 
 #: src/main.rs:284
 msgid "Previous Page"
@@ -199,11 +199,11 @@ msgstr "페이지로 이동…"
 
 #: src/main.rs:293
 msgid "Back"
-msgstr ""
+msgstr "뒤로"
 
 #: src/main.rs:294
 msgid "Forward"
-msgstr ""
+msgstr "앞으로"
 
 #: src/main.rs:300 src/window.rs:226
 msgid "Rotate Left"
@@ -219,11 +219,11 @@ msgstr "마크업 도구 모음 표시"
 
 #: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
-msgstr ""
+msgstr "강조"
 
 #: src/main.rs:306 src/markup_list.rs:44 src/window/markup.rs:28
 msgid "Underline"
-msgstr ""
+msgstr "밑줄"
 
 #: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
@@ -251,7 +251,7 @@ msgstr "보기"
 
 #: src/main.rs:319
 msgid "Go"
-msgstr ""
+msgstr "이동"
 
 #: src/main.rs:320
 msgid "Tools"
@@ -263,7 +263,7 @@ msgstr "도움말"
 
 #: src/markup_list.rs:47
 msgid "Drawing"
-msgstr ""
+msgstr "그림"
 
 #: src/markup_list.rs:48
 msgid "Rectangle"
@@ -275,43 +275,43 @@ msgstr "타원"
 
 #: src/markup_list.rs:50
 msgid "Line"
-msgstr ""
+msgstr "선"
 
 #: src/markup_list.rs:51 src/markup_list.rs:56
 msgid "Note"
-msgstr ""
+msgstr "메모"
 
 #: src/markup_list.rs:52 src/markup_list.rs:57
 msgid "Text"
-msgstr ""
+msgstr "텍스트"
 
 #: src/markup_list.rs:53 src/markup_list.rs:58
 msgid "Stamp"
-msgstr ""
+msgstr "스탬프"
 
 #: src/markup_list.rs:59
 msgid "Shape"
-msgstr ""
+msgstr "도형"
 
 #: src/markup_list.rs:60
 msgid "Attachment"
-msgstr ""
+msgstr "첨부 파일"
 
 #: src/markup_list.rs:96
 msgid "No Markup"
-msgstr ""
+msgstr "마크업 없음"
 
 #: src/markup_list.rs:97
 msgid "Highlights, drawings and notes are listed here"
-msgstr ""
+msgstr "강조, 그림, 메모가 여기에 표시됩니다"
 
 #: src/print.rs:135
 msgid "printing failed"
-msgstr ""
+msgstr "인쇄하지 못했습니다"
 
 #: src/print.rs:267
 msgid "couldn't open the file"
-msgstr ""
+msgstr "파일을 열 수 없습니다"
 
 #: src/properties.rs:36
 msgid "File Name"
@@ -323,7 +323,7 @@ msgstr "폴더"
 
 #: src/properties.rs:38
 msgid "Title"
-msgstr ""
+msgstr "제목"
 
 #: src/properties.rs:39
 msgid "Author"
@@ -385,11 +385,11 @@ msgstr "암호화됨, 암호 없이 열림"
 
 #: src/properties.rs:60
 msgid "None"
-msgstr ""
+msgstr "없음"
 
 #: src/properties.rs:65
 msgid "Not Allowed"
-msgstr ""
+msgstr "허용 안 됨"
 
 #: src/properties.rs:73
 msgid "Printing"
@@ -440,7 +440,7 @@ msgstr "{size}, 다른 페이지는 크기가 다름"
 
 #: src/signatures.rs:344
 msgid "Clear"
-msgstr ""
+msgstr "지우기"
 
 #: src/signatures.rs:356
 msgid "Sign with the mouse or the touchpad"
@@ -448,7 +448,7 @@ msgstr "마우스나 터치패드로 서명하기"
 
 #: src/signatures.rs:364
 msgid "Draw"
-msgstr ""
+msgstr "그리기"
 
 #: src/signatures.rs:381
 msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
@@ -460,11 +460,11 @@ msgstr "사진 선택…"
 
 #: src/signatures.rs:395
 msgid "To the left, faint strokes are kept, and more of the paper's shadows. To the right, only what is dark."
-msgstr ""
+msgstr "왼쪽으로 갈수록 희미한 획과 종이의 그림자가 더 많이 남습니다. 오른쪽으로 갈수록 어두운 부분만 남습니다."
 
 #: src/signatures.rs:398
 msgid "Ink as in the picture"
-msgstr ""
+msgstr "그림 속 잉크 색 그대로"
 
 #: src/signatures.rs:399
 msgid "Black ink"
@@ -476,15 +476,15 @@ msgstr "파란색 잉크"
 
 #: src/signatures.rs:403
 msgid "Faint"
-msgstr ""
+msgstr "희미하게"
 
 #: src/signatures.rs:405
 msgid "Dark"
-msgstr ""
+msgstr "진하게"
 
 #: src/signatures.rs:416
 msgid "From a Picture"
-msgstr ""
+msgstr "그림에서 가져오기"
 
 #: src/signatures.rs:439
 msgid "Move the slider until the paper is gone and the strokes are whole."
@@ -496,7 +496,7 @@ msgstr "이 사진에서 잉크를 찾을 수 없습니다. 슬라이더를 왼�
 
 #: src/signatures.rs:458
 msgid "Pictures"
-msgstr ""
+msgstr "그림"
 
 #: src/signatures.rs:463
 msgid "Choose a Picture of a Signature"
@@ -505,11 +505,11 @@ msgstr "서명 사진 선택"
 #: src/signatures.rs:480 src/window/files.rs:420 src/window/files.rs:522
 #: src/window/files.rs:751
 msgid "_Cancel"
-msgstr ""
+msgstr "취소(_C)"
 
 #: src/signatures.rs:482 src/window/files.rs:753
 msgid "_Save"
-msgstr ""
+msgstr "저장(_S)"
 
 #: src/signatures.rs:510
 msgid "New Signature"
@@ -521,11 +521,11 @@ msgstr "PDF 열기"
 
 #: src/window.rs:149
 msgid "Drop a file here or choose one"
-msgstr ""
+msgstr "여기에 파일을 끌어다 놓거나 파일을 선택하세요"
 
 #: src/window.rs:162
 msgid "Recent"
-msgstr ""
+msgstr "최근 항목"
 
 #: src/window.rs:188
 msgid "Thumbnails (F9)"
@@ -534,7 +534,7 @@ msgstr "미리보기 (F9)"
 #: src/window.rs:200
 #, rust-format
 msgid "Open ({shortcut})"
-msgstr ""
+msgstr "열기 ({shortcut})"
 
 #: src/window.rs:258
 msgid "Main Menu"
@@ -542,11 +542,11 @@ msgstr "주 메뉴"
 
 #: src/window.rs:285
 msgid "Page Layout"
-msgstr ""
+msgstr "페이지 레이아웃"
 
 #: src/window.rs:306
 msgid "Zoom"
-msgstr ""
+msgstr "확대/축소"
 
 #: src/window.rs:317
 #, rust-format
@@ -555,15 +555,15 @@ msgstr "페이지로 이동 ({shortcut})"
 
 #: src/window.rs:330
 msgid "Search"
-msgstr ""
+msgstr "검색"
 
 #: src/window.rs:342
 msgid "Previous Match (Shift+Enter)"
-msgstr ""
+msgstr "이전 결과 (Shift+Enter)"
 
 #: src/window.rs:349
 msgid "Next Match (Enter)"
-msgstr ""
+msgstr "다음 결과 (Enter)"
 
 #: src/window.rs:371
 #, rust-format
@@ -628,20 +628,20 @@ msgstr "PDF 문서"
 
 #: src/window/files.rs:54
 msgid "reading failed"
-msgstr ""
+msgstr "읽기 실패"
 
 #: src/window/files.rs:98 src/window/files.rs:102
 msgid "saving failed"
-msgstr ""
+msgstr "저장 실패"
 
 #: src/window/files.rs:175
 msgid "the document's password is needed"
-msgstr ""
+msgstr "문서 암호가 필요합니다"
 
 #: src/window/files.rs:177
 #, rust-format
 msgid "{app} can't save this document correctly yet"
-msgstr ""
+msgstr "{app}에서는 아직 이 문서를 올바르게 저장할 수 없습니다"
 
 #: src/window/files.rs:249 src/window/pages.rs:405
 #, rust-format
@@ -651,16 +651,16 @@ msgstr "“{name}”을(를) 열 수 없습니다: {error}"
 #: src/window/files.rs:323
 #, rust-format
 msgid "“{name}” was moved or deleted. Saving writes it again."
-msgstr ""
+msgstr "“{name}” 파일이 이동되었거나 삭제되었습니다. 저장하면 파일을 다시 기록합니다."
 
 #: src/window/files.rs:332
 #, rust-format
 msgid "“{name}” was changed by another program. Reloading discards your edits."
-msgstr ""
+msgstr "다른 프로그램에서 “{name}” 파일을 변경했습니다. 다시 불러오면 편집한 내용이 사라집니다."
 
 #: src/window/files.rs:335
 msgid "_Reload"
-msgstr ""
+msgstr "다시 불러오기(_R)"
 
 #: src/window/files.rs:413
 msgid "File Changed on Disk"
@@ -669,16 +669,16 @@ msgstr "디스크의 파일이 변경됨"
 #: src/window/files.rs:415
 #, rust-format
 msgid "“{name}” was changed by another program after it was opened. Saving replaces those changes with this document."
-msgstr ""
+msgstr "“{name}” 파일을 연 후 다른 프로그램에서 파일을 변경했습니다. 저장하면 해당 변경 사항이 이 문서로 대체됩니다."
 
 #: src/window/files.rs:421
 msgid "_Save Anyway"
-msgstr ""
+msgstr "그래도 저장(_S)"
 
 #: src/window/files.rs:514
 #, rust-format
 msgid "The password was incorrect. Enter the password for “{name}”."
-msgstr ""
+msgstr "암호가 올바르지 않습니다. “{name}”의 암호를 입력하십시오."
 
 #: src/window/files.rs:518
 #, rust-format
@@ -691,12 +691,12 @@ msgstr "암호 필요"
 
 #: src/window/files.rs:523
 msgid "_Unlock"
-msgstr ""
+msgstr "잠금 해제(_U)"
 
 #: src/window/files.rs:611
 #, rust-format
 msgid "Couldn't print: {error}"
-msgstr ""
+msgstr "인쇄할 수 없습니다: {error}"
 
 #: src/window/files.rs:656
 msgid "Save As"
@@ -704,16 +704,16 @@ msgstr "다른 이름으로 저장"
 
 #: src/window/files.rs:744
 msgid "Save Changes?"
-msgstr ""
+msgstr "변경 사항을 저장하시겠습니까?"
 
 #: src/window/files.rs:746
 #, rust-format
 msgid "“{name}” has unsaved changes. Changes that aren't saved will be lost."
-msgstr ""
+msgstr "“{name}”에 저장하지 않은 변경 사항이 있습니다. 저장하지 않은 변경 사항은 사라집니다."
 
 #: src/window/files.rs:752
 msgid "_Discard"
-msgstr ""
+msgstr "버리기(_D)"
 
 #: src/window/files.rs:774
 msgid "Open PDF"
@@ -722,7 +722,7 @@ msgstr "PDF 열기"
 #: src/window/markup.rs:36
 #, rust-format
 msgid "{tool}: marks the selected text, and what is selected from now on ({shortcut} marks once)"
-msgstr ""
+msgstr "{tool}: 선택한 텍스트와 지금부터 선택하는 텍스트를 표시합니다({shortcut}: 한 번만 표시)"
 
 #: src/window/markup.rs:50
 msgid "Draw freehand"
@@ -742,11 +742,11 @@ msgstr "선 그리기"
 
 #: src/window/markup.rs:54
 msgid "Add text: click where it goes"
-msgstr ""
+msgstr "텍스트 추가: 넣을 위치를 클릭하십시오"
 
 #: src/window/markup.rs:55
 msgid "Add notes: click where one goes"
-msgstr ""
+msgstr "메모 추가: 넣을 위치를 클릭하십시오"
 
 #: src/window/markup.rs:98
 msgid "Color"
@@ -754,7 +754,7 @@ msgstr "색상"
 
 #: src/window/markup.rs:113
 msgid "Signature"
-msgstr ""
+msgstr "서명"
 
 #: src/window/markup.rs:121
 msgid "Sans-serif"
@@ -814,15 +814,15 @@ msgstr "검은색"
 
 #: src/window/markup.rs:556
 msgid "Select the text to mark first"
-msgstr ""
+msgstr "먼저 표시할 텍스트를 선택하십시오"
 
 #: src/window/markup.rs:602
 msgid "Place this signature: click where it goes"
-msgstr ""
+msgstr "이 서명 배치: 넣을 위치를 클릭하십시오"
 
 #: src/window/markup.rs:614
 msgid "Delete this signature"
-msgstr ""
+msgstr "이 서명 삭제"
 
 #: src/window/markup.rs:630
 msgid "New Signature…"
@@ -830,37 +830,37 @@ msgstr "새 서명…"
 
 #: src/window/markup.rs:659
 msgid "Click where the signature goes"
-msgstr ""
+msgstr "서명을 넣을 위치를 클릭하십시오"
 
 #: src/window/markup.rs:1544 src/window/markup.rs:1571
 #: src/window/markup.rs:1664 src/window/markup.rs:1717
 #, rust-format
 msgid "Couldn't change the annotation: {error}"
-msgstr ""
+msgstr "주석을 변경할 수 없습니다: {error}"
 
 #: src/window/pages.rs:27
 #, rust-format
 msgid "Undo Rotate Page"
 msgid_plural "Undo Rotate {n} Pages"
-msgstr[0] ""
+msgstr[0] "페이지 {n}개 회전 실행 취소"
 
 #: src/window/pages.rs:30
 #, rust-format
 msgid "Undo Delete Page"
 msgid_plural "Undo Delete {n} Pages"
-msgstr[0] ""
+msgstr[0] "페이지 {n}개 삭제 실행 취소"
 
 #: src/window/pages.rs:32
 #, rust-format
 msgid "Undo Move Page"
 msgid_plural "Undo Move {n} Pages"
-msgstr[0] ""
+msgstr[0] "페이지 {n}개 이동 실행 취소"
 
 #: src/window/pages.rs:34
 #, rust-format
 msgid "Undo Insert Page"
 msgid_plural "Undo Insert {n} Pages"
-msgstr[0] ""
+msgstr[0] "페이지 {n}개 삽입 실행 취소"
 
 #: src/window/pages.rs:36
 msgid "Undo Highlight"
@@ -1001,12 +1001,12 @@ msgstr "양식 초기화 다시 실행"
 #: src/window/pages.rs:119
 #, rust-format
 msgid "page {page}"
-msgstr ""
+msgstr "{page}페이지"
 
 #: src/window/pages.rs:131
 #, rust-format
 msgid "pages {pages}"
-msgstr ""
+msgstr "{pages}페이지"
 
 #: src/window/pages.rs:199
 #, rust-format

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 21:37\n"
+"PO-Revision-Date: 2026-11-17 22:41\n"
 "Last-Translator: \n"
 "Language-Team: Vietnamese\n"
 "Language: vi_VN\n"
@@ -36,16 +36,16 @@ msgstr "© 2026 Những người đóng góp cho Specto"
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:173
 msgid "hayro (rendering)"
-msgstr ""
+msgstr "hayro (kết xuất)"
 
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:175
 msgid "lopdf (saving)"
-msgstr ""
+msgstr "lopdf (lưu)"
 
 #: src/main.rs:177
 msgid "Built with"
-msgstr ""
+msgstr "Được xây dựng với"
 
 #: src/main.rs:207
 #, rust-format
@@ -63,7 +63,7 @@ msgstr "Mở…"
 
 #: src/main.rs:227 src/window.rs:213
 msgid "Save"
-msgstr ""
+msgstr "Lưu"
 
 #: src/main.rs:228 src/window.rs:214
 msgid "Save As…"
@@ -79,7 +79,7 @@ msgstr "In…"
 
 #: src/main.rs:233 src/properties.rs:201 src/window.rs:220
 msgid "Properties"
-msgstr ""
+msgstr "Thuộc tính"
 
 #: src/main.rs:235
 msgid "Close Window"
@@ -175,7 +175,7 @@ msgstr "Mục lục"
 
 #: src/main.rs:279 src/window.rs:796 src/window/markup.rs:200
 msgid "Markup"
-msgstr ""
+msgstr "Đánh dấu"
 
 #: src/main.rs:284
 msgid "Previous Page"
@@ -219,11 +219,11 @@ msgstr "Hiện thanh công cụ đánh dấu"
 
 #: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
-msgstr ""
+msgstr "Tô sáng"
 
 #: src/main.rs:306 src/markup_list.rs:44 src/window/markup.rs:28
 msgid "Underline"
-msgstr ""
+msgstr "Gạch chân"
 
 #: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
@@ -251,7 +251,7 @@ msgstr "Xem"
 
 #: src/main.rs:319
 msgid "Go"
-msgstr ""
+msgstr "Đi tới"
 
 #: src/main.rs:320
 msgid "Tools"
@@ -263,7 +263,7 @@ msgstr "Trợ giúp"
 
 #: src/markup_list.rs:47
 msgid "Drawing"
-msgstr ""
+msgstr "Hình vẽ"
 
 #: src/markup_list.rs:48
 msgid "Rectangle"
@@ -275,27 +275,27 @@ msgstr "Hình elip"
 
 #: src/markup_list.rs:50
 msgid "Line"
-msgstr ""
+msgstr "Đường kẻ"
 
 #: src/markup_list.rs:51 src/markup_list.rs:56
 msgid "Note"
-msgstr ""
+msgstr "Ghi chú"
 
 #: src/markup_list.rs:52 src/markup_list.rs:57
 msgid "Text"
-msgstr ""
+msgstr "Văn bản"
 
 #: src/markup_list.rs:53 src/markup_list.rs:58
 msgid "Stamp"
-msgstr ""
+msgstr "Con dấu"
 
 #: src/markup_list.rs:59
 msgid "Shape"
-msgstr ""
+msgstr "Hình khối"
 
 #: src/markup_list.rs:60
 msgid "Attachment"
-msgstr ""
+msgstr "Tệp đính kèm"
 
 #: src/markup_list.rs:96
 msgid "No Markup"
@@ -323,7 +323,7 @@ msgstr "Thư mục"
 
 #: src/properties.rs:38
 msgid "Title"
-msgstr ""
+msgstr "Tiêu đề"
 
 #: src/properties.rs:39
 msgid "Author"
@@ -385,7 +385,7 @@ msgstr "Đã mã hóa, mở không cần mật khẩu"
 
 #: src/properties.rs:60
 msgid "None"
-msgstr ""
+msgstr "Không có"
 
 #: src/properties.rs:65
 msgid "Not Allowed"
@@ -440,7 +440,7 @@ msgstr "{size}, các trang khác có khổ khác"
 
 #: src/signatures.rs:344
 msgid "Clear"
-msgstr ""
+msgstr "Xóa"
 
 #: src/signatures.rs:356
 msgid "Sign with the mouse or the touchpad"
@@ -448,7 +448,7 @@ msgstr "Ký bằng chuột hoặc bàn di chuột"
 
 #: src/signatures.rs:364
 msgid "Draw"
-msgstr ""
+msgstr "Vẽ"
 
 #: src/signatures.rs:381
 msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
@@ -464,7 +464,7 @@ msgstr "Kéo sang trái sẽ giữ lại cả những nét mờ và nhiều bón
 
 #: src/signatures.rs:398
 msgid "Ink as in the picture"
-msgstr ""
+msgstr "Mực như trong ảnh"
 
 #: src/signatures.rs:399
 msgid "Black ink"
@@ -476,15 +476,15 @@ msgstr "Mực xanh"
 
 #: src/signatures.rs:403
 msgid "Faint"
-msgstr ""
+msgstr "Nhạt"
 
 #: src/signatures.rs:405
 msgid "Dark"
-msgstr ""
+msgstr "Đậm"
 
 #: src/signatures.rs:416
 msgid "From a Picture"
-msgstr ""
+msgstr "Từ ảnh"
 
 #: src/signatures.rs:439
 msgid "Move the slider until the paper is gone and the strokes are whole."
@@ -496,7 +496,7 @@ msgstr "Không tìm thấy nét mực nào trong ảnh này. Hãy kéo thanh tr�
 
 #: src/signatures.rs:458
 msgid "Pictures"
-msgstr ""
+msgstr "Ảnh"
 
 #: src/signatures.rs:463
 msgid "Choose a Picture of a Signature"
@@ -525,7 +525,7 @@ msgstr "Thả tệp vào đây hoặc chọn một tệp"
 
 #: src/window.rs:162
 msgid "Recent"
-msgstr ""
+msgstr "Gần đây"
 
 #: src/window.rs:188
 msgid "Thumbnails (F9)"
@@ -534,7 +534,7 @@ msgstr "Ảnh thu nhỏ (F9)"
 #: src/window.rs:200
 #, rust-format
 msgid "Open ({shortcut})"
-msgstr ""
+msgstr "Mở ({shortcut})"
 
 #: src/window.rs:258
 msgid "Main Menu"
@@ -542,11 +542,11 @@ msgstr "Trình đơn chính"
 
 #: src/window.rs:285
 msgid "Page Layout"
-msgstr ""
+msgstr "Bố cục trang"
 
 #: src/window.rs:306
 msgid "Zoom"
-msgstr ""
+msgstr "Thu phóng"
 
 #: src/window.rs:317
 #, rust-format
@@ -555,7 +555,7 @@ msgstr "Đi tới trang ({shortcut})"
 
 #: src/window.rs:330
 msgid "Search"
-msgstr ""
+msgstr "Tìm kiếm"
 
 #: src/window.rs:342
 msgid "Previous Match (Shift+Enter)"
@@ -628,15 +628,15 @@ msgstr "Tài liệu PDF"
 
 #: src/window/files.rs:54
 msgid "reading failed"
-msgstr ""
+msgstr "đọc thất bại"
 
 #: src/window/files.rs:98 src/window/files.rs:102
 msgid "saving failed"
-msgstr ""
+msgstr "lưu thất bại"
 
 #: src/window/files.rs:175
 msgid "the document's password is needed"
-msgstr ""
+msgstr "cần mật khẩu của tài liệu"
 
 #: src/window/files.rs:177
 #, rust-format
@@ -656,11 +656,11 @@ msgstr "“{name}” đã bị di chuyển hoặc xóa. Việc lưu sẽ ghi l�
 #: src/window/files.rs:332
 #, rust-format
 msgid "“{name}” was changed by another program. Reloading discards your edits."
-msgstr ""
+msgstr "“{name}” đã bị một chương trình khác thay đổi. Tải lại sẽ hủy bỏ các chỉnh sửa của bạn."
 
 #: src/window/files.rs:335
 msgid "_Reload"
-msgstr ""
+msgstr "_Tải lại"
 
 #: src/window/files.rs:413
 msgid "File Changed on Disk"
@@ -673,7 +673,7 @@ msgstr "“{name}” đã bị một chương trình khác thay đổi sau khi �
 
 #: src/window/files.rs:421
 msgid "_Save Anyway"
-msgstr ""
+msgstr "_Vẫn lưu"
 
 #: src/window/files.rs:514
 #, rust-format
@@ -691,7 +691,7 @@ msgstr "Yêu cầu mật khẩu"
 
 #: src/window/files.rs:523
 msgid "_Unlock"
-msgstr ""
+msgstr "_Mở khóa"
 
 #: src/window/files.rs:611
 #, rust-format
@@ -713,7 +713,7 @@ msgstr "“{name}” có các thay đổi chưa được lưu. Những thay đ�
 
 #: src/window/files.rs:752
 msgid "_Discard"
-msgstr ""
+msgstr "_Hủy bỏ"
 
 #: src/window/files.rs:774
 msgid "Open PDF"
@@ -722,7 +722,7 @@ msgstr "Mở PDF"
 #: src/window/markup.rs:36
 #, rust-format
 msgid "{tool}: marks the selected text, and what is selected from now on ({shortcut} marks once)"
-msgstr ""
+msgstr "{tool}: đánh dấu văn bản đang chọn và những gì được chọn từ giờ trở đi ({shortcut} để đánh dấu một lần)"
 
 #: src/window/markup.rs:50
 msgid "Draw freehand"
@@ -742,19 +742,19 @@ msgstr "Vẽ đường thẳng"
 
 #: src/window/markup.rs:54
 msgid "Add text: click where it goes"
-msgstr ""
+msgstr "Thêm văn bản: nhấp vào vị trí cần đặt"
 
 #: src/window/markup.rs:55
 msgid "Add notes: click where one goes"
-msgstr ""
+msgstr "Thêm ghi chú: nhấp vào vị trí cần đặt ghi chú"
 
 #: src/window/markup.rs:98
 msgid "Color"
-msgstr ""
+msgstr "Màu"
 
 #: src/window/markup.rs:113
 msgid "Signature"
-msgstr ""
+msgstr "Chữ ký"
 
 #: src/window/markup.rs:121
 msgid "Sans-serif"
@@ -814,7 +814,7 @@ msgstr "Đen"
 
 #: src/window/markup.rs:556
 msgid "Select the text to mark first"
-msgstr ""
+msgstr "Hãy chọn văn bản cần đánh dấu trước"
 
 #: src/window/markup.rs:602
 msgid "Place this signature: click where it goes"
@@ -876,7 +876,7 @@ msgstr "Hoàn tác gạch ngang"
 
 #: src/window/pages.rs:39
 msgid "Undo Drawing"
-msgstr ""
+msgstr "Hoàn tác nét vẽ"
 
 #: src/window/pages.rs:40
 msgid "Undo Rectangle"
@@ -888,11 +888,11 @@ msgstr "Hoàn tác hình elip"
 
 #: src/window/pages.rs:42
 msgid "Undo Line"
-msgstr ""
+msgstr "Hoàn tác đường kẻ"
 
 #: src/window/pages.rs:43
 msgid "Undo Note"
-msgstr ""
+msgstr "Hoàn tác ghi chú"
 
 #: src/window/pages.rs:44
 msgid "Undo Text Box"
@@ -968,11 +968,11 @@ msgstr "Làm lại hình elip"
 
 #: src/window/pages.rs:72
 msgid "Redo Line"
-msgstr ""
+msgstr "Làm lại đường kẻ"
 
 #: src/window/pages.rs:73
 msgid "Redo Note"
-msgstr ""
+msgstr "Làm lại ghi chú"
 
 #: src/window/pages.rs:74
 msgid "Redo Text Box"

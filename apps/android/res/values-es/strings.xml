@@ -35,6 +35,7 @@
     <string name="menu_properties">Propiedades</string>
     <string name="menu_highlight_fields">Resaltar campos del formulario</string>
     <string name="menu_reset_form">Restablecer formulario</string>
+    <string name="menu_discard_changes">Descartar cambios</string>
     <string name="menu_settings">Ajustes</string>
     <!-- Closes the document and returns to the start screen. -->
     <string name="menu_close">Cerrar</string>
@@ -159,10 +160,13 @@
     <string name="delete_pages">Eliminar páginas</string>
     <string name="unsaved_title">¿Guardar los cambios?</string>
     <string name="unsaved_text">Los cambios en las páginas de %1$s se perderán si no se guardan.</string>
+    <string name="discard_title">¿Descartar los cambios?</string>
+    <string name="discard_text">Se perderán los cambios hechos en %1$s desde la última vez que se guardó.</string>
     <string name="saving">Guardando…</string>
     <!-- With what went wrong, as the system or the PDF library put it (in English). -->
     <string name="could_not_save">No se pudo guardar: %1$s</string>
     <string name="could_not_save_there">No se pudo guardar ahí. Esta es la copia editada.</string>
+    <string name="draft_not_restored">No se han podido restaurar los cambios sin guardar de %1$s.</string>
     <!-- Sharing and printing. -->
     <string name="could_not_share">No se pudo compartir este archivo</string>
     <string name="preparing_to_print">Preparando la impresión…</string>

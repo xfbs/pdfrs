@@ -35,6 +35,7 @@
     <string name="menu_properties">Eigenschappen</string>
     <string name="menu_highlight_fields">Invoervelden markeren</string>
     <string name="menu_reset_form">Formulier herstellen</string>
+    <string name="menu_discard_changes">Wijzigingen negeren</string>
     <string name="menu_settings">Instellingen</string>
     <!-- Closes the document and returns to the start screen. -->
     <string name="menu_close">Sluiten</string>
@@ -159,10 +160,13 @@
     <string name="delete_pages">Pagina\'s verwijderen</string>
     <string name="unsaved_title">Wijzigingen opslaan?</string>
     <string name="unsaved_text">De wijzigingen op de pagina\'s van %1$s gaan verloren tenzij u ze opslaat.</string>
+    <string name="discard_title">Wijzigingen negeren?</string>
+    <string name="discard_text">De wijzigingen in %1$s sinds de laatste keer opslaan gaan verloren.</string>
     <string name="saving">Opslaan…</string>
     <!-- With what went wrong, as the system or the PDF library put it (in English). -->
     <string name="could_not_save">Kan niet opslaan: %1$s</string>
     <string name="could_not_save_there">Kan daar niet opslaan. Dit is de bewerkte kopie.</string>
+    <string name="draft_not_restored">De niet-opgeslagen wijzigingen in %1$s konden niet worden hersteld.</string>
     <!-- Sharing and printing. -->
     <string name="could_not_share">Kan dit bestand niet delen</string>
     <string name="preparing_to_print">Afdruk voorbereiden…</string>

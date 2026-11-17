@@ -11,22 +11,22 @@
     <!-- Buttons that many dialogs share. -->
     <string name="cancel">إلغاء</string>
     <string name="close">إغلاق</string>
-    <string name="open">Open</string>
+    <string name="open">فتح</string>
     <string name="save">حفظ</string>
     <string name="save_as">حفظ باسم</string>
     <string name="discard">تجاهل</string>
     <string name="delete">حذف</string>
-    <string name="share">Share</string>
+    <string name="share">مشاركة</string>
     <string name="select_all">تحديد الكل</string>
     <!-- Describes the ⋮ button to screen readers. -->
-    <string name="more">More</string>
+    <string name="more">المزيد</string>
     <string name="back">رجوع</string>
     <!-- The top bar. -->
     <string name="back_to_document">العودة إلى المستند</string>
     <string name="contents_and_pages">المحتويات والصفحات</string>
     <!-- Beside the document's name while it has unsaved changes. -->
     <string name="edited">معدَّل</string>
-    <string name="search">Search</string>
+    <string name="search">بحث</string>
     <!-- The ⋮ menu. -->
     <string name="menu_open">فتح</string>
     <string name="menu_share">مشاركة</string>
@@ -35,6 +35,7 @@
     <string name="menu_properties">الخصائص</string>
     <string name="menu_highlight_fields">إبراز حقول النموذج</string>
     <string name="menu_reset_form">إعادة تعيين النموذج</string>
+    <string name="menu_discard_changes">تجاهل التغييرات</string>
     <string name="menu_settings">الإعدادات</string>
     <!-- Closes the document and returns to the start screen. -->
     <string name="menu_close">إغلاق</string>
@@ -58,7 +59,7 @@
     <string name="redo_reset_form">إعادة تصفير الاستمارة</string>
     <!-- The start screen. -->
     <string name="open_pdf">افتح ملف PDF</string>
-    <string name="recent">Recent</string>
+    <string name="recent">الأخيرة</string>
     <!-- Where the reader left off in a recent document. -->
     <string name="recent_page">الصفحة %1$d</string>
     <string name="recent_page_of">الصفحة %1$d من %2$d</string>
@@ -78,10 +79,10 @@
     <!-- Pages and Contents. -->
     <string name="tab_pages">الصفحات</string>
     <string name="tab_contents">المحتويات</string>
-    <string name="collapse">Collapse</string>
-    <string name="expand">Expand</string>
+    <string name="collapse">طيّ</string>
+    <string name="expand">توسيع</string>
     <!-- What a long press on a page in the page grid does, for screen readers. -->
-    <string name="pick">Pick</string>
+    <string name="pick">اختيار</string>
     <!-- Follows the finger while pages are dragged to another place. -->
     <plurals name="pages_dragged">
         <item quantity="zero">لا صفحات</item>
@@ -101,7 +102,7 @@
     <!-- Which page a typed page number is, counted from the first. -->
     <string name="go_to_position">الصفحة %1$d من %2$d</string>
     <string name="go_to_position_hint">أو موضع، 1–%1$d</string>
-    <string name="go">Go</string>
+    <string name="go">انتقال</string>
     <!-- Search. -->
     <string name="close_search">أغلق البحث</string>
     <string name="previous_match">المطابقة السابقة</string>
@@ -115,7 +116,7 @@
     <string name="no_matches">لا توجد مطابقات</string>
     <!-- Selected text. -->
     <!-- Marks the selected text: with a highlighter, or a line under or through it. -->
-    <string name="highlight">Highlight</string>
+    <string name="highlight">تمييز</string>
     <string name="underline">تسطير</string>
     <string name="strike_through">شطب</string>
     <!-- Tells screen readers that an annotation (a mark on the text, a note, a drawing) is picked. -->
@@ -123,13 +124,13 @@
     <string name="could_not_delete_annotation">تعذر حذف الحاشية: %1$s</string>
     <!-- Titles of the dialogs that fill in a field of a form, where the form has no name for it. -->
     <string name="field_text_title">املأ الحقل</string>
-    <string name="field_choice_title">Choose</string>
-    <string name="field_done">Done</string>
+    <string name="field_choice_title">اختر</string>
+    <string name="field_done">تم</string>
     <!-- The line of a menu of a form that takes text of one\'s own instead of one of its options. -->
     <string name="field_own_text">أو اكتب نصك الخاص</string>
     <!-- How many characters a field holds of how many it takes, such as 3 / 10. -->
     <string name="field_length">%1$d / %2$d</string>
-    <string name="copy">Copy</string>
+    <string name="copy">نسخ</string>
     <string name="copied">نُسخ</string>
     <string name="too_much_to_copy">هذا نص أطول من أن يُنسخ دفعة واحدة</string>
     <string name="too_much_to_share">هذا نص أطول من أن يُشارك دفعة واحدة</string>
@@ -143,23 +144,23 @@
     <!-- Describes the view button: "View: Single page". -->
     <string name="view_description">العرض: %1$s</string>
     <string name="layout_single_page">صفحة واحدة</string>
-    <string name="layout_continuous">Continuous</string>
+    <string name="layout_continuous">متواصل</string>
     <string name="layout_two_pages">صفحتان</string>
     <string name="layout_two_pages_continuous">صفحتان، متواصلتان</string>
     <string name="first_page_alone">الصفحة الأولى منفردة</string>
     <string name="fit_page">ملاءمة الصفحة</string>
     <string name="fit_width">ملاءمة العرض</string>
     <!-- Tells screen readers which menu item is ticked. -->
-    <string name="chosen">Chosen</string>
+    <string name="chosen">مختار</string>
     <!-- Editing pages. -->
     <!-- How many pages are picked: short, it shares a phone's top bar with four buttons. -->
     <plurals name="pages_selected">
-        <item quantity="zero">%d selected</item>
-        <item quantity="one">%d selected</item>
-        <item quantity="two">%d selected</item>
-        <item quantity="few">%d selected</item>
-        <item quantity="many">%d selected</item>
-        <item quantity="other">%d selected</item>
+        <item quantity="zero">لا شيء محدد</item>
+        <item quantity="one">محددة</item>
+        <item quantity="two">محددتان</item>
+        <item quantity="few">%d محددة</item>
+        <item quantity="many">%d محددة</item>
+        <item quantity="other">%d محددة</item>
     </plurals>
     <string name="clear_selection">مسح التحديد</string>
     <string name="rotate_left">تدوير لليسار</string>
@@ -167,24 +168,27 @@
     <string name="delete_pages">حذف الصفحات</string>
     <string name="unsaved_title">أتريد حفظ التغييرات؟</string>
     <string name="unsaved_text">ستفقد التغييرات التي أجريتها على صفحات %1$s ما لم تحفظها.</string>
+    <string name="discard_title">هل تريد تجاهل التغييرات؟</string>
+    <string name="discard_text">ستضيع التغييرات التي أُجريت على %1$s منذ آخر حفظ.</string>
     <string name="saving">يحفظ…</string>
     <!-- With what went wrong, as the system or the PDF library put it (in English). -->
     <string name="could_not_save">تعذّر الحفظ: %1$s</string>
     <string name="could_not_save_there">تعذّر الحفظ هناك. هذه هي النسخة المحرّرة.</string>
+    <string name="draft_not_restored">تعذّرت استعادة التغييرات غير المحفوظة على %1$s.</string>
     <!-- Sharing and printing. -->
     <string name="could_not_share">تعذّرت مشاركة هذا الملف</string>
     <string name="preparing_to_print">يحضّر للطباعة…</string>
     <string name="could_not_print">تعذّرت الطباعة: %1$s</string>
     <!-- Properties. -->
     <string name="property_file_name">اسم الملف</string>
-    <string name="property_title">Title</string>
+    <string name="property_title">العنوان</string>
     <string name="property_author">المؤلف</string>
-    <string name="property_subject">Subject</string>
+    <string name="property_subject">الموضوع</string>
     <string name="property_keywords">الكلمات المفتاحية</string>
     <string name="property_creator">أُنشئ بواسطة</string>
     <string name="property_producer">منتج PDF</string>
-    <string name="property_created">Created</string>
-    <string name="property_modified">Modified</string>
+    <string name="property_created">تاريخ الإنشاء</string>
+    <string name="property_modified">تاريخ التعديل</string>
     <string name="property_pages">الصفحات</string>
     <string name="property_page_size">حجم الصفحة</string>
     <string name="property_file_size">حجم الملف</string>
@@ -213,5 +217,5 @@
     <string name="crash_log">سجل الأعطال</string>
     <string name="crash_log_empty">لم يحدث أي خطأ حتى الآن</string>
     <!-- With the date of the newest entry. -->
-    <string name="crash_log_detail">Last entry %1$s. Kept on this device; nothing is sent unless you share it.</string>
+    <string name="crash_log_detail">آخر إدخال: %1$s. يُحفظ على هذا الجهاز ولا يُرسل أي شيء ما لم تشاركه بنفسك.</string>
 </resources>

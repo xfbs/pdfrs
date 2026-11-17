@@ -10,31 +10,32 @@
 <resources>
     <!-- Buttons that many dialogs share. -->
     <string name="cancel">Mégse</string>
-    <string name="close">Close</string>
-    <string name="open">Open</string>
+    <string name="close">Bezárás</string>
+    <string name="open">Megnyitás</string>
     <string name="save">Mentés</string>
     <string name="save_as">Mentés másként</string>
-    <string name="discard">Discard</string>
+    <string name="discard">Elvetés</string>
     <string name="delete">Törlés</string>
-    <string name="share">Share</string>
+    <string name="share">Megosztás</string>
     <string name="select_all">Összes kijelölése</string>
     <!-- Describes the ⋮ button to screen readers. -->
-    <string name="more">More</string>
+    <string name="more">Továbbiak</string>
     <string name="back">Vissza</string>
     <!-- The top bar. -->
     <string name="back_to_document">Vissza a dokumentumhoz</string>
     <string name="contents_and_pages">Tartalom és oldalak</string>
     <!-- Beside the document's name while it has unsaved changes. -->
     <string name="edited">Módosítva</string>
-    <string name="search">Search</string>
+    <string name="search">Keresés</string>
     <!-- The ⋮ menu. -->
-    <string name="menu_open">Open</string>
-    <string name="menu_share">Share</string>
+    <string name="menu_open">Megnyitás</string>
+    <string name="menu_share">Megosztás</string>
     <string name="menu_print">Nyomtatás</string>
     <string name="menu_go_to_page">Ugrás oldalra</string>
     <string name="menu_properties">Tulajdonságok</string>
     <string name="menu_highlight_fields">Űrlapmezők kiemelése</string>
     <string name="menu_reset_form">Űrlap visszaállítása</string>
+    <string name="menu_discard_changes">Módosítások elvetése</string>
     <string name="menu_settings">Beállítások</string>
     <!-- Closes the document and returns to the start screen. -->
     <string name="menu_close">Bezárás</string>
@@ -47,7 +48,7 @@
     <string name="undo_change_annotation">Megjegyzés módosításának visszavonása</string>
     <string name="undo_fill_field">Mező kitöltésének visszavonása</string>
     <string name="undo_reset_form">Űrlap visszaállításának visszavonása</string>
-    <string name="redo_rotate">Redo rotate</string>
+    <string name="redo_rotate">Forgatás újra</string>
     <string name="redo_delete">Törlés ismétlése</string>
     <string name="redo_move">Áthelyezés ismétlése</string>
     <string name="redo_insert">Beszúrás ismétlése</string>
@@ -58,7 +59,7 @@
     <string name="redo_reset_form">Űrlap visszaállításának ismétlése</string>
     <!-- The start screen. -->
     <string name="open_pdf">PDF megnyitása</string>
-    <string name="recent">Recent</string>
+    <string name="recent">Legutóbbiak</string>
     <!-- Where the reader left off in a recent document. -->
     <string name="recent_page">%1$d. oldal</string>
     <string name="recent_page_of">%1$d. oldal / %2$d</string>
@@ -67,28 +68,28 @@
     <!-- Opening a document. -->
     <!-- What a document without a name is called. -->
     <string name="unnamed_document">PDF</string>
-    <string name="could_not_open">Couldn\'t open this file</string>
+    <string name="could_not_open">Nem sikerült megnyitni ezt a fájlt</string>
     <string name="open_another">Másik PDF megnyitása</string>
     <string name="password_protected">A(z) %1$s jelszóval védett</string>
-    <string name="password_needed">A password is needed to open %1$s.</string>
+    <string name="password_needed">Jelszó szükséges a következő megnyitásához: %1$s.</string>
     <string name="password_title">Jelszó szükséges</string>
-    <string name="password_prompt">Enter the password to open %1$s.</string>
+    <string name="password_prompt">Adja meg a jelszót a következő megnyitásához: %1$s.</string>
     <string name="password_label">Jelszó</string>
-    <string name="password_wrong">That password didn\'t work.</string>
+    <string name="password_wrong">Ez a jelszó nem megfelelő.</string>
     <!-- Pages and Contents. -->
     <string name="tab_pages">Oldalak</string>
     <string name="tab_contents">Tartalom</string>
-    <string name="collapse">Collapse</string>
-    <string name="expand">Expand</string>
+    <string name="collapse">Összecsukás</string>
+    <string name="expand">Kibontás</string>
     <!-- What a long press on a page in the page grid does, for screen readers. -->
-    <string name="pick">Pick</string>
+    <string name="pick">Kijelölés</string>
     <!-- Follows the finger while pages are dragged to another place. -->
     <plurals name="pages_dragged">
         <item quantity="one">%d oldal</item>
         <item quantity="other">%d oldal</item>
     </plurals>
     <!-- Links that lead out of the document. -->
-    <string name="link_open_title">Open this link?</string>
+    <string name="link_open_title">Megnyitja ezt a hivatkozást?</string>
     <string name="link_blocked_title">Ez a hivatkozás nem nyitható meg</string>
     <!-- "Go to page". -->
     <string name="go_to_title">Ugrás oldalra</string>
@@ -96,8 +97,8 @@
     <string name="go_to_label">Oldal (%1$s–%2$s)</string>
     <!-- Which page a typed page number is, counted from the first. -->
     <string name="go_to_position">%1$d. oldal, összesen %2$d</string>
-    <string name="go_to_position_hint">Or a position, 1–%1$d</string>
-    <string name="go">Go</string>
+    <string name="go_to_position_hint">Vagy egy pozíció: 1–%1$d</string>
+    <string name="go">Ugrás</string>
     <!-- Search. -->
     <string name="close_search">Keresés bezárása</string>
     <string name="previous_match">Előző találat</string>
@@ -112,20 +113,20 @@
     <!-- Selected text. -->
     <!-- Marks the selected text: with a highlighter, or a line under or through it. -->
     <string name="highlight">Kiemelés</string>
-    <string name="underline">Underline</string>
-    <string name="strike_through">Strike through</string>
+    <string name="underline">Aláhúzás</string>
+    <string name="strike_through">Áthúzás</string>
     <!-- Tells screen readers that an annotation (a mark on the text, a note, a drawing) is picked. -->
     <string name="annotation_selected">Jegyzet kijelölve</string>
     <string name="could_not_delete_annotation">A jegyzet törlése nem sikerült: %1$s</string>
     <!-- Titles of the dialogs that fill in a field of a form, where the form has no name for it. -->
-    <string name="field_text_title">Fill in field</string>
-    <string name="field_choice_title">Choose</string>
-    <string name="field_done">Done</string>
+    <string name="field_text_title">Mező kitöltése</string>
+    <string name="field_choice_title">Válasszon</string>
+    <string name="field_done">Kész</string>
     <!-- The line of a menu of a form that takes text of one\'s own instead of one of its options. -->
     <string name="field_own_text">Vagy írja be a sajátját</string>
     <!-- How many characters a field holds of how many it takes, such as 3 / 10. -->
     <string name="field_length">%1$d / %2$d</string>
-    <string name="copy">Copy</string>
+    <string name="copy">Másolás</string>
     <string name="copied">Másolva</string>
     <string name="too_much_to_copy">Ez túl sok szöveg egyszerre történő másoláshoz</string>
     <string name="too_much_to_share">Ez túl sok szöveg egyszerre történő megosztáshoz</string>
@@ -146,7 +147,7 @@
     <string name="fit_page">Oldal illesztése</string>
     <string name="fit_width">Szélességhez illesztés</string>
     <!-- Tells screen readers which menu item is ticked. -->
-    <string name="chosen">Chosen</string>
+    <string name="chosen">Kiválasztva</string>
     <!-- Editing pages. -->
     <!-- How many pages are picked: short, it shares a phone's top bar with four buttons. -->
     <plurals name="pages_selected">
@@ -158,11 +159,14 @@
     <string name="rotate_right">Forgatás jobbra</string>
     <string name="delete_pages">Oldalak törlése</string>
     <string name="unsaved_title">Menti a módosításokat?</string>
-    <string name="unsaved_text">The changes to the pages of %1$s are lost unless you save them.</string>
+    <string name="unsaved_text">%1$s oldalain végzett módosítások elvesznek, ha nem menti őket.</string>
+    <string name="discard_title">Elveti a módosításokat?</string>
+    <string name="discard_text">%1$s legutóbbi mentése óta végzett módosítások elvesznek.</string>
     <string name="saving">Mentés…</string>
     <!-- With what went wrong, as the system or the PDF library put it (in English). -->
     <string name="could_not_save">Nem sikerült menteni: %1$s</string>
-    <string name="could_not_save_there">Couldn\'t save there. This is the edited copy.</string>
+    <string name="could_not_save_there">Oda nem sikerült menteni. Ez a szerkesztett másolat.</string>
+    <string name="draft_not_restored">%1$s nem mentett módosításait nem sikerült visszaállítani.</string>
     <!-- Sharing and printing. -->
     <string name="could_not_share">Nem sikerült megosztani ezt a fájlt</string>
     <string name="preparing_to_print">Nyomtatás előkészítése…</string>
@@ -173,9 +177,9 @@
     <string name="property_author">Szerző</string>
     <string name="property_subject">Tárgy</string>
     <string name="property_keywords">Kulcsszavak</string>
-    <string name="property_creator">Created with</string>
+    <string name="property_creator">Létrehozó alkalmazás</string>
     <string name="property_producer">PDF-készítő</string>
-    <string name="property_created">Created</string>
+    <string name="property_created">Létrehozva</string>
     <string name="property_modified">Módosítva</string>
     <string name="property_pages">Oldalak</string>
     <string name="property_page_size">Oldalméret</string>
@@ -187,19 +191,19 @@
     <string name="page_size_in">%1$s × %2$s hüvelyk</string>
     <!-- A size with the name of the paper: "210 × 297 mm (A4)". -->
     <string name="page_size_named">%1$s (%2$s)</string>
-    <string name="page_size_named_landscape">%1$s (%2$s, landscape)</string>
+    <string name="page_size_named_landscape">%1$s (%2$s, fekvő)</string>
     <!-- The size of the first page, when not all pages have it. -->
     <string name="page_size_others_differ">%1$s; a többi oldal eltér</string>
     <!-- Settings. -->
     <string name="setting_keep_screen_on">Képernyő bekapcsolva tartása</string>
     <plurals name="setting_keep_screen_on_detail">
-        <item quantity="one">While a document is open, for %d minute after the last touch</item>
-        <item quantity="other">While a document is open, for %d minutes after the last touch</item>
+        <item quantity="one">Amíg egy dokumentum meg van nyitva, az utolsó érintés után %d percig</item>
+        <item quantity="other">Amíg egy dokumentum meg van nyitva, az utolsó érintés után %d percig</item>
     </plurals>
     <string name="setting_volume_keys">A hangerőgombok lapoznak</string>
-    <string name="setting_volume_keys_detail">Volume down goes on, volume up goes back</string>
+    <string name="setting_volume_keys_detail">Hangerő le: előre, hangerő fel: vissza</string>
     <string name="crash_log">Összeomlási napló</string>
-    <string name="crash_log_empty">Nothing went wrong so far</string>
+    <string name="crash_log_empty">Eddig nem történt hiba</string>
     <!-- With the date of the newest entry. -->
-    <string name="crash_log_detail">Last entry %1$s. Kept on this device; nothing is sent unless you share it.</string>
+    <string name="crash_log_detail">Utolsó bejegyzés: %1$s. Az eszközön marad, semmi sem kerül elküldésre, hacsak meg nem osztja.</string>
 </resources>

@@ -11,30 +11,31 @@
     <!-- Buttons that many dialogs share. -->
     <string name="cancel">ביטול</string>
     <string name="close">סגירה</string>
-    <string name="open">Open</string>
+    <string name="open">פתיחה</string>
     <string name="save">שמירה</string>
     <string name="save_as">שמירה בשם</string>
-    <string name="discard">Discard</string>
-    <string name="delete">Delete</string>
-    <string name="share">Share</string>
+    <string name="discard">ביטול</string>
+    <string name="delete">מחיקה</string>
+    <string name="share">שיתוף</string>
     <string name="select_all">בחירת הכול</string>
     <!-- Describes the ⋮ button to screen readers. -->
-    <string name="more">More</string>
-    <string name="back">Back</string>
+    <string name="more">עוד</string>
+    <string name="back">חזרה</string>
     <!-- The top bar. -->
     <string name="back_to_document">חזרה למסמך</string>
-    <string name="contents_and_pages">Contents and pages</string>
+    <string name="contents_and_pages">תוכן עניינים ועמודים</string>
     <!-- Beside the document's name while it has unsaved changes. -->
-    <string name="edited">Edited</string>
+    <string name="edited">נערך</string>
     <string name="search">חיפוש</string>
     <!-- The ⋮ menu. -->
     <string name="menu_open">פתיחה</string>
-    <string name="menu_share">Share</string>
+    <string name="menu_share">שיתוף</string>
     <string name="menu_print">הדפסה</string>
     <string name="menu_go_to_page">מעבר לעמוד</string>
     <string name="menu_properties">מאפיינים</string>
     <string name="menu_highlight_fields">הדגשת שדות טופס</string>
     <string name="menu_reset_form">איפוס הטופס</string>
+    <string name="menu_discard_changes">ביטול השינויים</string>
     <string name="menu_settings">הגדרות</string>
     <!-- Closes the document and returns to the start screen. -->
     <string name="menu_close">סגירה</string>
@@ -57,7 +58,7 @@
     <string name="redo_fill_field">ביצוע חוזר של מילוי שדה</string>
     <string name="redo_reset_form">ביצוע חוזר של איפוס הטופס</string>
     <!-- The start screen. -->
-    <string name="open_pdf">Open PDF</string>
+    <string name="open_pdf">פתיחת PDF</string>
     <string name="recent">אחרונים</string>
     <!-- Where the reader left off in a recent document. -->
     <string name="recent_page">עמוד %1$d</string>
@@ -68,65 +69,65 @@
     <!-- What a document without a name is called. -->
     <string name="unnamed_document">PDF</string>
     <string name="could_not_open">לא ניתן לפתוח את הקובץ הזה</string>
-    <string name="open_another">Open another PDF</string>
+    <string name="open_another">פתיחת PDF אחר</string>
     <string name="password_protected">הקובץ %1$s מוגן בסיסמה</string>
-    <string name="password_needed">A password is needed to open %1$s.</string>
+    <string name="password_needed">נדרשת סיסמה כדי לפתוח את %1$s.</string>
     <string name="password_title">נדרשת סיסמה</string>
-    <string name="password_prompt">Enter the password to open %1$s.</string>
+    <string name="password_prompt">יש להזין את הסיסמה כדי לפתוח את %1$s.</string>
     <string name="password_label">סיסמה</string>
-    <string name="password_wrong">That password didn\'t work.</string>
+    <string name="password_wrong">הסיסמה הזו לא עבדה.</string>
     <!-- Pages and Contents. -->
     <string name="tab_pages">עמודים</string>
     <string name="tab_contents">תוכן עניינים</string>
-    <string name="collapse">Collapse</string>
-    <string name="expand">Expand</string>
+    <string name="collapse">צמצום</string>
+    <string name="expand">הרחבה</string>
     <!-- What a long press on a page in the page grid does, for screen readers. -->
-    <string name="pick">Pick</string>
+    <string name="pick">בחירה</string>
     <!-- Follows the finger while pages are dragged to another place. -->
     <plurals name="pages_dragged">
-        <item quantity="one">%d page</item>
-        <item quantity="two">%d pages</item>
-        <item quantity="other">%d pages</item>
+        <item quantity="one">עמוד %d</item>
+        <item quantity="two">%d עמודים</item>
+        <item quantity="other">%d עמודים</item>
     </plurals>
     <!-- Links that lead out of the document. -->
-    <string name="link_open_title">Open this link?</string>
+    <string name="link_open_title">לפתוח את הקישור הזה?</string>
     <string name="link_blocked_title">לא ניתן לפתוח את הקישור הזה</string>
     <!-- "Go to page". -->
     <string name="go_to_title">מעבר לעמוד</string>
     <!-- The field's label, with the first and last page number: "Page (i–240)". -->
-    <string name="go_to_label">Page (%1$s–%2$s)</string>
+    <string name="go_to_label">עמוד (%1$s–%2$s)</string>
     <!-- Which page a typed page number is, counted from the first. -->
     <string name="go_to_position">עמוד %1$d מתוך %2$d</string>
-    <string name="go_to_position_hint">Or a position, 1–%1$d</string>
-    <string name="go">Go</string>
+    <string name="go_to_position_hint">או מיקום, 1–%1$d</string>
+    <string name="go">מעבר</string>
     <!-- Search. -->
-    <string name="close_search">Close search</string>
+    <string name="close_search">סגירת החיפוש</string>
     <string name="previous_match">ההתאמה הקודמת</string>
     <string name="next_match">ההתאמה הבאה</string>
     <!-- Which match is shown: "3 of 17". -->
     <string name="search_count">%1$d מתוך %2$d</string>
     <!-- The same while the document is still being searched. -->
-    <string name="search_count_so_far">%1$d of %2$d…</string>
+    <string name="search_count_so_far">%1$d מתוך %2$d…</string>
     <!-- Still searching, nothing found yet. -->
     <string name="search_running">…</string>
     <string name="no_matches">אין התאמות</string>
     <!-- Selected text. -->
     <!-- Marks the selected text: with a highlighter, or a line under or through it. -->
-    <string name="highlight">Highlight</string>
+    <string name="highlight">הדגשה</string>
     <string name="underline">קו תחתון</string>
-    <string name="strike_through">Strike through</string>
+    <string name="strike_through">קו חוצה</string>
     <!-- Tells screen readers that an annotation (a mark on the text, a note, a drawing) is picked. -->
     <string name="annotation_selected">הערה נבחרה</string>
     <string name="could_not_delete_annotation">לא ניתן למחוק את ההערה: %1$s</string>
     <!-- Titles of the dialogs that fill in a field of a form, where the form has no name for it. -->
-    <string name="field_text_title">Fill in field</string>
-    <string name="field_choice_title">Choose</string>
-    <string name="field_done">Done</string>
+    <string name="field_text_title">מילוי שדה</string>
+    <string name="field_choice_title">בחירה</string>
+    <string name="field_done">סיום</string>
     <!-- The line of a menu of a form that takes text of one\'s own instead of one of its options. -->
     <string name="field_own_text">או הקלידו טקסט משלכם</string>
     <!-- How many characters a field holds of how many it takes, such as 3 / 10. -->
     <string name="field_length">%1$d / %2$d</string>
-    <string name="copy">Copy</string>
+    <string name="copy">העתקה</string>
     <string name="copied">הועתק</string>
     <string name="too_much_to_copy">זה יותר מדי טקסט להעתקה בבת אחת</string>
     <string name="too_much_to_share">זה יותר מדי טקסט לשיתוף בבת אחת</string>
@@ -135,7 +136,7 @@
     <!-- Tells screen readers that text is selected on the page. -->
     <string name="text_selected">טקסט נבחר</string>
     <!-- The page view. -->
-    <string name="still_drawing">Still drawing this page</string>
+    <string name="still_drawing">העמוד עדיין בשרטוט</string>
     <!-- The view menu. -->
     <!-- Describes the view button: "View: Single page". -->
     <string name="view_description">תצוגה: %1$s</string>
@@ -147,7 +148,7 @@
     <string name="fit_page">התאמה לעמוד</string>
     <string name="fit_width">התאמה לרוחב</string>
     <!-- Tells screen readers which menu item is ticked. -->
-    <string name="chosen">Chosen</string>
+    <string name="chosen">נבחר</string>
     <!-- Editing pages. -->
     <!-- How many pages are picked: short, it shares a phone's top bar with four buttons. -->
     <plurals name="pages_selected">
@@ -156,17 +157,20 @@
         <item quantity="other">%d נבחרו</item>
     </plurals>
     <string name="clear_selection">ניקוי הבחירה</string>
-    <string name="rotate_left">Rotate left</string>
-    <string name="rotate_right">Rotate right</string>
+    <string name="rotate_left">סיבוב שמאלה</string>
+    <string name="rotate_right">סיבוב ימינה</string>
     <string name="delete_pages">מחיקת עמודים</string>
     <string name="unsaved_title">לשמור את השינויים?</string>
-    <string name="unsaved_text">The changes to the pages of %1$s are lost unless you save them.</string>
+    <string name="unsaved_text">השינויים בעמודים של %1$s יאבדו אם לא תשמרו אותם.</string>
+    <string name="discard_title">לבטל את השינויים?</string>
+    <string name="discard_text">השינויים ב־%1$s מאז השמירה האחרונה יאבדו.</string>
     <string name="saving">שומר…</string>
     <!-- With what went wrong, as the system or the PDF library put it (in English). -->
     <string name="could_not_save">השמירה נכשלה: %1$s</string>
-    <string name="could_not_save_there">Couldn\'t save there. This is the edited copy.</string>
+    <string name="could_not_save_there">לא ניתן היה לשמור שם. זה העותק הערוך.</string>
+    <string name="draft_not_restored">לא ניתן היה לשחזר את השינויים שלא נשמרו ב־%1$s.</string>
     <!-- Sharing and printing. -->
-    <string name="could_not_share">Couldn\'t share this file</string>
+    <string name="could_not_share">לא ניתן היה לשתף את הקובץ הזה</string>
     <string name="preparing_to_print">מכין להדפסה…</string>
     <string name="could_not_print">ההדפסה נכשלה: %1$s</string>
     <!-- Properties. -->
@@ -175,7 +179,7 @@
     <string name="property_author">מחבר</string>
     <string name="property_subject">נושא</string>
     <string name="property_keywords">מילות מפתח</string>
-    <string name="property_creator">Created with</string>
+    <string name="property_creator">נוצר באמצעות</string>
     <string name="property_producer">יצרן ה-PDF</string>
     <string name="property_created">נוצר</string>
     <string name="property_modified">עודכן</string>
@@ -189,20 +193,20 @@
     <string name="page_size_in">%1$s × %2$s אינץ׳</string>
     <!-- A size with the name of the paper: "210 × 297 mm (A4)". -->
     <string name="page_size_named">%1$s (%2$s)</string>
-    <string name="page_size_named_landscape">%1$s (%2$s, landscape)</string>
+    <string name="page_size_named_landscape">%1$s (%2$s, לרוחב)</string>
     <!-- The size of the first page, when not all pages have it. -->
     <string name="page_size_others_differ">%1$s; שאר העמודים שונים</string>
     <!-- Settings. -->
     <string name="setting_keep_screen_on">השארת המסך דלוק</string>
     <plurals name="setting_keep_screen_on_detail">
         <item quantity="one">בזמן שמסמך פתוח, למשך דקה אחת לאחר המגע האחרון</item>
-        <item quantity="two">While a document is open, for %d minutes after the last touch</item>
+        <item quantity="two">כשמסמך פתוח, במשך %d דקות אחרי הנגיעה האחרונה</item>
         <item quantity="other">בזמן שמסמך פתוח, למשך %d דקות לאחר המגע האחרון</item>
     </plurals>
     <string name="setting_volume_keys">מקשי עוצמת השמע מדפדפים בין עמודים</string>
-    <string name="setting_volume_keys_detail">Volume down goes on, volume up goes back</string>
+    <string name="setting_volume_keys_detail">החלשת עוצמת הקול מעבירה קדימה, הגברת עוצמת הקול מחזירה אחורה</string>
     <string name="crash_log">יומן קריסה</string>
-    <string name="crash_log_empty">Nothing went wrong so far</string>
+    <string name="crash_log_empty">עד עכשיו שום דבר לא השתבש</string>
     <!-- With the date of the newest entry. -->
-    <string name="crash_log_detail">Last entry %1$s. Kept on this device; nothing is sent unless you share it.</string>
+    <string name="crash_log_detail">רשומה אחרונה: %1$s. נשמר במכשיר הזה; שום דבר לא נשלח אלא אם תשתפו אותו.</string>
 </resources>

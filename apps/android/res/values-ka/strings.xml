@@ -14,16 +14,16 @@
     <string name="open">გახსნა</string>
     <string name="save">შენახვა</string>
     <string name="save_as">შენახვა როგორც</string>
-    <string name="discard">Discard</string>
+    <string name="discard">გაუქმება</string>
     <string name="delete">წაშლა</string>
     <string name="share">გაზიარება</string>
     <string name="select_all">ყველას მონიშვნა</string>
     <!-- Describes the ⋮ button to screen readers. -->
-    <string name="more">More</string>
-    <string name="back">Back</string>
+    <string name="more">მეტი</string>
+    <string name="back">უკან</string>
     <!-- The top bar. -->
     <string name="back_to_document">დოკუმენტზე დაბრუნება</string>
-    <string name="contents_and_pages">Contents and pages</string>
+    <string name="contents_and_pages">სარჩევი და გვერდები</string>
     <!-- Beside the document's name while it has unsaved changes. -->
     <string name="edited">შეცვლილია</string>
     <string name="search">ძიება</string>
@@ -35,6 +35,7 @@
     <string name="menu_properties">თვისებები</string>
     <string name="menu_highlight_fields">ფორმის ველების გამოკვეთა</string>
     <string name="menu_reset_form">ფორმის განულება</string>
+    <string name="menu_discard_changes">ცვლილებების გაუქმება</string>
     <string name="menu_settings">პარამეტრები</string>
     <!-- Closes the document and returns to the start screen. -->
     <string name="menu_close">დახურვა</string>
@@ -47,7 +48,7 @@
     <string name="undo_change_annotation">ანოტაციის ცვლილების გაუქმება</string>
     <string name="undo_fill_field">ველის შევსების გაუქმება</string>
     <string name="undo_reset_form">ფორმის გასუფთავების გაუქმება</string>
-    <string name="redo_rotate">Redo rotate</string>
+    <string name="redo_rotate">შემობრუნების გამეორება</string>
     <string name="redo_delete">წაშლის გამეორება</string>
     <string name="redo_move">გადატანის გამეორება</string>
     <string name="redo_insert">ჩასმის გამეორება</string>
@@ -58,7 +59,7 @@
     <string name="redo_reset_form">ფორმის გასუფთავების გამეორება</string>
     <!-- The start screen. -->
     <string name="open_pdf">PDF-ის გახსნა</string>
-    <string name="recent">Recent</string>
+    <string name="recent">ბოლოს გახსნილი</string>
     <!-- Where the reader left off in a recent document. -->
     <string name="recent_page">გვერდი %1$d</string>
     <string name="recent_page_of">გვერდი %1$d / %2$d</string>
@@ -70,25 +71,25 @@
     <string name="could_not_open">ამ ფაილის გახსნა ვერ მოხერხდა</string>
     <string name="open_another">სხვა PDF-ის გახსნა</string>
     <string name="password_protected">%1$s დაცულია პაროლით</string>
-    <string name="password_needed">A password is needed to open %1$s.</string>
+    <string name="password_needed">%1$s-ის გასახსნელად პაროლია საჭირო.</string>
     <string name="password_title">საჭიროა პაროლი</string>
-    <string name="password_prompt">Enter the password to open %1$s.</string>
+    <string name="password_prompt">შეიყვანეთ პაროლი %1$s-ის გასახსნელად.</string>
     <string name="password_label">პაროლი</string>
-    <string name="password_wrong">That password didn\'t work.</string>
+    <string name="password_wrong">პაროლი არასწორია.</string>
     <!-- Pages and Contents. -->
     <string name="tab_pages">გვერდები</string>
     <string name="tab_contents">სარჩევი</string>
-    <string name="collapse">Collapse</string>
-    <string name="expand">Expand</string>
+    <string name="collapse">ჩაკეცვა</string>
+    <string name="expand">გაშლა</string>
     <!-- What a long press on a page in the page grid does, for screen readers. -->
-    <string name="pick">Pick</string>
+    <string name="pick">არჩევა</string>
     <!-- Follows the finger while pages are dragged to another place. -->
     <plurals name="pages_dragged">
         <item quantity="one">%d გვერდი</item>
         <item quantity="other">%d გვერდი</item>
     </plurals>
     <!-- Links that lead out of the document. -->
-    <string name="link_open_title">Open this link?</string>
+    <string name="link_open_title">გავხსნათ ეს ბმული?</string>
     <string name="link_blocked_title">ამ ბმულის გახსნა შეუძლებელია</string>
     <!-- "Go to page". -->
     <string name="go_to_title">გვერდზე გადასვლა</string>
@@ -96,8 +97,8 @@
     <string name="go_to_label">გვერდი (%1$s–%2$s)</string>
     <!-- Which page a typed page number is, counted from the first. -->
     <string name="go_to_position">გვერდი %1$d / %2$d</string>
-    <string name="go_to_position_hint">Or a position, 1–%1$d</string>
-    <string name="go">Go</string>
+    <string name="go_to_position_hint">ან პოზიცია, 1–%1$d</string>
+    <string name="go">გადასვლა</string>
     <!-- Search. -->
     <string name="close_search">ძიების დახურვა</string>
     <string name="previous_match">წინა დამთხვევა</string>
@@ -111,22 +112,22 @@
     <string name="no_matches">ბუნებრივი შესატყვისები არ არის</string>
     <!-- Selected text. -->
     <!-- Marks the selected text: with a highlighter, or a line under or through it. -->
-    <string name="highlight">Highlight</string>
-    <string name="underline">Underline</string>
-    <string name="strike_through">Strike through</string>
+    <string name="highlight">მონიშვნა</string>
+    <string name="underline">ხაზგასმა</string>
+    <string name="strike_through">გადახაზვა</string>
     <!-- Tells screen readers that an annotation (a mark on the text, a note, a drawing) is picked. -->
     <string name="annotation_selected">ანოტაცია არჩეულია</string>
     <string name="could_not_delete_annotation">ანოტაციის წაშლა ვერ მოხერხდა: %1$s</string>
     <!-- Titles of the dialogs that fill in a field of a form, where the form has no name for it. -->
-    <string name="field_text_title">Fill in field</string>
-    <string name="field_choice_title">Choose</string>
-    <string name="field_done">Done</string>
+    <string name="field_text_title">ველის შევსება</string>
+    <string name="field_choice_title">აირჩიეთ</string>
+    <string name="field_done">მზადაა</string>
     <!-- The line of a menu of a form that takes text of one\'s own instead of one of its options. -->
     <string name="field_own_text">ან ჩაწერეთ საკუთარი</string>
     <!-- How many characters a field holds of how many it takes, such as 3 / 10. -->
     <string name="field_length">%1$d / %2$d</string>
-    <string name="copy">Copy</string>
-    <string name="copied">Copied</string>
+    <string name="copy">კოპირება</string>
+    <string name="copied">დაკოპირდა</string>
     <string name="too_much_to_copy">ერთბაშად ამდენი ტექსტის კოპირება შეუძლებელია</string>
     <string name="too_much_to_share">ერთბაშად ამდენი ტექსტის გაზიარება შეუძლებელია</string>
     <!-- What the clipboard calls text copied from a document. -->
@@ -146,7 +147,7 @@
     <string name="fit_page">გვერდის მორგება</string>
     <string name="fit_width">სიგანის მორგება</string>
     <!-- Tells screen readers which menu item is ticked. -->
-    <string name="chosen">Chosen</string>
+    <string name="chosen">არჩეულია</string>
     <!-- Editing pages. -->
     <!-- How many pages are picked: short, it shares a phone's top bar with four buttons. -->
     <plurals name="pages_selected">
@@ -158,11 +159,14 @@
     <string name="rotate_right">მარჯვნივ შებრუნება</string>
     <string name="delete_pages">გვერდების წაშლა</string>
     <string name="unsaved_title">შეინახოთ ცვლილებები?</string>
-    <string name="unsaved_text">The changes to the pages of %1$s are lost unless you save them.</string>
+    <string name="unsaved_text">%1$s-ის გვერდებში შეტანილი ცვლილებები დაიკარგება, თუ მათ არ შეინახავთ.</string>
+    <string name="discard_title">გაუქმდეს ცვლილებები?</string>
+    <string name="discard_text">%1$s-ში ბოლო შენახვის შემდეგ შეტანილი ცვლილებები დაიკარგება.</string>
     <string name="saving">ინახება…</string>
     <!-- With what went wrong, as the system or the PDF library put it (in English). -->
     <string name="could_not_save">შენახვა ვერ მოხერხდა: %1$s</string>
     <string name="could_not_save_there">იქ შენახვა ვერ მოხერხდა. ეს არის შეცვლილი ასლი.</string>
+    <string name="draft_not_restored">%1$s-ში შეტანილი შეუნახავი ცვლილებების აღდგენა ვერ მოხერხდა.</string>
     <!-- Sharing and printing. -->
     <string name="could_not_share">ამ ფაილის გაზიარება ვერ მოხერხდა</string>
     <string name="preparing_to_print">მზადდება დასაბეჭდად…</string>
@@ -201,5 +205,5 @@
     <string name="crash_log">ავარიის ჟურნალი</string>
     <string name="crash_log_empty">ჯერჯერობით არაფერი ჩავარდნილა</string>
     <!-- With the date of the newest entry. -->
-    <string name="crash_log_detail">Last entry %1$s. Kept on this device; nothing is sent unless you share it.</string>
+    <string name="crash_log_detail">ბოლო ჩანაწერი: %1$s. ინახება ამ მოწყობილობაზე. არაფერი იგზავნება, სანამ თავად არ გააზიარებთ.</string>
 </resources>

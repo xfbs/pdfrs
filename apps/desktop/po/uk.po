@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 21:37\n"
+"PO-Revision-Date: 2026-11-17 22:37\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
 "Language: uk_UA\n"
@@ -45,7 +45,7 @@ msgstr "lopdf (збереження)"
 
 #: src/main.rs:177
 msgid "Built with"
-msgstr ""
+msgstr "Створено за допомогою"
 
 #: src/main.rs:207
 #, rust-format
@@ -63,7 +63,7 @@ msgstr "Відкрити…"
 
 #: src/main.rs:227 src/window.rs:213
 msgid "Save"
-msgstr ""
+msgstr "Зберегти"
 
 #: src/main.rs:228 src/window.rs:214
 msgid "Save As…"
@@ -127,7 +127,7 @@ msgstr "Одна сторінка"
 
 #: src/main.rs:260 src/window.rs:268
 msgid "Continuous"
-msgstr ""
+msgstr "Безперервно"
 
 #: src/main.rs:261 src/window.rs:269
 msgid "Two Pages"
@@ -171,11 +171,11 @@ msgstr "Мініатюри"
 
 #: src/main.rs:278 src/window.rs:780
 msgid "Contents"
-msgstr ""
+msgstr "Зміст"
 
 #: src/main.rs:279 src/window.rs:796 src/window/markup.rs:200
 msgid "Markup"
-msgstr ""
+msgstr "Розмітка"
 
 #: src/main.rs:284
 msgid "Previous Page"
@@ -199,11 +199,11 @@ msgstr "Перейти до сторінки…"
 
 #: src/main.rs:293
 msgid "Back"
-msgstr ""
+msgstr "Назад"
 
 #: src/main.rs:294
 msgid "Forward"
-msgstr ""
+msgstr "Вперед"
 
 #: src/main.rs:300 src/window.rs:226
 msgid "Rotate Left"
@@ -219,11 +219,11 @@ msgstr "Показати панель розмітки"
 
 #: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
-msgstr ""
+msgstr "Виділення"
 
 #: src/main.rs:306 src/markup_list.rs:44 src/window/markup.rs:28
 msgid "Underline"
-msgstr ""
+msgstr "Підкреслення"
 
 #: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
@@ -251,7 +251,7 @@ msgstr "Вигляд"
 
 #: src/main.rs:319
 msgid "Go"
-msgstr ""
+msgstr "Перейти"
 
 #: src/main.rs:320
 msgid "Tools"
@@ -263,7 +263,7 @@ msgstr "Довідка"
 
 #: src/markup_list.rs:47
 msgid "Drawing"
-msgstr ""
+msgstr "Малюнок"
 
 #: src/markup_list.rs:48
 msgid "Rectangle"
@@ -275,27 +275,27 @@ msgstr "Еліпс"
 
 #: src/markup_list.rs:50
 msgid "Line"
-msgstr ""
+msgstr "Лінія"
 
 #: src/markup_list.rs:51 src/markup_list.rs:56
 msgid "Note"
-msgstr ""
+msgstr "Нотатка"
 
 #: src/markup_list.rs:52 src/markup_list.rs:57
 msgid "Text"
-msgstr ""
+msgstr "Текст"
 
 #: src/markup_list.rs:53 src/markup_list.rs:58
 msgid "Stamp"
-msgstr ""
+msgstr "Штамп"
 
 #: src/markup_list.rs:59
 msgid "Shape"
-msgstr ""
+msgstr "Фігура"
 
 #: src/markup_list.rs:60
 msgid "Attachment"
-msgstr ""
+msgstr "Вкладення"
 
 #: src/markup_list.rs:96
 msgid "No Markup"
@@ -307,11 +307,11 @@ msgstr "Тут відображаються виділення, малюнки �
 
 #: src/print.rs:135
 msgid "printing failed"
-msgstr ""
+msgstr "не вдалося надрукувати"
 
 #: src/print.rs:267
 msgid "couldn't open the file"
-msgstr ""
+msgstr "не вдалося відкрити файл"
 
 #: src/properties.rs:36
 msgid "File Name"
@@ -323,7 +323,7 @@ msgstr "Тека"
 
 #: src/properties.rs:38
 msgid "Title"
-msgstr ""
+msgstr "Назва"
 
 #: src/properties.rs:39
 msgid "Author"
@@ -385,11 +385,11 @@ msgstr "Зашифровано, відкривається без пароля"
 
 #: src/properties.rs:60
 msgid "None"
-msgstr ""
+msgstr "Немає"
 
 #: src/properties.rs:65
 msgid "Not Allowed"
-msgstr ""
+msgstr "Заборонено"
 
 #: src/properties.rs:73
 msgid "Printing"
@@ -440,7 +440,7 @@ msgstr "{size}, інші сторінки відрізняються"
 
 #: src/signatures.rs:344
 msgid "Clear"
-msgstr ""
+msgstr "Очистити"
 
 #: src/signatures.rs:356
 msgid "Sign with the mouse or the touchpad"
@@ -448,7 +448,7 @@ msgstr "Підпишіться мишею або тачпадом"
 
 #: src/signatures.rs:364
 msgid "Draw"
-msgstr ""
+msgstr "Намалювати"
 
 #: src/signatures.rs:381
 msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
@@ -460,11 +460,11 @@ msgstr "Вибрати зображення…"
 
 #: src/signatures.rs:395
 msgid "To the left, faint strokes are kept, and more of the paper's shadows. To the right, only what is dark."
-msgstr ""
+msgstr "Ліворуч зберігаються бліді штрихи та більше тіней від паперу. Праворуч — лише темні ділянки."
 
 #: src/signatures.rs:398
 msgid "Ink as in the picture"
-msgstr ""
+msgstr "Чорнило як на зображенні"
 
 #: src/signatures.rs:399
 msgid "Black ink"
@@ -476,27 +476,27 @@ msgstr "Синє чорнило"
 
 #: src/signatures.rs:403
 msgid "Faint"
-msgstr ""
+msgstr "Бліде"
 
 #: src/signatures.rs:405
 msgid "Dark"
-msgstr ""
+msgstr "Темне"
 
 #: src/signatures.rs:416
 msgid "From a Picture"
-msgstr ""
+msgstr "Із зображення"
 
 #: src/signatures.rs:439
 msgid "Move the slider until the paper is gone and the strokes are whole."
-msgstr ""
+msgstr "Пересувайте повзунок, доки папір не зникне, а штрихи залишаться цілими."
 
 #: src/signatures.rs:441
 msgid "No ink found in this picture. Move the slider to the left."
-msgstr ""
+msgstr "На цьому зображенні не знайдено чорнила. Пересуньте повзунок ліворуч."
 
 #: src/signatures.rs:458
 msgid "Pictures"
-msgstr ""
+msgstr "Зображення"
 
 #: src/signatures.rs:463
 msgid "Choose a Picture of a Signature"
@@ -505,11 +505,11 @@ msgstr "Виберіть зображення підпису"
 #: src/signatures.rs:480 src/window/files.rs:420 src/window/files.rs:522
 #: src/window/files.rs:751
 msgid "_Cancel"
-msgstr ""
+msgstr "_Скасувати"
 
 #: src/signatures.rs:482 src/window/files.rs:753
 msgid "_Save"
-msgstr ""
+msgstr "_Зберегти"
 
 #: src/signatures.rs:510
 msgid "New Signature"
@@ -525,7 +525,7 @@ msgstr "Перетягніть файл сюди або виберіть йог�
 
 #: src/window.rs:162
 msgid "Recent"
-msgstr ""
+msgstr "Нещодавні"
 
 #: src/window.rs:188
 msgid "Thumbnails (F9)"
@@ -542,11 +542,11 @@ msgstr "Головне меню"
 
 #: src/window.rs:285
 msgid "Page Layout"
-msgstr ""
+msgstr "Розташування сторінок"
 
 #: src/window.rs:306
 msgid "Zoom"
-msgstr ""
+msgstr "Масштаб"
 
 #: src/window.rs:317
 #, rust-format
@@ -555,7 +555,7 @@ msgstr "Перейти до сторінки ({shortcut})"
 
 #: src/window.rs:330
 msgid "Search"
-msgstr ""
+msgstr "Пошук"
 
 #: src/window.rs:342
 msgid "Previous Match (Shift+Enter)"
@@ -634,11 +634,11 @@ msgstr "Документи PDF"
 
 #: src/window/files.rs:54
 msgid "reading failed"
-msgstr ""
+msgstr "не вдалося прочитати"
 
 #: src/window/files.rs:98 src/window/files.rs:102
 msgid "saving failed"
-msgstr ""
+msgstr "не вдалося зберегти"
 
 #: src/window/files.rs:175
 msgid "the document's password is needed"
@@ -647,7 +647,7 @@ msgstr "потрібен пароль до документа"
 #: src/window/files.rs:177
 #, rust-format
 msgid "{app} can't save this document correctly yet"
-msgstr ""
+msgstr "{app} поки що не може правильно зберегти цей документ"
 
 #: src/window/files.rs:249 src/window/pages.rs:405
 #, rust-format
@@ -666,7 +666,7 @@ msgstr "«{name}» було змінено іншою програмою. Пер
 
 #: src/window/files.rs:335
 msgid "_Reload"
-msgstr ""
+msgstr "_Перезавантажити"
 
 #: src/window/files.rs:413
 msgid "File Changed on Disk"
@@ -679,12 +679,12 @@ msgstr "«{name}» було змінено іншою програмою піс�
 
 #: src/window/files.rs:421
 msgid "_Save Anyway"
-msgstr ""
+msgstr "_Усе одно зберегти"
 
 #: src/window/files.rs:514
 #, rust-format
 msgid "The password was incorrect. Enter the password for “{name}”."
-msgstr ""
+msgstr "Неправильний пароль. Введіть пароль для «{name}»."
 
 #: src/window/files.rs:518
 #, rust-format
@@ -697,7 +697,7 @@ msgstr "Потрібен пароль"
 
 #: src/window/files.rs:523
 msgid "_Unlock"
-msgstr ""
+msgstr "_Розблокувати"
 
 #: src/window/files.rs:611
 #, rust-format
@@ -706,7 +706,7 @@ msgstr "Не вдалося надрукувати: {error}"
 
 #: src/window/files.rs:656
 msgid "Save As"
-msgstr ""
+msgstr "Зберегти як"
 
 #: src/window/files.rs:744
 msgid "Save Changes?"
@@ -715,11 +715,11 @@ msgstr "Зберегти зміни?"
 #: src/window/files.rs:746
 #, rust-format
 msgid "“{name}” has unsaved changes. Changes that aren't saved will be lost."
-msgstr ""
+msgstr "«{name}» має незбережені зміни. Незбережені зміни буде втрачено."
 
 #: src/window/files.rs:752
 msgid "_Discard"
-msgstr ""
+msgstr "_Відкинути"
 
 #: src/window/files.rs:774
 msgid "Open PDF"
@@ -728,11 +728,11 @@ msgstr "Відкрити PDF"
 #: src/window/markup.rs:36
 #, rust-format
 msgid "{tool}: marks the selected text, and what is selected from now on ({shortcut} marks once)"
-msgstr ""
+msgstr "{tool}: позначає виділений текст і все, що буде виділено надалі ({shortcut} — позначити один раз)"
 
 #: src/window/markup.rs:50
 msgid "Draw freehand"
-msgstr ""
+msgstr "Малювати від руки"
 
 #: src/window/markup.rs:51
 msgid "Draw rectangles"
@@ -748,11 +748,11 @@ msgstr "Малювати лінії"
 
 #: src/window/markup.rs:54
 msgid "Add text: click where it goes"
-msgstr ""
+msgstr "Додавання тексту: клацніть там, де він має бути"
 
 #: src/window/markup.rs:55
 msgid "Add notes: click where one goes"
-msgstr ""
+msgstr "Додавання нотаток: клацніть там, де має бути нотатка"
 
 #: src/window/markup.rs:98
 msgid "Color"
@@ -820,7 +820,7 @@ msgstr "Чорний"
 
 #: src/window/markup.rs:556
 msgid "Select the text to mark first"
-msgstr ""
+msgstr "Спочатку виділіть текст, який потрібно позначити"
 
 #: src/window/markup.rs:602
 msgid "Place this signature: click where it goes"
@@ -848,8 +848,8 @@ msgstr "Не вдалося змінити анотацію: {error}"
 #, rust-format
 msgid "Undo Rotate Page"
 msgid_plural "Undo Rotate {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Скасувати поворот {n} сторінки"
+msgstr[1] "Скасувати поворот {n} сторінок"
 msgstr[2] "Скасувати обертання {n} сторінок"
 msgstr[3] "Скасувати обертання {n} сторінки"
 
@@ -857,7 +857,7 @@ msgstr[3] "Скасувати обертання {n} сторінки"
 #, rust-format
 msgid "Undo Delete Page"
 msgid_plural "Undo Delete {n} Pages"
-msgstr[0] "Скасувати видалення сторінки"
+msgstr[0] "Скасувати видалення {n} сторінки"
 msgstr[1] "Скасувати видалення {n} сторінок"
 msgstr[2] "Скасувати видалення {n} сторінок"
 msgstr[3] "Скасувати видалення {n} сторінки"
@@ -866,7 +866,7 @@ msgstr[3] "Скасувати видалення {n} сторінки"
 #, rust-format
 msgid "Undo Move Page"
 msgid_plural "Undo Move {n} Pages"
-msgstr[0] "Скасувати переміщення сторінки"
+msgstr[0] "Скасувати переміщення {n} сторінки"
 msgstr[1] "Скасувати переміщення {n} сторінок"
 msgstr[2] "Скасувати переміщення {n} сторінок"
 msgstr[3] "Скасувати переміщення {n} сторінки"
@@ -875,7 +875,7 @@ msgstr[3] "Скасувати переміщення {n} сторінки"
 #, rust-format
 msgid "Undo Insert Page"
 msgid_plural "Undo Insert {n} Pages"
-msgstr[0] "Скасувати вставлення сторінки"
+msgstr[0] "Скасувати вставлення {n} сторінки"
 msgstr[1] "Скасувати вставлення {n} сторінок"
 msgstr[2] "Скасувати вставлення {n} сторінок"
 msgstr[3] "Скасувати вставлення {n} сторінки"
@@ -940,7 +940,7 @@ msgstr "Скасувати скидання форми"
 #, rust-format
 msgid "Redo Rotate Page"
 msgid_plural "Redo Rotate {n} Pages"
-msgstr[0] "Повторити обертання сторінки"
+msgstr[0] "Повторити обертання {n} сторінки"
 msgstr[1] "Повторити обертання {n} сторінок"
 msgstr[2] "Повторити обертання {n} сторінок"
 msgstr[3] "Повторити обертання {n} сторінки"
@@ -949,7 +949,7 @@ msgstr[3] "Повторити обертання {n} сторінки"
 #, rust-format
 msgid "Redo Delete Page"
 msgid_plural "Redo Delete {n} Pages"
-msgstr[0] "Повторити видалення сторінки"
+msgstr[0] "Повторити видалення {n} сторінки"
 msgstr[1] "Повторити видалення {n} сторінок"
 msgstr[2] "Повторити видалення {n} сторінок"
 msgstr[3] "Повторити видалення {n} сторінки"
@@ -958,7 +958,7 @@ msgstr[3] "Повторити видалення {n} сторінки"
 #, rust-format
 msgid "Redo Move Page"
 msgid_plural "Redo Move {n} Pages"
-msgstr[0] "Повторити переміщення сторінки"
+msgstr[0] "Повторити переміщення {n} сторінки"
 msgstr[1] "Повторити переміщення {n} сторінок"
 msgstr[2] "Повторити переміщення {n} сторінок"
 msgstr[3] "Повторити переміщення {n} сторінки"
@@ -967,34 +967,34 @@ msgstr[3] "Повторити переміщення {n} сторінки"
 #, rust-format
 msgid "Redo Insert Page"
 msgid_plural "Redo Insert {n} Pages"
-msgstr[0] "Повторити вставлення сторінки"
+msgstr[0] "Повторити вставлення {n} сторінки"
 msgstr[1] "Повторити вставлення {n} сторінок"
 msgstr[2] "Повторити вставлення {n} сторінок"
 msgstr[3] "Повторити вставлення {n} сторінки"
 
 #: src/window/pages.rs:66
 msgid "Redo Highlight"
-msgstr ""
+msgstr "Повторити виділення"
 
 #: src/window/pages.rs:67
 msgid "Redo Underline"
-msgstr ""
+msgstr "Повторити підкреслення"
 
 #: src/window/pages.rs:68
 msgid "Redo Strikethrough"
-msgstr ""
+msgstr "Повторити закреслення"
 
 #: src/window/pages.rs:69
 msgid "Redo Drawing"
-msgstr ""
+msgstr "Повторити малюнок"
 
 #: src/window/pages.rs:70
 msgid "Redo Rectangle"
-msgstr ""
+msgstr "Повторити прямокутник"
 
 #: src/window/pages.rs:71
 msgid "Redo Ellipse"
-msgstr ""
+msgstr "Повторити еліпс"
 
 #: src/window/pages.rs:72
 msgid "Redo Line"
@@ -1031,12 +1031,12 @@ msgstr "Повторити скидання форми"
 #: src/window/pages.rs:119
 #, rust-format
 msgid "page {page}"
-msgstr ""
+msgstr "сторінка {page}"
 
 #: src/window/pages.rs:131
 #, rust-format
 msgid "pages {pages}"
-msgstr ""
+msgstr "сторінки {pages}"
 
 #: src/window/pages.rs:199
 #, rust-format

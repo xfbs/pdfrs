@@ -11,30 +11,31 @@
     <!-- Buttons that many dialogs share. -->
     <string name="cancel">Atcelt</string>
     <string name="close">Aizvērt</string>
-    <string name="open">Open</string>
+    <string name="open">Atvērt</string>
     <string name="save">Saglabāt</string>
     <string name="save_as">Saglabāt kā</string>
-    <string name="discard">Discard</string>
+    <string name="discard">Atmest</string>
     <string name="delete">Dzēst</string>
-    <string name="share">Share</string>
+    <string name="share">Kopīgot</string>
     <string name="select_all">Atlasīt visu</string>
     <!-- Describes the ⋮ button to screen readers. -->
-    <string name="more">More</string>
-    <string name="back">Back</string>
+    <string name="more">Vairāk</string>
+    <string name="back">Atpakaļ</string>
     <!-- The top bar. -->
     <string name="back_to_document">Atpakaļ uz dokumentu</string>
-    <string name="contents_and_pages">Contents and pages</string>
+    <string name="contents_and_pages">Saturs un lapas</string>
     <!-- Beside the document's name while it has unsaved changes. -->
-    <string name="edited">Edited</string>
+    <string name="edited">Rediģēts</string>
     <string name="search">Meklēt</string>
     <!-- The ⋮ menu. -->
     <string name="menu_open">Atvērt</string>
-    <string name="menu_share">Share</string>
+    <string name="menu_share">Kopīgot</string>
     <string name="menu_print">Drukāt</string>
     <string name="menu_go_to_page">Doties uz lapu</string>
     <string name="menu_properties">Īpašības</string>
     <string name="menu_highlight_fields">Izcelt veidlapas laukus</string>
     <string name="menu_reset_form">Atiestatīt veidlapu</string>
+    <string name="menu_discard_changes">Atmest izmaiņas</string>
     <string name="menu_settings">Iestatījumi</string>
     <!-- Closes the document and returns to the start screen. -->
     <string name="menu_close">Aizvērt</string>
@@ -47,7 +48,7 @@
     <string name="undo_change_annotation">Atsaukt anotācijas maiņu</string>
     <string name="undo_fill_field">Atsaukt lauka aizpildīšanu</string>
     <string name="undo_reset_form">Atsaukt veidlapas atiestatīšanu</string>
-    <string name="redo_rotate">Redo rotate</string>
+    <string name="redo_rotate">Atkārtot pagriešanu</string>
     <string name="redo_delete">Atkārtot dzēšanu</string>
     <string name="redo_move">Atkārtot pārvietošanu</string>
     <string name="redo_insert">Atkārtot ievietošanu</string>
@@ -58,7 +59,7 @@
     <string name="redo_reset_form">Atkārtot veidlapas atiestatīšanu</string>
     <!-- The start screen. -->
     <string name="open_pdf">Atvērt PDF</string>
-    <string name="recent">Recent</string>
+    <string name="recent">Nesenie</string>
     <!-- Where the reader left off in a recent document. -->
     <string name="recent_page">%1$d. lappuse</string>
     <string name="recent_page_of">%1$d. lappuse no %2$d</string>
@@ -70,18 +71,18 @@
     <string name="could_not_open">Neizdevās atvērt šo failu</string>
     <string name="open_another">Atvērt citu PDF</string>
     <string name="password_protected">%1$s ir aizsargāts ar paroli</string>
-    <string name="password_needed">A password is needed to open %1$s.</string>
+    <string name="password_needed">Lai atvērtu %1$s, nepieciešama parole.</string>
     <string name="password_title">Nepieciešama parole</string>
-    <string name="password_prompt">Enter the password to open %1$s.</string>
+    <string name="password_prompt">Ievadiet paroli, lai atvērtu %1$s.</string>
     <string name="password_label">Parole</string>
-    <string name="password_wrong">That password didn\'t work.</string>
+    <string name="password_wrong">Šī parole neder.</string>
     <!-- Pages and Contents. -->
     <string name="tab_pages">Lapas</string>
     <string name="tab_contents">Saturs</string>
-    <string name="collapse">Collapse</string>
-    <string name="expand">Expand</string>
+    <string name="collapse">Sakļaut</string>
+    <string name="expand">Izvērst</string>
     <!-- What a long press on a page in the page grid does, for screen readers. -->
-    <string name="pick">Pick</string>
+    <string name="pick">Atlasīt</string>
     <!-- Follows the finger while pages are dragged to another place. -->
     <plurals name="pages_dragged">
         <item quantity="zero">%d lapu</item>
@@ -89,16 +90,16 @@
         <item quantity="other">%d lapas</item>
     </plurals>
     <!-- Links that lead out of the document. -->
-    <string name="link_open_title">Open this link?</string>
-    <string name="link_blocked_title">This link can\'t be opened</string>
+    <string name="link_open_title">Atvērt šo saiti?</string>
+    <string name="link_blocked_title">Šo saiti nevar atvērt</string>
     <!-- "Go to page". -->
     <string name="go_to_title">Pāriet uz lapu</string>
     <!-- The field's label, with the first and last page number: "Page (i–240)". -->
     <string name="go_to_label">Lapa (%1$s–%2$s)</string>
     <!-- Which page a typed page number is, counted from the first. -->
     <string name="go_to_position">%1$d. lapa no %2$d</string>
-    <string name="go_to_position_hint">Or a position, 1–%1$d</string>
-    <string name="go">Go</string>
+    <string name="go_to_position_hint">Vai pozīcija, 1–%1$d</string>
+    <string name="go">Doties</string>
     <!-- Search. -->
     <string name="close_search">Aizvērt meklēšanu</string>
     <string name="previous_match">Iepriekšējā atbilstība</string>
@@ -120,13 +121,13 @@
     <string name="could_not_delete_annotation">Neizdevās izdzēst anotāciju: %1$s</string>
     <!-- Titles of the dialogs that fill in a field of a form, where the form has no name for it. -->
     <string name="field_text_title">Aizpildīt lauku</string>
-    <string name="field_choice_title">Choose</string>
-    <string name="field_done">Done</string>
+    <string name="field_choice_title">Izvēlieties</string>
+    <string name="field_done">Gatavs</string>
     <!-- The line of a menu of a form that takes text of one\'s own instead of one of its options. -->
     <string name="field_own_text">Vai ievadiet savu tekstu</string>
     <!-- How many characters a field holds of how many it takes, such as 3 / 10. -->
     <string name="field_length">%1$d / %2$d</string>
-    <string name="copy">Copy</string>
+    <string name="copy">Kopēt</string>
     <string name="copied">Nokopēts</string>
     <string name="too_much_to_copy">Šis teksts ir pārāk liels, lai to nokopētu vienā reizē</string>
     <string name="too_much_to_share">Šis teksts ir pārāk liels, lai to kopīgotu vienā reizē</string>
@@ -143,11 +144,11 @@
     <string name="layout_continuous">Nepārtraukts</string>
     <string name="layout_two_pages">Divas lapas</string>
     <string name="layout_two_pages_continuous">Divas lapas, nepārtraukti</string>
-    <string name="first_page_alone">First page alone</string>
-    <string name="fit_page">Fit page</string>
-    <string name="fit_width">Fit width</string>
+    <string name="first_page_alone">Pirmā lapa atsevišķi</string>
+    <string name="fit_page">Ietilpināt lapu</string>
+    <string name="fit_width">Ietilpināt platumā</string>
     <!-- Tells screen readers which menu item is ticked. -->
-    <string name="chosen">Chosen</string>
+    <string name="chosen">Izvēlēts</string>
     <!-- Editing pages. -->
     <!-- How many pages are picked: short, it shares a phone's top bar with four buttons. -->
     <plurals name="pages_selected">
@@ -156,26 +157,29 @@
         <item quantity="other">Atlasītas: %d</item>
     </plurals>
     <string name="clear_selection">Notīrīt atlasi</string>
-    <string name="rotate_left">Rotate left</string>
-    <string name="rotate_right">Rotate right</string>
+    <string name="rotate_left">Pagriezt pa kreisi</string>
+    <string name="rotate_right">Pagriezt pa labi</string>
     <string name="delete_pages">Dzēst lapas</string>
     <string name="unsaved_title">Vai saglabāt izmaiņas?</string>
-    <string name="unsaved_text">The changes to the pages of %1$s are lost unless you save them.</string>
+    <string name="unsaved_text">Dokumenta %1$s lapās veiktās izmaiņas tiks zaudētas, ja tās nesaglabāsiet.</string>
+    <string name="discard_title">Atmest izmaiņas?</string>
+    <string name="discard_text">Izmaiņas dokumentā %1$s kopš pēdējās saglabāšanas tiks zaudētas.</string>
     <string name="saving">Saglabā…</string>
     <!-- With what went wrong, as the system or the PDF library put it (in English). -->
     <string name="could_not_save">Neizdevās saglabāt: %1$s</string>
-    <string name="could_not_save_there">Couldn\'t save there. This is the edited copy.</string>
+    <string name="could_not_save_there">Tur saglabāt neizdevās. Šī ir rediģētā kopija.</string>
+    <string name="draft_not_restored">Nesaglabātās izmaiņas dokumentā %1$s neizdevās atjaunot.</string>
     <!-- Sharing and printing. -->
     <string name="could_not_share">Neizdevās kopīgot šo failu</string>
     <string name="preparing_to_print">Sagatavo drukāšanai…</string>
     <string name="could_not_print">Neizdevās drukāt: %1$s</string>
     <!-- Properties. -->
     <string name="property_file_name">Faila nosaukums</string>
-    <string name="property_title">Title</string>
-    <string name="property_author">Author</string>
-    <string name="property_subject">Subject</string>
+    <string name="property_title">Nosaukums</string>
+    <string name="property_author">Autors</string>
+    <string name="property_subject">Temats</string>
     <string name="property_keywords">Atslēgvārdi</string>
-    <string name="property_creator">Created with</string>
+    <string name="property_creator">Izveidots ar</string>
     <string name="property_producer">PDF veidotājs</string>
     <string name="property_created">Izveidots</string>
     <string name="property_modified">Mainīts</string>
@@ -189,7 +193,7 @@
     <string name="page_size_in">%1$s × %2$s collas</string>
     <!-- A size with the name of the paper: "210 × 297 mm (A4)". -->
     <string name="page_size_named">%1$s (%2$s)</string>
-    <string name="page_size_named_landscape">%1$s (%2$s, landscape)</string>
+    <string name="page_size_named_landscape">%1$s (%2$s, ainava)</string>
     <!-- The size of the first page, when not all pages have it. -->
     <string name="page_size_others_differ">%1$s; pārējās lapas atšķiras</string>
     <!-- Settings. -->
@@ -200,9 +204,9 @@
         <item quantity="other">Kamēr dokuments ir atvērts, %d minūtes pēc pēdējā pieskāriena</item>
     </plurals>
     <string name="setting_volume_keys">Skaļuma taustiņi pārlapo lapas</string>
-    <string name="setting_volume_keys_detail">Volume down goes on, volume up goes back</string>
+    <string name="setting_volume_keys_detail">Skaļuma samazināšana – uz priekšu, skaļuma palielināšana – atpakaļ</string>
     <string name="crash_log">Avārijas žurnāls</string>
-    <string name="crash_log_empty">Nothing went wrong so far</string>
+    <string name="crash_log_empty">Līdz šim nekas nav nogājis greizi</string>
     <!-- With the date of the newest entry. -->
-    <string name="crash_log_detail">Last entry %1$s. Kept on this device; nothing is sent unless you share it.</string>
+    <string name="crash_log_detail">Pēdējais ieraksts: %1$s. Glabājas šajā ierīcē; nekas netiek nosūtīts, ja vien to nekopīgojat.</string>
 </resources>

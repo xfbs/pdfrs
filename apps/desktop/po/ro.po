@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 21:37\n"
+"PO-Revision-Date: 2026-11-17 22:41\n"
 "Last-Translator: \n"
 "Language-Team: Romanian\n"
 "Language: ro_RO\n"
@@ -36,16 +36,16 @@ msgstr "© 2026 Contribuitorii Specto"
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:173
 msgid "hayro (rendering)"
-msgstr ""
+msgstr "hayro (randare)"
 
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:175
 msgid "lopdf (saving)"
-msgstr ""
+msgstr "lopdf (salvare)"
 
 #: src/main.rs:177
 msgid "Built with"
-msgstr ""
+msgstr "Construit cu"
 
 #: src/main.rs:207
 #, rust-format
@@ -63,7 +63,7 @@ msgstr "Deschide…"
 
 #: src/main.rs:227 src/window.rs:213
 msgid "Save"
-msgstr ""
+msgstr "Salvează"
 
 #: src/main.rs:228 src/window.rs:214
 msgid "Save As…"
@@ -79,7 +79,7 @@ msgstr "Tipărește…"
 
 #: src/main.rs:233 src/properties.rs:201 src/window.rs:220
 msgid "Properties"
-msgstr ""
+msgstr "Proprietăți"
 
 #: src/main.rs:235
 msgid "Close Window"
@@ -95,7 +95,7 @@ msgstr "Refă"
 
 #: src/main.rs:244
 msgid "Copy"
-msgstr ""
+msgstr "Copiază"
 
 #: src/main.rs:245
 msgid "Select All"
@@ -127,7 +127,7 @@ msgstr "O singură pagină"
 
 #: src/main.rs:260 src/window.rs:268
 msgid "Continuous"
-msgstr ""
+msgstr "Continuu"
 
 #: src/main.rs:261 src/window.rs:269
 msgid "Two Pages"
@@ -171,11 +171,11 @@ msgstr "Miniaturi"
 
 #: src/main.rs:278 src/window.rs:780
 msgid "Contents"
-msgstr ""
+msgstr "Cuprins"
 
 #: src/main.rs:279 src/window.rs:796 src/window/markup.rs:200
 msgid "Markup"
-msgstr ""
+msgstr "Adnotări"
 
 #: src/main.rs:284
 msgid "Previous Page"
@@ -199,11 +199,11 @@ msgstr "Mergi la pagina…"
 
 #: src/main.rs:293
 msgid "Back"
-msgstr ""
+msgstr "Înapoi"
 
 #: src/main.rs:294
 msgid "Forward"
-msgstr ""
+msgstr "Înainte"
 
 #: src/main.rs:300 src/window.rs:226
 msgid "Rotate Left"
@@ -219,11 +219,11 @@ msgstr "Afișează bara de instrumente pentru adnotări"
 
 #: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
-msgstr ""
+msgstr "Evidențiere"
 
 #: src/main.rs:306 src/markup_list.rs:44 src/window/markup.rs:28
 msgid "Underline"
-msgstr ""
+msgstr "Subliniere"
 
 #: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
@@ -251,7 +251,7 @@ msgstr "Vizualizare"
 
 #: src/main.rs:319
 msgid "Go"
-msgstr ""
+msgstr "Salt"
 
 #: src/main.rs:320
 msgid "Tools"
@@ -263,7 +263,7 @@ msgstr "Ajutor"
 
 #: src/markup_list.rs:47
 msgid "Drawing"
-msgstr ""
+msgstr "Desen"
 
 #: src/markup_list.rs:48
 msgid "Rectangle"
@@ -275,27 +275,27 @@ msgstr "Elipsă"
 
 #: src/markup_list.rs:50
 msgid "Line"
-msgstr ""
+msgstr "Linie"
 
 #: src/markup_list.rs:51 src/markup_list.rs:56
 msgid "Note"
-msgstr ""
+msgstr "Notă"
 
 #: src/markup_list.rs:52 src/markup_list.rs:57
 msgid "Text"
-msgstr ""
+msgstr "Text"
 
 #: src/markup_list.rs:53 src/markup_list.rs:58
 msgid "Stamp"
-msgstr ""
+msgstr "Ștampilă"
 
 #: src/markup_list.rs:59
 msgid "Shape"
-msgstr ""
+msgstr "Formă"
 
 #: src/markup_list.rs:60
 msgid "Attachment"
-msgstr ""
+msgstr "Atașament"
 
 #: src/markup_list.rs:96
 msgid "No Markup"
@@ -323,7 +323,7 @@ msgstr "Dosar"
 
 #: src/properties.rs:38
 msgid "Title"
-msgstr ""
+msgstr "Titlu"
 
 #: src/properties.rs:39
 msgid "Author"
@@ -385,11 +385,11 @@ msgstr "Criptat, se deschide fără parolă"
 
 #: src/properties.rs:60
 msgid "None"
-msgstr ""
+msgstr "Niciuna"
 
 #: src/properties.rs:65
 msgid "Not Allowed"
-msgstr ""
+msgstr "Nepermis"
 
 #: src/properties.rs:73
 msgid "Printing"
@@ -440,7 +440,7 @@ msgstr "{size}, celelalte pagini diferă"
 
 #: src/signatures.rs:344
 msgid "Clear"
-msgstr ""
+msgstr "Golește"
 
 #: src/signatures.rs:356
 msgid "Sign with the mouse or the touchpad"
@@ -448,23 +448,23 @@ msgstr "Semnați cu mouse-ul sau cu touchpad-ul"
 
 #: src/signatures.rs:364
 msgid "Draw"
-msgstr ""
+msgstr "Desenare"
 
 #: src/signatures.rs:381
 msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
-msgstr ""
+msgstr "Semnați pe o foaie albă, fotografiați-o și alegeți fotografia respectivă. Hârtia este eliminată, iar cerneala rămâne."
 
 #: src/signatures.rs:388
 msgid "Choose Picture…"
-msgstr ""
+msgstr "Alegeți imaginea…"
 
 #: src/signatures.rs:395
 msgid "To the left, faint strokes are kept, and more of the paper's shadows. To the right, only what is dark."
-msgstr ""
+msgstr "Spre stânga se păstrează liniile slabe și mai multe dintre umbrele hârtiei. Spre dreapta, doar ce este închis la culoare."
 
 #: src/signatures.rs:398
 msgid "Ink as in the picture"
-msgstr ""
+msgstr "Cerneala ca în imagine"
 
 #: src/signatures.rs:399
 msgid "Black ink"
@@ -476,23 +476,23 @@ msgstr "Cerneală albastră"
 
 #: src/signatures.rs:403
 msgid "Faint"
-msgstr ""
+msgstr "Slab"
 
 #: src/signatures.rs:405
 msgid "Dark"
-msgstr ""
+msgstr "Închis"
 
 #: src/signatures.rs:416
 msgid "From a Picture"
-msgstr ""
+msgstr "Dintr-o imagine"
 
 #: src/signatures.rs:439
 msgid "Move the slider until the paper is gone and the strokes are whole."
-msgstr ""
+msgstr "Mutați glisorul până când hârtia dispare și liniile sunt complete."
 
 #: src/signatures.rs:441
 msgid "No ink found in this picture. Move the slider to the left."
-msgstr ""
+msgstr "Nu s-a găsit cerneală în această imagine. Mutați glisorul spre stânga."
 
 #: src/signatures.rs:458
 msgid "Pictures"
@@ -505,11 +505,11 @@ msgstr "Alegeți o imagine cu o semnătură"
 #: src/signatures.rs:480 src/window/files.rs:420 src/window/files.rs:522
 #: src/window/files.rs:751
 msgid "_Cancel"
-msgstr ""
+msgstr "_Anulează"
 
 #: src/signatures.rs:482 src/window/files.rs:753
 msgid "_Save"
-msgstr ""
+msgstr "_Salvează"
 
 #: src/signatures.rs:510
 msgid "New Signature"
@@ -521,11 +521,11 @@ msgstr "Deschideți un PDF"
 
 #: src/window.rs:149
 msgid "Drop a file here or choose one"
-msgstr ""
+msgstr "Plasați un fișier aici sau alegeți unul"
 
 #: src/window.rs:162
 msgid "Recent"
-msgstr ""
+msgstr "Recente"
 
 #: src/window.rs:188
 msgid "Thumbnails (F9)"
@@ -534,7 +534,7 @@ msgstr "Miniaturi (F9)"
 #: src/window.rs:200
 #, rust-format
 msgid "Open ({shortcut})"
-msgstr ""
+msgstr "Deschide ({shortcut})"
 
 #: src/window.rs:258
 msgid "Main Menu"
@@ -542,11 +542,11 @@ msgstr "Meniul principal"
 
 #: src/window.rs:285
 msgid "Page Layout"
-msgstr ""
+msgstr "Aranjarea paginilor"
 
 #: src/window.rs:306
 msgid "Zoom"
-msgstr ""
+msgstr "Zoom"
 
 #: src/window.rs:317
 #, rust-format
@@ -555,7 +555,7 @@ msgstr "Salt la pagină ({shortcut})"
 
 #: src/window.rs:330
 msgid "Search"
-msgstr ""
+msgstr "Căutare"
 
 #: src/window.rs:342
 msgid "Previous Match (Shift+Enter)"
@@ -585,7 +585,7 @@ msgstr "Legătura nu a putut fi deschisă: {error}"
 #: src/window.rs:960
 #, rust-format
 msgid "Ctrl+{key}"
-msgstr ""
+msgstr "Ctrl+{key}"
 
 #: src/window/actions.rs:103
 #, rust-format
@@ -632,15 +632,15 @@ msgstr "Documente PDF"
 
 #: src/window/files.rs:54
 msgid "reading failed"
-msgstr ""
+msgstr "citirea a eșuat"
 
 #: src/window/files.rs:98 src/window/files.rs:102
 msgid "saving failed"
-msgstr ""
+msgstr "salvarea a eșuat"
 
 #: src/window/files.rs:175
 msgid "the document's password is needed"
-msgstr ""
+msgstr "este necesară parola documentului"
 
 #: src/window/files.rs:177
 #, rust-format
@@ -660,11 +660,11 @@ msgstr "„{name}” a fost mutat sau șters. Salvarea îl va scrie din nou."
 #: src/window/files.rs:332
 #, rust-format
 msgid "“{name}” was changed by another program. Reloading discards your edits."
-msgstr ""
+msgstr "„{name}” a fost modificat de un alt program. Reîncărcarea renunță la modificările dumneavoastră."
 
 #: src/window/files.rs:335
 msgid "_Reload"
-msgstr ""
+msgstr "_Reîncarcă"
 
 #: src/window/files.rs:413
 msgid "File Changed on Disk"
@@ -673,16 +673,16 @@ msgstr "Fișier modificat pe disc"
 #: src/window/files.rs:415
 #, rust-format
 msgid "“{name}” was changed by another program after it was opened. Saving replaces those changes with this document."
-msgstr ""
+msgstr "„{name}” a fost modificat de un alt program după ce a fost deschis. Salvarea înlocuiește acele modificări cu acest document."
 
 #: src/window/files.rs:421
 msgid "_Save Anyway"
-msgstr ""
+msgstr "_Salvează oricum"
 
 #: src/window/files.rs:514
 #, rust-format
 msgid "The password was incorrect. Enter the password for “{name}”."
-msgstr ""
+msgstr "Parola a fost incorectă. Introduceți parola pentru „{name}”."
 
 #: src/window/files.rs:518
 #, rust-format
@@ -695,7 +695,7 @@ msgstr "Parolă necesară"
 
 #: src/window/files.rs:523
 msgid "_Unlock"
-msgstr ""
+msgstr "_Deblochează"
 
 #: src/window/files.rs:611
 #, rust-format
@@ -704,20 +704,20 @@ msgstr "Nu s-a putut imprima: {error}"
 
 #: src/window/files.rs:656
 msgid "Save As"
-msgstr ""
+msgstr "Salvează ca"
 
 #: src/window/files.rs:744
 msgid "Save Changes?"
-msgstr ""
+msgstr "Salvați modificările?"
 
 #: src/window/files.rs:746
 #, rust-format
 msgid "“{name}” has unsaved changes. Changes that aren't saved will be lost."
-msgstr ""
+msgstr "„{name}” are modificări nesalvate. Modificările care nu sunt salvate se vor pierde."
 
 #: src/window/files.rs:752
 msgid "_Discard"
-msgstr ""
+msgstr "_Renunță"
 
 #: src/window/files.rs:774
 msgid "Open PDF"
@@ -726,7 +726,7 @@ msgstr "Deschide PDF"
 #: src/window/markup.rs:36
 #, rust-format
 msgid "{tool}: marks the selected text, and what is selected from now on ({shortcut} marks once)"
-msgstr ""
+msgstr "{tool}: marchează textul selectat și tot ce se selectează de acum înainte ({shortcut} marchează o singură dată)"
 
 #: src/window/markup.rs:50
 msgid "Draw freehand"
@@ -746,19 +746,19 @@ msgstr "Desenează linii"
 
 #: src/window/markup.rs:54
 msgid "Add text: click where it goes"
-msgstr ""
+msgstr "Adăugare text: faceți clic unde trebuie plasat"
 
 #: src/window/markup.rs:55
 msgid "Add notes: click where one goes"
-msgstr ""
+msgstr "Adăugare note: faceți clic unde trebuie plasată o notă"
 
 #: src/window/markup.rs:98
 msgid "Color"
-msgstr ""
+msgstr "Culoare"
 
 #: src/window/markup.rs:113
 msgid "Signature"
-msgstr ""
+msgstr "Semnătură"
 
 #: src/window/markup.rs:121
 msgid "Sans-serif"
@@ -900,7 +900,7 @@ msgstr "Anulează elipsa"
 
 #: src/window/pages.rs:42
 msgid "Undo Line"
-msgstr ""
+msgstr "Anulează linia"
 
 #: src/window/pages.rs:43
 msgid "Undo Note"

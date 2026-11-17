@@ -10,17 +10,17 @@
 <resources>
     <!-- Buttons that many dialogs share. -->
     <string name="cancel">रद्द करें</string>
-    <string name="close">Close</string>
-    <string name="open">Open</string>
+    <string name="close">बंद करें</string>
+    <string name="open">खोलें</string>
     <string name="save">सहेजें</string>
     <string name="save_as">इस रूप में सहेजें</string>
-    <string name="discard">Discard</string>
+    <string name="discard">छोड़ें</string>
     <string name="delete">हटाएँ</string>
     <string name="share">साझा करें</string>
     <string name="select_all">सभी चुनें</string>
     <!-- Describes the ⋮ button to screen readers. -->
-    <string name="more">More</string>
-    <string name="back">Back</string>
+    <string name="more">और विकल्प</string>
+    <string name="back">वापस जाएँ</string>
     <!-- The top bar. -->
     <string name="back_to_document">दस्तावेज़ पर वापस जाएँ</string>
     <string name="contents_and_pages">विषय-सूची और पृष्ठ</string>
@@ -35,6 +35,7 @@
     <string name="menu_properties">गुण</string>
     <string name="menu_highlight_fields">फ़ॉर्म फ़ील्ड हाइलाइट करें</string>
     <string name="menu_reset_form">फ़ॉर्म रीसेट करें</string>
+    <string name="menu_discard_changes">बदलाव रद्द करें</string>
     <string name="menu_settings">सेटिंग</string>
     <!-- Closes the document and returns to the start screen. -->
     <string name="menu_close">बंद करें</string>
@@ -47,7 +48,7 @@
     <string name="undo_change_annotation">टिप्पणी में बदलाव पूर्ववत करें</string>
     <string name="undo_fill_field">फ़ील्ड भरना पूर्ववत करें</string>
     <string name="undo_reset_form">फ़ॉर्म रीसेट करना पूर्ववत करें</string>
-    <string name="redo_rotate">Redo rotate</string>
+    <string name="redo_rotate">घुमाना फिर से करें</string>
     <string name="redo_delete">हटाना फिर से करें</string>
     <string name="redo_move">स्थानांतरण फिर से करें</string>
     <string name="redo_insert">सम्मिलन फिर से करें</string>
@@ -58,7 +59,7 @@
     <string name="redo_reset_form">फ़ॉर्म रीसेट करना फिर से करें</string>
     <!-- The start screen. -->
     <string name="open_pdf">PDF खोलें</string>
-    <string name="recent">Recent</string>
+    <string name="recent">हाल के</string>
     <!-- Where the reader left off in a recent document. -->
     <string name="recent_page">पृष्ठ %1$d</string>
     <string name="recent_page_of">पृष्ठ %1$d / %2$d</string>
@@ -69,37 +70,37 @@
     <string name="unnamed_document">PDF</string>
     <string name="could_not_open">यह फ़ाइल नहीं खोली जा सकी</string>
     <string name="open_another">कोई और PDF खोलें</string>
-    <string name="password_protected">%1$s is password protected</string>
-    <string name="password_needed">A password is needed to open %1$s.</string>
+    <string name="password_protected">%1$s पासवर्ड से सुरक्षित है</string>
+    <string name="password_needed">%1$s खोलने के लिए पासवर्ड चाहिए।</string>
     <string name="password_title">पासवर्ड आवश्यक है</string>
-    <string name="password_prompt">Enter the password to open %1$s.</string>
+    <string name="password_prompt">%1$s खोलने के लिए पासवर्ड डालें।</string>
     <string name="password_label">पासवर्ड</string>
-    <string name="password_wrong">That password didn\'t work.</string>
+    <string name="password_wrong">यह पासवर्ड सही नहीं है।</string>
     <!-- Pages and Contents. -->
     <string name="tab_pages">पृष्ठ</string>
     <string name="tab_contents">विषय-सूची</string>
-    <string name="collapse">Collapse</string>
-    <string name="expand">Expand</string>
+    <string name="collapse">छोटा करें</string>
+    <string name="expand">बड़ा करें</string>
     <!-- What a long press on a page in the page grid does, for screen readers. -->
-    <string name="pick">Pick</string>
+    <string name="pick">चुनें</string>
     <!-- Follows the finger while pages are dragged to another place. -->
     <plurals name="pages_dragged">
         <item quantity="one">%d पृष्ठ</item>
         <item quantity="other">%d पृष्ठ</item>
     </plurals>
     <!-- Links that lead out of the document. -->
-    <string name="link_open_title">Open this link?</string>
-    <string name="link_blocked_title">This link can\'t be opened</string>
+    <string name="link_open_title">यह लिंक खोलें?</string>
+    <string name="link_blocked_title">यह लिंक खोला नहीं जा सकता</string>
     <!-- "Go to page". -->
     <string name="go_to_title">पृष्ठ पर जाएँ</string>
     <!-- The field's label, with the first and last page number: "Page (i–240)". -->
     <string name="go_to_label">पृष्ठ (%1$s–%2$s)</string>
     <!-- Which page a typed page number is, counted from the first. -->
     <string name="go_to_position">पृष्ठ %1$d / %2$d</string>
-    <string name="go_to_position_hint">Or a position, 1–%1$d</string>
-    <string name="go">Go</string>
+    <string name="go_to_position_hint">या कोई स्थान, 1–%1$d</string>
+    <string name="go">जाएँ</string>
     <!-- Search. -->
-    <string name="close_search">Close search</string>
+    <string name="close_search">खोज बंद करें</string>
     <string name="previous_match">पिछला मिलान</string>
     <string name="next_match">अगला मिलान</string>
     <!-- Which match is shown: "3 of 17". -->
@@ -119,16 +120,16 @@
     <string name="could_not_delete_annotation">एनोटेशन हटाया नहीं जा सका: %1$s</string>
     <!-- Titles of the dialogs that fill in a field of a form, where the form has no name for it. -->
     <string name="field_text_title">फ़ील्ड भरें</string>
-    <string name="field_choice_title">Choose</string>
-    <string name="field_done">Done</string>
+    <string name="field_choice_title">चुनें</string>
+    <string name="field_done">हो गया</string>
     <!-- The line of a menu of a form that takes text of one\'s own instead of one of its options. -->
     <string name="field_own_text">या अपना खुद का लिखें</string>
     <!-- How many characters a field holds of how many it takes, such as 3 / 10. -->
     <string name="field_length">%1$d / %2$d</string>
-    <string name="copy">Copy</string>
+    <string name="copy">कॉपी करें</string>
     <string name="copied">कॉपी किया गया</string>
-    <string name="too_much_to_copy">That is too much text to copy at once</string>
-    <string name="too_much_to_share">That is too much text to share at once</string>
+    <string name="too_much_to_copy">एक बार में कॉपी करने के लिए यह टेक्स्ट बहुत ज़्यादा है</string>
+    <string name="too_much_to_share">एक बार में शेयर करने के लिए यह टेक्स्ट बहुत ज़्यादा है</string>
     <!-- What the clipboard calls text copied from a document. -->
     <string name="clip_label">PDF से लिया गया टेक्स्ट</string>
     <!-- Tells screen readers that text is selected on the page. -->
@@ -146,7 +147,7 @@
     <string name="fit_page">पृष्ठ के अनुसार समायोजित करें</string>
     <string name="fit_width">चौड़ाई के अनुसार समायोजित करें</string>
     <!-- Tells screen readers which menu item is ticked. -->
-    <string name="chosen">Chosen</string>
+    <string name="chosen">चुना गया</string>
     <!-- Editing pages. -->
     <!-- How many pages are picked: short, it shares a phone's top bar with four buttons. -->
     <plurals name="pages_selected">
@@ -159,23 +160,26 @@
     <string name="delete_pages">पृष्ठ हटाएँ</string>
     <string name="unsaved_title">बदलाव सहेजें?</string>
     <string name="unsaved_text">%1$s के पृष्ठों में किए गए बदलाव सहेजे बिना खो जाएँगे।</string>
+    <string name="discard_title">बदलाव रद्द करें?</string>
+    <string name="discard_text">%1$s को पिछली बार सहेजे जाने के बाद किए गए बदलाव खो जाएँगे।</string>
     <string name="saving">सहेजा जा रहा है…</string>
     <!-- With what went wrong, as the system or the PDF library put it (in English). -->
     <string name="could_not_save">सहेजा नहीं जा सका: %1$s</string>
-    <string name="could_not_save_there">Couldn\'t save there. This is the edited copy.</string>
+    <string name="could_not_save_there">वहाँ सहेजा नहीं जा सका। यह संपादित प्रति है।</string>
+    <string name="draft_not_restored">%1$s में किए गए बिना सहेजे बदलाव बहाल नहीं किए जा सके।</string>
     <!-- Sharing and printing. -->
     <string name="could_not_share">यह फ़ाइल साझा नहीं की जा सकी</string>
     <string name="preparing_to_print">प्रिंट की तैयारी हो रही है…</string>
     <string name="could_not_print">प्रिंट नहीं हो सका: %1$s</string>
     <!-- Properties. -->
     <string name="property_file_name">फ़ाइल का नाम</string>
-    <string name="property_title">Title</string>
+    <string name="property_title">शीर्षक</string>
     <string name="property_author">लेखक</string>
-    <string name="property_subject">Subject</string>
+    <string name="property_subject">विषय</string>
     <string name="property_keywords">कीवर्ड</string>
     <string name="property_creator">जिसके साथ बनाया गया</string>
     <string name="property_producer">PDF निर्माता</string>
-    <string name="property_created">Created</string>
+    <string name="property_created">बनाया गया</string>
     <string name="property_modified">संशोधित</string>
     <string name="property_pages">पृष्ठ</string>
     <string name="property_page_size">पृष्ठ का आकार</string>
@@ -201,5 +205,5 @@
     <string name="crash_log">क्रैश लॉग</string>
     <string name="crash_log_empty">अब तक कुछ भी गड़बड़ नहीं हुई</string>
     <!-- With the date of the newest entry. -->
-    <string name="crash_log_detail">Last entry %1$s. Kept on this device; nothing is sent unless you share it.</string>
+    <string name="crash_log_detail">अंतिम प्रविष्टि %1$s। यह इसी डिवाइस पर रखा जाता है; जब तक आप इसे शेयर न करें, कुछ भी भेजा नहीं जाता।</string>
 </resources>

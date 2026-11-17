@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 21:37\n"
+"PO-Revision-Date: 2026-11-17 22:41\n"
 "Last-Translator: \n"
 "Language-Team: Georgian\n"
 "Language: ka_GE\n"
@@ -45,7 +45,7 @@ msgstr "lopdf (შენახვა)"
 
 #: src/main.rs:177
 msgid "Built with"
-msgstr ""
+msgstr "შექმნილია"
 
 #: src/main.rs:207
 #, rust-format
@@ -63,7 +63,7 @@ msgstr "გახსნა…"
 
 #: src/main.rs:227 src/window.rs:213
 msgid "Save"
-msgstr ""
+msgstr "შენახვა"
 
 #: src/main.rs:228 src/window.rs:214
 msgid "Save As…"
@@ -79,7 +79,7 @@ msgstr "ბეჭდვა…"
 
 #: src/main.rs:233 src/properties.rs:201 src/window.rs:220
 msgid "Properties"
-msgstr ""
+msgstr "თვისებები"
 
 #: src/main.rs:235
 msgid "Close Window"
@@ -95,7 +95,7 @@ msgstr "გამეორება"
 
 #: src/main.rs:244
 msgid "Copy"
-msgstr ""
+msgstr "კოპირება"
 
 #: src/main.rs:245
 msgid "Select All"
@@ -175,7 +175,7 @@ msgstr "სარჩევი"
 
 #: src/main.rs:279 src/window.rs:796 src/window/markup.rs:200
 msgid "Markup"
-msgstr ""
+msgstr "მონიშვნები"
 
 #: src/main.rs:284
 msgid "Previous Page"
@@ -199,11 +199,11 @@ msgstr "გვერდზე გადასვლა…"
 
 #: src/main.rs:293
 msgid "Back"
-msgstr ""
+msgstr "უკან"
 
 #: src/main.rs:294
 msgid "Forward"
-msgstr ""
+msgstr "წინ"
 
 #: src/main.rs:300 src/window.rs:226
 msgid "Rotate Left"
@@ -219,11 +219,11 @@ msgstr "ანოტაციების ინსტრუმენტთა �
 
 #: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
-msgstr ""
+msgstr "გამოკვეთა"
 
 #: src/main.rs:306 src/markup_list.rs:44 src/window/markup.rs:28
 msgid "Underline"
-msgstr ""
+msgstr "ხაზგასმა"
 
 #: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
@@ -251,7 +251,7 @@ msgstr "ხედი"
 
 #: src/main.rs:319
 msgid "Go"
-msgstr ""
+msgstr "გადასვლა"
 
 #: src/main.rs:320
 msgid "Tools"
@@ -263,7 +263,7 @@ msgstr "დახმარება"
 
 #: src/markup_list.rs:47
 msgid "Drawing"
-msgstr ""
+msgstr "ნახატი"
 
 #: src/markup_list.rs:48
 msgid "Rectangle"
@@ -275,23 +275,23 @@ msgstr "ელიფსი"
 
 #: src/markup_list.rs:50
 msgid "Line"
-msgstr ""
+msgstr "ხაზი"
 
 #: src/markup_list.rs:51 src/markup_list.rs:56
 msgid "Note"
-msgstr ""
+msgstr "შენიშვნა"
 
 #: src/markup_list.rs:52 src/markup_list.rs:57
 msgid "Text"
-msgstr ""
+msgstr "ტექსტი"
 
 #: src/markup_list.rs:53 src/markup_list.rs:58
 msgid "Stamp"
-msgstr ""
+msgstr "შტამპი"
 
 #: src/markup_list.rs:59
 msgid "Shape"
-msgstr ""
+msgstr "ფიგურა"
 
 #: src/markup_list.rs:60
 msgid "Attachment"
@@ -299,7 +299,7 @@ msgstr "დანართი"
 
 #: src/markup_list.rs:96
 msgid "No Markup"
-msgstr ""
+msgstr "მონიშვნები არ არის"
 
 #: src/markup_list.rs:97
 msgid "Highlights, drawings and notes are listed here"
@@ -323,7 +323,7 @@ msgstr "საქაღალდე"
 
 #: src/properties.rs:38
 msgid "Title"
-msgstr ""
+msgstr "სათაური"
 
 #: src/properties.rs:39
 msgid "Author"
@@ -385,11 +385,11 @@ msgstr "დაშიფრულია, იხსნება პაროლი
 
 #: src/properties.rs:60
 msgid "None"
-msgstr ""
+msgstr "არცერთი"
 
 #: src/properties.rs:65
 msgid "Not Allowed"
-msgstr ""
+msgstr "დაუშვებელია"
 
 #: src/properties.rs:73
 msgid "Printing"
@@ -440,7 +440,7 @@ msgstr "{size}, სხვა გვერდები განსხვავ�
 
 #: src/signatures.rs:344
 msgid "Clear"
-msgstr ""
+msgstr "გასუფთავება"
 
 #: src/signatures.rs:356
 msgid "Sign with the mouse or the touchpad"
@@ -448,7 +448,7 @@ msgstr "მოაწერეთ ხელი თაგვით ან სე�
 
 #: src/signatures.rs:364
 msgid "Draw"
-msgstr ""
+msgstr "დახატვა"
 
 #: src/signatures.rs:381
 msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
@@ -456,7 +456,7 @@ msgstr "მოაწერეთ ხელი თეთრ ქაღალდზ
 
 #: src/signatures.rs:388
 msgid "Choose Picture…"
-msgstr ""
+msgstr "სურათის არჩევა…"
 
 #: src/signatures.rs:395
 msgid "To the left, faint strokes are kept, and more of the paper's shadows. To the right, only what is dark."
@@ -464,7 +464,7 @@ msgstr "მარცხნივ რჩება მკრთალი ხაზ
 
 #: src/signatures.rs:398
 msgid "Ink as in the picture"
-msgstr ""
+msgstr "მელანი, როგორც სურათზე"
 
 #: src/signatures.rs:399
 msgid "Black ink"
@@ -476,15 +476,15 @@ msgstr "ლურჯი მელანი"
 
 #: src/signatures.rs:403
 msgid "Faint"
-msgstr ""
+msgstr "მკრთალი"
 
 #: src/signatures.rs:405
 msgid "Dark"
-msgstr ""
+msgstr "მუქი"
 
 #: src/signatures.rs:416
 msgid "From a Picture"
-msgstr ""
+msgstr "სურათიდან"
 
 #: src/signatures.rs:439
 msgid "Move the slider until the paper is gone and the strokes are whole."
@@ -505,11 +505,11 @@ msgstr "აირჩიეთ ხელმოწერის სურათი"
 #: src/signatures.rs:480 src/window/files.rs:420 src/window/files.rs:522
 #: src/window/files.rs:751
 msgid "_Cancel"
-msgstr ""
+msgstr "_გაუქმება"
 
 #: src/signatures.rs:482 src/window/files.rs:753
 msgid "_Save"
-msgstr ""
+msgstr "_შენახვა"
 
 #: src/signatures.rs:510
 msgid "New Signature"
@@ -521,20 +521,20 @@ msgstr "PDF-ის გახსნა"
 
 #: src/window.rs:149
 msgid "Drop a file here or choose one"
-msgstr ""
+msgstr "ჩააგდეთ ფაილი აქ ან აირჩიეთ"
 
 #: src/window.rs:162
 msgid "Recent"
-msgstr ""
+msgstr "ბოლოს გახსნილი"
 
 #: src/window.rs:188
 msgid "Thumbnails (F9)"
-msgstr ""
+msgstr "მინიატურები (F9)"
 
 #: src/window.rs:200
 #, rust-format
 msgid "Open ({shortcut})"
-msgstr ""
+msgstr "გახსნა ({shortcut})"
 
 #: src/window.rs:258
 msgid "Main Menu"
@@ -662,7 +662,7 @@ msgstr "„{name}“ შეცვალა სხვა პროგრამა
 
 #: src/window/files.rs:335
 msgid "_Reload"
-msgstr ""
+msgstr "_თავიდან ჩატვირთვა"
 
 #: src/window/files.rs:413
 msgid "File Changed on Disk"
@@ -675,12 +675,12 @@ msgstr "„{name}“ შეიცვალა სხვა პროგრამ
 
 #: src/window/files.rs:421
 msgid "_Save Anyway"
-msgstr ""
+msgstr "_მაინც შენახვა"
 
 #: src/window/files.rs:514
 #, rust-format
 msgid "The password was incorrect. Enter the password for “{name}”."
-msgstr ""
+msgstr "პაროლი არასწორია. შეიყვანეთ „{name}“-ის პაროლი."
 
 #: src/window/files.rs:518
 #, rust-format
@@ -693,7 +693,7 @@ msgstr "საჭიროა პაროლი"
 
 #: src/window/files.rs:523
 msgid "_Unlock"
-msgstr ""
+msgstr "_განბლოკვა"
 
 #: src/window/files.rs:611
 #, rust-format
@@ -702,11 +702,11 @@ msgstr "დაბეჭდვა ვერ მოხერხდა: {error}"
 
 #: src/window/files.rs:656
 msgid "Save As"
-msgstr ""
+msgstr "შენახვა როგორც"
 
 #: src/window/files.rs:744
 msgid "Save Changes?"
-msgstr ""
+msgstr "შევინახო ცვლილებები?"
 
 #: src/window/files.rs:746
 #, rust-format
@@ -715,7 +715,7 @@ msgstr "„{name}“ შეიცავს შეუნახავ ცვლი
 
 #: src/window/files.rs:752
 msgid "_Discard"
-msgstr ""
+msgstr "_მოცილება"
 
 #: src/window/files.rs:774
 msgid "Open PDF"
@@ -724,11 +724,11 @@ msgstr "PDF-ის გახსნა"
 #: src/window/markup.rs:36
 #, rust-format
 msgid "{tool}: marks the selected text, and what is selected from now on ({shortcut} marks once)"
-msgstr ""
+msgstr "{tool}: მონიშნავს არჩეულ ტექსტს და ყველაფერს, რასაც ამიერიდან აირჩევთ ({shortcut} მონიშნავს ერთხელ)"
 
 #: src/window/markup.rs:50
 msgid "Draw freehand"
-msgstr ""
+msgstr "თავისუფალი ხატვა"
 
 #: src/window/markup.rs:51
 msgid "Draw rectangles"
@@ -744,23 +744,23 @@ msgstr "ხაზების ხატვა"
 
 #: src/window/markup.rs:54
 msgid "Add text: click where it goes"
-msgstr ""
+msgstr "ტექსტის დამატება: დააწკაპუნეთ იქ, სადაც უნდა იყოს"
 
 #: src/window/markup.rs:55
 msgid "Add notes: click where one goes"
-msgstr ""
+msgstr "შენიშვნების დამატება: დააწკაპუნეთ იქ, სადაც უნდა იყოს"
 
 #: src/window/markup.rs:98
 msgid "Color"
-msgstr ""
+msgstr "ფერი"
 
 #: src/window/markup.rs:113
 msgid "Signature"
-msgstr ""
+msgstr "ხელმოწერა"
 
 #: src/window/markup.rs:121
 msgid "Sans-serif"
-msgstr ""
+msgstr "უშრიფტო"
 
 #: src/window/markup.rs:122
 msgid "Serif"
@@ -1011,12 +1011,12 @@ msgstr "ფორმის განულების გამეორებ�
 #: src/window/pages.rs:119
 #, rust-format
 msgid "page {page}"
-msgstr ""
+msgstr "გვერდი {page}"
 
 #: src/window/pages.rs:131
 #, rust-format
 msgid "pages {pages}"
-msgstr ""
+msgstr "გვერდები {pages}"
 
 #: src/window/pages.rs:199
 #, rust-format

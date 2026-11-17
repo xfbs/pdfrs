@@ -10,31 +10,32 @@
 <resources>
     <!-- Buttons that many dialogs share. -->
     <string name="cancel">Anuluj</string>
-    <string name="close">Close</string>
-    <string name="open">Open</string>
+    <string name="close">Zamknij</string>
+    <string name="open">Otwórz</string>
     <string name="save">Zapisz</string>
     <string name="save_as">Zapisz jako</string>
-    <string name="discard">Discard</string>
+    <string name="discard">Odrzuć</string>
     <string name="delete">Usuń</string>
-    <string name="share">Share</string>
+    <string name="share">Udostępnij</string>
     <string name="select_all">Zaznacz wszystko</string>
     <!-- Describes the ⋮ button to screen readers. -->
-    <string name="more">More</string>
+    <string name="more">Więcej</string>
     <string name="back">Wstecz</string>
     <!-- The top bar. -->
     <string name="back_to_document">Powrót do dokumentu</string>
-    <string name="contents_and_pages">Contents and pages</string>
+    <string name="contents_and_pages">Spis treści i strony</string>
     <!-- Beside the document's name while it has unsaved changes. -->
     <string name="edited">Zmodyfikowano</string>
-    <string name="search">Search</string>
+    <string name="search">Szukaj</string>
     <!-- The ⋮ menu. -->
-    <string name="menu_open">Open</string>
-    <string name="menu_share">Share</string>
+    <string name="menu_open">Otwórz</string>
+    <string name="menu_share">Udostępnij</string>
     <string name="menu_print">Drukuj</string>
     <string name="menu_go_to_page">Przejdź do strony</string>
     <string name="menu_properties">Właściwości</string>
     <string name="menu_highlight_fields">Wyróżnij pola formularza</string>
     <string name="menu_reset_form">Wyczyść formularz</string>
+    <string name="menu_discard_changes">Odrzuć zmiany</string>
     <string name="menu_settings">Ustawienia</string>
     <!-- Closes the document and returns to the start screen. -->
     <string name="menu_close">Zamknij</string>
@@ -47,7 +48,7 @@
     <string name="undo_change_annotation">Cofnij zmianę adnotacji</string>
     <string name="undo_fill_field">Cofnij wypełnienie pola</string>
     <string name="undo_reset_form">Cofnij zresetowanie formularza</string>
-    <string name="redo_rotate">Redo rotate</string>
+    <string name="redo_rotate">Ponów obrót</string>
     <string name="redo_delete">Ponów usunięcie</string>
     <string name="redo_move">Ponów przeniesienie</string>
     <string name="redo_insert">Ponów wstawienie</string>
@@ -57,8 +58,8 @@
     <string name="redo_fill_field">Ponów wypełnienie pola</string>
     <string name="redo_reset_form">Ponów zresetowanie formularza</string>
     <!-- The start screen. -->
-    <string name="open_pdf">Open PDF</string>
-    <string name="recent">Recent</string>
+    <string name="open_pdf">Otwórz PDF</string>
+    <string name="recent">Ostatnie</string>
     <!-- Where the reader left off in a recent document. -->
     <string name="recent_page">Strona %1$d</string>
     <string name="recent_page_of">Strona %1$d z %2$d</string>
@@ -67,21 +68,21 @@
     <!-- Opening a document. -->
     <!-- What a document without a name is called. -->
     <string name="unnamed_document">PDF</string>
-    <string name="could_not_open">Couldn\'t open this file</string>
-    <string name="open_another">Open another PDF</string>
+    <string name="could_not_open">Nie udało się otworzyć tego pliku</string>
+    <string name="open_another">Otwórz inny PDF</string>
     <string name="password_protected">Plik %1$s jest chroniony hasłem</string>
-    <string name="password_needed">A password is needed to open %1$s.</string>
+    <string name="password_needed">Do otwarcia pliku %1$s potrzebne jest hasło.</string>
     <string name="password_title">Wymagane hasło</string>
-    <string name="password_prompt">Enter the password to open %1$s.</string>
+    <string name="password_prompt">Wpisz hasło, aby otworzyć plik %1$s.</string>
     <string name="password_label">Hasło</string>
     <string name="password_wrong">To hasło nie zadziałało.</string>
     <!-- Pages and Contents. -->
     <string name="tab_pages">Strony</string>
     <string name="tab_contents">Spis treści</string>
-    <string name="collapse">Collapse</string>
-    <string name="expand">Expand</string>
+    <string name="collapse">Zwiń</string>
+    <string name="expand">Rozwiń</string>
     <!-- What a long press on a page in the page grid does, for screen readers. -->
-    <string name="pick">Pick</string>
+    <string name="pick">Wybierz</string>
     <!-- Follows the finger while pages are dragged to another place. -->
     <plurals name="pages_dragged">
         <item quantity="one">%d strona</item>
@@ -90,16 +91,16 @@
         <item quantity="other">%d strony</item>
     </plurals>
     <!-- Links that lead out of the document. -->
-    <string name="link_open_title">Open this link?</string>
+    <string name="link_open_title">Otworzyć ten link?</string>
     <string name="link_blocked_title">Nie można otworzyć tego odnośnika</string>
     <!-- "Go to page". -->
     <string name="go_to_title">Przejdź do strony</string>
     <!-- The field's label, with the first and last page number: "Page (i–240)". -->
-    <string name="go_to_label">Page (%1$s–%2$s)</string>
+    <string name="go_to_label">Strona (%1$s–%2$s)</string>
     <!-- Which page a typed page number is, counted from the first. -->
     <string name="go_to_position">Strona %1$d z %2$d</string>
-    <string name="go_to_position_hint">Or a position, 1–%1$d</string>
-    <string name="go">Go</string>
+    <string name="go_to_position_hint">Lub pozycja, 1–%1$d</string>
+    <string name="go">Przejdź</string>
     <!-- Search. -->
     <string name="close_search">Zamknij wyszukiwanie</string>
     <string name="previous_match">Poprzednie trafienie</string>
@@ -113,30 +114,30 @@
     <string name="no_matches">Brak wyników</string>
     <!-- Selected text. -->
     <!-- Marks the selected text: with a highlighter, or a line under or through it. -->
-    <string name="highlight">Highlight</string>
+    <string name="highlight">Wyróżnij</string>
     <string name="underline">Podkreślenie</string>
     <string name="strike_through">Przekreślenie</string>
     <!-- Tells screen readers that an annotation (a mark on the text, a note, a drawing) is picked. -->
     <string name="annotation_selected">Zaznaczono adnotację</string>
     <string name="could_not_delete_annotation">Nie udało się usunąć adnotacji: %1$s</string>
     <!-- Titles of the dialogs that fill in a field of a form, where the form has no name for it. -->
-    <string name="field_text_title">Fill in field</string>
-    <string name="field_choice_title">Choose</string>
-    <string name="field_done">Done</string>
+    <string name="field_text_title">Wypełnij pole</string>
+    <string name="field_choice_title">Wybierz</string>
+    <string name="field_done">Gotowe</string>
     <!-- The line of a menu of a form that takes text of one\'s own instead of one of its options. -->
-    <string name="field_own_text">Or type your own</string>
+    <string name="field_own_text">Lub wpisz własny tekst</string>
     <!-- How many characters a field holds of how many it takes, such as 3 / 10. -->
     <string name="field_length">%1$d / %2$d</string>
-    <string name="copy">Copy</string>
+    <string name="copy">Kopiuj</string>
     <string name="copied">Skopiowano</string>
-    <string name="too_much_to_copy">That is too much text to copy at once</string>
-    <string name="too_much_to_share">That is too much text to share at once</string>
+    <string name="too_much_to_copy">Za dużo tekstu, by skopiować go naraz</string>
+    <string name="too_much_to_share">Za dużo tekstu, by udostępnić go naraz</string>
     <!-- What the clipboard calls text copied from a document. -->
-    <string name="clip_label">Text from a PDF</string>
+    <string name="clip_label">Tekst z pliku PDF</string>
     <!-- Tells screen readers that text is selected on the page. -->
     <string name="text_selected">Zaznaczono tekst</string>
     <!-- The page view. -->
-    <string name="still_drawing">Still drawing this page</string>
+    <string name="still_drawing">Strona jest jeszcze rysowana</string>
     <!-- The view menu. -->
     <!-- Describes the view button: "View: Single page". -->
     <string name="view_description">Widok: %1$s</string>
@@ -148,7 +149,7 @@
     <string name="fit_page">Dopasuj stronę</string>
     <string name="fit_width">Dopasuj szerokość</string>
     <!-- Tells screen readers which menu item is ticked. -->
-    <string name="chosen">Chosen</string>
+    <string name="chosen">Wybrano</string>
     <!-- Editing pages. -->
     <!-- How many pages are picked: short, it shares a phone's top bar with four buttons. -->
     <plurals name="pages_selected">
@@ -162,11 +163,14 @@
     <string name="rotate_right">Obróć w prawo</string>
     <string name="delete_pages">Usuń strony</string>
     <string name="unsaved_title">Zapisać zmiany?</string>
-    <string name="unsaved_text">The changes to the pages of %1$s are lost unless you save them.</string>
+    <string name="unsaved_text">Zmiany stron dokumentu %1$s zostaną utracone, jeśli ich nie zapiszesz.</string>
+    <string name="discard_title">Odrzucić zmiany?</string>
+    <string name="discard_text">Zmiany w dokumencie %1$s wprowadzone od ostatniego zapisu zostaną utracone.</string>
     <string name="saving">Zapisywanie…</string>
     <!-- With what went wrong, as the system or the PDF library put it (in English). -->
     <string name="could_not_save">Nie udało się zapisać: %1$s</string>
-    <string name="could_not_save_there">Couldn\'t save there. This is the edited copy.</string>
+    <string name="could_not_save_there">Nie udało się zapisać w tym miejscu. To jest edytowana kopia.</string>
+    <string name="draft_not_restored">Nie udało się przywrócić niezapisanych zmian w dokumencie %1$s.</string>
     <!-- Sharing and printing. -->
     <string name="could_not_share">Nie udało się udostępnić tego pliku</string>
     <string name="preparing_to_print">Przygotowywanie do drukowania…</string>
@@ -177,10 +181,10 @@
     <string name="property_author">Autor</string>
     <string name="property_subject">Temat</string>
     <string name="property_keywords">Słowa kluczowe</string>
-    <string name="property_creator">Created with</string>
+    <string name="property_creator">Utworzono w</string>
     <string name="property_producer">Producent PDF</string>
-    <string name="property_created">Created</string>
-    <string name="property_modified">Modified</string>
+    <string name="property_created">Utworzono</string>
+    <string name="property_modified">Zmodyfikowano</string>
     <string name="property_pages">Strony</string>
     <string name="property_page_size">Rozmiar strony</string>
     <string name="property_file_size">Rozmiar pliku</string>
@@ -205,7 +209,7 @@
     <string name="setting_volume_keys">Klawisze głośności przewracają strony</string>
     <string name="setting_volume_keys_detail">Ściszanie przechodzi dalej, pogłaśnianie wraca</string>
     <string name="crash_log">Dziennik awarii</string>
-    <string name="crash_log_empty">Nothing went wrong so far</string>
+    <string name="crash_log_empty">Jak dotąd nic nie poszło źle</string>
     <!-- With the date of the newest entry. -->
-    <string name="crash_log_detail">Last entry %1$s. Kept on this device; nothing is sent unless you share it.</string>
+    <string name="crash_log_detail">Ostatni wpis: %1$s. Przechowywane na tym urządzeniu; nic nie jest wysyłane, chyba że to udostępnisz.</string>
 </resources>
