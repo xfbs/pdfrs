@@ -35,6 +35,7 @@
     <string name="menu_properties">Propriétés</string>
     <string name="menu_highlight_fields">Mettre en évidence les champs de formulaire</string>
     <string name="menu_reset_form">Réinitialiser le formulaire</string>
+    <string name="menu_discard_changes">Annuler les modifications</string>
     <string name="menu_settings">Paramètres</string>
     <!-- Closes the document and returns to the start screen. -->
     <string name="menu_close">Fermer</string>
@@ -159,10 +160,13 @@
     <string name="delete_pages">Supprimer les pages</string>
     <string name="unsaved_title">Enregistrer les modifications ?</string>
     <string name="unsaved_text">Les modifications apportées aux pages de %1$s seront perdues si vous ne les enregistrez pas.</string>
+    <string name="discard_title">Annuler les modifications ?</string>
+    <string name="discard_text">Les modifications apportées à %1$s depuis le dernier enregistrement seront perdues.</string>
     <string name="saving">Enregistrement…</string>
     <!-- With what went wrong, as the system or the PDF library put it (in English). -->
     <string name="could_not_save">Impossible d\'enregistrer : %1$s</string>
     <string name="could_not_save_there">Impossible d\'enregistrer à cet emplacement. Ceci est la copie modifiée.</string>
+    <string name="draft_not_restored">Impossible de restaurer les modifications non enregistrées de %1$s.</string>
     <!-- Sharing and printing. -->
     <string name="could_not_share">Impossible de partager ce fichier</string>
     <string name="preparing_to_print">Préparation de l\'impression…</string>

@@ -14,19 +14,19 @@
     <string name="open">打开</string>
     <string name="save">保存</string>
     <string name="save_as">另存为</string>
-    <string name="discard">Discard</string>
+    <string name="discard">放弃</string>
     <string name="delete">删除</string>
-    <string name="share">Share</string>
+    <string name="share">分享</string>
     <string name="select_all">全选</string>
     <!-- Describes the ⋮ button to screen readers. -->
     <string name="more">更多</string>
-    <string name="back">Back</string>
+    <string name="back">返回</string>
     <!-- The top bar. -->
     <string name="back_to_document">返回文档</string>
     <string name="contents_and_pages">目录和页面</string>
     <!-- Beside the document's name while it has unsaved changes. -->
     <string name="edited">已编辑</string>
-    <string name="search">Search</string>
+    <string name="search">搜索</string>
     <!-- The ⋮ menu. -->
     <string name="menu_open">打开</string>
     <string name="menu_share">分享</string>
@@ -35,6 +35,7 @@
     <string name="menu_properties">属性</string>
     <string name="menu_highlight_fields">高亮表单字段</string>
     <string name="menu_reset_form">重置表单</string>
+    <string name="menu_discard_changes">放弃更改</string>
     <string name="menu_settings">设置</string>
     <!-- Closes the document and returns to the start screen. -->
     <string name="menu_close">关闭</string>
@@ -47,7 +48,7 @@
     <string name="undo_change_annotation">撤销更改批注</string>
     <string name="undo_fill_field">撤销填写字段</string>
     <string name="undo_reset_form">撤销重置表单</string>
-    <string name="redo_rotate">Redo rotate</string>
+    <string name="redo_rotate">重做旋转</string>
     <string name="redo_delete">重做删除</string>
     <string name="redo_move">重做移动</string>
     <string name="redo_insert">重做插入</string>
@@ -58,7 +59,7 @@
     <string name="redo_reset_form">重做重置表单</string>
     <!-- The start screen. -->
     <string name="open_pdf">打开 PDF</string>
-    <string name="recent">Recent</string>
+    <string name="recent">最近</string>
     <!-- Where the reader left off in a recent document. -->
     <string name="recent_page">第 %1$d 页</string>
     <string name="recent_page_of">第 %1$d 页,共 %2$d 页</string>
@@ -78,10 +79,10 @@
     <!-- Pages and Contents. -->
     <string name="tab_pages">页面</string>
     <string name="tab_contents">目录</string>
-    <string name="collapse">Collapse</string>
-    <string name="expand">Expand</string>
+    <string name="collapse">收起</string>
+    <string name="expand">展开</string>
     <!-- What a long press on a page in the page grid does, for screen readers. -->
-    <string name="pick">Pick</string>
+    <string name="pick">选择</string>
     <!-- Follows the finger while pages are dragged to another place. -->
     <plurals name="pages_dragged">
         <item quantity="other">%d 页</item>
@@ -95,8 +96,8 @@
     <string name="go_to_label">页码(%1$s–%2$s)</string>
     <!-- Which page a typed page number is, counted from the first. -->
     <string name="go_to_position">第 %1$d 页,共 %2$d 页</string>
-    <string name="go_to_position_hint">Or a position, 1–%1$d</string>
-    <string name="go">Go</string>
+    <string name="go_to_position_hint">或输入位置,1–%1$d</string>
+    <string name="go">前往</string>
     <!-- Search. -->
     <string name="close_search">关闭搜索</string>
     <string name="previous_match">上一个匹配项</string>
@@ -106,11 +107,11 @@
     <!-- The same while the document is still being searched. -->
     <string name="search_count_so_far">第 %1$d 项,共 %2$d 项…</string>
     <!-- Still searching, nothing found yet. -->
-    <string name="search_running">…</string>
+    <string name="search_running">……</string>
     <string name="no_matches">无匹配项</string>
     <!-- Selected text. -->
     <!-- Marks the selected text: with a highlighter, or a line under or through it. -->
-    <string name="highlight">Highlight</string>
+    <string name="highlight">高亮</string>
     <string name="underline">下划线</string>
     <string name="strike_through">删除线</string>
     <!-- Tells screen readers that an annotation (a mark on the text, a note, a drawing) is picked. -->
@@ -118,13 +119,13 @@
     <string name="could_not_delete_annotation">无法删除注释:%1$s</string>
     <!-- Titles of the dialogs that fill in a field of a form, where the form has no name for it. -->
     <string name="field_text_title">填写字段</string>
-    <string name="field_choice_title">Choose</string>
-    <string name="field_done">Done</string>
+    <string name="field_choice_title">选择</string>
+    <string name="field_done">完成</string>
     <!-- The line of a menu of a form that takes text of one\'s own instead of one of its options. -->
     <string name="field_own_text">或输入自定义内容</string>
     <!-- How many characters a field holds of how many it takes, such as 3 / 10. -->
     <string name="field_length">%1$d / %2$d</string>
-    <string name="copy">Copy</string>
+    <string name="copy">复制</string>
     <string name="copied">已复制</string>
     <string name="too_much_to_copy">文本过多,无法一次性复制</string>
     <string name="too_much_to_share">文本过多,无法一次性分享</string>
@@ -133,7 +134,7 @@
     <!-- Tells screen readers that text is selected on the page. -->
     <string name="text_selected">已选择文本</string>
     <!-- The page view. -->
-    <string name="still_drawing">Still drawing this page</string>
+    <string name="still_drawing">仍在绘制此页</string>
     <!-- The view menu. -->
     <!-- Describes the view button: "View: Single page". -->
     <string name="view_description">视图:%1$s</string>
@@ -157,10 +158,13 @@
     <string name="delete_pages">删除页面</string>
     <string name="unsaved_title">保存更改?</string>
     <string name="unsaved_text">如果不保存,对 %1$s 页面所做的更改将会丢失。</string>
+    <string name="discard_title">放弃更改?</string>
+    <string name="discard_text">自上次保存以来对 %1$s 所做的更改将会丢失。</string>
     <string name="saving">正在保存…</string>
     <!-- With what went wrong, as the system or the PDF library put it (in English). -->
     <string name="could_not_save">无法保存:%1$s</string>
     <string name="could_not_save_there">无法保存到该位置。这是已编辑的副本。</string>
+    <string name="draft_not_restored">无法恢复对 %1$s 的未保存更改。</string>
     <!-- Sharing and printing. -->
     <string name="could_not_share">无法分享此文件</string>
     <string name="preparing_to_print">正在准备打印…</string>
@@ -198,5 +202,5 @@
     <string name="crash_log">崩溃日志</string>
     <string name="crash_log_empty">目前一切正常</string>
     <!-- With the date of the newest entry. -->
-    <string name="crash_log_detail">Last entry %1$s. Kept on this device; nothing is sent unless you share it.</string>
+    <string name="crash_log_detail">最近一条记录:%1$s。仅保存在此设备上,除非你主动分享,否则不会发送任何内容。</string>
 </resources>

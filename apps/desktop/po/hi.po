@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 21:37\n"
+"PO-Revision-Date: 2026-11-17 22:41\n"
 "Last-Translator: \n"
 "Language-Team: Hindi\n"
 "Language: hi_IN\n"
@@ -45,7 +45,7 @@ msgstr "lopdf (सहेजना)"
 
 #: src/main.rs:177
 msgid "Built with"
-msgstr ""
+msgstr "इनसे निर्मित"
 
 #: src/main.rs:207
 #, rust-format
@@ -63,7 +63,7 @@ msgstr "खोलें…"
 
 #: src/main.rs:227 src/window.rs:213
 msgid "Save"
-msgstr ""
+msgstr "सहेजें"
 
 #: src/main.rs:228 src/window.rs:214
 msgid "Save As…"
@@ -79,7 +79,7 @@ msgstr "प्रिंट करें…"
 
 #: src/main.rs:233 src/properties.rs:201 src/window.rs:220
 msgid "Properties"
-msgstr ""
+msgstr "गुण"
 
 #: src/main.rs:235
 msgid "Close Window"
@@ -95,7 +95,7 @@ msgstr "फिर से करें"
 
 #: src/main.rs:244
 msgid "Copy"
-msgstr ""
+msgstr "कॉपी करें"
 
 #: src/main.rs:245
 msgid "Select All"
@@ -127,7 +127,7 @@ msgstr "एकल पृष्ठ"
 
 #: src/main.rs:260 src/window.rs:268
 msgid "Continuous"
-msgstr ""
+msgstr "लगातार"
 
 #: src/main.rs:261 src/window.rs:269
 msgid "Two Pages"
@@ -171,11 +171,11 @@ msgstr "थंबनेल"
 
 #: src/main.rs:278 src/window.rs:780
 msgid "Contents"
-msgstr ""
+msgstr "विषय-सूची"
 
 #: src/main.rs:279 src/window.rs:796 src/window/markup.rs:200
 msgid "Markup"
-msgstr ""
+msgstr "मार्कअप"
 
 #: src/main.rs:284
 msgid "Previous Page"
@@ -199,11 +199,11 @@ msgstr "पृष्ठ पर जाएँ…"
 
 #: src/main.rs:293
 msgid "Back"
-msgstr ""
+msgstr "पीछे"
 
 #: src/main.rs:294
 msgid "Forward"
-msgstr ""
+msgstr "आगे"
 
 #: src/main.rs:300 src/window.rs:226
 msgid "Rotate Left"
@@ -219,11 +219,11 @@ msgstr "मार्कअप टूलबार दिखाएँ"
 
 #: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
-msgstr ""
+msgstr "हाइलाइट"
 
 #: src/main.rs:306 src/markup_list.rs:44 src/window/markup.rs:28
 msgid "Underline"
-msgstr ""
+msgstr "रेखांकन"
 
 #: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
@@ -251,7 +251,7 @@ msgstr "देखें"
 
 #: src/main.rs:319
 msgid "Go"
-msgstr ""
+msgstr "जाएँ"
 
 #: src/main.rs:320
 msgid "Tools"
@@ -263,7 +263,7 @@ msgstr "सहायता"
 
 #: src/markup_list.rs:47
 msgid "Drawing"
-msgstr ""
+msgstr "चित्र"
 
 #: src/markup_list.rs:48
 msgid "Rectangle"
@@ -275,27 +275,27 @@ msgstr "दीर्घवृत्त"
 
 #: src/markup_list.rs:50
 msgid "Line"
-msgstr ""
+msgstr "रेखा"
 
 #: src/markup_list.rs:51 src/markup_list.rs:56
 msgid "Note"
-msgstr ""
+msgstr "नोट"
 
 #: src/markup_list.rs:52 src/markup_list.rs:57
 msgid "Text"
-msgstr ""
+msgstr "टेक्स्ट"
 
 #: src/markup_list.rs:53 src/markup_list.rs:58
 msgid "Stamp"
-msgstr ""
+msgstr "मुहर"
 
 #: src/markup_list.rs:59
 msgid "Shape"
-msgstr ""
+msgstr "आकृति"
 
 #: src/markup_list.rs:60
 msgid "Attachment"
-msgstr ""
+msgstr "अनुलग्नक"
 
 #: src/markup_list.rs:96
 msgid "No Markup"
@@ -323,7 +323,7 @@ msgstr "फ़ोल्डर"
 
 #: src/properties.rs:38
 msgid "Title"
-msgstr ""
+msgstr "शीर्षक"
 
 #: src/properties.rs:39
 msgid "Author"
@@ -385,7 +385,7 @@ msgstr "एन्क्रिप्टेड, बिना पासवर्ड
 
 #: src/properties.rs:60
 msgid "None"
-msgstr ""
+msgstr "कोई नहीं"
 
 #: src/properties.rs:65
 msgid "Not Allowed"
@@ -440,7 +440,7 @@ msgstr "{size}, अन्य पृष्ठ भिन्न हैं"
 
 #: src/signatures.rs:344
 msgid "Clear"
-msgstr ""
+msgstr "साफ़ करें"
 
 #: src/signatures.rs:356
 msgid "Sign with the mouse or the touchpad"
@@ -448,7 +448,7 @@ msgstr "माउस या टचपैड से हस्ताक्षर �
 
 #: src/signatures.rs:364
 msgid "Draw"
-msgstr ""
+msgstr "बनाएँ"
 
 #: src/signatures.rs:381
 msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
@@ -460,7 +460,7 @@ msgstr "तस्वीर चुनें…"
 
 #: src/signatures.rs:395
 msgid "To the left, faint strokes are kept, and more of the paper's shadows. To the right, only what is dark."
-msgstr ""
+msgstr "बाईं ओर हल्की रेखाएँ भी बनी रहती हैं और कागज़ की परछाइयाँ भी ज़्यादा रहती हैं। दाईं ओर केवल गहरा हिस्सा रहता है।"
 
 #: src/signatures.rs:398
 msgid "Ink as in the picture"
@@ -476,15 +476,15 @@ msgstr "नीली स्याही"
 
 #: src/signatures.rs:403
 msgid "Faint"
-msgstr ""
+msgstr "हल्का"
 
 #: src/signatures.rs:405
 msgid "Dark"
-msgstr ""
+msgstr "गहरा"
 
 #: src/signatures.rs:416
 msgid "From a Picture"
-msgstr ""
+msgstr "चित्र से"
 
 #: src/signatures.rs:439
 msgid "Move the slider until the paper is gone and the strokes are whole."
@@ -496,7 +496,7 @@ msgstr "इस तस्वीर में कोई स्याही नह�
 
 #: src/signatures.rs:458
 msgid "Pictures"
-msgstr ""
+msgstr "चित्र"
 
 #: src/signatures.rs:463
 msgid "Choose a Picture of a Signature"
@@ -505,11 +505,11 @@ msgstr "हस्ताक्षर की तस्वीर चुनें"
 #: src/signatures.rs:480 src/window/files.rs:420 src/window/files.rs:522
 #: src/window/files.rs:751
 msgid "_Cancel"
-msgstr ""
+msgstr "रद्द करें (_C)"
 
 #: src/signatures.rs:482 src/window/files.rs:753
 msgid "_Save"
-msgstr ""
+msgstr "सहेजें (_S)"
 
 #: src/signatures.rs:510
 msgid "New Signature"
@@ -521,20 +521,20 @@ msgstr "PDF खोलें"
 
 #: src/window.rs:149
 msgid "Drop a file here or choose one"
-msgstr ""
+msgstr "फ़ाइल यहाँ छोड़ें या कोई फ़ाइल चुनें"
 
 #: src/window.rs:162
 msgid "Recent"
-msgstr ""
+msgstr "हाल के"
 
 #: src/window.rs:188
 msgid "Thumbnails (F9)"
-msgstr ""
+msgstr "थंबनेल (F9)"
 
 #: src/window.rs:200
 #, rust-format
 msgid "Open ({shortcut})"
-msgstr ""
+msgstr "खोलें ({shortcut})"
 
 #: src/window.rs:258
 msgid "Main Menu"
@@ -546,7 +546,7 @@ msgstr "पृष्ठ लेआउट"
 
 #: src/window.rs:306
 msgid "Zoom"
-msgstr ""
+msgstr "ज़ूम"
 
 #: src/window.rs:317
 #, rust-format
@@ -555,7 +555,7 @@ msgstr "पृष्ठ पर जाएँ ({shortcut})"
 
 #: src/window.rs:330
 msgid "Search"
-msgstr ""
+msgstr "खोजें"
 
 #: src/window.rs:342
 msgid "Previous Match (Shift+Enter)"
@@ -662,7 +662,7 @@ msgstr "“{name}” को किसी अन्य प्रोग्रा�
 
 #: src/window/files.rs:335
 msgid "_Reload"
-msgstr ""
+msgstr "फिर से लोड करें (_R)"
 
 #: src/window/files.rs:413
 msgid "File Changed on Disk"
@@ -675,12 +675,12 @@ msgstr "“{name}” को खोले जाने के बाद किस
 
 #: src/window/files.rs:421
 msgid "_Save Anyway"
-msgstr ""
+msgstr "फिर भी सहेजें (_S)"
 
 #: src/window/files.rs:514
 #, rust-format
 msgid "The password was incorrect. Enter the password for “{name}”."
-msgstr ""
+msgstr "पासवर्ड गलत था। “{name}” के लिए पासवर्ड दर्ज करें।"
 
 #: src/window/files.rs:518
 #, rust-format
@@ -693,7 +693,7 @@ msgstr "पासवर्ड आवश्यक है"
 
 #: src/window/files.rs:523
 msgid "_Unlock"
-msgstr ""
+msgstr "अनलॉक करें (_U)"
 
 #: src/window/files.rs:611
 #, rust-format
@@ -702,20 +702,20 @@ msgstr "प्रिंट नहीं किया जा सका: {error}"
 
 #: src/window/files.rs:656
 msgid "Save As"
-msgstr ""
+msgstr "इस रूप में सहेजें"
 
 #: src/window/files.rs:744
 msgid "Save Changes?"
-msgstr ""
+msgstr "बदलाव सहेजें?"
 
 #: src/window/files.rs:746
 #, rust-format
 msgid "“{name}” has unsaved changes. Changes that aren't saved will be lost."
-msgstr ""
+msgstr "“{name}” में बिना सहेजे बदलाव हैं। जो बदलाव सहेजे नहीं जाएँगे, वे खो जाएँगे।"
 
 #: src/window/files.rs:752
 msgid "_Discard"
-msgstr ""
+msgstr "त्यागें (_D)"
 
 #: src/window/files.rs:774
 msgid "Open PDF"
@@ -724,7 +724,7 @@ msgstr "PDF खोलें"
 #: src/window/markup.rs:36
 #, rust-format
 msgid "{tool}: marks the selected text, and what is selected from now on ({shortcut} marks once)"
-msgstr ""
+msgstr "{tool}: चुने गए टेक्स्ट को और अब से जो भी चुना जाएगा उसे चिह्नित करता है (एक बार चिह्नित करने के लिए {shortcut})"
 
 #: src/window/markup.rs:50
 msgid "Draw freehand"
@@ -744,23 +744,23 @@ msgstr "रेखाएँ बनाएँ"
 
 #: src/window/markup.rs:54
 msgid "Add text: click where it goes"
-msgstr ""
+msgstr "टेक्स्ट जोड़ें: जहाँ टेक्स्ट रखना है वहाँ क्लिक करें"
 
 #: src/window/markup.rs:55
 msgid "Add notes: click where one goes"
-msgstr ""
+msgstr "नोट जोड़ें: जहाँ नोट रखना है वहाँ क्लिक करें"
 
 #: src/window/markup.rs:98
 msgid "Color"
-msgstr ""
+msgstr "रंग"
 
 #: src/window/markup.rs:113
 msgid "Signature"
-msgstr ""
+msgstr "हस्ताक्षर"
 
 #: src/window/markup.rs:121
 msgid "Sans-serif"
-msgstr ""
+msgstr "सैन्स-सेरिफ़"
 
 #: src/window/markup.rs:122
 msgid "Serif"
@@ -816,7 +816,7 @@ msgstr "काला"
 
 #: src/window/markup.rs:556
 msgid "Select the text to mark first"
-msgstr ""
+msgstr "पहले चिह्नित करने के लिए टेक्स्ट चुनें"
 
 #: src/window/markup.rs:602
 msgid "Place this signature: click where it goes"
@@ -1011,12 +1011,12 @@ msgstr "फ़ॉर्म रीसेट करना फिर से ला�
 #: src/window/pages.rs:119
 #, rust-format
 msgid "page {page}"
-msgstr ""
+msgstr "पृष्ठ {page}"
 
 #: src/window/pages.rs:131
 #, rust-format
 msgid "pages {pages}"
-msgstr ""
+msgstr "पृष्ठ {pages}"
 
 #: src/window/pages.rs:199
 #, rust-format
@@ -1054,12 +1054,12 @@ msgstr "खोज रहे हैं…"
 #: src/window/search.rs:193
 #, rust-format
 msgid "{current} of {total}"
-msgstr ""
+msgstr "{total} में से {current}"
 
 #. Translators: the search is still running, so there may be
 #. more matches than {total}.
 #: src/window/search.rs:197
 #, rust-format
 msgid "{current} of {total}…"
-msgstr ""
+msgstr "{total} में से {current}…"
 

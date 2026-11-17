@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 21:37\n"
+"PO-Revision-Date: 2026-11-17 22:41\n"
 "Last-Translator: \n"
 "Language-Team: Swedish\n"
 "Language: sv_SE\n"
@@ -36,16 +36,16 @@ msgstr "© 2026 Specto-bidragsgivarna"
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:173
 msgid "hayro (rendering)"
-msgstr ""
+msgstr "hayro (rendering)"
 
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:175
 msgid "lopdf (saving)"
-msgstr ""
+msgstr "lopdf (sparande)"
 
 #: src/main.rs:177
 msgid "Built with"
-msgstr ""
+msgstr "Byggt med"
 
 #: src/main.rs:207
 #, rust-format
@@ -127,7 +127,7 @@ msgstr "Enkel sida"
 
 #: src/main.rs:260 src/window.rs:268
 msgid "Continuous"
-msgstr ""
+msgstr "Kontinuerlig"
 
 #: src/main.rs:261 src/window.rs:269
 msgid "Two Pages"
@@ -171,11 +171,11 @@ msgstr "Miniatyrbilder"
 
 #: src/main.rs:278 src/window.rs:780
 msgid "Contents"
-msgstr ""
+msgstr "Innehåll"
 
 #: src/main.rs:279 src/window.rs:796 src/window/markup.rs:200
 msgid "Markup"
-msgstr ""
+msgstr "Markeringar"
 
 #: src/main.rs:284
 msgid "Previous Page"
@@ -199,11 +199,11 @@ msgstr "Gå till sida…"
 
 #: src/main.rs:293
 msgid "Back"
-msgstr ""
+msgstr "Bakåt"
 
 #: src/main.rs:294
 msgid "Forward"
-msgstr ""
+msgstr "Framåt"
 
 #: src/main.rs:300 src/window.rs:226
 msgid "Rotate Left"
@@ -219,11 +219,11 @@ msgstr "Visa märkningsverktygsfält"
 
 #: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
-msgstr ""
+msgstr "Färgmarkering"
 
 #: src/main.rs:306 src/markup_list.rs:44 src/window/markup.rs:28
 msgid "Underline"
-msgstr ""
+msgstr "Understrykning"
 
 #: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
@@ -243,7 +243,7 @@ msgstr "Arkiv"
 
 #: src/main.rs:317
 msgid "Edit"
-msgstr ""
+msgstr "Redigera"
 
 #: src/main.rs:318
 msgid "View"
@@ -251,7 +251,7 @@ msgstr "Visa"
 
 #: src/main.rs:319
 msgid "Go"
-msgstr ""
+msgstr "Gå"
 
 #: src/main.rs:320
 msgid "Tools"
@@ -279,15 +279,15 @@ msgstr "Linje"
 
 #: src/markup_list.rs:51 src/markup_list.rs:56
 msgid "Note"
-msgstr ""
+msgstr "Anteckning"
 
 #: src/markup_list.rs:52 src/markup_list.rs:57
 msgid "Text"
-msgstr ""
+msgstr "Text"
 
 #: src/markup_list.rs:53 src/markup_list.rs:58
 msgid "Stamp"
-msgstr ""
+msgstr "Stämpel"
 
 #: src/markup_list.rs:59
 msgid "Shape"
@@ -385,11 +385,11 @@ msgstr "Krypterad, öppnas utan lösenord"
 
 #: src/properties.rs:60
 msgid "None"
-msgstr ""
+msgstr "Ingen"
 
 #: src/properties.rs:65
 msgid "Not Allowed"
-msgstr ""
+msgstr "Inte tillåtet"
 
 #: src/properties.rs:73
 msgid "Printing"
@@ -440,7 +440,7 @@ msgstr "{size}, övriga sidor skiljer sig"
 
 #: src/signatures.rs:344
 msgid "Clear"
-msgstr ""
+msgstr "Rensa"
 
 #: src/signatures.rs:356
 msgid "Sign with the mouse or the touchpad"
@@ -448,7 +448,7 @@ msgstr "Signera med musen eller styrplattan"
 
 #: src/signatures.rs:364
 msgid "Draw"
-msgstr ""
+msgstr "Rita"
 
 #: src/signatures.rs:381
 msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
@@ -476,11 +476,11 @@ msgstr "Blått bläck"
 
 #: src/signatures.rs:403
 msgid "Faint"
-msgstr ""
+msgstr "Svag"
 
 #: src/signatures.rs:405
 msgid "Dark"
-msgstr ""
+msgstr "Mörk"
 
 #: src/signatures.rs:416
 msgid "From a Picture"
@@ -496,7 +496,7 @@ msgstr "Inget bläck hittades i bilden. Flytta reglaget åt vänster."
 
 #: src/signatures.rs:458
 msgid "Pictures"
-msgstr ""
+msgstr "Bilder"
 
 #: src/signatures.rs:463
 msgid "Choose a Picture of a Signature"
@@ -525,7 +525,7 @@ msgstr "Släpp en fil här eller välj en"
 
 #: src/window.rs:162
 msgid "Recent"
-msgstr ""
+msgstr "Senaste"
 
 #: src/window.rs:188
 msgid "Thumbnails (F9)"
@@ -534,7 +534,7 @@ msgstr "Miniatyrbilder (F9)"
 #: src/window.rs:200
 #, rust-format
 msgid "Open ({shortcut})"
-msgstr ""
+msgstr "Öppna ({shortcut})"
 
 #: src/window.rs:258
 msgid "Main Menu"
@@ -546,7 +546,7 @@ msgstr "Sidlayout"
 
 #: src/window.rs:306
 msgid "Zoom"
-msgstr ""
+msgstr "Zoom"
 
 #: src/window.rs:317
 #, rust-format
@@ -555,7 +555,7 @@ msgstr "Gå till sida ({shortcut})"
 
 #: src/window.rs:330
 msgid "Search"
-msgstr ""
+msgstr "Sök"
 
 #: src/window.rs:342
 msgid "Previous Match (Shift+Enter)"
@@ -724,7 +724,7 @@ msgstr "Öppna PDF"
 #: src/window/markup.rs:36
 #, rust-format
 msgid "{tool}: marks the selected text, and what is selected from now on ({shortcut} marks once)"
-msgstr ""
+msgstr "{tool}: markerar den markerade texten och allt som markeras från och med nu ({shortcut} markerar en gång)"
 
 #: src/window/markup.rs:50
 msgid "Draw freehand"
@@ -752,11 +752,11 @@ msgstr "Lägg till anteckningar: klicka där en ska vara"
 
 #: src/window/markup.rs:98
 msgid "Color"
-msgstr ""
+msgstr "Färg"
 
 #: src/window/markup.rs:113
 msgid "Signature"
-msgstr ""
+msgstr "Signatur"
 
 #: src/window/markup.rs:121
 msgid "Sans-serif"
@@ -870,15 +870,15 @@ msgstr[1] "Ångra infoga {n} sidor"
 
 #: src/window/pages.rs:36
 msgid "Undo Highlight"
-msgstr ""
+msgstr "Ångra Överstrykning"
 
 #: src/window/pages.rs:37
 msgid "Undo Underline"
-msgstr ""
+msgstr "Ångra Understrykning"
 
 #: src/window/pages.rs:38
 msgid "Undo Strikethrough"
-msgstr ""
+msgstr "Ångra Genomstrykning"
 
 #: src/window/pages.rs:39
 msgid "Undo Drawing"
@@ -886,23 +886,23 @@ msgstr "Ångra ritning"
 
 #: src/window/pages.rs:40
 msgid "Undo Rectangle"
-msgstr ""
+msgstr "Ångra Rektangel"
 
 #: src/window/pages.rs:41
 msgid "Undo Ellipse"
-msgstr ""
+msgstr "Ångra Ellips"
 
 #: src/window/pages.rs:42
 msgid "Undo Line"
-msgstr ""
+msgstr "Ångra Linje"
 
 #: src/window/pages.rs:43
 msgid "Undo Note"
-msgstr ""
+msgstr "Ångra Anteckning"
 
 #: src/window/pages.rs:44
 msgid "Undo Text Box"
-msgstr ""
+msgstr "Ångra Textruta"
 
 #: src/window/pages.rs:45
 msgid "Undo Add Annotation"
@@ -954,7 +954,7 @@ msgstr[1] "Gör om infoga {n} sidor"
 
 #: src/window/pages.rs:66
 msgid "Redo Highlight"
-msgstr ""
+msgstr "Gör om Överstrykning"
 
 #: src/window/pages.rs:67
 msgid "Redo Underline"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 21:37\n"
+"PO-Revision-Date: 2026-11-17 22:41\n"
 "Last-Translator: \n"
 "Language-Team: Arabic\n"
 "Language: ar_SA\n"
@@ -36,16 +36,16 @@ msgstr "© 2026 المساهمون في Specto"
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:173
 msgid "hayro (rendering)"
-msgstr ""
+msgstr "hayro (للعرض)"
 
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:175
 msgid "lopdf (saving)"
-msgstr ""
+msgstr "lopdf (للحفظ)"
 
 #: src/main.rs:177
 msgid "Built with"
-msgstr ""
+msgstr "بُني باستخدام"
 
 #: src/main.rs:207
 #, rust-format
@@ -79,7 +79,7 @@ msgstr "اطبع…"
 
 #: src/main.rs:233 src/properties.rs:201 src/window.rs:220
 msgid "Properties"
-msgstr ""
+msgstr "الخصائص"
 
 #: src/main.rs:235
 msgid "Close Window"
@@ -127,7 +127,7 @@ msgstr "صفحة واحدة"
 
 #: src/main.rs:260 src/window.rs:268
 msgid "Continuous"
-msgstr ""
+msgstr "متواصل"
 
 #: src/main.rs:261 src/window.rs:269
 msgid "Two Pages"
@@ -171,11 +171,11 @@ msgstr "المصغرات"
 
 #: src/main.rs:278 src/window.rs:780
 msgid "Contents"
-msgstr ""
+msgstr "المحتويات"
 
 #: src/main.rs:279 src/window.rs:796 src/window/markup.rs:200
 msgid "Markup"
-msgstr ""
+msgstr "التعليقات التوضيحية"
 
 #: src/main.rs:284
 msgid "Previous Page"
@@ -199,11 +199,11 @@ msgstr "انتقل إلى صفحة…"
 
 #: src/main.rs:293
 msgid "Back"
-msgstr ""
+msgstr "رجوع"
 
 #: src/main.rs:294
 msgid "Forward"
-msgstr ""
+msgstr "تقدّم"
 
 #: src/main.rs:300 src/window.rs:226
 msgid "Rotate Left"
@@ -219,7 +219,7 @@ msgstr "إظهار شريط أدوات التعليم"
 
 #: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
-msgstr ""
+msgstr "تظليل"
 
 #: src/main.rs:306 src/markup_list.rs:44 src/window/markup.rs:28
 msgid "Underline"
@@ -239,27 +239,27 @@ msgstr "تصفير النموذج"
 
 #: src/main.rs:316
 msgid "File"
-msgstr ""
+msgstr "ملف"
 
 #: src/main.rs:317
 msgid "Edit"
-msgstr ""
+msgstr "تحرير"
 
 #: src/main.rs:318
 msgid "View"
-msgstr ""
+msgstr "عرض"
 
 #: src/main.rs:319
 msgid "Go"
-msgstr ""
+msgstr "انتقال"
 
 #: src/main.rs:320
 msgid "Tools"
-msgstr ""
+msgstr "أدوات"
 
 #: src/main.rs:322
 msgid "Help"
-msgstr ""
+msgstr "مساعدة"
 
 #: src/markup_list.rs:47
 msgid "Drawing"
@@ -279,15 +279,15 @@ msgstr "خط"
 
 #: src/markup_list.rs:51 src/markup_list.rs:56
 msgid "Note"
-msgstr ""
+msgstr "ملاحظة"
 
 #: src/markup_list.rs:52 src/markup_list.rs:57
 msgid "Text"
-msgstr ""
+msgstr "نص"
 
 #: src/markup_list.rs:53 src/markup_list.rs:58
 msgid "Stamp"
-msgstr ""
+msgstr "ختم"
 
 #: src/markup_list.rs:59
 msgid "Shape"
@@ -323,7 +323,7 @@ msgstr "المجلد"
 
 #: src/properties.rs:38
 msgid "Title"
-msgstr ""
+msgstr "العنوان"
 
 #: src/properties.rs:39
 msgid "Author"
@@ -385,7 +385,7 @@ msgstr "مُعمّى، ويُفتح دون كلمة سر"
 
 #: src/properties.rs:60
 msgid "None"
-msgstr ""
+msgstr "لا شيء"
 
 #: src/properties.rs:65
 msgid "Not Allowed"
@@ -440,7 +440,7 @@ msgstr "{size}، والصفحات الأخرى مختلفة"
 
 #: src/signatures.rs:344
 msgid "Clear"
-msgstr ""
+msgstr "مسح"
 
 #: src/signatures.rs:356
 msgid "Sign with the mouse or the touchpad"
@@ -448,7 +448,7 @@ msgstr "وقّع باستخدام الفأرة أو لوحة اللمس"
 
 #: src/signatures.rs:364
 msgid "Draw"
-msgstr ""
+msgstr "رسم"
 
 #: src/signatures.rs:381
 msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
@@ -476,11 +476,11 @@ msgstr "حبر أزرق"
 
 #: src/signatures.rs:403
 msgid "Faint"
-msgstr ""
+msgstr "باهت"
 
 #: src/signatures.rs:405
 msgid "Dark"
-msgstr ""
+msgstr "داكن"
 
 #: src/signatures.rs:416
 msgid "From a Picture"
@@ -525,7 +525,7 @@ msgstr "أفلِت ملفًا هنا أو اختر واحدًا"
 
 #: src/window.rs:162
 msgid "Recent"
-msgstr ""
+msgstr "الأخيرة"
 
 #: src/window.rs:188
 msgid "Thumbnails (F9)"
@@ -534,7 +534,7 @@ msgstr "المصغّرات (F9)"
 #: src/window.rs:200
 #, rust-format
 msgid "Open ({shortcut})"
-msgstr ""
+msgstr "فتح ({shortcut})"
 
 #: src/window.rs:258
 msgid "Main Menu"
@@ -546,7 +546,7 @@ msgstr "تخطيط الصفحة"
 
 #: src/window.rs:306
 msgid "Zoom"
-msgstr ""
+msgstr "التكبير"
 
 #: src/window.rs:317
 #, rust-format
@@ -555,7 +555,7 @@ msgstr "انتقل إلى صفحة ({shortcut})"
 
 #: src/window.rs:330
 msgid "Search"
-msgstr ""
+msgstr "بحث"
 
 #: src/window.rs:342
 msgid "Previous Match (Shift+Enter)"
@@ -732,7 +732,7 @@ msgstr "افتح PDF"
 #: src/window/markup.rs:36
 #, rust-format
 msgid "{tool}: marks the selected text, and what is selected from now on ({shortcut} marks once)"
-msgstr ""
+msgstr "{tool}: يضع علامة على النص المحدد وعلى كل ما يُحدد من الآن فصاعدًا ({shortcut} للتعليم مرة واحدة)"
 
 #: src/window/markup.rs:50
 msgid "Draw freehand"
@@ -824,7 +824,7 @@ msgstr "أسود"
 
 #: src/window/markup.rs:556
 msgid "Select the text to mark first"
-msgstr ""
+msgstr "حدّد النص المراد وسمه أولًا"
 
 #: src/window/markup.rs:602
 msgid "Place this signature: click where it goes"
@@ -840,7 +840,7 @@ msgstr "توقيع جديد…"
 
 #: src/window/markup.rs:659
 msgid "Click where the signature goes"
-msgstr ""
+msgstr "انقر على موضع التوقيع"
 
 #: src/window/markup.rs:1544 src/window/markup.rs:1571
 #: src/window/markup.rs:1664 src/window/markup.rs:1717
@@ -910,23 +910,23 @@ msgstr "التراجع عن الرسم"
 
 #: src/window/pages.rs:40
 msgid "Undo Rectangle"
-msgstr ""
+msgstr "تراجع عن المستطيل"
 
 #: src/window/pages.rs:41
 msgid "Undo Ellipse"
-msgstr ""
+msgstr "تراجع عن الشكل البيضاوي"
 
 #: src/window/pages.rs:42
 msgid "Undo Line"
-msgstr ""
+msgstr "تراجع عن الخط"
 
 #: src/window/pages.rs:43
 msgid "Undo Note"
-msgstr ""
+msgstr "تراجع عن الملاحظة"
 
 #: src/window/pages.rs:44
 msgid "Undo Text Box"
-msgstr ""
+msgstr "تراجع عن مربع النص"
 
 #: src/window/pages.rs:45
 msgid "Undo Add Annotation"
@@ -994,39 +994,39 @@ msgstr[5] "إعادة إدراج {n} صفحة"
 
 #: src/window/pages.rs:66
 msgid "Redo Highlight"
-msgstr ""
+msgstr "إعادة التظليل"
 
 #: src/window/pages.rs:67
 msgid "Redo Underline"
-msgstr ""
+msgstr "إعادة التسطير"
 
 #: src/window/pages.rs:68
 msgid "Redo Strikethrough"
-msgstr ""
+msgstr "إعادة الشطب"
 
 #: src/window/pages.rs:69
 msgid "Redo Drawing"
-msgstr ""
+msgstr "إعادة الرسم"
 
 #: src/window/pages.rs:70
 msgid "Redo Rectangle"
-msgstr ""
+msgstr "إعادة المستطيل"
 
 #: src/window/pages.rs:71
 msgid "Redo Ellipse"
-msgstr ""
+msgstr "إعادة الشكل البيضاوي"
 
 #: src/window/pages.rs:72
 msgid "Redo Line"
-msgstr ""
+msgstr "إعادة الخط"
 
 #: src/window/pages.rs:73
 msgid "Redo Note"
-msgstr ""
+msgstr "إعادة الملاحظة"
 
 #: src/window/pages.rs:74
 msgid "Redo Text Box"
-msgstr ""
+msgstr "إعادة مربع النص"
 
 #: src/window/pages.rs:75
 msgid "Redo Add Annotation"

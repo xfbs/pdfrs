@@ -10,22 +10,22 @@
 <resources>
     <!-- Buttons that many dialogs share. -->
     <string name="cancel">Hủy</string>
-    <string name="close">Close</string>
+    <string name="close">Đóng</string>
     <string name="open">Mở</string>
     <string name="save">Lưu</string>
     <string name="save_as">Lưu thành</string>
-    <string name="discard">Discard</string>
+    <string name="discard">Hủy bỏ</string>
     <string name="delete">Xóa</string>
-    <string name="share">Share</string>
+    <string name="share">Chia sẻ</string>
     <string name="select_all">Chọn tất cả</string>
     <!-- Describes the ⋮ button to screen readers. -->
-    <string name="more">More</string>
-    <string name="back">Back</string>
+    <string name="more">Thêm</string>
+    <string name="back">Quay lại</string>
     <!-- The top bar. -->
     <string name="back_to_document">Quay lại tài liệu</string>
-    <string name="contents_and_pages">Contents and pages</string>
+    <string name="contents_and_pages">Mục lục và trang</string>
     <!-- Beside the document's name while it has unsaved changes. -->
-    <string name="edited">Edited</string>
+    <string name="edited">Đã chỉnh sửa</string>
     <string name="search">Tìm kiếm</string>
     <!-- The ⋮ menu. -->
     <string name="menu_open">Mở</string>
@@ -35,6 +35,7 @@
     <string name="menu_properties">Thuộc tính</string>
     <string name="menu_highlight_fields">Đánh dấu các trường biểu mẫu</string>
     <string name="menu_reset_form">Đặt lại biểu mẫu</string>
+    <string name="menu_discard_changes">Hủy bỏ thay đổi</string>
     <string name="menu_settings">Cài đặt</string>
     <!-- Closes the document and returns to the start screen. -->
     <string name="menu_close">Đóng</string>
@@ -58,7 +59,7 @@
     <string name="redo_reset_form">Làm lại đặt lại biểu mẫu</string>
     <!-- The start screen. -->
     <string name="open_pdf">Mở PDF</string>
-    <string name="recent">Recent</string>
+    <string name="recent">Gần đây</string>
     <!-- Where the reader left off in a recent document. -->
     <string name="recent_page">Trang %1$d</string>
     <string name="recent_page_of">Trang %1$d trên %2$d</string>
@@ -72,16 +73,16 @@
     <string name="password_protected">%1$s được bảo vệ bằng mật khẩu</string>
     <string name="password_needed">Cần có mật khẩu để mở %1$s.</string>
     <string name="password_title">Yêu cầu mật khẩu</string>
-    <string name="password_prompt">Enter the password to open %1$s.</string>
+    <string name="password_prompt">Nhập mật khẩu để mở %1$s.</string>
     <string name="password_label">Mật khẩu</string>
     <string name="password_wrong">Mật khẩu không đúng.</string>
     <!-- Pages and Contents. -->
     <string name="tab_pages">Trang</string>
     <string name="tab_contents">Mục lục</string>
-    <string name="collapse">Collapse</string>
-    <string name="expand">Expand</string>
+    <string name="collapse">Thu gọn</string>
+    <string name="expand">Mở rộng</string>
     <!-- What a long press on a page in the page grid does, for screen readers. -->
-    <string name="pick">Pick</string>
+    <string name="pick">Chọn</string>
     <!-- Follows the finger while pages are dragged to another place. -->
     <plurals name="pages_dragged">
         <item quantity="other">%d trang</item>
@@ -92,11 +93,11 @@
     <!-- "Go to page". -->
     <string name="go_to_title">Đi tới trang</string>
     <!-- The field's label, with the first and last page number: "Page (i–240)". -->
-    <string name="go_to_label">Page (%1$s–%2$s)</string>
+    <string name="go_to_label">Trang (%1$s–%2$s)</string>
     <!-- Which page a typed page number is, counted from the first. -->
     <string name="go_to_position">Trang %1$d trên %2$d</string>
-    <string name="go_to_position_hint">Or a position, 1–%1$d</string>
-    <string name="go">Go</string>
+    <string name="go_to_position_hint">Hoặc một vị trí, 1–%1$d</string>
+    <string name="go">Đi</string>
     <!-- Search. -->
     <string name="close_search">Đóng tìm kiếm</string>
     <string name="previous_match">Kết quả trước</string>
@@ -118,13 +119,13 @@
     <string name="could_not_delete_annotation">Không thể xóa chú thích: %1$s</string>
     <!-- Titles of the dialogs that fill in a field of a form, where the form has no name for it. -->
     <string name="field_text_title">Điền vào trường</string>
-    <string name="field_choice_title">Choose</string>
-    <string name="field_done">Done</string>
+    <string name="field_choice_title">Chọn</string>
+    <string name="field_done">Xong</string>
     <!-- The line of a menu of a form that takes text of one\'s own instead of one of its options. -->
     <string name="field_own_text">Hoặc tự nhập</string>
     <!-- How many characters a field holds of how many it takes, such as 3 / 10. -->
     <string name="field_length">%1$d / %2$d</string>
-    <string name="copy">Copy</string>
+    <string name="copy">Sao chép</string>
     <string name="copied">Đã sao chép</string>
     <string name="too_much_to_copy">Văn bản quá dài để sao chép cùng một lúc</string>
     <string name="too_much_to_share">Văn bản quá dài để chia sẻ cùng một lúc</string>
@@ -145,7 +146,7 @@
     <string name="fit_page">Vừa khít trang</string>
     <string name="fit_width">Vừa chiều rộng</string>
     <!-- Tells screen readers which menu item is ticked. -->
-    <string name="chosen">Chosen</string>
+    <string name="chosen">Đã chọn</string>
     <!-- Editing pages. -->
     <!-- How many pages are picked: short, it shares a phone's top bar with four buttons. -->
     <plurals name="pages_selected">
@@ -157,10 +158,13 @@
     <string name="delete_pages">Xóa trang</string>
     <string name="unsaved_title">Lưu các thay đổi?</string>
     <string name="unsaved_text">Các thay đổi đối với các trang của %1$s sẽ bị mất nếu bạn không lưu.</string>
+    <string name="discard_title">Hủy bỏ thay đổi?</string>
+    <string name="discard_text">Các thay đổi trong %1$s kể từ lần lưu gần nhất sẽ bị mất.</string>
     <string name="saving">Đang lưu…</string>
     <!-- With what went wrong, as the system or the PDF library put it (in English). -->
     <string name="could_not_save">Không thể lưu: %1$s</string>
-    <string name="could_not_save_there">Couldn\'t save there. This is the edited copy.</string>
+    <string name="could_not_save_there">Không thể lưu vào đó. Đây là bản sao đã chỉnh sửa.</string>
+    <string name="draft_not_restored">Không thể khôi phục các thay đổi chưa lưu của %1$s.</string>
     <!-- Sharing and printing. -->
     <string name="could_not_share">Không thể chia sẻ tệp này</string>
     <string name="preparing_to_print">Đang chuẩn bị in…</string>
@@ -198,5 +202,5 @@
     <string name="crash_log">Nhật ký sự cố</string>
     <string name="crash_log_empty">Chưa có sự cố nào xảy ra</string>
     <!-- With the date of the newest entry. -->
-    <string name="crash_log_detail">Last entry %1$s. Kept on this device; nothing is sent unless you share it.</string>
+    <string name="crash_log_detail">Mục gần nhất: %1$s. Được lưu trên thiết bị này; không có gì được gửi đi trừ khi bạn chia sẻ.</string>
 </resources>

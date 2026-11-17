@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 21:37\n"
+"PO-Revision-Date: 2026-11-17 22:37\n"
 "Last-Translator: \n"
 "Language-Team: Lithuanian\n"
 "Language: lt_LT\n"
@@ -45,7 +45,7 @@ msgstr "lopdf (įrašymas)"
 
 #: src/main.rs:177
 msgid "Built with"
-msgstr ""
+msgstr "Sukurta naudojant"
 
 #: src/main.rs:207
 #, rust-format
@@ -63,7 +63,7 @@ msgstr "Atverti…"
 
 #: src/main.rs:227 src/window.rs:213
 msgid "Save"
-msgstr ""
+msgstr "Įrašyti"
 
 #: src/main.rs:228 src/window.rs:214
 msgid "Save As…"
@@ -79,7 +79,7 @@ msgstr "Spausdinti…"
 
 #: src/main.rs:233 src/properties.rs:201 src/window.rs:220
 msgid "Properties"
-msgstr ""
+msgstr "Savybės"
 
 #: src/main.rs:235
 msgid "Close Window"
@@ -95,7 +95,7 @@ msgstr "Atkurti"
 
 #: src/main.rs:244
 msgid "Copy"
-msgstr ""
+msgstr "Kopijuoti"
 
 #: src/main.rs:245
 msgid "Select All"
@@ -127,7 +127,7 @@ msgstr "Vienas puslapis"
 
 #: src/main.rs:260 src/window.rs:268
 msgid "Continuous"
-msgstr ""
+msgstr "Ištisinis"
 
 #: src/main.rs:261 src/window.rs:269
 msgid "Two Pages"
@@ -155,11 +155,11 @@ msgstr "Pritaikyti prie puslapio"
 
 #: src/main.rs:272 src/window.rs:300
 msgid "Zoom In"
-msgstr ""
+msgstr "Padidinti"
 
 #: src/main.rs:273 src/window.rs:301
 msgid "Zoom Out"
-msgstr ""
+msgstr "Sumažinti"
 
 #: src/main.rs:276
 msgid "Show Sidebar"
@@ -171,11 +171,11 @@ msgstr "Miniatiūros"
 
 #: src/main.rs:278 src/window.rs:780
 msgid "Contents"
-msgstr ""
+msgstr "Turinys"
 
 #: src/main.rs:279 src/window.rs:796 src/window/markup.rs:200
 msgid "Markup"
-msgstr ""
+msgstr "Žymėjimas"
 
 #: src/main.rs:284
 msgid "Previous Page"
@@ -199,11 +199,11 @@ msgstr "Eiti į puslapį…"
 
 #: src/main.rs:293
 msgid "Back"
-msgstr ""
+msgstr "Atgal"
 
 #: src/main.rs:294
 msgid "Forward"
-msgstr ""
+msgstr "Pirmyn"
 
 #: src/main.rs:300 src/window.rs:226
 msgid "Rotate Left"
@@ -219,11 +219,11 @@ msgstr "Rodyti žymėjimo įrankių juostą"
 
 #: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
-msgstr ""
+msgstr "Paryškinimas"
 
 #: src/main.rs:306 src/markup_list.rs:44 src/window/markup.rs:28
 msgid "Underline"
-msgstr ""
+msgstr "Pabraukimas"
 
 #: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
@@ -251,7 +251,7 @@ msgstr "Rodymas"
 
 #: src/main.rs:319
 msgid "Go"
-msgstr ""
+msgstr "Eiti"
 
 #: src/main.rs:320
 msgid "Tools"
@@ -263,7 +263,7 @@ msgstr "Žinynas"
 
 #: src/markup_list.rs:47
 msgid "Drawing"
-msgstr ""
+msgstr "Piešinys"
 
 #: src/markup_list.rs:48
 msgid "Rectangle"
@@ -275,27 +275,27 @@ msgstr "Elipsė"
 
 #: src/markup_list.rs:50
 msgid "Line"
-msgstr ""
+msgstr "Linija"
 
 #: src/markup_list.rs:51 src/markup_list.rs:56
 msgid "Note"
-msgstr ""
+msgstr "Pastaba"
 
 #: src/markup_list.rs:52 src/markup_list.rs:57
 msgid "Text"
-msgstr ""
+msgstr "Tekstas"
 
 #: src/markup_list.rs:53 src/markup_list.rs:58
 msgid "Stamp"
-msgstr ""
+msgstr "Antspaudas"
 
 #: src/markup_list.rs:59
 msgid "Shape"
-msgstr ""
+msgstr "Figūra"
 
 #: src/markup_list.rs:60
 msgid "Attachment"
-msgstr ""
+msgstr "Priedas"
 
 #: src/markup_list.rs:96
 msgid "No Markup"
@@ -323,7 +323,7 @@ msgstr "Aplankas"
 
 #: src/properties.rs:38
 msgid "Title"
-msgstr ""
+msgstr "Pavadinimas"
 
 #: src/properties.rs:39
 msgid "Author"
@@ -385,7 +385,7 @@ msgstr "Užšifruota, atsidaro be slaptažodžio"
 
 #: src/properties.rs:60
 msgid "None"
-msgstr ""
+msgstr "Nėra"
 
 #: src/properties.rs:65
 msgid "Not Allowed"
@@ -440,7 +440,7 @@ msgstr "{size}, kiti puslapiai skiriasi"
 
 #: src/signatures.rs:344
 msgid "Clear"
-msgstr ""
+msgstr "Išvalyti"
 
 #: src/signatures.rs:356
 msgid "Sign with the mouse or the touchpad"
@@ -448,7 +448,7 @@ msgstr "Pasirašykite pele arba jutikline planšete"
 
 #: src/signatures.rs:364
 msgid "Draw"
-msgstr ""
+msgstr "Piešti"
 
 #: src/signatures.rs:381
 msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
@@ -456,7 +456,7 @@ msgstr "Pasirašykite ant balto popieriaus, nufotografuokite ir pasirinkite tą 
 
 #: src/signatures.rs:388
 msgid "Choose Picture…"
-msgstr ""
+msgstr "Pasirinkti paveikslėlį…"
 
 #: src/signatures.rs:395
 msgid "To the left, faint strokes are kept, and more of the paper's shadows. To the right, only what is dark."
@@ -464,7 +464,7 @@ msgstr "Kairėje paliekami blankūs brūkšniai ir daugiau popieriaus šešėli�
 
 #: src/signatures.rs:398
 msgid "Ink as in the picture"
-msgstr ""
+msgstr "Rašalas kaip paveikslėlyje"
 
 #: src/signatures.rs:399
 msgid "Black ink"
@@ -476,15 +476,15 @@ msgstr "Mėlynas rašalas"
 
 #: src/signatures.rs:403
 msgid "Faint"
-msgstr ""
+msgstr "Blankus"
 
 #: src/signatures.rs:405
 msgid "Dark"
-msgstr ""
+msgstr "Tamsus"
 
 #: src/signatures.rs:416
 msgid "From a Picture"
-msgstr ""
+msgstr "Iš paveikslėlio"
 
 #: src/signatures.rs:439
 msgid "Move the slider until the paper is gone and the strokes are whole."
@@ -496,7 +496,7 @@ msgstr "Šioje nuotraukoje rašalo nerasta. Pastumkite slankiklį į kairę."
 
 #: src/signatures.rs:458
 msgid "Pictures"
-msgstr ""
+msgstr "Paveikslėliai"
 
 #: src/signatures.rs:463
 msgid "Choose a Picture of a Signature"
@@ -505,11 +505,11 @@ msgstr "Pasirinkite parašo nuotrauką"
 #: src/signatures.rs:480 src/window/files.rs:420 src/window/files.rs:522
 #: src/window/files.rs:751
 msgid "_Cancel"
-msgstr ""
+msgstr "_Atsisakyti"
 
 #: src/signatures.rs:482 src/window/files.rs:753
 msgid "_Save"
-msgstr ""
+msgstr "_Įrašyti"
 
 #: src/signatures.rs:510
 msgid "New Signature"
@@ -525,7 +525,7 @@ msgstr "Nuvilkite failą čia arba pasirinkite jį"
 
 #: src/window.rs:162
 msgid "Recent"
-msgstr ""
+msgstr "Naujausi"
 
 #: src/window.rs:188
 msgid "Thumbnails (F9)"
@@ -534,7 +534,7 @@ msgstr "Miniatiūros (F9)"
 #: src/window.rs:200
 #, rust-format
 msgid "Open ({shortcut})"
-msgstr ""
+msgstr "Atverti ({shortcut})"
 
 #: src/window.rs:258
 msgid "Main Menu"
@@ -542,11 +542,11 @@ msgstr "Pagrindinis meniu"
 
 #: src/window.rs:285
 msgid "Page Layout"
-msgstr ""
+msgstr "Puslapių išdėstymas"
 
 #: src/window.rs:306
 msgid "Zoom"
-msgstr ""
+msgstr "Mastelis"
 
 #: src/window.rs:317
 #, rust-format
@@ -555,7 +555,7 @@ msgstr "Eiti į puslapį ({shortcut})"
 
 #: src/window.rs:330
 msgid "Search"
-msgstr ""
+msgstr "Paieška"
 
 #: src/window.rs:342
 msgid "Previous Match (Shift+Enter)"
@@ -585,7 +585,7 @@ msgstr "Nepavyko atidaryti nuorodos: {error}"
 #: src/window.rs:960
 #, rust-format
 msgid "Ctrl+{key}"
-msgstr ""
+msgstr "Ctrl+{key}"
 
 #: src/window/actions.rs:103
 #, rust-format
@@ -634,20 +634,20 @@ msgstr "PDF dokumentai"
 
 #: src/window/files.rs:54
 msgid "reading failed"
-msgstr ""
+msgstr "nepavyko perskaityti"
 
 #: src/window/files.rs:98 src/window/files.rs:102
 msgid "saving failed"
-msgstr ""
+msgstr "nepavyko įrašyti"
 
 #: src/window/files.rs:175
 msgid "the document's password is needed"
-msgstr ""
+msgstr "reikia dokumento slaptažodžio"
 
 #: src/window/files.rs:177
 #, rust-format
 msgid "{app} can't save this document correctly yet"
-msgstr ""
+msgstr "{app} kol kas negali tinkamai įrašyti šio dokumento"
 
 #: src/window/files.rs:249 src/window/pages.rs:405
 #, rust-format
@@ -666,7 +666,7 @@ msgstr "„{name}“ buvo pakeistas kitos programos. Įkėlus iš naujo, jūsų 
 
 #: src/window/files.rs:335
 msgid "_Reload"
-msgstr ""
+msgstr "Į_kelti iš naujo"
 
 #: src/window/files.rs:413
 msgid "File Changed on Disk"
@@ -679,12 +679,12 @@ msgstr "„{name}“ buvo pakeistas kitos programos po to, kai buvo atidarytas. 
 
 #: src/window/files.rs:421
 msgid "_Save Anyway"
-msgstr ""
+msgstr "_Vis tiek įrašyti"
 
 #: src/window/files.rs:514
 #, rust-format
 msgid "The password was incorrect. Enter the password for “{name}”."
-msgstr ""
+msgstr "Slaptažodis neteisingas. Įveskite „{name}“ slaptažodį."
 
 #: src/window/files.rs:518
 #, rust-format
@@ -697,7 +697,7 @@ msgstr "Reikalingas slaptažodis"
 
 #: src/window/files.rs:523
 msgid "_Unlock"
-msgstr ""
+msgstr "_Atrakinti"
 
 #: src/window/files.rs:611
 #, rust-format
@@ -719,7 +719,7 @@ msgstr "„{name}“ turi neįrašytų pakeitimų. Neįrašyti pakeitimai bus pr
 
 #: src/window/files.rs:752
 msgid "_Discard"
-msgstr ""
+msgstr "_Atmesti"
 
 #: src/window/files.rs:774
 msgid "Open PDF"
@@ -728,11 +728,11 @@ msgstr "Atidaryti PDF"
 #: src/window/markup.rs:36
 #, rust-format
 msgid "{tool}: marks the selected text, and what is selected from now on ({shortcut} marks once)"
-msgstr ""
+msgstr "{tool}: pažymi pasirinktą tekstą ir tai, kas bus pasirinkta nuo dabar ({shortcut} pažymi vieną kartą)"
 
 #: src/window/markup.rs:50
 msgid "Draw freehand"
-msgstr ""
+msgstr "Piešti laisva ranka"
 
 #: src/window/markup.rs:51
 msgid "Draw rectangles"
@@ -748,7 +748,7 @@ msgstr "Piešti linijas"
 
 #: src/window/markup.rs:54
 msgid "Add text: click where it goes"
-msgstr ""
+msgstr "Pridėti tekstą: spustelėkite, kur jis turi būti"
 
 #: src/window/markup.rs:55
 msgid "Add notes: click where one goes"
@@ -760,7 +760,7 @@ msgstr "Spalva"
 
 #: src/window/markup.rs:113
 msgid "Signature"
-msgstr ""
+msgstr "Parašas"
 
 #: src/window/markup.rs:121
 msgid "Sans-serif"
@@ -848,7 +848,7 @@ msgstr "Nepavyko pakeisti anotacijos: {error}"
 #, rust-format
 msgid "Undo Rotate Page"
 msgid_plural "Undo Rotate {n} Pages"
-msgstr[0] "Atšaukti puslapio pasukimą"
+msgstr[0] "Atšaukti {n} puslapio pasukimą"
 msgstr[1] "Atšaukti {n} puslapių pasukimą"
 msgstr[2] "Atšaukti {n} puslapio pasukimą"
 msgstr[3] "Atšaukti {n} puslapių pasukimą"
@@ -857,7 +857,7 @@ msgstr[3] "Atšaukti {n} puslapių pasukimą"
 #, rust-format
 msgid "Undo Delete Page"
 msgid_plural "Undo Delete {n} Pages"
-msgstr[0] "Atšaukti puslapio ištrynimą"
+msgstr[0] "Atšaukti {n} puslapio ištrynimą"
 msgstr[1] "Atšaukti {n} puslapių ištrynimą"
 msgstr[2] "Atšaukti {n} puslapio ištrynimą"
 msgstr[3] "Atšaukti {n} puslapių ištrynimą"
@@ -866,7 +866,7 @@ msgstr[3] "Atšaukti {n} puslapių ištrynimą"
 #, rust-format
 msgid "Undo Move Page"
 msgid_plural "Undo Move {n} Pages"
-msgstr[0] "Atšaukti puslapio perkėlimą"
+msgstr[0] "Atšaukti {n} puslapio perkėlimą"
 msgstr[1] "Atšaukti {n} puslapių perkėlimą"
 msgstr[2] "Atšaukti {n} puslapio perkėlimą"
 msgstr[3] "Atšaukti {n} puslapių perkėlimą"
@@ -875,7 +875,7 @@ msgstr[3] "Atšaukti {n} puslapių perkėlimą"
 #, rust-format
 msgid "Undo Insert Page"
 msgid_plural "Undo Insert {n} Pages"
-msgstr[0] "Atšaukti puslapio įterpimą"
+msgstr[0] "Atšaukti {n} puslapio įterpimą"
 msgstr[1] "Atšaukti {n} puslapių įterpimą"
 msgstr[2] "Atšaukti {n} puslapio įterpimą"
 msgstr[3] "Atšaukti {n} puslapių įterpimą"
@@ -940,7 +940,7 @@ msgstr "Atšaukti formos atstatymą"
 #, rust-format
 msgid "Redo Rotate Page"
 msgid_plural "Redo Rotate {n} Pages"
-msgstr[0] "Atkurti puslapio pasukimą"
+msgstr[0] "Atkurti {n} puslapio pasukimą"
 msgstr[1] "Atkurti {n} puslapių pasukimą"
 msgstr[2] "Atkurti {n} puslapio pasukimą"
 msgstr[3] "Atkurti {n} puslapių pasukimą"
@@ -949,7 +949,7 @@ msgstr[3] "Atkurti {n} puslapių pasukimą"
 #, rust-format
 msgid "Redo Delete Page"
 msgid_plural "Redo Delete {n} Pages"
-msgstr[0] "Atkurti puslapio ištrynimą"
+msgstr[0] "Atkurti {n} puslapio ištrynimą"
 msgstr[1] "Atkurti {n} puslapių ištrynimą"
 msgstr[2] "Atkurti {n} puslapio ištrynimą"
 msgstr[3] "Atkurti {n} puslapių ištrynimą"
@@ -958,7 +958,7 @@ msgstr[3] "Atkurti {n} puslapių ištrynimą"
 #, rust-format
 msgid "Redo Move Page"
 msgid_plural "Redo Move {n} Pages"
-msgstr[0] "Atkurti puslapio perkėlimą"
+msgstr[0] "Atkurti {n} puslapio perkėlimą"
 msgstr[1] "Atkurti {n} puslapių perkėlimą"
 msgstr[2] "Atkurti {n} puslapio perkėlimą"
 msgstr[3] "Atkurti {n} puslapių perkėlimą"
@@ -967,34 +967,34 @@ msgstr[3] "Atkurti {n} puslapių perkėlimą"
 #, rust-format
 msgid "Redo Insert Page"
 msgid_plural "Redo Insert {n} Pages"
-msgstr[0] "Atkurti puslapio įterpimą"
+msgstr[0] "Atkurti {n} puslapio įterpimą"
 msgstr[1] "Atkurti {n} puslapių įterpimą"
 msgstr[2] "Atkurti {n} puslapio įterpimą"
 msgstr[3] "Atkurti {n} puslapių įterpimą"
 
 #: src/window/pages.rs:66
 msgid "Redo Highlight"
-msgstr ""
+msgstr "Pakartoti paryškinimą"
 
 #: src/window/pages.rs:67
 msgid "Redo Underline"
-msgstr ""
+msgstr "Pakartoti pabraukimą"
 
 #: src/window/pages.rs:68
 msgid "Redo Strikethrough"
-msgstr ""
+msgstr "Pakartoti perbraukimą"
 
 #: src/window/pages.rs:69
 msgid "Redo Drawing"
-msgstr ""
+msgstr "Pakartoti piešinį"
 
 #: src/window/pages.rs:70
 msgid "Redo Rectangle"
-msgstr ""
+msgstr "Pakartoti stačiakampį"
 
 #: src/window/pages.rs:71
 msgid "Redo Ellipse"
-msgstr ""
+msgstr "Pakartoti elipsę"
 
 #: src/window/pages.rs:72
 msgid "Redo Line"
@@ -1031,12 +1031,12 @@ msgstr "Pakartoti formos atstatymą"
 #: src/window/pages.rs:119
 #, rust-format
 msgid "page {page}"
-msgstr ""
+msgstr "{page} puslapis"
 
 #: src/window/pages.rs:131
 #, rust-format
 msgid "pages {pages}"
-msgstr ""
+msgstr "puslapiai {pages}"
 
 #: src/window/pages.rs:199
 #, rust-format

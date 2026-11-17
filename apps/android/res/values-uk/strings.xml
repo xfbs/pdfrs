@@ -10,34 +10,35 @@
 <resources>
     <!-- Buttons that many dialogs share. -->
     <string name="cancel">Скасувати</string>
-    <string name="close">Close</string>
-    <string name="open">Open</string>
+    <string name="close">Закрити</string>
+    <string name="open">Відкрити</string>
     <string name="save">Зберегти</string>
     <string name="save_as">Зберегти як</string>
     <string name="discard">Відхилити</string>
     <string name="delete">Видалити</string>
-    <string name="share">Share</string>
+    <string name="share">Поділитися</string>
     <string name="select_all">Вибрати все</string>
     <!-- Describes the ⋮ button to screen readers. -->
-    <string name="more">More</string>
-    <string name="back">Back</string>
+    <string name="more">Більше</string>
+    <string name="back">Назад</string>
     <!-- The top bar. -->
     <string name="back_to_document">Назад до документа</string>
     <string name="contents_and_pages">Зміст і сторінки</string>
     <!-- Beside the document's name while it has unsaved changes. -->
-    <string name="edited">Edited</string>
+    <string name="edited">Змінено</string>
     <string name="search">Пошук</string>
     <!-- The ⋮ menu. -->
-    <string name="menu_open">Open</string>
-    <string name="menu_share">Share</string>
+    <string name="menu_open">Відкрити</string>
+    <string name="menu_share">Поділитися</string>
     <string name="menu_print">Друк</string>
     <string name="menu_go_to_page">Перейти до сторінки</string>
     <string name="menu_properties">Властивості</string>
     <string name="menu_highlight_fields">Підсвічувати поля форми</string>
     <string name="menu_reset_form">Скинути форму</string>
+    <string name="menu_discard_changes">Скасувати зміни</string>
     <string name="menu_settings">Налаштування</string>
     <!-- Closes the document and returns to the start screen. -->
-    <string name="menu_close">Close</string>
+    <string name="menu_close">Закрити</string>
     <string name="undo_rotate">Скасувати обертання</string>
     <string name="undo_delete">Скасувати видалення</string>
     <string name="undo_move">Скасувати переміщення</string>
@@ -58,7 +59,7 @@
     <string name="redo_reset_form">Повторити скидання форми</string>
     <!-- The start screen. -->
     <string name="open_pdf">Відкрити PDF</string>
-    <string name="recent">Recent</string>
+    <string name="recent">Нещодавні</string>
     <!-- Where the reader left off in a recent document. -->
     <string name="recent_page">Сторінка %1$d</string>
     <string name="recent_page_of">Сторінка %1$d з %2$d</string>
@@ -72,16 +73,16 @@
     <string name="password_protected">%1$s захищено паролем</string>
     <string name="password_needed">Щоб відкрити %1$s, потрібен пароль.</string>
     <string name="password_title">Потрібен пароль</string>
-    <string name="password_prompt">Enter the password to open %1$s.</string>
+    <string name="password_prompt">Введіть пароль, щоб відкрити %1$s.</string>
     <string name="password_label">Пароль</string>
-    <string name="password_wrong">That password didn\'t work.</string>
+    <string name="password_wrong">Пароль не підійшов.</string>
     <!-- Pages and Contents. -->
     <string name="tab_pages">Сторінки</string>
     <string name="tab_contents">Зміст</string>
-    <string name="collapse">Collapse</string>
-    <string name="expand">Expand</string>
+    <string name="collapse">Згорнути</string>
+    <string name="expand">Розгорнути</string>
     <!-- What a long press on a page in the page grid does, for screen readers. -->
-    <string name="pick">Pick</string>
+    <string name="pick">Вибрати</string>
     <!-- Follows the finger while pages are dragged to another place. -->
     <plurals name="pages_dragged">
         <item quantity="one">%d сторінка</item>
@@ -90,16 +91,16 @@
         <item quantity="other">%d сторінки</item>
     </plurals>
     <!-- Links that lead out of the document. -->
-    <string name="link_open_title">Open this link?</string>
-    <string name="link_blocked_title">This link can\'t be opened</string>
+    <string name="link_open_title">Відкрити це посилання?</string>
+    <string name="link_blocked_title">Це посилання не можна відкрити</string>
     <!-- "Go to page". -->
     <string name="go_to_title">Перейти до сторінки</string>
     <!-- The field's label, with the first and last page number: "Page (i–240)". -->
     <string name="go_to_label">Сторінка (%1$s–%2$s)</string>
     <!-- Which page a typed page number is, counted from the first. -->
     <string name="go_to_position">Сторінка %1$d з %2$d</string>
-    <string name="go_to_position_hint">Or a position, 1–%1$d</string>
-    <string name="go">Go</string>
+    <string name="go_to_position_hint">Або позиція, 1–%1$d</string>
+    <string name="go">Перейти</string>
     <!-- Search. -->
     <string name="close_search">Закрити пошук</string>
     <string name="previous_match">Попередній збіг</string>
@@ -113,22 +114,22 @@
     <string name="no_matches">Збігів немає</string>
     <!-- Selected text. -->
     <!-- Marks the selected text: with a highlighter, or a line under or through it. -->
-    <string name="highlight">Highlight</string>
+    <string name="highlight">Виділити</string>
     <string name="underline">Підкреслення</string>
     <string name="strike_through">Закреслення</string>
     <!-- Tells screen readers that an annotation (a mark on the text, a note, a drawing) is picked. -->
     <string name="annotation_selected">Виділено анотацію</string>
-    <string name="could_not_delete_annotation">Couldn\'t delete the annotation: %1$s</string>
+    <string name="could_not_delete_annotation">Не вдалося видалити примітку: %1$s</string>
     <!-- Titles of the dialogs that fill in a field of a form, where the form has no name for it. -->
-    <string name="field_text_title">Fill in field</string>
-    <string name="field_choice_title">Choose</string>
-    <string name="field_done">Done</string>
+    <string name="field_text_title">Заповніть поле</string>
+    <string name="field_choice_title">Виберіть</string>
+    <string name="field_done">Готово</string>
     <!-- The line of a menu of a form that takes text of one\'s own instead of one of its options. -->
-    <string name="field_own_text">Or type your own</string>
+    <string name="field_own_text">Або введіть свій варіант</string>
     <!-- How many characters a field holds of how many it takes, such as 3 / 10. -->
     <string name="field_length">%1$d / %2$d</string>
-    <string name="copy">Copy</string>
-    <string name="copied">Copied</string>
+    <string name="copy">Копіювати</string>
+    <string name="copied">Скопійовано</string>
     <string name="too_much_to_copy">Забагато тексту, щоб скопіювати його за раз</string>
     <string name="too_much_to_share">Забагато тексту, щоб поділитися ним за раз</string>
     <!-- What the clipboard calls text copied from a document. -->
@@ -162,11 +163,14 @@
     <string name="rotate_right">Повернути праворуч</string>
     <string name="delete_pages">Видалити сторінки</string>
     <string name="unsaved_title">Зберегти зміни?</string>
-    <string name="unsaved_text">The changes to the pages of %1$s are lost unless you save them.</string>
+    <string name="unsaved_text">Зміни на сторінках %1$s буде втрачено, якщо їх не зберегти.</string>
+    <string name="discard_title">Скасувати зміни?</string>
+    <string name="discard_text">Зміни в %1$s з моменту останнього збереження буде втрачено.</string>
     <string name="saving">Збереження…</string>
     <!-- With what went wrong, as the system or the PDF library put it (in English). -->
     <string name="could_not_save">Не вдалося зберегти: %1$s</string>
     <string name="could_not_save_there">Не вдалося зберегти туди. Це відредагована копія.</string>
+    <string name="draft_not_restored">Не вдалося відновити незбережені зміни в %1$s.</string>
     <!-- Sharing and printing. -->
     <string name="could_not_share">Не вдалося поділитися цим файлом</string>
     <string name="preparing_to_print">Підготовка до друку…</string>
@@ -177,7 +181,7 @@
     <string name="property_author">Автор</string>
     <string name="property_subject">Тема</string>
     <string name="property_keywords">Ключові слова</string>
-    <string name="property_creator">Created with</string>
+    <string name="property_creator">Створено в</string>
     <string name="property_producer">Виробник PDF</string>
     <string name="property_created">Створено</string>
     <string name="property_modified">Змінено</string>
@@ -197,15 +201,15 @@
     <!-- Settings. -->
     <string name="setting_keep_screen_on">Не вимикати екран</string>
     <plurals name="setting_keep_screen_on_detail">
-        <item quantity="one">While a document is open, for %d minute after the last touch</item>
-        <item quantity="few">While a document is open, for %d minutes after the last touch</item>
-        <item quantity="many">While a document is open, for %d minutes after the last touch</item>
-        <item quantity="other">While a document is open, for %d minutes after the last touch</item>
+        <item quantity="one">Поки відкрито документ, протягом %d хвилини після останнього дотику</item>
+        <item quantity="few">Поки відкрито документ, протягом %d хвилин після останнього дотику</item>
+        <item quantity="many">Поки відкрито документ, протягом %d хвилин після останнього дотику</item>
+        <item quantity="other">Поки відкрито документ, протягом %d хвилини після останнього дотику</item>
     </plurals>
     <string name="setting_volume_keys">Гортати клавішами гучності</string>
     <string name="setting_volume_keys_detail">Зменшення гучності — вперед, збільшення — назад</string>
     <string name="crash_log">Журнал збою</string>
-    <string name="crash_log_empty">Nothing went wrong so far</string>
+    <string name="crash_log_empty">Поки що жодних збоїв</string>
     <!-- With the date of the newest entry. -->
-    <string name="crash_log_detail">Last entry %1$s. Kept on this device; nothing is sent unless you share it.</string>
+    <string name="crash_log_detail">Останній запис: %1$s. Зберігається на цьому пристрої; нічого не надсилається, якщо ви ним не поділитеся.</string>
 </resources>

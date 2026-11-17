@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 19:16\n"
+"PO-Revision-Date: 2026-11-17 22:41\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
@@ -417,7 +417,7 @@ msgstr "{width} × {height} pulg"
 #: src/properties.rs:147
 #, rust-format
 msgid "{width} × {height} mm"
-msgstr ""
+msgstr "{width} × {height} mm"
 
 #. Translators: a page size and the name of the paper, "297 × 210 mm (A4,
 #. landscape)".
@@ -430,7 +430,7 @@ msgstr "{size} ({paper}, horizontal)"
 #: src/properties.rs:163
 #, rust-format
 msgid "{size} ({paper})"
-msgstr ""
+msgstr "{size} ({paper})"
 
 #. Translators: {size} is the size of the first page, "210 × 297 mm (A4)".
 #: src/properties.rs:179
@@ -585,7 +585,7 @@ msgstr "No se pudo abrir el enlace: {error}"
 #: src/window.rs:960
 #, rust-format
 msgid "Ctrl+{key}"
-msgstr ""
+msgstr "Ctrl+{key}"
 
 #: src/window/actions.rs:103
 #, rust-format
@@ -752,7 +752,7 @@ msgstr "Añadir notas: haga clic donde debe ir cada una"
 
 #: src/window/markup.rs:98
 msgid "Color"
-msgstr ""
+msgstr "Color"
 
 #: src/window/markup.rs:113
 msgid "Signature"

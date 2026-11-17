@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 21:37\n"
+"PO-Revision-Date: 2026-11-17 22:41\n"
 "Last-Translator: \n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
@@ -45,7 +45,7 @@ msgstr "lopdf (zapisywanie)"
 
 #: src/main.rs:177
 msgid "Built with"
-msgstr ""
+msgstr "Zbudowano przy użyciu"
 
 #: src/main.rs:207
 #, rust-format
@@ -63,7 +63,7 @@ msgstr "Otwórz…"
 
 #: src/main.rs:227 src/window.rs:213
 msgid "Save"
-msgstr ""
+msgstr "Zapisz"
 
 #: src/main.rs:228 src/window.rs:214
 msgid "Save As…"
@@ -79,7 +79,7 @@ msgstr "Drukuj…"
 
 #: src/main.rs:233 src/properties.rs:201 src/window.rs:220
 msgid "Properties"
-msgstr ""
+msgstr "Właściwości"
 
 #: src/main.rs:235
 msgid "Close Window"
@@ -95,7 +95,7 @@ msgstr "Ponów"
 
 #: src/main.rs:244
 msgid "Copy"
-msgstr ""
+msgstr "Kopiuj"
 
 #: src/main.rs:245
 msgid "Select All"
@@ -127,7 +127,7 @@ msgstr "Pojedyncza strona"
 
 #: src/main.rs:260 src/window.rs:268
 msgid "Continuous"
-msgstr ""
+msgstr "Ciągły"
 
 #: src/main.rs:261 src/window.rs:269
 msgid "Two Pages"
@@ -171,11 +171,11 @@ msgstr "Miniatury"
 
 #: src/main.rs:278 src/window.rs:780
 msgid "Contents"
-msgstr ""
+msgstr "Spis treści"
 
 #: src/main.rs:279 src/window.rs:796 src/window/markup.rs:200
 msgid "Markup"
-msgstr ""
+msgstr "Adnotacje"
 
 #: src/main.rs:284
 msgid "Previous Page"
@@ -199,11 +199,11 @@ msgstr "Przejdź do strony…"
 
 #: src/main.rs:293
 msgid "Back"
-msgstr ""
+msgstr "Wstecz"
 
 #: src/main.rs:294
 msgid "Forward"
-msgstr ""
+msgstr "Dalej"
 
 #: src/main.rs:300 src/window.rs:226
 msgid "Rotate Left"
@@ -219,11 +219,11 @@ msgstr "Pokaż pasek narzędzi adnotacji"
 
 #: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
-msgstr ""
+msgstr "Wyróżnienie"
 
 #: src/main.rs:306 src/markup_list.rs:44 src/window/markup.rs:28
 msgid "Underline"
-msgstr ""
+msgstr "Podkreślenie"
 
 #: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
@@ -251,7 +251,7 @@ msgstr "Widok"
 
 #: src/main.rs:319
 msgid "Go"
-msgstr ""
+msgstr "Przejdź"
 
 #: src/main.rs:320
 msgid "Tools"
@@ -263,7 +263,7 @@ msgstr "Pomoc"
 
 #: src/markup_list.rs:47
 msgid "Drawing"
-msgstr ""
+msgstr "Rysunek"
 
 #: src/markup_list.rs:48
 msgid "Rectangle"
@@ -275,23 +275,23 @@ msgstr "Elipsa"
 
 #: src/markup_list.rs:50
 msgid "Line"
-msgstr ""
+msgstr "Linia"
 
 #: src/markup_list.rs:51 src/markup_list.rs:56
 msgid "Note"
-msgstr ""
+msgstr "Notatka"
 
 #: src/markup_list.rs:52 src/markup_list.rs:57
 msgid "Text"
-msgstr ""
+msgstr "Tekst"
 
 #: src/markup_list.rs:53 src/markup_list.rs:58
 msgid "Stamp"
-msgstr ""
+msgstr "Pieczątka"
 
 #: src/markup_list.rs:59
 msgid "Shape"
-msgstr ""
+msgstr "Kształt"
 
 #: src/markup_list.rs:60
 msgid "Attachment"
@@ -299,7 +299,7 @@ msgstr "Załącznik"
 
 #: src/markup_list.rs:96
 msgid "No Markup"
-msgstr ""
+msgstr "Brak adnotacji"
 
 #: src/markup_list.rs:97
 msgid "Highlights, drawings and notes are listed here"
@@ -323,7 +323,7 @@ msgstr "Katalog"
 
 #: src/properties.rs:38
 msgid "Title"
-msgstr ""
+msgstr "Tytuł"
 
 #: src/properties.rs:39
 msgid "Author"
@@ -331,7 +331,7 @@ msgstr "Autor"
 
 #: src/properties.rs:40
 msgid "Subject"
-msgstr ""
+msgstr "Temat"
 
 #: src/properties.rs:41
 msgid "Keywords"
@@ -349,15 +349,15 @@ msgstr "Program generujΔ…cy PDF"
 
 #: src/properties.rs:46
 msgid "Created"
-msgstr ""
+msgstr "Utworzono"
 
 #: src/properties.rs:47
 msgid "Modified"
-msgstr ""
+msgstr "Zmodyfikowano"
 
 #: src/properties.rs:48
 msgid "Pages"
-msgstr ""
+msgstr "Strony"
 
 #: src/properties.rs:49
 msgid "Page Size"
@@ -373,7 +373,7 @@ msgstr "Wersja PDF"
 
 #: src/properties.rs:56
 msgid "Protection"
-msgstr ""
+msgstr "Zabezpieczenia"
 
 #: src/properties.rs:58
 msgid "Password to open"
@@ -385,27 +385,27 @@ msgstr "Zaszyfrowany, otwiera siΔ™ bez hasΕ‚a"
 
 #: src/properties.rs:60
 msgid "None"
-msgstr ""
+msgstr "Brak"
 
 #: src/properties.rs:65
 msgid "Not Allowed"
-msgstr ""
+msgstr "Niedozwolone"
 
 #: src/properties.rs:73
 msgid "Printing"
-msgstr ""
+msgstr "Drukowanie"
 
 #: src/properties.rs:74
 msgid "Copying text and pictures"
-msgstr ""
+msgstr "Kopiowanie tekstu i obrazów"
 
 #: src/properties.rs:75
 msgid "Changing the pages"
-msgstr ""
+msgstr "Zmienianie stron"
 
 #: src/properties.rs:78
 msgid "Marking up and filling in forms"
-msgstr ""
+msgstr "Dodawanie adnotacji i wypełnianie formularzy"
 
 #. Translators: a page size in inches, "8.5 × 11 in".
 #: src/properties.rs:140
@@ -440,7 +440,7 @@ msgstr "{size}, pozostaΕ‚e strony siΔ™ rΓ³ΕΌniΔ…"
 
 #: src/signatures.rs:344
 msgid "Clear"
-msgstr ""
+msgstr "Wyczyść"
 
 #: src/signatures.rs:356
 msgid "Sign with the mouse or the touchpad"
@@ -448,7 +448,7 @@ msgstr "Podpisz za pomocą myszy lub touchpada"
 
 #: src/signatures.rs:364
 msgid "Draw"
-msgstr ""
+msgstr "Rysuj"
 
 #: src/signatures.rs:381
 msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
@@ -460,11 +460,11 @@ msgstr "Wybierz obraz…"
 
 #: src/signatures.rs:395
 msgid "To the left, faint strokes are kept, and more of the paper's shadows. To the right, only what is dark."
-msgstr ""
+msgstr "W lewo zachowywane są słabe pociągnięcia i więcej cieni papieru. W prawo tylko to, co ciemne."
 
 #: src/signatures.rs:398
 msgid "Ink as in the picture"
-msgstr ""
+msgstr "Tusz jak na obrazie"
 
 #: src/signatures.rs:399
 msgid "Black ink"
@@ -476,19 +476,19 @@ msgstr "Niebieski tusz"
 
 #: src/signatures.rs:403
 msgid "Faint"
-msgstr ""
+msgstr "Słabe"
 
 #: src/signatures.rs:405
 msgid "Dark"
-msgstr ""
+msgstr "Ciemne"
 
 #: src/signatures.rs:416
 msgid "From a Picture"
-msgstr ""
+msgstr "Z obrazu"
 
 #: src/signatures.rs:439
 msgid "Move the slider until the paper is gone and the strokes are whole."
-msgstr ""
+msgstr "Przesuwaj suwak, aż papier zniknie, a pociągnięcia będą kompletne."
 
 #: src/signatures.rs:441
 msgid "No ink found in this picture. Move the slider to the left."
@@ -496,7 +496,7 @@ msgstr "Nie znaleziono tuszu na tym obrazie. Przesuń suwak w lewo."
 
 #: src/signatures.rs:458
 msgid "Pictures"
-msgstr ""
+msgstr "Obrazy"
 
 #: src/signatures.rs:463
 msgid "Choose a Picture of a Signature"
@@ -505,11 +505,11 @@ msgstr "Wybierz obraz podpisu"
 #: src/signatures.rs:480 src/window/files.rs:420 src/window/files.rs:522
 #: src/window/files.rs:751
 msgid "_Cancel"
-msgstr ""
+msgstr "_Anuluj"
 
 #: src/signatures.rs:482 src/window/files.rs:753
 msgid "_Save"
-msgstr ""
+msgstr "_Zapisz"
 
 #: src/signatures.rs:510
 msgid "New Signature"
@@ -521,11 +521,11 @@ msgstr "Otwórz plik PDF"
 
 #: src/window.rs:149
 msgid "Drop a file here or choose one"
-msgstr ""
+msgstr "Upuść tutaj plik lub wybierz jeden"
 
 #: src/window.rs:162
 msgid "Recent"
-msgstr ""
+msgstr "Ostatnie"
 
 #: src/window.rs:188
 msgid "Thumbnails (F9)"
@@ -542,11 +542,11 @@ msgstr "Menu główne"
 
 #: src/window.rs:285
 msgid "Page Layout"
-msgstr ""
+msgstr "Układ Stron"
 
 #: src/window.rs:306
 msgid "Zoom"
-msgstr ""
+msgstr "Powiększenie"
 
 #: src/window.rs:317
 #, rust-format
@@ -555,7 +555,7 @@ msgstr "Przejdź do strony ({shortcut})"
 
 #: src/window.rs:330
 msgid "Search"
-msgstr ""
+msgstr "Wyszukaj"
 
 #: src/window.rs:342
 msgid "Previous Match (Shift+Enter)"
@@ -568,7 +568,7 @@ msgstr "Następne trafienie (Enter)"
 #: src/window.rs:371
 #, rust-format
 msgid "Search ({shortcut})"
-msgstr ""
+msgstr "Wyszukaj ({shortcut})"
 
 #: src/window.rs:900
 #, rust-format
@@ -634,11 +634,11 @@ msgstr "Dokumenty PDF"
 
 #: src/window/files.rs:54
 msgid "reading failed"
-msgstr ""
+msgstr "odczyt się nie powiódł"
 
 #: src/window/files.rs:98 src/window/files.rs:102
 msgid "saving failed"
-msgstr ""
+msgstr "zapis się nie powiódł"
 
 #: src/window/files.rs:175
 msgid "the document's password is needed"
@@ -647,7 +647,7 @@ msgstr "wymagane jest hasło do dokumentu"
 #: src/window/files.rs:177
 #, rust-format
 msgid "{app} can't save this document correctly yet"
-msgstr ""
+msgstr "{app} nie potrafi jeszcze poprawnie zapisać tego dokumentu"
 
 #: src/window/files.rs:249 src/window/pages.rs:405
 #, rust-format
@@ -662,11 +662,11 @@ msgstr "Plik „{name}” został przeniesiony lub usunięty. Zapisanie utworzy 
 #: src/window/files.rs:332
 #, rust-format
 msgid "“{name}” was changed by another program. Reloading discards your edits."
-msgstr ""
+msgstr "Plik „{name}” został zmieniony przez inny program. Ponowne wczytanie odrzuci wprowadzone zmiany."
 
 #: src/window/files.rs:335
 msgid "_Reload"
-msgstr ""
+msgstr "_Wczytaj ponownie"
 
 #: src/window/files.rs:413
 msgid "File Changed on Disk"
@@ -675,16 +675,16 @@ msgstr "Plik został zmieniony na dysku"
 #: src/window/files.rs:415
 #, rust-format
 msgid "“{name}” was changed by another program after it was opened. Saving replaces those changes with this document."
-msgstr ""
+msgstr "Plik „{name}” został zmieniony przez inny program po jego otwarciu. Zapisanie zastąpi tamte zmiany tym dokumentem."
 
 #: src/window/files.rs:421
 msgid "_Save Anyway"
-msgstr ""
+msgstr "_Zapisz mimo to"
 
 #: src/window/files.rs:514
 #, rust-format
 msgid "The password was incorrect. Enter the password for “{name}”."
-msgstr ""
+msgstr "Hasło jest niepoprawne. Proszę wprowadzić hasło do pliku „{name}”."
 
 #: src/window/files.rs:518
 #, rust-format
@@ -697,7 +697,7 @@ msgstr "Wymagane hasło"
 
 #: src/window/files.rs:523
 msgid "_Unlock"
-msgstr ""
+msgstr "_Odblokuj"
 
 #: src/window/files.rs:611
 #, rust-format
@@ -706,20 +706,20 @@ msgstr "Nie udało się wydrukować: {error}"
 
 #: src/window/files.rs:656
 msgid "Save As"
-msgstr ""
+msgstr "Zapisz jako"
 
 #: src/window/files.rs:744
 msgid "Save Changes?"
-msgstr ""
+msgstr "Zapisać zmiany?"
 
 #: src/window/files.rs:746
 #, rust-format
 msgid "“{name}” has unsaved changes. Changes that aren't saved will be lost."
-msgstr ""
+msgstr "Plik „{name}” zawiera niezapisane zmiany. Niezapisane zmiany zostaną utracone."
 
 #: src/window/files.rs:752
 msgid "_Discard"
-msgstr ""
+msgstr "_Odrzuć"
 
 #: src/window/files.rs:774
 msgid "Open PDF"
@@ -728,7 +728,7 @@ msgstr "Otwórz PDF"
 #: src/window/markup.rs:36
 #, rust-format
 msgid "{tool}: marks the selected text, and what is selected from now on ({shortcut} marks once)"
-msgstr ""
+msgstr "{tool}: oznacza zaznaczony tekst oraz wszystko, co zostanie zaznaczone od teraz ({shortcut} oznacza jednorazowo)"
 
 #: src/window/markup.rs:50
 msgid "Draw freehand"
@@ -748,7 +748,7 @@ msgstr "Rysuj linie"
 
 #: src/window/markup.rs:54
 msgid "Add text: click where it goes"
-msgstr ""
+msgstr "Dodaj tekst: kliknij w miejscu, gdzie ma się znaleźć"
 
 #: src/window/markup.rs:55
 msgid "Add notes: click where one goes"
@@ -974,27 +974,27 @@ msgstr[3] "Ponów wstawienie {n} strony"
 
 #: src/window/pages.rs:66
 msgid "Redo Highlight"
-msgstr ""
+msgstr "Ponów wyróżnienie"
 
 #: src/window/pages.rs:67
 msgid "Redo Underline"
-msgstr ""
+msgstr "Ponów podkreślenie"
 
 #: src/window/pages.rs:68
 msgid "Redo Strikethrough"
-msgstr ""
+msgstr "Ponów przekreślenie"
 
 #: src/window/pages.rs:69
 msgid "Redo Drawing"
-msgstr ""
+msgstr "Ponów rysunek"
 
 #: src/window/pages.rs:70
 msgid "Redo Rectangle"
-msgstr ""
+msgstr "Ponów prostokąt"
 
 #: src/window/pages.rs:71
 msgid "Redo Ellipse"
-msgstr ""
+msgstr "Ponów elipsę"
 
 #: src/window/pages.rs:72
 msgid "Redo Line"

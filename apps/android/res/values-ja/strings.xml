@@ -35,6 +35,7 @@
     <string name="menu_properties">プロパティ</string>
     <string name="menu_highlight_fields">フォームフィールドをハイライト表示</string>
     <string name="menu_reset_form">フォームをリセット</string>
+    <string name="menu_discard_changes">変更を破棄</string>
     <string name="menu_settings">設定</string>
     <!-- Closes the document and returns to the start screen. -->
     <string name="menu_close">閉じる</string>
@@ -47,7 +48,7 @@
     <string name="undo_change_annotation">注釈の変更を元に戻す</string>
     <string name="undo_fill_field">フィールドの入力を元に戻す</string>
     <string name="undo_reset_form">フォームのリセットを元に戻す</string>
-    <string name="redo_rotate">Redo rotate</string>
+    <string name="redo_rotate">回転をやり直す</string>
     <string name="redo_delete">削除をやり直す</string>
     <string name="redo_move">移動をやり直す</string>
     <string name="redo_insert">挿入をやり直す</string>
@@ -58,7 +59,7 @@
     <string name="redo_reset_form">フォームのリセットをやり直す</string>
     <!-- The start screen. -->
     <string name="open_pdf">PDFを開く</string>
-    <string name="recent">Recent</string>
+    <string name="recent">最近</string>
     <!-- Where the reader left off in a recent document. -->
     <string name="recent_page">%1$dページ</string>
     <string name="recent_page_of">%1$d / %2$dページ</string>
@@ -72,22 +73,22 @@
     <string name="password_protected">%1$s はパスワードで保護されています</string>
     <string name="password_needed">%1$s を開くにはパスワードが必要です。</string>
     <string name="password_title">パスワードが必要です</string>
-    <string name="password_prompt">Enter the password to open %1$s.</string>
+    <string name="password_prompt">%1$s を開くにはパスワードを入力してください。</string>
     <string name="password_label">パスワード</string>
-    <string name="password_wrong">That password didn\'t work.</string>
+    <string name="password_wrong">パスワードが違います。</string>
     <!-- Pages and Contents. -->
     <string name="tab_pages">ページ</string>
     <string name="tab_contents">目次</string>
-    <string name="collapse">Collapse</string>
-    <string name="expand">Expand</string>
+    <string name="collapse">折りたたむ</string>
+    <string name="expand">展開</string>
     <!-- What a long press on a page in the page grid does, for screen readers. -->
-    <string name="pick">Pick</string>
+    <string name="pick">選択</string>
     <!-- Follows the finger while pages are dragged to another place. -->
     <plurals name="pages_dragged">
         <item quantity="other">%d ページ</item>
     </plurals>
     <!-- Links that lead out of the document. -->
-    <string name="link_open_title">Open this link?</string>
+    <string name="link_open_title">このリンクを開きますか？</string>
     <string name="link_blocked_title">このリンクは開けません</string>
     <!-- "Go to page". -->
     <string name="go_to_title">ページへ移動</string>
@@ -95,8 +96,8 @@
     <string name="go_to_label">ページ (%1$s–%2$s)</string>
     <!-- Which page a typed page number is, counted from the first. -->
     <string name="go_to_position">%2$d ページ中 %1$d ページ目</string>
-    <string name="go_to_position_hint">Or a position, 1–%1$d</string>
-    <string name="go">Go</string>
+    <string name="go_to_position_hint">または位置：1～%1$d</string>
+    <string name="go">移動</string>
     <!-- Search. -->
     <string name="close_search">検索を閉じる</string>
     <string name="previous_match">前の一致箇所</string>
@@ -110,7 +111,7 @@
     <string name="no_matches">一致する項目はありません</string>
     <!-- Selected text. -->
     <!-- Marks the selected text: with a highlighter, or a line under or through it. -->
-    <string name="highlight">Highlight</string>
+    <string name="highlight">マーク</string>
     <string name="underline">下線</string>
     <string name="strike_through">取り消し線</string>
     <!-- Tells screen readers that an annotation (a mark on the text, a note, a drawing) is picked. -->
@@ -118,22 +119,22 @@
     <string name="could_not_delete_annotation">注釈を削除できませんでした: %1$s</string>
     <!-- Titles of the dialogs that fill in a field of a form, where the form has no name for it. -->
     <string name="field_text_title">フィールドに入力</string>
-    <string name="field_choice_title">Choose</string>
-    <string name="field_done">Done</string>
+    <string name="field_choice_title">選択してください</string>
+    <string name="field_done">完了</string>
     <!-- The line of a menu of a form that takes text of one\'s own instead of one of its options. -->
-    <string name="field_own_text">Or type your own</string>
+    <string name="field_own_text">または自分で入力</string>
     <!-- How many characters a field holds of how many it takes, such as 3 / 10. -->
     <string name="field_length">%1$d / %2$d</string>
-    <string name="copy">Copy</string>
+    <string name="copy">コピー</string>
     <string name="copied">コピーしました</string>
-    <string name="too_much_to_copy">That is too much text to copy at once</string>
-    <string name="too_much_to_share">That is too much text to share at once</string>
+    <string name="too_much_to_copy">一度にコピーするにはテキストが多すぎます</string>
+    <string name="too_much_to_share">一度に共有するにはテキストが多すぎます</string>
     <!-- What the clipboard calls text copied from a document. -->
     <string name="clip_label">PDFのテキスト</string>
     <!-- Tells screen readers that text is selected on the page. -->
     <string name="text_selected">テキストを選択しました</string>
     <!-- The page view. -->
-    <string name="still_drawing">Still drawing this page</string>
+    <string name="still_drawing">このページを描画中です</string>
     <!-- The view menu. -->
     <!-- Describes the view button: "View: Single page". -->
     <string name="view_description">表示: %1$s</string>
@@ -155,12 +156,15 @@
     <string name="rotate_left">左に回転</string>
     <string name="rotate_right">右に回転</string>
     <string name="delete_pages">ページを削除</string>
-    <string name="unsaved_title">Save changes?</string>
-    <string name="unsaved_text">The changes to the pages of %1$s are lost unless you save them.</string>
+    <string name="unsaved_title">変更を保存しますか？</string>
+    <string name="unsaved_text">保存しないと、%1$s のページへの変更は失われます。</string>
+    <string name="discard_title">変更を破棄しますか？</string>
+    <string name="discard_text">%1$s を最後に保存してからの変更は失われます。</string>
     <string name="saving">保存中…</string>
     <!-- With what went wrong, as the system or the PDF library put it (in English). -->
     <string name="could_not_save">保存できませんでした: %1$s</string>
-    <string name="could_not_save_there">Couldn\'t save there. This is the edited copy.</string>
+    <string name="could_not_save_there">その場所には保存できませんでした。こちらが編集済みのコピーです。</string>
+    <string name="draft_not_restored">%1$s の未保存の変更を復元できませんでした。</string>
     <!-- Sharing and printing. -->
     <string name="could_not_share">このファイルを共有できませんでした</string>
     <string name="preparing_to_print">印刷を準備中…</string>
@@ -171,8 +175,8 @@
     <string name="property_author">作成者</string>
     <string name="property_subject">件名</string>
     <string name="property_keywords">キーワード</string>
-    <string name="property_creator">Created with</string>
-    <string name="property_producer">PDF producer</string>
+    <string name="property_creator">作成アプリ</string>
+    <string name="property_producer">PDF 変換ソフト</string>
     <string name="property_created">作成日</string>
     <string name="property_modified">更新日</string>
     <string name="property_pages">ページ数</string>
@@ -194,9 +198,9 @@
         <item quantity="other">ドキュメントを開いている間、最後にタッチしてから%d分間</item>
     </plurals>
     <string name="setting_volume_keys">音量キーでページをめくる</string>
-    <string name="setting_volume_keys_detail">Volume down goes on, volume up goes back</string>
+    <string name="setting_volume_keys_detail">音量ダウンで次へ、音量アップで前へ</string>
     <string name="crash_log">クラッシュログ</string>
-    <string name="crash_log_empty">Nothing went wrong so far</string>
+    <string name="crash_log_empty">今のところ問題は発生していません</string>
     <!-- With the date of the newest entry. -->
-    <string name="crash_log_detail">Last entry %1$s. Kept on this device; nothing is sent unless you share it.</string>
+    <string name="crash_log_detail">最新の記録: %1$s。このデバイス内にのみ保存され、共有しない限りどこにも送信されません。</string>
 </resources>

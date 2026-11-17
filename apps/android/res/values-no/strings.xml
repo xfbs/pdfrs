@@ -11,30 +11,31 @@
     <!-- Buttons that many dialogs share. -->
     <string name="cancel">Avbryt</string>
     <string name="close">Lukk</string>
-    <string name="open">Open</string>
+    <string name="open">Åpne</string>
     <string name="save">Lagre</string>
     <string name="save_as">Lagre som</string>
     <string name="discard">Forkast</string>
     <string name="delete">Slett</string>
-    <string name="share">Share</string>
+    <string name="share">Del</string>
     <string name="select_all">Velg alle</string>
     <!-- Describes the ⋮ button to screen readers. -->
-    <string name="more">More</string>
+    <string name="more">Mer</string>
     <string name="back">Tilbake</string>
     <!-- The top bar. -->
     <string name="back_to_document">Tilbake til dokumentet</string>
     <string name="contents_and_pages">Innhold og sider</string>
     <!-- Beside the document's name while it has unsaved changes. -->
     <string name="edited">Redigert</string>
-    <string name="search">Search</string>
+    <string name="search">Søk</string>
     <!-- The ⋮ menu. -->
     <string name="menu_open">Åpne</string>
-    <string name="menu_share">Share</string>
+    <string name="menu_share">Del</string>
     <string name="menu_print">Skriv ut</string>
     <string name="menu_go_to_page">Gå til side</string>
     <string name="menu_properties">Egenskaper</string>
     <string name="menu_highlight_fields">Utheve skjemafelt</string>
     <string name="menu_reset_form">Tilbakestill skjema</string>
+    <string name="menu_discard_changes">Forkast endringer</string>
     <string name="menu_settings">Innstillinger</string>
     <!-- Closes the document and returns to the start screen. -->
     <string name="menu_close">Lukk</string>
@@ -47,7 +48,7 @@
     <string name="undo_change_annotation">Angre endring av merknad</string>
     <string name="undo_fill_field">Angre utfylling av felt</string>
     <string name="undo_reset_form">Angre tilbakestilling av skjema</string>
-    <string name="redo_rotate">Redo rotate</string>
+    <string name="redo_rotate">Gjør om rotering</string>
     <string name="redo_delete">Gjør sletting om igjen</string>
     <string name="redo_move">Gjør flytting om igjen</string>
     <string name="redo_insert">Gjør innsetting om igjen</string>
@@ -58,7 +59,7 @@
     <string name="redo_reset_form">Gjør tilbakestilling av skjema om igjen</string>
     <!-- The start screen. -->
     <string name="open_pdf">Åpne PDF</string>
-    <string name="recent">Recent</string>
+    <string name="recent">Nylige</string>
     <!-- Where the reader left off in a recent document. -->
     <string name="recent_page">Side %1$d</string>
     <string name="recent_page_of">Side %1$d av %2$d</string>
@@ -70,18 +71,18 @@
     <string name="could_not_open">Kunne ikke åpne denne filen</string>
     <string name="open_another">Åpne en annen PDF</string>
     <string name="password_protected">%1$s er passordbeskyttet</string>
-    <string name="password_needed">A password is needed to open %1$s.</string>
+    <string name="password_needed">Du trenger et passord for å åpne %1$s.</string>
     <string name="password_title">Passord kreves</string>
-    <string name="password_prompt">Enter the password to open %1$s.</string>
+    <string name="password_prompt">Skriv inn passordet for å åpne %1$s.</string>
     <string name="password_label">Passord</string>
     <string name="password_wrong">Det passordet fungerte ikke.</string>
     <!-- Pages and Contents. -->
     <string name="tab_pages">Sider</string>
     <string name="tab_contents">Innhold</string>
-    <string name="collapse">Collapse</string>
-    <string name="expand">Expand</string>
+    <string name="collapse">Skjul</string>
+    <string name="expand">Vis</string>
     <!-- What a long press on a page in the page grid does, for screen readers. -->
-    <string name="pick">Pick</string>
+    <string name="pick">Velg</string>
     <!-- Follows the finger while pages are dragged to another place. -->
     <plurals name="pages_dragged">
         <item quantity="one">%d side</item>
@@ -93,11 +94,11 @@
     <!-- "Go to page". -->
     <string name="go_to_title">Gå til side</string>
     <!-- The field's label, with the first and last page number: "Page (i–240)". -->
-    <string name="go_to_label">Page (%1$s–%2$s)</string>
+    <string name="go_to_label">Side (%1$s–%2$s)</string>
     <!-- Which page a typed page number is, counted from the first. -->
     <string name="go_to_position">Side %1$d av %2$d</string>
-    <string name="go_to_position_hint">Or a position, 1–%1$d</string>
-    <string name="go">Go</string>
+    <string name="go_to_position_hint">Eller en posisjon, 1–%1$d</string>
+    <string name="go">Gå</string>
     <!-- Search. -->
     <string name="close_search">Lukk søk</string>
     <string name="previous_match">Forrige treff</string>
@@ -111,21 +112,21 @@
     <string name="no_matches">Ingen treff</string>
     <!-- Selected text. -->
     <!-- Marks the selected text: with a highlighter, or a line under or through it. -->
-    <string name="highlight">Highlight</string>
-    <string name="underline">Underline</string>
-    <string name="strike_through">Strike through</string>
+    <string name="highlight">Uthev</string>
+    <string name="underline">Understrek</string>
+    <string name="strike_through">Gjennomstrek</string>
     <!-- Tells screen readers that an annotation (a mark on the text, a note, a drawing) is picked. -->
     <string name="annotation_selected">Merknad valgt</string>
     <string name="could_not_delete_annotation">Kunne ikke slette merknaden: %1$s</string>
     <!-- Titles of the dialogs that fill in a field of a form, where the form has no name for it. -->
-    <string name="field_text_title">Fill in field</string>
-    <string name="field_choice_title">Choose</string>
-    <string name="field_done">Done</string>
+    <string name="field_text_title">Fyll ut feltet</string>
+    <string name="field_choice_title">Velg</string>
+    <string name="field_done">Ferdig</string>
     <!-- The line of a menu of a form that takes text of one\'s own instead of one of its options. -->
     <string name="field_own_text">Eller skriv din egen</string>
     <!-- How many characters a field holds of how many it takes, such as 3 / 10. -->
     <string name="field_length">%1$d / %2$d</string>
-    <string name="copy">Copy</string>
+    <string name="copy">Kopier</string>
     <string name="copied">Kopiert</string>
     <string name="too_much_to_copy">Det er for mye tekst å kopiere på én gang</string>
     <string name="too_much_to_share">Det er for mye tekst å dele på én gang</string>
@@ -134,7 +135,7 @@
     <!-- Tells screen readers that text is selected on the page. -->
     <string name="text_selected">Tekst valgt</string>
     <!-- The page view. -->
-    <string name="still_drawing">Still drawing this page</string>
+    <string name="still_drawing">Siden tegnes fortsatt</string>
     <!-- The view menu. -->
     <!-- Describes the view button: "View: Single page". -->
     <string name="view_description">Visning: %1$s</string>
@@ -146,7 +147,7 @@
     <string name="fit_page">Tilpass siden</string>
     <string name="fit_width">Tilpass bredden</string>
     <!-- Tells screen readers which menu item is ticked. -->
-    <string name="chosen">Chosen</string>
+    <string name="chosen">Valgt</string>
     <!-- Editing pages. -->
     <!-- How many pages are picked: short, it shares a phone's top bar with four buttons. -->
     <plurals name="pages_selected">
@@ -158,11 +159,14 @@
     <string name="rotate_right">Roter mot høyre</string>
     <string name="delete_pages">Slett sider</string>
     <string name="unsaved_title">Lagre endringer?</string>
-    <string name="unsaved_text">The changes to the pages of %1$s are lost unless you save them.</string>
+    <string name="unsaved_text">Endringene på sidene i %1$s går tapt hvis du ikke lagrer dem.</string>
+    <string name="discard_title">Forkaste endringer?</string>
+    <string name="discard_text">Endringene i %1$s siden sist lagring går tapt.</string>
     <string name="saving">Lagrer …</string>
     <!-- With what went wrong, as the system or the PDF library put it (in English). -->
     <string name="could_not_save">Kunne ikke lagre: %1$s</string>
     <string name="could_not_save_there">Kunne ikke lagre der. Dette er den redigerte kopien.</string>
+    <string name="draft_not_restored">Kunne ikke gjenopprette de ulagrede endringene i %1$s.</string>
     <!-- Sharing and printing. -->
     <string name="could_not_share">Kunne ikke dele denne filen</string>
     <string name="preparing_to_print">Forbereder utskrift …</string>
@@ -187,7 +191,7 @@
     <string name="page_size_in">%1$s × %2$s tommer</string>
     <!-- A size with the name of the paper: "210 × 297 mm (A4)". -->
     <string name="page_size_named">%1$s (%2$s)</string>
-    <string name="page_size_named_landscape">%1$s (%2$s, landscape)</string>
+    <string name="page_size_named_landscape">%1$s (%2$s, liggende)</string>
     <!-- The size of the first page, when not all pages have it. -->
     <string name="page_size_others_differ">%1$s; andre sider avviker</string>
     <!-- Settings. -->
@@ -201,5 +205,5 @@
     <string name="crash_log">Krasjlogg</string>
     <string name="crash_log_empty">Ingenting har gått galt så langt</string>
     <!-- With the date of the newest entry. -->
-    <string name="crash_log_detail">Last entry %1$s. Kept on this device; nothing is sent unless you share it.</string>
+    <string name="crash_log_detail">Siste oppføring %1$s. Lagres på denne enheten. Ingenting sendes med mindre du deler det.</string>
 </resources>

@@ -10,7 +10,7 @@
 <resources>
     <!-- Buttons that many dialogs share. -->
     <string name="cancel">Peruuta</string>
-    <string name="close">Close</string>
+    <string name="close">Sulje</string>
     <string name="open">Avaa</string>
     <string name="save">Tallenna</string>
     <string name="save_as">Tallenna nimellä</string>
@@ -19,11 +19,11 @@
     <string name="share">Jaa</string>
     <string name="select_all">Valitse kaikki</string>
     <!-- Describes the ⋮ button to screen readers. -->
-    <string name="more">More</string>
-    <string name="back">Back</string>
+    <string name="more">Lisää</string>
+    <string name="back">Takaisin</string>
     <!-- The top bar. -->
     <string name="back_to_document">Takaisin asiakirjaan</string>
-    <string name="contents_and_pages">Contents and pages</string>
+    <string name="contents_and_pages">Sisältö ja sivut</string>
     <!-- Beside the document's name while it has unsaved changes. -->
     <string name="edited">Muokattu</string>
     <string name="search">Etsi</string>
@@ -35,6 +35,7 @@
     <string name="menu_properties">Ominaisuudet</string>
     <string name="menu_highlight_fields">Korosta lomakekentät</string>
     <string name="menu_reset_form">Tyhjennä lomake</string>
+    <string name="menu_discard_changes">Hylkää muutokset</string>
     <string name="menu_settings">Asetukset</string>
     <!-- Closes the document and returns to the start screen. -->
     <string name="menu_close">Sulje</string>
@@ -57,8 +58,8 @@
     <string name="redo_fill_field">Tee uudelleen kentän täyttö</string>
     <string name="redo_reset_form">Tee uudelleen lomakkeen nollaus</string>
     <!-- The start screen. -->
-    <string name="open_pdf">Open PDF</string>
-    <string name="recent">Recent</string>
+    <string name="open_pdf">Avaa PDF</string>
+    <string name="recent">Viimeisimmät</string>
     <!-- Where the reader left off in a recent document. -->
     <string name="recent_page">Sivu %1$d</string>
     <string name="recent_page_of">Sivu %1$d/%2$d</string>
@@ -72,16 +73,16 @@
     <string name="password_protected">%1$s on suojattu salasanalla</string>
     <string name="password_needed">Tiedoston %1$s avaaminen edellyttää salasanaa.</string>
     <string name="password_title">Salasana vaaditaan</string>
-    <string name="password_prompt">Enter the password to open %1$s.</string>
+    <string name="password_prompt">Avaa %1$s antamalla salasana.</string>
     <string name="password_label">Salasana</string>
     <string name="password_wrong">Salasana ei kelvannut.</string>
     <!-- Pages and Contents. -->
     <string name="tab_pages">Sivut</string>
     <string name="tab_contents">Sisältö</string>
-    <string name="collapse">Collapse</string>
-    <string name="expand">Expand</string>
+    <string name="collapse">Supista</string>
+    <string name="expand">Laajenna</string>
     <!-- What a long press on a page in the page grid does, for screen readers. -->
-    <string name="pick">Pick</string>
+    <string name="pick">Valitse</string>
     <!-- Follows the finger while pages are dragged to another place. -->
     <plurals name="pages_dragged">
         <item quantity="one">%d sivu</item>
@@ -96,8 +97,8 @@
     <string name="go_to_label">Sivu (%1$s–%2$s)</string>
     <!-- Which page a typed page number is, counted from the first. -->
     <string name="go_to_position">Sivu %1$d / %2$d</string>
-    <string name="go_to_position_hint">Or a position, 1–%1$d</string>
-    <string name="go">Go</string>
+    <string name="go_to_position_hint">Tai sijainti, 1–%1$d</string>
+    <string name="go">Siirry</string>
     <!-- Search. -->
     <string name="close_search">Sulje haku</string>
     <string name="previous_match">Edellinen osuma</string>
@@ -111,7 +112,7 @@
     <string name="no_matches">Ei osumia</string>
     <!-- Selected text. -->
     <!-- Marks the selected text: with a highlighter, or a line under or through it. -->
-    <string name="highlight">Highlight</string>
+    <string name="highlight">Korosta</string>
     <string name="underline">Alleviivaus</string>
     <string name="strike_through">Yliviivaus</string>
     <!-- Tells screen readers that an annotation (a mark on the text, a note, a drawing) is picked. -->
@@ -119,13 +120,13 @@
     <string name="could_not_delete_annotation">Merkinnän poistaminen epäonnistui: %1$s</string>
     <!-- Titles of the dialogs that fill in a field of a form, where the form has no name for it. -->
     <string name="field_text_title">Täytä kenttä</string>
-    <string name="field_choice_title">Choose</string>
-    <string name="field_done">Done</string>
+    <string name="field_choice_title">Valitse</string>
+    <string name="field_done">Valmis</string>
     <!-- The line of a menu of a form that takes text of one\'s own instead of one of its options. -->
     <string name="field_own_text">Tai kirjoita oma</string>
     <!-- How many characters a field holds of how many it takes, such as 3 / 10. -->
     <string name="field_length">%1$d / %2$d</string>
-    <string name="copy">Copy</string>
+    <string name="copy">Kopioi</string>
     <string name="copied">Kopioitu</string>
     <string name="too_much_to_copy">Tekstiä on liikaa kopioitavaksi kerralla</string>
     <string name="too_much_to_share">Tekstiä on liikaa jaettavaksi kerralla</string>
@@ -146,7 +147,7 @@
     <string name="fit_page">Sovita sivu</string>
     <string name="fit_width">Sovita leveyteen</string>
     <!-- Tells screen readers which menu item is ticked. -->
-    <string name="chosen">Chosen</string>
+    <string name="chosen">Valittu</string>
     <!-- Editing pages. -->
     <!-- How many pages are picked: short, it shares a phone's top bar with four buttons. -->
     <plurals name="pages_selected">
@@ -158,24 +159,27 @@
     <string name="rotate_right">Kierrä oikealle</string>
     <string name="delete_pages">Poista sivut</string>
     <string name="unsaved_title">Tallennetaanko muutokset?</string>
-    <string name="unsaved_text">The changes to the pages of %1$s are lost unless you save them.</string>
+    <string name="unsaved_text">Asiakirjan %1$s sivuihin tehdyt muutokset menetetään, ellet tallenna niitä.</string>
+    <string name="discard_title">Hylätäänkö muutokset?</string>
+    <string name="discard_text">Tiedoston %1$s muutokset viimeisimmän tallennuksen jälkeen menetetään.</string>
     <string name="saving">Tallennetaan…</string>
     <!-- With what went wrong, as the system or the PDF library put it (in English). -->
     <string name="could_not_save">Tallennus epäonnistui: %1$s</string>
-    <string name="could_not_save_there">Couldn\'t save there. This is the edited copy.</string>
+    <string name="could_not_save_there">Tallennus kyseiseen sijaintiin ei onnistunut. Tämä on muokattu kopio.</string>
+    <string name="draft_not_restored">Tiedoston %1$s tallentamattomia muutoksia ei voitu palauttaa.</string>
     <!-- Sharing and printing. -->
     <string name="could_not_share">Tiedoston jakaminen epäonnistui</string>
     <string name="preparing_to_print">Valmistellaan tulostusta…</string>
     <string name="could_not_print">Tulostus epäonnistui: %1$s</string>
     <!-- Properties. -->
     <string name="property_file_name">Tiedostonimi</string>
-    <string name="property_title">Title</string>
+    <string name="property_title">Otsikko</string>
     <string name="property_author">Tekijä</string>
     <string name="property_subject">Aihe</string>
     <string name="property_keywords">Avainsanat</string>
-    <string name="property_creator">Created with</string>
+    <string name="property_creator">Luontiohjelma</string>
     <string name="property_producer">PDF-tuottaja</string>
-    <string name="property_created">Created</string>
+    <string name="property_created">Luotu</string>
     <string name="property_modified">Muokattu</string>
     <string name="property_pages">Sivuja</string>
     <string name="property_page_size">Sivun koko</string>
@@ -187,7 +191,7 @@
     <string name="page_size_in">%1$s × %2$s tuumaa</string>
     <!-- A size with the name of the paper: "210 × 297 mm (A4)". -->
     <string name="page_size_named">%1$s (%2$s)</string>
-    <string name="page_size_named_landscape">%1$s (%2$s, landscape)</string>
+    <string name="page_size_named_landscape">%1$s (%2$s, vaaka)</string>
     <!-- The size of the first page, when not all pages have it. -->
     <string name="page_size_others_differ">%1$s; muiden sivujen koot poikkeavat</string>
     <!-- Settings. -->
@@ -199,7 +203,7 @@
     <string name="setting_volume_keys">Äänenvoimakkuusnäppäimet kääntävät sivuja</string>
     <string name="setting_volume_keys_detail">Äänenvoimakkuuden vähennys siirtyy eteenpäin, lisäys taaksepäin</string>
     <string name="crash_log">Kaatumisloki</string>
-    <string name="crash_log_empty">Nothing went wrong so far</string>
+    <string name="crash_log_empty">Mikään ei ole vielä mennyt pieleen</string>
     <!-- With the date of the newest entry. -->
-    <string name="crash_log_detail">Last entry %1$s. Kept on this device; nothing is sent unless you share it.</string>
+    <string name="crash_log_detail">Viimeisin merkintä %1$s. Säilytetään tällä laitteella; mitään ei lähetetä, ellet jaa sitä.</string>
 </resources>

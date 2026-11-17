@@ -10,17 +10,17 @@
 <resources>
     <!-- Buttons that many dialogs share. -->
     <string name="cancel">Ακύρωση</string>
-    <string name="close">Close</string>
-    <string name="open">Open</string>
+    <string name="close">Κλείσιμο</string>
+    <string name="open">Άνοιγμα</string>
     <string name="save">Αποθήκευση</string>
     <string name="save_as">Αποθήκευση ως</string>
-    <string name="discard">Discard</string>
+    <string name="discard">Απόρριψη</string>
     <string name="delete">Διαγραφή</string>
-    <string name="share">Share</string>
+    <string name="share">Κοινοποίηση</string>
     <string name="select_all">Επιλογή όλων</string>
     <!-- Describes the ⋮ button to screen readers. -->
-    <string name="more">More</string>
-    <string name="back">Back</string>
+    <string name="more">Περισσότερα</string>
+    <string name="back">Πίσω</string>
     <!-- The top bar. -->
     <string name="back_to_document">Επιστροφή στο έγγραφο</string>
     <string name="contents_and_pages">Περιεχόμενα και σελίδες</string>
@@ -29,12 +29,13 @@
     <string name="search">Αναζήτηση</string>
     <!-- The ⋮ menu. -->
     <string name="menu_open">Άνοιγμα</string>
-    <string name="menu_share">Share</string>
+    <string name="menu_share">Κοινοποίηση</string>
     <string name="menu_print">Εκτύπωση</string>
     <string name="menu_go_to_page">Μετάβαση στη σελίδα</string>
-    <string name="menu_properties">Properties</string>
+    <string name="menu_properties">Ιδιότητες</string>
     <string name="menu_highlight_fields">Επισήμανση πεδίων φόρμας</string>
     <string name="menu_reset_form">Επαναφορά φόρμας</string>
+    <string name="menu_discard_changes">Απόρριψη αλλαγών</string>
     <string name="menu_settings">Ρυθμίσεις</string>
     <!-- Closes the document and returns to the start screen. -->
     <string name="menu_close">Κλείσιμο</string>
@@ -58,7 +59,7 @@
     <string name="redo_reset_form">Επανάληψη επαναφοράς φόρμας</string>
     <!-- The start screen. -->
     <string name="open_pdf">Άνοιγμα PDF</string>
-    <string name="recent">Recent</string>
+    <string name="recent">Πρόσφατα</string>
     <!-- Where the reader left off in a recent document. -->
     <string name="recent_page">Σελίδα %1$d</string>
     <string name="recent_page_of">Σελίδα %1$d από %2$d</string>
@@ -70,25 +71,25 @@
     <string name="could_not_open">Δεν ήταν δυνατό το άνοιγμα αυτού του αρχείου</string>
     <string name="open_another">Άνοιγμα άλλου PDF</string>
     <string name="password_protected">Το %1$s προστατεύεται με κωδικό πρόσβασης</string>
-    <string name="password_needed">A password is needed to open %1$s.</string>
+    <string name="password_needed">Χρειάζεται κωδικός πρόσβασης για το άνοιγμα του %1$s.</string>
     <string name="password_title">Απαιτείται κωδικός πρόσβασης</string>
-    <string name="password_prompt">Enter the password to open %1$s.</string>
+    <string name="password_prompt">Εισαγάγετε τον κωδικό πρόσβασης για να ανοίξετε το %1$s.</string>
     <string name="password_label">Κωδικός πρόσβασης</string>
-    <string name="password_wrong">That password didn\'t work.</string>
+    <string name="password_wrong">Ο κωδικός πρόσβασης δεν λειτούργησε.</string>
     <!-- Pages and Contents. -->
     <string name="tab_pages">Σελίδες</string>
     <string name="tab_contents">Περιεχόμενα</string>
-    <string name="collapse">Collapse</string>
-    <string name="expand">Expand</string>
+    <string name="collapse">Σύμπτυξη</string>
+    <string name="expand">Ανάπτυξη</string>
     <!-- What a long press on a page in the page grid does, for screen readers. -->
-    <string name="pick">Pick</string>
+    <string name="pick">Επιλογή</string>
     <!-- Follows the finger while pages are dragged to another place. -->
     <plurals name="pages_dragged">
         <item quantity="one">%d σελίδα</item>
         <item quantity="other">%d σελίδες</item>
     </plurals>
     <!-- Links that lead out of the document. -->
-    <string name="link_open_title">Open this link?</string>
+    <string name="link_open_title">Άνοιγμα αυτού του συνδέσμου;</string>
     <string name="link_blocked_title">Δεν είναι δυνατό το άνοιγμα αυτού του συνδέσμου</string>
     <!-- "Go to page". -->
     <string name="go_to_title">Μετάβαση στη σελίδα</string>
@@ -96,8 +97,8 @@
     <string name="go_to_label">Σελίδα (%1$s–%2$s)</string>
     <!-- Which page a typed page number is, counted from the first. -->
     <string name="go_to_position">Σελίδα %1$d από %2$d</string>
-    <string name="go_to_position_hint">Or a position, 1–%1$d</string>
-    <string name="go">Go</string>
+    <string name="go_to_position_hint">Ή μια θέση, 1–%1$d</string>
+    <string name="go">Μετάβαση</string>
     <!-- Search. -->
     <string name="close_search">Κλείσιμο αναζήτησης</string>
     <string name="previous_match">Προηγούμενο αποτέλεσμα</string>
@@ -119,13 +120,13 @@
     <string name="could_not_delete_annotation">Δεν ήταν δυνατή η διαγραφή του σχολιασμού: %1$s</string>
     <!-- Titles of the dialogs that fill in a field of a form, where the form has no name for it. -->
     <string name="field_text_title">Συμπλήρωση πεδίου</string>
-    <string name="field_choice_title">Choose</string>
-    <string name="field_done">Done</string>
+    <string name="field_choice_title">Επιλέξτε</string>
+    <string name="field_done">Τέλος</string>
     <!-- The line of a menu of a form that takes text of one\'s own instead of one of its options. -->
     <string name="field_own_text">Ή πληκτρολογήστε δικό σας</string>
     <!-- How many characters a field holds of how many it takes, such as 3 / 10. -->
     <string name="field_length">%1$d / %2$d</string>
-    <string name="copy">Copy</string>
+    <string name="copy">Αντιγραφή</string>
     <string name="copied">Αντιγράφηκε</string>
     <string name="too_much_to_copy">Το κείμενο είναι πολύ μεγάλο για να αντιγραφεί με τη μία</string>
     <string name="too_much_to_share">Το κείμενο είναι πολύ μεγάλο για να κοινοποιηθεί με τη μία</string>
@@ -134,7 +135,7 @@
     <!-- Tells screen readers that text is selected on the page. -->
     <string name="text_selected">Επιλέχθηκε κείμενο</string>
     <!-- The page view. -->
-    <string name="still_drawing">Still drawing this page</string>
+    <string name="still_drawing">Η σελίδα σχεδιάζεται ακόμα</string>
     <!-- The view menu. -->
     <!-- Describes the view button: "View: Single page". -->
     <string name="view_description">Προβολή: %1$s</string>
@@ -146,7 +147,7 @@
     <string name="fit_page">Προσαρμογή στη σελίδα</string>
     <string name="fit_width">Προσαρμογή στο πλάτος</string>
     <!-- Tells screen readers which menu item is ticked. -->
-    <string name="chosen">Chosen</string>
+    <string name="chosen">Επιλεγμένο</string>
     <!-- Editing pages. -->
     <!-- How many pages are picked: short, it shares a phone's top bar with four buttons. -->
     <plurals name="pages_selected">
@@ -157,12 +158,15 @@
     <string name="rotate_left">Περιστροφή αριστερά</string>
     <string name="rotate_right">Περιστροφή δεξιά</string>
     <string name="delete_pages">Διαγραφή σελίδων</string>
-    <string name="unsaved_title">Save changes?</string>
-    <string name="unsaved_text">The changes to the pages of %1$s are lost unless you save them.</string>
+    <string name="unsaved_title">Αποθήκευση αλλαγών;</string>
+    <string name="unsaved_text">Οι αλλαγές στις σελίδες του %1$s θα χαθούν, αν δεν τις αποθηκεύσετε.</string>
+    <string name="discard_title">Απόρριψη αλλαγών;</string>
+    <string name="discard_text">Οι αλλαγές στο %1$s από την τελευταία αποθήκευση θα χαθούν.</string>
     <string name="saving">Αποθήκευση…</string>
     <!-- With what went wrong, as the system or the PDF library put it (in English). -->
     <string name="could_not_save">Η αποθήκευση απέτυχε: %1$s</string>
-    <string name="could_not_save_there">Couldn\'t save there. This is the edited copy.</string>
+    <string name="could_not_save_there">Δεν ήταν δυνατή η αποθήκευση εκεί. Αυτό είναι το επεξεργασμένο αντίγραφο.</string>
+    <string name="draft_not_restored">Δεν ήταν δυνατή η επαναφορά των μη αποθηκευμένων αλλαγών στο %1$s.</string>
     <!-- Sharing and printing. -->
     <string name="could_not_share">Δεν ήταν δυνατή η κοινή χρήση αυτού του αρχείου</string>
     <string name="preparing_to_print">Προετοιμασία για εκτύπωση…</string>
@@ -201,5 +205,5 @@
     <string name="crash_log">Αρχείο καταγραφής κατάρρευσης</string>
     <string name="crash_log_empty">Δεν έχει πάει τίποτα στραβά μέχρι τώρα</string>
     <!-- With the date of the newest entry. -->
-    <string name="crash_log_detail">Last entry %1$s. Kept on this device; nothing is sent unless you share it.</string>
+    <string name="crash_log_detail">Τελευταία καταχώριση %1$s. Παραμένει σε αυτήν τη συσκευή· δεν αποστέλλεται τίποτα, εκτός αν το κοινοποιήσετε.</string>
 </resources>

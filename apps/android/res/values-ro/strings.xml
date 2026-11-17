@@ -10,31 +10,32 @@
 <resources>
     <!-- Buttons that many dialogs share. -->
     <string name="cancel">Anulează</string>
-    <string name="close">Close</string>
-    <string name="open">Open</string>
+    <string name="close">Închide</string>
+    <string name="open">Deschide</string>
     <string name="save">Salvează</string>
     <string name="save_as">Salvează ca</string>
-    <string name="discard">Discard</string>
-    <string name="delete">Delete</string>
-    <string name="share">Share</string>
+    <string name="discard">Renunță</string>
+    <string name="delete">Șterge</string>
+    <string name="share">Partajează</string>
     <string name="select_all">Selectează tot</string>
     <!-- Describes the ⋮ button to screen readers. -->
     <string name="more">Mai multe</string>
-    <string name="back">Back</string>
+    <string name="back">Înapoi</string>
     <!-- The top bar. -->
     <string name="back_to_document">Înapoi la document</string>
     <string name="contents_and_pages">Cuprins și pagini</string>
     <!-- Beside the document's name while it has unsaved changes. -->
     <string name="edited">Modificat</string>
-    <string name="search">Search</string>
+    <string name="search">Caută</string>
     <!-- The ⋮ menu. -->
     <string name="menu_open">Deschide</string>
-    <string name="menu_share">Share</string>
+    <string name="menu_share">Partajează</string>
     <string name="menu_print">Tipărește</string>
     <string name="menu_go_to_page">Mergi la pagina</string>
-    <string name="menu_properties">Properties</string>
+    <string name="menu_properties">Proprietăți</string>
     <string name="menu_highlight_fields">Evidențiază câmpurile formularului</string>
     <string name="menu_reset_form">Resetează formularul</string>
+    <string name="menu_discard_changes">Renunță la modificări</string>
     <string name="menu_settings">Setări</string>
     <!-- Closes the document and returns to the start screen. -->
     <string name="menu_close">Închide</string>
@@ -44,21 +45,21 @@
     <string name="undo_insert">Anulează inserarea</string>
     <string name="undo_add_annotation">Anulează adăugarea adnotării</string>
     <string name="undo_remove_annotation">Anulează ștergerea adnotării</string>
-    <string name="undo_change_annotation">Undo change annotation</string>
+    <string name="undo_change_annotation">Anulează modificarea adnotării</string>
     <string name="undo_fill_field">Anulează completarea câmpului</string>
     <string name="undo_reset_form">Anulează resetarea formularului</string>
-    <string name="redo_rotate">Redo rotate</string>
+    <string name="redo_rotate">Refă rotirea</string>
     <string name="redo_delete">Refă ștergerea</string>
-    <string name="redo_move">Redo move</string>
+    <string name="redo_move">Refă mutarea</string>
     <string name="redo_insert">Refă inserarea</string>
     <string name="redo_add_annotation">Refă adăugarea adnotării</string>
     <string name="redo_remove_annotation">Refă ștergerea adnotării</string>
-    <string name="redo_change_annotation">Redo change annotation</string>
+    <string name="redo_change_annotation">Refă modificarea adnotării</string>
     <string name="redo_fill_field">Refă completarea câmpului</string>
     <string name="redo_reset_form">Refă resetarea formularului</string>
     <!-- The start screen. -->
     <string name="open_pdf">Deschide PDF</string>
-    <string name="recent">Recent</string>
+    <string name="recent">Recente</string>
     <!-- Where the reader left off in a recent document. -->
     <string name="recent_page">Pagina %1$d</string>
     <string name="recent_page_of">Pagina %1$d din %2$d</string>
@@ -70,18 +71,18 @@
     <string name="could_not_open">Fișierul nu a putut fi deschis</string>
     <string name="open_another">Deschide alt PDF</string>
     <string name="password_protected">%1$s este protejat cu parolă</string>
-    <string name="password_needed">A password is needed to open %1$s.</string>
+    <string name="password_needed">Este necesară o parolă pentru a deschide %1$s.</string>
     <string name="password_title">Parola este necesară</string>
-    <string name="password_prompt">Enter the password to open %1$s.</string>
+    <string name="password_prompt">Introdu parola pentru a deschide %1$s.</string>
     <string name="password_label">Parolă</string>
-    <string name="password_wrong">That password didn\'t work.</string>
+    <string name="password_wrong">Parola nu este corectă.</string>
     <!-- Pages and Contents. -->
     <string name="tab_pages">Pagini</string>
     <string name="tab_contents">Cuprins</string>
-    <string name="collapse">Collapse</string>
-    <string name="expand">Expand</string>
+    <string name="collapse">Restrânge</string>
+    <string name="expand">Extinde</string>
     <!-- What a long press on a page in the page grid does, for screen readers. -->
-    <string name="pick">Pick</string>
+    <string name="pick">Selectează</string>
     <!-- Follows the finger while pages are dragged to another place. -->
     <plurals name="pages_dragged">
         <item quantity="one">%d pagină</item>
@@ -89,16 +90,16 @@
         <item quantity="other">%d de pagini</item>
     </plurals>
     <!-- Links that lead out of the document. -->
-    <string name="link_open_title">Open this link?</string>
-    <string name="link_blocked_title">This link can\'t be opened</string>
+    <string name="link_open_title">Deschizi acest link?</string>
+    <string name="link_blocked_title">Acest link nu poate fi deschis</string>
     <!-- "Go to page". -->
     <string name="go_to_title">Salt la pagină</string>
     <!-- The field's label, with the first and last page number: "Page (i–240)". -->
     <string name="go_to_label">Pagina (%1$s–%2$s)</string>
     <!-- Which page a typed page number is, counted from the first. -->
     <string name="go_to_position">Pagina %1$d din %2$d</string>
-    <string name="go_to_position_hint">Or a position, 1–%1$d</string>
-    <string name="go">Go</string>
+    <string name="go_to_position_hint">Sau o poziție, 1–%1$d</string>
+    <string name="go">Salt</string>
     <!-- Search. -->
     <string name="close_search">Închide căutarea</string>
     <string name="previous_match">Potrivirea anterioară</string>
@@ -119,23 +120,23 @@
     <string name="annotation_selected">Adnotare selectată</string>
     <string name="could_not_delete_annotation">Adnotarea nu a putut fi ștearsă: %1$s</string>
     <!-- Titles of the dialogs that fill in a field of a form, where the form has no name for it. -->
-    <string name="field_text_title">Fill in field</string>
-    <string name="field_choice_title">Choose</string>
-    <string name="field_done">Done</string>
+    <string name="field_text_title">Completați câmpul</string>
+    <string name="field_choice_title">Alegeți</string>
+    <string name="field_done">Gata</string>
     <!-- The line of a menu of a form that takes text of one\'s own instead of one of its options. -->
     <string name="field_own_text">Sau scrie propriul text</string>
     <!-- How many characters a field holds of how many it takes, such as 3 / 10. -->
     <string name="field_length">%1$d / %2$d</string>
-    <string name="copy">Copy</string>
+    <string name="copy">Copiază</string>
     <string name="copied">Copiat</string>
-    <string name="too_much_to_copy">That is too much text to copy at once</string>
-    <string name="too_much_to_share">That is too much text to share at once</string>
+    <string name="too_much_to_copy">Textul este prea lung pentru a fi copiat dintr-odată</string>
+    <string name="too_much_to_share">Textul este prea lung pentru a fi partajat dintr-odată</string>
     <!-- What the clipboard calls text copied from a document. -->
     <string name="clip_label">Text dintr-un PDF</string>
     <!-- Tells screen readers that text is selected on the page. -->
     <string name="text_selected">Text selectat</string>
     <!-- The page view. -->
-    <string name="still_drawing">Still drawing this page</string>
+    <string name="still_drawing">Pagina încă se desenează</string>
     <!-- The view menu. -->
     <!-- Describes the view button: "View: Single page". -->
     <string name="view_description">Vizualizare: %1$s</string>
@@ -143,11 +144,11 @@
     <string name="layout_continuous">Continuu</string>
     <string name="layout_two_pages">Două pagini</string>
     <string name="layout_two_pages_continuous">Două pagini, continuu</string>
-    <string name="first_page_alone">First page alone</string>
+    <string name="first_page_alone">Prima pagină separat</string>
     <string name="fit_page">Potrivire la pagină</string>
     <string name="fit_width">Potrivire la lățime</string>
     <!-- Tells screen readers which menu item is ticked. -->
-    <string name="chosen">Chosen</string>
+    <string name="chosen">Ales</string>
     <!-- Editing pages. -->
     <!-- How many pages are picked: short, it shares a phone's top bar with four buttons. -->
     <plurals name="pages_selected">
@@ -159,27 +160,30 @@
     <string name="rotate_left">Rotește la stânga</string>
     <string name="rotate_right">Rotește la dreapta</string>
     <string name="delete_pages">Șterge paginile</string>
-    <string name="unsaved_title">Save changes?</string>
-    <string name="unsaved_text">The changes to the pages of %1$s are lost unless you save them.</string>
+    <string name="unsaved_title">Salvați modificările?</string>
+    <string name="unsaved_text">Modificările aduse paginilor din %1$s se vor pierde dacă nu le salvați.</string>
+    <string name="discard_title">Renunți la modificări?</string>
+    <string name="discard_text">Modificările aduse documentului %1$s de la ultima salvare se vor pierde.</string>
     <string name="saving">Se salvează…</string>
     <!-- With what went wrong, as the system or the PDF library put it (in English). -->
-    <string name="could_not_save">Couldn\'t save: %1$s</string>
-    <string name="could_not_save_there">Couldn\'t save there. This is the edited copy.</string>
+    <string name="could_not_save">Nu s-a putut salva: %1$s</string>
+    <string name="could_not_save_there">Nu s-a putut salva acolo. Aceasta este copia editată.</string>
+    <string name="draft_not_restored">Modificările nesalvate ale documentului %1$s nu au putut fi restaurate.</string>
     <!-- Sharing and printing. -->
     <string name="could_not_share">Fișierul nu a putut fi partajat</string>
     <string name="preparing_to_print">Se pregătește tipărirea…</string>
-    <string name="could_not_print">Couldn\'t print: %1$s</string>
+    <string name="could_not_print">Nu s-a putut tipări: %1$s</string>
     <!-- Properties. -->
     <string name="property_file_name">Nume fișier</string>
-    <string name="property_title">Title</string>
-    <string name="property_author">Author</string>
-    <string name="property_subject">Subject</string>
+    <string name="property_title">Titlu</string>
+    <string name="property_author">Autor</string>
+    <string name="property_subject">Subiect</string>
     <string name="property_keywords">Cuvinte-cheie</string>
-    <string name="property_creator">Created with</string>
+    <string name="property_creator">Creat cu</string>
     <string name="property_producer">Producător PDF</string>
-    <string name="property_created">Created</string>
-    <string name="property_modified">Modified</string>
-    <string name="property_pages">Pages</string>
+    <string name="property_created">Creat</string>
+    <string name="property_modified">Modificat</string>
+    <string name="property_pages">Pagini</string>
     <string name="property_page_size">Dimensiune pagină</string>
     <string name="property_file_size">Dimensiune fișier</string>
     <string name="property_pdf_version">Versiune PDF</string>
@@ -200,9 +204,9 @@
         <item quantity="other">Cât timp un document este deschis, timp de %d de minute după ultima atingere</item>
     </plurals>
     <string name="setting_volume_keys">Tastele de volum schimbă paginile</string>
-    <string name="setting_volume_keys_detail">Volume down goes on, volume up goes back</string>
+    <string name="setting_volume_keys_detail">Butonul de reducere a volumului merge înainte, cel de creștere merge înapoi</string>
     <string name="crash_log">Jurnal de erori</string>
     <string name="crash_log_empty">Nimic nu a mers prost până acum</string>
     <!-- With the date of the newest entry. -->
-    <string name="crash_log_detail">Last entry %1$s. Kept on this device; nothing is sent unless you share it.</string>
+    <string name="crash_log_detail">Ultima înregistrare: %1$s. Se păstrează pe acest dispozitiv; nu se trimite nimic decât dacă o partajați.</string>
 </resources>

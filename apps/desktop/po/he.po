@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 21:37\n"
+"PO-Revision-Date: 2026-11-17 22:41\n"
 "Last-Translator: \n"
 "Language-Team: Hebrew\n"
 "Language: he_IL\n"
@@ -36,16 +36,16 @@ msgstr "© 2026 תורמי Specto"
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:173
 msgid "hayro (rendering)"
-msgstr ""
+msgstr "hayro (עיבוד תצוגה)"
 
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:175
 msgid "lopdf (saving)"
-msgstr ""
+msgstr "lopdf (שמירה)"
 
 #: src/main.rs:177
 msgid "Built with"
-msgstr ""
+msgstr "נבנה באמצעות"
 
 #: src/main.rs:207
 #, rust-format
@@ -63,7 +63,7 @@ msgstr "פתיחה…"
 
 #: src/main.rs:227 src/window.rs:213
 msgid "Save"
-msgstr ""
+msgstr "שמירה"
 
 #: src/main.rs:228 src/window.rs:214
 msgid "Save As…"
@@ -95,7 +95,7 @@ msgstr "ביצוע חוזר"
 
 #: src/main.rs:244
 msgid "Copy"
-msgstr ""
+msgstr "העתקה"
 
 #: src/main.rs:245
 msgid "Select All"
@@ -127,7 +127,7 @@ msgstr "עמוד בודד"
 
 #: src/main.rs:260 src/window.rs:268
 msgid "Continuous"
-msgstr ""
+msgstr "רציף"
 
 #: src/main.rs:261 src/window.rs:269
 msgid "Two Pages"
@@ -155,11 +155,11 @@ msgstr "התאמה לעמוד"
 
 #: src/main.rs:272 src/window.rs:300
 msgid "Zoom In"
-msgstr ""
+msgstr "התקרבות"
 
 #: src/main.rs:273 src/window.rs:301
 msgid "Zoom Out"
-msgstr ""
+msgstr "התרחקות"
 
 #: src/main.rs:276
 msgid "Show Sidebar"
@@ -171,11 +171,11 @@ msgstr "תמונות ממוזערות"
 
 #: src/main.rs:278 src/window.rs:780
 msgid "Contents"
-msgstr ""
+msgstr "תוכן עניינים"
 
 #: src/main.rs:279 src/window.rs:796 src/window/markup.rs:200
 msgid "Markup"
-msgstr ""
+msgstr "סימון"
 
 #: src/main.rs:284
 msgid "Previous Page"
@@ -199,19 +199,19 @@ msgstr "מעבר לעמוד…"
 
 #: src/main.rs:293
 msgid "Back"
-msgstr ""
+msgstr "אחורה"
 
 #: src/main.rs:294
 msgid "Forward"
-msgstr ""
+msgstr "קדימה"
 
 #: src/main.rs:300 src/window.rs:226
 msgid "Rotate Left"
-msgstr ""
+msgstr "סיבוב שמאלה"
 
 #: src/main.rs:301 src/window.rs:227
 msgid "Rotate Right"
-msgstr ""
+msgstr "סיבוב ימינה"
 
 #: src/main.rs:304
 msgid "Show Markup Toolbar"
@@ -219,11 +219,11 @@ msgstr "הצג סרגל כלי סימון"
 
 #: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
-msgstr ""
+msgstr "הדגשה"
 
 #: src/main.rs:306 src/markup_list.rs:44 src/window/markup.rs:28
 msgid "Underline"
-msgstr ""
+msgstr "קו תחתון"
 
 #: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
@@ -251,7 +251,7 @@ msgstr "תצוגה"
 
 #: src/main.rs:319
 msgid "Go"
-msgstr ""
+msgstr "מעבר"
 
 #: src/main.rs:320
 msgid "Tools"
@@ -263,7 +263,7 @@ msgstr "עזרה"
 
 #: src/markup_list.rs:47
 msgid "Drawing"
-msgstr ""
+msgstr "ציור"
 
 #: src/markup_list.rs:48
 msgid "Rectangle"
@@ -275,27 +275,27 @@ msgstr "אליפסה"
 
 #: src/markup_list.rs:50
 msgid "Line"
-msgstr ""
+msgstr "קו"
 
 #: src/markup_list.rs:51 src/markup_list.rs:56
 msgid "Note"
-msgstr ""
+msgstr "הערה"
 
 #: src/markup_list.rs:52 src/markup_list.rs:57
 msgid "Text"
-msgstr ""
+msgstr "טקסט"
 
 #: src/markup_list.rs:53 src/markup_list.rs:58
 msgid "Stamp"
-msgstr ""
+msgstr "חותמת"
 
 #: src/markup_list.rs:59
 msgid "Shape"
-msgstr ""
+msgstr "צורה"
 
 #: src/markup_list.rs:60
 msgid "Attachment"
-msgstr ""
+msgstr "קובץ מצורף"
 
 #: src/markup_list.rs:96
 msgid "No Markup"
@@ -323,7 +323,7 @@ msgstr "תיקייה"
 
 #: src/properties.rs:38
 msgid "Title"
-msgstr ""
+msgstr "כותרת"
 
 #: src/properties.rs:39
 msgid "Author"
@@ -349,11 +349,11 @@ msgstr "יוצר ה־PDF"
 
 #: src/properties.rs:46
 msgid "Created"
-msgstr ""
+msgstr "נוצר"
 
 #: src/properties.rs:47
 msgid "Modified"
-msgstr ""
+msgstr "שונה"
 
 #: src/properties.rs:48
 msgid "Pages"
@@ -385,11 +385,11 @@ msgstr "מוצפן, נפתח ללא סיסמה"
 
 #: src/properties.rs:60
 msgid "None"
-msgstr ""
+msgstr "ללא"
 
 #: src/properties.rs:65
 msgid "Not Allowed"
-msgstr ""
+msgstr "אסור"
 
 #: src/properties.rs:73
 msgid "Printing"
@@ -440,7 +440,7 @@ msgstr "{size}, שאר העמודים שונים"
 
 #: src/signatures.rs:344
 msgid "Clear"
-msgstr ""
+msgstr "ניקוי"
 
 #: src/signatures.rs:356
 msgid "Sign with the mouse or the touchpad"
@@ -448,7 +448,7 @@ msgstr "חתימה בעזרת העכבר או משטח המגע"
 
 #: src/signatures.rs:364
 msgid "Draw"
-msgstr ""
+msgstr "ציור"
 
 #: src/signatures.rs:381
 msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
@@ -460,7 +460,7 @@ msgstr "בחירת תמונה…"
 
 #: src/signatures.rs:395
 msgid "To the left, faint strokes are kept, and more of the paper's shadows. To the right, only what is dark."
-msgstr ""
+msgstr "שמאלה – נשמרים קווים חלשים ויותר מהצללים של הנייר. ימינה – רק מה שכהה."
 
 #: src/signatures.rs:398
 msgid "Ink as in the picture"
@@ -476,11 +476,11 @@ msgstr "דיו כחול"
 
 #: src/signatures.rs:403
 msgid "Faint"
-msgstr ""
+msgstr "חלש"
 
 #: src/signatures.rs:405
 msgid "Dark"
-msgstr ""
+msgstr "כהה"
 
 #: src/signatures.rs:416
 msgid "From a Picture"
@@ -488,15 +488,15 @@ msgstr "מתמונה"
 
 #: src/signatures.rs:439
 msgid "Move the slider until the paper is gone and the strokes are whole."
-msgstr ""
+msgstr "יש להזיז את המחוון עד שהנייר ייעלם והקווים יהיו שלמים."
 
 #: src/signatures.rs:441
 msgid "No ink found in this picture. Move the slider to the left."
-msgstr ""
+msgstr "לא נמצא דיו בתמונה הזו. יש להזיז את המחוון שמאלה."
 
 #: src/signatures.rs:458
 msgid "Pictures"
-msgstr ""
+msgstr "תמונות"
 
 #: src/signatures.rs:463
 msgid "Choose a Picture of a Signature"
@@ -505,11 +505,11 @@ msgstr "בחירת תמונה של חתימה"
 #: src/signatures.rs:480 src/window/files.rs:420 src/window/files.rs:522
 #: src/window/files.rs:751
 msgid "_Cancel"
-msgstr ""
+msgstr "_ביטול"
 
 #: src/signatures.rs:482 src/window/files.rs:753
 msgid "_Save"
-msgstr ""
+msgstr "_שמירה"
 
 #: src/signatures.rs:510
 msgid "New Signature"
@@ -521,11 +521,11 @@ msgstr "פתיחת PDF"
 
 #: src/window.rs:149
 msgid "Drop a file here or choose one"
-msgstr ""
+msgstr "ניתן לשחרר כאן קובץ או לבחור אחד"
 
 #: src/window.rs:162
 msgid "Recent"
-msgstr ""
+msgstr "אחרונים"
 
 #: src/window.rs:188
 msgid "Thumbnails (F9)"
@@ -534,7 +534,7 @@ msgstr "תמונות ממוזערות (F9)"
 #: src/window.rs:200
 #, rust-format
 msgid "Open ({shortcut})"
-msgstr ""
+msgstr "פתיחה ({shortcut})"
 
 #: src/window.rs:258
 msgid "Main Menu"
@@ -542,33 +542,33 @@ msgstr "תפריט ראשי"
 
 #: src/window.rs:285
 msgid "Page Layout"
-msgstr ""
+msgstr "פריסת עמודים"
 
 #: src/window.rs:306
 msgid "Zoom"
-msgstr ""
+msgstr "תקריב"
 
 #: src/window.rs:317
 #, rust-format
 msgid "Go to Page ({shortcut})"
-msgstr ""
+msgstr "מעבר לעמוד ({shortcut})"
 
 #: src/window.rs:330
 msgid "Search"
-msgstr ""
+msgstr "חיפוש"
 
 #: src/window.rs:342
 msgid "Previous Match (Shift+Enter)"
-msgstr ""
+msgstr "התוצאה הקודמת (Shift+Enter)"
 
 #: src/window.rs:349
 msgid "Next Match (Enter)"
-msgstr ""
+msgstr "התוצאה הבאה (Enter)"
 
 #: src/window.rs:371
 #, rust-format
 msgid "Search ({shortcut})"
-msgstr ""
+msgstr "חיפוש ({shortcut})"
 
 #: src/window.rs:900
 #, rust-format
@@ -591,17 +591,17 @@ msgstr "Ctrl+{key}"
 #, rust-format
 msgid "{n} page — Edited"
 msgid_plural "{n} pages — Edited"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "עמוד {n} — נערך"
+msgstr[1] "{n} עמודים — נערך"
+msgstr[2] "{n} עמודים — נערך"
 
 #: src/window/actions.rs:105 src/window/pages.rs:133
 #, rust-format
 msgid "{n} page"
 msgid_plural "{n} pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "עמוד {n}"
+msgstr[1] "{n} עמודים"
+msgstr[2] "{n} עמודים"
 
 #. Translators: follows the box with the page number: "3 of 120".
 #: src/window/actions.rs:111
@@ -632,11 +632,11 @@ msgstr "מסמכי PDF"
 
 #: src/window/files.rs:54
 msgid "reading failed"
-msgstr ""
+msgstr "הקריאה נכשלה"
 
 #: src/window/files.rs:98 src/window/files.rs:102
 msgid "saving failed"
-msgstr ""
+msgstr "השמירה נכשלה"
 
 #: src/window/files.rs:175
 msgid "the document's password is needed"
@@ -645,26 +645,26 @@ msgstr "נדרשת סיסמה למסמך"
 #: src/window/files.rs:177
 #, rust-format
 msgid "{app} can't save this document correctly yet"
-msgstr ""
+msgstr "{app} עדיין לא יכול לשמור את המסמך הזה כראוי"
 
 #: src/window/files.rs:249 src/window/pages.rs:405
 #, rust-format
 msgid "Couldn't open “{name}”: {error}"
-msgstr ""
+msgstr "לא ניתן לפתוח את „{name}”: {error}"
 
 #: src/window/files.rs:323
 #, rust-format
 msgid "“{name}” was moved or deleted. Saving writes it again."
-msgstr ""
+msgstr "„{name}” הועבר או נמחק. שמירה תכתוב אותו מחדש."
 
 #: src/window/files.rs:332
 #, rust-format
 msgid "“{name}” was changed by another program. Reloading discards your edits."
-msgstr ""
+msgstr "„{name}” שונה על ידי תוכנה אחרת. טעינה מחדש תבטל את העריכות שלך."
 
 #: src/window/files.rs:335
 msgid "_Reload"
-msgstr ""
+msgstr "_טעינה מחדש"
 
 #: src/window/files.rs:413
 msgid "File Changed on Disk"
@@ -673,21 +673,21 @@ msgstr "הקובץ שונה בדיסק"
 #: src/window/files.rs:415
 #, rust-format
 msgid "“{name}” was changed by another program after it was opened. Saving replaces those changes with this document."
-msgstr ""
+msgstr "„{name}” שונה על ידי תוכנה אחרת לאחר שנפתח. שמירה תחליף את השינויים האלה במסמך הזה."
 
 #: src/window/files.rs:421
 msgid "_Save Anyway"
-msgstr ""
+msgstr "_לשמור בכל זאת"
 
 #: src/window/files.rs:514
 #, rust-format
 msgid "The password was incorrect. Enter the password for “{name}”."
-msgstr ""
+msgstr "הססמה שגויה. נא להזין את הססמה עבור „{name}”."
 
 #: src/window/files.rs:518
 #, rust-format
 msgid "“{name}” is protected with a password."
-msgstr ""
+msgstr "„{name}” מוגן בססמה."
 
 #: src/window/files.rs:520
 msgid "Password Required"
@@ -695,16 +695,16 @@ msgstr "נדרשת סיסמה"
 
 #: src/window/files.rs:523
 msgid "_Unlock"
-msgstr ""
+msgstr "_שחרור נעילה"
 
 #: src/window/files.rs:611
 #, rust-format
 msgid "Couldn't print: {error}"
-msgstr ""
+msgstr "לא ניתן להדפיס: {error}"
 
 #: src/window/files.rs:656
 msgid "Save As"
-msgstr ""
+msgstr "שמירה בשם"
 
 #: src/window/files.rs:744
 msgid "Save Changes?"
@@ -713,11 +713,11 @@ msgstr "לשמור את השינויים?"
 #: src/window/files.rs:746
 #, rust-format
 msgid "“{name}” has unsaved changes. Changes that aren't saved will be lost."
-msgstr ""
+msgstr "ב„{name}” יש שינויים שלא נשמרו. שינויים שלא יישמרו יאבדו."
 
 #: src/window/files.rs:752
 msgid "_Discard"
-msgstr ""
+msgstr "_ביטול השינויים"
 
 #: src/window/files.rs:774
 msgid "Open PDF"
@@ -726,7 +726,7 @@ msgstr "פתיחת PDF"
 #: src/window/markup.rs:36
 #, rust-format
 msgid "{tool}: marks the selected text, and what is selected from now on ({shortcut} marks once)"
-msgstr ""
+msgstr "{tool}: מסמן את הטקסט הנבחר ואת מה שייבחר מעתה ({shortcut} מסמן פעם אחת)"
 
 #: src/window/markup.rs:50
 msgid "Draw freehand"
@@ -746,19 +746,19 @@ msgstr "ציור קווים"
 
 #: src/window/markup.rs:54
 msgid "Add text: click where it goes"
-msgstr ""
+msgstr "הוספת טקסט: יש ללחוץ במקום הרצוי"
 
 #: src/window/markup.rs:55
 msgid "Add notes: click where one goes"
-msgstr ""
+msgstr "הוספת הערות: יש ללחוץ במקום שבו תמוקם ההערה"
 
 #: src/window/markup.rs:98
 msgid "Color"
-msgstr ""
+msgstr "צבע"
 
 #: src/window/markup.rs:113
 msgid "Signature"
-msgstr ""
+msgstr "חתימה"
 
 #: src/window/markup.rs:121
 msgid "Sans-serif"
@@ -774,15 +774,15 @@ msgstr "רוחב קבוע"
 
 #: src/window/markup.rs:149
 msgid "Font"
-msgstr ""
+msgstr "גופן"
 
 #: src/window/markup.rs:153
 msgid "Bold"
-msgstr ""
+msgstr "מודגש"
 
 #: src/window/markup.rs:157
 msgid "Italic"
-msgstr ""
+msgstr "נטוי"
 
 #: src/window/markup.rs:167
 msgid "Text size in points"
@@ -822,7 +822,7 @@ msgstr "יש לבחור תחילה את הטקסט לסימון"
 
 #: src/window/markup.rs:602
 msgid "Place this signature: click where it goes"
-msgstr ""
+msgstr "מיקום החתימה: יש ללחוץ במקום שבו היא צריכה להופיע"
 
 #: src/window/markup.rs:614
 msgid "Delete this signature"
@@ -830,7 +830,7 @@ msgstr "מחיקת החתימה הזו"
 
 #: src/window/markup.rs:630
 msgid "New Signature…"
-msgstr ""
+msgstr "חתימה חדשה…"
 
 #: src/window/markup.rs:659
 msgid "Click where the signature goes"
@@ -846,15 +846,15 @@ msgstr "לא ניתן היה לשנות את ההערה: {error}"
 #, rust-format
 msgid "Undo Rotate Page"
 msgid_plural "Undo Rotate {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "ביטול סיבוב עמוד"
+msgstr[1] "ביטול סיבוב {n} עמודים"
+msgstr[2] "ביטול סיבוב {n} עמודים"
 
 #: src/window/pages.rs:30
 #, rust-format
 msgid "Undo Delete Page"
 msgid_plural "Undo Delete {n} Pages"
-msgstr[0] ""
+msgstr[0] "ביטול מחיקת עמוד"
 msgstr[1] "ביטול מחיקת {n} עמודים"
 msgstr[2] "ביטול מחיקת {n} עמודים"
 
@@ -964,11 +964,11 @@ msgstr[2] "ביצוע חוזר של הוספת {n} עמודים"
 
 #: src/window/pages.rs:66
 msgid "Redo Highlight"
-msgstr ""
+msgstr "ביצוע חוזר של הדגשה"
 
 #: src/window/pages.rs:67
 msgid "Redo Underline"
-msgstr ""
+msgstr "ביצוע חוזר של קו תחתון"
 
 #: src/window/pages.rs:68
 msgid "Redo Strikethrough"
@@ -988,11 +988,11 @@ msgstr "ביצוע חוזר של אליפסה"
 
 #: src/window/pages.rs:72
 msgid "Redo Line"
-msgstr ""
+msgstr "ביצוע חוזר של קו"
 
 #: src/window/pages.rs:73
 msgid "Redo Note"
-msgstr ""
+msgstr "ביצוע חוזר של הערה"
 
 #: src/window/pages.rs:74
 msgid "Redo Text Box"

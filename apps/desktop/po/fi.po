@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 21:37\n"
+"PO-Revision-Date: 2026-11-17 22:41\n"
 "Last-Translator: \n"
 "Language-Team: Finnish\n"
 "Language: fi_FI\n"
@@ -36,16 +36,16 @@ msgstr "© 2026 Specton kehittäjät"
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:173
 msgid "hayro (rendering)"
-msgstr ""
+msgstr "hayro (renderöinti)"
 
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:175
 msgid "lopdf (saving)"
-msgstr ""
+msgstr "lopdf (tallennus)"
 
 #: src/main.rs:177
 msgid "Built with"
-msgstr ""
+msgstr "Toteutettu käyttäen"
 
 #: src/main.rs:207
 #, rust-format
@@ -63,7 +63,7 @@ msgstr "Avaa…"
 
 #: src/main.rs:227 src/window.rs:213
 msgid "Save"
-msgstr ""
+msgstr "Tallenna"
 
 #: src/main.rs:228 src/window.rs:214
 msgid "Save As…"
@@ -79,7 +79,7 @@ msgstr "Tulosta…"
 
 #: src/main.rs:233 src/properties.rs:201 src/window.rs:220
 msgid "Properties"
-msgstr ""
+msgstr "Ominaisuudet"
 
 #: src/main.rs:235
 msgid "Close Window"
@@ -95,7 +95,7 @@ msgstr "Tee uudelleen"
 
 #: src/main.rs:244
 msgid "Copy"
-msgstr ""
+msgstr "Kopioi"
 
 #: src/main.rs:245
 msgid "Select All"
@@ -127,7 +127,7 @@ msgstr "Yksittäinen sivu"
 
 #: src/main.rs:260 src/window.rs:268
 msgid "Continuous"
-msgstr ""
+msgstr "Jatkuva"
 
 #: src/main.rs:261 src/window.rs:269
 msgid "Two Pages"
@@ -171,11 +171,11 @@ msgstr "Pienoiskuvat"
 
 #: src/main.rs:278 src/window.rs:780
 msgid "Contents"
-msgstr ""
+msgstr "Sisältö"
 
 #: src/main.rs:279 src/window.rs:796 src/window/markup.rs:200
 msgid "Markup"
-msgstr ""
+msgstr "Merkinnät"
 
 #: src/main.rs:284
 msgid "Previous Page"
@@ -199,11 +199,11 @@ msgstr "Siirry sivulle…"
 
 #: src/main.rs:293
 msgid "Back"
-msgstr ""
+msgstr "Takaisin"
 
 #: src/main.rs:294
 msgid "Forward"
-msgstr ""
+msgstr "Eteenpäin"
 
 #: src/main.rs:300 src/window.rs:226
 msgid "Rotate Left"
@@ -219,11 +219,11 @@ msgstr "Näytä merkintätyökalupalkki"
 
 #: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
-msgstr ""
+msgstr "Korostus"
 
 #: src/main.rs:306 src/markup_list.rs:44 src/window/markup.rs:28
 msgid "Underline"
-msgstr ""
+msgstr "Alleviivaus"
 
 #: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
@@ -251,7 +251,7 @@ msgstr "Näytä"
 
 #: src/main.rs:319
 msgid "Go"
-msgstr ""
+msgstr "Siirry"
 
 #: src/main.rs:320
 msgid "Tools"
@@ -263,7 +263,7 @@ msgstr "Ohje"
 
 #: src/markup_list.rs:47
 msgid "Drawing"
-msgstr ""
+msgstr "Piirros"
 
 #: src/markup_list.rs:48
 msgid "Rectangle"
@@ -275,27 +275,27 @@ msgstr "Ellipsi"
 
 #: src/markup_list.rs:50
 msgid "Line"
-msgstr ""
+msgstr "Viiva"
 
 #: src/markup_list.rs:51 src/markup_list.rs:56
 msgid "Note"
-msgstr ""
+msgstr "Muistiinpano"
 
 #: src/markup_list.rs:52 src/markup_list.rs:57
 msgid "Text"
-msgstr ""
+msgstr "Teksti"
 
 #: src/markup_list.rs:53 src/markup_list.rs:58
 msgid "Stamp"
-msgstr ""
+msgstr "Leima"
 
 #: src/markup_list.rs:59
 msgid "Shape"
-msgstr ""
+msgstr "Muoto"
 
 #: src/markup_list.rs:60
 msgid "Attachment"
-msgstr ""
+msgstr "Liite"
 
 #: src/markup_list.rs:96
 msgid "No Markup"
@@ -323,7 +323,7 @@ msgstr "Kansio"
 
 #: src/properties.rs:38
 msgid "Title"
-msgstr ""
+msgstr "Otsikko"
 
 #: src/properties.rs:39
 msgid "Author"
@@ -385,7 +385,7 @@ msgstr "Salattu, aukeaa ilman salasanaa"
 
 #: src/properties.rs:60
 msgid "None"
-msgstr ""
+msgstr "Ei mitään"
 
 #: src/properties.rs:65
 msgid "Not Allowed"
@@ -440,7 +440,7 @@ msgstr "{size}, muut sivut eroavat"
 
 #: src/signatures.rs:344
 msgid "Clear"
-msgstr ""
+msgstr "Tyhjennä"
 
 #: src/signatures.rs:356
 msgid "Sign with the mouse or the touchpad"
@@ -448,7 +448,7 @@ msgstr "Allekirjoita hiirellä tai kosketuslevyllä"
 
 #: src/signatures.rs:364
 msgid "Draw"
-msgstr ""
+msgstr "Piirrä"
 
 #: src/signatures.rs:381
 msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
@@ -464,7 +464,7 @@ msgstr "Vasemmalla säilyvät himmeät viivat ja enemmän paperin varjoja. Oikea
 
 #: src/signatures.rs:398
 msgid "Ink as in the picture"
-msgstr ""
+msgstr "Muste kuten kuvassa"
 
 #: src/signatures.rs:399
 msgid "Black ink"
@@ -476,15 +476,15 @@ msgstr "Sininen muste"
 
 #: src/signatures.rs:403
 msgid "Faint"
-msgstr ""
+msgstr "Haalea"
 
 #: src/signatures.rs:405
 msgid "Dark"
-msgstr ""
+msgstr "Tumma"
 
 #: src/signatures.rs:416
 msgid "From a Picture"
-msgstr ""
+msgstr "Kuvasta"
 
 #: src/signatures.rs:439
 msgid "Move the slider until the paper is gone and the strokes are whole."
@@ -496,7 +496,7 @@ msgstr "Tästä kuvasta ei löytynyt mustetta. Siirrä liukusäädintä vasemmal
 
 #: src/signatures.rs:458
 msgid "Pictures"
-msgstr ""
+msgstr "Kuvat"
 
 #: src/signatures.rs:463
 msgid "Choose a Picture of a Signature"
@@ -505,11 +505,11 @@ msgstr "Valitse kuva allekirjoituksesta"
 #: src/signatures.rs:480 src/window/files.rs:420 src/window/files.rs:522
 #: src/window/files.rs:751
 msgid "_Cancel"
-msgstr ""
+msgstr "_Peruuta"
 
 #: src/signatures.rs:482 src/window/files.rs:753
 msgid "_Save"
-msgstr ""
+msgstr "_Tallenna"
 
 #: src/signatures.rs:510
 msgid "New Signature"
@@ -525,7 +525,7 @@ msgstr "Pudota tiedosto tähän tai valitse sellainen"
 
 #: src/window.rs:162
 msgid "Recent"
-msgstr ""
+msgstr "Viimeisimmät"
 
 #: src/window.rs:188
 msgid "Thumbnails (F9)"
@@ -542,11 +542,11 @@ msgstr "Päävalikko"
 
 #: src/window.rs:285
 msgid "Page Layout"
-msgstr ""
+msgstr "Sivun asettelu"
 
 #: src/window.rs:306
 msgid "Zoom"
-msgstr ""
+msgstr "Zoomaus"
 
 #: src/window.rs:317
 #, rust-format
@@ -555,7 +555,7 @@ msgstr "Siirry sivulle ({shortcut})"
 
 #: src/window.rs:330
 msgid "Search"
-msgstr ""
+msgstr "Haku"
 
 #: src/window.rs:342
 msgid "Previous Match (Shift+Enter)"
@@ -680,7 +680,7 @@ msgstr "_Tallenna silti"
 #: src/window/files.rs:514
 #, rust-format
 msgid "The password was incorrect. Enter the password for “{name}”."
-msgstr ""
+msgstr "Salasana oli väärä. Anna tiedoston ”{name}” salasana."
 
 #: src/window/files.rs:518
 #, rust-format
@@ -724,7 +724,7 @@ msgstr "Avaa PDF"
 #: src/window/markup.rs:36
 #, rust-format
 msgid "{tool}: marks the selected text, and what is selected from now on ({shortcut} marks once)"
-msgstr ""
+msgstr "{tool}: merkitsee valitun tekstin ja tästä eteenpäin valittavan tekstin ({shortcut} merkitsee kerran)"
 
 #: src/window/markup.rs:50
 msgid "Draw freehand"
@@ -744,11 +744,11 @@ msgstr "Piirrä viivoja"
 
 #: src/window/markup.rs:54
 msgid "Add text: click where it goes"
-msgstr ""
+msgstr "Lisää tekstiä: napsauta kohtaa, johon se tulee"
 
 #: src/window/markup.rs:55
 msgid "Add notes: click where one goes"
-msgstr ""
+msgstr "Lisää muistiinpanoja: napsauta kohtaa, johon muistiinpano tulee"
 
 #: src/window/markup.rs:98
 msgid "Color"
@@ -756,7 +756,7 @@ msgstr "Väri"
 
 #: src/window/markup.rs:113
 msgid "Signature"
-msgstr ""
+msgstr "Allekirjoitus"
 
 #: src/window/markup.rs:121
 msgid "Sans-serif"
