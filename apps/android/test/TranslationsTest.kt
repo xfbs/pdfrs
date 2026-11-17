@@ -9,7 +9,8 @@ import org.w3c.dom.Element
 
 /**
  * The translations (`res/values-<language>/strings.xml`) against the English texts: each has every
- * text and no others, with the same placeholders.
+ * text and no others, with the same placeholders. A text that depends on a number may have other
+ * forms than in English, as its language needs them.
  *
  * A placeholder lost or mistyped in a translation would otherwise only show, as a crash, when that
  * text comes up in that language.
@@ -51,6 +52,9 @@ class TranslationsTest {
 
     private val english = texts(File("res/values/strings.xml"))
 
+    /** The name of a text without the form of a plural: "pages_selected" for both of its forms. */
+    private fun String.withoutForm() = substringBefore('/')
+
     private val translations: Map<String, Map<String, String>> = File("res").listFiles()!!
         .filter { it.name.startsWith("values-") && File(it, "strings.xml").isFile }
         .associate { it.name.removePrefix("values-") to texts(File(it, "strings.xml")) }
@@ -63,9 +67,12 @@ class TranslationsTest {
     @Test
     fun translationsHaveEveryTextAndNoOthers() {
         for ((language, texts) in translations) {
-            // English and German have the same plural forms. A language with more of them will need
-            // this to be told so.
-            assertEquals("texts of $language", english.keys.sorted(), texts.keys.sorted())
+            // Languages differ in the plural forms they have: Russian has four, Japanese one.
+            assertEquals(
+                "texts of $language",
+                english.keys.map { it.withoutForm() }.distinct().sorted(),
+                texts.keys.map { it.withoutForm() }.distinct().sorted(),
+            )
         }
     }
 
@@ -73,7 +80,8 @@ class TranslationsTest {
     fun translationsKeepThePlaceholders() {
         for ((language, texts) in translations) {
             for ((name, text) in texts) {
-                val original = english[name] ?: continue
+                // A plural form that English doesn't have goes by the general one.
+                val original = english[name] ?: english["${name.withoutForm()}/other"] ?: continue
                 assertEquals("$name in $language", placeholders(original), placeholders(text))
             }
         }
