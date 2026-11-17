@@ -133,6 +133,15 @@ The tests check saved files with qpdf where it is installed.
   [Specto Android Testing](apps/android/TESTING.md): testing each app, by hand
   and automated
 
+## Translations
+
+[![Crowdin](https://badges.crowdin.net/specto/localized.svg)](https://crowdin.com/project/specto)
+
+Specto is in English, German and Dutch. Translations are made on
+[Crowdin](https://crowdin.com/project/specto), where anyone can improve one or
+start a new language. They come into the repository from there, so changes to
+the translated files are best made on Crowdin.
+
 ## Similar projects
 
 - [Censor](https://codeberg.org/censor/Censor): Linux app to censor PDFs,

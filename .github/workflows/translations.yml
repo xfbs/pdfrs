@@ -1,0 +1,79 @@
+name: Translations
+
+# Keeps Crowdin and the repository in step. Crowdin has no access to GitHub:
+# everything goes through this workflow, with a Crowdin token in the secrets
+# CROWDIN_PROJECT_ID and CROWDIN_PERSONAL_TOKEN. crowdin.yml says which files.
+on:
+  # The English texts changed: Crowdin gets the new ones.
+  push:
+    branches: [main]
+    paths:
+      - apps/android/res/values/strings.xml
+      - apps/desktop/po/specto.pot
+      - crowdin.yml
+  # "Run workflow" in the Actions tab.
+  workflow_dispatch:
+    inputs:
+      task:
+        description: What to do
+        type: choice
+        default: download
+        options:
+          # Fetches the translations and opens a pull request with them.
+          - download
+          # Sends the translations in the repository to Crowdin: once, for
+          # those made before Crowdin was set up.
+          - upload-translations
+
+jobs:
+  upload:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: crowdin/github-action@v2
+        with:
+          upload_sources: true
+          upload_translations: false
+          download_translations: false
+        env:
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+
+  upload-translations:
+    if: github.event_name == 'workflow_dispatch' && inputs.task == 'upload-translations'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: crowdin/github-action@v2
+        with:
+          upload_sources: true
+          upload_translations: true
+          download_translations: false
+        env:
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
+
+  download:
+    if: github.event_name == 'workflow_dispatch' && inputs.task == 'download'
+    runs-on: ubuntu-latest
+    permissions:
+      # To push the branch with the translations and open the pull request.
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: crowdin/github-action@v2
+        with:
+          upload_sources: false
+          upload_translations: false
+          download_translations: true
+          localization_branch_name: translations
+          create_pull_request: true
+          pull_request_base_branch_name: main
+          pull_request_title: Updates the translations from Crowdin
+          commit_message: Updates the translations from Crowdin
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
