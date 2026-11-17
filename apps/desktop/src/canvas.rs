@@ -16,7 +16,7 @@ use specto_view::{
 use crate::document::SharedDocument;
 use specto_annot::Segment;
 use specto_doc::SourceId;
-use specto_session::{DraftKind, Grip, ViewShape};
+use specto_session::{DraftKind, Grip, LinkPreview, ViewShape};
 
 /// Dragging a selection this close to the top or bottom edge (logical pixels) scrolls the view.
 const AUTOSCROLL_EDGE: f64 = 24.0;
@@ -26,6 +26,21 @@ const AUTOSCROLL_EDGE: f64 = 24.0;
 type PlaceHandler = Box<dyn Fn(f64, f64)>;
 type FieldKeyHandler = Box<dyn Fn(FieldKey)>;
 type UriHandler = Box<dyn Fn(&str)>;
+
+/// How long the pointer rests on a link before its target is shown.
+const PREVIEW_DELAY: std::time::Duration = std::time::Duration::from_millis(500);
+
+/// The size of a link's preview at most, in logical pixels.
+const PREVIEW_SIZE: (f64, f64) = (520.0, 220.0);
+
+/// A link the pointer rests on.
+pub struct Hover {
+    preview: LinkPreview,
+    /// Runs out when the target is to be shown.
+    timer: Option<glib::SourceId>,
+    /// Shows the target.
+    popover: Option<gtk::Popover>,
+}
 
 mod imp {
     use super::*;
@@ -86,6 +101,8 @@ mod imp {
         /// Whether the last frame was final: every visible page sharp and nothing left to settle.
         /// Reset when the view changes.
         pub complete: Cell<bool>,
+        /// The link the pointer rests on, while its target is about to be shown or is.
+        pub hover: RefCell<Option<Hover>>,
     }
 
     impl Default for Canvas {
@@ -119,6 +136,7 @@ mod imp {
                 settle_timer: RefCell::default(),
                 spinner: RefCell::default(),
                 complete: Cell::default(),
+                hover: RefCell::default(),
             }
         }
     }
@@ -463,12 +481,156 @@ impl Canvas {
         self.imp().on_view_changed.replace(Some(Box::new(f)));
     }
 
+    /// Follows the pointer at `(x, y)` for showing where a link leads: over a link to a place in
+    /// the document, its target is shown once the pointer has rested there a moment.
+    fn update_link_preview(&self, x: f64, y: f64) {
+        let imp = self.imp();
+        let busy = imp.draw_tool.get().is_some() || imp.place_tool.get() || imp.selecting.get();
+        let found = (imp.document.borrow().clone())
+            .filter(|_| !busy)
+            .and_then(|doc| doc.borrow_mut().link_preview(ViewPoint::new(x, y)));
+        let Some(preview) = found else {
+            self.hide_link_preview();
+            return;
+        };
+        let same = (imp.hover.borrow().as_ref())
+            .is_some_and(|h| h.preview.link == preview.link && h.preview.same_target(&preview));
+        if same {
+            return;
+        }
+        self.hide_link_preview();
+        let this = self.downgrade();
+        let timer = glib::timeout_add_local_once(PREVIEW_DELAY, move || {
+            if let Some(c) = this.upgrade() {
+                if let Some(hover) = c.imp().hover.borrow_mut().as_mut() {
+                    hover.timer = None;
+                }
+                c.show_link_preview();
+            }
+        });
+        imp.hover.replace(Some(Hover {
+            preview,
+            timer: Some(timer),
+            popover: None,
+        }));
+    }
+
+    /// Takes away what [`update_link_preview`](Self::update_link_preview) shows or is about to.
+    pub fn hide_link_preview(&self) {
+        let Some(hover) = self.imp().hover.take() else {
+            return;
+        };
+
+        if let Some(timer) = hover.timer {
+            timer.remove();
+        }
+        if let Some(popover) = hover.popover {
+            popover.popdown();
+        }
+    }
+
+    /// Renders the target of the link the pointer rests on, off the main thread, and shows it
+    /// under the link if the pointer is still there by then.
+    fn show_link_preview(&self) {
+        let Some(preview) = (self.imp().hover.borrow().as_ref()).map(|h| h.preview.clone()) else {
+            return;
+        };
+        let scale = self.device_scale();
+        let width = PREVIEW_SIZE
+            .0
+            .min(f64::from(self.width()) - 48.0)
+            .max(120.0);
+        let pixels = |logical: f64| (logical * scale).round() as u32;
+        let (w, h) = (pixels(width), pixels(PREVIEW_SIZE.1));
+        let this = self.downgrade();
+        glib::spawn_future_local(async move {
+            let wanted = preview.clone();
+            let rendered = gtk::gio::spawn_blocking(move || wanted.render(w, h)).await;
+            let (Some(c), Ok(Some(bitmap))) = (this.upgrade(), rendered) else {
+                return;
+            };
+            let mut hover = c.imp().hover.borrow_mut();
+            let Some(hover) = hover.as_mut().filter(|h| {
+                h.popover.is_none()
+                    && h.preview.link == preview.link
+                    && h.preview.same_target(&preview)
+            }) else {
+                return;
+            };
+            let texture = gdk::MemoryTexture::new(
+                bitmap.width as i32,
+                bitmap.height as i32,
+                gdk::MemoryFormat::R8g8b8a8Premultiplied,
+                &glib::Bytes::from_owned(bitmap.data),
+                bitmap.width as usize * 4,
+            );
+            let picture = gtk::Picture::builder()
+                .paintable(&texture)
+                .content_fit(gtk::ContentFit::Fill)
+                .width_request((f64::from(bitmap.width) / scale).round() as i32)
+                .height_request((f64::from(bitmap.height) / scale).round() as i32)
+                .build();
+            // It only shows: it takes neither the keyboard nor the clicks meant for the page.
+            let popover = gtk::Popover::builder()
+                .child(&picture)
+                .autohide(false)
+                .can_focus(false)
+                .can_target(false)
+                .position(gtk::PositionType::Bottom)
+                .build();
+            popover.set_parent(&c);
+            let link = preview.link;
+            popover.set_pointing_to(Some(&gdk::Rectangle::new(
+                link.origin.x.floor() as i32,
+                link.origin.y.floor() as i32,
+                link.size.width.ceil() as i32,
+                link.size.height.ceil() as i32,
+            )));
+            popover.connect_closed(|popover| {
+                let popover = popover.clone();
+                glib::idle_add_local_once(move || popover.unparent());
+            });
+            popover.popup();
+            hover.popover = Some(popover);
+        });
+    }
+
+    /// The preview of a link's target, while one shows (for tests): its size in logical pixels,
+    /// and how many of its device pixels are dark.
+    pub fn link_preview_shown(&self) -> Option<(i32, i32, usize)> {
+        let hover = self.imp().hover.borrow();
+        let picture = (hover.as_ref()?.popover.as_ref()?.child()?)
+            .downcast::<gtk::Picture>()
+            .ok()?;
+        let texture = picture.paintable().and_downcast::<gdk::Texture>()?;
+        let mut pixels = vec![0; (texture.width() * texture.height() * 4) as usize];
+        texture.download(&mut pixels, texture.width() as usize * 4);
+        let dark = pixels
+            .chunks(4)
+            .filter(|p| p[0] < 90 && p[1] < 90 && p[2] < 90);
+        Some((
+            picture.width_request(),
+            picture.height_request(),
+            dark.count(),
+        ))
+    }
+
     /// Applies a change to the viewer, then updates scrollbars and redraws.
     pub fn update_viewer(&self, f: impl FnOnce(&mut Viewer)) {
         let Some(doc) = self.imp().document.borrow().clone() else {
             return;
         };
-        f(&mut doc.borrow_mut().viewer);
+        let place = |v: &Viewer| (v.scroll_offset(), v.zoom(), v.layout_mode());
+        let moved = {
+            let viewer = &mut doc.borrow_mut().viewer;
+            let before = place(viewer);
+            f(viewer);
+            place(viewer) != before
+        };
+        // What a link's preview points at moves with the view.
+        if moved {
+            self.hide_link_preview();
+        }
         self.imp().complete.set(false);
         self.sync_adjustments();
         self.queue_draw();
@@ -1043,6 +1205,13 @@ impl Canvas {
                 if !c.imp().selecting.get() {
                     c.update_cursor(x, y);
                 }
+                c.update_link_preview(x, y);
+            }
+        });
+        let this = self.downgrade();
+        motion.connect_leave(move |_| {
+            if let Some(c) = this.upgrade() {
+                c.hide_link_preview();
             }
         });
         self.add_controller(motion);
@@ -1055,6 +1224,7 @@ impl Canvas {
         click.connect_pressed(move |g, n_press, x, y| {
             let Some(c) = this.upgrade() else { return };
             c.grab_focus();
+            c.hide_link_preview();
             c.imp().presses.set(n_press);
             // A press elsewhere takes the keyboard off the form.
             if c.field_at(x, y).is_none() {

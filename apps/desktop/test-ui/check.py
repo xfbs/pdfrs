@@ -118,6 +118,9 @@ With the virtual pointer and keyboard, on a Courier text PDF:
   not the page, Escape lets go. Undo. Saved, they're in the file and shown.
   one the file has is picked and deleted the same way, and the page is
   then shown without it
+- link_preview: resting the pointer on a link shows the place it leads to
+  under the link. It goes when the pointer leaves, and the link can still be
+  clicked
 - back_and_forward: Back and Forward after going to the last page or to a
   page by its number, not after turning a page. A jump after going back
   drops what was ahead
@@ -922,6 +925,28 @@ def test_link_click(ctx):
     w.wait("back on page 1", lambda s: s["page"] == 0 and s["history"] == [False, True])
     inp.keys(Input.ALT, Input.RIGHT)
     w.wait("forward on page 2", lambda s: s["page"] == 1 and s["history"] == [True, False])
+
+
+def test_link_preview(ctx):
+    w, inp = selection_window(ctx)
+    check(w.state()["link_preview"] == [], "a preview without the pointer on a link")
+    # Resting on a link shows where it leads, under the link.
+    x, y = w.char(0, LINK_LINE, 3)
+    inp.move(x, y)
+    w.pointer_at(x, y)
+    s = w.wait("the preview", lambda s: s["link_preview"] != [])
+    # The top of page 2, with its lines of text, across the width of the page.
+    width, height, dark = s["link_preview"]
+    check((width, height) == (520, 220) and s["page"] == 0, s["link_preview"])
+    check(dark > 400 * ctx.scale**2, s["link_preview"])
+    # It goes when the pointer leaves the link, and a click on the link still follows it.
+    x2, y2 = w.char(0, 0, 3)
+    inp.move(x2, y2)
+    w.wait("the preview gone", lambda s: s["link_preview"] == [])
+    inp.move(x, y)
+    w.wait("the preview again", lambda s: s["link_preview"] != [])
+    inp.click(x, y)
+    w.wait("the link to page 2", lambda s: s["page"] == 1 and s["link_preview"] == [])
 
 
 def test_back_and_forward(ctx):

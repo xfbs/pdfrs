@@ -229,6 +229,15 @@ impl Window {
         .bool("complete", inner.canvas.is_complete())
         .bool("maximized", inner.window.is_maximized())
         .str("cursor", inner.canvas.cursor_name().unwrap_or(""))
+        // The preview of a link's target, while one shows: its size, and how many of its pixels
+        // are dark.
+        .raw(
+            "link_preview",
+            &(inner.canvas.link_preview_shown()).map_or_else(
+                || "[]".to_owned(),
+                |(w, h, dark)| format!("[{w}, {h}, {dark}]"),
+            ),
+        )
         .str(
             "focus",
             &gtk::prelude::GtkWindowExt::focus(&inner.window)

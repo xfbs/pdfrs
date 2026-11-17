@@ -81,6 +81,7 @@ point to [DECISIONS.md](DECISIONS.md).
 - [x] Android: outline and links
 - [x] Desktop: Properties dialog, with how the file is protected
 - [x] Back and forward after a jump, in the viewer and on the desktop
+- [x] Desktop: a preview of where a link leads, on resting the pointer on it
 - [ ] Upstream in hayro: decode images only for the region and resolution
   being drawn. One tile of a 212-megapixel JPEG 2000 page still costs 4.5 GB
   and 10 seconds at 100%, which no scheduling can fix.
@@ -103,10 +104,6 @@ point to [DECISIONS.md](DECISIONS.md).
   on the device. Written as outline entries, they travel with the file, but
   need a save. Kept by the app, they also need a way to recognize a document
   that survives saving it, and so will the reading positions.
-- [ ] Link preview on the desktop: hovering over an in-document link shows the
-  area around its target, for footnotes and citations in papers. It works where
-  destinations carry a position, as LaTeX's do. It comes after back and
-  forward, which serve the same need.
 
 ## M2: Text
 

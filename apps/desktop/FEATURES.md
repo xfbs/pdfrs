@@ -61,6 +61,10 @@ Shortcuts use *Primary*, which is Ctrl on Linux and Cmd on macOS.
 - Links: in-document links and named actions (such as "next page") are
   followed, web and mail links open in the default app, and other kinds are
   refused
+- Link preview: resting the pointer on a link to a place in the document shows
+  that place in a small panel under the link, across the width of the page, so
+  a footnote or a reference can be read without going there. It goes when the
+  pointer leaves the link. Links that only name a page show nothing
 - Back and Forward (Alt+Left and Alt+Right, Cmd+[ and Cmd+] on macOS, or the
   back and forward buttons of a mouse): after a link, a Contents entry, a page
   typed into the page entry, the first or last page, a search result or an

@@ -17,6 +17,11 @@ use specto_view::{Selection, TextPages};
 /// numbered i and ii, the rest from 1. A link on the first page leads to the third, if there is
 /// one.
 fn book(pages: usize, word: &str) -> Vec<u8> {
+    book_with(pages, word, "/Fit")
+}
+
+/// [`book`] with the link's destination on the third page as given, such as `/XYZ 0 265 0`.
+fn book_with(pages: usize, word: &str, destination: &str) -> Vec<u8> {
     let mut objects: Vec<(usize, String)> = Vec::new();
     let kids: String = (0..pages).map(|i| format!("{} 0 R ", 10 + 2 * i)).collect();
     objects.push((
@@ -64,7 +69,10 @@ fn book(pages: usize, word: &str) -> Vec<u8> {
     if pages > 2 {
         objects.push((
             5,
-            "<< /Type /Annot /Subtype /Link /Rect [20 100 180 140] /Dest [14 0 R /Fit] >>".into(),
+            format!(
+                "<< /Type /Annot /Subtype /Link /Rect [20 100 180 140] \
+                 /Dest [14 0 R {destination}] >>"
+            ),
         ));
     }
     objects.sort_by_key(|(number, _)| *number);
@@ -222,6 +230,55 @@ fn links_name_pages_of_their_file() {
         .pdf_to_view(0, PdfPoint::new(100.0, 120.0))
         .unwrap();
     assert!(session.link_at(on_link).is_some());
+    session.close(&scheduler);
+}
+
+#[test]
+fn a_link_shows_where_it_leads() {
+    let scheduler = Scheduler::new(1, || {});
+    // A link to a page as a whole has nothing to show.
+    let mut session = open(&scheduler, book(4, "alpha"));
+    let on_link = |session: &Session| {
+        let at = PdfPoint::new(100.0, 120.0);
+        session.viewer.pdf_to_view(0, at).unwrap()
+    };
+    assert!(session.link_preview(on_link(&session)).is_none());
+    session.close(&scheduler);
+
+    // One to a place 35 points down the third page.
+    let mut session = open(&scheduler, book_with(4, "alpha", "/XYZ 0 265 0"));
+    let p = on_link(&session);
+    let beside = session.viewer.pdf_to_view(0, PdfPoint::new(100.0, 200.0));
+    assert!(session.link_preview(beside.unwrap()).is_none());
+    let preview = session.link_preview(p).unwrap();
+    assert!(preview.link.contains(p));
+    let zoom = session.viewer.zoom();
+    let (w, h) = (preview.link.size.width, preview.link.size.height);
+    assert!((w - 160.0 * zoom).abs() < 0.01 && (h - 40.0 * zoom).abs() < 0.01);
+    assert!(preview.same_target(&session.link_preview(p).unwrap()));
+
+    // At two pixels a point, from a little above the target: the page's first line of text, whose
+    // baseline is 50 points down the page, is in rows 34 to 58.
+    let bitmap = preview.render(400, 120).unwrap();
+    assert_eq!((bitmap.width, bitmap.height), (400, 120));
+    let dark = |rows: std::ops::Range<usize>| {
+        let pixels = bitmap.data[rows.start * 1600..rows.end * 1600].chunks(4);
+        pixels.filter(|p| p[0] < 100).count()
+    };
+    assert_eq!(dark(0..30), 0);
+    assert!(dark(30..60) > 200, "{}", dark(30..60));
+    // No taller than the page is below the target.
+    assert_eq!(preview.render(400, 5000).unwrap().height, 600);
+
+    // The page it leads to turned: shown as turned, across its width.
+    assert!(session.rotate(&[2], Rotation::Cw90));
+    let turned = session.link_preview(on_link(&session)).unwrap();
+    assert!(!turned.same_target(&preview));
+    let bitmap = turned.render(300, 5000).unwrap();
+    assert_eq!((bitmap.width, bitmap.height), (300, 200));
+    // And gone: nothing to show.
+    assert!(session.delete(&[2]));
+    assert!(session.link_preview(on_link(&session)).is_none());
     session.close(&scheduler);
 }
 

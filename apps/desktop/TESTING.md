@@ -142,6 +142,14 @@ below refer to the files by these names:
   browser.
 - Pressing on a link, moving a few pixels and releasing still follows it. A
   longer drag selects text instead.
+- LINKS: rest the pointer on an in-document link. After half a second a panel
+  under the link shows the place it leads to, sharp, with the target near the
+  top. It goes when the pointer moves off the link, when the view scrolls, and
+  when the link is clicked. Moving across several links in a row shows nothing
+  until the pointer rests.
+- A link near the bottom of the window: the panel shows above the link, not cut
+  off.
+- LONG: web links show no panel.
 - LINKS: scroll to the middle of a page and click a link. Alt+Left (Cmd+[ on
   macOS) returns to the same place mid-page, and Alt+Right goes to the link's
   target again. The back and forward buttons of a mouse do the same.

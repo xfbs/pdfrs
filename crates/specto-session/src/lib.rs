@@ -14,6 +14,7 @@
 
 mod annots;
 mod forms;
+mod preview;
 mod search;
 mod text;
 
@@ -33,6 +34,7 @@ use specto_view::{Selection, Settings, ViewPage, Viewer};
 
 pub use annots::{DraftKind, Grip, TextBoxPlace, ViewShape};
 pub use forms::{FieldClick, FieldHover};
+pub use preview::LinkPreview;
 pub use search::{Indexed, SearchStatus};
 pub use text::TextLayer;
 
@@ -303,6 +305,12 @@ impl Session {
     ///
     /// Destinations name pages of the file the link is in, which is returned with it.
     pub fn link_at(&mut self, p: ViewPoint) -> Option<(SourceId, Target)> {
+        let (position, link) = self.link_under(p)?;
+        Some((self.edit.pages().get(position)?.source, link.target))
+    }
+
+    /// The link under `p` (viewport coordinates), and the position of the page it is on.
+    fn link_under(&mut self, p: ViewPoint) -> Option<(usize, Link)> {
         let (page, at) = self.viewer.hit_test(p)?;
         let view_page = self.viewer.pages().get(page)?;
         let pdf = view_page.displayed().page_to_pdf().transform_point(at);
@@ -314,11 +322,8 @@ impl Session {
             .entry(file_page.page)
             .or_insert_with(|| doc.links(file_page.page as usize));
         // The topmost link is the last one drawn.
-        links
-            .iter()
-            .rev()
-            .find(|l| l.contains(pdf))
-            .map(|l| (file_page.source, l.target.clone()))
+        let link = links.iter().rev().find(|l| l.contains(pdf))?;
+        Some((page, link.clone()))
     }
 }
 
