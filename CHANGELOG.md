@@ -3,7 +3,7 @@
 What changed in each release of Specto, for the people who use it. Both apps
 share one version. A release's section is its notes on GitHub.
 
-## Unreleased
+## 0.2 (2026-11-18)
 
 ### Both apps
 
@@ -13,13 +13,13 @@ share one version. A release's section is its notes on GitHub.
   by machine and still need checking by people who speak the language.
 - Saving is several times faster for large files when it only adds markup or
   fills in empty form fields: the file is kept as it is, with the changes
-  added at its end. A digital signature over the file stays valid.
+  added at its end.
 
 ### Desktop
 
-- Trim Margins in the View menu shows each page without its empty margins, so
-  it fills more of the window. It works in the single and two page layouts,
-  and is remembered for each file.
+- Trim Margins, in the page layout menu, shows each page without its empty
+  margins, so it fills more of the window. It works in the single and two page
+  layouts, and is remembered for each file.
 - Back and Forward return to where you were before following a link, a
   Contents entry or a search result, or going to a page by its number. Use
   Alt+Left and Alt+Right (Cmd+[ and Cmd+] on macOS) or the back and forward

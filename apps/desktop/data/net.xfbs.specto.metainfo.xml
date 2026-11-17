@@ -75,6 +75,12 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="0.2" date="2026-11-18">
+      <description>
+        <p>Specto is translated into more than 30 languages. Saving is much faster for large files when it only adds markup or fills in empty form fields.</p>
+        <p>New on the desktop: Trim Margins, Back and Forward after following a link, a preview of where a link leads, and a Properties dialog.</p>
+      </description>
+    </release>
     <release version="0.1" date="2026-11-15">
       <description>
         <p>The first release: viewing, search, markup, signatures, forms, page editing and printing.</p>
