@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 18:46\n"
+"PO-Revision-Date: 2026-11-17 21:37\n"
 "Last-Translator: \n"
 "Language-Team: Swedish\n"
 "Language: sv_SE\n"
@@ -22,15 +22,16 @@ msgstr ""
 #, rust-format
 msgid "Specto is licensed under either of the {apache} or the {mit}, at your option.\n\n"
 "It comes with no warranty of any kind."
-msgstr ""
+msgstr "Specto är licensierat under antingen {apache} eller {mit}, efter eget val.\n\n"
+"Det levereras utan någon form av garanti."
 
 #: src/main.rs:163
 msgid "The Specto contributors"
-msgstr ""
+msgstr "Specto-bidragsgivarna"
 
 #: src/main.rs:164
 msgid "© 2026 The Specto contributors"
-msgstr ""
+msgstr "© 2026 Specto-bidragsgivarna"
 
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:173
@@ -49,80 +50,80 @@ msgstr ""
 #: src/main.rs:207
 #, rust-format
 msgid "Quit {app}"
-msgstr ""
+msgstr "Avsluta {app}"
 
 #: src/main.rs:208 src/window.rs:251
 #, rust-format
 msgid "About {app}"
-msgstr ""
+msgstr "Om {app}"
 
 #: src/main.rs:225 src/window.rs:152
 msgid "Open…"
-msgstr ""
+msgstr "Öppna…"
 
 #: src/main.rs:227 src/window.rs:213
 msgid "Save"
-msgstr ""
+msgstr "Spara"
 
 #: src/main.rs:228 src/window.rs:214
 msgid "Save As…"
-msgstr ""
+msgstr "Spara som…"
 
 #: src/main.rs:229 src/window.rs:216
 msgid "Export Selected Pages…"
-msgstr ""
+msgstr "Exportera markerade sidor…"
 
 #: src/main.rs:232 src/window.rs:219
 msgid "Print…"
-msgstr ""
+msgstr "Skriv ut…"
 
 #: src/main.rs:233 src/properties.rs:201 src/window.rs:220
 msgid "Properties"
-msgstr ""
+msgstr "Egenskaper"
 
 #: src/main.rs:235
 msgid "Close Window"
-msgstr ""
+msgstr "Stäng fönster"
 
 #: src/main.rs:240 src/window/actions.rs:93
 msgid "Undo"
-msgstr ""
+msgstr "Ångra"
 
 #: src/main.rs:241 src/window/actions.rs:97
 msgid "Redo"
-msgstr ""
+msgstr "Gör om"
 
 #: src/main.rs:244
 msgid "Copy"
-msgstr ""
+msgstr "Kopiera"
 
 #: src/main.rs:245
 msgid "Select All"
-msgstr ""
+msgstr "Markera allt"
 
 #: src/main.rs:248 src/window.rs:234
 msgid "Insert Pages from File…"
-msgstr ""
+msgstr "Infoga sidor från fil…"
 
 #: src/main.rs:249 src/window.rs:228
 msgid "Delete Pages"
-msgstr ""
+msgstr "Ta bort sidor"
 
 #: src/main.rs:252
 msgid "Find…"
-msgstr ""
+msgstr "Sök…"
 
 #: src/main.rs:253
 msgid "Find Next"
-msgstr ""
+msgstr "Sök nästa"
 
 #: src/main.rs:254
 msgid "Find Previous"
-msgstr ""
+msgstr "Sök föregående"
 
 #: src/main.rs:259 src/window.rs:267
 msgid "Single Page"
-msgstr ""
+msgstr "Enkel sida"
 
 #: src/main.rs:260 src/window.rs:268
 msgid "Continuous"
@@ -130,43 +131,43 @@ msgstr ""
 
 #: src/main.rs:261 src/window.rs:269
 msgid "Two Pages"
-msgstr ""
+msgstr "Två sidor"
 
 #: src/main.rs:263 src/window.rs:270
 msgid "Two Pages, Continuous"
-msgstr ""
+msgstr "Två sidor, löpande"
 
 #: src/main.rs:267 src/window.rs:278
 msgid "Show Cover Page Alone"
-msgstr ""
+msgstr "Visa omslagssidan separat"
 
 #: src/main.rs:269 src/window.rs:295
 msgid "Actual Size"
-msgstr ""
+msgstr "Verklig storlek"
 
 #: src/main.rs:270 src/window.rs:293
 msgid "Fit Width"
-msgstr ""
+msgstr "Anpassa till bredd"
 
 #: src/main.rs:271 src/window.rs:294
 msgid "Fit Page"
-msgstr ""
+msgstr "Anpassa till sida"
 
 #: src/main.rs:272 src/window.rs:300
 msgid "Zoom In"
-msgstr ""
+msgstr "Zooma in"
 
 #: src/main.rs:273 src/window.rs:301
 msgid "Zoom Out"
-msgstr ""
+msgstr "Zooma ut"
 
 #: src/main.rs:276
 msgid "Show Sidebar"
-msgstr ""
+msgstr "Visa sidopanel"
 
 #: src/main.rs:277 src/window.rs:755
 msgid "Thumbnails"
-msgstr ""
+msgstr "Miniatyrbilder"
 
 #: src/main.rs:278 src/window.rs:780
 msgid "Contents"
@@ -178,23 +179,23 @@ msgstr ""
 
 #: src/main.rs:284
 msgid "Previous Page"
-msgstr ""
+msgstr "Föregående sida"
 
 #: src/main.rs:285
 msgid "Next Page"
-msgstr ""
+msgstr "Nästa sida"
 
 #: src/main.rs:288
 msgid "First Page"
-msgstr ""
+msgstr "Första sidan"
 
 #: src/main.rs:289
 msgid "Last Page"
-msgstr ""
+msgstr "Sista sidan"
 
 #: src/main.rs:291
 msgid "Go to Page…"
-msgstr ""
+msgstr "Gå till sida…"
 
 #: src/main.rs:293
 msgid "Back"
@@ -206,15 +207,15 @@ msgstr ""
 
 #: src/main.rs:300 src/window.rs:226
 msgid "Rotate Left"
-msgstr ""
+msgstr "Rotera åt vänster"
 
 #: src/main.rs:301 src/window.rs:227
 msgid "Rotate Right"
-msgstr ""
+msgstr "Rotera åt höger"
 
 #: src/main.rs:304
 msgid "Show Markup Toolbar"
-msgstr ""
+msgstr "Visa märkningsverktygsfält"
 
 #: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
@@ -226,19 +227,19 @@ msgstr ""
 
 #: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
-msgstr ""
+msgstr "Genomstruken"
 
 #: src/main.rs:310 src/window.rs:242
 msgid "Highlight Form Fields"
-msgstr ""
+msgstr "Markera formulärfält"
 
 #: src/main.rs:311 src/window.rs:245
 msgid "Reset Form"
-msgstr ""
+msgstr "Återställ formulär"
 
 #: src/main.rs:316
 msgid "File"
-msgstr ""
+msgstr "Arkiv"
 
 #: src/main.rs:317
 msgid "Edit"
@@ -246,7 +247,7 @@ msgstr ""
 
 #: src/main.rs:318
 msgid "View"
-msgstr ""
+msgstr "Visa"
 
 #: src/main.rs:319
 msgid "Go"
@@ -254,27 +255,27 @@ msgstr ""
 
 #: src/main.rs:320
 msgid "Tools"
-msgstr ""
+msgstr "Verktyg"
 
 #: src/main.rs:322
 msgid "Help"
-msgstr ""
+msgstr "Hjälp"
 
 #: src/markup_list.rs:47
 msgid "Drawing"
-msgstr ""
+msgstr "Teckning"
 
 #: src/markup_list.rs:48
 msgid "Rectangle"
-msgstr ""
+msgstr "Rektangel"
 
 #: src/markup_list.rs:49
 msgid "Ellipse"
-msgstr ""
+msgstr "Ellips"
 
 #: src/markup_list.rs:50
 msgid "Line"
-msgstr ""
+msgstr "Linje"
 
 #: src/markup_list.rs:51 src/markup_list.rs:56
 msgid "Note"
@@ -290,97 +291,97 @@ msgstr ""
 
 #: src/markup_list.rs:59
 msgid "Shape"
-msgstr ""
+msgstr "Form"
 
 #: src/markup_list.rs:60
 msgid "Attachment"
-msgstr ""
+msgstr "Bilaga"
 
 #: src/markup_list.rs:96
 msgid "No Markup"
-msgstr ""
+msgstr "Inga markeringar"
 
 #: src/markup_list.rs:97
 msgid "Highlights, drawings and notes are listed here"
-msgstr ""
+msgstr "Överstrykningar, teckningar och anteckningar listas här"
 
 #: src/print.rs:135
 msgid "printing failed"
-msgstr ""
+msgstr "utskriften misslyckades"
 
 #: src/print.rs:267
 msgid "couldn't open the file"
-msgstr ""
+msgstr "kunde inte öppna filen"
 
 #: src/properties.rs:36
 msgid "File Name"
-msgstr ""
+msgstr "Filnamn"
 
 #: src/properties.rs:37
 msgid "Folder"
-msgstr ""
+msgstr "Mapp"
 
 #: src/properties.rs:38
 msgid "Title"
-msgstr ""
+msgstr "Titel"
 
 #: src/properties.rs:39
 msgid "Author"
-msgstr ""
+msgstr "Författare"
 
 #: src/properties.rs:40
 msgid "Subject"
-msgstr ""
+msgstr "Ämne"
 
 #: src/properties.rs:41
 msgid "Keywords"
-msgstr ""
+msgstr "Nyckelord"
 
 #. Translators: the program a document was written in.
 #: src/properties.rs:43
 msgid "Created With"
-msgstr ""
+msgstr "Skapad med"
 
 #. Translators: the program that turned a document into a PDF.
 #: src/properties.rs:45
 msgid "PDF Producer"
-msgstr ""
+msgstr "PDF-producent"
 
 #: src/properties.rs:46
 msgid "Created"
-msgstr ""
+msgstr "Skapad"
 
 #: src/properties.rs:47
 msgid "Modified"
-msgstr ""
+msgstr "Ändrad"
 
 #: src/properties.rs:48
 msgid "Pages"
-msgstr ""
+msgstr "Sidor"
 
 #: src/properties.rs:49
 msgid "Page Size"
-msgstr ""
+msgstr "Sidstorlek"
 
 #: src/properties.rs:51
 msgid "File Size"
-msgstr ""
+msgstr "Filstorlek"
 
 #: src/properties.rs:54
 msgid "PDF Version"
-msgstr ""
+msgstr "PDF-version"
 
 #: src/properties.rs:56
 msgid "Protection"
-msgstr ""
+msgstr "Skydd"
 
 #: src/properties.rs:58
 msgid "Password to open"
-msgstr ""
+msgstr "Lösenord för att öppna"
 
 #: src/properties.rs:59
 msgid "Encrypted, opens without a password"
-msgstr ""
+msgstr "Krypterad, öppnas utan lösenord"
 
 #: src/properties.rs:60
 msgid "None"
@@ -392,50 +393,50 @@ msgstr ""
 
 #: src/properties.rs:73
 msgid "Printing"
-msgstr ""
+msgstr "Utskrift"
 
 #: src/properties.rs:74
 msgid "Copying text and pictures"
-msgstr ""
+msgstr "Kopiering av text och bilder"
 
 #: src/properties.rs:75
 msgid "Changing the pages"
-msgstr ""
+msgstr "Ändring av sidorna"
 
 #: src/properties.rs:78
 msgid "Marking up and filling in forms"
-msgstr ""
+msgstr "Markering och ifyllning av formulär"
 
 #. Translators: a page size in inches, "8.5 × 11 in".
 #: src/properties.rs:140
 #, rust-format
 msgid "{width} × {height} in"
-msgstr ""
+msgstr "{width} × {height} tum"
 
 #. Translators: a page size in millimeters, "210 × 297 mm".
 #: src/properties.rs:147
 #, rust-format
 msgid "{width} × {height} mm"
-msgstr ""
+msgstr "{width} × {height} mm"
 
 #. Translators: a page size and the name of the paper, "297 × 210 mm (A4,
 #. landscape)".
 #: src/properties.rs:158
 #, rust-format
 msgid "{size} ({paper}, landscape)"
-msgstr ""
+msgstr "{size} ({paper}, liggande)"
 
 #. Translators: a page size and the name of the paper, "210 × 297 mm (A4)".
 #: src/properties.rs:163
 #, rust-format
 msgid "{size} ({paper})"
-msgstr ""
+msgstr "{size} ({paper})"
 
 #. Translators: {size} is the size of the first page, "210 × 297 mm (A4)".
 #: src/properties.rs:179
 #, rust-format
 msgid "{size}, other pages differ"
-msgstr ""
+msgstr "{size}, övriga sidor skiljer sig"
 
 #: src/signatures.rs:344
 msgid "Clear"
@@ -443,7 +444,7 @@ msgstr ""
 
 #: src/signatures.rs:356
 msgid "Sign with the mouse or the touchpad"
-msgstr ""
+msgstr "Signera med musen eller styrplattan"
 
 #: src/signatures.rs:364
 msgid "Draw"
@@ -451,27 +452,27 @@ msgstr ""
 
 #: src/signatures.rs:381
 msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
-msgstr ""
+msgstr "Signera på vitt papper, ta en bild av det och välj den bilden. Pappret tas bort och bläcket blir kvar."
 
 #: src/signatures.rs:388
 msgid "Choose Picture…"
-msgstr ""
+msgstr "Välj bild…"
 
 #: src/signatures.rs:395
 msgid "To the left, faint strokes are kept, and more of the paper's shadows. To the right, only what is dark."
-msgstr ""
+msgstr "Till vänster behålls svaga streck och mer av papprets skuggor. Till höger endast det som är mörkt."
 
 #: src/signatures.rs:398
 msgid "Ink as in the picture"
-msgstr ""
+msgstr "Bläck som i bilden"
 
 #: src/signatures.rs:399
 msgid "Black ink"
-msgstr ""
+msgstr "Svart bläck"
 
 #: src/signatures.rs:400
 msgid "Blue ink"
-msgstr ""
+msgstr "Blått bläck"
 
 #: src/signatures.rs:403
 msgid "Faint"
@@ -483,15 +484,15 @@ msgstr ""
 
 #: src/signatures.rs:416
 msgid "From a Picture"
-msgstr ""
+msgstr "Från en bild"
 
 #: src/signatures.rs:439
 msgid "Move the slider until the paper is gone and the strokes are whole."
-msgstr ""
+msgstr "Flytta reglaget tills pappret är borta och strecken är hela."
 
 #: src/signatures.rs:441
 msgid "No ink found in this picture. Move the slider to the left."
-msgstr ""
+msgstr "Inget bläck hittades i bilden. Flytta reglaget åt vänster."
 
 #: src/signatures.rs:458
 msgid "Pictures"
@@ -499,28 +500,28 @@ msgstr ""
 
 #: src/signatures.rs:463
 msgid "Choose a Picture of a Signature"
-msgstr ""
+msgstr "Välj en bild av en signatur"
 
 #: src/signatures.rs:480 src/window/files.rs:420 src/window/files.rs:522
 #: src/window/files.rs:751
 msgid "_Cancel"
-msgstr ""
+msgstr "_Avbryt"
 
 #: src/signatures.rs:482 src/window/files.rs:753
 msgid "_Save"
-msgstr ""
+msgstr "_Spara"
 
 #: src/signatures.rs:510
 msgid "New Signature"
-msgstr ""
+msgstr "Ny signatur"
 
 #: src/window.rs:148
 msgid "Open a PDF"
-msgstr ""
+msgstr "Öppna en PDF"
 
 #: src/window.rs:149
 msgid "Drop a file here or choose one"
-msgstr ""
+msgstr "Släpp en fil här eller välj en"
 
 #: src/window.rs:162
 msgid "Recent"
@@ -528,7 +529,7 @@ msgstr ""
 
 #: src/window.rs:188
 msgid "Thumbnails (F9)"
-msgstr ""
+msgstr "Miniatyrbilder (F9)"
 
 #: src/window.rs:200
 #, rust-format
@@ -537,11 +538,11 @@ msgstr ""
 
 #: src/window.rs:258
 msgid "Main Menu"
-msgstr ""
+msgstr "Huvudmeny"
 
 #: src/window.rs:285
 msgid "Page Layout"
-msgstr ""
+msgstr "Sidlayout"
 
 #: src/window.rs:306
 msgid "Zoom"
@@ -550,7 +551,7 @@ msgstr ""
 #: src/window.rs:317
 #, rust-format
 msgid "Go to Page ({shortcut})"
-msgstr ""
+msgstr "Gå till sida ({shortcut})"
 
 #: src/window.rs:330
 msgid "Search"
@@ -558,167 +559,167 @@ msgstr ""
 
 #: src/window.rs:342
 msgid "Previous Match (Shift+Enter)"
-msgstr ""
+msgstr "Föregående träff (Skift+Retur)"
 
 #: src/window.rs:349
 msgid "Next Match (Enter)"
-msgstr ""
+msgstr "Nästa träff (Retur)"
 
 #: src/window.rs:371
 #, rust-format
 msgid "Search ({shortcut})"
-msgstr ""
+msgstr "Sök ({shortcut})"
 
 #: src/window.rs:900
 #, rust-format
 msgid "Links of this kind aren't opened: {address}"
-msgstr ""
+msgstr "Länkar av det här slaget öppnas inte: {address}"
 
 #: src/window.rs:909
 #, rust-format
 msgid "Couldn't open link: {error}"
-msgstr ""
+msgstr "Kunde inte öppna länken: {error}"
 
 #. Translators: a keyboard shortcut as tooltips show it, the
 #. Control key with another.
 #: src/window.rs:960
 #, rust-format
 msgid "Ctrl+{key}"
-msgstr ""
+msgstr "Ctrl+{key}"
 
 #: src/window/actions.rs:103
 #, rust-format
 msgid "{n} page — Edited"
 msgid_plural "{n} pages — Edited"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{n} sida — Redigerad"
+msgstr[1] "{n} sidor — Redigerad"
 
 #: src/window/actions.rs:105 src/window/pages.rs:133
 #, rust-format
 msgid "{n} page"
 msgid_plural "{n} pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{n} sida"
+msgstr[1] "{n} sidor"
 
 #. Translators: follows the box with the page number: "3 of 120".
 #: src/window/actions.rs:111
 #, rust-format
 msgid "of {pages}"
-msgstr ""
+msgstr "av {pages}"
 
 #. Translators: follows the box with a printed page number:
 #. "iv (4 of 120)".
 #: src/window/actions.rs:511
 #, rust-format
 msgid "({position} of {pages})"
-msgstr ""
+msgstr "({position} av {pages})"
 
 #: src/window/files.rs:8
 #, rust-format
 msgid "Couldn't read “{name}”: {error}"
-msgstr ""
+msgstr "Kunde inte läsa ”{name}”: {error}"
 
 #: src/window/files.rs:15
 #, rust-format
 msgid "Couldn't save “{name}”: {error}"
-msgstr ""
+msgstr "Kunde inte spara ”{name}”: {error}"
 
 #: src/window/files.rs:23
 msgid "PDF documents"
-msgstr ""
+msgstr "PDF-dokument"
 
 #: src/window/files.rs:54
 msgid "reading failed"
-msgstr ""
+msgstr "läsningen misslyckades"
 
 #: src/window/files.rs:98 src/window/files.rs:102
 msgid "saving failed"
-msgstr ""
+msgstr "sparandet misslyckades"
 
 #: src/window/files.rs:175
 msgid "the document's password is needed"
-msgstr ""
+msgstr "dokumentets lösenord krävs"
 
 #: src/window/files.rs:177
 #, rust-format
 msgid "{app} can't save this document correctly yet"
-msgstr ""
+msgstr "{app} kan inte spara det här dokumentet korrekt än"
 
 #: src/window/files.rs:249 src/window/pages.rs:405
 #, rust-format
 msgid "Couldn't open “{name}”: {error}"
-msgstr ""
+msgstr "Kunde inte öppna ”{name}”: {error}"
 
 #: src/window/files.rs:323
 #, rust-format
 msgid "“{name}” was moved or deleted. Saving writes it again."
-msgstr ""
+msgstr "”{name}” har flyttats eller tagits bort. Om du sparar skrivs filen igen."
 
 #: src/window/files.rs:332
 #, rust-format
 msgid "“{name}” was changed by another program. Reloading discards your edits."
-msgstr ""
+msgstr "”{name}” har ändrats av ett annat program. Om du läser in på nytt kasseras dina ändringar."
 
 #: src/window/files.rs:335
 msgid "_Reload"
-msgstr ""
+msgstr "_Läs in på nytt"
 
 #: src/window/files.rs:413
 msgid "File Changed on Disk"
-msgstr ""
+msgstr "Filen har ändrats på disken"
 
 #: src/window/files.rs:415
 #, rust-format
 msgid "“{name}” was changed by another program after it was opened. Saving replaces those changes with this document."
-msgstr ""
+msgstr "”{name}” har ändrats av ett annat program efter att den öppnades. Om du sparar ersätts dessa ändringar med det här dokumentet."
 
 #: src/window/files.rs:421
 msgid "_Save Anyway"
-msgstr ""
+msgstr "_Spara ändå"
 
 #: src/window/files.rs:514
 #, rust-format
 msgid "The password was incorrect. Enter the password for “{name}”."
-msgstr ""
+msgstr "Lösenordet var felaktigt. Ange lösenordet för ”{name}”."
 
 #: src/window/files.rs:518
 #, rust-format
 msgid "“{name}” is protected with a password."
-msgstr ""
+msgstr "”{name}” är skyddad med ett lösenord."
 
 #: src/window/files.rs:520
 msgid "Password Required"
-msgstr ""
+msgstr "Lösenord krävs"
 
 #: src/window/files.rs:523
 msgid "_Unlock"
-msgstr ""
+msgstr "Lås _upp"
 
 #: src/window/files.rs:611
 #, rust-format
 msgid "Couldn't print: {error}"
-msgstr ""
+msgstr "Det gick inte att skriva ut: {error}"
 
 #: src/window/files.rs:656
 msgid "Save As"
-msgstr ""
+msgstr "Spara som"
 
 #: src/window/files.rs:744
 msgid "Save Changes?"
-msgstr ""
+msgstr "Spara ändringar?"
 
 #: src/window/files.rs:746
 #, rust-format
 msgid "“{name}” has unsaved changes. Changes that aren't saved will be lost."
-msgstr ""
+msgstr "”{name}” har osparade ändringar. Ändringar som inte sparas går förlorade."
 
 #: src/window/files.rs:752
 msgid "_Discard"
-msgstr ""
+msgstr "_Kasta"
 
 #: src/window/files.rs:774
 msgid "Open PDF"
-msgstr ""
+msgstr "Öppna PDF"
 
 #: src/window/markup.rs:36
 #, rust-format
@@ -727,27 +728,27 @@ msgstr ""
 
 #: src/window/markup.rs:50
 msgid "Draw freehand"
-msgstr ""
+msgstr "Rita på frihand"
 
 #: src/window/markup.rs:51
 msgid "Draw rectangles"
-msgstr ""
+msgstr "Rita rektanglar"
 
 #: src/window/markup.rs:52
 msgid "Draw ellipses"
-msgstr ""
+msgstr "Rita ellipser"
 
 #: src/window/markup.rs:53
 msgid "Draw lines"
-msgstr ""
+msgstr "Rita linjer"
 
 #: src/window/markup.rs:54
 msgid "Add text: click where it goes"
-msgstr ""
+msgstr "Lägg till text: klicka där den ska vara"
 
 #: src/window/markup.rs:55
 msgid "Add notes: click where one goes"
-msgstr ""
+msgstr "Lägg till anteckningar: klicka där en ska vara"
 
 #: src/window/markup.rs:98
 msgid "Color"
@@ -759,113 +760,113 @@ msgstr ""
 
 #: src/window/markup.rs:121
 msgid "Sans-serif"
-msgstr ""
+msgstr "Sans-serif"
 
 #: src/window/markup.rs:122
 msgid "Serif"
-msgstr ""
+msgstr "Serif"
 
 #: src/window/markup.rs:123
 msgid "Monospace"
-msgstr ""
+msgstr "Fast bredd"
 
 #: src/window/markup.rs:149
 msgid "Font"
-msgstr ""
+msgstr "Typsnitt"
 
 #: src/window/markup.rs:153
 msgid "Bold"
-msgstr ""
+msgstr "Fet"
 
 #: src/window/markup.rs:157
 msgid "Italic"
-msgstr ""
+msgstr "Kursiv"
 
 #: src/window/markup.rs:167
 msgid "Text size in points"
-msgstr ""
+msgstr "Textstorlek i punkter"
 
 #: src/window/markup.rs:228
 msgid "Yellow"
-msgstr ""
+msgstr "Gul"
 
 #: src/window/markup.rs:229
 msgid "Green"
-msgstr ""
+msgstr "Grön"
 
 #: src/window/markup.rs:230
 msgid "Blue"
-msgstr ""
+msgstr "Blå"
 
 #: src/window/markup.rs:231
 msgid "Pink"
-msgstr ""
+msgstr "Rosa"
 
 #: src/window/markup.rs:232
 msgid "Purple"
-msgstr ""
+msgstr "Lila"
 
 #: src/window/markup.rs:233
 msgid "Red"
-msgstr ""
+msgstr "Röd"
 
 #: src/window/markup.rs:234
 msgid "Black"
-msgstr ""
+msgstr "Svart"
 
 #: src/window/markup.rs:556
 msgid "Select the text to mark first"
-msgstr ""
+msgstr "Markera först texten som ska märkas"
 
 #: src/window/markup.rs:602
 msgid "Place this signature: click where it goes"
-msgstr ""
+msgstr "Placera signaturen: klicka där den ska vara"
 
 #: src/window/markup.rs:614
 msgid "Delete this signature"
-msgstr ""
+msgstr "Ta bort den här signaturen"
 
 #: src/window/markup.rs:630
 msgid "New Signature…"
-msgstr ""
+msgstr "Ny signatur…"
 
 #: src/window/markup.rs:659
 msgid "Click where the signature goes"
-msgstr ""
+msgstr "Klicka där signaturen ska vara"
 
 #: src/window/markup.rs:1544 src/window/markup.rs:1571
 #: src/window/markup.rs:1664 src/window/markup.rs:1717
 #, rust-format
 msgid "Couldn't change the annotation: {error}"
-msgstr ""
+msgstr "Kunde inte ändra anteckningen: {error}"
 
 #: src/window/pages.rs:27
 #, rust-format
 msgid "Undo Rotate Page"
 msgid_plural "Undo Rotate {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Ångra rotera sida"
+msgstr[1] "Ångra rotera {n} sidor"
 
 #: src/window/pages.rs:30
 #, rust-format
 msgid "Undo Delete Page"
 msgid_plural "Undo Delete {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Ångra ta bort sida"
+msgstr[1] "Ångra ta bort {n} sidor"
 
 #: src/window/pages.rs:32
 #, rust-format
 msgid "Undo Move Page"
 msgid_plural "Undo Move {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Ångra flytta sida"
+msgstr[1] "Ångra flytta {n} sidor"
 
 #: src/window/pages.rs:34
 #, rust-format
 msgid "Undo Insert Page"
 msgid_plural "Undo Insert {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Ångra infoga sida"
+msgstr[1] "Ångra infoga {n} sidor"
 
 #: src/window/pages.rs:36
 msgid "Undo Highlight"
@@ -881,7 +882,7 @@ msgstr ""
 
 #: src/window/pages.rs:39
 msgid "Undo Drawing"
-msgstr ""
+msgstr "Ångra ritning"
 
 #: src/window/pages.rs:40
 msgid "Undo Rectangle"
@@ -905,51 +906,51 @@ msgstr ""
 
 #: src/window/pages.rs:45
 msgid "Undo Add Annotation"
-msgstr ""
+msgstr "Ångra lägg till anteckning"
 
 #: src/window/pages.rs:46
 msgid "Undo Delete Annotation"
-msgstr ""
+msgstr "Ångra ta bort anteckning"
 
 #: src/window/pages.rs:47
 msgid "Undo Change Annotation"
-msgstr ""
+msgstr "Ångra ändra anteckning"
 
 #: src/window/pages.rs:48
 msgid "Undo Fill In Field"
-msgstr ""
+msgstr "Ångra fyll i fält"
 
 #: src/window/pages.rs:49
 msgid "Undo Reset Form"
-msgstr ""
+msgstr "Ångra återställ formulär"
 
 #: src/window/pages.rs:57
 #, rust-format
 msgid "Redo Rotate Page"
 msgid_plural "Redo Rotate {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Gör om rotera sida"
+msgstr[1] "Gör om rotera {n} sidor"
 
 #: src/window/pages.rs:60
 #, rust-format
 msgid "Redo Delete Page"
 msgid_plural "Redo Delete {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Gör om ta bort sida"
+msgstr[1] "Gör om ta bort {n} sidor"
 
 #: src/window/pages.rs:62
 #, rust-format
 msgid "Redo Move Page"
 msgid_plural "Redo Move {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Gör om flytta sida"
+msgstr[1] "Gör om flytta {n} sidor"
 
 #: src/window/pages.rs:64
 #, rust-format
 msgid "Redo Insert Page"
 msgid_plural "Redo Insert {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Gör om infoga sida"
+msgstr[1] "Gör om infoga {n} sidor"
 
 #: src/window/pages.rs:66
 msgid "Redo Highlight"
@@ -957,108 +958,108 @@ msgstr ""
 
 #: src/window/pages.rs:67
 msgid "Redo Underline"
-msgstr ""
+msgstr "Gör om understrykning"
 
 #: src/window/pages.rs:68
 msgid "Redo Strikethrough"
-msgstr ""
+msgstr "Gör om genomstrykning"
 
 #: src/window/pages.rs:69
 msgid "Redo Drawing"
-msgstr ""
+msgstr "Gör om teckning"
 
 #: src/window/pages.rs:70
 msgid "Redo Rectangle"
-msgstr ""
+msgstr "Gör om rektangel"
 
 #: src/window/pages.rs:71
 msgid "Redo Ellipse"
-msgstr ""
+msgstr "Gör om ellips"
 
 #: src/window/pages.rs:72
 msgid "Redo Line"
-msgstr ""
+msgstr "Gör om linje"
 
 #: src/window/pages.rs:73
 msgid "Redo Note"
-msgstr ""
+msgstr "Gör om anteckning"
 
 #: src/window/pages.rs:74
 msgid "Redo Text Box"
-msgstr ""
+msgstr "Gör om textruta"
 
 #: src/window/pages.rs:75
 msgid "Redo Add Annotation"
-msgstr ""
+msgstr "Gör om lägg till kommentar"
 
 #: src/window/pages.rs:76
 msgid "Redo Delete Annotation"
-msgstr ""
+msgstr "Gör om ta bort kommentar"
 
 #: src/window/pages.rs:77
 msgid "Redo Change Annotation"
-msgstr ""
+msgstr "Gör om ändra kommentar"
 
 #: src/window/pages.rs:78
 msgid "Redo Fill In Field"
-msgstr ""
+msgstr "Gör om fyll i fält"
 
 #: src/window/pages.rs:79
 msgid "Redo Reset Form"
-msgstr ""
+msgstr "Gör om återställ formulär"
 
 #: src/window/pages.rs:119
 #, rust-format
 msgid "page {page}"
-msgstr ""
+msgstr "sida {page}"
 
 #: src/window/pages.rs:131
 #, rust-format
 msgid "pages {pages}"
-msgstr ""
+msgstr "sidor {pages}"
 
 #: src/window/pages.rs:199
 #, rust-format
 msgid "Couldn't delete the annotation: {error}"
-msgstr ""
+msgstr "Det gick inte att ta bort kommentaren: {error}"
 
 #: src/window/pages.rs:260
 #, rust-format
 msgid "Couldn't copy the pages: {error}"
-msgstr ""
+msgstr "Det gick inte att kopiera sidorna: {error}"
 
 #: src/window/pages.rs:314
 msgid "Insert Pages from File"
-msgstr ""
+msgstr "Infoga sidor från fil"
 
 #: src/window/pages.rs:447
 msgid "Export Selected Pages"
-msgstr ""
+msgstr "Exportera markerade sidor"
 
 #: src/window/pages.rs:480
 #, rust-format
 msgid "Exported {n} page to “{name}”"
 msgid_plural "Exported {n} pages to “{name}”"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Exporterade {n} sida till ”{name}”"
+msgstr[1] "Exporterade {n} sidor till ”{name}”"
 
 #: src/window/search.rs:187
 msgid "No matches"
-msgstr ""
+msgstr "Inga träffar"
 
 #: src/window/search.rs:188
 msgid "Searching…"
-msgstr ""
+msgstr "Söker…"
 
 #: src/window/search.rs:193
 #, rust-format
 msgid "{current} of {total}"
-msgstr ""
+msgstr "{current} av {total}"
 
 #. Translators: the search is still running, so there may be
 #. more matches than {total}.
 #: src/window/search.rs:197
 #, rust-format
 msgid "{current} of {total}…"
-msgstr ""
+msgstr "{current} av {total}…"
 

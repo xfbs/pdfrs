@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 18:46\n"
+"PO-Revision-Date: 2026-11-17 21:37\n"
 "Last-Translator: \n"
 "Language-Team: Hindi\n"
 "Language: hi_IN\n"
@@ -22,25 +22,26 @@ msgstr ""
 #, rust-format
 msgid "Specto is licensed under either of the {apache} or the {mit}, at your option.\n\n"
 "It comes with no warranty of any kind."
-msgstr ""
+msgstr "Specto को आपकी पसंद के अनुसार {apache} या {mit} के अंतर्गत लाइसेंस प्राप्त है।\n\n"
+"यह किसी भी प्रकार की वारंटी के बिना आता है।"
 
 #: src/main.rs:163
 msgid "The Specto contributors"
-msgstr ""
+msgstr "Specto के योगदानकर्ता"
 
 #: src/main.rs:164
 msgid "© 2026 The Specto contributors"
-msgstr ""
+msgstr "© 2026 Specto के योगदानकर्ता"
 
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:173
 msgid "hayro (rendering)"
-msgstr ""
+msgstr "hayro (रेंडरिंग)"
 
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:175
 msgid "lopdf (saving)"
-msgstr ""
+msgstr "lopdf (सहेजना)"
 
 #: src/main.rs:177
 msgid "Built with"
@@ -49,16 +50,16 @@ msgstr ""
 #: src/main.rs:207
 #, rust-format
 msgid "Quit {app}"
-msgstr ""
+msgstr "{app} बंद करें"
 
 #: src/main.rs:208 src/window.rs:251
 #, rust-format
 msgid "About {app}"
-msgstr ""
+msgstr "{app} के बारे में"
 
 #: src/main.rs:225 src/window.rs:152
 msgid "Open…"
-msgstr ""
+msgstr "खोलें…"
 
 #: src/main.rs:227 src/window.rs:213
 msgid "Save"
@@ -66,15 +67,15 @@ msgstr ""
 
 #: src/main.rs:228 src/window.rs:214
 msgid "Save As…"
-msgstr ""
+msgstr "इस रूप में सहेजें…"
 
 #: src/main.rs:229 src/window.rs:216
 msgid "Export Selected Pages…"
-msgstr ""
+msgstr "चयनित पृष्ठ निर्यात करें…"
 
 #: src/main.rs:232 src/window.rs:219
 msgid "Print…"
-msgstr ""
+msgstr "प्रिंट करें…"
 
 #: src/main.rs:233 src/properties.rs:201 src/window.rs:220
 msgid "Properties"
@@ -82,15 +83,15 @@ msgstr ""
 
 #: src/main.rs:235
 msgid "Close Window"
-msgstr ""
+msgstr "विंडो बंद करें"
 
 #: src/main.rs:240 src/window/actions.rs:93
 msgid "Undo"
-msgstr ""
+msgstr "पूर्ववत करें"
 
 #: src/main.rs:241 src/window/actions.rs:97
 msgid "Redo"
-msgstr ""
+msgstr "फिर से करें"
 
 #: src/main.rs:244
 msgid "Copy"
@@ -98,31 +99,31 @@ msgstr ""
 
 #: src/main.rs:245
 msgid "Select All"
-msgstr ""
+msgstr "सभी चुनें"
 
 #: src/main.rs:248 src/window.rs:234
 msgid "Insert Pages from File…"
-msgstr ""
+msgstr "फ़ाइल से पृष्ठ सम्मिलित करें…"
 
 #: src/main.rs:249 src/window.rs:228
 msgid "Delete Pages"
-msgstr ""
+msgstr "पृष्ठ हटाएँ"
 
 #: src/main.rs:252
 msgid "Find…"
-msgstr ""
+msgstr "खोजें…"
 
 #: src/main.rs:253
 msgid "Find Next"
-msgstr ""
+msgstr "अगला खोजें"
 
 #: src/main.rs:254
 msgid "Find Previous"
-msgstr ""
+msgstr "पिछला खोजें"
 
 #: src/main.rs:259 src/window.rs:267
 msgid "Single Page"
-msgstr ""
+msgstr "एकल पृष्ठ"
 
 #: src/main.rs:260 src/window.rs:268
 msgid "Continuous"
@@ -130,43 +131,43 @@ msgstr ""
 
 #: src/main.rs:261 src/window.rs:269
 msgid "Two Pages"
-msgstr ""
+msgstr "दो पृष्ठ"
 
 #: src/main.rs:263 src/window.rs:270
 msgid "Two Pages, Continuous"
-msgstr ""
+msgstr "दो पृष्ठ, निरंतर"
 
 #: src/main.rs:267 src/window.rs:278
 msgid "Show Cover Page Alone"
-msgstr ""
+msgstr "कवर पृष्ठ अकेले दिखाएँ"
 
 #: src/main.rs:269 src/window.rs:295
 msgid "Actual Size"
-msgstr ""
+msgstr "वास्तविक आकार"
 
 #: src/main.rs:270 src/window.rs:293
 msgid "Fit Width"
-msgstr ""
+msgstr "चौड़ाई के अनुसार फ़िट करें"
 
 #: src/main.rs:271 src/window.rs:294
 msgid "Fit Page"
-msgstr ""
+msgstr "पृष्ठ के अनुसार फ़िट करें"
 
 #: src/main.rs:272 src/window.rs:300
 msgid "Zoom In"
-msgstr ""
+msgstr "ज़ूम इन करें"
 
 #: src/main.rs:273 src/window.rs:301
 msgid "Zoom Out"
-msgstr ""
+msgstr "ज़ूम आउट करें"
 
 #: src/main.rs:276
 msgid "Show Sidebar"
-msgstr ""
+msgstr "साइडबार दिखाएँ"
 
 #: src/main.rs:277 src/window.rs:755
 msgid "Thumbnails"
-msgstr ""
+msgstr "थंबनेल"
 
 #: src/main.rs:278 src/window.rs:780
 msgid "Contents"
@@ -178,23 +179,23 @@ msgstr ""
 
 #: src/main.rs:284
 msgid "Previous Page"
-msgstr ""
+msgstr "पिछला पृष्ठ"
 
 #: src/main.rs:285
 msgid "Next Page"
-msgstr ""
+msgstr "अगला पृष्ठ"
 
 #: src/main.rs:288
 msgid "First Page"
-msgstr ""
+msgstr "पहला पृष्ठ"
 
 #: src/main.rs:289
 msgid "Last Page"
-msgstr ""
+msgstr "अंतिम पृष्ठ"
 
 #: src/main.rs:291
 msgid "Go to Page…"
-msgstr ""
+msgstr "पृष्ठ पर जाएँ…"
 
 #: src/main.rs:293
 msgid "Back"
@@ -206,15 +207,15 @@ msgstr ""
 
 #: src/main.rs:300 src/window.rs:226
 msgid "Rotate Left"
-msgstr ""
+msgstr "बाएँ घुमाएँ"
 
 #: src/main.rs:301 src/window.rs:227
 msgid "Rotate Right"
-msgstr ""
+msgstr "दाएँ घुमाएँ"
 
 #: src/main.rs:304
 msgid "Show Markup Toolbar"
-msgstr ""
+msgstr "मार्कअप टूलबार दिखाएँ"
 
 #: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
@@ -226,27 +227,27 @@ msgstr ""
 
 #: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
-msgstr ""
+msgstr "स्ट्राइकथ्रू"
 
 #: src/main.rs:310 src/window.rs:242
 msgid "Highlight Form Fields"
-msgstr ""
+msgstr "फ़ॉर्म फ़ील्ड हाइलाइट करें"
 
 #: src/main.rs:311 src/window.rs:245
 msgid "Reset Form"
-msgstr ""
+msgstr "फ़ॉर्म रीसेट करें"
 
 #: src/main.rs:316
 msgid "File"
-msgstr ""
+msgstr "फ़ाइल"
 
 #: src/main.rs:317
 msgid "Edit"
-msgstr ""
+msgstr "संपादित करें"
 
 #: src/main.rs:318
 msgid "View"
-msgstr ""
+msgstr "देखें"
 
 #: src/main.rs:319
 msgid "Go"
@@ -254,11 +255,11 @@ msgstr ""
 
 #: src/main.rs:320
 msgid "Tools"
-msgstr ""
+msgstr "औज़ार"
 
 #: src/main.rs:322
 msgid "Help"
-msgstr ""
+msgstr "सहायता"
 
 #: src/markup_list.rs:47
 msgid "Drawing"
@@ -266,11 +267,11 @@ msgstr ""
 
 #: src/markup_list.rs:48
 msgid "Rectangle"
-msgstr ""
+msgstr "आयत"
 
 #: src/markup_list.rs:49
 msgid "Ellipse"
-msgstr ""
+msgstr "दीर्घवृत्त"
 
 #: src/markup_list.rs:50
 msgid "Line"
@@ -298,27 +299,27 @@ msgstr ""
 
 #: src/markup_list.rs:96
 msgid "No Markup"
-msgstr ""
+msgstr "कोई मार्कअप नहीं"
 
 #: src/markup_list.rs:97
 msgid "Highlights, drawings and notes are listed here"
-msgstr ""
+msgstr "हाइलाइट, चित्र और नोट यहाँ सूचीबद्ध हैं"
 
 #: src/print.rs:135
 msgid "printing failed"
-msgstr ""
+msgstr "प्रिंट करना विफल रहा"
 
 #: src/print.rs:267
 msgid "couldn't open the file"
-msgstr ""
+msgstr "फ़ाइल नहीं खोली जा सकी"
 
 #: src/properties.rs:36
 msgid "File Name"
-msgstr ""
+msgstr "फ़ाइल का नाम"
 
 #: src/properties.rs:37
 msgid "Folder"
-msgstr ""
+msgstr "फ़ोल्डर"
 
 #: src/properties.rs:38
 msgid "Title"
@@ -326,61 +327,61 @@ msgstr ""
 
 #: src/properties.rs:39
 msgid "Author"
-msgstr ""
+msgstr "लेखक"
 
 #: src/properties.rs:40
 msgid "Subject"
-msgstr ""
+msgstr "विषय"
 
 #: src/properties.rs:41
 msgid "Keywords"
-msgstr ""
+msgstr "कीवर्ड"
 
 #. Translators: the program a document was written in.
 #: src/properties.rs:43
 msgid "Created With"
-msgstr ""
+msgstr "जिसमें बनाया गया"
 
 #. Translators: the program that turned a document into a PDF.
 #: src/properties.rs:45
 msgid "PDF Producer"
-msgstr ""
+msgstr "PDF निर्माता"
 
 #: src/properties.rs:46
 msgid "Created"
-msgstr ""
+msgstr "निर्मित"
 
 #: src/properties.rs:47
 msgid "Modified"
-msgstr ""
+msgstr "संशोधित"
 
 #: src/properties.rs:48
 msgid "Pages"
-msgstr ""
+msgstr "पृष्ठ"
 
 #: src/properties.rs:49
 msgid "Page Size"
-msgstr ""
+msgstr "पृष्ठ का आकार"
 
 #: src/properties.rs:51
 msgid "File Size"
-msgstr ""
+msgstr "फ़ाइल का आकार"
 
 #: src/properties.rs:54
 msgid "PDF Version"
-msgstr ""
+msgstr "PDF संस्करण"
 
 #: src/properties.rs:56
 msgid "Protection"
-msgstr ""
+msgstr "सुरक्षा"
 
 #: src/properties.rs:58
 msgid "Password to open"
-msgstr ""
+msgstr "खोलने के लिए पासवर्ड"
 
 #: src/properties.rs:59
 msgid "Encrypted, opens without a password"
-msgstr ""
+msgstr "एन्क्रिप्टेड, बिना पासवर्ड के खुलती है"
 
 #: src/properties.rs:60
 msgid "None"
@@ -388,54 +389,54 @@ msgstr ""
 
 #: src/properties.rs:65
 msgid "Not Allowed"
-msgstr ""
+msgstr "अनुमति नहीं है"
 
 #: src/properties.rs:73
 msgid "Printing"
-msgstr ""
+msgstr "प्रिंट करना"
 
 #: src/properties.rs:74
 msgid "Copying text and pictures"
-msgstr ""
+msgstr "टेक्स्ट और चित्र कॉपी करना"
 
 #: src/properties.rs:75
 msgid "Changing the pages"
-msgstr ""
+msgstr "पृष्ठों में बदलाव करना"
 
 #: src/properties.rs:78
 msgid "Marking up and filling in forms"
-msgstr ""
+msgstr "टिप्पणी जोड़ना और फ़ॉर्म भरना"
 
 #. Translators: a page size in inches, "8.5 × 11 in".
 #: src/properties.rs:140
 #, rust-format
 msgid "{width} × {height} in"
-msgstr ""
+msgstr "{width} × {height} इंच"
 
 #. Translators: a page size in millimeters, "210 × 297 mm".
 #: src/properties.rs:147
 #, rust-format
 msgid "{width} × {height} mm"
-msgstr ""
+msgstr "{width} × {height} मिमी"
 
 #. Translators: a page size and the name of the paper, "297 × 210 mm (A4,
 #. landscape)".
 #: src/properties.rs:158
 #, rust-format
 msgid "{size} ({paper}, landscape)"
-msgstr ""
+msgstr "{size} ({paper}, लैंडस्केप)"
 
 #. Translators: a page size and the name of the paper, "210 × 297 mm (A4)".
 #: src/properties.rs:163
 #, rust-format
 msgid "{size} ({paper})"
-msgstr ""
+msgstr "{size} ({paper})"
 
 #. Translators: {size} is the size of the first page, "210 × 297 mm (A4)".
 #: src/properties.rs:179
 #, rust-format
 msgid "{size}, other pages differ"
-msgstr ""
+msgstr "{size}, अन्य पृष्ठ भिन्न हैं"
 
 #: src/signatures.rs:344
 msgid "Clear"
@@ -443,7 +444,7 @@ msgstr ""
 
 #: src/signatures.rs:356
 msgid "Sign with the mouse or the touchpad"
-msgstr ""
+msgstr "माउस या टचपैड से हस्ताक्षर करें"
 
 #: src/signatures.rs:364
 msgid "Draw"
@@ -451,11 +452,11 @@ msgstr ""
 
 #: src/signatures.rs:381
 msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
-msgstr ""
+msgstr "सफ़ेद कागज़ पर हस्ताक्षर करें, उसकी तस्वीर लें और वह तस्वीर चुनें। कागज़ हटा दिया जाता है और स्याही बनी रहती है।"
 
 #: src/signatures.rs:388
 msgid "Choose Picture…"
-msgstr ""
+msgstr "तस्वीर चुनें…"
 
 #: src/signatures.rs:395
 msgid "To the left, faint strokes are kept, and more of the paper's shadows. To the right, only what is dark."
@@ -463,15 +464,15 @@ msgstr ""
 
 #: src/signatures.rs:398
 msgid "Ink as in the picture"
-msgstr ""
+msgstr "तस्वीर के अनुसार स्याही"
 
 #: src/signatures.rs:399
 msgid "Black ink"
-msgstr ""
+msgstr "काली स्याही"
 
 #: src/signatures.rs:400
 msgid "Blue ink"
-msgstr ""
+msgstr "नीली स्याही"
 
 #: src/signatures.rs:403
 msgid "Faint"
@@ -487,11 +488,11 @@ msgstr ""
 
 #: src/signatures.rs:439
 msgid "Move the slider until the paper is gone and the strokes are whole."
-msgstr ""
+msgstr "स्लाइडर को तब तक खिसकाएँ जब तक कागज़ गायब न हो जाए और रेखाएँ पूरी न दिखें।"
 
 #: src/signatures.rs:441
 msgid "No ink found in this picture. Move the slider to the left."
-msgstr ""
+msgstr "इस तस्वीर में कोई स्याही नहीं मिली। स्लाइडर को बाईं ओर खिसकाएँ।"
 
 #: src/signatures.rs:458
 msgid "Pictures"
@@ -499,7 +500,7 @@ msgstr ""
 
 #: src/signatures.rs:463
 msgid "Choose a Picture of a Signature"
-msgstr ""
+msgstr "हस्ताक्षर की तस्वीर चुनें"
 
 #: src/signatures.rs:480 src/window/files.rs:420 src/window/files.rs:522
 #: src/window/files.rs:751
@@ -512,11 +513,11 @@ msgstr ""
 
 #: src/signatures.rs:510
 msgid "New Signature"
-msgstr ""
+msgstr "नया हस्ताक्षर"
 
 #: src/window.rs:148
 msgid "Open a PDF"
-msgstr ""
+msgstr "PDF खोलें"
 
 #: src/window.rs:149
 msgid "Drop a file here or choose one"
@@ -537,11 +538,11 @@ msgstr ""
 
 #: src/window.rs:258
 msgid "Main Menu"
-msgstr ""
+msgstr "मुख्य मेनू"
 
 #: src/window.rs:285
 msgid "Page Layout"
-msgstr ""
+msgstr "पृष्ठ लेआउट"
 
 #: src/window.rs:306
 msgid "Zoom"
@@ -550,7 +551,7 @@ msgstr ""
 #: src/window.rs:317
 #, rust-format
 msgid "Go to Page ({shortcut})"
-msgstr ""
+msgstr "पृष्ठ पर जाएँ ({shortcut})"
 
 #: src/window.rs:330
 msgid "Search"
@@ -558,106 +559,106 @@ msgstr ""
 
 #: src/window.rs:342
 msgid "Previous Match (Shift+Enter)"
-msgstr ""
+msgstr "पिछला मिलान (Shift+Enter)"
 
 #: src/window.rs:349
 msgid "Next Match (Enter)"
-msgstr ""
+msgstr "अगला मिलान (Enter)"
 
 #: src/window.rs:371
 #, rust-format
 msgid "Search ({shortcut})"
-msgstr ""
+msgstr "खोजें ({shortcut})"
 
 #: src/window.rs:900
 #, rust-format
 msgid "Links of this kind aren't opened: {address}"
-msgstr ""
+msgstr "इस प्रकार के लिंक नहीं खोले जाते: {address}"
 
 #: src/window.rs:909
 #, rust-format
 msgid "Couldn't open link: {error}"
-msgstr ""
+msgstr "लिंक नहीं खोला जा सका: {error}"
 
 #. Translators: a keyboard shortcut as tooltips show it, the
 #. Control key with another.
 #: src/window.rs:960
 #, rust-format
 msgid "Ctrl+{key}"
-msgstr ""
+msgstr "Ctrl+{key}"
 
 #: src/window/actions.rs:103
 #, rust-format
 msgid "{n} page — Edited"
 msgid_plural "{n} pages — Edited"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{n} पृष्ठ — संपादित"
+msgstr[1] "{n} पृष्ठ — संपादित"
 
 #: src/window/actions.rs:105 src/window/pages.rs:133
 #, rust-format
 msgid "{n} page"
 msgid_plural "{n} pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{n} पृष्ठ"
+msgstr[1] "{n} पृष्ठ"
 
 #. Translators: follows the box with the page number: "3 of 120".
 #: src/window/actions.rs:111
 #, rust-format
 msgid "of {pages}"
-msgstr ""
+msgstr "/ {pages}"
 
 #. Translators: follows the box with a printed page number:
 #. "iv (4 of 120)".
 #: src/window/actions.rs:511
 #, rust-format
 msgid "({position} of {pages})"
-msgstr ""
+msgstr "({position} / {pages})"
 
 #: src/window/files.rs:8
 #, rust-format
 msgid "Couldn't read “{name}”: {error}"
-msgstr ""
+msgstr "“{name}” को पढ़ा नहीं जा सका: {error}"
 
 #: src/window/files.rs:15
 #, rust-format
 msgid "Couldn't save “{name}”: {error}"
-msgstr ""
+msgstr "“{name}” को सहेजा नहीं जा सका: {error}"
 
 #: src/window/files.rs:23
 msgid "PDF documents"
-msgstr ""
+msgstr "PDF दस्तावेज़"
 
 #: src/window/files.rs:54
 msgid "reading failed"
-msgstr ""
+msgstr "पढ़ना विफल रहा"
 
 #: src/window/files.rs:98 src/window/files.rs:102
 msgid "saving failed"
-msgstr ""
+msgstr "सहेजना विफल रहा"
 
 #: src/window/files.rs:175
 msgid "the document's password is needed"
-msgstr ""
+msgstr "दस्तावेज़ का पासवर्ड आवश्यक है"
 
 #: src/window/files.rs:177
 #, rust-format
 msgid "{app} can't save this document correctly yet"
-msgstr ""
+msgstr "{app} अभी इस दस्तावेज़ को सही ढंग से सहेज नहीं सकता"
 
 #: src/window/files.rs:249 src/window/pages.rs:405
 #, rust-format
 msgid "Couldn't open “{name}”: {error}"
-msgstr ""
+msgstr "“{name}” को खोला नहीं जा सका: {error}"
 
 #: src/window/files.rs:323
 #, rust-format
 msgid "“{name}” was moved or deleted. Saving writes it again."
-msgstr ""
+msgstr "“{name}” को स्थानांतरित या हटा दिया गया है। सहेजने पर यह दोबारा लिख दिया जाएगा।"
 
 #: src/window/files.rs:332
 #, rust-format
 msgid "“{name}” was changed by another program. Reloading discards your edits."
-msgstr ""
+msgstr "“{name}” को किसी अन्य प्रोग्राम ने बदल दिया है। फिर से लोड करने पर आपके संपादन हट जाएँगे।"
 
 #: src/window/files.rs:335
 msgid "_Reload"
@@ -665,12 +666,12 @@ msgstr ""
 
 #: src/window/files.rs:413
 msgid "File Changed on Disk"
-msgstr ""
+msgstr "डिस्क पर फ़ाइल बदल गई है"
 
 #: src/window/files.rs:415
 #, rust-format
 msgid "“{name}” was changed by another program after it was opened. Saving replaces those changes with this document."
-msgstr ""
+msgstr "“{name}” को खोले जाने के बाद किसी अन्य प्रोग्राम ने बदल दिया है। सहेजने पर वे बदलाव इस दस्तावेज़ से बदल जाएँगे।"
 
 #: src/window/files.rs:421
 msgid "_Save Anyway"
@@ -684,11 +685,11 @@ msgstr ""
 #: src/window/files.rs:518
 #, rust-format
 msgid "“{name}” is protected with a password."
-msgstr ""
+msgstr "“{name}” पासवर्ड से सुरक्षित है।"
 
 #: src/window/files.rs:520
 msgid "Password Required"
-msgstr ""
+msgstr "पासवर्ड आवश्यक है"
 
 #: src/window/files.rs:523
 msgid "_Unlock"
@@ -697,7 +698,7 @@ msgstr ""
 #: src/window/files.rs:611
 #, rust-format
 msgid "Couldn't print: {error}"
-msgstr ""
+msgstr "प्रिंट नहीं किया जा सका: {error}"
 
 #: src/window/files.rs:656
 msgid "Save As"
@@ -718,7 +719,7 @@ msgstr ""
 
 #: src/window/files.rs:774
 msgid "Open PDF"
-msgstr ""
+msgstr "PDF खोलें"
 
 #: src/window/markup.rs:36
 #, rust-format
@@ -727,19 +728,19 @@ msgstr ""
 
 #: src/window/markup.rs:50
 msgid "Draw freehand"
-msgstr ""
+msgstr "हाथ से चित्र बनाएँ"
 
 #: src/window/markup.rs:51
 msgid "Draw rectangles"
-msgstr ""
+msgstr "आयत बनाएँ"
 
 #: src/window/markup.rs:52
 msgid "Draw ellipses"
-msgstr ""
+msgstr "दीर्घवृत्त बनाएँ"
 
 #: src/window/markup.rs:53
 msgid "Draw lines"
-msgstr ""
+msgstr "रेखाएँ बनाएँ"
 
 #: src/window/markup.rs:54
 msgid "Add text: click where it goes"
@@ -763,55 +764,55 @@ msgstr ""
 
 #: src/window/markup.rs:122
 msgid "Serif"
-msgstr ""
+msgstr "सेरिफ़"
 
 #: src/window/markup.rs:123
 msgid "Monospace"
-msgstr ""
+msgstr "मोनोस्पेस"
 
 #: src/window/markup.rs:149
 msgid "Font"
-msgstr ""
+msgstr "फ़ॉन्ट"
 
 #: src/window/markup.rs:153
 msgid "Bold"
-msgstr ""
+msgstr "बोल्ड"
 
 #: src/window/markup.rs:157
 msgid "Italic"
-msgstr ""
+msgstr "इटैलिक"
 
 #: src/window/markup.rs:167
 msgid "Text size in points"
-msgstr ""
+msgstr "पॉइंट में टेक्स्ट का आकार"
 
 #: src/window/markup.rs:228
 msgid "Yellow"
-msgstr ""
+msgstr "पीला"
 
 #: src/window/markup.rs:229
 msgid "Green"
-msgstr ""
+msgstr "हरा"
 
 #: src/window/markup.rs:230
 msgid "Blue"
-msgstr ""
+msgstr "नीला"
 
 #: src/window/markup.rs:231
 msgid "Pink"
-msgstr ""
+msgstr "गुलाबी"
 
 #: src/window/markup.rs:232
 msgid "Purple"
-msgstr ""
+msgstr "बैंगनी"
 
 #: src/window/markup.rs:233
 msgid "Red"
-msgstr ""
+msgstr "लाल"
 
 #: src/window/markup.rs:234
 msgid "Black"
-msgstr ""
+msgstr "काला"
 
 #: src/window/markup.rs:556
 msgid "Select the text to mark first"
@@ -819,193 +820,193 @@ msgstr ""
 
 #: src/window/markup.rs:602
 msgid "Place this signature: click where it goes"
-msgstr ""
+msgstr "यह हस्ताक्षर लगाएँ: जहाँ लगाना है वहाँ क्लिक करें"
 
 #: src/window/markup.rs:614
 msgid "Delete this signature"
-msgstr ""
+msgstr "यह हस्ताक्षर हटाएँ"
 
 #: src/window/markup.rs:630
 msgid "New Signature…"
-msgstr ""
+msgstr "नया हस्ताक्षर…"
 
 #: src/window/markup.rs:659
 msgid "Click where the signature goes"
-msgstr ""
+msgstr "जहाँ हस्ताक्षर लगाना है वहाँ क्लिक करें"
 
 #: src/window/markup.rs:1544 src/window/markup.rs:1571
 #: src/window/markup.rs:1664 src/window/markup.rs:1717
 #, rust-format
 msgid "Couldn't change the annotation: {error}"
-msgstr ""
+msgstr "एनोटेशन बदला नहीं जा सका: {error}"
 
 #: src/window/pages.rs:27
 #, rust-format
 msgid "Undo Rotate Page"
 msgid_plural "Undo Rotate {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "पृष्ठ घुमाना पूर्ववत करें"
+msgstr[1] "{n} पृष्ठ घुमाना पूर्ववत करें"
 
 #: src/window/pages.rs:30
 #, rust-format
 msgid "Undo Delete Page"
 msgid_plural "Undo Delete {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "पृष्ठ हटाना पूर्ववत करें"
+msgstr[1] "{n} पृष्ठ हटाना पूर्ववत करें"
 
 #: src/window/pages.rs:32
 #, rust-format
 msgid "Undo Move Page"
 msgid_plural "Undo Move {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "पृष्ठ स्थानांतरण पूर्ववत करें"
+msgstr[1] "{n} पृष्ठ स्थानांतरण पूर्ववत करें"
 
 #: src/window/pages.rs:34
 #, rust-format
 msgid "Undo Insert Page"
 msgid_plural "Undo Insert {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "पेज जोड़ना पूर्ववत करें"
+msgstr[1] "{n} पेज जोड़ना पूर्ववत करें"
 
 #: src/window/pages.rs:36
 msgid "Undo Highlight"
-msgstr ""
+msgstr "हाइलाइट पूर्ववत करें"
 
 #: src/window/pages.rs:37
 msgid "Undo Underline"
-msgstr ""
+msgstr "रेखांकन पूर्ववत करें"
 
 #: src/window/pages.rs:38
 msgid "Undo Strikethrough"
-msgstr ""
+msgstr "काटी गई पंक्ति (स्ट्राइकथ्रू) पूर्ववत करें"
 
 #: src/window/pages.rs:39
 msgid "Undo Drawing"
-msgstr ""
+msgstr "चित्रांकन पूर्ववत करें"
 
 #: src/window/pages.rs:40
 msgid "Undo Rectangle"
-msgstr ""
+msgstr "आयत पूर्ववत करें"
 
 #: src/window/pages.rs:41
 msgid "Undo Ellipse"
-msgstr ""
+msgstr "दीर्घवृत्त पूर्ववत करें"
 
 #: src/window/pages.rs:42
 msgid "Undo Line"
-msgstr ""
+msgstr "रेखा पूर्ववत करें"
 
 #: src/window/pages.rs:43
 msgid "Undo Note"
-msgstr ""
+msgstr "नोट पूर्ववत करें"
 
 #: src/window/pages.rs:44
 msgid "Undo Text Box"
-msgstr ""
+msgstr "टेक्स्ट बॉक्स पूर्ववत करें"
 
 #: src/window/pages.rs:45
 msgid "Undo Add Annotation"
-msgstr ""
+msgstr "एनोटेशन जोड़ना पूर्ववत करें"
 
 #: src/window/pages.rs:46
 msgid "Undo Delete Annotation"
-msgstr ""
+msgstr "एनोटेशन हटाना पूर्ववत करें"
 
 #: src/window/pages.rs:47
 msgid "Undo Change Annotation"
-msgstr ""
+msgstr "एनोटेशन बदलना पूर्ववत करें"
 
 #: src/window/pages.rs:48
 msgid "Undo Fill In Field"
-msgstr ""
+msgstr "फ़ील्ड भरना पूर्ववत करें"
 
 #: src/window/pages.rs:49
 msgid "Undo Reset Form"
-msgstr ""
+msgstr "फ़ॉर्म रीसेट करना पूर्ववत करें"
 
 #: src/window/pages.rs:57
 #, rust-format
 msgid "Redo Rotate Page"
 msgid_plural "Redo Rotate {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "पेज घुमाना फिर से करें"
+msgstr[1] "{n} पेज घुमाना फिर से करें"
 
 #: src/window/pages.rs:60
 #, rust-format
 msgid "Redo Delete Page"
 msgid_plural "Redo Delete {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "पेज हटाना फिर से करें"
+msgstr[1] "{n} पेज हटाना फिर से करें"
 
 #: src/window/pages.rs:62
 #, rust-format
 msgid "Redo Move Page"
 msgid_plural "Redo Move {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "पेज स्थानांतरित करना फिर से करें"
+msgstr[1] "{n} पेज स्थानांतरित करना फिर से करें"
 
 #: src/window/pages.rs:64
 #, rust-format
 msgid "Redo Insert Page"
 msgid_plural "Redo Insert {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "पेज जोड़ना फिर से करें"
+msgstr[1] "{n} पेज जोड़ना फिर से करें"
 
 #: src/window/pages.rs:66
 msgid "Redo Highlight"
-msgstr ""
+msgstr "हाइलाइट फिर से करें"
 
 #: src/window/pages.rs:67
 msgid "Redo Underline"
-msgstr ""
+msgstr "रेखांकन फिर से लागू करें"
 
 #: src/window/pages.rs:68
 msgid "Redo Strikethrough"
-msgstr ""
+msgstr "काटी गई पंक्ति फिर से लागू करें"
 
 #: src/window/pages.rs:69
 msgid "Redo Drawing"
-msgstr ""
+msgstr "चित्र फिर से लागू करें"
 
 #: src/window/pages.rs:70
 msgid "Redo Rectangle"
-msgstr ""
+msgstr "आयत फिर से लागू करें"
 
 #: src/window/pages.rs:71
 msgid "Redo Ellipse"
-msgstr ""
+msgstr "दीर्घवृत्त फिर से लागू करें"
 
 #: src/window/pages.rs:72
 msgid "Redo Line"
-msgstr ""
+msgstr "रेखा फिर से लागू करें"
 
 #: src/window/pages.rs:73
 msgid "Redo Note"
-msgstr ""
+msgstr "टिप्पणी फिर से लागू करें"
 
 #: src/window/pages.rs:74
 msgid "Redo Text Box"
-msgstr ""
+msgstr "टेक्स्ट बॉक्स फिर से लागू करें"
 
 #: src/window/pages.rs:75
 msgid "Redo Add Annotation"
-msgstr ""
+msgstr "एनोटेशन जोड़ना फिर से लागू करें"
 
 #: src/window/pages.rs:76
 msgid "Redo Delete Annotation"
-msgstr ""
+msgstr "एनोटेशन हटाना फिर से लागू करें"
 
 #: src/window/pages.rs:77
 msgid "Redo Change Annotation"
-msgstr ""
+msgstr "एनोटेशन बदलना फिर से लागू करें"
 
 #: src/window/pages.rs:78
 msgid "Redo Fill In Field"
-msgstr ""
+msgstr "फ़ील्ड भरना फिर से लागू करें"
 
 #: src/window/pages.rs:79
 msgid "Redo Reset Form"
-msgstr ""
+msgstr "फ़ॉर्म रीसेट करना फिर से लागू करें"
 
 #: src/window/pages.rs:119
 #, rust-format
@@ -1020,35 +1021,35 @@ msgstr ""
 #: src/window/pages.rs:199
 #, rust-format
 msgid "Couldn't delete the annotation: {error}"
-msgstr ""
+msgstr "एनोटेशन हटाया नहीं जा सका: {error}"
 
 #: src/window/pages.rs:260
 #, rust-format
 msgid "Couldn't copy the pages: {error}"
-msgstr ""
+msgstr "पृष्ठ कॉपी नहीं किए जा सके: {error}"
 
 #: src/window/pages.rs:314
 msgid "Insert Pages from File"
-msgstr ""
+msgstr "फ़ाइल से पृष्ठ डालें"
 
 #: src/window/pages.rs:447
 msgid "Export Selected Pages"
-msgstr ""
+msgstr "चयनित पृष्ठ निर्यात करें"
 
 #: src/window/pages.rs:480
 #, rust-format
 msgid "Exported {n} page to “{name}”"
 msgid_plural "Exported {n} pages to “{name}”"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{n} पृष्ठ “{name}” में निर्यात किया गया"
+msgstr[1] "{n} पृष्ठ “{name}” में निर्यात किए गए"
 
 #: src/window/search.rs:187
 msgid "No matches"
-msgstr ""
+msgstr "कोई मिलान नहीं"
 
 #: src/window/search.rs:188
 msgid "Searching…"
-msgstr ""
+msgstr "खोज रहे हैं…"
 
 #: src/window/search.rs:193
 #, rust-format

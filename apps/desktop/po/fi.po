@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 18:46\n"
+"PO-Revision-Date: 2026-11-17 21:37\n"
 "Last-Translator: \n"
 "Language-Team: Finnish\n"
 "Language: fi_FI\n"
@@ -22,15 +22,16 @@ msgstr ""
 #, rust-format
 msgid "Specto is licensed under either of the {apache} or the {mit}, at your option.\n\n"
 "It comes with no warranty of any kind."
-msgstr ""
+msgstr "Specto on lisensoitu joko {apache}- tai {mit}-lisenssillä valintasi mukaan.\n\n"
+"Ohjelmalle ei anneta minkäänlaista takuuta."
 
 #: src/main.rs:163
 msgid "The Specto contributors"
-msgstr ""
+msgstr "Specton kehittäjät"
 
 #: src/main.rs:164
 msgid "© 2026 The Specto contributors"
-msgstr ""
+msgstr "© 2026 Specton kehittäjät"
 
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:173
@@ -49,16 +50,16 @@ msgstr ""
 #: src/main.rs:207
 #, rust-format
 msgid "Quit {app}"
-msgstr ""
+msgstr "Lopeta {app}"
 
 #: src/main.rs:208 src/window.rs:251
 #, rust-format
 msgid "About {app}"
-msgstr ""
+msgstr "Tietoja: {app}"
 
 #: src/main.rs:225 src/window.rs:152
 msgid "Open…"
-msgstr ""
+msgstr "Avaa…"
 
 #: src/main.rs:227 src/window.rs:213
 msgid "Save"
@@ -66,15 +67,15 @@ msgstr ""
 
 #: src/main.rs:228 src/window.rs:214
 msgid "Save As…"
-msgstr ""
+msgstr "Tallenna nimellä…"
 
 #: src/main.rs:229 src/window.rs:216
 msgid "Export Selected Pages…"
-msgstr ""
+msgstr "Vie valitut sivut…"
 
 #: src/main.rs:232 src/window.rs:219
 msgid "Print…"
-msgstr ""
+msgstr "Tulosta…"
 
 #: src/main.rs:233 src/properties.rs:201 src/window.rs:220
 msgid "Properties"
@@ -82,15 +83,15 @@ msgstr ""
 
 #: src/main.rs:235
 msgid "Close Window"
-msgstr ""
+msgstr "Sulje ikkuna"
 
 #: src/main.rs:240 src/window/actions.rs:93
 msgid "Undo"
-msgstr ""
+msgstr "Kumoa"
 
 #: src/main.rs:241 src/window/actions.rs:97
 msgid "Redo"
-msgstr ""
+msgstr "Tee uudelleen"
 
 #: src/main.rs:244
 msgid "Copy"
@@ -98,31 +99,31 @@ msgstr ""
 
 #: src/main.rs:245
 msgid "Select All"
-msgstr ""
+msgstr "Valitse kaikki"
 
 #: src/main.rs:248 src/window.rs:234
 msgid "Insert Pages from File…"
-msgstr ""
+msgstr "Lisää sivuja tiedostosta…"
 
 #: src/main.rs:249 src/window.rs:228
 msgid "Delete Pages"
-msgstr ""
+msgstr "Poista sivut"
 
 #: src/main.rs:252
 msgid "Find…"
-msgstr ""
+msgstr "Etsi…"
 
 #: src/main.rs:253
 msgid "Find Next"
-msgstr ""
+msgstr "Etsi seuraava"
 
 #: src/main.rs:254
 msgid "Find Previous"
-msgstr ""
+msgstr "Etsi edellinen"
 
 #: src/main.rs:259 src/window.rs:267
 msgid "Single Page"
-msgstr ""
+msgstr "Yksittäinen sivu"
 
 #: src/main.rs:260 src/window.rs:268
 msgid "Continuous"
@@ -130,43 +131,43 @@ msgstr ""
 
 #: src/main.rs:261 src/window.rs:269
 msgid "Two Pages"
-msgstr ""
+msgstr "Kaksi sivua"
 
 #: src/main.rs:263 src/window.rs:270
 msgid "Two Pages, Continuous"
-msgstr ""
+msgstr "Kaksi sivua, jatkuva"
 
 #: src/main.rs:267 src/window.rs:278
 msgid "Show Cover Page Alone"
-msgstr ""
+msgstr "Näytä kansilehti erikseen"
 
 #: src/main.rs:269 src/window.rs:295
 msgid "Actual Size"
-msgstr ""
+msgstr "Todellinen koko"
 
 #: src/main.rs:270 src/window.rs:293
 msgid "Fit Width"
-msgstr ""
+msgstr "Sovita leveyteen"
 
 #: src/main.rs:271 src/window.rs:294
 msgid "Fit Page"
-msgstr ""
+msgstr "Sovita sivu"
 
 #: src/main.rs:272 src/window.rs:300
 msgid "Zoom In"
-msgstr ""
+msgstr "Lähennä"
 
 #: src/main.rs:273 src/window.rs:301
 msgid "Zoom Out"
-msgstr ""
+msgstr "Loitonna"
 
 #: src/main.rs:276
 msgid "Show Sidebar"
-msgstr ""
+msgstr "Näytä sivupalkki"
 
 #: src/main.rs:277 src/window.rs:755
 msgid "Thumbnails"
-msgstr ""
+msgstr "Pienoiskuvat"
 
 #: src/main.rs:278 src/window.rs:780
 msgid "Contents"
@@ -178,23 +179,23 @@ msgstr ""
 
 #: src/main.rs:284
 msgid "Previous Page"
-msgstr ""
+msgstr "Edellinen sivu"
 
 #: src/main.rs:285
 msgid "Next Page"
-msgstr ""
+msgstr "Seuraava sivu"
 
 #: src/main.rs:288
 msgid "First Page"
-msgstr ""
+msgstr "Ensimmäinen sivu"
 
 #: src/main.rs:289
 msgid "Last Page"
-msgstr ""
+msgstr "Viimeinen sivu"
 
 #: src/main.rs:291
 msgid "Go to Page…"
-msgstr ""
+msgstr "Siirry sivulle…"
 
 #: src/main.rs:293
 msgid "Back"
@@ -206,15 +207,15 @@ msgstr ""
 
 #: src/main.rs:300 src/window.rs:226
 msgid "Rotate Left"
-msgstr ""
+msgstr "Kierrä vasemmalle"
 
 #: src/main.rs:301 src/window.rs:227
 msgid "Rotate Right"
-msgstr ""
+msgstr "Kierrä oikealle"
 
 #: src/main.rs:304
 msgid "Show Markup Toolbar"
-msgstr ""
+msgstr "Näytä merkintätyökalupalkki"
 
 #: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
@@ -226,27 +227,27 @@ msgstr ""
 
 #: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
-msgstr ""
+msgstr "Yliviivaus"
 
 #: src/main.rs:310 src/window.rs:242
 msgid "Highlight Form Fields"
-msgstr ""
+msgstr "Korosta lomakekentät"
 
 #: src/main.rs:311 src/window.rs:245
 msgid "Reset Form"
-msgstr ""
+msgstr "Palauta lomake"
 
 #: src/main.rs:316
 msgid "File"
-msgstr ""
+msgstr "Tiedosto"
 
 #: src/main.rs:317
 msgid "Edit"
-msgstr ""
+msgstr "Muokkaa"
 
 #: src/main.rs:318
 msgid "View"
-msgstr ""
+msgstr "Näytä"
 
 #: src/main.rs:319
 msgid "Go"
@@ -254,11 +255,11 @@ msgstr ""
 
 #: src/main.rs:320
 msgid "Tools"
-msgstr ""
+msgstr "Työkalut"
 
 #: src/main.rs:322
 msgid "Help"
-msgstr ""
+msgstr "Ohje"
 
 #: src/markup_list.rs:47
 msgid "Drawing"
@@ -266,11 +267,11 @@ msgstr ""
 
 #: src/markup_list.rs:48
 msgid "Rectangle"
-msgstr ""
+msgstr "Suorakulmio"
 
 #: src/markup_list.rs:49
 msgid "Ellipse"
-msgstr ""
+msgstr "Ellipsi"
 
 #: src/markup_list.rs:50
 msgid "Line"
@@ -298,27 +299,27 @@ msgstr ""
 
 #: src/markup_list.rs:96
 msgid "No Markup"
-msgstr ""
+msgstr "Ei merkintöjä"
 
 #: src/markup_list.rs:97
 msgid "Highlights, drawings and notes are listed here"
-msgstr ""
+msgstr "Korostukset, piirrokset ja muistiinpanot luetellaan tässä"
 
 #: src/print.rs:135
 msgid "printing failed"
-msgstr ""
+msgstr "tulostus epäonnistui"
 
 #: src/print.rs:267
 msgid "couldn't open the file"
-msgstr ""
+msgstr "tiedostoa ei voitu avata"
 
 #: src/properties.rs:36
 msgid "File Name"
-msgstr ""
+msgstr "Tiedostonimi"
 
 #: src/properties.rs:37
 msgid "Folder"
-msgstr ""
+msgstr "Kansio"
 
 #: src/properties.rs:38
 msgid "Title"
@@ -326,61 +327,61 @@ msgstr ""
 
 #: src/properties.rs:39
 msgid "Author"
-msgstr ""
+msgstr "Tekijä"
 
 #: src/properties.rs:40
 msgid "Subject"
-msgstr ""
+msgstr "Aihe"
 
 #: src/properties.rs:41
 msgid "Keywords"
-msgstr ""
+msgstr "Avainsanat"
 
 #. Translators: the program a document was written in.
 #: src/properties.rs:43
 msgid "Created With"
-msgstr ""
+msgstr "Luontiohjelma"
 
 #. Translators: the program that turned a document into a PDF.
 #: src/properties.rs:45
 msgid "PDF Producer"
-msgstr ""
+msgstr "PDF-tuottaja"
 
 #: src/properties.rs:46
 msgid "Created"
-msgstr ""
+msgstr "Luotu"
 
 #: src/properties.rs:47
 msgid "Modified"
-msgstr ""
+msgstr "Muokattu"
 
 #: src/properties.rs:48
 msgid "Pages"
-msgstr ""
+msgstr "Sivut"
 
 #: src/properties.rs:49
 msgid "Page Size"
-msgstr ""
+msgstr "Sivukoko"
 
 #: src/properties.rs:51
 msgid "File Size"
-msgstr ""
+msgstr "Tiedostokoko"
 
 #: src/properties.rs:54
 msgid "PDF Version"
-msgstr ""
+msgstr "PDF-versio"
 
 #: src/properties.rs:56
 msgid "Protection"
-msgstr ""
+msgstr "Suojaus"
 
 #: src/properties.rs:58
 msgid "Password to open"
-msgstr ""
+msgstr "Salasana avaamiseen"
 
 #: src/properties.rs:59
 msgid "Encrypted, opens without a password"
-msgstr ""
+msgstr "Salattu, aukeaa ilman salasanaa"
 
 #: src/properties.rs:60
 msgid "None"
@@ -388,54 +389,54 @@ msgstr ""
 
 #: src/properties.rs:65
 msgid "Not Allowed"
-msgstr ""
+msgstr "Ei sallittu"
 
 #: src/properties.rs:73
 msgid "Printing"
-msgstr ""
+msgstr "Tulostaminen"
 
 #: src/properties.rs:74
 msgid "Copying text and pictures"
-msgstr ""
+msgstr "Tekstin ja kuvien kopioiminen"
 
 #: src/properties.rs:75
 msgid "Changing the pages"
-msgstr ""
+msgstr "Sivujen muuttaminen"
 
 #: src/properties.rs:78
 msgid "Marking up and filling in forms"
-msgstr ""
+msgstr "Merkintöjen tekeminen ja lomakkeiden täyttäminen"
 
 #. Translators: a page size in inches, "8.5 × 11 in".
 #: src/properties.rs:140
 #, rust-format
 msgid "{width} × {height} in"
-msgstr ""
+msgstr "{width} × {height} tuumaa"
 
 #. Translators: a page size in millimeters, "210 × 297 mm".
 #: src/properties.rs:147
 #, rust-format
 msgid "{width} × {height} mm"
-msgstr ""
+msgstr "{width} × {height} mm"
 
 #. Translators: a page size and the name of the paper, "297 × 210 mm (A4,
 #. landscape)".
 #: src/properties.rs:158
 #, rust-format
 msgid "{size} ({paper}, landscape)"
-msgstr ""
+msgstr "{size} ({paper}, vaaka)"
 
 #. Translators: a page size and the name of the paper, "210 × 297 mm (A4)".
 #: src/properties.rs:163
 #, rust-format
 msgid "{size} ({paper})"
-msgstr ""
+msgstr "{size} ({paper})"
 
 #. Translators: {size} is the size of the first page, "210 × 297 mm (A4)".
 #: src/properties.rs:179
 #, rust-format
 msgid "{size}, other pages differ"
-msgstr ""
+msgstr "{size}, muut sivut eroavat"
 
 #: src/signatures.rs:344
 msgid "Clear"
@@ -443,7 +444,7 @@ msgstr ""
 
 #: src/signatures.rs:356
 msgid "Sign with the mouse or the touchpad"
-msgstr ""
+msgstr "Allekirjoita hiirellä tai kosketuslevyllä"
 
 #: src/signatures.rs:364
 msgid "Draw"
@@ -451,15 +452,15 @@ msgstr ""
 
 #: src/signatures.rs:381
 msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
-msgstr ""
+msgstr "Allekirjoita valkoiselle paperille, ota siitä kuva ja valitse kuva. Paperi poistetaan, ja muste jää."
 
 #: src/signatures.rs:388
 msgid "Choose Picture…"
-msgstr ""
+msgstr "Valitse kuva…"
 
 #: src/signatures.rs:395
 msgid "To the left, faint strokes are kept, and more of the paper's shadows. To the right, only what is dark."
-msgstr ""
+msgstr "Vasemmalla säilyvät himmeät viivat ja enemmän paperin varjoja. Oikealla säilyy vain tumma."
 
 #: src/signatures.rs:398
 msgid "Ink as in the picture"
@@ -467,11 +468,11 @@ msgstr ""
 
 #: src/signatures.rs:399
 msgid "Black ink"
-msgstr ""
+msgstr "Musta muste"
 
 #: src/signatures.rs:400
 msgid "Blue ink"
-msgstr ""
+msgstr "Sininen muste"
 
 #: src/signatures.rs:403
 msgid "Faint"
@@ -487,11 +488,11 @@ msgstr ""
 
 #: src/signatures.rs:439
 msgid "Move the slider until the paper is gone and the strokes are whole."
-msgstr ""
+msgstr "Siirrä liukusäädintä, kunnes paperi on poissa ja viivat ovat ehjät."
 
 #: src/signatures.rs:441
 msgid "No ink found in this picture. Move the slider to the left."
-msgstr ""
+msgstr "Tästä kuvasta ei löytynyt mustetta. Siirrä liukusäädintä vasemmalle."
 
 #: src/signatures.rs:458
 msgid "Pictures"
@@ -499,7 +500,7 @@ msgstr ""
 
 #: src/signatures.rs:463
 msgid "Choose a Picture of a Signature"
-msgstr ""
+msgstr "Valitse kuva allekirjoituksesta"
 
 #: src/signatures.rs:480 src/window/files.rs:420 src/window/files.rs:522
 #: src/window/files.rs:751
@@ -512,15 +513,15 @@ msgstr ""
 
 #: src/signatures.rs:510
 msgid "New Signature"
-msgstr ""
+msgstr "Uusi allekirjoitus"
 
 #: src/window.rs:148
 msgid "Open a PDF"
-msgstr ""
+msgstr "Avaa PDF"
 
 #: src/window.rs:149
 msgid "Drop a file here or choose one"
-msgstr ""
+msgstr "Pudota tiedosto tähän tai valitse sellainen"
 
 #: src/window.rs:162
 msgid "Recent"
@@ -528,16 +529,16 @@ msgstr ""
 
 #: src/window.rs:188
 msgid "Thumbnails (F9)"
-msgstr ""
+msgstr "Pikkukuvat (F9)"
 
 #: src/window.rs:200
 #, rust-format
 msgid "Open ({shortcut})"
-msgstr ""
+msgstr "Avaa ({shortcut})"
 
 #: src/window.rs:258
 msgid "Main Menu"
-msgstr ""
+msgstr "Päävalikko"
 
 #: src/window.rs:285
 msgid "Page Layout"
@@ -550,7 +551,7 @@ msgstr ""
 #: src/window.rs:317
 #, rust-format
 msgid "Go to Page ({shortcut})"
-msgstr ""
+msgstr "Siirry sivulle ({shortcut})"
 
 #: src/window.rs:330
 msgid "Search"
@@ -558,123 +559,123 @@ msgstr ""
 
 #: src/window.rs:342
 msgid "Previous Match (Shift+Enter)"
-msgstr ""
+msgstr "Edellinen osuma (Vaihto+Enter)"
 
 #: src/window.rs:349
 msgid "Next Match (Enter)"
-msgstr ""
+msgstr "Seuraava osuma (Enter)"
 
 #: src/window.rs:371
 #, rust-format
 msgid "Search ({shortcut})"
-msgstr ""
+msgstr "Haku ({shortcut})"
 
 #: src/window.rs:900
 #, rust-format
 msgid "Links of this kind aren't opened: {address}"
-msgstr ""
+msgstr "Tämän tyyppisiä linkkejä ei avata: {address}"
 
 #: src/window.rs:909
 #, rust-format
 msgid "Couldn't open link: {error}"
-msgstr ""
+msgstr "Linkin avaaminen epäonnistui: {error}"
 
 #. Translators: a keyboard shortcut as tooltips show it, the
 #. Control key with another.
 #: src/window.rs:960
 #, rust-format
 msgid "Ctrl+{key}"
-msgstr ""
+msgstr "Ctrl+{key}"
 
 #: src/window/actions.rs:103
 #, rust-format
 msgid "{n} page — Edited"
 msgid_plural "{n} pages — Edited"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{n} sivu — muokattu"
+msgstr[1] "{n} sivua — muokattu"
 
 #: src/window/actions.rs:105 src/window/pages.rs:133
 #, rust-format
 msgid "{n} page"
 msgid_plural "{n} pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{n} sivu"
+msgstr[1] "{n} sivua"
 
 #. Translators: follows the box with the page number: "3 of 120".
 #: src/window/actions.rs:111
 #, rust-format
 msgid "of {pages}"
-msgstr ""
+msgstr "/ {pages}"
 
 #. Translators: follows the box with a printed page number:
 #. "iv (4 of 120)".
 #: src/window/actions.rs:511
 #, rust-format
 msgid "({position} of {pages})"
-msgstr ""
+msgstr "({position} / {pages})"
 
 #: src/window/files.rs:8
 #, rust-format
 msgid "Couldn't read “{name}”: {error}"
-msgstr ""
+msgstr "Tiedoston “{name}” lukeminen epäonnistui: {error}"
 
 #: src/window/files.rs:15
 #, rust-format
 msgid "Couldn't save “{name}”: {error}"
-msgstr ""
+msgstr "Tiedoston “{name}” tallentaminen epäonnistui: {error}"
 
 #: src/window/files.rs:23
 msgid "PDF documents"
-msgstr ""
+msgstr "PDF-asiakirjat"
 
 #: src/window/files.rs:54
 msgid "reading failed"
-msgstr ""
+msgstr "lukeminen epäonnistui"
 
 #: src/window/files.rs:98 src/window/files.rs:102
 msgid "saving failed"
-msgstr ""
+msgstr "tallentaminen epäonnistui"
 
 #: src/window/files.rs:175
 msgid "the document's password is needed"
-msgstr ""
+msgstr "asiakirjan salasana tarvitaan"
 
 #: src/window/files.rs:177
 #, rust-format
 msgid "{app} can't save this document correctly yet"
-msgstr ""
+msgstr "{app} ei vielä osaa tallentaa tätä asiakirjaa oikein"
 
 #: src/window/files.rs:249 src/window/pages.rs:405
 #, rust-format
 msgid "Couldn't open “{name}”: {error}"
-msgstr ""
+msgstr "Tiedoston “{name}” avaaminen epäonnistui: {error}"
 
 #: src/window/files.rs:323
 #, rust-format
 msgid "“{name}” was moved or deleted. Saving writes it again."
-msgstr ""
+msgstr "“{name}” on siirretty tai poistettu. Tallentaminen kirjoittaa sen uudelleen."
 
 #: src/window/files.rs:332
 #, rust-format
 msgid "“{name}” was changed by another program. Reloading discards your edits."
-msgstr ""
+msgstr "Toinen ohjelma muutti tiedostoa “{name}”. Uudelleenlataus hylkää tekemäsi muutokset."
 
 #: src/window/files.rs:335
 msgid "_Reload"
-msgstr ""
+msgstr "_Lataa uudelleen"
 
 #: src/window/files.rs:413
 msgid "File Changed on Disk"
-msgstr ""
+msgstr "Levyllä oleva tiedosto on muuttunut"
 
 #: src/window/files.rs:415
 #, rust-format
 msgid "“{name}” was changed by another program after it was opened. Saving replaces those changes with this document."
-msgstr ""
+msgstr "Toinen ohjelma muutti tiedostoa “{name}” sen avaamisen jälkeen. Tallennus korvaa nämä muutokset tämän asiakirjan sisällöllä."
 
 #: src/window/files.rs:421
 msgid "_Save Anyway"
-msgstr ""
+msgstr "_Tallenna silti"
 
 #: src/window/files.rs:514
 #, rust-format
@@ -684,41 +685,41 @@ msgstr ""
 #: src/window/files.rs:518
 #, rust-format
 msgid "“{name}” is protected with a password."
-msgstr ""
+msgstr "Tiedosto “{name}” on suojattu salasanalla."
 
 #: src/window/files.rs:520
 msgid "Password Required"
-msgstr ""
+msgstr "Salasana vaaditaan"
 
 #: src/window/files.rs:523
 msgid "_Unlock"
-msgstr ""
+msgstr "_Avaa lukitus"
 
 #: src/window/files.rs:611
 #, rust-format
 msgid "Couldn't print: {error}"
-msgstr ""
+msgstr "Tulostus epäonnistui: {error}"
 
 #: src/window/files.rs:656
 msgid "Save As"
-msgstr ""
+msgstr "Tallenna nimellä"
 
 #: src/window/files.rs:744
 msgid "Save Changes?"
-msgstr ""
+msgstr "Tallennetaanko muutokset?"
 
 #: src/window/files.rs:746
 #, rust-format
 msgid "“{name}” has unsaved changes. Changes that aren't saved will be lost."
-msgstr ""
+msgstr "Tiedostossa “{name}” on tallentamattomia muutoksia. Tallentamattomat muutokset menetetään."
 
 #: src/window/files.rs:752
 msgid "_Discard"
-msgstr ""
+msgstr "_Hylkää"
 
 #: src/window/files.rs:774
 msgid "Open PDF"
-msgstr ""
+msgstr "Avaa PDF"
 
 #: src/window/markup.rs:36
 #, rust-format
@@ -727,19 +728,19 @@ msgstr ""
 
 #: src/window/markup.rs:50
 msgid "Draw freehand"
-msgstr ""
+msgstr "Piirrä vapaalla kädellä"
 
 #: src/window/markup.rs:51
 msgid "Draw rectangles"
-msgstr ""
+msgstr "Piirrä suorakulmioita"
 
 #: src/window/markup.rs:52
 msgid "Draw ellipses"
-msgstr ""
+msgstr "Piirrä ellipsejä"
 
 #: src/window/markup.rs:53
 msgid "Draw lines"
-msgstr ""
+msgstr "Piirrä viivoja"
 
 #: src/window/markup.rs:54
 msgid "Add text: click where it goes"
@@ -751,7 +752,7 @@ msgstr ""
 
 #: src/window/markup.rs:98
 msgid "Color"
-msgstr ""
+msgstr "Väri"
 
 #: src/window/markup.rs:113
 msgid "Signature"
@@ -759,306 +760,306 @@ msgstr ""
 
 #: src/window/markup.rs:121
 msgid "Sans-serif"
-msgstr ""
+msgstr "Pääteetön"
 
 #: src/window/markup.rs:122
 msgid "Serif"
-msgstr ""
+msgstr "Serif"
 
 #: src/window/markup.rs:123
 msgid "Monospace"
-msgstr ""
+msgstr "Tasalevyinen"
 
 #: src/window/markup.rs:149
 msgid "Font"
-msgstr ""
+msgstr "Fontti"
 
 #: src/window/markup.rs:153
 msgid "Bold"
-msgstr ""
+msgstr "Lihavointi"
 
 #: src/window/markup.rs:157
 msgid "Italic"
-msgstr ""
+msgstr "Kursivointi"
 
 #: src/window/markup.rs:167
 msgid "Text size in points"
-msgstr ""
+msgstr "Tekstin koko pisteinä"
 
 #: src/window/markup.rs:228
 msgid "Yellow"
-msgstr ""
+msgstr "Keltainen"
 
 #: src/window/markup.rs:229
 msgid "Green"
-msgstr ""
+msgstr "Vihreä"
 
 #: src/window/markup.rs:230
 msgid "Blue"
-msgstr ""
+msgstr "Sininen"
 
 #: src/window/markup.rs:231
 msgid "Pink"
-msgstr ""
+msgstr "Vaaleanpunainen"
 
 #: src/window/markup.rs:232
 msgid "Purple"
-msgstr ""
+msgstr "Violetti"
 
 #: src/window/markup.rs:233
 msgid "Red"
-msgstr ""
+msgstr "Punainen"
 
 #: src/window/markup.rs:234
 msgid "Black"
-msgstr ""
+msgstr "Musta"
 
 #: src/window/markup.rs:556
 msgid "Select the text to mark first"
-msgstr ""
+msgstr "Valitse ensin merkittävä teksti"
 
 #: src/window/markup.rs:602
 msgid "Place this signature: click where it goes"
-msgstr ""
+msgstr "Sijoita tämä allekirjoitus: napsauta kohtaa, johon se tulee"
 
 #: src/window/markup.rs:614
 msgid "Delete this signature"
-msgstr ""
+msgstr "Poista tämä allekirjoitus"
 
 #: src/window/markup.rs:630
 msgid "New Signature…"
-msgstr ""
+msgstr "Uusi allekirjoitus…"
 
 #: src/window/markup.rs:659
 msgid "Click where the signature goes"
-msgstr ""
+msgstr "Napsauta kohtaa, johon allekirjoitus tulee"
 
 #: src/window/markup.rs:1544 src/window/markup.rs:1571
 #: src/window/markup.rs:1664 src/window/markup.rs:1717
 #, rust-format
 msgid "Couldn't change the annotation: {error}"
-msgstr ""
+msgstr "Merkinnän muuttaminen epäonnistui: {error}"
 
 #: src/window/pages.rs:27
 #, rust-format
 msgid "Undo Rotate Page"
 msgid_plural "Undo Rotate {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Kumoa sivun kierto"
+msgstr[1] "Kumoa {n} sivun kierto"
 
 #: src/window/pages.rs:30
 #, rust-format
 msgid "Undo Delete Page"
 msgid_plural "Undo Delete {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Kumoa sivun poisto"
+msgstr[1] "Kumoa {n} sivun poisto"
 
 #: src/window/pages.rs:32
 #, rust-format
 msgid "Undo Move Page"
 msgid_plural "Undo Move {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Kumoa sivun siirto"
+msgstr[1] "Kumoa {n} sivun siirto"
 
 #: src/window/pages.rs:34
 #, rust-format
 msgid "Undo Insert Page"
 msgid_plural "Undo Insert {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Kumoa sivun lisäys"
+msgstr[1] "Kumoa {n} sivun lisäys"
 
 #: src/window/pages.rs:36
 msgid "Undo Highlight"
-msgstr ""
+msgstr "Kumoa korostus"
 
 #: src/window/pages.rs:37
 msgid "Undo Underline"
-msgstr ""
+msgstr "Kumoa alleviivaus"
 
 #: src/window/pages.rs:38
 msgid "Undo Strikethrough"
-msgstr ""
+msgstr "Kumoa yliviivaus"
 
 #: src/window/pages.rs:39
 msgid "Undo Drawing"
-msgstr ""
+msgstr "Kumoa piirros"
 
 #: src/window/pages.rs:40
 msgid "Undo Rectangle"
-msgstr ""
+msgstr "Kumoa suorakulmio"
 
 #: src/window/pages.rs:41
 msgid "Undo Ellipse"
-msgstr ""
+msgstr "Kumoa ellipsi"
 
 #: src/window/pages.rs:42
 msgid "Undo Line"
-msgstr ""
+msgstr "Kumoa viiva"
 
 #: src/window/pages.rs:43
 msgid "Undo Note"
-msgstr ""
+msgstr "Kumoa muistiinpano"
 
 #: src/window/pages.rs:44
 msgid "Undo Text Box"
-msgstr ""
+msgstr "Kumoa tekstilaatikko"
 
 #: src/window/pages.rs:45
 msgid "Undo Add Annotation"
-msgstr ""
+msgstr "Kumoa huomautuksen lisäys"
 
 #: src/window/pages.rs:46
 msgid "Undo Delete Annotation"
-msgstr ""
+msgstr "Kumoa huomautuksen poisto"
 
 #: src/window/pages.rs:47
 msgid "Undo Change Annotation"
-msgstr ""
+msgstr "Kumoa huomautuksen muutos"
 
 #: src/window/pages.rs:48
 msgid "Undo Fill In Field"
-msgstr ""
+msgstr "Kumoa kentän täyttö"
 
 #: src/window/pages.rs:49
 msgid "Undo Reset Form"
-msgstr ""
+msgstr "Kumoa lomakkeen tyhjennys"
 
 #: src/window/pages.rs:57
 #, rust-format
 msgid "Redo Rotate Page"
 msgid_plural "Redo Rotate {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Tee uudelleen sivun kierto"
+msgstr[1] "Tee uudelleen {n} sivun kierto"
 
 #: src/window/pages.rs:60
 #, rust-format
 msgid "Redo Delete Page"
 msgid_plural "Redo Delete {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Tee uudelleen sivun poisto"
+msgstr[1] "Tee uudelleen {n} sivun poisto"
 
 #: src/window/pages.rs:62
 #, rust-format
 msgid "Redo Move Page"
 msgid_plural "Redo Move {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Tee uudelleen sivun siirto"
+msgstr[1] "Tee uudelleen {n} sivun siirto"
 
 #: src/window/pages.rs:64
 #, rust-format
 msgid "Redo Insert Page"
 msgid_plural "Redo Insert {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Tee uudelleen sivun lisäys"
+msgstr[1] "Tee uudelleen {n} sivun lisäys"
 
 #: src/window/pages.rs:66
 msgid "Redo Highlight"
-msgstr ""
+msgstr "Tee uudelleen korostus"
 
 #: src/window/pages.rs:67
 msgid "Redo Underline"
-msgstr ""
+msgstr "Tee uudelleen: alleviivaus"
 
 #: src/window/pages.rs:68
 msgid "Redo Strikethrough"
-msgstr ""
+msgstr "Tee uudelleen: yliviivaus"
 
 #: src/window/pages.rs:69
 msgid "Redo Drawing"
-msgstr ""
+msgstr "Tee uudelleen: piirros"
 
 #: src/window/pages.rs:70
 msgid "Redo Rectangle"
-msgstr ""
+msgstr "Tee uudelleen: suorakulmio"
 
 #: src/window/pages.rs:71
 msgid "Redo Ellipse"
-msgstr ""
+msgstr "Tee uudelleen: ellipsi"
 
 #: src/window/pages.rs:72
 msgid "Redo Line"
-msgstr ""
+msgstr "Tee uudelleen: viiva"
 
 #: src/window/pages.rs:73
 msgid "Redo Note"
-msgstr ""
+msgstr "Tee uudelleen: muistiinpano"
 
 #: src/window/pages.rs:74
 msgid "Redo Text Box"
-msgstr ""
+msgstr "Tee uudelleen: tekstikenttä"
 
 #: src/window/pages.rs:75
 msgid "Redo Add Annotation"
-msgstr ""
+msgstr "Tee uudelleen: huomautuksen lisäys"
 
 #: src/window/pages.rs:76
 msgid "Redo Delete Annotation"
-msgstr ""
+msgstr "Tee uudelleen: huomautuksen poisto"
 
 #: src/window/pages.rs:77
 msgid "Redo Change Annotation"
-msgstr ""
+msgstr "Tee uudelleen: huomautuksen muutos"
 
 #: src/window/pages.rs:78
 msgid "Redo Fill In Field"
-msgstr ""
+msgstr "Tee uudelleen: kentän täyttö"
 
 #: src/window/pages.rs:79
 msgid "Redo Reset Form"
-msgstr ""
+msgstr "Tee uudelleen: lomakkeen nollaus"
 
 #: src/window/pages.rs:119
 #, rust-format
 msgid "page {page}"
-msgstr ""
+msgstr "sivu {page}"
 
 #: src/window/pages.rs:131
 #, rust-format
 msgid "pages {pages}"
-msgstr ""
+msgstr "sivut {pages}"
 
 #: src/window/pages.rs:199
 #, rust-format
 msgid "Couldn't delete the annotation: {error}"
-msgstr ""
+msgstr "Huomautuksen poistaminen epäonnistui: {error}"
 
 #: src/window/pages.rs:260
 #, rust-format
 msgid "Couldn't copy the pages: {error}"
-msgstr ""
+msgstr "Sivujen kopioiminen epäonnistui: {error}"
 
 #: src/window/pages.rs:314
 msgid "Insert Pages from File"
-msgstr ""
+msgstr "Lisää sivuja tiedostosta"
 
 #: src/window/pages.rs:447
 msgid "Export Selected Pages"
-msgstr ""
+msgstr "Vie valitut sivut"
 
 #: src/window/pages.rs:480
 #, rust-format
 msgid "Exported {n} page to “{name}”"
 msgid_plural "Exported {n} pages to “{name}”"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{n} sivu viety tiedostoon “{name}”"
+msgstr[1] "{n} sivua viety tiedostoon “{name}”"
 
 #: src/window/search.rs:187
 msgid "No matches"
-msgstr ""
+msgstr "Ei osumia"
 
 #: src/window/search.rs:188
 msgid "Searching…"
-msgstr ""
+msgstr "Haetaan…"
 
 #: src/window/search.rs:193
 #, rust-format
 msgid "{current} of {total}"
-msgstr ""
+msgstr "{current} / {total}"
 
 #. Translators: the search is still running, so there may be
 #. more matches than {total}.
 #: src/window/search.rs:197
 #, rust-format
 msgid "{current} of {total}…"
-msgstr ""
+msgstr "{current} / {total}…"
 
