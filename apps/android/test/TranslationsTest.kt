@@ -81,14 +81,42 @@ class TranslationsTest {
         }
     }
 
+    /**
+     * Whether the plural form [form] of [language] stands for a single number, such as "one" in
+     * English, which may then be left out of the text: "Keeps the screen on for a minute".
+     *
+     * In other languages the same form also stands for 21, 31 and so on (Croatian, Russian), for
+     * 0 as well as 1 (French), or for 101 (Slovenian), and the number has to be there. After the
+     * plural rules of the Unicode CLDR.
+     */
+    private fun isSingleNumber(language: String, form: String): Boolean = when (form) {
+        "zero" -> language != "lv"
+
+        "one" -> language !in setOf(
+            "be", "bs", "fr", "hi", "hr", "is", "lt", "lv", "mk", "pt", "ru", "sl", "sr", "uk",
+        )
+
+        "two" -> language != "sl"
+
+        else -> false
+    }
+
     @Test
     fun translationsKeepThePlaceholders() {
+        val wrong = mutableListOf<String>()
         for ((language, texts) in translations) {
             for ((name, text) in texts) {
                 // A plural form that English doesn't have goes by the general one.
                 val original = english[name] ?: english["${name.withoutForm()}/other"] ?: continue
-                assertEquals("$name in $language", placeholders(original), placeholders(text))
+                val expected = placeholders(original)
+                val found = placeholders(text)
+                val numberLeftOut = expected - found.toSet() == listOf("%d") &&
+                    isSingleNumber(language, name.substringAfter('/', ""))
+                if (found != expected && !numberLeftOut) {
+                    wrong += "$name in $language: $found instead of $expected"
+                }
             }
         }
+        assertEquals("texts with other placeholders than English", emptyList<String>(), wrong)
     }
 }
