@@ -12,7 +12,8 @@
   <a href="apps/desktop/README.md">Desktop</a> ·
   <a href="apps/android/README.md">Android</a> ·
   <a href="docs/ARCHITECTURE.md">Architecture</a> ·
-  <a href="docs/TASKS.md">Plan</a>
+  <a href="docs/TASKS.md">Plan</a> ·
+  <a href="#translations">Help translate</a>
 </p>
 
 <p align="center">
@@ -88,6 +89,21 @@ signatures.
 
 The detailed plan is in [Tasks](docs/TASKS.md).
 
+## Translations
+
+Specto is translated into more than 30 languages. Most of the translations
+were made by machine and haven't been checked by a native speaker yet, so
+reviewing them is the most useful help there is, and it takes no programming.
+
+Translations are made on [Crowdin](https://crowdin.com/project/specto). You can
+sign in, pick your language, suggest a better translation where one is wrong,
+and vote for the ones that are right. A note beside many texts says where in
+the app it appears. Changes to the translated files in this repository would be
+overwritten, so they are made on Crowdin as well.
+
+If your language is missing, or you would rather report a mistake than fix it,
+[open an issue](https://github.com/xfbs/specto/issues).
+
 ## Building
 
 Each app has its own instructions, with what to install first:
@@ -132,15 +148,6 @@ The tests check saved files with qpdf where it is installed.
 - [Specto Desktop Testing](apps/desktop/TESTING.md) and
   [Specto Android Testing](apps/android/TESTING.md): testing each app, by hand
   and automated
-
-## Translations
-
-[![Crowdin](https://badges.crowdin.net/specto/localized.svg)](https://crowdin.com/project/specto)
-
-Specto is in English, German and Dutch. Translations are made on
-[Crowdin](https://crowdin.com/project/specto), where anyone can improve one or
-start a new language. They come into the repository from there, so changes to
-the translated files are best made on Crowdin.
 
 ## Similar projects
 
