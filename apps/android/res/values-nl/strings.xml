@@ -26,7 +26,7 @@
 
     <!-- The top bar. -->
     <string name="back_to_document">Terug naar document</string>
-    <string name="contents_and_pages">Inhoud en pagina's</string>
+    <string name="contents_and_pages">Inhoud en pagina\'s</string>
     <!-- Beside the document's name while it has unsaved changes. -->
     <string name="edited">Bewerkt</string>
     <string name="search">Zoeken</string>
@@ -83,7 +83,7 @@
     <string name="password_wrong">Dat wachtwoord werkt niet.</string>
 
     <!-- Pages and Contents. -->
-    <string name="tab_pages">Pagina's</string>
+    <string name="tab_pages">Pagina\'s</string>
     <string name="tab_contents">Inhoud</string>
     <string name="collapse">Inklappen</string>
     <string name="expand">Uitklappen</string>
@@ -92,7 +92,7 @@
     <!-- Follows the finger while pages are dragged to another place. -->
     <plurals name="pages_dragged">
         <item quantity="one">%d pagina</item>
-        <item quantity="other">%d pagina's</item>
+        <item quantity="other">%d pagina\'s</item>
     </plurals>
 
     <!-- Links that lead out of the document. -->
@@ -153,8 +153,8 @@
     <string name="view_description">Weergave: %1$s</string>
     <string name="layout_single_page">Enkele pagina</string>
     <string name="layout_continuous">Doorlopend</string>
-    <string name="layout_two_pages">Twee pagina's</string>
-    <string name="layout_two_pages_continuous">Twee pagina's, doorlopend</string>
+    <string name="layout_two_pages">Twee pagina\'s</string>
+    <string name="layout_two_pages_continuous">Twee pagina\'s, doorlopend</string>
     <string name="first_page_alone">Eertse pagina apart</string>
     <string name="fit_page">Pagina passend</string>
     <string name="fit_width">Breedte passend</string>
@@ -170,9 +170,9 @@
     <string name="clear_selection">Selectie wissen</string>
     <string name="rotate_left">Linksom roteren left</string>
     <string name="rotate_right">Rechtsom roteren</string>
-    <string name="delete_pages">Pagina's verwijderen</string>
+    <string name="delete_pages">Pagina\'s verwijderen</string>
     <string name="unsaved_title">Wijzigingen opslaan?</string>
-    <string name="unsaved_text">De wijzigingen op de pagina's van %1$s gaan verloren tenzij u ze opslaat.</string>
+    <string name="unsaved_text">De wijzigingen op de pagina\'s van %1$s gaan verloren tenzij u ze opslaat.</string>
     <string name="saving">Opslaan…</string>
     <!-- With what went wrong, as the system or the PDF library put it (in English). -->
     <string name="could_not_save">Kan niet opslaan: %1$s</string>
@@ -193,7 +193,7 @@
     <string name="property_producer">PDF producer</string>
     <string name="property_created">Aangemaakt</string>
     <string name="property_modified">Gewijzigd</string>
-    <string name="property_pages">Pagina's</string>
+    <string name="property_pages">Pagina\'s</string>
     <string name="property_page_size">Paginagrootte</string>
     <string name="property_file_size">Bestandsgrootte</string>
     <string name="property_pdf_version">PDF-versie</string>
@@ -205,7 +205,7 @@
     <string name="page_size_named">%1$s (%2$s)</string>
     <string name="page_size_named_landscape">%1$s (%2$s, liggend)</string>
     <!-- The size of the first page, when not all pages have it. -->
-    <string name="page_size_others_differ">%1$s; andere pagina's verschillen</string>
+    <string name="page_size_others_differ">%1$s; andere pagina\'s verschillen</string>
 
     <!-- Settings. -->
     <string name="setting_keep_screen_on">Scherm aan houden</string>
@@ -213,7 +213,7 @@
         <item quantity="one">Wanneer een document geopend is, gedurende %d minuut na de laatste aanraking</item>
         <item quantity="other">Wanneer een document geopend is, gedurende %d minuten na de laatste aanraking</item>
     </plurals>
-    <string name="setting_volume_keys">Volumeknoppen slaan de pagina's om</string>
+    <string name="setting_volume_keys">Volumeknoppen slaan de pagina\'s om</string>
     <string name="setting_volume_keys_detail">Volume omlaag gaat vooruit, volume omhoog gaat terug</string>
     <string name="crash_log">Crash-logboek</string>
     <string name="crash_log_empty">Tot nu toe is er niets misgegaan</string>
