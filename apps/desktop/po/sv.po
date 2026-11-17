@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 22:41\n"
+"PO-Revision-Date: 2026-11-17 23:16\n"
 "Last-Translator: \n"
 "Language-Team: Swedish\n"
 "Language: sv_SE\n"
@@ -137,127 +137,131 @@ msgstr "Två sidor"
 msgid "Two Pages, Continuous"
 msgstr "Två sidor, löpande"
 
-#: src/main.rs:267 src/window.rs:278
+#: src/main.rs:268 src/window.rs:278
 msgid "Show Cover Page Alone"
 msgstr "Visa omslagssidan separat"
 
-#: src/main.rs:269 src/window.rs:295
+#: src/main.rs:269 src/window.rs:281
+msgid "Trim Margins"
+msgstr "Beskär Marginaler"
+
+#: src/main.rs:272 src/window.rs:296
 msgid "Actual Size"
 msgstr "Verklig storlek"
 
-#: src/main.rs:270 src/window.rs:293
+#: src/main.rs:273 src/window.rs:294
 msgid "Fit Width"
 msgstr "Anpassa till bredd"
 
-#: src/main.rs:271 src/window.rs:294
+#: src/main.rs:274 src/window.rs:295
 msgid "Fit Page"
 msgstr "Anpassa till sida"
 
-#: src/main.rs:272 src/window.rs:300
+#: src/main.rs:275 src/window.rs:301
 msgid "Zoom In"
 msgstr "Zooma in"
 
-#: src/main.rs:273 src/window.rs:301
+#: src/main.rs:276 src/window.rs:302
 msgid "Zoom Out"
 msgstr "Zooma ut"
 
-#: src/main.rs:276
+#: src/main.rs:279
 msgid "Show Sidebar"
 msgstr "Visa sidopanel"
 
-#: src/main.rs:277 src/window.rs:755
+#: src/main.rs:280 src/window.rs:764
 msgid "Thumbnails"
 msgstr "Miniatyrbilder"
 
-#: src/main.rs:278 src/window.rs:780
+#: src/main.rs:281 src/window.rs:789
 msgid "Contents"
 msgstr "Innehåll"
 
-#: src/main.rs:279 src/window.rs:796 src/window/markup.rs:200
+#: src/main.rs:282 src/window.rs:805 src/window/markup.rs:200
 msgid "Markup"
 msgstr "Markeringar"
 
-#: src/main.rs:284
+#: src/main.rs:287
 msgid "Previous Page"
 msgstr "Föregående sida"
 
-#: src/main.rs:285
+#: src/main.rs:288
 msgid "Next Page"
 msgstr "Nästa sida"
 
-#: src/main.rs:288
+#: src/main.rs:291
 msgid "First Page"
 msgstr "Första sidan"
 
-#: src/main.rs:289
+#: src/main.rs:292
 msgid "Last Page"
 msgstr "Sista sidan"
 
-#: src/main.rs:291
+#: src/main.rs:294
 msgid "Go to Page…"
 msgstr "Gå till sida…"
 
-#: src/main.rs:293
+#: src/main.rs:296
 msgid "Back"
 msgstr "Bakåt"
 
-#: src/main.rs:294
+#: src/main.rs:297
 msgid "Forward"
 msgstr "Framåt"
 
-#: src/main.rs:300 src/window.rs:226
+#: src/main.rs:303 src/window.rs:226
 msgid "Rotate Left"
 msgstr "Rotera åt vänster"
 
-#: src/main.rs:301 src/window.rs:227
+#: src/main.rs:304 src/window.rs:227
 msgid "Rotate Right"
 msgstr "Rotera åt höger"
 
-#: src/main.rs:304
+#: src/main.rs:307
 msgid "Show Markup Toolbar"
 msgstr "Visa märkningsverktygsfält"
 
-#: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
+#: src/main.rs:308 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
 msgstr "Färgmarkering"
 
-#: src/main.rs:306 src/markup_list.rs:44 src/window/markup.rs:28
+#: src/main.rs:309 src/markup_list.rs:44 src/window/markup.rs:28
 msgid "Underline"
 msgstr "Understrykning"
 
-#: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
+#: src/main.rs:310 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
 msgstr "Genomstruken"
 
-#: src/main.rs:310 src/window.rs:242
+#: src/main.rs:313 src/window.rs:242
 msgid "Highlight Form Fields"
 msgstr "Markera formulärfält"
 
-#: src/main.rs:311 src/window.rs:245
+#: src/main.rs:314 src/window.rs:245
 msgid "Reset Form"
 msgstr "Återställ formulär"
 
-#: src/main.rs:316
+#: src/main.rs:319
 msgid "File"
 msgstr "Arkiv"
 
-#: src/main.rs:317
+#: src/main.rs:320
 msgid "Edit"
 msgstr "Redigera"
 
-#: src/main.rs:318
+#: src/main.rs:321
 msgid "View"
 msgstr "Visa"
 
-#: src/main.rs:319
+#: src/main.rs:322
 msgid "Go"
 msgstr "Gå"
 
-#: src/main.rs:320
+#: src/main.rs:323
 msgid "Tools"
 msgstr "Verktyg"
 
-#: src/main.rs:322
+#: src/main.rs:325
 msgid "Help"
 msgstr "Hjälp"
 
@@ -502,12 +506,12 @@ msgstr "Bilder"
 msgid "Choose a Picture of a Signature"
 msgstr "Välj en bild av en signatur"
 
-#: src/signatures.rs:480 src/window/files.rs:420 src/window/files.rs:522
-#: src/window/files.rs:751
+#: src/signatures.rs:480 src/window/files.rs:422 src/window/files.rs:527
+#: src/window/files.rs:756
 msgid "_Cancel"
 msgstr "_Avbryt"
 
-#: src/signatures.rs:482 src/window/files.rs:753
+#: src/signatures.rs:482 src/window/files.rs:758
 msgid "_Save"
 msgstr "_Spara"
 
@@ -540,49 +544,49 @@ msgstr "Öppna ({shortcut})"
 msgid "Main Menu"
 msgstr "Huvudmeny"
 
-#: src/window.rs:285
+#: src/window.rs:286
 msgid "Page Layout"
 msgstr "Sidlayout"
 
-#: src/window.rs:306
+#: src/window.rs:307
 msgid "Zoom"
 msgstr "Zoom"
 
-#: src/window.rs:317
+#: src/window.rs:318
 #, rust-format
 msgid "Go to Page ({shortcut})"
 msgstr "Gå till sida ({shortcut})"
 
-#: src/window.rs:330
+#: src/window.rs:331
 msgid "Search"
 msgstr "Sök"
 
-#: src/window.rs:342
+#: src/window.rs:343
 msgid "Previous Match (Shift+Enter)"
 msgstr "Föregående träff (Skift+Retur)"
 
-#: src/window.rs:349
+#: src/window.rs:350
 msgid "Next Match (Enter)"
 msgstr "Nästa träff (Retur)"
 
-#: src/window.rs:371
+#: src/window.rs:372
 #, rust-format
 msgid "Search ({shortcut})"
 msgstr "Sök ({shortcut})"
 
-#: src/window.rs:900
+#: src/window.rs:910
 #, rust-format
 msgid "Links of this kind aren't opened: {address}"
 msgstr "Länkar av det här slaget öppnas inte: {address}"
 
-#: src/window.rs:909
+#: src/window.rs:919
 #, rust-format
 msgid "Couldn't open link: {error}"
 msgstr "Kunde inte öppna länken: {error}"
 
 #. Translators: a keyboard shortcut as tooltips show it, the
 #. Control key with another.
-#: src/window.rs:960
+#: src/window.rs:970
 #, rust-format
 msgid "Ctrl+{key}"
 msgstr "Ctrl+{key}"
@@ -609,7 +613,7 @@ msgstr "av {pages}"
 
 #. Translators: follows the box with a printed page number:
 #. "iv (4 of 120)".
-#: src/window/actions.rs:511
+#: src/window/actions.rs:535
 #, rust-format
 msgid "({position} of {pages})"
 msgstr "({position} av {pages})"
@@ -645,7 +649,7 @@ msgstr "dokumentets lösenord krävs"
 msgid "{app} can't save this document correctly yet"
 msgstr "{app} kan inte spara det här dokumentet korrekt än"
 
-#: src/window/files.rs:249 src/window/pages.rs:405
+#: src/window/files.rs:249 src/window/pages.rs:423
 #, rust-format
 msgid "Couldn't open “{name}”: {error}"
 msgstr "Kunde inte öppna ”{name}”: {error}"
@@ -664,60 +668,60 @@ msgstr "”{name}” har ändrats av ett annat program. Om du läser in på nytt
 msgid "_Reload"
 msgstr "_Läs in på nytt"
 
-#: src/window/files.rs:413
+#: src/window/files.rs:415
 msgid "File Changed on Disk"
 msgstr "Filen har ändrats på disken"
 
-#: src/window/files.rs:415
+#: src/window/files.rs:417
 #, rust-format
 msgid "“{name}” was changed by another program after it was opened. Saving replaces those changes with this document."
 msgstr "”{name}” har ändrats av ett annat program efter att den öppnades. Om du sparar ersätts dessa ändringar med det här dokumentet."
 
-#: src/window/files.rs:421
+#: src/window/files.rs:423
 msgid "_Save Anyway"
 msgstr "_Spara ändå"
 
-#: src/window/files.rs:514
+#: src/window/files.rs:519
 #, rust-format
 msgid "The password was incorrect. Enter the password for “{name}”."
 msgstr "Lösenordet var felaktigt. Ange lösenordet för ”{name}”."
 
-#: src/window/files.rs:518
+#: src/window/files.rs:523
 #, rust-format
 msgid "“{name}” is protected with a password."
 msgstr "”{name}” är skyddad med ett lösenord."
 
-#: src/window/files.rs:520
+#: src/window/files.rs:525
 msgid "Password Required"
 msgstr "Lösenord krävs"
 
-#: src/window/files.rs:523
+#: src/window/files.rs:528
 msgid "_Unlock"
 msgstr "Lås _upp"
 
-#: src/window/files.rs:611
+#: src/window/files.rs:616
 #, rust-format
 msgid "Couldn't print: {error}"
 msgstr "Det gick inte att skriva ut: {error}"
 
-#: src/window/files.rs:656
+#: src/window/files.rs:661
 msgid "Save As"
 msgstr "Spara som"
 
-#: src/window/files.rs:744
+#: src/window/files.rs:749
 msgid "Save Changes?"
 msgstr "Spara ändringar?"
 
-#: src/window/files.rs:746
+#: src/window/files.rs:751
 #, rust-format
 msgid "“{name}” has unsaved changes. Changes that aren't saved will be lost."
 msgstr "”{name}” har osparade ändringar. Ändringar som inte sparas går förlorade."
 
-#: src/window/files.rs:752
+#: src/window/files.rs:757
 msgid "_Discard"
 msgstr "_Kasta"
 
-#: src/window/files.rs:774
+#: src/window/files.rs:779
 msgid "Open PDF"
 msgstr "Öppna PDF"
 
@@ -1028,15 +1032,15 @@ msgstr "Det gick inte att ta bort kommentaren: {error}"
 msgid "Couldn't copy the pages: {error}"
 msgstr "Det gick inte att kopiera sidorna: {error}"
 
-#: src/window/pages.rs:314
+#: src/window/pages.rs:332
 msgid "Insert Pages from File"
 msgstr "Infoga sidor från fil"
 
-#: src/window/pages.rs:447
+#: src/window/pages.rs:465
 msgid "Export Selected Pages"
 msgstr "Exportera markerade sidor"
 
-#: src/window/pages.rs:480
+#: src/window/pages.rs:498
 #, rust-format
 msgid "Exported {n} page to “{name}”"
 msgid_plural "Exported {n} pages to “{name}”"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 22:41\n"
+"PO-Revision-Date: 2026-11-17 23:16\n"
 "Last-Translator: \n"
 "Language-Team: Czech\n"
 "Language: cs_CZ\n"
@@ -137,127 +137,131 @@ msgstr "Dvě stránky"
 msgid "Two Pages, Continuous"
 msgstr "Dvě stránky, souvislé"
 
-#: src/main.rs:267 src/window.rs:278
+#: src/main.rs:268 src/window.rs:278
 msgid "Show Cover Page Alone"
 msgstr "Zobrazit obálku samostatně"
 
-#: src/main.rs:269 src/window.rs:295
+#: src/main.rs:269 src/window.rs:281
+msgid "Trim Margins"
+msgstr "Oříznout okraje"
+
+#: src/main.rs:272 src/window.rs:296
 msgid "Actual Size"
 msgstr "Skutečná velikost"
 
-#: src/main.rs:270 src/window.rs:293
+#: src/main.rs:273 src/window.rs:294
 msgid "Fit Width"
 msgstr "Přizpůsobit šířce"
 
-#: src/main.rs:271 src/window.rs:294
+#: src/main.rs:274 src/window.rs:295
 msgid "Fit Page"
 msgstr "Přizpůsobit stránce"
 
-#: src/main.rs:272 src/window.rs:300
+#: src/main.rs:275 src/window.rs:301
 msgid "Zoom In"
 msgstr "Přiblížit"
 
-#: src/main.rs:273 src/window.rs:301
+#: src/main.rs:276 src/window.rs:302
 msgid "Zoom Out"
 msgstr "Oddálit"
 
-#: src/main.rs:276
+#: src/main.rs:279
 msgid "Show Sidebar"
 msgstr "Zobrazit postranní panel"
 
-#: src/main.rs:277 src/window.rs:755
+#: src/main.rs:280 src/window.rs:764
 msgid "Thumbnails"
 msgstr "Miniatury"
 
-#: src/main.rs:278 src/window.rs:780
+#: src/main.rs:281 src/window.rs:789
 msgid "Contents"
 msgstr "Obsah"
 
-#: src/main.rs:279 src/window.rs:796 src/window/markup.rs:200
+#: src/main.rs:282 src/window.rs:805 src/window/markup.rs:200
 msgid "Markup"
 msgstr "Poznámky"
 
-#: src/main.rs:284
+#: src/main.rs:287
 msgid "Previous Page"
 msgstr "Předchozí stránka"
 
-#: src/main.rs:285
+#: src/main.rs:288
 msgid "Next Page"
 msgstr "Další stránka"
 
-#: src/main.rs:288
+#: src/main.rs:291
 msgid "First Page"
 msgstr "První stránka"
 
-#: src/main.rs:289
+#: src/main.rs:292
 msgid "Last Page"
 msgstr "Poslední stránka"
 
-#: src/main.rs:291
+#: src/main.rs:294
 msgid "Go to Page…"
 msgstr "Přejít na stránku…"
 
-#: src/main.rs:293
+#: src/main.rs:296
 msgid "Back"
 msgstr "Zpět"
 
-#: src/main.rs:294
+#: src/main.rs:297
 msgid "Forward"
 msgstr "Vpřed"
 
-#: src/main.rs:300 src/window.rs:226
+#: src/main.rs:303 src/window.rs:226
 msgid "Rotate Left"
 msgstr "Otočit doleva"
 
-#: src/main.rs:301 src/window.rs:227
+#: src/main.rs:304 src/window.rs:227
 msgid "Rotate Right"
 msgstr "Otočit doprava"
 
-#: src/main.rs:304
+#: src/main.rs:307
 msgid "Show Markup Toolbar"
 msgstr "Zobrazit panel nástrojů pro poznámky"
 
-#: src/main.rs:305 src/markup_list.rs:43 src/window/markup.rs:27
+#: src/main.rs:308 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
 msgstr "Zvýraznění"
 
-#: src/main.rs:306 src/markup_list.rs:44 src/window/markup.rs:28
+#: src/main.rs:309 src/markup_list.rs:44 src/window/markup.rs:28
 msgid "Underline"
 msgstr "Podtržení"
 
-#: src/main.rs:307 src/markup_list.rs:45 src/window/markup.rs:29
+#: src/main.rs:310 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
 msgstr "Přeškrtnutí"
 
-#: src/main.rs:310 src/window.rs:242
+#: src/main.rs:313 src/window.rs:242
 msgid "Highlight Form Fields"
 msgstr "Zvýraznit pole formuláře"
 
-#: src/main.rs:311 src/window.rs:245
+#: src/main.rs:314 src/window.rs:245
 msgid "Reset Form"
 msgstr "Obnovit formulář"
 
-#: src/main.rs:316
+#: src/main.rs:319
 msgid "File"
 msgstr "Soubor"
 
-#: src/main.rs:317
+#: src/main.rs:320
 msgid "Edit"
 msgstr "Úpravy"
 
-#: src/main.rs:318
+#: src/main.rs:321
 msgid "View"
 msgstr "Zobrazení"
 
-#: src/main.rs:319
+#: src/main.rs:322
 msgid "Go"
 msgstr "Přejít"
 
-#: src/main.rs:320
+#: src/main.rs:323
 msgid "Tools"
 msgstr "Nástroje"
 
-#: src/main.rs:322
+#: src/main.rs:325
 msgid "Help"
 msgstr "Nápověda"
 
@@ -502,12 +506,12 @@ msgstr "Obrázky"
 msgid "Choose a Picture of a Signature"
 msgstr "Vyberte obrázek podpisu"
 
-#: src/signatures.rs:480 src/window/files.rs:420 src/window/files.rs:522
-#: src/window/files.rs:751
+#: src/signatures.rs:480 src/window/files.rs:422 src/window/files.rs:527
+#: src/window/files.rs:756
 msgid "_Cancel"
 msgstr "_Zrušit"
 
-#: src/signatures.rs:482 src/window/files.rs:753
+#: src/signatures.rs:482 src/window/files.rs:758
 msgid "_Save"
 msgstr "_Uložit"
 
@@ -540,49 +544,49 @@ msgstr "Otevřít ({shortcut})"
 msgid "Main Menu"
 msgstr "Hlavní nabídka"
 
-#: src/window.rs:285
+#: src/window.rs:286
 msgid "Page Layout"
 msgstr "Rozvržení stránky"
 
-#: src/window.rs:306
+#: src/window.rs:307
 msgid "Zoom"
 msgstr "Přiblížení"
 
-#: src/window.rs:317
+#: src/window.rs:318
 #, rust-format
 msgid "Go to Page ({shortcut})"
 msgstr "Přejít na stránku ({shortcut})"
 
-#: src/window.rs:330
+#: src/window.rs:331
 msgid "Search"
 msgstr "Hledat"
 
-#: src/window.rs:342
+#: src/window.rs:343
 msgid "Previous Match (Shift+Enter)"
 msgstr "Předchozí shoda (Shift+Enter)"
 
-#: src/window.rs:349
+#: src/window.rs:350
 msgid "Next Match (Enter)"
 msgstr "Další shoda (Enter)"
 
-#: src/window.rs:371
+#: src/window.rs:372
 #, rust-format
 msgid "Search ({shortcut})"
 msgstr "Hledat ({shortcut})"
 
-#: src/window.rs:900
+#: src/window.rs:910
 #, rust-format
 msgid "Links of this kind aren't opened: {address}"
 msgstr "Odkazy tohoto druhu se neotevírají: {address}"
 
-#: src/window.rs:909
+#: src/window.rs:919
 #, rust-format
 msgid "Couldn't open link: {error}"
 msgstr "Odkaz se nepodařilo otevřít: {error}"
 
 #. Translators: a keyboard shortcut as tooltips show it, the
 #. Control key with another.
-#: src/window.rs:960
+#: src/window.rs:970
 #, rust-format
 msgid "Ctrl+{key}"
 msgstr "Ctrl+{key}"
@@ -613,7 +617,7 @@ msgstr "z {pages}"
 
 #. Translators: follows the box with a printed page number:
 #. "iv (4 of 120)".
-#: src/window/actions.rs:511
+#: src/window/actions.rs:535
 #, rust-format
 msgid "({position} of {pages})"
 msgstr "({position} z {pages})"
@@ -649,7 +653,7 @@ msgstr "je potřeba heslo k dokumentu"
 msgid "{app} can't save this document correctly yet"
 msgstr "{app} zatím neumí tento dokument správně uložit"
 
-#: src/window/files.rs:249 src/window/pages.rs:405
+#: src/window/files.rs:249 src/window/pages.rs:423
 #, rust-format
 msgid "Couldn't open “{name}”: {error}"
 msgstr "Soubor „{name}“ se nepodařilo otevřít: {error}"
@@ -668,60 +672,60 @@ msgstr "Soubor „{name}“ byl změněn jiným programem. Opětovným načtení
 msgid "_Reload"
 msgstr "_Znovu načíst"
 
-#: src/window/files.rs:413
+#: src/window/files.rs:415
 msgid "File Changed on Disk"
 msgstr "Soubor byl změněn na disku"
 
-#: src/window/files.rs:415
+#: src/window/files.rs:417
 #, rust-format
 msgid "“{name}” was changed by another program after it was opened. Saving replaces those changes with this document."
 msgstr "Soubor „{name}“ byl po otevření změněn jiným programem. Uložením se tyto změny nahradí tímto dokumentem."
 
-#: src/window/files.rs:421
+#: src/window/files.rs:423
 msgid "_Save Anyway"
 msgstr "_Přesto uložit"
 
-#: src/window/files.rs:514
+#: src/window/files.rs:519
 #, rust-format
 msgid "The password was incorrect. Enter the password for “{name}”."
 msgstr "Heslo bylo nesprávné. Zadejte heslo k „{name}“."
 
-#: src/window/files.rs:518
+#: src/window/files.rs:523
 #, rust-format
 msgid "“{name}” is protected with a password."
 msgstr "Soubor „{name}“ je chráněn heslem."
 
-#: src/window/files.rs:520
+#: src/window/files.rs:525
 msgid "Password Required"
 msgstr "Vyžadováno heslo"
 
-#: src/window/files.rs:523
+#: src/window/files.rs:528
 msgid "_Unlock"
 msgstr "_Odemknout"
 
-#: src/window/files.rs:611
+#: src/window/files.rs:616
 #, rust-format
 msgid "Couldn't print: {error}"
 msgstr "Tisk se nezdařil: {error}"
 
-#: src/window/files.rs:656
+#: src/window/files.rs:661
 msgid "Save As"
 msgstr "Uložit jako"
 
-#: src/window/files.rs:744
+#: src/window/files.rs:749
 msgid "Save Changes?"
 msgstr "Uložit změny?"
 
-#: src/window/files.rs:746
+#: src/window/files.rs:751
 #, rust-format
 msgid "“{name}” has unsaved changes. Changes that aren't saved will be lost."
 msgstr "Dokument „{name}“ obsahuje neuložené změny. Změny, které neuložíte, budou ztraceny."
 
-#: src/window/files.rs:752
+#: src/window/files.rs:757
 msgid "_Discard"
 msgstr "_Zahodit"
 
-#: src/window/files.rs:774
+#: src/window/files.rs:779
 msgid "Open PDF"
 msgstr "Otevřít PDF"
 
@@ -1048,15 +1052,15 @@ msgstr "Anotaci se nepodařilo smazat: {error}"
 msgid "Couldn't copy the pages: {error}"
 msgstr "Stránky se nepodařilo zkopírovat: {error}"
 
-#: src/window/pages.rs:314
+#: src/window/pages.rs:332
 msgid "Insert Pages from File"
 msgstr "Vložit stránky ze souboru"
 
-#: src/window/pages.rs:447
+#: src/window/pages.rs:465
 msgid "Export Selected Pages"
 msgstr "Exportovat vybrané stránky"
 
-#: src/window/pages.rs:480
+#: src/window/pages.rs:498
 #, rust-format
 msgid "Exported {n} page to “{name}”"
 msgid_plural "Exported {n} pages to “{name}”"
