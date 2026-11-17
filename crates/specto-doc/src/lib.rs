@@ -15,28 +15,31 @@
 //! edits are undone in the order they were made.
 
 mod annots;
+mod state;
 
 use std::collections::BTreeMap;
 use std::ops::Range;
 use std::sync::Arc;
 
+use serde::{Deserialize, Serialize};
 pub use specto_annot::AnnotType;
 pub use specto_forms::{FieldId, FieldValue};
 pub use specto_geom::Rotation;
 
 use annots::AnnotEdits;
 pub use annots::{AnnotId, PageAnnotChanges};
+pub use state::EditState;
 
 /// How many edits can be undone.
 pub const UNDO_LIMIT: usize = 100;
 
 /// One of the files a document's pages come from, as numbered by the frontend.
-#[derive(Clone, Copy, Debug, PartialEq, Eq, PartialOrd, Ord, Hash)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq, PartialOrd, Ord, Hash, Serialize, Deserialize)]
 pub struct SourceId(pub u32);
 
 /// A page of the document: page `page` of source `source`, turned by `rotation` on top of its own
 /// `/Rotate`.
-#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, Serialize, Deserialize)]
 pub struct PageRef {
     pub source: SourceId,
     pub page: u32,

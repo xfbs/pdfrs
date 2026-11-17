@@ -21,6 +21,7 @@ pub use euclid;
 pub use rotation::Rotation;
 
 use euclid::{Box2D, Point2D, Rect, Size2D, Transform2D, Vector2D};
+use serde::{Deserialize, Serialize};
 
 /// PDF user space of one page (points, y up).
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
@@ -72,7 +73,8 @@ pub type PageToPdf = Transform2D<f64, PageSpace, PdfSpace>;
 ///
 /// Points go around in order. For text they are bottom-left, bottom-right, top-right and top-left,
 /// in the text's own direction.
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Serialize, Deserialize)]
+#[serde(bound = "")]
 pub struct Quad<U> {
     pub points: [Point2D<f64, U>; 4],
 }

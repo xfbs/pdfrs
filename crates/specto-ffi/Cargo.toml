@@ -18,6 +18,7 @@ specto-geom.workspace = true
 specto-render.workspace = true
 specto-session.workspace = true
 specto-source.workspace = true
+specto-store.workspace = true
 specto-view.workspace = true
 thiserror.workspace = true
 uniffi.workspace = true

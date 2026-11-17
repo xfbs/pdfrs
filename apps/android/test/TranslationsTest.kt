@@ -8,9 +8,12 @@ import org.junit.Test
 import org.w3c.dom.Element
 
 /**
- * The translations (`res/values-<language>/strings.xml`) against the English texts: each has every
- * text and no others, with the same placeholders. A text that depends on a number may have other
+ * The translations (`res/values-<language>/strings.xml`) against the English texts: no texts that
+ * English doesn't have, and the same placeholders. A text that depends on a number may have other
  * forms than in English, as its language needs them.
+ *
+ * A translation may lack texts: Android shows the English ones in their place. New texts are
+ * added to the English file only, and come back from Crowdin with the translations.
  *
  * A placeholder lost or mistyped in a translation would otherwise only show, as a crash, when that
  * text comes up in that language.
@@ -65,13 +68,15 @@ class TranslationsTest {
     }
 
     @Test
-    fun translationsHaveEveryTextAndNoOthers() {
+    fun translationsHaveNoTextsOfTheirOwn() {
+        val names = english.keys.map { it.withoutForm() }.toSet()
         for ((language, texts) in translations) {
             // Languages differ in the plural forms they have: Russian has four, Japanese one.
+            val unknown = texts.keys.map { it.withoutForm() }.filter { it !in names }.distinct()
             assertEquals(
-                "texts of $language",
-                english.keys.map { it.withoutForm() }.distinct().sorted(),
-                texts.keys.map { it.withoutForm() }.distinct().sorted(),
+                "texts of $language that English doesn't have",
+                emptyList<String>(),
+                unknown,
             )
         }
     }

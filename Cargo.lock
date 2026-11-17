@@ -583,6 +583,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f1a05365e3b1c6d1650318537c7460c6923f1abdd272ad6842baa2b509957a06"
 dependencies = [
  "num-traits",
+ "serde",
 ]
 
 [[package]]
@@ -2084,6 +2085,9 @@ checksum = "e8e2fb0f499abb4d162f2bedad68f5ef91a1682b5a03596ddb67efd37768d100"
 name = "specto-annot"
 version = "0.1.0"
 dependencies = [
+ "serde",
+ "serde_json",
+ "sha2",
  "specto-geom",
  "specto-source",
 ]
@@ -2129,6 +2133,8 @@ dependencies = [
 name = "specto-doc"
 version = "0.1.0"
 dependencies = [
+ "serde",
+ "serde_json",
  "specto-annot",
  "specto-forms",
  "specto-geom",
@@ -2147,6 +2153,7 @@ dependencies = [
  "specto-render",
  "specto-session",
  "specto-source",
+ "specto-store",
  "specto-view",
  "thiserror 2.0.21",
  "uniffi",
@@ -2156,6 +2163,7 @@ dependencies = [
 name = "specto-forms"
 version = "0.1.0"
 dependencies = [
+ "serde",
  "specto-annot",
  "specto-geom",
  "specto-source",
@@ -2166,6 +2174,7 @@ name = "specto-geom"
 version = "0.1.0"
 dependencies = [
  "euclid",
+ "serde",
 ]
 
 [[package]]
@@ -2192,6 +2201,7 @@ dependencies = [
  "specto-text",
  "specto-view",
  "specto-write",
+ "thiserror 2.0.21",
 ]
 
 [[package]]
@@ -2200,7 +2210,25 @@ version = "0.1.0"
 dependencies = [
  "hayro-syntax",
  "memmap2",
+ "serde",
  "specto-geom",
+ "thiserror 2.0.21",
+]
+
+[[package]]
+name = "specto-store"
+version = "0.1.0"
+dependencies = [
+ "image",
+ "serde",
+ "serde_json",
+ "sha2",
+ "specto-annot",
+ "specto-doc",
+ "specto-geom",
+ "specto-session",
+ "specto-source",
+ "tempfile",
  "thiserror 2.0.21",
 ]
 

@@ -1,7 +1,11 @@
 use std::ops::Add;
 
+use serde::{Deserialize, Serialize};
+
 /// Clockwise page rotation for display, in quarter turns.
-#[derive(Clone, Copy, Debug, Default, PartialEq, Eq, Hash, PartialOrd, Ord)]
+#[derive(
+    Clone, Copy, Debug, Default, PartialEq, Eq, Hash, PartialOrd, Ord, Serialize, Deserialize,
+)]
 pub enum Rotation {
     #[default]
     None,

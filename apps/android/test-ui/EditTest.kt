@@ -446,6 +446,43 @@ class EditTest : AppTest() {
     }
 
     @Test
+    fun unsavedEditsOutliveTheApp() {
+        openPages()
+        edit()
+        // The system ends the activity in the background and brings it back.
+        scenario!!.recreate()
+        waitForText("Edited")
+        compose.onNodeWithText("pages.pdf").assertIsDisplayed()
+        // The edits are back, but not how they came about.
+        compose.onNodeWithContentDescription("More").performClick()
+        compose.onAllNodesWithText("Undo rotate").assertCountEquals(0)
+        Espresso.pressBack()
+        menu("Properties")
+        waitForText("210 × 297 mm (A4); other pages differ")
+        compose.onNodeWithText("Close").performClick()
+
+        // Also when the document is opened anew.
+        reopen("pages.pdf")
+        waitForText("Edited")
+
+        // Until they are discarded, which is asked first.
+        menu("Discard changes")
+        waitForText("Discard changes?")
+        compose.onNodeWithText("Cancel").performClick()
+        compose.onNodeWithText("Edited").assertIsDisplayed()
+        menu("Discard changes")
+        compose.onNodeWithText("Discard").performClick()
+        waitUntilGone("Edited")
+        menu("Properties")
+        waitForText("210 × 297 mm (A4)")
+        assertTrue(!shown("210 × 297 mm (A4); other pages differ"))
+        compose.onNodeWithText("Close").performClick()
+        reopen("pages.pdf")
+        waitForText("1 / 12")
+        assertTrue(!shown("Edited"))
+    }
+
+    @Test
     fun withoutEditsNothingIsAsked() {
         openPages()
         menu("Close")

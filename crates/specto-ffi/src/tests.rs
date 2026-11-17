@@ -2025,3 +2025,42 @@ fn hot_path_matches_the_uniffi_one() {
     assert!(!hot::scroll_by(id, 0.0, 1.0));
     assert_eq!(hot::frame(id, &mut buf), 0);
 }
+
+#[test]
+fn a_draft_outlives_the_session() {
+    let dir = std::env::temp_dir().join(format!("specto-ffi-drafts-{}", std::process::id()));
+    let store = DraftStore::open(dir.to_string_lossy().into_owned()).unwrap();
+    let (tx, _rx) = mpsc::channel();
+    let listener = Arc::new(Listener(Mutex::new(tx)));
+    let open = || ViewSession::open(book_pdf(), None, 64 << 20, listener.clone()).unwrap();
+
+    let session = open();
+    // Nothing to keep yet.
+    assert!(!session.keep_draft(&store, "book".into()).unwrap());
+    assert!(session.rotate_pages(vec![0], true));
+    assert!(session.delete_pages(vec![1]));
+    assert!(session.keep_draft(&store, "book".into()).unwrap());
+
+    let again = open();
+    assert!(!again.restore_draft(&store, "other".into()).unwrap());
+    assert!(again.restore_draft(&store, "book".into()).unwrap());
+    assert_eq!(again.page_count(), 3);
+    let first = again.page_sizes()[0];
+    assert_eq!((first.width, first.height), (300.0, 200.0));
+    let state = again.edit_state();
+    assert!(state.modified && state.undo.is_none());
+
+    // Undone, there is nothing to keep, and the draft goes.
+    assert!(session.undo().is_some());
+    assert!(session.undo().is_some());
+    assert!(!session.keep_draft(&store, "book".into()).unwrap());
+    assert!(!open().restore_draft(&store, "book".into()).unwrap());
+
+    // One that doesn't fit the file is deleted.
+    assert!(session.delete_pages(vec![0, 1, 2]));
+    assert!(session.keep_draft(&store, "book".into()).unwrap());
+    let short = ViewSession::open(sample_pdf(1), None, 1 << 20, listener.clone()).unwrap();
+    assert!(short.restore_draft(&store, "book".into()).is_err());
+    assert!(!open().restore_draft(&store, "book".into()).unwrap());
+    std::fs::remove_dir_all(dir).unwrap();
+}

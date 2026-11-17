@@ -8,8 +8,10 @@ graph TD
     desktop([Desktop app]) --> session
     android([Android app]) --> ffi
     ffi[specto-ffi] --> session
+    ffi --> store
     session[specto-session] --> view
     session --> write
+    store[specto-store] --> session
     view[specto-view] --> render
     view --> text
     write[specto-write] --> doc
@@ -75,6 +77,11 @@ Saves an edited document as a new PDF, with lopdf.
 
 An open document as the apps hold it: the files, the edited pages, the viewer,
 the text, the selection and the search. It ties the other crates together.
+
+## specto-store
+
+What the apps keep on disk between runs: drafts of documents with unsaved
+edits, and the images of stamps they use.
 
 ## specto-ffi
 

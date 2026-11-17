@@ -28,6 +28,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import uniffi.specto_ffi.Activated
 import uniffi.specto_ffi.DocumentInfo
+import uniffi.specto_ffi.DraftStore
 import uniffi.specto_ffi.EditState
 import uniffi.specto_ffi.FieldTap
 import uniffi.specto_ffi.Markup
@@ -317,6 +318,30 @@ class PdfViewState(
             selectedPages = emptySet()
             pagesChanged()
         }
+    }
+
+    /**
+     * Keeps the unsaved edits in [drafts] as the draft of [key] (the document's key in the
+     * [DocumentStore]), or deletes the draft if there are none.
+     *
+     * For when the app goes into the background, where the system may end it. Throws
+     * `PdfException` if the draft can't be written.
+     */
+    fun keepDraft(drafts: DraftStore, key: String) {
+        if (closed) return
+        session.keepDraft(drafts, key)
+    }
+
+    /**
+     * Takes over the draft of [key] in [drafts], if there is one: the edits are back, with nothing
+     * to undo. Returns whether there was one.
+     *
+     * Throws `PdfException` if there was one that can't be taken over, which is deleted then.
+     */
+    fun restoreDraft(drafts: DraftStore, key: String): Boolean {
+        if (closed || !session.restoreDraft(drafts, key)) return false
+        pagesChanged()
+        return true
     }
 
     /** Positions changed: reads again what goes by them. */

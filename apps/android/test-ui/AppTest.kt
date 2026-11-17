@@ -96,9 +96,10 @@ abstract class AppTest {
 
     @Before
     fun forgetEverything() {
-        // No reading positions, recents, settings or crashes from earlier tests.
+        // No reading positions, recents, drafts, settings or crashes from earlier tests.
         val target = instrumentation.targetContext
         File(target.filesDir, "documents.json").delete()
+        File(target.filesDir, "store").deleteRecursively()
         File(target.filesDir, SpectoApp.CRASH_LOG_FILE).delete()
         target.getSharedPreferences("settings", Context.MODE_PRIVATE).edit().clear().commit()
     }

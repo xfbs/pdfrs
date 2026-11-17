@@ -16,6 +16,7 @@ specto-source.workspace = true
 specto-text.workspace = true
 specto-view.workspace = true
 specto-write.workspace = true
+thiserror.workspace = true
 
 [lints]
 workspace = true

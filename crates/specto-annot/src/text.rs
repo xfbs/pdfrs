@@ -7,7 +7,9 @@
 //! same on screen and in the file.
 
 /// A family of fonts.
-#[derive(Clone, Copy, Debug, Default, PartialEq, Eq, Hash)]
+#[derive(
+    Clone, Copy, Debug, Default, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize,
+)]
 pub enum FontFamily {
     /// Helvetica.
     #[default]
@@ -19,7 +21,9 @@ pub enum FontFamily {
 }
 
 /// The font of a text box: one of the twelve that need no embedding.
-#[derive(Clone, Copy, Debug, Default, PartialEq, Eq, Hash)]
+#[derive(
+    Clone, Copy, Debug, Default, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize,
+)]
 pub struct TextFont {
     pub family: FontFamily,
     pub bold: bool,

@@ -1,0 +1,25 @@
+[package]
+name = "specto-store"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "What the Specto apps keep on disk: drafts of unsaved edits, and the images they use"
+
+[dependencies]
+image.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+specto-annot.workspace = true
+specto-doc.workspace = true
+specto-session.workspace = true
+specto-source.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+specto-geom.workspace = true
+tempfile.workspace = true
+
+[lints]
+workspace = true

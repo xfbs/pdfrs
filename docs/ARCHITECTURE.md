@@ -369,6 +369,31 @@ identically, both unchanged and with pages reversed and rotated. The other 11
 are refused, nearly all of them damaged files that lopdf can't read. None is
 written damaged.
 
+## Drafts
+
+Unsaved edits are kept on disk as a draft, so that they are back when the
+document is next opened after the app was ended. A draft holds what was done
+and not the history of how: the page list, the annotation edits and what was
+filled into the form. Undo starts afresh from there. The files pages were
+inserted from are kept with it.
+
+The edit model is serialized with serde, as JSON. The store (specto-store) is a
+directory with a directory for each draft, named by a digest of its key, and
+the images of stamps, named by a digest of their pixels and kept once however
+many drafts use them. Each file is written beside its place and renamed into
+it. Drafts that weren't written or opened for a while, and the images no draft
+names, are deleted.
+
+The key names the document and the fingerprint says which file the draft was
+made of: a draft of a file that changed since is not used. A document with a
+password gets no draft, as it would keep what was typed into it unprotected.
+
+An app update ends the app, often with a draft waiting, so later versions read
+the drafts of earlier ones. The edits are stored in a variant of an enum for
+each format. A change to the edit model that old drafts can't be read as adds a
+variant, with the types as they were and a conversion, and a test reads a
+stored draft of every format there was.
+
 ## Frontends
 
 ### Desktop
@@ -402,6 +427,11 @@ The Android app is written in Kotlin with Jetpack Compose.
   over the thumbnails.
 - Files are opened and saved through the Storage Access Framework. Saving
   writes to a file in the app's cache first and copies it from there.
+- Unsaved edits are kept as a draft whenever the app goes into the background
+  or the document is closed, under the key the app knows the document by,
+  which is a digest of its content. Opening the document takes the draft over.
+  The activity keeps which document was open, so it comes back after Android
+  ended the app.
 - Printing hands the system's print service a copy of the document without
   password protection, because the service prints PDFs itself and can't be
   given a password.

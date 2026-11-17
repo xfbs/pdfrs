@@ -18,7 +18,9 @@ use specto_geom::PdfBox;
 pub use import::fields;
 
 /// Names a field: the number and generation of its dictionary's object in the file.
-#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord)]
+#[derive(
+    Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord, serde::Serialize, serde::Deserialize,
+)]
 pub struct FieldId(pub u32, pub u16);
 
 /// What kind of field it is.
@@ -68,7 +70,7 @@ pub struct ChoiceOption {
 }
 
 /// What a field holds.
-#[derive(Clone, Debug, PartialEq, Eq)]
+#[derive(Clone, Debug, PartialEq, Eq, serde::Serialize, serde::Deserialize)]
 pub enum FieldValue {
     /// The text of a text field, or the value of the option chosen in a choice field.
     Text(String),

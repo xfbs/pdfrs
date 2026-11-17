@@ -15,6 +15,7 @@
 //! the cache bookkeeping lives in Rust, and [`Frame::evicted`] tells Kotlin which bitmaps to drop.
 
 pub mod crash;
+mod drafts;
 pub mod hot;
 #[cfg(target_os = "android")]
 mod jni;
@@ -39,6 +40,7 @@ use specto_view::{
     Granularity, Selection, Settings, TextPages, over_text, text_char, text_position, text_quads,
 };
 
+pub use drafts::DraftStore;
 use tiles::TileBook;
 
 uniffi::setup_scaffolding!();

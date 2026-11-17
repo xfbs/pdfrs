@@ -210,8 +210,20 @@ Use a PDF with a form, such as a tax or application form.
 - With unsaved edits, choose Close, or Open and pick a file, or open a PDF from
   another app: "Save changes?" appears. Save saves and then goes on, Discard
   goes on without saving, and Cancel stays. Without edits, nothing is asked.
-- Edit, leave the app, and come back later: the edits are still there, unless
-  Android ended the app in the meantime.
+- Edit, leave the app, and come back later: the edits are still there. Also
+  when Android ended the app in the meantime, with "Don't keep activities" in
+  the developer options or with the command below: it comes back with the same
+  document and its edits, and nothing to undo.
+
+  ```sh
+  # Ends the app in the background, as Android does when it needs the memory.
+  adb shell am kill net.xfbs.specto
+  ```
+- Edit, close the document with Discard, and open it again: no edits.
+- Edit, then choose Discard changes in the overflow menu: it asks, and then the
+  document is as the file is, without "Edited".
+- Edit a document that has a password and leave the app until Android ends it:
+  the edits are gone.
 
 ### Sharing and printing
 

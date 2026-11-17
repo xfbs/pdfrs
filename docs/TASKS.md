@@ -156,6 +156,10 @@ point to [DECISIONS.md](DECISIONS.md).
   two merged files.
 - [ ] Android: notice a changed file when the app resumes, and reload or ask,
   like the desktop.
+- [ ] Desktop: unsaved edits kept as a draft with the shared store, as on
+  Android, and the saved signatures moved into its images.
+- [ ] Draft follow-ups: the undo history in drafts, and a mark on the start
+  screen for documents with unsaved edits.
 - [ ] A memory-mapped file that another program truncates in place crashes the
   app when the missing part is read. Programs that save by renaming, as most
   do, are safe. See the task on mapped files that shrink in M7.
@@ -291,6 +295,7 @@ point to [DECISIONS.md](DECISIONS.md).
 - [x] Setting: keep the screen on while reading
 - [x] Setting: volume keys turn pages
 - [x] ktlint formats the Kotlin code and checks it in CI
+- [x] Unsaved edits kept as a draft, back after Android ended the app
 - [ ] Pages of other files through the FFI, when the app gets a way to ask for
   them.
 - [ ] Find out what Preview does with the zoom when turning a page while zoomed
@@ -301,9 +306,6 @@ point to [DECISIONS.md](DECISIONS.md).
   after a page turn (30 ms at the 99th percentile, against 12 ms in full
   screen).
 - [ ] The page number in the top bar on tablets, as on the desktop.
-- [ ] Unsaved edits should survive the app being ended in the background. Keep
-  the edited page list in the document store and offer it again when the
-  document is next opened.
 - [ ] Page organizer follow-ups: thumbnails that make room while pages are
   dragged over them, Undo offered right after a delete, and dragging pages out
   to another app or in from one.

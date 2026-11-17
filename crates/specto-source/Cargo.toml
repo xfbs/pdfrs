@@ -9,6 +9,7 @@ description = "Read access to PDF structure for Specto: opening, metadata, outli
 [dependencies]
 hayro-syntax = "0.9"
 memmap2 = "0.9"
+serde.workspace = true
 specto-geom.workspace = true
 thiserror.workspace = true
 

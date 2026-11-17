@@ -105,7 +105,7 @@ fn trailer(data: &[u8]) -> Option<Dict<'_>> {
 
 /// A date and time as a document states it: on the clock of wherever it was written, with that
 /// place's offset from UTC.
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq, serde::Serialize, serde::Deserialize)]
 pub struct Date {
     pub year: u16,
     pub month: u8,

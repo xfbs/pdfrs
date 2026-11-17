@@ -7,9 +7,13 @@ license.workspace = true
 description = "The edit model of Specto: the pages and annotations of a document being edited, with undo and redo"
 
 [dependencies]
+serde.workspace = true
 specto-annot.workspace = true
 specto-forms.workspace = true
 specto-geom.workspace = true
+
+[dev-dependencies]
+serde_json.workspace = true
 
 [lints]
 workspace = true

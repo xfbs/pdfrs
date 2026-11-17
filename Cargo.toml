@@ -22,6 +22,7 @@ specto-doc = { path = "crates/specto-doc", version = "0.1.0" }
 specto-forms = { path = "crates/specto-forms", version = "0.1.0" }
 specto-session = { path = "crates/specto-session", version = "0.1.0" }
 specto-write = { path = "crates/specto-write", version = "0.1.0" }
+specto-store = { path = "crates/specto-store", version = "0.1.0" }
 hayro = "0.9"
 anyhow = "1"
 thiserror = "2"
@@ -30,6 +31,11 @@ clap = { version = "4", features = ["derive"] }
 # PNG only, which keeps the decoders of other image formats out of the build.
 image = { version = "0.25", default-features = false, features = ["png"] }
 wait-timeout = "0.2"
+# "rc" for the shared annotations of the edit model, which drafts store.
+serde = { version = "1", features = ["derive", "rc"] }
+serde_json = "1"
+sha2 = "0.11"
+tempfile = "3"
 libc = "0.2"
 
 [workspace.lints.rust]

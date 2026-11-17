@@ -39,6 +39,7 @@
     <string name="menu_properties">Properties</string>
     <string name="menu_highlight_fields">Highlight form fields</string>
     <string name="menu_reset_form">Reset form</string>
+    <string name="menu_discard_changes">Discard changes</string>
     <string name="menu_settings">Settings</string>
     <!-- Closes the document and returns to the start screen. -->
     <string name="menu_close">Close</string>
@@ -173,10 +174,13 @@
     <string name="delete_pages">Delete pages</string>
     <string name="unsaved_title">Save changes?</string>
     <string name="unsaved_text">The changes to the pages of %1$s are lost unless you save them.</string>
+    <string name="discard_title">Discard changes?</string>
+    <string name="discard_text">The changes to %1$s since it was last saved will be lost.</string>
     <string name="saving">Saving…</string>
     <!-- With what went wrong, as the system or the PDF library put it (in English). -->
     <string name="could_not_save">Couldn\'t save: %1$s</string>
     <string name="could_not_save_there">Couldn\'t save there. This is the edited copy.</string>
+    <string name="draft_not_restored">The unsaved changes to %1$s couldn\'t be restored.</string>
 
     <!-- Sharing and printing. -->
     <string name="could_not_share">Couldn\'t share this file</string>

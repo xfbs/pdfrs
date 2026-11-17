@@ -161,6 +161,26 @@ fun UnsavedChangesDialog(
 }
 
 /**
+ * Asks whether to let go of the unsaved changes to the document [name], which can't be undone.
+ *
+ * [onDiscard] lets go of them, [onCancel] keeps them.
+ */
+@Composable
+fun DiscardChangesDialog(name: String, onDiscard: () -> Unit, onCancel: () -> Unit) {
+    AlertDialog(
+        onDismissRequest = onCancel,
+        title = { Text(stringResource(R.string.discard_title)) },
+        text = { Text(stringResource(R.string.discard_text, name)) },
+        confirmButton = {
+            TextButton(onClick = onDiscard) { Text(stringResource(R.string.discard)) }
+        },
+        dismissButton = {
+            TextButton(onClick = onCancel) { Text(stringResource(R.string.cancel)) }
+        },
+    )
+}
+
+/**
  * Says [what] the app is busy with (writing the document, say). Nothing else can be done meanwhile.
  */
 @Composable

@@ -1910,3 +1910,48 @@ fn resetting_a_form() {
     assert!(!plain.reset_form(&scheduler));
     plain.close(&scheduler);
 }
+
+#[test]
+fn a_draft_brings_the_edits_back() {
+    use specto_annot::{Color, MarkupStyle};
+    use specto_session::RestoreError;
+
+    let scheduler = Scheduler::new(1, || {});
+    let mut session = open(&scheduler, book(3, "alpha"));
+    let (other, _) = session
+        .add_source(&scheduler, book(2, "beta").into(), None)
+        .unwrap();
+    // A file that is opened but no longer has pages in the document isn't kept.
+    let (unused, _) = session
+        .add_source(&scheduler, book(1, "gamma").into(), None)
+        .unwrap();
+    session.insert(3, &[unused]);
+    session.delete(&[3]);
+    session.insert(1, &[other]);
+    session.rotate(&[0], Rotation::Cw90);
+    session.selection = Some(Selection::all(1));
+    assert!(session.mark_selection(MarkupStyle::Highlight, Color::new(1.0, 0.9, 0.0)));
+    let draft = session.draft().unwrap();
+    assert_eq!(draft.files.len(), 1);
+
+    let mut again = open(&scheduler, book(3, "alpha"));
+    again.restore(&scheduler, draft.clone()).unwrap();
+    assert_eq!(all_text(&mut again), all_text(&mut session));
+    assert_eq!(again.edit().pages()[0].rotation, Rotation::Cw90);
+    assert_eq!(again.annotations(0).len(), 1);
+    assert!(again.edit().is_modified());
+    assert_eq!(again.edit().undo_edit(), None);
+
+    // Not into a file that lacks the pages.
+    let mut short = open(&scheduler, book(1, "alpha"));
+    assert!(matches!(
+        short.restore(&scheduler, draft),
+        Err(RestoreError::Mismatch)
+    ));
+    assert_eq!(short.viewer.page_count(), 1);
+    assert!(!short.edit().is_modified());
+
+    for s in [&mut session, &mut again, &mut short] {
+        s.close(&scheduler);
+    }
+}

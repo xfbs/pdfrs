@@ -235,8 +235,14 @@ document is saved.
   one that is open, at the same place
 - Leaving a document with unsaved edits asks "Save changes?", with Save (or
   Save as), Discard and Cancel
-- Unsaved edits last as long as the app does. If Android ends the app in the
-  background, the document is back as it was last saved
+- Unsaved edits outlast the app. They are kept on the device whenever the app
+  goes into the background, and if Android ends it meanwhile, the document is
+  open again with its edits when the app comes back. The same happens when the
+  document is next opened in any other way. There is nothing to undo then
+- Discard changes in the overflow menu, while there are unsaved edits, goes
+  back to the file as it is, after asking
+- Unsaved edits that weren't looked at for 30 days are deleted. So are those of
+  a file that changed, and a document with a password keeps none
 
 ## Sharing
 
@@ -346,5 +352,4 @@ the whole app and are kept across launches.
 ## Not yet
 
 - Inserting pages from other files
-- Keeping unsaved edits when Android ends the app
 - Other annotations (notes, drawings, text boxes), and choosing a mark's color

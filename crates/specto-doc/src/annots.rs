@@ -12,7 +12,8 @@
 use std::collections::BTreeMap;
 use std::sync::Arc;
 
-use specto_annot::{Annotation, Origin};
+use serde::{Deserialize, Serialize};
+use specto_annot::{AnnotKind, Annotation, Origin, StampArt, StampImage};
 
 use crate::{Edit, EditDoc, SourceId};
 
@@ -31,16 +32,17 @@ pub enum AnnotId {
 }
 
 /// What was done to the annotations, relative to the files.
-#[derive(Clone, Debug, Default)]
+#[derive(Clone, Debug, Default, Serialize, Deserialize)]
 pub(crate) struct AnnotEdits {
     /// Annotations of the files that are deleted or changed, by source, page and index.
+    #[serde(with = "crate::state::pairs")]
     changed: BTreeMap<(SourceId, u32, u32), Changed>,
     /// New ones, in the order they were made (later ones lie on top).
     added: Vec<Added>,
 }
 
 /// What became of an annotation of a file.
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, Serialize, Deserialize)]
 struct Changed {
     /// Where the file has it, with its object number: saving checks that it finds the same
     /// annotation there.
@@ -49,7 +51,7 @@ struct Changed {
     to: Option<Arc<Annotation>>,
 }
 
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, Serialize, Deserialize)]
 struct Added {
     id: u64,
     source: SourceId,
@@ -297,5 +299,38 @@ fn origin_fits(id: AnnotId, annotation: &Annotation) -> bool {
     match id {
         AnnotId::File { index, .. } => annotation.origin.is_some_and(|o| o.index == index),
         AnnotId::New(_) => true,
+    }
+}
+
+impl AnnotEdits {
+    /// Gives each source the number `new` has for it, and drops what was done on pages of sources
+    /// it has none for.
+    pub(crate) fn renumber_sources(&mut self, new: impl Fn(SourceId) -> Option<SourceId>) {
+        self.changed = std::mem::take(&mut self.changed)
+            .into_iter()
+            .filter_map(|((source, page, index), c)| Some(((new(source)?, page, index), c)))
+            .collect();
+        self.added.retain_mut(|a| match new(a.source) {
+            Some(source) => {
+                a.source = source;
+                true
+            }
+            None => false,
+        });
+    }
+
+    /// The images of the stamps among the annotations, each once.
+    pub(crate) fn stamp_images(&self) -> Vec<Arc<StampImage>> {
+        let annotations = (self.changed.values().filter_map(|c| c.to.as_ref()))
+            .chain(self.added.iter().map(|a| &a.annotation));
+        let mut images: Vec<Arc<StampImage>> = Vec::new();
+        for a in annotations {
+            if let AnnotKind::Stamp(StampArt::Image(image)) = &a.kind
+                && !images.iter().any(|i| Arc::ptr_eq(i, image) || i == image)
+            {
+                images.push(image.clone());
+            }
+        }
+        images
     }
 }

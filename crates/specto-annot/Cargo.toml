@@ -7,8 +7,13 @@ license.workspace = true
 description = "Annotations in Specto: the model, reading the ones a PDF already has, and how they are drawn"
 
 [dependencies]
+serde.workspace = true
+sha2.workspace = true
 specto-geom.workspace = true
 specto-source.workspace = true
+
+[dev-dependencies]
+serde_json.workspace = true
 
 [lints]
 workspace = true

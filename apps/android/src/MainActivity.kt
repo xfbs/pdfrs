@@ -14,6 +14,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.provider.OpenableColumns
+import android.util.Log
 import android.view.KeyEvent
 import android.view.WindowManager
 import android.widget.Toast
@@ -110,6 +111,7 @@ import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import java.io.File
+import kotlin.concurrent.thread
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -118,6 +120,7 @@ import kotlinx.coroutines.flow.drop
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import uniffi.specto_ffi.Activated
+import uniffi.specto_ffi.DraftStore
 import uniffi.specto_ffi.PdfException
 import uniffi.specto_ffi.PdfFile
 
@@ -129,6 +132,7 @@ class MainActivity : ComponentActivity() {
     private var incoming by mutableStateOf<Uri?>(null)
     private var current: Loaded.Ready? = null
     private lateinit var store: DocumentStore
+    private lateinit var drafts: DraftStore
     private lateinit var settings: AppSettings
 
     /**
@@ -145,8 +149,15 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         store = DocumentStore(File(filesDir, "documents.json"))
+        drafts = DraftStore.open(File(filesDir, "store").path)
+        thread { runCatching { drafts.prune(DRAFT_DAYS.toUInt()) } }
         settings = AppSettings(getSharedPreferences("settings", Context.MODE_PRIVATE))
-        document = intent.viewedDocument()
+        // After the system ended the app in the background: the document that was open.
+        document = if (savedInstanceState == null) {
+            intent.viewedDocument()
+        } else {
+            savedInstanceState.getString(OPEN_DOCUMENT)?.let(Uri::parse)
+        }
         setContent {
             // Also when the switch itself is flipped.
             val keepScreenOn = settings.keepScreenOn
@@ -155,6 +166,7 @@ class MainActivity : ComponentActivity() {
                 App(
                     document = document,
                     store = store,
+                    drafts = drafts,
                     settings = settings,
                     crashLog = (application as SpectoApp).crashLog,
                     onDocument = { document = it },
@@ -222,8 +234,21 @@ class MainActivity : ComponentActivity() {
 
     override fun onStop() {
         super.onStop()
-        // The app may not come back: remember where the reader is.
-        current?.let { store.saveView(it.key, it.state.savedView(), it.state.sidebarOpen) }
+        // The app may not come back: remember where the reader is, and what isn't saved yet.
+        current?.let {
+            store.saveView(it.key, it.state.savedView(), it.state.sidebarOpen)
+            it.keepDraft(drafts)
+        }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        // Only where the app can still read it then: from the start screen, or from the intent
+        // the activity comes back with.
+        val reachable = document?.takeIf {
+            it.scheme == "file" || it.toString() in store.reopenable() || it == intent.data
+        }
+        outState.putString(OPEN_DOCUMENT, reachable?.toString())
     }
 
     override fun onConfigurationChanged(newConfig: Configuration) {
@@ -247,6 +272,12 @@ class MainActivity : ComponentActivity() {
 }
 
 private fun Intent.viewedDocument(): Uri? = data.takeIf { action == Intent.ACTION_VIEW }
+
+/** Names the open document in the state the activity keeps when the system ends the app. */
+private const val OPEN_DOCUMENT = "document"
+
+/** How long a draft of unsaved edits is kept without the document being opened. */
+private const val DRAFT_DAYS = 30
 
 /**
  * Follows the system: dark or light, and on Android 12+ the colors derived from the wallpaper.
@@ -331,6 +362,30 @@ private sealed interface Loaded {
         // Both change when the document is saved over its file.
         var key: String = key
         var bytes: Long by mutableStateOf(bytes)
+
+        /**
+         * Whether unsaved edits are kept as a draft when the document is closed: not once they are
+         * discarded, or saved somewhere else.
+         */
+        var keepsDraft = true
+
+        /**
+         * Keeps the unsaved edits in [drafts] for when the document is opened again, or deletes
+         * the draft if there are none to keep.
+         */
+        fun keepDraft(drafts: DraftStore) {
+            try {
+                if (keepsDraft) state.keepDraft(drafts, key) else drafts.delete(key)
+            } catch (e: PdfException) {
+                Log.w("specto", "the draft of $name can't be kept", e)
+            }
+        }
+
+        /** Lets the unsaved edits go: the document is closed without a draft. */
+        fun dropDraft(drafts: DraftStore) {
+            keepsDraft = false
+            keepDraft(drafts)
+        }
     }
 
     /** Keeps the [file], so that trying a password doesn't read it again. */
@@ -420,6 +475,7 @@ private suspend fun Context.open(
     uri: Uri,
     password: String?,
     store: DocumentStore,
+    drafts: DraftStore,
 ): Loaded {
     val opened = try {
         val cacheBytes = tileCacheBytes()
@@ -433,6 +489,17 @@ private suspend fun Context.open(
         val wide = resources.configuration.screenWidthDp >= WIDE_WINDOW_DP
         val state = withContext(Dispatchers.Default) {
             PdfViewState(file, password, cacheBytes, known?.view, wide, known?.sidebar ?: true)
+        }
+        // Edits that weren't saved when the app was last ended are back, without asking.
+        try {
+            withContext(Dispatchers.IO) { state.restoreDraft(drafts, key) }
+        } catch (e: PdfException) {
+            Log.w("specto", "the draft of $name can't be restored", e)
+            Toast.makeText(
+                this,
+                getString(R.string.draft_not_restored, name),
+                Toast.LENGTH_LONG,
+            ).show()
         }
         store.opened(key, name, uri.toString().takeIf { canReopen(uri) }, state.pageCount)
         releaseUnused(store)
@@ -451,6 +518,7 @@ private suspend fun Context.open(
 private fun App(
     document: Uri?,
     store: DocumentStore,
+    drafts: DraftStore,
     settings: AppSettings,
     crashLog: CrashLog,
     onDocument: (Uri?) -> Unit,
@@ -477,6 +545,8 @@ private fun App(
     var saving by remember { mutableStateOf(false) }
     // The copy for the print service is being written.
     var preparingToPrint by remember { mutableStateOf(false) }
+    // "Discard changes" asks first.
+    var discarding by remember { mutableStateOf(false) }
 
     /** Shows [next] (null: the start screen) instead, asking first if edits would be lost. */
     fun leaveFor(next: Uri?) {
@@ -515,6 +585,7 @@ private fun App(
     fun show(next: Loaded?) {
         (loaded as? Loaded.Ready)?.let {
             store.saveView(it.key, it.state.savedView(), it.state.sidebarOpen)
+            it.keepDraft(drafts)
             it.state.close()
         }
         loaded = next
@@ -532,7 +603,7 @@ private fun App(
             try {
                 val name = context.displayName(document)
                 val file = withContext(Dispatchers.IO) { context.pdfFile(document) }
-                context.open(file, name, document, password = null, store)
+                context.open(file, name, document, password = null, store, drafts)
             } catch (e: Exception) {
                 // Moved, deleted, or the permission to read it is gone.
                 store.unreachable(document.toString())
@@ -570,10 +641,13 @@ private fun App(
                 } catch (e: Exception) {
                     if (!open.mapped) throw e
                     // Nothing is open any more, but what was written is.
+                    open.dropDraft(drafts)
                     Toast.makeText(context, R.string.could_not_save_there, Toast.LENGTH_LONG).show()
                     onDocument(Uri.fromFile(written))
                     return@launch
                 }
+                // The edits are in the file written. The one opened stays as it is on disk.
+                open.dropDraft(drafts)
                 // The saved file is a new document to the store: it starts out where this one is.
                 val key = withContext(Dispatchers.IO) { written.fingerprint() }
                 store.opened(
@@ -681,6 +755,8 @@ private fun App(
                     open.state.pageCount,
                 )
                 store.saveView(key, open.state.savedView(), open.state.sidebarOpen)
+                // The file it was a draft of is gone.
+                drafts.delete(open.key)
                 open.key = key
                 open.bytes = size
                 then?.invoke()
@@ -901,6 +977,17 @@ private fun App(
                                             saveAs(ready.name)
                                         },
                                     )
+                                    if (ready.state.editState.modified) {
+                                        DropdownMenuItem(
+                                            text = {
+                                                Text(stringResource(R.string.menu_discard_changes))
+                                            },
+                                            onClick = {
+                                                menu = false
+                                                discarding = true
+                                            },
+                                        )
+                                    }
                                     val edits = ready.state.editState
                                     edits.undo?.let { step ->
                                         DropdownMenuItem(
@@ -1038,7 +1125,16 @@ private fun App(
                             onPassword = { password ->
                                 loaded = Loaded.Loading
                                 scope.launch {
-                                    show(context.open(l.file, l.name, l.uri, password, store))
+                                    show(
+                                        context.open(
+                                            l.file,
+                                            l.name,
+                                            l.uri,
+                                            password,
+                                            store,
+                                            drafts,
+                                        ),
+                                    )
                                 }
                             },
                         )
@@ -1192,11 +1288,24 @@ private fun App(
                 },
                 onDiscard = {
                     leaving = null
+                    ready.dropDraft(drafts)
                     onDocument(asked.to)
                 },
                 onCancel = { leaving = null },
             )
         }
+    }
+    if (discarding && ready != null) {
+        DiscardChangesDialog(
+            ready.name,
+            onDiscard = {
+                discarding = false
+                // Read afresh from the file, as it is on disk.
+                ready.dropDraft(drafts)
+                reloads++
+            },
+            onCancel = { discarding = false },
+        )
     }
     if (saving) {
         BusyDialog(stringResource(R.string.saving))

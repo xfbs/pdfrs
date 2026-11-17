@@ -13,6 +13,7 @@
 //! Android app has one per document. The calls that open or close files take it as an argument.
 
 mod annots;
+mod draft;
 mod forms;
 mod preview;
 mod search;
@@ -33,6 +34,7 @@ use specto_text::SearchText;
 use specto_view::{Selection, Settings, ViewPage, Viewer};
 
 pub use annots::{DraftKind, Grip, TextBoxPlace, ViewShape};
+pub use draft::{Draft, RestoreError};
 pub use forms::{FieldClick, FieldHover};
 pub use preview::LinkPreview;
 pub use search::{Indexed, SearchStatus};

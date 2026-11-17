@@ -7,6 +7,7 @@ license.workspace = true
 description = "Forms in specto: the fields of a PDF's form, their values, and where they are on the pages"
 
 [dependencies]
+serde.workspace = true
 specto-annot.workspace = true
 specto-geom.workspace = true
 specto-source.workspace = true

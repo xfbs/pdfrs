@@ -13,10 +13,12 @@
 mod import;
 mod photo;
 mod shapes;
+mod stored;
 mod text;
 
 use std::sync::Arc;
 
+use serde::{Deserialize, Serialize};
 use specto_geom::{PdfBox, PdfPoint, PdfQuad};
 pub use specto_source::Date;
 
@@ -25,6 +27,7 @@ pub use photo::{InkSettings, ink_from_photo};
 pub use shapes::{
     AppearanceStream, GraphicsState, Path, Segment, Shape, appearance, look_mark, shapes,
 };
+pub use stored::with_image_loader;
 pub use text::{
     FontFamily, TEXT_MARGIN, TextFont, box_height, encode as encode_text, text_width, wrap,
 };
@@ -33,7 +36,7 @@ pub use text::{
 pub const NOTE_SIZE: f64 = 18.0;
 
 /// A color as PDF annotations have it: red, green and blue, each 0 to 1.
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Color {
     pub r: f32,
     pub g: f32,
@@ -47,7 +50,7 @@ impl Color {
 }
 
 /// How text is marked.
-#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, Serialize, Deserialize)]
 pub enum MarkupStyle {
     Highlight,
     Underline,
@@ -57,7 +60,7 @@ pub enum MarkupStyle {
 }
 
 /// What an annotation is, with what only that kind has.
-#[derive(Clone, Debug, PartialEq)]
+#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub enum AnnotKind {
     /// Marked text: one quad per stretch of text, usually one per line.
     TextMarkup {
@@ -105,7 +108,7 @@ pub enum AnnotKind {
 }
 
 /// What a stamp shows.
-#[derive(Clone, Debug, PartialEq)]
+#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub enum StampArt {
     /// An image, shared rather than copied when the annotation is.
     Image(Arc<StampImage>),
@@ -164,7 +167,7 @@ impl AnnotKind {
 }
 
 /// The `/F` flags of an annotation.
-#[derive(Clone, Copy, Debug, Default, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, Default, PartialEq, Eq, Serialize, Deserialize)]
 pub struct Flags(pub u32);
 
 impl Flags {
@@ -189,7 +192,7 @@ impl Flags {
 }
 
 /// Where in its file an annotation was read from.
-#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, Serialize, Deserialize)]
 pub struct Origin {
     /// Its position in the page's `/Annots` array, counting every entry.
     pub index: u32,
@@ -198,7 +201,7 @@ pub struct Origin {
 }
 
 /// How an annotation gets its look.
-#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq, Serialize, Deserialize)]
 pub enum Appearance {
     /// As the file draws it (its `/AP` stream), untouched.
     ///
@@ -216,7 +219,7 @@ pub enum Appearance {
 }
 
 /// One annotation on a page.
-#[derive(Clone, Debug, PartialEq)]
+#[derive(Clone, Debug, PartialEq, Serialize, Deserialize)]
 pub struct Annotation {
     pub kind: AnnotKind,
     /// The area it takes up (`/Rect`), normalized.
