@@ -19,9 +19,6 @@ Poppler's rendering (pdftoppm). It writes a report and the results as a table
 to `out/corpus/`, and side-by-side images of the pages that differ to
 `out/corpus/diffs/`.
 
-Poppler is not ground truth. In the first run, about half of the worst
-differences were Poppler bugs. Treat a large difference as a page to look at,
-not as proof that Specto renders it wrong.
-
-Still to add: the PDFium test corpus, and fixtures of our own for forms,
-rotation, crop boxes and encryption.
+Poppler is not ground truth, and about half of the worst differences are
+Poppler bugs. Treat a large difference as a page to look at, not as proof that
+Specto renders it wrong.

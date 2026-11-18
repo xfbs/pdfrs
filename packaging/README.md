@@ -63,7 +63,8 @@ To check the installed Flatpak automatically, in a headless session with its
 own document portal:
 
 ```sh
-XDG_RUNTIME_DIR=$(mktemp -d /tmp/rt.XXXX) apps/desktop/test-ui/run.sh python3 -I apps/desktop/test-ui/check-flatpak.py
+XDG_RUNTIME_DIR=$(mktemp -d /tmp/rt.XXXX) apps/desktop/test-ui/run.sh \
+  python3 -I apps/desktop/test-ui/check-flatpak.py
 ```
 
 ## Releases
@@ -73,7 +74,7 @@ number such as 0.1, in the file `VERSION` at the root. The crates have their
 own version in the root `Cargo.toml`, which a release doesn't change.
 
 A tag makes a release. The workflow in `.github/workflows/release.yml` builds
-the Flatpak for x86-64 and ARM and the signed APK of the Android app, and
+the Flatpak for x86_64 and aarch64 and the signed APK of the Android app, and
 attaches them to a GitHub release with their checksums. The notes of the
 release are the version's section of [CHANGELOG.md](../CHANGELOG.md), with a
 link to the commits since the release before. The Android build needs the
@@ -98,16 +99,8 @@ release key as secrets of the repository
 The workflow fails if the tag doesn't name the version in `VERSION`, or if the
 changelog or the metainfo has no entry for it. "Run workflow" in the Actions tab
 builds the Flatpak bundles and the signed APK of a branch without making a
-release. They are kept with the run, to download and try.
-
-A bundle is installed with:
-
-```sh
-flatpak install specto-*-x86_64.flatpak
-```
-
-It fetches the GNOME runtime from Flathub if that isn't installed yet. A bundle
-doesn't update itself: a newer one is installed over it the same way.
+release. They are kept with the run, to download and try. A bundle is
+installed as the [README](../README.md#install) says.
 
 ## Publishing on Flathub
 

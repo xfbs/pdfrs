@@ -173,17 +173,19 @@ Shortcuts use *Primary*, which is Ctrl on Linux and Cmd on macOS.
   picked text box, also while typing into it. These are Helvetica, Times and
   Courier, the fonts every PDF program has, so nothing is embedded
 - A double click on a text box, or Enter with it picked, types into it again.
-  On pages shown rotated, a small editor is used instead
+  On pages shown rotated, a small editor is used instead. A text box left empty
+  is deleted
 - Note tool: a click on the page puts a note there and asks for its text
 - A note shows its text when the pointer rests on it, and a click on it opens
   the text to read or change. Comments on drawings, shapes and other programs'
   annotations show on hover too
-- A double click on a text box or a note, or Enter with any markup picked,
-  asks for its text again. For other markup that text is a comment, which other
-  programs show in their annotation lists. A text box left empty is deleted
+- A double click on a note, or Enter with other markup picked, asks for its
+  text. For markup other than notes, that text is a comment, which other
+  programs show in their annotation lists
 - Signature button on the bar: lists the saved signatures and makes new ones.
-  Choosing one and clicking on a page places it there, 150 points wide. It can
-  then be moved and resized like a shape, and keeps its proportions
+  Choosing one and clicking on a page places it there, at most 150 points
+  wide. It can then be moved and resized like a shape, and keeps its
+  proportions
 - New Signature: drawn with the mouse or touchpad, or taken from a picture of
   a signature on white paper. For a picture, the paper is made transparent,
   also under uneven light, with a slider for how faint a stroke may be and a
@@ -344,12 +346,6 @@ Shortcuts use *Primary*, which is Ctrl on Linux and Cmd on macOS.
   visibility and tab
 - Restored when the file is opened again. The last 200 files are kept
 - Quitting (*Primary*+Q) closes all windows, so each one saves
-
-## Under the hood
-
-- One shared pool of render threads for all windows
-- Protection against pathological pages: slow pages render one tile at a time,
-  and extra workers start when renders stall
 
 ## Not yet
 

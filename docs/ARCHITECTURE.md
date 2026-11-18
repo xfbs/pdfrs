@@ -215,8 +215,7 @@ graph TD
 - **HiDPI.** The device scale factor is multiplied into the render scale, and
   tiles are rendered at physical pixels. A settled view is drawn from tiles at
   the exact device scale, one to one, so it is pixel-identical to a direct
-  render at that scale. This was measured on macOS at scale 2 and on Linux at
-  1.25, 1.5 and 2.
+  render at that scale.
 - **Zoom.** While zooming, tiles come from zoom levels a factor of √2 apart,
   rendered at or above the device scale and downsampled. Continuous zooming
   then reuses a few cached levels instead of rendering every zoom in between.
@@ -378,11 +377,6 @@ How the rewrite works:
   with its source page. Any difference fails the save instead of writing a
   damaged file.
 
-On the corpus, 1,066 of 1,077 files are rewritten with every page rendering
-identically, both unchanged and with pages reversed and rotated. The other 11
-are refused, nearly all of them damaged files that lopdf can't read. None is
-written damaged.
-
 ## Drafts
 
 The Android app keeps unsaved edits on disk as a draft, so that they are back
@@ -421,7 +415,7 @@ The page view is a custom scrollable widget that draws each frame's tiles as
 textures. The rest of the window uses stock widgets: a split view with a list
 of thumbnails and a tree for the outline, the file dialog, and the zoom gesture
 for touchpad pinch. Printing uses GTK's print operation, with pages rendered at
-300 dpi on a thread of their own.
+300 dpi.
 
 The sidebar is also the page organizer: thumbnails can be selected and dragged
 within it, and PDFs can be dropped on it to insert them.

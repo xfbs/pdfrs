@@ -70,25 +70,17 @@ downloaded to:
 flatpak install specto-*-x86_64.flatpak
 ```
 
-Neither updates itself, so a newer release is installed over the old one the
-same way. I plan to bring Specto to F-Droid and Flathub once it has had more
+It fetches the GNOME runtime from Flathub if that isn't installed yet. Neither
+build updates itself, so a newer release is installed over the old one the same
+way. I plan to bring Specto to F-Droid and Flathub once it has had more
 testing.
 
 ## Status
 
-Both apps are usable as PDF viewers. They render pages sharply at any zoom and
-on HiDPI screens, and stay responsive on huge documents. They have the usual
-layouts, thumbnails, the table of contents, links and printed page numbers,
-open encrypted files, and remember where you were in each document. In both you
-can select, copy and search text, highlight, underline and strike through it,
-print, edit pages by rotating, deleting and reordering them, and fill in forms:
-checkboxes, radio buttons, text fields, menus and lists.
-
-The desktop app can also insert pages from other PDFs and export a selection of
-pages. It has more markup too: freehand drawing, shapes, text boxes, notes and
-signatures.
-
-The detailed plan is in [Tasks](docs/TASKS.md).
+Both apps are usable as PDF viewers and light editors. What each one does is
+listed in its features file, for the [desktop](apps/desktop/FEATURES.md) and
+for [Android](apps/android/FEATURES.md). What changed in each release is in the
+[changelog](CHANGELOG.md), and the plan is in [Tasks](docs/TASKS.md).
 
 ## Translations
 
@@ -155,11 +147,17 @@ The tests check saved files with qpdf where it is installed.
 
 - [Censor](https://codeberg.org/censor/Censor): Linux app to censor PDFs,
   inspiration for adding that feature to Specto
-- [GNOME Papers/Document Viewer](https://apps.gnome.org/Papers/): GNOME PDF
-  reader app, inspiration for Specto
-- [Evince](https://gitlab.gnome.org/GNOME/evince): PDF reader for GNOME
+- [GNOME Papers](https://apps.gnome.org/Papers/), also called Document Viewer:
+  GNOME PDF reader app, inspiration for Specto
+- [Evince](https://gitlab.gnome.org/GNOME/evince): PDF reader for GNOME. Its
+  page organizer and annotations, like Papers', are good references for GTK
 - [Apple Preview](https://en.wikipedia.org/wiki/Preview_(Apple)): Apple's PDF
   reader app, inspiration for Specto
+- [pdf.js](https://github.com/mozilla/pdf.js): PDF reader in JavaScript, a
+  reference for edge cases of annotations and forms, and their appearance
+- [Rnote](https://github.com/flxzt/rnote): handwriting app in Rust with GTK 4,
+  a reference for ink smoothing, stylus input and canvas performance
+- PDFCraft: PDF editor in Rust, in the style of Acrobat
 
 ## License
 

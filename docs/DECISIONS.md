@@ -1,11 +1,6 @@
 # Technology decisions
 
-The choices Specto is built on, with the alternatives that were considered. All
-of them were decided on 2026-11-14 unless a section says otherwise.
-
-The measurements they refer to were written up in full in
-`docs/M0-FINDINGS.md`, which has since been removed. Commit 7273d64 is the last
-one that has it.
+The choices Specto is built on, with the alternatives that were considered.
 
 ## D1: Rendering engine
 
@@ -13,30 +8,17 @@ one that has it.
 renderer can be compared with it. The other crates use hayro's parser and
 interpreter directly, for the file's structure, annotations, forms and text.
 
-The options were:
-
-- **hayro**, in pure Rust. It has no C dependencies, a core without unsafe
-  code, and its own decoders for JPEG 2000, CCITT, Type 1 and CFF. It is split
-  into a parser, an interpreter with an abstract device, and a rasterizer. It
-  is licensed MIT or Apache. Against it: it is before 1.0, calls itself
-  experimental, and renders on the CPU only.
-- **PDFium**, through pdfium-render. It is battle-tested in Chromium and also
-  handles forms and annotations. Against it: a PDFium binary has to be shipped
-  for every platform, including each Android ABI, it brings C++ attack surface,
-  and it gives less control.
-- **mupdf**, through its bindings. Its quality and speed are excellent, but it
-  is licensed AGPL (or commercially), which would apply to the whole app.
-- **The pdf crate with a renderer of our own.** Pure Rust, but far more work
-  than hayro.
-
-The interpreter's device abstraction in hayro is also what text extraction
-needs.
+hayro is pure Rust with no C dependencies, licensed MIT or Apache, and split
+into a parser, an interpreter with an abstract device, and a rasterizer. The
+device is also what text extraction needs. Against it: it is before 1.0 and
+renders on the CPU only. PDFium would mean shipping a binary for every platform
+and each Android ABI, with C++ attack surface. mupdf is licensed AGPL, which
+would apply to the whole app.
 
 **Outcome:** on 1,095 pdf.js test files, hayro had no crashes and a median of
 2.8 ms per page at twice the size. It decrypts encrypted files and can render
 pages without their annotations. Known gaps are knockout groups, transfer
-functions, and that a render can't be cancelled. PDFium as a reference renderer
-in tests is still planned.
+functions, and that a render can't be cancelled.
 
 ## D2: PDF object model and writer
 
@@ -75,23 +57,11 @@ with pdf-writer remains the fallback if lopdf's gaps grow.
 The desktop app targets Linux first. That takes away gpui's main advantage,
 consistency across platforms, while GTK 4 already has what an app like Preview
 needs: printing, list views with drag and drop, file dialogs through portals,
-stylus and touchpad gestures, and accessibility. We give up idiomatic Rust,
-since GObject subclassing is verbose, and some rendering headroom.
-
-How the two compared:
-
-- **Maturity.** GTK is very mature, with a stable API. gpui is before 1.0, and
-  its API and versioning follow the needs of the Zed editor.
-- **Widgets.** GTK is complete, including a print dialog. gpui has few built-in
-  widgets and no print support.
-- **Custom canvas.** GTK's snapshots and textures are composited on the GPU,
-  which is good enough for tiles. gpui is built for the GPU first and would be
-  excellent for a fast scrolling canvas.
-- **Rust ergonomics.** GTK means verbose subclassing and shared mutable state.
-  gpui is idiomatic Rust.
-- **Platforms.** GTK is great on Linux and works on macOS and Windows, where it
-  looks foreign. gpui is good on macOS and Linux.
-- **Look.** GTK gives the native GNOME look. gpui gives whatever we design.
+stylus and touchpad gestures, and accessibility. gpui is before 1.0, follows
+the needs of the Zed editor, and has few widgets and no printing. We give up
+idiomatic Rust, since GObject subclassing is verbose, and some rendering
+headroom, though GTK's textures are composited on the GPU, which is enough for
+tiles.
 
 Because the viewer is independent of the UI, a later port to another toolkit
 would only replace the desktop app.
@@ -105,15 +75,10 @@ macOS with Homebrew's GTK.
 **Decision:** Kotlin with Jetpack Compose over the Rust core, on Android 8.0
 (API 26) and newer.
 
-The options were:
-
-- **Compose with a Rust core.** The native look, the system file picker, stylus
-  and palm rejection, input methods, accessibility and Material components all
-  work without extra effort. Rust only renders and holds the logic.
-- **Slint, egui or Dioxus.** One language, but weaker on input methods,
-  accessibility, stylus input and native feel.
-- **gpui-mobile.** A third-party project at version 0.1.0. Too early.
-- **Android's built-in PDF renderer.** Not our engine, and it can't edit.
+With Compose, the native look, the system file picker, stylus input, input
+methods and accessibility work without extra effort, and Rust only renders and
+holds the logic. Slint, egui and Dioxus would keep one language but are weaker
+on all of those. Android's built-in PDF renderer can't edit.
 
 **Outcome:** the app is built this way. Tiles are written straight into Android
 bitmaps from Rust.
@@ -146,19 +111,6 @@ so CI lints the FFI crate a second time for an Android target.
 This is the convention in the Rust ecosystem, and matches hayro and lopdf.
 Apache 2.0 adds an explicit patent grant, and MIT keeps us compatible with
 GPLv2 projects. We avoid mupdf and other copyleft dependencies.
-
-## D7: Prior art
-
-Not a decision, but projects worth studying:
-
-- **PDFCraft**: a PDF editor in Rust, in the style of Acrobat. Worth looking at
-  for scope and choice of stack.
-- **Evince and Papers**: GNOME's document viewers. Their page organizer and
-  annotation interface are good references for GTK.
-- **pdf.js**: a reference for edge cases in rendering annotations and forms,
-  and for generating appearance streams.
-- **Rnote**: a handwriting app in Rust with GTK 4. A good reference for ink
-  smoothing, stylus input and canvas performance.
 
 ## D8: Annotations are saved as annotations
 
