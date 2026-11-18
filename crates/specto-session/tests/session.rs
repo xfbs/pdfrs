@@ -553,6 +553,35 @@ fn the_indexer_stops_when_told() {
 }
 
 #[test]
+fn a_page_handed_over_twice_counts_once() {
+    let scheduler = Scheduler::new(1, || {});
+    let mut session = open(&scheduler, book(3, "alpha"));
+    session.search("alpha");
+    // Two indexers whose pages arrive after both ran, as when a file is inserted while a search
+    // is indexing: the second lists the pages whose text the session doesn't have yet.
+    let pages_of = |session: &mut Session| {
+        let deadline = Instant::now() + Duration::from_secs(30);
+        loop {
+            let (tx, rx) = mpsc::channel::<Indexed>();
+            if session.start_indexing(0, move |page| tx.send(page).is_ok()) {
+                return rx.iter().collect::<Vec<_>>();
+            }
+            assert!(Instant::now() < deadline, "the first thread never finished");
+            std::thread::sleep(Duration::from_millis(5));
+        }
+    };
+    let first = pages_of(&mut session);
+    let second = pages_of(&mut session);
+    assert_eq!((first.len(), second.len()), (3, 3));
+    for page in first.into_iter().chain(second) {
+        session.indexed(page);
+    }
+    let status = session.search_status().unwrap();
+    assert_eq!((status.matches, status.pages_indexed), (3, 3));
+    session.close(&scheduler);
+}
+
+#[test]
 fn marking_text_and_saving_it() {
     use specto_annot::{AnnotKind, AnnotType, Color, MarkupStyle};
     use specto_doc::{AnnotId, Edit};

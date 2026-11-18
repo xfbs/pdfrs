@@ -1,5 +1,5 @@
 use specto_geom::PdfPoint;
-use specto_source::{Destination, NamedAction, OpenError, SourceDocument, Target};
+use specto_source::{Date, Destination, NamedAction, OpenError, SourceDocument, Target};
 
 /// Builds a PDF from numbered object bodies (`objects[i]` becomes object `i + 1`), with object 1 as
 /// the catalog.
@@ -162,6 +162,18 @@ fn metadata_with_dates_and_the_version() {
     assert_eq!(modified.utc_offset_minutes, -330);
     assert_eq!(modified.to_string(), "2025-01-01T00:00:00-05:30");
     assert_eq!(doc.version(), "1.4");
+}
+
+#[test]
+fn time_zones_as_programs_write_them() {
+    let offset = |text: &str| Date::parse(text.as_bytes()).map(|d| d.utc_offset_minutes);
+    assert_eq!(offset("D:20240305142210+01'00'"), Some(60));
+    assert_eq!(offset("D:20240305142210+01'00"), Some(60));
+    assert_eq!(offset("D:20240305142210+0100"), Some(60));
+    assert_eq!(offset("D:20240305142210-05:30"), Some(-330));
+    assert_eq!(offset("D:20240305142210+01"), Some(60));
+    assert_eq!(offset("D:20240305142210Z"), Some(0));
+    assert_eq!(offset("D:20240305142210+2500"), None);
 }
 
 #[test]

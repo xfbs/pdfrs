@@ -16,7 +16,7 @@ use specto_view::{
 use crate::document::SharedDocument;
 use specto_annot::Segment;
 use specto_doc::SourceId;
-use specto_session::{DraftKind, Followed, Grip, LinkPreview, Session, ViewShape};
+use specto_session::{DraftKind, Grip, LinkPreview, Session, ViewShape};
 
 /// Dragging a selection this close to the top or bottom edge (logical pixels) scrolls the view.
 const AUTOSCROLL_EDGE: f64 = 24.0;
@@ -318,11 +318,14 @@ impl Canvas {
 
     /// Follows a link or outline target in file `source`.
     pub fn follow(&self, source: SourceId, target: &Target) {
-        if let Some(Followed::Uri(uri)) = self.update_session(|s| s.follow(source, target))
-            && let Some(f) = self.imp().on_open_uri.borrow().as_ref()
-        {
-            f(&uri);
+        // A link out of the document leaves the view as it is.
+        if let Target::Uri(uri) = target {
+            if let Some(f) = self.imp().on_open_uri.borrow().as_ref() {
+                f(uri);
+            }
+            return;
         }
+        self.update_session(|s| s.follow(source, target));
     }
 
     fn link_at(&self, x: f64, y: f64) -> Option<(SourceId, Target)> {

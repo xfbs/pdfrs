@@ -669,6 +669,9 @@ fn annotate(doc: &mut Document, source: SourceId, annots: &AnnotChanges) -> Resu
 
 /// A second page object for a page used twice: a copy of the page dictionary, with copies of its
 /// annotations (form fields left out, as a field can't sit on two pages).
+///
+/// Annotations that refer to each other on the page, such as markup and its popup, refer to each
+/// other's copies.
 fn duplicate_page(doc: &mut Document, id: ObjectId) -> Result<ObjectId, WriteError> {
     let mut page = doc.get_dictionary(id).map_err(WriteError::Read)?.clone();
     let new_id = doc.new_object_id();
@@ -681,19 +684,37 @@ fn duplicate_page(doc: &mut Document, id: ObjectId) -> Result<ObjectId, WriteErr
             .unwrap_or_default(),
         _ => Vec::new(),
     };
-    let mut copies = Vec::new();
+    let mut copied = Vec::new();
+    // The id of each annotation's copy, by the id of the annotation.
+    let mut ids = HashMap::new();
     for a in annots {
-        let dict = match &a {
-            Object::Reference(r) => doc.get_dictionary(*r).ok().cloned(),
-            Object::Dictionary(d) => Some(d.clone()),
-            _ => None,
+        let (old, dict) = match &a {
+            Object::Reference(r) => (Some(*r), doc.get_dictionary(*r).ok().cloned()),
+            Object::Dictionary(d) => (None, Some(d.clone())),
+            _ => continue,
         };
-        let Some(mut dict) = dict else { continue };
+        let Some(dict) = dict else { continue };
         if dict.get(b"Subtype").and_then(Object::as_name).ok() == Some(b"Widget") {
             continue;
         }
+        let copy = doc.new_object_id();
+        if let Some(old) = old {
+            ids.insert(old, copy);
+        }
+        copied.push((copy, dict));
+    }
+    let mut copies = Vec::new();
+    for (copy, mut dict) in copied {
         dict.set("P", new_id);
-        copies.push(Object::Reference(doc.add_object(dict)));
+        for key in [&b"Popup"[..], b"Parent", b"IRT"] {
+            if let Ok(Object::Reference(r)) = dict.get(key)
+                && let Some(&to) = ids.get(r)
+            {
+                dict.set(key, to);
+            }
+        }
+        doc.objects.insert(copy, Object::Dictionary(dict));
+        copies.push(Object::Reference(copy));
     }
     if copies.is_empty() {
         page.remove(b"Annots");

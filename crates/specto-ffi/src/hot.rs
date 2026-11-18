@@ -185,8 +185,8 @@ pub fn last_frame(session: u64, out: &mut [u8]) -> i64 {
 /// For each, the app creates a bitmap of the given size and passes it to `Native.copyTile`, then
 /// plans a frame. Tiles not copied before the next call are discarded.
 ///
-/// Sized so it always fits: at most `(out.len() - 8) / 16` tiles are announced, and the rest stay
-/// queued for the next call. Returns the number of bytes written (0: closed or no room).
+/// At most `(out.len() - 8) / 16` tiles are announced. The rest are dropped and rendered again, so
+/// `out` is sized to fit them all. Returns the number of bytes written (0: closed or no room).
 pub fn take_finished(session: u64, out: &mut [u8]) -> i64 {
     let Some(session) = find_session(session) else {
         return 0;

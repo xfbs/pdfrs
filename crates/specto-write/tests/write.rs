@@ -289,6 +289,60 @@ fn a_page_used_twice() {
 }
 
 #[test]
+fn a_commented_highlight_on_a_page_used_twice() {
+    // The first page gets a highlight with its comment's popup, each pointing to the other.
+    let mut doc = Document::load_mem(&fixture(2, 0.5)).unwrap();
+    let page_id = doc.get_pages()[&1];
+    let (highlight, popup) = (doc.new_object_id(), doc.new_object_id());
+    doc.objects.insert(
+        highlight,
+        Object::Dictionary(dictionary! {
+            "Type" => "Annot", "Subtype" => "Highlight", "P" => page_id, "Popup" => popup,
+            "Rect" => vec![100.into(), 200.into(), 200.into(), 220.into()],
+            "Contents" => Object::string_literal("A note"),
+        }),
+    );
+    doc.objects.insert(
+        popup,
+        Object::Dictionary(dictionary! {
+            "Type" => "Annot", "Subtype" => "Popup", "P" => page_id, "Parent" => highlight,
+            "Rect" => vec![200.into(), 200.into(), 300.into(), 300.into()],
+        }),
+    );
+    let dict = doc.get_dictionary_mut(page_id).unwrap();
+    let mut annots = dict.get(b"Annots").unwrap().as_array().unwrap().clone();
+    annots.extend([highlight.into(), popup.into()]);
+    dict.set("Annots", annots);
+    let mut data = Vec::new();
+    doc.save_to(&mut data).unwrap();
+
+    let data = PdfData::from(data);
+    let out = write(&[main_source(&data)], &[page(MAIN, 0), page(MAIN, 0)]).unwrap();
+    qpdf_check(&out, None);
+    let doc = Document::load_mem(&out).unwrap();
+    let mut popups = Vec::new();
+    for (_, page_id) in doc.get_pages() {
+        let of = |subtype: &[u8]| {
+            let annots = doc.get_page_annotations(page_id).unwrap();
+            let refs = doc.get_dictionary(page_id).unwrap().get(b"Annots").unwrap();
+            let refs = refs.as_array().unwrap();
+            let i = (annots.iter())
+                .position(|a| a.get(b"Subtype").unwrap().as_name().unwrap() == subtype)
+                .unwrap();
+            (refs[i].as_reference().unwrap(), annots[i].clone())
+        };
+        let (highlight, h) = of(b"Highlight");
+        let (popup, p) = of(b"Popup");
+        assert_eq!(h.get(b"Popup").unwrap().as_reference().unwrap(), popup);
+        assert_eq!(p.get(b"Parent").unwrap().as_reference().unwrap(), highlight);
+        assert_eq!(p.get(b"P").unwrap().as_reference().unwrap(), page_id);
+        popups.push(popup);
+    }
+    assert_eq!(popups.len(), 2);
+    assert_ne!(popups[0], popups[1], "each page has its own popup");
+}
+
+#[test]
 fn pages_from_another_file() {
     let a = PdfData::from(fixture(3, 0.1));
     let b = PdfData::from(fixture(4, 0.9));

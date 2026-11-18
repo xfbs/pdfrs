@@ -165,6 +165,8 @@ impl Date {
 
     /// Reads a PDF date string: `D:YYYYMMDDHHmmSSOHH'mm'`, where everything after the year may be
     /// missing and `O` is `+`, `-` or `Z`.
+    ///
+    /// The offset may also be written `HHmm` or `HH:mm`, as some programs do.
     pub fn parse(bytes: &[u8]) -> Option<Self> {
         let text = std::str::from_utf8(bytes).ok()?.trim();
         let text = text.strip_prefix("D:").unwrap_or(text);
@@ -187,11 +189,14 @@ impl Date {
         }
         let utc_offset_minutes = match zone.as_bytes().first() {
             Some(sign @ (b'+' | b'-')) => {
-                let mut parts = zone[1..].split('\'');
-                let hours: i16 = parts.next()?.parse().ok()?;
-                let minutes: i16 = match parts.next() {
-                    Some("") | None => 0,
-                    Some(m) => m.parse().ok()?,
+                let mut parts = zone[1..].split(['\'', ':']);
+                let first = parts.next()?;
+                let (hours, minutes): (i16, i16) = match parts.next() {
+                    Some("") | None if first.len() == 4 && first.is_ascii() => {
+                        (first[..2].parse().ok()?, first[2..].parse().ok()?)
+                    }
+                    Some("") | None => (first.parse().ok()?, 0),
+                    Some(m) => (first.parse().ok()?, m.parse().ok()?),
                 };
                 if hours > 23 || minutes > 59 {
                     return None;

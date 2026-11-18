@@ -53,9 +53,10 @@ type FilePage = (SourceId, u32);
 /// What following a link or an outline entry did ([`Session::follow`]).
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum Followed {
-    /// Nothing: the page it leads to was deleted.
+    /// Nothing: the page it leads to was deleted, or isn't in the file.
     Nothing,
-    /// The view went somewhere else in the document.
+    /// The view went to where it leads in the document, which may be where it was already, such as
+    /// the next page from the last.
     Moved,
     /// It leads outside the document. Opening it, after asking, is up to the app.
     Uri(String),
@@ -340,7 +341,8 @@ impl Session {
                 let Some(page) = self.position_of(source, d.page) else {
                     return Followed::Nothing;
                 };
-                (self.viewer).jump(|v| v.go_to_pdf_position(page, d.left, d.top));
+                self.viewer
+                    .jump(|v| v.go_to_pdf_position(page, d.left, d.top));
             }
             Target::Named(NamedAction::NextPage) => self.viewer.next_page(),
             Target::Named(NamedAction::PrevPage) => self.viewer.previous_page(),
@@ -348,7 +350,8 @@ impl Session {
                 self.viewer.jump(|v| v.go_to_page(0));
             }
             Target::Named(NamedAction::LastPage) => {
-                (self.viewer).jump(|v| v.go_to_page(v.page_count().saturating_sub(1)));
+                self.viewer
+                    .jump(|v| v.go_to_page(v.page_count().saturating_sub(1)));
             }
             Target::Uri(uri) => return Followed::Uri(uri.clone()),
         }

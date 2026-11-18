@@ -162,6 +162,11 @@ impl Session {
         else {
             return false;
         };
+        // Two indexers can hand over the same page: one stopped with pages still on their way,
+        // and the one started after it. The page's matches are counted once.
+        if slot.is_some() {
+            return false;
+        }
         *slot = Some(text);
         let text = slot.as_ref().expect("just set");
         let Some(s) = self.search.as_mut() else {
