@@ -199,17 +199,17 @@ impl Window {
                 .build(),
             gio::ActionEntry::builder("zoom-in")
                 .activate(with(|w| {
-                    w.0.canvas.update_viewer(|v| v.zoom_by(1.25, centre(v)))
+                    w.0.canvas.update_viewer(|v| v.zoom_by(1.25, center(v)))
                 }))
                 .build(),
             gio::ActionEntry::builder("zoom-out")
                 .activate(with(|w| {
-                    w.0.canvas.update_viewer(|v| v.zoom_by(0.8, centre(v)))
+                    w.0.canvas.update_viewer(|v| v.zoom_by(0.8, center(v)))
                 }))
                 .build(),
             gio::ActionEntry::builder("zoom-actual")
                 .activate(with(|w| {
-                    w.0.canvas.update_viewer(|v| v.set_zoom(1.0, centre(v)))
+                    w.0.canvas.update_viewer(|v| v.set_zoom(1.0, center(v)))
                 }))
                 .build(),
             gio::ActionEntry::builder("fit-width")

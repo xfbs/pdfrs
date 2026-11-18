@@ -179,8 +179,8 @@ class ViewFrameTest {
     fun handles() {
         // The end handle hangs below the end of the last line, to the right.
         val edge = frame.selectionEnd!!
-        assertEquals(330f to 151f, handleCentre(edge, end = true, radius = 30f))
-        assertEquals(270f to 151f, handleCentre(edge, end = false, radius = 30f))
+        assertEquals(330f to 151f, handleCenter(edge, end = true, radius = 30f))
+        assertEquals(270f to 151f, handleCenter(edge, end = false, radius = 30f))
 
         // A touch on it takes hold of the end. The selection then follows the middle of the line's
         // edge, not the finger below it.

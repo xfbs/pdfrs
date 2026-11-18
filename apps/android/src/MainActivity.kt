@@ -287,7 +287,7 @@ private const val DRAFT_DAYS = 30
 private fun AppTheme(content: @Composable () -> Unit) {
     val dark = isSystemInDarkTheme()
     val context = LocalContext.current
-    val colours = when {
+    val colors = when {
         Build.VERSION.SDK_INT >= Build.VERSION_CODES.S ->
             if (dark) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
 
@@ -295,7 +295,7 @@ private fun AppTheme(content: @Composable () -> Unit) {
 
         else -> lightColorScheme()
     }
-    MaterialTheme(colorScheme = colours, content = content)
+    MaterialTheme(colorScheme = colors, content = content)
 }
 
 /** Keeps content that isn't the page itself clear of the camera cutout and the navigation bar. */

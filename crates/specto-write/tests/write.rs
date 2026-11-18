@@ -23,7 +23,7 @@ const OTHER: SourceId = SourceId(1);
 /// degrees.
 ///
 /// Page labels i, ii, then 1, 2 and so on. An outline entry and a link to the last page.
-fn fixture(n: usize, colour: f64) -> Vec<u8> {
+fn fixture(n: usize, color: f64) -> Vec<u8> {
     let mut doc = Document::with_version("1.5");
     let font = doc.add_object(dictionary! {
         "Type" => "Font", "Subtype" => "Type1", "BaseFont" => "Helvetica",
@@ -34,7 +34,7 @@ fn fixture(n: usize, colour: f64) -> Vec<u8> {
     let mut page_ids = Vec::new();
     for i in 0..n {
         let content = format!(
-            "{colour} {} 0.5 rg {} 100 200 300 re f BT /F1 30 Tf 72 700 Td (Page {}) Tj ET",
+            "{color} {} 0.5 rg {} 100 200 300 re f BT /F1 30 Tf 72 700 Td (Page {}) Tj ET",
             i as f64 / n as f64,
             50 + 30 * i,
             i + 1

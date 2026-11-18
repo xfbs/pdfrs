@@ -5,10 +5,11 @@
 //! text, selection and search), the render scheduler and the bookkeeping for tiles. Kotlin forwards
 //! gestures, asks for a [`Frame`] and draws it. See `docs/ARCHITECTURE.md` ("Android").
 //!
-//! UniFFI is used for everything that happens occasionally (opening, modes, viewport changes). Its
+//! UniFFI is used for everything that happens occasionally (opening, modes, editing, search). Its
 //! Kotlin bindings go through JNA, and a single call costs a few hundred microseconds on a phone,
-//! so what runs every frame goes through plain JNI instead (`jni.rs`, backed by [`hot`]):
-//! scrolling, zooming, planning a frame and collecting finished tiles.
+//! so what runs every frame goes through plain JNI instead (`jni.rs`, backed by [`hot`]): the
+//! viewport, scrolling, zooming, dragging a selection, planning a frame and collecting finished
+//! tiles. A [`Frame`] reaches Kotlin encoded as bytes.
 //!
 //! Tile pixels never cross UniFFI either, which was measured as too slow. Kotlin owns one `Bitmap`
 //! per tile, keyed by an opaque id, and fills it through JNI. Which tiles exist is decided here:
@@ -34,8 +35,8 @@ use specto_geom::{DeviceRect, ViewPoint, ViewVector};
 use specto_render::scheduler::Scheduler;
 use specto_render::{Bitmap, OpenError};
 use specto_session::{FieldClick, ViewShape};
-use specto_session::{MAIN, Options, Session};
-use specto_source::{NamedAction, OutlineItem, PdfData, Target};
+use specto_session::{Followed, MAIN, Options, Session};
+use specto_source::{OutlineItem, PdfData, Target};
 use specto_view::{
     Granularity, Selection, Settings, TextPages, over_text, text_char, text_position, text_quads,
 };
@@ -76,7 +77,7 @@ impl From<OpenError> for PdfError {
 /// Implemented in Kotlin.
 #[uniffi::export(with_foreign)]
 pub trait ViewListener: Send + Sync {
-    /// Finished tiles are waiting in [`ViewSession::take_finished`].
+    /// Finished tiles are waiting in [`hot::take_finished`].
     ///
     /// Called from a render thread, so hop to the main thread first.
     fn tiles_ready(&self);
@@ -86,14 +87,6 @@ pub trait ViewListener: Send + Sync {
     /// [`ViewSession::search_status`] and the next frame show what changed (the view may have moved
     /// to a first match). Called from a background thread, like [`tiles_ready`](Self::tiles_ready).
     fn search_changed(&self);
-}
-
-#[derive(Clone, Copy, Debug, PartialEq, Eq, uniffi::Enum)]
-pub enum LayoutMode {
-    SinglePage,
-    Continuous,
-    TwoPage,
-    TwoPageContinuous,
 }
 
 /// How the document is presented, as offered in the app's menu.
@@ -233,7 +226,7 @@ pub struct Offset {
     pub y: f64,
 }
 
-#[derive(Clone, Copy, Debug, PartialEq, Eq, uniffi::Enum)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ZoomMode {
     Fixed,
     FitWidth,
@@ -261,14 +254,14 @@ impl From<DeviceRect> for Rect {
 }
 
 /// A point in device pixels, relative to the top-left of the view.
-#[derive(Clone, Copy, Debug, PartialEq, uniffi::Record)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub struct Point {
     pub x: f32,
     pub y: f32,
 }
 
 /// Why a stretch of text is highlighted.
-#[derive(Clone, Copy, Debug, PartialEq, Eq, uniffi::Enum)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum HighlightKind {
     /// It is selected.
     Selection,
@@ -294,7 +287,7 @@ pub struct SearchStatus {
 /// quadrilateral (lines can be rotated).
 ///
 /// "Start" and "end" are along the line, "bottom" is its baseline side.
-#[derive(Clone, Copy, Debug, PartialEq, uniffi::Record)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub struct Highlight {
     pub kind: HighlightKind,
     pub start_bottom: Point,
@@ -305,7 +298,7 @@ pub struct Highlight {
 
 /// One end of the selection on screen: the edge of its first or last line, where a handle for
 /// moving that end belongs.
-#[derive(Clone, Copy, Debug, PartialEq, uniffi::Record)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub struct SelectionEdge {
     pub bottom: Point,
     pub top: Point,
@@ -374,7 +367,7 @@ fn field_id(number: u64) -> FieldId {
 }
 
 /// A piece of a [`ShapeDraw`]'s outline, from where the one before ended.
-#[derive(Clone, Copy, Debug, PartialEq, uniffi::Enum)]
+#[derive(Clone, Copy, Debug, PartialEq)]
 pub enum SegmentDraw {
     Line {
         to: Point,
@@ -392,7 +385,7 @@ pub enum SegmentDraw {
 ///
 /// (The rest are part of the page as rendered.) An outline in device pixels, filled, drawn along
 /// with a pen, or both. Colors are 0xAARRGGBB.
-#[derive(Clone, Debug, PartialEq, uniffi::Record)]
+#[derive(Clone, Debug, PartialEq)]
 pub struct ShapeDraw {
     /// Which of [`Frame::pages`] it is on (an index): clip it to that page.
     pub page: u32,
@@ -410,16 +403,16 @@ pub struct ShapeDraw {
     pub segments: Vec<SegmentDraw>,
 }
 
-#[derive(Clone, Copy, Debug, uniffi::Record)]
+#[derive(Clone, Copy, Debug)]
 pub struct TileDraw {
-    /// Id of a tile previously handed out by [`ViewSession::take_finished`].
+    /// Id of a tile previously handed out as a [`FinishedTile`].
     pub id: u64,
     pub dest: Rect,
     /// The tile maps one to one onto device pixels: draw without filtering.
     pub exact: bool,
 }
 
-#[derive(Clone, Debug, uniffi::Record)]
+#[derive(Clone, Debug)]
 pub struct PageDraw {
     /// Zero-based page index.
     pub page: u32,
@@ -434,7 +427,9 @@ pub struct PageDraw {
 }
 
 /// Everything needed to draw the view once.
-#[derive(Clone, Debug, uniffi::Record)]
+///
+/// Kotlin gets it from `Native.frame`, encoded by [`hot`] and decoded by `ViewFrame.kt`.
+#[derive(Clone, Debug)]
 pub struct Frame {
     pub pages: Vec<PageDraw>,
     /// Tiles dropped from the cache since the last frame: release their bitmaps.
@@ -446,7 +441,7 @@ pub struct Frame {
     ///
     /// While zooming they come from a few fixed zoom levels and are scaled.
     pub settled: bool,
-    /// Call [`ViewSession::frame`] again after this many milliseconds even if nothing else happens:
+    /// Plan a frame again after this many milliseconds even if nothing else happens:
     /// that is when the view settles and sharpens.
     pub settles_in_ms: Option<u32>,
     /// Device pixels per PDF point that pages are drawn at.
@@ -468,7 +463,7 @@ pub struct Frame {
     pub two_pages: bool,
     /// With two pages: whether the first page is on its own.
     pub cover_alone: bool,
-    /// First page of the range set with [`ViewSession::set_thumbnail_range`].
+    /// First page of the range set with `Native.setThumbnailRange`.
     pub thumbnail_first: u32,
     /// For each page of that range, the id of its thumbnail tile, or 0 while it is still being
     /// rendered.
@@ -506,8 +501,8 @@ pub struct PageSize {
     pub height: f32,
 }
 
-/// A rendered tile waiting to be copied into a `Bitmap` of this size.
-#[derive(Clone, Copy, Debug, uniffi::Record)]
+/// A rendered tile waiting to be copied into a `Bitmap` of this size, with `Native.copyTile`.
+#[derive(Clone, Copy, Debug)]
 pub struct FinishedTile {
     pub id: u64,
     pub width: u32,
@@ -558,33 +553,11 @@ impl State {
 
     /// Does what a link or outline entry of file `source` asks for.
     fn follow(&mut self, source: SourceId, target: &Target) -> Activated {
-        // Destinations name pages of the file. Where such a page is now is the session's to say (it
-        // may be gone).
-        let destination = match target {
-            Target::Destination(d) => match self.session.position_of(source, d.page) {
-                Some(page) => Some(page),
-                None => return Activated::Nothing,
-            },
-            _ => None,
-        };
-        // Where the reader was is remembered for going back, except when only turning a page.
-        let viewer = &mut self.session.viewer;
-        match target {
-            Target::Destination(d) => {
-                let page = destination.unwrap_or(d.page);
-                viewer.jump(|v| v.go_to_pdf_position(page, d.left, d.top));
-            }
-            Target::Named(NamedAction::NextPage) => viewer.next_page(),
-            Target::Named(NamedAction::PrevPage) => viewer.previous_page(),
-            Target::Named(NamedAction::FirstPage) => {
-                viewer.jump(|v| v.go_to_page(0));
-            }
-            Target::Named(NamedAction::LastPage) => {
-                viewer.jump(|v| v.go_to_page(v.page_count().saturating_sub(1)));
-            }
-            Target::Uri(uri) => return Activated::Uri { uri: uri.clone() },
+        match self.session.follow(source, target) {
+            Followed::Nothing => Activated::Nothing,
+            Followed::Moved => Activated::Moved,
+            Followed::Uri(uri) => Activated::Uri { uri },
         }
-        Activated::Moved
     }
 }
 
@@ -1020,12 +993,6 @@ impl PdfFile {
         })
     }
 
-    /// Bytes already in memory.
-    #[uniffi::constructor]
-    pub fn from_bytes(data: Vec<u8>) -> Arc<Self> {
-        Arc::new(Self(data.into()))
-    }
-
     pub fn size(&self) -> u64 {
         self.0.len() as u64
     }
@@ -1037,7 +1004,7 @@ impl PdfFile {
 
     /// Up to `length` bytes starting at `offset`: fewer at the end of the file, none beyond it.
     ///
-    /// For recognising a file by parts of its content without copying all of it.
+    /// For recognizing a file by parts of its content without copying all of it.
     pub fn read(&self, offset: u64, length: u32) -> Vec<u8> {
         let size = self.0.len() as u64;
         let start = offset.min(size);
@@ -1048,18 +1015,7 @@ impl PdfFile {
 
 #[uniffi::export]
 impl ViewSession {
-    /// Opens a PDF. `cache_bytes` is the budget for tile bitmaps.
-    #[uniffi::constructor]
-    pub fn open(
-        data: Vec<u8>,
-        password: Option<String>,
-        cache_bytes: u64,
-        listener: Arc<dyn ViewListener>,
-    ) -> Result<Arc<Self>, PdfError> {
-        Self::open_data(data.into(), password, cache_bytes, listener)
-    }
-
-    /// Opens `file`, as [`open`](Self::open) does.
+    /// Opens `file`. `cache_bytes` is the budget for tile bitmaps.
     #[uniffi::constructor]
     pub fn open_file(
         file: Arc<PdfFile>,
@@ -1552,7 +1508,7 @@ impl ViewSession {
     /// A long press at (`x`, `y`): selects the word there and returns true, or does nothing and
     /// returns false if there is no text there.
     ///
-    /// Moving on with [`select_to`](Self::select_to) then selects word by word.
+    /// Moving on with `Native.selectTo` then selects word by word.
     pub fn select_word_at(&self, x: f64, y: f64) -> bool {
         let mut state = self.shared.lock();
         let (viewer, mut texts, selection) = state.session.text();
@@ -1572,7 +1528,7 @@ impl ViewSession {
     }
 
     /// Takes hold of one end of the selection (its end, or else its start), as when a handle is
-    /// touched: [`select_to`](Self::select_to) then moves that end, character by character, and the
+    /// touched: `Native.selectTo` then moves that end, character by character, and the
     /// other one stays.
     pub fn grab_selection(&self, end: bool) {
         let mut state = self.shared.lock();
@@ -1585,14 +1541,6 @@ impl ViewSession {
         let mut held = Selection::new(&mut texts, fixed, Granularity::Char);
         held.extend(&mut texts, moving);
         *selection = Some(held);
-    }
-
-    /// Extends the selection to the text nearest to (`x`, `y`): from the word first selected, or
-    /// moving the end last grabbed.
-    ///
-    /// `Native.selectTo` does the same without UniFFI's overhead, for drags.
-    pub fn select_to(&self, x: f64, y: f64) {
-        hot::select_to(self.id, x, y);
     }
 
     /// Selects the whole document.
@@ -1672,39 +1620,6 @@ impl ViewSession {
                 }
             })
             .collect()
-    }
-
-    /// The pages whose thumbnails are on screen (`count` may be 0).
-    ///
-    /// Frames report their tiles in [`Frame::thumbnails`], keep them cached, and request the ones
-    /// still missing.
-    pub fn set_thumbnail_range(&self, first: u32, count: u32) {
-        hot::set_thumbnail_range(self.id, first, count);
-    }
-
-    /// View size in logical pixels (dp) and device pixels per logical pixel (the display density,
-    /// such as 2.625).
-    pub fn set_viewport(&self, width: f64, height: f64, scale: f64) {
-        hot::set_viewport(self.id, width, height, scale);
-    }
-
-    /// Scrolls the content by this many logical pixels.
-    pub fn scroll_by(&self, dx: f64, dy: f64) {
-        self.shared
-            .lock()
-            .session
-            .viewer
-            .scroll_by(ViewVector::new(dx, dy));
-    }
-
-    /// Multiplies the zoom, keeping the content under (`x`, `y`) in place (logical pixels from the
-    /// view's top-left).
-    pub fn zoom_by(&self, factor: f64, x: f64, y: f64) {
-        self.shared
-            .lock()
-            .session
-            .viewer
-            .zoom_by(factor, ViewPoint::new(x, y));
     }
 
     /// Switches between swiping through pages and scrolling, keeping the page.
@@ -1842,27 +1757,6 @@ impl ViewSession {
         self.shared.lock().session.viewer.end_zoom_gesture();
     }
 
-    pub fn set_zoom_mode(&self, mode: ZoomMode) {
-        self.shared.lock().session.viewer.set_zoom_mode(match mode {
-            ZoomMode::Fixed => specto_view::ZoomMode::Fixed,
-            ZoomMode::FitWidth => specto_view::ZoomMode::FitWidth,
-            ZoomMode::FitPage => specto_view::ZoomMode::FitPage,
-        });
-    }
-
-    pub fn set_layout_mode(&self, mode: LayoutMode) {
-        self.shared
-            .lock()
-            .session
-            .viewer
-            .set_layout_mode(match mode {
-                LayoutMode::SinglePage => specto_view::LayoutMode::SinglePage,
-                LayoutMode::Continuous => specto_view::LayoutMode::Continuous,
-                LayoutMode::TwoPage => specto_view::LayoutMode::TwoPage,
-                LayoutMode::TwoPageContinuous => specto_view::LayoutMode::TwoPageContinuous,
-            });
-    }
-
     /// Shows `page` (zero-based) at the top of the view.
     ///
     /// For following the reader, as a strip of thumbnails does. A page the reader asked for is for
@@ -1908,21 +1802,6 @@ impl ViewSession {
         } else {
             state.session.viewer.previous_page();
         }
-    }
-
-    /// Plans what to draw now and queues the tiles that are still missing.
-    ///
-    /// Call after anything changed: input, a new viewport, or new tiles.
-    pub fn frame(&self) -> Frame {
-        self.shared.frame(&mut self.shared.lock())
-    }
-
-    /// Tiles that finished rendering.
-    ///
-    /// For each, create a bitmap of the given size and pass it to `Native.copyTile`, then call
-    /// [`frame`](Self::frame). Tiles not copied before the next call are discarded.
-    pub fn take_finished(&self) -> Vec<FinishedTile> {
-        self.shared.take_finished()
     }
 
     /// Drops every tile the last frame didn't use (`onTrimMemory`). Their ids show up in the next

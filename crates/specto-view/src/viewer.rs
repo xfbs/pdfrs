@@ -386,10 +386,10 @@ impl Viewer {
     /// spread, and while swiping the first of the spread under the middle of the viewport.
     pub fn current_page(&self) -> usize {
         if self.is_strip() {
-            let centre = self.scroll.x + self.viewport.width / 2.0;
+            let center = self.scroll.x + self.viewport.width / 2.0;
             let spreads = &self.layout.spreads;
             let i = spreads
-                .partition_point(|s| s.slot.max_x() < centre)
+                .partition_point(|s| s.slot.max_x() < center)
                 .min(spreads.len().saturating_sub(1));
             return spreads.get(i).map_or(0, |s| s.pages[0]);
         }

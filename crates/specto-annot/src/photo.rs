@@ -273,7 +273,7 @@ mod tests {
     }
 
     #[test]
-    fn ink_in_a_colour_and_photos_too_large() {
+    fn ink_in_a_color_and_photos_too_large() {
         let blue = InkSettings {
             color: Some(Color::new(0.0, 0.0, 1.0)),
             ..Default::default()

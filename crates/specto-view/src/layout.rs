@@ -249,7 +249,7 @@ mod tests {
     }
 
     #[test]
-    fn strip_centres_each_spread_in_a_viewport_sized_slot() {
+    fn strip_centers_each_spread_in_a_viewport_sized_slot() {
         // A portrait page, and a wide one zoomed past the viewport.
         let sizes = [PageSize::new(200.0, 300.0), PageSize::new(400.0, 100.0)];
         let spreads = group_spreads(2, false, false);

@@ -116,8 +116,8 @@ internal const val SHARE_MAX_CHARS = 100_000
 /** How thick the box around a picked annotation is drawn. */
 private val PICKED_OUTLINE = 2.dp
 
-private val MATCH_COLOUR = Color(0xFFFFD600)
-private val CURRENT_MATCH_COLOUR = Color(0xFFFF6D00)
+private val MATCH_COLOR = Color(0xFFFFD600)
+private val CURRENT_MATCH_COLOR = Color(0xFFFF6D00)
 
 /** Where a finger is dragging the selection, between pointer events. */
 private class SelectionDrag {
@@ -625,10 +625,10 @@ private fun PageCanvas(
                 for (corner in 1..3) path.lineTo(f.highlightX(i, corner), f.highlightY(i, corner))
                 path.close()
             }
-            drawPath(highlights[ViewFrame.HIGHLIGHT_MATCH], MATCH_COLOUR, alpha = 0.4f)
+            drawPath(highlights[ViewFrame.HIGHLIGHT_MATCH], MATCH_COLOR, alpha = 0.4f)
             drawPath(
                 highlights[ViewFrame.HIGHLIGHT_CURRENT_MATCH],
-                CURRENT_MATCH_COLOUR,
+                CURRENT_MATCH_COLOR,
                 alpha = 0.55f,
             )
             drawPath(highlights[ViewFrame.HIGHLIGHT_SELECTION], accent, alpha = 0.3f)
@@ -722,11 +722,11 @@ internal class ShapePainter {
 
 /**
  * A selection handle as Android draws them: a drop hanging below the line, its pointed corner at
- * the bottom of [edge] (see [handleCentre]).
+ * the bottom of [edge] (see [handleCenter]).
  */
-private fun DrawScope.drawHandle(edge: FloatArray, end: Boolean, radius: Float, colour: Color) {
-    val (x, y) = handleCentre(edge, end, radius)
-    drawCircle(colour, radius, Offset(x, y))
+private fun DrawScope.drawHandle(edge: FloatArray, end: Boolean, radius: Float, color: Color) {
+    val (x, y) = handleCenter(edge, end, radius)
+    drawCircle(color, radius, Offset(x, y))
     // The quarter towards the text is square, which makes the point.
-    drawRect(colour, Offset(if (end) x - radius else x, y - radius), Size(radius, radius))
+    drawRect(color, Offset(if (end) x - radius else x, y - radius), Size(radius, radius))
 }

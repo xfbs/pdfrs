@@ -73,7 +73,8 @@ use crate::{
     FinishedTile, Frame, HighlightKind, Point, Rect, SegmentDraw, ShapeDraw, ZoomMode, find_session,
 };
 
-/// See `ViewSession::set_viewport`.
+/// Sets the view size in logical pixels (dp), and the device pixels per logical pixel (the display
+/// density, such as 2.625).
 ///
 /// Here because the app animates its bars, which resizes the view on every frame. `false` if the
 /// session is closed.
@@ -102,7 +103,10 @@ pub fn scroll_by(session: u64, dx: f64, dy: f64) -> bool {
     true
 }
 
-/// See `ViewSession::set_thumbnail_range`. `false` if the session is closed.
+/// Sets the pages whose thumbnails are on screen (`count` may be 0).
+///
+/// Frames report their tiles in [`Frame::thumbnails`], keep them cached, and request the ones
+/// still missing. `false` if the session is closed.
 pub fn set_thumbnail_range(session: u64, first: u32, count: u32) -> bool {
     let Some(session) = find_session(session) else {
         return false;
@@ -141,7 +145,10 @@ pub fn zoom_by(session: u64, factor: f64, x: f64, y: f64) -> bool {
     true
 }
 
-/// See `ViewSession::select_to`. `false` if the session is closed.
+/// Extends the selection to the text nearest to (`x`, `y`): from the word first selected, or
+/// moving the end last grabbed.
+///
+/// `false` if the session is closed.
 pub fn select_to(session: u64, x: f64, y: f64) -> bool {
     let Some(session) = find_session(session) else {
         return false;
@@ -173,7 +180,10 @@ pub fn last_frame(session: u64, out: &mut [u8]) -> i64 {
     copy_out(&session.lock().encoded, out)
 }
 
-/// Like `ViewSession::take_finished`.
+/// Writes the tiles that finished rendering to `out`.
+///
+/// For each, the app creates a bitmap of the given size and passes it to `Native.copyTile`, then
+/// plans a frame. Tiles not copied before the next call are discarded.
 ///
 /// Sized so it always fits: at most `(out.len() - 8) / 16` tiles are announced, and the rest stay
 /// queued for the next call. Returns the number of bytes written (0: closed or no room).

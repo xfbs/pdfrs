@@ -8,7 +8,7 @@ use adw::prelude::*;
 use gtk::subclass::prelude::*;
 use gtk::{gdk, glib, graphene, gsk};
 use specto_geom::{DeviceRect, LayoutVector, ViewPoint, ViewSize, ViewVector};
-use specto_source::{NamedAction, Target};
+use specto_source::Target;
 use specto_view::{
     Granularity, Selection, Viewer, over_text, text_char, text_position, text_quads,
 };
@@ -16,7 +16,7 @@ use specto_view::{
 use crate::document::SharedDocument;
 use specto_annot::Segment;
 use specto_doc::SourceId;
-use specto_session::{DraftKind, Grip, LinkPreview, ViewShape};
+use specto_session::{DraftKind, Followed, Grip, LinkPreview, Session, ViewShape};
 
 /// Dragging a selection this close to the top or bottom edge (logical pixels) scrolls the view.
 const AUTOSCROLL_EDGE: f64 = 24.0;
@@ -318,29 +318,10 @@ impl Canvas {
 
     /// Follows a link or outline target in file `source`.
     pub fn follow(&self, source: SourceId, target: &Target) {
-        match target {
-            Target::Destination(d) => {
-                // Destinations name pages of the file, and pages may have moved or been deleted
-                // since.
-                let Some(doc) = self.imp().document.borrow().clone() else {
-                    return;
-                };
-                let Some(page) = doc.borrow().position_of(source, d.page) else {
-                    return;
-                };
-                self.jump(|v| v.go_to_pdf_position(page, d.left, d.top))
-            }
-            Target::Named(NamedAction::NextPage) => self.update_viewer(Viewer::next_page),
-            Target::Named(NamedAction::PrevPage) => self.update_viewer(Viewer::previous_page),
-            Target::Named(NamedAction::FirstPage) => self.jump(|v| v.go_to_page(0)),
-            Target::Named(NamedAction::LastPage) => {
-                self.jump(|v| v.go_to_page(v.page_count().saturating_sub(1)))
-            }
-            Target::Uri(uri) => {
-                if let Some(f) = self.imp().on_open_uri.borrow().as_ref() {
-                    f(uri);
-                }
-            }
+        if let Some(Followed::Uri(uri)) = self.update_session(|s| s.follow(source, target))
+            && let Some(f) = self.imp().on_open_uri.borrow().as_ref()
+        {
+            f(&uri);
         }
     }
 
@@ -617,18 +598,22 @@ impl Canvas {
 
     /// Applies a change to the viewer, then updates scrollbars and redraws.
     pub fn update_viewer(&self, f: impl FnOnce(&mut Viewer)) {
-        let Some(doc) = self.imp().document.borrow().clone() else {
-            return;
-        };
+        self.update_session(|s| f(&mut s.viewer));
+    }
+
+    /// [`update_viewer`](Self::update_viewer) for a change that needs the whole session. `None`
+    /// without a document.
+    fn update_session<R>(&self, f: impl FnOnce(&mut Session) -> R) -> Option<R> {
+        let doc = self.imp().document.borrow().clone()?;
         let place = |v: &Viewer| (v.scroll_offset(), v.zoom(), v.layout_mode());
-        let moved = {
+        let (result, moved) = {
             let mut d = doc.borrow_mut();
             let before = place(&d.viewer);
-            f(&mut d.viewer);
+            let result = f(&mut d);
             // Pages coming into view with their margins trimmed are measured before they are laid
             // out.
             d.trim_shown();
-            place(&d.viewer) != before
+            (result, place(&d.viewer) != before)
         };
         // What a link's preview points at moves with the view.
         if moved {
@@ -640,6 +625,7 @@ impl Canvas {
         if let Some(cb) = self.imp().on_view_changed.borrow().as_ref() {
             cb();
         }
+        Some(result)
     }
 
     /// [`update_viewer`](Self::update_viewer) for a change that takes the reader somewhere else:
@@ -705,15 +691,15 @@ impl Canvas {
         let Some(selection) = selection.as_ref().filter(|s| !s.is_empty()) else {
             return;
         };
-        let mut colour = adw::StyleManager::default().accent_color_rgba();
-        colour.set_alpha(0.35);
+        let mut color = adw::StyleManager::default().accent_color_rgba();
+        color.set_alpha(0.35);
         for page in pages {
             let quads = selection.view_quads(viewer, &mut texts, page.page);
             if quads.is_empty() {
                 continue;
             }
             snapshot.push_clip(&logical(page.rect, scale));
-            fill_quads(snapshot, &quads, &colour);
+            fill_quads(snapshot, &quads, &color);
             snapshot.pop();
         }
     }
@@ -1097,14 +1083,14 @@ impl Canvas {
             return;
         };
         for r in at {
-            let centre = graphene::Point::new(
+            let center = graphene::Point::new(
                 ((r.origin.x + r.size.width / 2.0) / scale) as f32,
                 ((r.origin.y + r.size.height / 2.0) / scale) as f32,
             );
             let backing = gsk::RoundedRect::from_rect(
                 graphene::Rect::new(
-                    centre.x() - BACKING / 2.0,
-                    centre.y() - BACKING / 2.0,
+                    center.x() - BACKING / 2.0,
+                    center.y() - BACKING / 2.0,
                     BACKING,
                     BACKING,
                 ),
@@ -1123,8 +1109,8 @@ impl Canvas {
             snapshot.pop();
             snapshot.save();
             snapshot.translate(&graphene::Point::new(
-                centre.x() - SIZE / 2.0,
-                centre.y() - SIZE / 2.0,
+                center.x() - SIZE / 2.0,
+                center.y() - SIZE / 2.0,
             ));
             paintable.snapshot(snapshot, SIZE as f64, SIZE as f64);
             snapshot.restore();
@@ -1669,7 +1655,7 @@ fn draw_shapes(snapshot: &gtk::Snapshot, shapes: &[ViewShape]) {
 }
 
 /// Fills quadrilaterals (view coordinates) with `color`.
-fn fill_quads(snapshot: &gtk::Snapshot, quads: &[[ViewPoint; 4]], colour: &gdk::RGBA) {
+fn fill_quads(snapshot: &gtk::Snapshot, quads: &[[ViewPoint; 4]], color: &gdk::RGBA) {
     if quads.is_empty() {
         return;
     }
@@ -1681,7 +1667,7 @@ fn fill_quads(snapshot: &gtk::Snapshot, quads: &[[ViewPoint; 4]], colour: &gdk::
         }
         builder.close();
     }
-    snapshot.append_fill(&builder.to_path(), gsk::FillRule::Winding, colour);
+    snapshot.append_fill(&builder.to_path(), gsk::FillRule::Winding, color);
 }
 
 /// Converts a rectangle in device pixels to the logical coordinates GTK snapshots use.

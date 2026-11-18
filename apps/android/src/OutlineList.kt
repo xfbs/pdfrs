@@ -104,11 +104,11 @@ fun OutlineList(state: PdfViewState, onPick: (Int) -> Unit, modifier: Modifier =
                     Box(Modifier.size(48.dp))
                 }
                 val scheme = MaterialTheme.colorScheme
-                val colour = if (i == here) scheme.primary else scheme.onSurface
+                val color = if (i == here) scheme.primary else scheme.onSurface
                 Text(
                     entry.title,
                     Modifier.weight(1f).padding(vertical = 8.dp),
-                    color = colour,
+                    color = color,
                     fontWeight = if (i == here) FontWeight.SemiBold else null,
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis,

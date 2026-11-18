@@ -120,7 +120,7 @@ fn paged_modes_lay_out_one_spread() {
 }
 
 #[test]
-fn short_content_is_centred() {
+fn short_content_is_centered() {
     let mut v = viewer(letters(1));
     v.set_zoom(0.5, ViewPoint::origin());
     let r = v.page_rect(0).unwrap();
@@ -358,7 +358,7 @@ fn scrolling_does_not_unsettle() {
 }
 
 #[test]
-fn missing_tiles_fall_back_to_neighbouring_levels() {
+fn missing_tiles_fall_back_to_neighboring_levels() {
     let mut v = viewer(letters(1));
     v.set_viewport(ViewSize::new(1000.0, 800.0), 1.0);
     v.set_zoom(2.0, ViewPoint::origin()); // level 2
@@ -724,11 +724,11 @@ fn swipe_zoom_pans_within_the_page() {
     // Pages can't be made smaller than fitting the viewport.
     v.zoom_by(0.01, anchor);
     assert!(close(v.zoom(), fit));
-    if let Some(centre) = v.snap_delta(ViewVector::zero()) {
+    if let Some(center) = v.snap_delta(ViewVector::zero()) {
         // Pinching out around a point off-center can leave the page slightly aside. Letting go
         // centers it again.
-        assert!(centre.x.abs() < 20.0, "{centre:?}");
-        v.scroll_by(centre);
+        assert!(center.x.abs() < 20.0, "{center:?}");
+        v.scroll_by(center);
     }
     assert_eq!(v.current_page(), 0);
     assert!(close(
@@ -750,7 +750,7 @@ fn swipe_zoom_pans_within_the_page() {
 }
 
 #[test]
-fn swipe_frames_use_each_pages_own_scale_and_prepare_the_neighbours() {
+fn swipe_frames_use_each_pages_own_scale_and_prepare_the_neighbors() {
     let mut v = swiper();
     v.set_viewport(ViewSize::new(1000.0, 800.0), 2.0);
     v.go_to_page(1);
@@ -774,8 +774,8 @@ fn swipe_frames_use_each_pages_own_scale_and_prepare_the_neighbours() {
     };
     assert!(sharp(1, s1) > 0 && sharp(0, s0) > 0 && sharp(2, s2) > 0);
     // The visible page's tiles come before the neighbors'.
-    let first_neighbour = f.requests.iter().position(|k| k.page != 1).unwrap();
-    assert!(f.requests[..first_neighbour].iter().any(|k| k.scale == s1));
+    let first_neighbor = f.requests.iter().position(|k| k.page != 1).unwrap();
+    assert!(f.requests[..first_neighbor].iter().any(|k| k.scale == s1));
 
     // Turning the page changes the scale, but nothing is zooming: the view stays settled and draws
     // exact tiles one to one right away.

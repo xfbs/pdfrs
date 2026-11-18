@@ -971,7 +971,7 @@ fn primary(key: &str) -> String {
     }
 }
 
-fn centre(v: &Viewer) -> ViewPoint {
+fn center(v: &Viewer) -> ViewPoint {
     ViewPoint::new(v.viewport().width / 2.0, v.viewport().height / 2.0)
 }
 

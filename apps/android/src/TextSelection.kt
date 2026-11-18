@@ -17,7 +17,7 @@ class HandleGrab(val end: Boolean, val dx: Float, val dy: Float)
  *
  * The handle at the selection's start hangs to the left, the one at its [end] to the right.
  */
-fun handleCentre(edge: FloatArray, end: Boolean, radius: Float): Pair<Float, Float> =
+fun handleCenter(edge: FloatArray, end: Boolean, radius: Float): Pair<Float, Float> =
     (edge[0] + if (end) radius else -radius) to (edge[1] + radius)
 
 /**
@@ -31,7 +31,7 @@ fun ViewFrame.handleAt(x: Float, y: Float, radius: Float, reach: Float): HandleG
     var nearest = reach
     for (end in listOf(false, true)) {
         val edge = (if (end) selectionEnd else selectionStart) ?: continue
-        val (cx, cy) = handleCentre(edge, end, radius)
+        val (cx, cy) = handleCenter(edge, end, radius)
         val distance = hypot(x - cx, y - cy)
         if (distance <= nearest) {
             nearest = distance

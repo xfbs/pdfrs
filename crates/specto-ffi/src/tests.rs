@@ -3,6 +3,46 @@ use std::time::Duration;
 
 use super::*;
 
+/// What the app does through JNI (`Native.kt`), called directly.
+impl ViewSession {
+    fn open(
+        data: Vec<u8>,
+        password: Option<String>,
+        cache_bytes: u64,
+        listener: Arc<dyn ViewListener>,
+    ) -> Result<Arc<Self>, PdfError> {
+        Self::open_data(data.into(), password, cache_bytes, listener)
+    }
+
+    fn set_thumbnail_range(&self, first: u32, count: u32) {
+        hot::set_thumbnail_range(self.id, first, count);
+    }
+
+    fn set_viewport(&self, width: f64, height: f64, scale: f64) {
+        hot::set_viewport(self.id, width, height, scale);
+    }
+
+    fn scroll_by(&self, dx: f64, dy: f64) {
+        hot::scroll_by(self.id, dx, dy);
+    }
+
+    fn zoom_by(&self, factor: f64, x: f64, y: f64) {
+        hot::zoom_by(self.id, factor, x, y);
+    }
+
+    fn select_to(&self, x: f64, y: f64) {
+        hot::select_to(self.id, x, y);
+    }
+
+    fn frame(&self) -> Frame {
+        self.shared.frame(&mut self.shared.lock())
+    }
+
+    fn take_finished(&self) -> Vec<FinishedTile> {
+        self.shared.take_finished()
+    }
+}
+
 /// `pages` pages of 200 by 300 points, each with a red triangle.
 fn sample_pdf(pages: usize) -> Vec<u8> {
     let content = "1 0 0 rg 0 0 m 200 0 l 200 300 l f";
@@ -203,7 +243,7 @@ fn scrolling_and_zooming_move_the_view() {
     let frame = session.frame();
     assert!((frame.zoom / before - 2.0).abs() < 1e-9);
     assert_eq!(frame.zoom_mode, ZoomMode::Fixed);
-    session.set_zoom_mode(ZoomMode::FitWidth);
+    session.fit();
     assert!((session.frame().zoom - before).abs() < 1e-9);
 }
 

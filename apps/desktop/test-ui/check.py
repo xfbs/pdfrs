@@ -306,16 +306,16 @@ def read_ppm(path):
     return width, height, pixels
 
 
-def page_colours(path, step=4):
+def page_colors(path, step=4):
     """Fraction of (sampled) pixels showing each page's color: {page: share}."""
     width, height, pixels = read_ppm(path)
-    colours = {c: i for i, c in enumerate(PALETTE[:PAGES])}
+    colors = {c: i for i, c in enumerate(PALETTE[:PAGES])}
     counts, total = {}, 0
     for y in range(0, height, step):
         row = pixels[y * width * 3 : (y + 1) * width * 3]
         for x in range(0, width * 3, step * 3):
             total += 1
-            i = colours.get(tuple(row[x : x + 3]))
+            i = colors.get(tuple(row[x : x + 3]))
             if i is not None:
                 counts[i] = counts.get(i, 0) + 1
     return {i: n / total for i, n in counts.items()}
@@ -668,21 +668,21 @@ class Window:
             time.sleep(0.05)
         return path
 
-    def colours(self, name):
-        return page_colours(self.screenshot(name))
+    def colors(self, name):
+        return page_colors(self.screenshot(name))
 
     def showing(self, page, name, share=0.25):
         """Checks that `page`'s color covers at least `share` of the window."""
-        c = self.colours(name)
+        c = self.colors(name)
         check(
             c.get(page, 0) >= share,
-            f"{name}: expected page {page} on screen, colours {fmt(c)}",
+            f"{name}: expected page {page} on screen, colors {fmt(c)}",
         )
         return c
 
 
-def fmt(colours):
-    return {p: round(s, 2) for p, s in sorted(colours.items())}
+def fmt(colors):
+    return {p: round(s, 2) for p, s in sorted(colors.items())}
 
 
 # Tests
@@ -855,7 +855,7 @@ def test_trim_margins(ctx):
     shown = [p for p, x, y, w, h in s["thumbnails"] if y + h / 2 < s["height"] and y + h / 2 > 0]
     deadline = time.time() + 10
     while True:
-        c = w.colours("trimmed-thumbnails")
+        c = w.colors("trimmed-thumbnails")
         missing = [p for p in shown if c.get(p, 0) < 0.005]
         if not missing or time.time() > deadline:
             break
@@ -1213,13 +1213,13 @@ def test_markup_bar(ctx):
     s = w.wait("quick picked", lambda s: s["annotation_picked"])
     check(s["markup_color"] == "yellow", s)
     w.action("markup-color", gvariant_str("blue"))
-    s = w.wait("recoloured", lambda s: s["undo"] == "Change Highlight")
+    s = w.wait("recolored", lambda s: s["undo"] == "Change Highlight")
     check(s["annotations"] == 3 and s["annotation_picked"] and s["markup_color"] == "blue", s)
     inp.keys(Input.ESCAPE)
     s = w.wait("let go", lambda s: not s["annotation_picked"])
     check(s["markup_color"] == "red", s)
     c = pixel(w, "blue", *quick)
-    check(c[2] > c[0] + 30, f"not recoloured to blue: {c}")
+    check(c[2] > c[0] + 30, f"not recolored to blue: {c}")
     w.screenshot("bar")
     # Activating the tool that is in lets go of it. So does closing the bar.
     w.action("markup-tool", gvariant_str("underline"))
@@ -2826,7 +2826,7 @@ def test_print_to_file(ctx):
     # Page 2 turned by the user and page ROTATED by its file are landscape.
     landscape = [i for i, (wide, _) in enumerate(pages) if wide]
     check(landscape == sorted([1, ROTATED]), f"landscape: {landscape}")
-    check([c for _, c in pages] == list(range(PAGES)), f"colours: {pages}")
+    check([c for _, c in pages] == list(range(PAGES)), f"colors: {pages}")
     # Selection: thumbnails 1 and 3 only.
     click_thumbnail(w, inp, 0)
     click_thumbnail(w, inp, 2, control=True)
@@ -2863,7 +2863,7 @@ def test_insert_file(ctx):
     w.action("debug-go-to", gvariant_str("3"))
     w.wait("the first inserted page", lambda s: s["page"] == 2)
     # (Original page 3's thumbnail shows in the sidebar, but not the page.)
-    c = w.colours("inserted")
+    c = w.colors("inserted")
     check(c.get(2, 0) < 0.1, f"page 3 of the original still shown: {fmt(c)}")
     # Searching finds text on the inserted pages, at their new positions.
     search_for(w, inp, "lazy")

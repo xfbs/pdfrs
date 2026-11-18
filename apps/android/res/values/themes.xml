@@ -1,5 +1,5 @@
 <resources>
     <!-- Only what shows before Compose draws (window background, splash);
-         the app's own colours come from the Compose theme. -->
+         the app's own colors come from the Compose theme. -->
     <style name="Theme.Specto" parent="android:Theme.Material.Light.NoActionBar" />
 </resources>

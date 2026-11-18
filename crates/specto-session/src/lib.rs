@@ -30,7 +30,7 @@ use specto_geom::{Crop, PageGeometry, PdfBox, ViewPoint};
 use specto_render::OpenError;
 use specto_render::scheduler::Scheduler;
 use specto_render::tile::DocId;
-use specto_source::{Link, PageLabels, PdfData, SourceDocument, Target};
+use specto_source::{Link, NamedAction, PageLabels, PdfData, SourceDocument, Target};
 use specto_text::SearchText;
 use specto_view::{Selection, Settings, ViewPage, Viewer};
 
@@ -49,6 +49,17 @@ pub const MAIN: SourceId = SourceId(0);
 
 /// A page of one of the files.
 type FilePage = (SourceId, u32);
+
+/// What following a link or an outline entry did ([`Session::follow`]).
+#[derive(Clone, Debug, PartialEq, Eq)]
+pub enum Followed {
+    /// Nothing: the page it leads to was deleted.
+    Nothing,
+    /// The view went somewhere else in the document.
+    Moved,
+    /// It leads outside the document. Opening it, after asking, is up to the app.
+    Uri(String),
+}
 
 /// What a frontend chooses when opening a document.
 #[derive(Clone, Debug)]
@@ -317,6 +328,31 @@ impl Session {
     pub fn link_at(&mut self, p: ViewPoint) -> Option<(SourceId, Target)> {
         let (position, link) = self.link_under(p)?;
         Some((self.edit.pages().get(position)?.source, link.target))
+    }
+
+    /// Does what a link or an outline entry of file `source` asks for.
+    ///
+    /// Where the reader was is remembered for going back, except when only turning a page.
+    pub fn follow(&mut self, source: SourceId, target: &Target) -> Followed {
+        match target {
+            Target::Destination(d) => {
+                // Destinations name pages of the file, which may have moved or been deleted since.
+                let Some(page) = self.position_of(source, d.page) else {
+                    return Followed::Nothing;
+                };
+                (self.viewer).jump(|v| v.go_to_pdf_position(page, d.left, d.top));
+            }
+            Target::Named(NamedAction::NextPage) => self.viewer.next_page(),
+            Target::Named(NamedAction::PrevPage) => self.viewer.previous_page(),
+            Target::Named(NamedAction::FirstPage) => {
+                self.viewer.jump(|v| v.go_to_page(0));
+            }
+            Target::Named(NamedAction::LastPage) => {
+                (self.viewer).jump(|v| v.go_to_page(v.page_count().saturating_sub(1)));
+            }
+            Target::Uri(uri) => return Followed::Uri(uri.clone()),
+        }
+        Followed::Moved
     }
 
     /// The link under `p` (viewport coordinates), and the position of the page it is on.
