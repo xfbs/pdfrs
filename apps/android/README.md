@@ -107,10 +107,9 @@ that aren't obvious from the file names:
 - `src/ViewFrame.kt`: one frame of the view as planned in Rust, decoded from
   the JNI call
 - `src/DocumentStore.kt`: recent documents and where each was left off
-- `res/values/strings.xml`: everything the app says, in English. The German
-  translation is a copy of it in `res/values-de/`, and another language is
-  another such copy. A unit test checks that each has every text, with its
-  placeholders
+- `res/values/strings.xml`: everything the app says, in English. The
+  translations in `res/values-<language>/` come from Crowdin. A unit test
+  checks that they have no texts of their own and keep the placeholders
 - `proguard-rules.pro`: what code shrinking must leave alone in a release build
 - `test/`, `test-ui/`: the unit tests and the UI tests. The test PDFs in
   `test-ui/assets` are written by `test-ui/make-fixtures.py`

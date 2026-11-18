@@ -76,8 +76,8 @@ A tag makes a release. The workflow in `.github/workflows/release.yml` builds
 the Flatpak for x86-64 and ARM and the signed APK of the Android app, and
 attaches them to a GitHub release with their checksums. The notes of the
 release are the version's section of [CHANGELOG.md](../CHANGELOG.md), with a
-link to the commits since the release before. The Android build needs the release key
-as secrets of the repository
+link to the commits since the release before. The Android build needs the
+release key as secrets of the repository
 ([apps/android/BUILDING.md](../apps/android/BUILDING.md)).
 
 1. Set the version in the file `VERSION`, which both apps show.
@@ -91,8 +91,8 @@ as secrets of the repository
 5. Commit, tag and push:
 
    ```sh
-   git tag v0.1
-   git push origin main v0.1
+   git tag "v$(cat VERSION)"
+   git push origin main "v$(cat VERSION)"
    ```
 
 The workflow fails if the tag doesn't name the version in `VERSION`, or if the
@@ -103,7 +103,7 @@ release. They are kept with the run, to download and try.
 A bundle is installed with:
 
 ```sh
-flatpak install specto-0.1-x86_64.flatpak
+flatpak install specto-*-x86_64.flatpak
 ```
 
 It fetches the GNOME runtime from Flathub if that isn't installed yet. A bundle
@@ -121,7 +121,8 @@ files and check them with Flathub's linter. The screenshot's URL in the
 metainfo must be reachable by then, since Flathub fetches the image from there.
 
 ```sh
-packaging/flatpak/flathub.sh v0.1 "$(git rev-parse 'v0.1^{commit}')" ../flathub-specto
+tag="v$(cat VERSION)"
+packaging/flatpak/flathub.sh "$tag" "$(git rev-parse "$tag^{commit}")" ../flathub-specto
 flatpak run --filesystem="$(realpath ../flathub-specto)" --command=flatpak-builder-lint \
     org.flatpak.Builder manifest ../flathub-specto/net.xfbs.specto.yml
 flatpak run --filesystem="$PWD" --command=flatpak-builder-lint \

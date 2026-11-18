@@ -334,7 +334,7 @@ the whole app and are kept across launches.
 
 ## General
 
-- In English and German, following the device's language. On Android 13 and
+- In more than 30 languages, following the device's language. On Android 13 and
   newer, the language can also be chosen for Specto alone in the system
   settings. Dates and numbers follow the language. Still in English: the reason
   given when a save or open fails, and the crash log

@@ -63,10 +63,11 @@ Builds are on the [releases page](https://github.com/xfbs/specto/releases).
 There are builds for Android (the APK, for phones and tablets with a 64-bit ARM
 processor) and Linux (a Flatpak bundle for x86_64 and one for aarch64).
 
-The Flatpak bundle is installed from a terminal:
+The Flatpak bundle is installed from a terminal, in the folder it was
+downloaded to:
 
 ```sh
-flatpak install specto-0.1-x86_64.flatpak
+flatpak install specto-*-x86_64.flatpak
 ```
 
 Neither updates itself, so a newer release is installed over the old one the

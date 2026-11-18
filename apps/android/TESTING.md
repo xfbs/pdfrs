@@ -272,8 +272,8 @@ Use a PDF with a form, such as a tax or application form.
 
 - Set the device to German, or on Android 13 and later choose German for
   Specto alone under Apps in the system settings. Menus, dialogs, messages and
-  Settings are in German, with dates and numbers as Germans write them. Any
-  other language gets English.
+  Settings are in German, with dates and numbers as Germans write them. A
+  language without a translation gets English.
 - Rotate the device while reading, while zoomed, and with Pages or Contents
   open: the same document and page, and nothing reloads.
 - Switch the system between light and dark, with the app open and with it

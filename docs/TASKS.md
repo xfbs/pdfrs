@@ -30,7 +30,6 @@ point to [DECISIONS.md](DECISIONS.md).
   bitmap, through cargo-ndk and UniFFI (D4, D5)
 - [x] The lopdf evaluation code removed. It was in `spikes/lopdf-spike`, last
   changed in commit 7273d64
-- [ ] GitLab CI, if the repository moves there.
 - [ ] More of a test corpus: the PDFium test files, and fixtures of our own for
   forms, rotated pages, crop boxes that differ from the media box, huge pages,
   scans and encrypted files.
@@ -197,8 +196,6 @@ point to [DECISIONS.md](DECISIONS.md).
   arrowheads for lines, and Shift for squares, circles and straight angles.
 - [ ] Check by hand how highlights look on a real screen and on the Mac, and
   that Preview, Papers and a browser show and can delete what was saved.
-- [ ] Android: build the app with the annotation edit kinds that were added to
-  the shared code without a Kotlin build.
 - [ ] Squiggly underlines drawn as a wavy line.
 - [ ] Text follow-ups: alignment, typing on pages shown rotated, and any font
   of the system together with characters beyond Windows Latin. Both of those
@@ -349,9 +346,9 @@ point to [DECISIONS.md](DECISIONS.md).
   readers.
 - [ ] Dark mode for page content, as an option.
 - [ ] Publish on Flathub (steps in
-  [packaging/README.md](../packaging/README.md)). The metainfo and the script
-  that writes the Flathub files are ready. Left to do: a tagged release, and
-  the pull request to Flathub.
+  [packaging/README.md](../packaging/README.md)). The metainfo, the script that
+  writes the Flathub files and tagged releases are ready. Left to do: the pull
+  request to Flathub.
 - [ ] deb and rpm packages. They need libadwaita 1.6 or newer from the
   distribution.
 - [ ] macOS: check where About Specto shows up. It is under Help in our menu
@@ -389,7 +386,7 @@ point to [DECISIONS.md](DECISIONS.md).
 Each app uses its platform's own mechanism, and the core crates carry no text
 that users see.
 
-- [x] Desktop: the app's texts go through gettext, in English only so far
+- [x] Desktop: the app's texts go through gettext
 - [x] Android: the app's texts are string resources
 - [x] Android: a German translation, with a unit test that holds every
   translation to the English texts
@@ -398,12 +395,14 @@ that users see.
 - [x] A Dutch translation of both apps
 - [x] Translations are contributed on Crowdin
 - [x] CI fails when the translation template isn't what its script writes
+- [x] More than 30 languages for both apps, most of them machine translated
 - [ ] Core: no text for users from the crates. The frontends map error kinds to
   their own translated messages instead of showing the crates' English text.
 - [ ] Numbers through the locale: page counts and the zoom percentage.
 - [ ] Desktop: translations on macOS. Check the build with Homebrew's gettext,
   which nobody has tried yet, and install the catalogs there.
-- [ ] Desktop: a German translation.
+- [ ] The machine translations checked by people who speak the language. German
+  and Dutch are checked already.
 - [ ] Right-to-left UI languages: check both apps under such a locale. GTK and
   Compose mirror on their own, but the sidebar side, the thumbnail strip and
   icons with a direction need a look. The page canvas does not mirror.

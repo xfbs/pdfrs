@@ -3,6 +3,8 @@
 What changed in each release of Specto, for the people who use it. Both apps
 share one version. A release's section is its notes on GitHub.
 
+## Unreleased
+
 ## 0.2 (2026-11-18)
 
 ### Both apps

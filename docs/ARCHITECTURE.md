@@ -473,8 +473,8 @@ The Android app is written in Kotlin with Jetpack Compose.
 None of this exists yet. The tasks are in [TASKS.md](TASKS.md).
 
 - **More of forms.** A fallback font for text outside Latin and the forms of
-  inserted files. On Android, lists with several choices and typing on the
-  page, where a dialog asks for a field's text today.
+  inserted files. On Android, typing on the page, where a dialog asks for a
+  field's text today.
 - **Passwords.** A dialog to add, change or remove a document's passwords (see
   D9 in [DECISIONS.md](DECISIONS.md)).
 - **More markup on Android.** It marks text today. Drawing, shapes, text boxes
