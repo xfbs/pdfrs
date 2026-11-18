@@ -124,9 +124,11 @@ base64 < ~/specto-release.jks | tr -d '\n'
 ```
 
 The workflow stops without publishing anything if the tag and `VERSION`
-differ, if a secret is missing, or if the APK turns out to be signed with a
-debug key. The APK is for arm64-v8a, which every phone and tablet with a 64-bit
-processor runs.
+differ, if the changelog or the metainfo has no entry for the version, if a
+secret is missing, or if the APK turns out to be signed with a debug key.
+
+The APK is for arm64-v8a, which every phone and tablet with a 64-bit processor
+runs.
 
 ## Emulators on Intel and AMD machines
 

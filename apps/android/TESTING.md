@@ -219,6 +219,7 @@ Use a PDF with a form, such as a tax or application form.
   # Ends the app in the background, as Android does when it needs the memory.
   adb shell am kill net.xfbs.specto
   ```
+
 - Edit, close the document with Discard, and open it again: no edits.
 - Edit, then choose Discard changes in the overflow menu: it asks, and then the
   document is as the file is, without "Edited".
@@ -286,13 +287,12 @@ Use a PDF with a form, such as a tax or application form.
 
 ## Reporting
 
-For each failure, note:
+Report each failure as an
+[issue on GitHub](https://github.com/xfbs/specto/issues/new/choose), whose bug
+template asks for the version, the device and the crash log. Also note:
 
 - the feature (section and bullet in FEATURES.md) or check (section here)
-- the device and Android version
 - what happened instead, with a screenshot or recording if it's visual
-
-For crashes, attach the crash log from Settings.
 
 The "Not yet" section of FEATURES.md lists what's missing on purpose. Those
 aren't bugs.

@@ -33,7 +33,7 @@ The main features are below, and the full list is in
 - **Forms**: filling in text fields, checkboxes, radio buttons, menus and
   lists
 - **Editing**: rotating, deleting and reordering pages, with undo and redo, and
-  saving the result
+  saving the result. Unsaved edits are kept until they are saved or discarded
 - **Tablets**: a sidebar, and two pages side by side on wide windows,
   optionally with the cover page on its own
 - **Printing and sharing**: with the system's print dialog and share sheet
@@ -42,10 +42,9 @@ The main features are below, and the full list is in
 - **Usability**: full screen, keyboard navigation, light and dark mode, document
   properties, and optionally keeping the screen on and turning pages with the
   volume keys
-- **Languages**: English and German
+- **Languages**: more than 30, following the device's language
 
-Coming next: inserting pages from other documents and more kinds of
-annotations.
+Coming next: more kinds of annotations, and colors to mark text with.
 
 ## Implementation
 
