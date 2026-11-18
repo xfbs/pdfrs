@@ -39,6 +39,10 @@ modules:
         skip:
           - target
           - .git
+          - .claude
+          - .flatpak-builder
+          - corpus/files
+          - out
           - apps/android
           - packaging/flatpak/cargo-sources.json
       - cargo-sources.json

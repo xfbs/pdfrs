@@ -112,6 +112,7 @@ that aren't obvious from the file names:
 - `proguard-rules.pro`: what code shrinking must leave alone in a release build
 - `test/`, `test-ui/`: the unit tests and the UI tests. The test PDFs in
   `test-ui/assets` are written by `test-ui/make-fixtures.py`
+- `store/`: the 512 by 512 pixel icon for app store listings, as SVG and PNG
 - `screenshot-phone.png`, `screenshot-tablet.png`: the screenshots above, taken
   on the emulators with the same document as the desktop app's screenshot
   (hwloc's manual, BSD license)
