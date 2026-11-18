@@ -1,7 +1,9 @@
 # Task list
 
 Milestones are ordered by dependency. Within each milestone, finished tasks
-come first, in the order they were done, followed by the open ones.
+come first, in the order they were done, followed by the open ones. Finished
+tasks are trimmed now and then, down to those that add context, such as a
+measurement or what an open task builds on.
 
 What the apps do today is described in
 [apps/desktop/FEATURES.md](../apps/desktop/FEATURES.md) and
@@ -10,26 +12,16 @@ point to [DECISIONS.md](DECISIONS.md).
 
 ## M0: Evaluations and foundations
 
-- [x] Cargo workspace
-- [x] CI on GitHub Actions, in Fedora containers: formatting, lints and tests
-  for the Rust code, and the headless checks of the desktop app
-- [x] License decision: MIT or Apache 2.0 (D6)
-- [x] Test corpus: the pdf.js test PDFs
 - [x] hayro evaluation: rendering the corpus, compared with Poppler, with
   failures and timing recorded (D1)
-- [x] hayro evaluation: rendering page content without annotations
-- [x] lopdf evaluation: delete, merge, reorder, and an incremental highlight
-  (D2)
-- [x] lopdf evaluation: encrypting, encrypted incremental save, and editing an
-  encrypted file with its encryption kept (D9)
+- [x] lopdf evaluation: delete, merge, reorder, an incremental highlight, and
+  encrypted saves (D2, D9). The code was in `spikes/lopdf-spike` until commit
+  7273d64
 - [x] Preview's handling of passwords checked on a Mac (D9)
-- [x] GTK 4 canvas evaluation: a custom widget drawing tiles, with continuous
-  scrolling and zooming at about 55 frames per second (D3)
-- [x] Canvas evaluation checked on real hardware
+- [x] GTK 4 canvas evaluation, also on real hardware: a custom widget drawing
+  tiles, scrolling and zooming at about 55 frames per second (D3)
 - [x] Android evaluation: a Compose app in which Rust renders a page into a
   bitmap, through cargo-ndk and UniFFI (D4, D5)
-- [x] The lopdf evaluation code removed. It was in `spikes/lopdf-spike`, last
-  changed in commit 7273d64
 - [ ] More of a test corpus: the PDFium test files, and fixtures of our own for
   forms, rotated pages, crop boxes that differ from the media box, huge pages,
   scans and encrypted files.
@@ -44,46 +36,15 @@ point to [DECISIONS.md](DECISIONS.md).
 - [x] Guards for expensive pages: they render one tile at a time, workers free
   their decoded images after a heavy page, and extra workers start while
   renders are stalled
-- [x] A spinner over expensive pages that aren't sharp yet, on the desktop and
-  on Android
 - [x] hayro's render cache kept between renders, which made tiles 1.4 to 6
   times faster
-- [x] Typed coordinate spaces and page geometry
-- [x] Opening and decryption, metadata, the outline, links and named
-  destinations, with every walk through a file bounded
 - [x] Large files (64 MB and up) memory-mapped instead of read
-- [x] Page labels, in all five numbering styles, shown and accepted by both
-  apps
-- [x] The document trait with its hayro backend, rendering tiles at any scale
-- [x] The render scheduler and the tile cache
-- [x] HiDPI: pages and tiles placed on whole device pixels, and zoom levels
-  that are only ever scaled down
+- [x] HiDPI: pages, tiles and the canvas placed on whole device pixels, zoom
+  levels that are only ever scaled down, and settled views drawn from tiles at
+  the exact device scale
 - [x] HiDPI: tiles drawn as plain texture nodes, which fixed the blur
-- [x] HiDPI: settled views drawn from tiles at the exact device scale
-- [x] HiDPI: the canvas snapped to a whole device pixel at fractional scales
-- [x] Tile cache and scheduler fixes found while reviewing the Android app
-- [x] Viewer: the four layouts, and the cover page alone
-- [x] Viewer: viewport, zoom anchored at the pointer, scrolling, paging,
-  hit-testing, and frames with fallback tiles and prioritized requests
-- [x] Desktop: the canvas widget, with native scrollbars, kinetic scrolling,
-  and zoom by scrolling and pinching
-- [x] Desktop: thumbnail sidebar, page entry, layout and zoom menus, keyboard
-  navigation
-- [x] Desktop: outline sidebar
-- [x] Desktop: opening by dialog, drag and drop or command line, the password
-  prompt and the start page
-- [x] Desktop: recent files, and the view state remembered per file
-- [x] Desktop: one scheduler shared by all windows
-- [x] Desktop: headless checks in CI, at scales 1, 1.25 and 2
-- [x] Desktop: headless checks with a virtual pointer and keyboard
-- [x] Desktop: links
-- [x] Android: outline and links
-- [x] Desktop: Properties dialog, with how the file is protected
 - [x] Back and forward after a jump, in the viewer and on the desktop
-- [x] Desktop: a preview of where a link leads, on resting the pointer on it
-- [x] Trim margins: each page shown by the box of what it draws, measured as it
-  is shown, in the single and two page layouts, in the viewer and on the
-  desktop
+- [x] Trim margins in the viewer and on the desktop
 - [ ] Upstream in hayro: decode images only for the region and resolution
   being drawn. One tile of a 212-megapixel JPEG 2000 page still costs 4.5 GB
   and 10 seconds at 100%, which no scheduling can fix.
@@ -103,10 +64,6 @@ point to [DECISIONS.md](DECISIONS.md).
   build on
 - [x] The text layer: glyphs with their positions, words and lines in content
   order, and right-to-left text in logical order
-- [x] Text selection by dragging, double click and triple click, and copying
-- [x] Search on the desktop, ignoring case and accents, with pages indexed in
-  the background
-- [x] A cache of the text layer per page
 - [ ] Reading order by layout (columns, blocks), for files whose content stream
   isn't in reading order. That is about 5% of the corpus, mostly forms and
   flyers.
@@ -120,26 +77,11 @@ point to [DECISIONS.md](DECISIONS.md).
 
 ## M3: Page editing
 
-- [x] The edit model: a page list with undo and redo, and a version number that
-  tracks whether the document is modified
-- [x] Edits in the model: delete, move, rotate and insert pages
-- [x] Desktop: rotating, with undo and redo named in the menu
-- [x] Desktop: deleting pages
-- [x] Desktop: moving pages by dragging thumbnails
-- [x] Desktop: documents with pages from several files, and Insert Pages from
-  File
 - [x] Saving as a full rewrite, with the result read back and checked page by
   page. On the corpus, 1,066 of 1,077 files come out identical, 11 are refused
   and none is damaged
-- [x] Page labels kept through edits, in the apps and in saved files
-- [x] Desktop: selecting several thumbnails
-- [x] Desktop: PDFs dropped on the thumbnails are inserted there
-- [x] Desktop: dragging pages between windows
-- [x] Desktop: Save and Save As, and the question about unsaved changes
-- [x] Desktop: Export Selected Pages
-- [x] Property test for undo and redo over random edit sequences
-- [x] Round-trip tests for saving, checked with qpdf
 - [x] Desktop: noticing that the open file changed on disk
+- [x] Android: unsaved edits kept as a draft in the shared store
 - [ ] Save the 11 corpus files that are refused. lopdf can't read damaged
   cross-reference tables or page trees that hayro recovers, and one file has an
   encryption dictionary that lopdf encrypts wrongly. Building the objects from
@@ -158,29 +100,14 @@ point to [DECISIONS.md](DECISIONS.md).
 
 ## M4: Markup
 
-- [x] The annotation model, and reading the markup a file has
-- [x] Annotation edits in the edit model, on the same undo history as page
-  edits
-- [x] Desktop: Highlight, Underline and Strikethrough on the selected text,
-  saved as annotations
 - [x] Desktop: annotations a file already has can be picked and deleted. The
   page is then rendered from a copy without the annotation
-- [x] Annotations the app draws are also in thumbnails and in print, and go
-  along with pages dragged to another window
-- [x] Desktop: the markup toolbar, with a color per tool
-- [x] Desktop: drawing tools for freehand, rectangle, ellipse and line
 - [x] Saving checks that a changed or deleted annotation is where it was found
-- [x] Desktop: text boxes and notes
-- [x] Desktop: typing a text box on the page, in its font, size and color
-- [x] Desktop: moving and resizing drawings and shapes
 - [x] Markup written by Specto is recognized when a file is opened again, so it
   can still be changed
-- [x] Desktop: a list of all markup in the sidebar
 - [x] Desktop: signatures, drawn or taken from a photo, kept with the app's
-  data and placed with a click
-- [x] Desktop: font, bold, italic and size for text boxes, in the three font
-  families no PDF needs to embed
-- [x] Android: markup shows in the thumbnails
+  data
+- [x] Desktop: text boxes in the three font families no PDF needs to embed
 - [x] Saves that only add markup or form values are appended to the file,
   also for encrypted files
 - [ ] Page copies for deleted annotations are written while the user waits.
@@ -217,18 +144,9 @@ point to [DECISIONS.md](DECISIONS.md).
 
 ## M5: Forms
 
-- [x] The forms crate: the field tree, inheritance, widgets by page, flags
 - [x] Filled-in values in the edit document, with undo, and saved with new looks
-- [x] Desktop: checkboxes, radio buttons and typing into text fields
-- [x] Desktop: Tab between fields, Space and Enter on the field in focus
-- [x] Menus and lists to choose one option from
-- [x] Comb fields, hidden passwords, and text fields on turned pages
-- [x] Android: filling in boxes, radio buttons, text fields, menus and lists
 - [x] Values a file leaves to the reader to draw are shown
-- [x] Menus that take typed text, and lists that take several choices
-- [x] Comb fields with their letters in their cells while typing
-- [x] Tab order by rows or columns, highlighting fields, and resetting a form
-- [x] Android: typed menu choices, lists of several, highlighting and resetting
+- [x] Every kind of field filled in, in both apps
 - [ ] An embedded fallback font for text outside Latin.
 - [ ] Android: typing into a text field on the page instead of in a dialog,
   and a way from one field to the next from the keyboard.
@@ -237,55 +155,15 @@ point to [DECISIONS.md](DECISIONS.md).
 
 ## M6: Android
 
-- [x] The view session over the viewer and the scheduler, through UniFFI
 - [x] The session crate: one type for the open document, shared by both apps
-- [x] Editing commands through the FFI: rotate, delete, move, undo, redo and
-  saving
 - [x] Tiles: Kotlin owns a bitmap per tile and fills it through JNI, with the
   cache bookkeeping in Rust
-- [x] The Compose viewer: scrolling with fling, pinch and double-tap zoom, the
-  page indicator, and rotation without reloading
 - [x] The work done on every frame moved from UniFFI to JNI
-- [x] Kotlin unit tests, in CI
-- [x] UI tests for most of the feature list, on a phone and a tablet emulator
-- [x] UI tests in CI, for pushes to the main branch
-- [x] Release build measured on a phone
-- [x] CI lints the JNI code that only compiles for Android
-- [x] Top bar with the page grid, the overflow menu and the password prompt
-- [x] One page at a time with swipes, as the default on phones
-- [x] Printed page numbers
+- [x] UI tests on a phone and a tablet emulator, in CI for pushes to the main
+  branch
 - [x] Turning the page returns to the fitted view
-- [x] Thumbnail strip along the bottom
-- [x] Full screen
-- [x] Scrolling the strip flips through the document
-- [x] Outline, as a second tab beside the page grid
-- [x] Links
-- [x] Tablet layout, with a sidebar on wide windows
-- [x] Two pages side by side on wide windows
-- [x] Keyboard navigation
-- [x] Tablet polish: the indicator names both pages, and the sidebar is
-  remembered
-- [x] Opening from the file picker and from other apps
-- [x] Reading position and recent documents
-- [x] Sharing the open document
 - [x] Opening through a file descriptor, without reading the file into the
   app's memory
-- [x] Save as
-- [x] Save, over the file the document was opened from
-- [x] Page organizer: picking pages, rotating and deleting them
-- [x] Page organizer: dragging to reorder
-- [x] Text markup: highlighting, underlining and striking through the selected
-  text, and deleting a picked annotation
-- [x] Text selection with handles, and copying
-- [x] Sharing the selected text
-- [x] Search
-- [x] Document properties
-- [x] The view button and its menu, with fit page and fit width
-- [x] Settings screen
-- [x] Setting: keep the screen on while reading
-- [x] Setting: volume keys turn pages
-- [x] ktlint formats the Kotlin code and checks it in CI
-- [x] Unsaved edits kept as a draft, back after Android ended the app
 - [ ] Pages of other files through the FFI, when the app gets a way to ask for
   them.
 - [ ] Find out what Preview does with the zoom when turning a page while zoomed
@@ -317,23 +195,12 @@ point to [DECISIONS.md](DECISIONS.md).
 ## M7: Polish and hardening
 
 - [x] Printing on the desktop, with pages rendered at 300 dpi
-- [x] Printing on Android, by handing the document to the system's print
-  service
-- [x] Password prompt when opening encrypted PDFs, in both apps
-- [x] Flatpak, checked in the sandbox
-- [x] Android: release builds signed with a key of their own
 - [x] Android: code shrinking in the release build, which took the APK from
   16.4 to 9.4 MB
 - [x] The app's name and ID settled: Specto, `net.xfbs.specto`
-- [x] Desktop integration files: the launcher entry and the AppStream metainfo
-- [x] The icon: a page under a magnifying glass
-- [x] Desktop: the About dialog
-- [x] cargo-deny in CI, for security advisories and license compatibility
-- [x] Desktop: large files opened without reading them into memory
-- [x] Android: a crash log, which Settings shows
-- [x] Android: a tag builds, signs and publishes the APK as a GitHub release
-- [x] A tag builds Flatpak bundles in CI and attaches them to the same release
 - [x] Permission flags: shown in Properties, kept on saving, not enforced (D9)
+- [x] A tag builds both apps and publishes them as a GitHub release, with the
+  changelog as its notes
 - [ ] Vector printing on the desktop: send the pages themselves instead of
   images, for smaller files when printing to a file and for selectable text.
 - [ ] Document security dialog, like Preview's: add, change or remove the two
@@ -386,16 +253,11 @@ point to [DECISIONS.md](DECISIONS.md).
 Each app uses its platform's own mechanism, and the core crates carry no text
 that users see.
 
-- [x] Desktop: the app's texts go through gettext
-- [x] Android: the app's texts are string resources
-- [x] Android: a German translation, with a unit test that holds every
-  translation to the English texts
-- [x] Desktop: the translation catalogs are built and installed, also in the
-  Flatpak, with a headless check that starts the app in another language
-- [x] A Dutch translation of both apps
 - [x] Translations are contributed on Crowdin
-- [x] CI fails when the translation template isn't what its script writes
 - [x] More than 30 languages for both apps, most of them machine translated
+- [x] Checks that catch broken translations: a unit test of the Android
+  placeholders, and msgfmt on the desktop catalogs. Crowdin's own checks
+  missed a lost number in plurals
 - [ ] Core: no text for users from the crates. The frontends map error kinds to
   their own translated messages instead of showing the crates' English text.
 - [ ] Numbers through the locale: page counts and the zoom percentage.
