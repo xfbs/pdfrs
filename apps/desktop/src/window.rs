@@ -130,7 +130,7 @@ impl Window {
             .vexpand(true)
             .build();
 
-        // Over the page view: where text is typed onto the page (see `edit_text_box`). Above it,
+        // Over the page view: where text is typed onto the page (see `edit_text`). Above it,
         // the markup bar, added below.
         let page_overlay = gtk::Overlay::new();
         page_overlay.set_child(Some(&scrolled));

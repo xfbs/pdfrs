@@ -2,12 +2,12 @@
 //! drawings, shapes, notes).
 //!
 //! An [`Annotation`] here is plain data in the coordinates of its page of the file (PDF space), so
-//! it stays where it is when the page is rotated or moved in the document. [`import`] reads the
+//! it stays where it is when the page is rotated or moved in the document. [`import()`] reads the
 //! ones a file already has. What a document's annotations currently are (those of its files, minus
 //! the deleted, plus the new) is kept by `specto-doc`. This crate knows nothing of documents.
 //!
-//! Not every annotation in a file is markup: links belong to `specto-source`, form fields will
-//! belong to the forms crate, and popups are windows of other annotations. [`import`] leaves those
+//! Not every annotation in a file is markup: links belong to `specto-source`, form fields
+//! belong to the forms crate, and popups are windows of other annotations. [`import()`] leaves those
 //! out, and saving leaves them alone.
 
 mod import;

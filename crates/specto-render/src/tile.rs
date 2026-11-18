@@ -220,17 +220,6 @@ impl<T> TileCache<T> {
         }
     }
 
-    /// Removes everything belonging to `doc`.
-    pub fn remove_document(&mut self, doc: DocId) {
-        self.map.retain(|k, e| {
-            let keep = k.doc != doc;
-            if !keep {
-                self.bytes -= e.bytes;
-            }
-            keep
-        });
-    }
-
     pub fn len(&self) -> usize {
         self.map.len()
     }
@@ -381,10 +370,6 @@ mod tests {
         assert!(c.bytes() <= 100, "{}", c.bytes());
         assert!(c.contains(&key(7, -4))); // the newest
         assert!(!c.contains(&key(0, -4))); // the oldest placeholder went
-
-        c.remove_document(DocId(0));
-        assert!(c.is_empty());
-        assert_eq!(c.bytes(), 0);
     }
 
     #[test]

@@ -11,19 +11,9 @@ on:
       - apps/android/res/values/strings.xml
       - apps/desktop/po/specto.pot
       - crowdin.yml
-  # "Run workflow" in the Actions tab.
+  # "Run workflow" in the Actions tab: fetches the translations and opens a
+  # pull request with them.
   workflow_dispatch:
-    inputs:
-      task:
-        description: What to do
-        type: choice
-        default: download
-        options:
-          # Fetches the translations and opens a pull request with them.
-          - download
-          # Sends the translations in the repository to Crowdin: once, for
-          # those made before Crowdin was set up.
-          - upload-translations
 
 jobs:
   upload:
@@ -40,22 +30,8 @@ jobs:
           CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
           CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
 
-  upload-translations:
-    if: github.event_name == 'workflow_dispatch' && inputs.task == 'upload-translations'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: crowdin/github-action@v2
-        with:
-          upload_sources: true
-          upload_translations: true
-          download_translations: false
-        env:
-          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
-          CROWDIN_PERSONAL_TOKEN: ${{ secrets.CROWDIN_PERSONAL_TOKEN }}
-
   download:
-    if: github.event_name == 'workflow_dispatch' && inputs.task == 'download'
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     permissions:
       # To push the branch with the translations and open the pull request.

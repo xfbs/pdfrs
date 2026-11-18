@@ -5,7 +5,7 @@
 //! lines too, and a word broken by a hyphen at the end of a line joined again. Each byte maps back
 //! to the character it came from, so matches become character ranges, which the text page turns
 //! into highlights. It takes about 5 bytes per character, so a whole document's worth can be kept,
-//! unlike the full [`TextPage`](crate::TextPage)s.
+//! unlike the full [`TextPage`]s.
 //!
 //! Matching follows content order (like selection), so right-to-left text drawn in visual order
 //! isn't found yet.

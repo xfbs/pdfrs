@@ -23,7 +23,6 @@ specto-geom.workspace = true
 specto-render.workspace = true
 specto-session.workspace = true
 specto-source.workspace = true
-specto-text.workspace = true
 specto-write.workspace = true
 specto-view.workspace = true
 

@@ -240,17 +240,6 @@ pub struct Destination {
     pub top: Option<f64>,
 }
 
-impl Destination {
-    /// The target position as a PDF-space point, with missing coordinates filled from `fallback`
-    /// (usually the page's visible top-left corner).
-    pub fn point_or(&self, fallback: PdfPoint) -> PdfPoint {
-        PdfPoint::new(
-            self.left.unwrap_or(fallback.x),
-            self.top.unwrap_or(fallback.y),
-        )
-    }
-}
-
 /// Built-in navigation of the `/Named` action.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum NamedAction {
@@ -307,7 +296,7 @@ impl SourceDocument {
         Ok(Self::from_pdf(open_pdf(data.into(), password)?))
     }
 
-    pub fn from_pdf(pdf: Pdf) -> Self {
+    fn from_pdf(pdf: Pdf) -> Self {
         let page_ids = pdf
             .pages()
             .iter()

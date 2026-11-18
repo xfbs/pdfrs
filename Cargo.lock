@@ -2124,7 +2124,6 @@ dependencies = [
  "specto-render",
  "specto-session",
  "specto-source",
- "specto-text",
  "specto-view",
  "specto-write",
 ]

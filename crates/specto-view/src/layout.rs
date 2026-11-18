@@ -51,7 +51,11 @@ impl LayoutMode {
 ///
 /// With `cover_alone`, the first page stands on its own (like a book cover), so that even pages end
 /// up on the left.
-pub fn group_spreads(page_count: usize, two_page: bool, cover_alone: bool) -> Vec<Vec<usize>> {
+pub(crate) fn group_spreads(
+    page_count: usize,
+    two_page: bool,
+    cover_alone: bool,
+) -> Vec<Vec<usize>> {
     if !two_page {
         return (0..page_count).map(|i| vec![i]).collect();
     }

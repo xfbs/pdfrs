@@ -13,7 +13,7 @@ mod search;
 mod selection;
 mod viewer;
 
-pub use layout::{LayoutMode, group_spreads};
+pub use layout::LayoutMode;
 pub use search::{SearchMatch, SearchResults};
 pub use selection::{
     Granularity, Selection, TextPages, TextPos, over_text, text_char, text_position, text_quads,

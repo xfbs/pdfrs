@@ -445,7 +445,7 @@ impl Viewer {
     }
 
     /// Where a point on page `i` is on screen.
-    pub fn page_to_view(&self, i: usize, p: PagePoint) -> Option<ViewPoint> {
+    pub(crate) fn page_to_view(&self, i: usize, p: PagePoint) -> Option<ViewPoint> {
         let r = self.page_rect(i)?;
         let zoom = self.zoom_of(self.page_spread[i]);
         Some(ViewPoint::new(

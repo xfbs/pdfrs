@@ -104,7 +104,7 @@ impl PageLabels {
 
     /// The labels of pages labeled one by one, as ranges: a range goes on while the labels continue
     /// each other, or `None` for no pages.
-    pub fn from_pages(labels: &[PageLabel]) -> Option<Self> {
+    fn from_pages(labels: &[PageLabel]) -> Option<Self> {
         let mut ranges: Vec<LabelRange> = Vec::new();
         for (i, label) in labels.iter().enumerate() {
             let continues = i > 0 && {

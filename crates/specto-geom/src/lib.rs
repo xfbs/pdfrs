@@ -49,8 +49,6 @@ pub type PdfBox = Box2D<f64, PdfSpace>;
 pub type PdfVector = Vector2D<f64, PdfSpace>;
 pub type PagePoint = Point2D<f64, PageSpace>;
 pub type PageSize = Size2D<f64, PageSpace>;
-pub type PageRect = Rect<f64, PageSpace>;
-pub type PageVector = Vector2D<f64, PageSpace>;
 pub type LayoutPoint = Point2D<f64, LayoutSpace>;
 pub type LayoutRect = Rect<f64, LayoutSpace>;
 pub type LayoutSize = Size2D<f64, LayoutSpace>;
@@ -116,7 +114,6 @@ impl<U> Quad<U> {
 }
 
 pub type PdfQuad = Quad<PdfSpace>;
-pub type PageQuad = Quad<PageSpace>;
 
 /// Fallback size for degenerate pages: A4 (210 by 297 mm), matching hayro.
 const A4: (f64, f64) = (210.0 / 25.4 * 72.0, 297.0 / 25.4 * 72.0);

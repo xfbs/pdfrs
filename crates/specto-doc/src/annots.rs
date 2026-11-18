@@ -21,7 +21,7 @@ use crate::{Edit, EditDoc, SourceId};
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord)]
 pub enum AnnotId {
     /// One a file has: entry `index` of the `/Annots` of page `page` of `source` (an
-    /// [`Origin`](specto_annot::Origin)'s index).
+    /// [`Origin`]'s index).
     File {
         source: SourceId,
         page: u32,
