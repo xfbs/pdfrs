@@ -474,6 +474,8 @@ The Android app is written in Kotlin with Jetpack Compose.
 
 None of this exists yet. The tasks are in [TASKS.md](TASKS.md).
 
+- **Drafts on the desktop**, with the same store, and the saved signatures
+  moved into its images.
 - **More of forms.** A fallback font for text outside Latin and the forms of
   inserted files. On Android, typing on the page, where a dialog asks for a
   field's text today.

@@ -10,8 +10,8 @@ one that has it.
 ## D1: Rendering engine
 
 **Decision:** hayro. Rendering goes through a trait of our own, so that another
-renderer can be compared with it. The other crates use hayro's parser
-directly, through the source crate.
+renderer can be compared with it. The other crates use hayro's parser and
+interpreter directly, for the file's structure, annotations, forms and text.
 
 The options were:
 
@@ -230,11 +230,12 @@ leaves off, so it adds no size there.
 Editing stays specific to PDF. Marking up images the way Preview does is a
 separate feature and not part of this decision.
 
-Until then, the code keeps the door open at no extra cost:
+What images would need in the code:
 
-- The document trait, the scheduler and the viewer stay free of assumptions
-  that only hold for PDF.
-- Text, outline and editing are capabilities a document may or may not have.
+- The renderer, the scheduler and the viewer only know the document trait,
+  which an image can implement, with its size as the page.
+- The session reads the outline, the text and the forms from the PDF directly.
+  Those would have to become things a document may or may not have.
 
 ## Open questions
 
