@@ -25,11 +25,11 @@ Shortcuts use *Primary*, which is Ctrl on Linux and Cmd on macOS.
   scrolling
 - Layouts: single page, continuous, two pages, two pages continuous
   (*Primary*+1 to 4), optionally with the first page alone (book cover)
-- Trim Margins (the View menu and the layout menu): each page shown by what it
-  draws, without its empty margins, so it fills more of the window. Nothing on
-  a page is cut off, and annotations count as drawn. In the single and two page
-  layouts only: the continuous ones show pages whole and gray the switch out.
-  Thumbnails show pages whole
+- Trim Margins (the layout menu, and the View menu on macOS): each page shown
+  by what it draws, without its empty margins, so it fills more of the window.
+  Nothing on a page is cut off, and annotations count as drawn. In the single
+  and two page layouts only: the continuous ones show pages whole and gray the
+  switch out. Thumbnails show pages whole
 - Rotated pages and mixed page sizes shown correctly
 - Sharp on HiDPI and fractionally scaled screens: once zooming stops, pages are
   drawn at exactly the screen resolution
@@ -325,6 +325,13 @@ Shortcuts use *Primary*, which is Ctrl on Linux and Cmd on macOS.
 - What a file asks not to be done is shown and not enforced, and saving keeps
   the file's protection as it is
 - The values can be selected and copied
+
+## Languages
+
+- In more than 30 languages, following the system's language. Apart from
+  German and Dutch, they were translated by machine and haven't been checked
+  by people who speak them
+- On macOS in English only, as the translations aren't installed there
 
 ## About
 

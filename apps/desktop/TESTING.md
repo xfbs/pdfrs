@@ -1,7 +1,7 @@
 # Testing the desktop app
 
 The app is tested in two ways. Automated checks drive a headless instance of
-the app and cover muuch of [FEATURES.md](FEATURES.md), the list of what the app
+the app and cover much of [FEATURES.md](FEATURES.md), the list of what the app
 does and what is expected to work. The rest is tested by hand, with the setup
 and the specific checks further down.
 
@@ -22,8 +22,12 @@ To run the automated checks, use the provided script:
 ```sh
 cargo build -p specto-desktop
 apps/desktop/test-ui/run.sh python3 -I apps/desktop/test-ui/check.py
-SPECTO_SCALE=2 apps/desktop/test-ui/run.sh python3 -I apps/desktop/test-ui/check.py   # also 1.25
-apps/desktop/test-ui/run.sh python3 -I apps/desktop/test-ui/check.py zoom layouts    # some tests only
+# At another scale, also 1.25.
+SPECTO_SCALE=2 apps/desktop/test-ui/run.sh \
+  python3 -I apps/desktop/test-ui/check.py
+# Some tests only.
+apps/desktop/test-ui/run.sh \
+  python3 -I apps/desktop/test-ui/check.py zoom layouts
 ```
 
 The app runs in a headless compositor with its own saved state, virtual pointer
@@ -33,7 +37,7 @@ listed at the top of `apps/desktop/test-ui/check.py`.
 Not covered, and left to the manual pass:
 
 - Pinch zoom
-- Dialogs
+- The file, password and print dialogs
 - Dragging thumbnails (the checks drop them through a test hook)
 - How sharp the text looks
 - How selecting feels with a real mouse or touchpad
@@ -136,8 +140,8 @@ below refer to the files by these names:
   page. Typing "IV" goes to "iv", since case doesn't matter.
 - Typing 999 or "abc": an error bell, and the entry goes back to the current
   page.
-- LONG has Contents and Thumbnails tabs. SIZES, which has no outline, has
-  thumbnails only.
+- LONG has Thumbnails, Contents and Markup tabs. SIZES, which has no outline,
+  has no Contents tab.
 - Contents entries in LONG jump to the exact place, often mid-page. Long titles
   wrap to up to three lines and are then cut off with an ellipsis.
 - Page numbers in Contents match the printed ones. A good file for this on
@@ -519,13 +523,13 @@ or application form.
   smaller, and it opens in other viewers with the highlight. Delete the
   highlight and save again: the file no longer contains it, which the command
   below shows by printing 0.
-- ENCRYPTED: highlight a word and save. Reopening asks for the password, and
-  the highlight is there.
 
 ```sh
 # The number of highlights in the file.
-qpdf --qdf --object-streams=disable target/test-files/long.pdf - | grep -c "/Subtype /Highlight"
+qpdf --qdf --object-streams=disable target/test-files/long.pdf - \
+  | grep -c "/Subtype /Highlight"
 ```
+
 - LONG: select thumbnails 2 to 4 and 7, then Export Selected Pages. The
   suggested name is "long (pages 2-4, 7).pdf". The exported file has those four
   pages (rotated if they were) and opens in other viewers, and the window still

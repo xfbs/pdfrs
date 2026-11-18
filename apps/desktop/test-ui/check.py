@@ -850,8 +850,8 @@ def test_trim_margins(ctx):
     # The page's height sets the zoom: 792 points become about 737, so the
     # area grows by about 15%.
     check(trimmed > whole * 1.1, f"the colored area grew from {whole:.2f} to {trimmed:.2f}")
-    # Every thumbnail in the sidebar is drawn again, trimmed too: those at
-    # least half in the window.
+    # Every thumbnail in the sidebar is drawn again after the pages changed
+    # size, still whole: those at least half in the window.
     shown = [p for p, x, y, w, h in s["thumbnails"] if y + h / 2 < s["height"] and y + h / 2 > 0]
     deadline = time.time() + 10
     while True:

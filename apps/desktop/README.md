@@ -41,9 +41,7 @@ The main features are below, and the full list is in
 - **Encryption**: opens password-protected PDFs, and keeps them protected when
   saving
 - **History**: recent files, and remembering where you were in each file
-
-Coming next: the remaining kinds of form fields, such as lists that take
-several choices.
+- **Languages**: more than 30, following the system's language
 
 ## Implementation
 

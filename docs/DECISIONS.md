@@ -9,8 +9,9 @@ one that has it.
 
 ## D1: Rendering engine
 
-**Decision:** hayro, behind a trait of our own, so that the rest of the code
-never sees hayro's types.
+**Decision:** hayro. Rendering goes through a trait of our own, so that another
+renderer can be compared with it. The other crates use hayro's parser
+directly, through the source crate.
 
 The options were:
 

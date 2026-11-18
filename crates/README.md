@@ -81,8 +81,8 @@ the text, the selection and the search. It ties the other crates together.
 
 ## specto-store
 
-What the apps keep on disk between runs: drafts of documents with unsaved
-edits, and the images of stamps they use.
+What the Android app keeps on disk between runs: drafts of documents with
+unsaved edits, and the images of stamps they use.
 
 ## specto-ffi
 

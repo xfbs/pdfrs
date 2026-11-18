@@ -15,9 +15,10 @@ what exists, except the last section, which lists what is planned.
    model layered over immutable source files, and bytes are only produced on
    save. This keeps rendering fast, because nothing is parsed again after an
    edit, and makes undo simple.
-3. **Every third-party PDF engine sits behind a trait.** The pure-Rust
-   ecosystem is young, and we want to be able to swap or compare backends, for
-   example with PDFium as a reference in tests.
+3. **Rendering sits behind a trait.** The pure-Rust ecosystem is young, and we
+   want to be able to swap or compare renderers, for example with PDFium as a
+   reference in tests. Reading the file, extracting text and saving use hayro's
+   parser and lopdf directly.
 4. **Coordinates are always explicit.** PDF user space (points, y up, with the
    page's rotation and crop box), page space, document layout space and device
    pixels are different things, and each has its own type.
@@ -384,8 +385,9 @@ written damaged.
 
 ## Drafts
 
-Unsaved edits are kept on disk as a draft, so that they are back when the
-document is next opened after the app was ended. A draft holds what was done
+The Android app keeps unsaved edits on disk as a draft, so that they are back
+when the document is next opened after the app was ended. The desktop app
+doesn't keep drafts. A draft holds what was done
 and not the history of how: the page list, the annotation edits and what was
 filled into the form. Undo starts afresh from there. The files pages were
 inserted from are kept with it.
