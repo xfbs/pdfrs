@@ -1,0 +1,31 @@
+name: An idea
+description: Something Specto could do, or do differently.
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Specto aims at what Preview on macOS does: reading, light editing of
+        pages, markup and forms. Some things are out of scope for now, such as
+        editing the text of a page, OCR or creating digital signatures. The
+        [task list](https://github.com/xfbs/specto/blob/main/docs/TASKS.md)
+        shows what is planned already.
+  - type: dropdown
+    id: app
+    attributes:
+      label: App
+      multiple: true
+      options:
+        - Android
+        - Desktop
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What you would like to do
+      description: >-
+        What you are trying to get done, more than how it should look. If
+        another app does it well, say which and how.
+    validations:
+      required: true

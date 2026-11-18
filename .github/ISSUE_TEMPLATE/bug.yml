@@ -1,0 +1,62 @@
+name: Something doesn't work
+description: A crash, a wrong page, a file that doesn't open or save, or anything else that goes wrong.
+labels: [bug]
+body:
+  - type: dropdown
+    id: app
+    attributes:
+      label: App
+      options:
+        - Android
+        - Desktop, the Flatpak from the releases page
+        - Desktop, built from source
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version of Specto
+      description: >-
+        On the desktop, About Specto in the main menu shows it. On Android, the
+        system's App info for Specto shows it at the bottom (touch and hold the
+        app's icon, then App info).
+      placeholder: "0.2"
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: Device and system
+      description: >-
+        The Linux distribution and desktop, or the phone or tablet and its
+        Android version.
+      placeholder: Fedora 44 with GNOME, or Pixel 9 with Android 16
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+      placeholder: |
+        1. Opened a file
+        2. Deleted page 3
+        3. Saved: an error said "..."
+    validations:
+      required: true
+  - type: textarea
+    id: file
+    attributes:
+      label: The file
+      description: >-
+        If it happens with one file only, a link to it or the file itself
+        helps the most. Only share files that may be public. If you can't
+        share it, say where it comes from or what program made it (Properties
+        in Specto shows that).
+  - type: textarea
+    id: log
+    attributes:
+      label: Crash log or terminal output
+      description: >-
+        On Android, after a crash: Settings, then Crash log, then share it. On
+        the desktop, start Specto from a terminal, with `flatpak run
+        net.xfbs.specto` for the Flatpak, and copy what it prints.
+      render: text

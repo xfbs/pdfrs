@@ -403,6 +403,11 @@ that users see.
   which nobody has tried yet, and install the catalogs there.
 - [ ] The machine translations checked by people who speak the language. German
   and Dutch are checked already.
+- [ ] Check on a device that Android finds the translations whose language
+  codes differ from Crowdin's: Norwegian (`no`, where devices report `nb`),
+  Hebrew (`he`, which older Android versions call `iw`) and Chinese (`zh`,
+  shown to readers of both simplified and traditional characters). Map the
+  codes in `crowdin.yml` where they don't match.
 - [ ] Right-to-left UI languages: check both apps under such a locale. GTK and
   Compose mirror on their own, but the sidebar side, the thumbnail strip and
   icons with a direction need a look. The page canvas does not mirror.

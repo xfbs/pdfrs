@@ -1,0 +1,34 @@
+name: A translation
+description: A wrong or awkward translation, or a language that is missing.
+labels: [translation]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Translations are made on [Crowdin](https://crowdin.com/project/specto),
+        where you can also correct them yourself. Changes to the translated
+        files in the repository would be overwritten, so a pull request with
+        them can't be taken.
+  - type: input
+    id: language
+    attributes:
+      label: Language
+      placeholder: Portuguese, as spoken in Brazil
+    validations:
+      required: true
+  - type: dropdown
+    id: app
+    attributes:
+      label: App
+      multiple: true
+      options:
+        - Android
+        - Desktop
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong
+      description: >-
+        The text as the app shows it, where it appears, and what it should
+        say. A screenshot helps. Leave this empty to ask for a missing
+        language.
