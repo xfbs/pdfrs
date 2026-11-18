@@ -1,4 +1,4 @@
-name: A translation
+name: Translation issue
 description: A wrong or awkward translation, or a language that is missing.
 labels: [translation]
 body:
@@ -29,6 +29,6 @@ body:
     attributes:
       label: What is wrong
       description: >-
-        The text as the app shows it, where it appears, and what it should
-        say. A screenshot helps. Leave this empty to ask for a missing
-        language.
+        The text as the app shows it, where it appears, and what it should say.
+        A screenshot helps. If you want to request a missing language, you can
+        state if you are willing to help maintain it.

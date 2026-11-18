@@ -1,5 +1,7 @@
-name: Something doesn't work
-description: A crash, a wrong page, a file that doesn't open or save, or anything else that goes wrong.
+name: Bug report
+description: >-
+  Report a bug, such as a crash, a wrong page, a file that doesn't open or
+  save, or anything else that goes wrong.
 labels: [bug]
 body:
   - type: dropdown
@@ -8,8 +10,7 @@ body:
       label: App
       options:
         - Android
-        - Desktop, the Flatpak from the releases page
-        - Desktop, built from source
+        - Desktop
     validations:
       required: true
   - type: input
@@ -19,7 +20,8 @@ body:
       description: >-
         On the desktop, About Specto in the main menu shows it. On Android, the
         system's App info for Specto shows it at the bottom (touch and hold the
-        app's icon, then App info).
+        app's icon, then App info). If you built it from source, include the
+        commit hash.
       placeholder: "0.2"
     validations:
       required: true
@@ -35,7 +37,9 @@ body:
     id: what
     attributes:
       label: What happened
-      description: What you did, what you expected, and what happened instead.
+      description: >-
+        What you did, what you expected, and what happened instead. If useful,
+        attach a screenshot of the issue.
       placeholder: |
         1. Opened a file
         2. Deleted page 3
@@ -58,5 +62,6 @@ body:
       description: >-
         On Android, after a crash: Settings, then Crash log, then share it. On
         the desktop, start Specto from a terminal, with `flatpak run
-        net.xfbs.specto` for the Flatpak, and copy what it prints.
+        net.xfbs.specto` for the Flatpak, and copy what it prints. Review the
+        log to make sure there is no sensitive information in it.
       render: text
