@@ -53,6 +53,7 @@ class DocumentStore(private val file: File) {
             Log.w("specto", "ignoring $file", e)
             entries.clear()
         }
+        forgetUnoffered()
     }
 
     /** Documents that can be reopened, most recent first. */
@@ -74,18 +75,7 @@ class DocumentStore(private val file: File) {
         // was saved over, or replaced) isn't any more.
         if (uri != null) {
             for (i in entries.indices) {
-                val e = entries[i]
-                if (e.uri == uri) {
-                    entries[i] = Entry(
-                        e.key,
-                        e.name,
-                        null,
-                        e.opened,
-                        e.pageCount,
-                        e.view,
-                        e.sidebar,
-                    )
-                }
+                if (entries[i].uri == uri) entries[i] = entries[i].withoutUri()
             }
         }
         entries.add(
@@ -101,6 +91,7 @@ class DocumentStore(private val file: File) {
             ),
         )
         while (entries.size > MAX_DOCUMENTS) entries.removeAt(entries.lastIndex)
+        forgetUnoffered()
         save()
     }
 
@@ -117,9 +108,8 @@ class DocumentStore(private val file: File) {
     fun unreachable(uri: String) {
         var changed = false
         for (i in entries.indices) {
-            val e = entries[i]
-            if (e.uri == uri) {
-                entries[i] = Entry(e.key, e.name, null, e.opened, e.pageCount, e.view, e.sidebar)
+            if (entries[i].uri == uri) {
+                entries[i] = entries[i].withoutUri()
                 changed = true
             }
         }
@@ -128,6 +118,21 @@ class DocumentStore(private val file: File) {
 
     /** Addresses the start screen may still offer. The rest need no read permission any more. */
     fun reopenable(): Set<String> = recents.mapNotNull { it.uri }.toSet()
+
+    /**
+     * Forgets the addresses of documents past those the start screen lists. Their read permission
+     * is given back, so they couldn't be opened from there if one listed before them went.
+     */
+    private fun forgetUnoffered() {
+        var offered = 0
+        for (i in entries.indices) {
+            if (entries[i].uri != null && ++offered > MAX_RECENTS) {
+                entries[i] = entries[i].withoutUri()
+            }
+        }
+    }
+
+    private fun Entry.withoutUri() = Entry(key, name, null, opened, pageCount, view, sidebar)
 
     private fun save() {
         val array = JSONArray()

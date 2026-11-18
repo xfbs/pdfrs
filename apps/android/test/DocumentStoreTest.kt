@@ -135,6 +135,19 @@ class DocumentStoreTest {
     }
 
     @Test
+    fun documentsPastTheListedOnesCantBeReopened() {
+        val store = DocumentStore(file)
+        for (i in 1..21) store.opened("k$i", "$i.pdf", "content://docs/$i", 1)
+        // The first one's read permission is given back: it isn't listed.
+        assertNull(store.find("k1")?.uri)
+        assertTrue("content://docs/1" !in store.reopenable())
+        // Nor once one listed before it goes.
+        store.unreachable("content://docs/21")
+        assertEquals(19, store.recents.size)
+        assertEquals("k2", store.recents.last().key)
+    }
+
+    @Test
     fun anUnreadableFileStartsAfresh() {
         file.writeText("{ not json")
         val store = DocumentStore(file)

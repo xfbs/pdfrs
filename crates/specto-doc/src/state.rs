@@ -40,15 +40,21 @@ impl EditState {
         out
     }
 
-    /// Gives each source the number `new` has for it.
+    /// Gives each source the number `new` has for it, and returns whether every source of a page
+    /// has one.
     ///
-    /// What was done on pages of sources it has none for is dropped. Every source of a page must
-    /// have one.
-    pub fn renumber_sources(&mut self, new: impl Fn(SourceId) -> Option<SourceId>) {
+    /// What was done on pages of sources it has none for is dropped. If a source of a page has
+    /// none, nothing changes.
+    #[must_use]
+    pub fn renumber_sources(&mut self, new: impl Fn(SourceId) -> Option<SourceId>) -> bool {
+        if self.pages.iter().any(|p| new(p.source).is_none()) {
+            return false;
+        }
         for p in &mut self.pages {
-            p.source = new(p.source).expect("every source of a page has a new number");
+            p.source = new(p.source).expect("checked above");
         }
         self.annots.renumber_sources(new);
+        true
     }
 
     /// The images of the stamps among the annotations, each once: what has to be kept with the
@@ -183,11 +189,15 @@ mod tests {
         let mut doc = edited();
         doc.add_annotation(GONE, 0, note());
         let mut state = doc.state();
-        state.renumber_sources(|s| match s {
+        // A source of a page without a number changes nothing.
+        let mut unchanged = state.clone();
+        assert!(!unchanged.renumber_sources(|s| (s == MAIN).then_some(MAIN)));
+        assert_eq!(unchanged.pages(), state.pages());
+        assert!(state.renumber_sources(|s| match s {
             MAIN => Some(MAIN),
             OTHER => Some(SourceId(5)),
             _ => None,
-        });
+        }));
         let restored = EditDoc::restored(state);
         assert_eq!(restored.pages()[3].source, SourceId(5));
         assert_eq!(restored.annotation_changes(SourceId(5), 0).added.len(), 1);

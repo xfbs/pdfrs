@@ -5,7 +5,8 @@
 //!
 //! - `drafts`: one directory per draft, named by a digest of its key. It holds `draft.json`, with
 //!   the key, the fingerprint of the file and the edits, and the files pages were inserted from,
-//!   each named by a digest of its content.
+//!   each named by a digest of its content. Where the document was saved over its file after the
+//!   edits began, the file they were made on is kept there too (see [`Store::base`]).
 //! - `images`: the images of stamps, such as a signature from a photo, as PNG files named by their
 //!   digest (see `StampImage::digest`). Each is kept once, however many drafts use it.
 //!
@@ -71,6 +72,9 @@ struct Stored {
     images: Vec<String>,
     /// The digests of the files pages were inserted from, by their source number from 1.
     files: Vec<String>,
+    /// The digest of the file the edits were made on, if it isn't the one `fingerprint` names.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    base: Option<String>,
     edits: Edits,
 }
 
@@ -80,6 +84,8 @@ struct Head {
     key: String,
     fingerprint: String,
     images: Vec<String>,
+    #[serde(default)]
+    base: Option<String>,
 }
 
 /// A directory with the drafts and images of an app.
@@ -102,11 +108,16 @@ impl Store {
     /// `key` names the document, such as the path of its file. `fingerprint` says what the file
     /// is, such as its size and time of change: a draft is only for the file it was made of. Where
     /// the key says that already (a digest of the content), the two can be the same.
+    ///
+    /// `base` is the file the edits were made on, where that isn't the file any more: the document
+    /// was saved over it, and the edits still count from what it was before. It is kept with the
+    /// draft, for [`base`](Self::base) to give back.
     pub fn save_draft(
         &self,
         key: &str,
         fingerprint: &str,
         draft: &Draft,
+        base: Option<&PdfData>,
     ) -> Result<(), StoreError> {
         let _turn = TURN.lock().unwrap_or_else(|e| e.into_inner());
         let dir = self.draft_dir(key);
@@ -120,20 +131,26 @@ impl Store {
             }
             images.push(digest);
         }
-        let mut files = Vec::new();
-        for data in &draft.files {
+        let keep = |data: &PdfData| -> io::Result<String> {
             let digest = digest(data);
             let path = dir.join(format!("{digest}.pdf"));
             if !path.exists() {
                 write_atomically(&path, data)?;
             }
-            files.push(digest);
-        }
+            Ok(digest)
+        };
+        let files = draft
+            .files
+            .iter()
+            .map(keep)
+            .collect::<io::Result<Vec<_>>>()?;
+        let base = base.map(keep).transpose()?;
         let stored = Stored {
             key: key.to_owned(),
             fingerprint: fingerprint.to_owned(),
             images,
             files,
+            base,
             edits: Edits::V1(draft.state.clone()),
         };
         write_atomically(&dir.join(DRAFT), &serde_json::to_vec(&stored)?)?;
@@ -142,7 +159,8 @@ impl Store {
             let path = entry?.path();
             let name = path.file_stem().and_then(|n| n.to_str());
             let file = path.extension().is_some_and(|e| e == "pdf");
-            if file && name.is_none_or(|n| !stored.files.iter().any(|f| f == n)) {
+            let used = |n: &str| stored.files.iter().chain(&stored.base).any(|f| f == n);
+            if file && !name.is_some_and(used) {
                 fs::remove_file(path)?;
             }
         }
@@ -155,19 +173,11 @@ impl Store {
     /// delete it then is up to the caller.
     pub fn load_draft(&self, key: &str, fingerprint: &str) -> Result<Option<Draft>, StoreError> {
         let _turn = TURN.lock().unwrap_or_else(|e| e.into_inner());
+        let Some((bytes, _)) = self.head(key, fingerprint)? else {
+            return Ok(None);
+        };
         let dir = self.draft_dir(key);
         let path = dir.join(DRAFT);
-        let bytes = match fs::read(&path) {
-            Err(e) if e.kind() == io::ErrorKind::NotFound => return Ok(None),
-            read => read?,
-        };
-        let head: Head = serde_json::from_slice(&bytes)?;
-        if head.key != key {
-            return Ok(None);
-        }
-        if head.fingerprint != fingerprint {
-            return Err(StoreError::Changed);
-        }
         let images = self.images();
         let stored: Stored = with_image_loader(
             move |digest| read_png(&images, digest),
@@ -186,6 +196,43 @@ impl Store {
             .set_modified(SystemTime::now())?;
         let Edits::V1(state) = stored.edits;
         Ok(Some(Draft { state, files }))
+    }
+
+    /// The file the draft of `key` was made on, if the document was saved over it since (see
+    /// [`save_draft`](Self::save_draft)): what to open for the draft to apply to.
+    ///
+    /// `None` if there is no draft, or it is of the file `fingerprint` names as it is. A draft of
+    /// another file is [`StoreError::Changed`], as with [`load_draft`](Self::load_draft).
+    pub fn base(&self, key: &str, fingerprint: &str) -> Result<Option<PdfData>, StoreError> {
+        let _turn = TURN.lock().unwrap_or_else(|e| e.into_inner());
+        let Some((_, head)) = self.head(key, fingerprint)? else {
+            return Ok(None);
+        };
+        match head.base {
+            Some(digest) if is_digest(&digest) => {
+                let path = self.draft_dir(key).join(format!("{digest}.pdf"));
+                Ok(Some(PdfData::open(path)?))
+            }
+            Some(_) => Err(io::Error::new(io::ErrorKind::InvalidData, "not a digest").into()),
+            None => Ok(None),
+        }
+    }
+
+    /// The draft of `key` as written, and what it names, if there is one of the file `fingerprint`
+    /// names. The caller takes its turn.
+    fn head(&self, key: &str, fingerprint: &str) -> Result<Option<(Vec<u8>, Head)>, StoreError> {
+        let bytes = match fs::read(self.draft_dir(key).join(DRAFT)) {
+            Err(e) if e.kind() == io::ErrorKind::NotFound => return Ok(None),
+            read => read?,
+        };
+        let head: Head = serde_json::from_slice(&bytes)?;
+        if head.key != key {
+            return Ok(None);
+        }
+        if head.fingerprint != fingerprint {
+            return Err(StoreError::Changed);
+        }
+        Ok(Some((bytes, head)))
     }
 
     /// Deletes the draft of the document `key`, if it has one.

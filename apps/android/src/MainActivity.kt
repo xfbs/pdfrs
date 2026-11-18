@@ -114,6 +114,7 @@ import java.io.File
 import kotlin.concurrent.thread
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.drop
@@ -467,7 +468,8 @@ private fun Context.pdfFile(uri: Uri): PdfFile {
  * Opens [file], continuing where the reader left off if it was open before.
  *
  * A missing or wrong [password] leads to [Loaded.Locked]. Unless it ends there, [file] is closed:
- * an open document keeps its own hold on the bytes.
+ * an open document keeps its own hold on the bytes. If the opening is cancelled, what it opened is
+ * closed again.
  */
 private suspend fun Context.open(
     file: PdfFile,
@@ -477,6 +479,7 @@ private suspend fun Context.open(
     store: DocumentStore,
     drafts: DraftStore,
 ): Loaded {
+    var opening: PdfViewState? = null
     val opened = try {
         val cacheBytes = tileCacheBytes()
         val size = file.size().toLong()
@@ -487,8 +490,29 @@ private suspend fun Context.open(
         }
         val known = store.find(key)
         val wide = resources.configuration.screenWidthDp >= WIDE_WINDOW_DP
-        val state = withContext(Dispatchers.Default) {
-            PdfViewState(file, password, cacheBytes, known?.view, wide, known?.sidebar ?: true)
+        // If the document was saved over its file after the edits of its draft began, they count
+        // from the file as it was before, which the draft keeps.
+        val base = try {
+            withContext(Dispatchers.IO) { drafts.base(key) }
+        } catch (e: PdfException) {
+            Log.w("specto", "the draft of $name can't be read", e)
+            null
+        }
+        val source = base ?: file
+        val mapped = source.isMapped()
+        val state = try {
+            withContext(Dispatchers.Default) {
+                PdfViewState(
+                    source,
+                    password,
+                    cacheBytes,
+                    known?.view,
+                    wide,
+                    known?.sidebar ?: true,
+                ).also { opening = it }
+            }
+        } finally {
+            base?.close()
         }
         // Edits that weren't saved when the app was last ended are back, without asking.
         try {
@@ -503,10 +527,15 @@ private suspend fun Context.open(
         }
         store.opened(key, name, uri.toString().takeIf { canReopen(uri) }, state.pageCount)
         releaseUnused(store)
-        Loaded.Ready(state, name, key, size, file.isMapped())
+        Loaded.Ready(state, name, key, size, mapped)
+    } catch (e: CancellationException) {
+        opening?.close()
+        file.close()
+        throw e
     } catch (e: PdfException.PasswordRequired) {
         return Loaded.Locked(file, name, uri, wrongPassword = password != null)
     } catch (e: Exception) {
+        opening?.close()
         Loaded.Failed(e.message ?: e.toString())
     }
     file.close()
@@ -547,6 +576,8 @@ private fun App(
     var preparingToPrint by remember { mutableStateOf(false) }
     // "Discard changes" asks first.
     var discarding by remember { mutableStateOf(false) }
+    // Opening a document with the password given for it, which another document cancels.
+    var unlocking by remember { mutableStateOf<Job?>(null) }
 
     /** Shows [next] (null: the start screen) instead, asking first if edits would be lost. */
     fun leaveFor(next: Uri?) {
@@ -583,10 +614,16 @@ private fun App(
         (loaded as? Loaded.Ready)?.state?.endSearch()
     }
     fun show(next: Loaded?) {
-        (loaded as? Loaded.Ready)?.let {
-            store.saveView(it.key, it.state.savedView(), it.state.sidebarOpen)
-            it.keepDraft(drafts)
-            it.state.close()
+        when (val l = loaded) {
+            is Loaded.Ready -> {
+                store.saveView(l.key, l.state.savedView(), l.state.sidebarOpen)
+                l.keepDraft(drafts)
+                l.state.close()
+            }
+
+            is Loaded.Locked -> if ((next as? Loaded.Locked)?.file !== l.file) l.file.close()
+
+            else -> {}
         }
         loaded = next
         onReady(next as? Loaded.Ready)
@@ -596,14 +633,21 @@ private fun App(
         showPages = false
         fullScreen = false
         searching = false
+        unlocking?.cancel()
         show(null)
         if (document == null) return@LaunchedEffect
         loaded = Loaded.Loading
+        var file: PdfFile? = null
         show(
             try {
                 val name = context.displayName(document)
-                val file = withContext(Dispatchers.IO) { context.pdfFile(document) }
-                context.open(file, name, document, password = null, store, drafts)
+                val read = withContext(Dispatchers.IO) {
+                    context.pdfFile(document).also { file = it }
+                }
+                context.open(read, name, document, password = null, store, drafts)
+            } catch (e: CancellationException) {
+                file?.close()
+                throw e
             } catch (e: Exception) {
                 // Moved, deleted, or the permission to read it is gone.
                 store.unreachable(document.toString())
@@ -643,7 +687,7 @@ private fun App(
                     // Nothing is open any more, but what was written is.
                     open.dropDraft(drafts)
                     Toast.makeText(context, R.string.could_not_save_there, Toast.LENGTH_LONG).show()
-                    onDocument(Uri.fromFile(written))
+                    onDocument(Uri.fromFile(context.keepUnsaved(written)))
                     return@launch
                 }
                 // The edits are in the file written. The one opened stays as it is on disk.
@@ -1115,7 +1159,6 @@ private fun App(
                             name = l.name,
                             wrongPassword = l.wrongPassword,
                             onDismiss = {
-                                l.file.close()
                                 show(
                                     Loaded.Failed(
                                         context.getString(R.string.password_needed, l.name),
@@ -1124,7 +1167,7 @@ private fun App(
                             },
                             onPassword = { password ->
                                 loaded = Loaded.Loading
-                                scope.launch {
+                                unlocking = scope.launch {
                                     show(
                                         context.open(
                                             l.file,

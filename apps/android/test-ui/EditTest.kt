@@ -483,6 +483,35 @@ class EditTest : AppTest() {
     }
 
     @Test
+    fun editsAfterSavingOutliveTheApp() {
+        openPages()
+        showGrid()
+        pick("2")
+        compose.onNodeWithContentDescription("Delete pages").performClick()
+        leaveGrid()
+        waitForText("1 / 11")
+        menu("Save")
+        waitUntilGone("Edited")
+        edit()
+        scenario!!.recreate()
+        waitForText("Edited")
+        // The page deleted before saving is gone once, and the page turned since is turned.
+        compose.onNodeWithText("1 / 11").assertIsDisplayed()
+        menu("Properties")
+        waitForText("210 × 297 mm (A4); other pages differ")
+        compose.onNodeWithText("Close").performClick()
+
+        // Discarded, the document is as it was saved.
+        menu("Discard changes")
+        compose.onNodeWithText("Discard").performClick()
+        waitUntilGone("Edited")
+        waitForText("1 / 11")
+        menu("Properties")
+        waitForText("210 × 297 mm (A4)")
+        assertTrue(!shown("210 × 297 mm (A4); other pages differ"))
+    }
+
+    @Test
     fun withoutEditsNothingIsAsked() {
         openPages()
         menu("Close")

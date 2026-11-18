@@ -214,6 +214,24 @@ suspend fun Context.writeEdited(state: PdfViewState, name: String): File {
     return file
 }
 
+/** Where a document written by [writeEdited] is kept when it couldn't be copied where it belongs. */
+private const val UNSAVED_DIR = "unsaved"
+
+/**
+ * Moves [file], written by [writeEdited] and not copied where it belongs, to where it can stay open
+ * and be saved again. Returns where it is then.
+ *
+ * Opened from where [writeEdited] writes, the next save would write the document over itself. If
+ * it can't be moved, it stays.
+ */
+suspend fun Context.keepUnsaved(file: File): File = withContext(Dispatchers.IO) {
+    val dir = File(cacheDir, UNSAVED_DIR)
+    dir.deleteRecursively()
+    dir.mkdirs()
+    val kept = File(dir, file.name)
+    if (file.renameTo(kept)) kept else file
+}
+
 /** Copies [file] to [destination], replacing what is there. Throws if that fails. */
 suspend fun Context.copyTo(file: File, destination: Uri) = withContext(Dispatchers.IO) {
     checkNotNull(contentResolver.openOutputStream(destination, "wt")) {

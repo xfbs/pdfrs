@@ -1974,7 +1974,16 @@ fn a_draft_brings_the_edits_back() {
     // Not into a file that lacks the pages.
     let mut short = open(&scheduler, book(1, "alpha"));
     assert!(matches!(
-        short.restore(&scheduler, draft),
+        short.restore(&scheduler, draft.clone()),
+        Err(RestoreError::Mismatch)
+    ));
+    // Nor without the files pages were inserted from, as a damaged draft could be.
+    let without = specto_session::Draft {
+        files: Vec::new(),
+        ..draft
+    };
+    assert!(matches!(
+        short.restore(&scheduler, without),
         Err(RestoreError::Mismatch)
     ));
     assert_eq!(short.viewer.page_count(), 1);

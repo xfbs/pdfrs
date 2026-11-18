@@ -525,6 +525,9 @@ struct State {
     /// The state of the pages last written as a copy on the side (see `ViewSession::save_to_fd`),
     /// which may yet become the saved one.
     written: Option<specto_doc::Version>,
+    /// Whether the document was saved over the file it is read from, which then isn't what the
+    /// edits count from any more (see `ViewSession::keep_draft`).
+    saved_over: bool,
     /// Whether frames tint the fields of the form that can be filled in.
     highlight_fields: bool,
 }
@@ -1106,6 +1109,7 @@ impl ViewSession {
                 // Sessions start out scrolling.
                 fit: default_fit(false),
                 written: None,
+                saved_over: false,
                 highlight_fields: false,
             }),
             outline,
@@ -1493,10 +1497,14 @@ impl ViewSession {
     /// The copy last written with [`save_to_fd`](Self::save_to_fd) has become the saved document
     /// (it was put where the document is kept): the document is unmodified, unless it was edited
     /// since that copy. Does nothing if no copy was written.
+    ///
+    /// The session goes on reading the file it was opened from, which isn't what is kept any more.
+    /// A draft keeps that file from then on (see [`keep_draft`](Self::keep_draft)).
     pub fn written_is_saved(&self) {
         let mut state = self.shared.lock();
         if let Some(version) = state.written.take() {
             state.session.mark_saved(version);
+            state.saved_over = true;
         }
     }
 

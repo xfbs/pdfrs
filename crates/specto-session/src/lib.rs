@@ -272,6 +272,11 @@ impl Session {
         &self.edit
     }
 
+    /// The bytes of the file the document was opened from.
+    pub fn data(&self) -> &PdfData {
+        &self.sources[MAIN.0 as usize].data
+    }
+
     /// Records that the state at `version` (see [`SaveJob::version`]) is what is on disk now.
     pub fn mark_saved(&mut self, version: Version) {
         self.edit.mark_saved_version(version);

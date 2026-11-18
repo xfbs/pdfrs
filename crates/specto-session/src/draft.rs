@@ -45,13 +45,15 @@ impl Session {
             return None;
         }
         let inserted: Vec<SourceId> = used.into_iter().filter(|s| *s != MAIN).collect();
-        state.renumber_sources(|s| {
+        let renumbered = state.renumber_sources(|s| {
             if s == MAIN {
                 return Some(MAIN);
             }
             let i = inserted.iter().position(|i| *i == s)?;
             Some(SourceId(i as u32 + 1))
         });
+        // The sources of the pages are those used.
+        debug_assert!(renumbered);
         let files = (inserted.iter())
             .map(|s| self.sources[s.0 as usize].data.clone())
             .collect();
@@ -69,10 +71,13 @@ impl Session {
             ids.push(self.add_source(scheduler, data, None)?.0);
         }
         let mut state = draft.state;
-        state.renumber_sources(|s| match s.0 {
+        let renumbered = state.renumber_sources(|s| match s.0 {
             0 => Some(MAIN),
             n => ids.get(n as usize - 1).copied(),
         });
+        if !renumbered {
+            return Err(RestoreError::Mismatch);
+        }
         let edit = EditDoc::restored(state);
         let page_count = |s: SourceId| self.sources.get(s.0 as usize).map(|s| s.geometries.len());
         let fits = |(source, page): (SourceId, u32)| {

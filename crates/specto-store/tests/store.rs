@@ -159,7 +159,7 @@ fn a_draft_is_read_back_as_written() {
     assert!(store.load_draft("a", "1").unwrap().is_none());
 
     let written = draft();
-    store.save_draft("a", "1", &written).unwrap();
+    store.save_draft("a", "1", &written, None).unwrap();
     let read = store.load_draft("a", "1").unwrap().unwrap();
     assert_eq!(json(&read.state), json(&written.state));
     assert_eq!(&*read.files[0], &*written.files[0]);
@@ -183,14 +183,14 @@ fn a_draft_is_read_back_as_written() {
 fn a_draft_replaces_the_one_before() {
     let dir = tempfile::tempdir().unwrap();
     let store = Store::open(dir.path()).unwrap();
-    store.save_draft("a", "1", &draft()).unwrap();
+    store.save_draft("a", "1", &draft(), None).unwrap();
     let mut doc = EditDoc::from_source(MAIN, 2);
     doc.delete(&[0]);
     let fewer = Draft {
         state: doc.state(),
         files: Vec::new(),
     };
-    store.save_draft("a", "1", &fewer).unwrap();
+    store.save_draft("a", "1", &fewer, None).unwrap();
     let read = store.load_draft("a", "1").unwrap().unwrap();
     assert_eq!(read.state.pages().len(), 1);
     assert!(read.files.is_empty());
@@ -208,11 +208,47 @@ fn a_draft_replaces_the_one_before() {
 }
 
 #[test]
+fn a_draft_keeps_the_file_it_was_made_on_where_that_was_saved_over() {
+    let dir = tempfile::tempdir().unwrap();
+    let store = Store::open(dir.path()).unwrap();
+    assert!(store.base("a", "1").unwrap().is_none());
+    store.save_draft("a", "1", &draft(), None).unwrap();
+    assert!(store.base("a", "1").unwrap().is_none());
+
+    let before = specto_source::PdfData::from(b"%PDF-1.7 before saving".to_vec());
+    store.save_draft("a", "1", &draft(), Some(&before)).unwrap();
+    assert_eq!(&*store.base("a", "1").unwrap().unwrap(), &*before);
+    assert_eq!(store.load_draft("a", "1").unwrap().unwrap().files.len(), 1);
+    assert!(matches!(store.base("a", "2"), Err(StoreError::Changed)));
+    assert!(store.base("b", "1").unwrap().is_none());
+
+    // Saved again from the file kept, which stays.
+    let base = store.base("a", "1").unwrap().unwrap();
+    store.save_draft("a", "1", &draft(), Some(&base)).unwrap();
+    assert_eq!(&*store.base("a", "1").unwrap().unwrap(), &*before);
+
+    // Without one, it goes.
+    store.save_draft("a", "1", &draft(), None).unwrap();
+    assert!(store.base("a", "1").unwrap().is_none());
+    let draft_dir = fs::read_dir(dir.path().join("drafts"))
+        .unwrap()
+        .next()
+        .unwrap()
+        .unwrap()
+        .path();
+    assert_eq!(
+        fs::read_dir(draft_dir).unwrap().count(),
+        2,
+        "the draft and its inserted file"
+    );
+}
+
+#[test]
 fn old_drafts_and_unused_images_are_pruned() {
     let dir = tempfile::tempdir().unwrap();
     let store = Store::open(dir.path()).unwrap();
-    store.save_draft("old", "1", &draft()).unwrap();
-    store.save_draft("new", "1", &draft()).unwrap();
+    store.save_draft("old", "1", &draft(), None).unwrap();
+    store.save_draft("new", "1", &draft(), None).unwrap();
     let month_ago = SystemTime::now() - Duration::from_secs(31 * 24 * 3600);
     let old = fs::read_dir(dir.path().join("drafts"))
         .unwrap()
@@ -301,7 +337,7 @@ fn write_the_fixture() {
     let dir = fixtures().join(format!("v{}", specto_store::FORMAT));
     assert!(!dir.exists(), "the fixture of this format exists");
     let store = Store::open(&dir).unwrap();
-    store.save_draft(KEY, KEY, &draft()).unwrap();
+    store.save_draft(KEY, KEY, &draft(), None).unwrap();
 }
 
 fn copy(from: &Path, to: &Path) {

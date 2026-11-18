@@ -220,6 +220,9 @@ Use a PDF with a form, such as a tax or application form.
   adb shell am kill net.xfbs.specto
   ```
 
+- Edit and choose Save, then edit again and end the app with the command
+  above. It comes back with all the edits, each once, and Discard changes
+  shows the file as saved.
 - Edit, close the document with Discard, and open it again: no edits.
 - Edit, then choose Discard changes in the overflow menu: it asks, and then the
   document is as the file is, without "Edited".

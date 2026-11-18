@@ -82,6 +82,33 @@ fn continuous_scrolling_and_current_page() {
 }
 
 #[test]
+fn zooms_and_scrolls_that_are_not_numbers_are_ignored() {
+    let mut v = viewer(letters(5));
+    v.set_zoom(1.0, ViewPoint::origin());
+    v.scroll_by(ViewVector::new(0.0, 500.0));
+    for zoom in [f64::NAN, f64::INFINITY, 0.0, -2.0] {
+        v.set_zoom(zoom, ViewPoint::origin());
+        v.zoom_by(zoom, ViewPoint::origin());
+    }
+    v.scroll_by(ViewVector::new(f64::NAN, 1.0));
+    v.scroll_in_page_by(ViewVector::new(0.0, f64::INFINITY));
+    assert!(close(v.zoom(), 1.0));
+    assert!(close(v.scroll_offset().y, 500.0));
+    // Still works afterwards.
+    v.scroll_by(ViewVector::new(0.0, 10.0));
+    assert!(close(v.scroll_offset().y, 510.0));
+}
+
+#[test]
+fn a_viewport_smaller_than_its_margins_keeps_the_zoom() {
+    let mut v = viewer(letters(3));
+    v.set_viewport(ViewSize::new(10.0, 10.0), 1.0);
+    assert!(v.zoom() > 0.0);
+    // What a double tap zooms from.
+    assert!(v.zoom_relative_to(ZoomMode::FitWidth) > 0.0);
+}
+
+#[test]
 fn zoom_keeps_the_anchor_point_in_place() {
     let mut v = viewer(letters(5));
     v.set_zoom(1.0, ViewPoint::origin());

@@ -1,12 +1,13 @@
 //! Drafts: unsaved edits kept on disk while the app is in the background, to bring back if the
 //! system ends it meanwhile. See `specto-store`.
 
+use std::io::ErrorKind::{InvalidData, NotFound};
 use std::sync::Arc;
 use std::time::Duration;
 
-use specto_store::Store;
+use specto_store::{Store, StoreError};
 
-use crate::{PdfError, ViewSession};
+use crate::{PdfError, PdfFile, ViewSession};
 
 /// Where the app keeps drafts of documents with unsaved edits.
 #[derive(uniffi::Object)]
@@ -38,6 +39,13 @@ impl DraftStore {
         let age = Duration::from_secs(u64::from(days) * 24 * 60 * 60);
         self.0.prune(age).map_err(io_error)
     }
+
+    /// The file the draft of `key` was made on, where the document was saved over it since: what
+    /// to open, in place of the file, for [`ViewSession::restore_draft`]. `None` otherwise.
+    pub fn base(&self, key: String) -> Result<Option<Arc<PdfFile>>, PdfError> {
+        let base = self.0.base(&key, &key).map_err(io_error)?;
+        Ok(base.map(|data| Arc::new(PdfFile(data))))
+    }
 }
 
 #[uniffi::export]
@@ -47,18 +55,22 @@ impl ViewSession {
     ///
     /// Without unsaved edits, or for a document with a password, there is no draft, and any the
     /// document had is deleted. Returns whether there is one.
+    ///
+    /// Once the document was saved over its file ([`written_is_saved`](Self::written_is_saved)),
+    /// the edits count from a file that isn't there any more, and the draft keeps it.
     pub fn keep_draft(&self, store: &Arc<DraftStore>, key: String) -> Result<bool, PdfError> {
-        let draft = {
+        let (draft, base) = {
             let state = self.shared.lock();
             let session = &state.session;
-            session
-                .edit()
-                .is_modified()
+            let draft = (session.edit().is_modified())
                 .then(|| session.draft())
-                .flatten()
+                .flatten();
+            (draft, state.saved_over.then(|| session.data().clone()))
         };
         match &draft {
-            Some(draft) => store.0.save_draft(&key, &key, draft).map_err(io_error)?,
+            Some(draft) => (store.0)
+                .save_draft(&key, &key, draft, base.as_ref())
+                .map_err(io_error)?,
             None => store.0.delete_draft(&key).map_err(io_error)?,
         }
         Ok(draft.is_some())
@@ -67,19 +79,41 @@ impl ViewSession {
     /// Takes over the draft of `key` in `store`, if there is one: the document is then as it was
     /// left, with nothing to undo. Returns whether there was one.
     ///
-    /// A draft that can't be taken over is deleted, and the error says why.
+    /// Where the draft keeps the file it was made on ([`DraftStore::base`]), the session must have
+    /// been opened from that. A draft that can't be taken over is deleted, and the error says why.
+    /// One that couldn't be read for now stays.
     pub fn restore_draft(&self, store: &Arc<DraftStore>, key: String) -> Result<bool, PdfError> {
-        let restored = match store.0.load_draft(&key, &key) {
-            Ok(None) => return Ok(false),
-            Ok(Some(draft)) => {
-                let mut state = self.shared.lock();
-                (state.session.restore(&self.shared.scheduler, draft)).map_err(io_error)
+        let loaded =
+            (store.0.base(&key, &key)).and_then(|base| Ok((base, store.0.load_draft(&key, &key)?)));
+        let (base, draft) = match loaded {
+            Ok((_, None)) => return Ok(false),
+            Ok((base, Some(draft))) => (base, draft),
+            // A file it names is missing or isn't one: the draft is damaged.
+            Err(StoreError::Io(e)) if !matches!(e.kind(), NotFound | InvalidData) => {
+                return Err(io_error(e));
             }
-            Err(e) => Err(io_error(e)),
+            Err(e) => {
+                let _ = store.0.delete_draft(&key);
+                return Err(io_error(e));
+            }
         };
-        if restored.is_err() {
-            let _ = store.0.delete_draft(&key);
+        let mut state = self.shared.lock();
+        let restored = match &base {
+            Some(base) if **base != **state.session.data() => Err(PdfError::Io {
+                reason: "the draft is of another file".into(),
+            }),
+            _ => (state.session.restore(&self.shared.scheduler, draft)).map_err(io_error),
+        };
+        match restored {
+            Ok(()) => {
+                state.saved_over = base.is_some();
+                Ok(true)
+            }
+            Err(e) => {
+                drop(state);
+                let _ = store.0.delete_draft(&key);
+                Err(e)
+            }
         }
-        restored.map(|()| true)
     }
 }

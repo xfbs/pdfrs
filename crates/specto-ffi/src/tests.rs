@@ -2106,6 +2106,49 @@ fn a_draft_outlives_the_session() {
 }
 
 #[test]
+fn a_draft_after_saving_over_the_file_keeps_the_file_it_counts_from() {
+    use std::os::fd::IntoRawFd;
+
+    let dir = std::env::temp_dir().join(format!("specto-ffi-saved-over-{}", std::process::id()));
+    let store = DraftStore::open(dir.to_string_lossy().into_owned()).unwrap();
+    let (tx, _rx) = mpsc::channel();
+    let listener = Arc::new(Listener(Mutex::new(tx)));
+    let open = |file: Arc<PdfFile>| {
+        ViewSession::open_file(file, None, 64 << 20, listener.clone()).unwrap()
+    };
+
+    // Turned, saved over its file, and a page deleted since.
+    let session = ViewSession::open(book_pdf(), None, 64 << 20, listener.clone()).unwrap();
+    assert!(session.rotate_pages(vec![0], true));
+    let saved = dir.join("saved.pdf");
+    std::fs::create_dir_all(&dir).unwrap();
+    let fd = std::fs::File::create(&saved).unwrap().into_raw_fd();
+    session.save_to_fd(fd, false).unwrap();
+    session.written_is_saved();
+    assert!(session.delete_pages(vec![1]));
+    assert!(session.keep_draft(&store, "saved".into()).unwrap());
+
+    // The draft counts from the file before saving, which it keeps.
+    let base = store.base("saved".into()).unwrap().unwrap();
+    assert_eq!(&*base.0, &*book_pdf());
+    let again = open(base);
+    assert!(again.restore_draft(&store, "saved".into()).unwrap());
+    assert_eq!(again.page_count(), 3);
+    let first = again.page_sizes()[0];
+    assert_eq!((first.width, first.height), (300.0, 200.0), "turned once");
+    // Kept again, it still does.
+    assert!(again.keep_draft(&store, "saved".into()).unwrap());
+    assert!(store.base("saved".into()).unwrap().is_some());
+
+    // The file as saved is another file to it.
+    let fd = std::fs::File::open(&saved).unwrap().into_raw_fd();
+    let as_saved = open(PdfFile::from_fd(fd).unwrap());
+    assert!(as_saved.restore_draft(&store, "saved".into()).is_err());
+    assert!(store.base("saved".into()).unwrap().is_none());
+    std::fs::remove_dir_all(dir).unwrap();
+}
+
+#[test]
 fn trimming_margins() {
     let (tx, _rx) = mpsc::channel();
     let listener = Arc::new(Listener(Mutex::new(tx)));

@@ -702,7 +702,12 @@ impl Viewer {
     ///
     /// While swiping, only the current page is zoomed: its neighbors stay fitted, turning the page
     /// returns to the fitted view, and a page can't be made smaller than fitting the viewport.
+    ///
+    /// A zoom that isn't a positive number, such as from a pinch of no distance, is ignored.
     pub fn set_zoom(&mut self, zoom: f64, anchor: ViewPoint) {
+        if !(zoom.is_finite() && zoom > 0.0) {
+            return;
+        }
         let a = self.anchor_at(anchor);
         self.zoom_mode = ZoomMode::Fixed;
         if self.is_strip() {
@@ -931,6 +936,9 @@ impl Viewer {
     /// While swiping, this can slide to the neighboring spreads. Call
     /// [`snap_delta`](Self::snap_delta) when the drag ends.
     pub fn scroll_by(&mut self, delta: ViewVector) {
+        if !(delta.x.is_finite() && delta.y.is_finite()) {
+            return;
+        }
         self.scroll += LayoutVector::new(delta.x, delta.y);
         self.clamp_scroll();
         self.adopt_slot();
@@ -939,6 +947,9 @@ impl Viewer {
     /// Like [`scroll_by`](Self::scroll_by), but while swiping it stops at the edges of the current
     /// spread: for flings, which shouldn't turn pages.
     pub fn scroll_in_page_by(&mut self, delta: ViewVector) {
+        if !(delta.x.is_finite() && delta.y.is_finite()) {
+            return;
+        }
         self.scroll += LayoutVector::new(delta.x, delta.y);
         self.clamp_scroll();
         self.confine_to_current();
@@ -1311,7 +1322,8 @@ impl Viewer {
                 zoom = zoom.min((self.viewport.height - 2.0 * m) / h);
             }
         }
-        zoom.is_finite().then_some(zoom)
+        // Nothing fits a viewport smaller than its margins.
+        (zoom.is_finite() && zoom > 0.0).then_some(zoom)
     }
 
     /// Whether the spreads are laid out side by side for swiping.

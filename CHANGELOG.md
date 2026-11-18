@@ -5,6 +5,15 @@ share one version. A release's section is its notes on GitHub.
 
 ## Unreleased
 
+### Android
+
+- Edits made after Save, and kept while Android ended the app, come back as
+  they were. The edits from before saving appear once, not twice.
+- A document that couldn't be saved where you chose, and is shown from the
+  app's own copy instead, can be saved again without being emptied.
+- Going back while a large document opens leaves it on the start screen, and
+  the documents listed there can all be opened.
+
 ## 0.2 (2026-11-18)
 
 ### Both apps
