@@ -4,6 +4,12 @@ How Specto is put together. What each crate does, and how they depend on each
 other, is in [crates/README.md](../crates/README.md). Everything here describes
 what exists, except the last section, which lists what is planned.
 
+![How a PDF file flows through the shared crates to the two apps and to the
+saved file](core.drawio.svg)
+
+The diagrams in this document are draw.io files, which draw.io opens for
+editing.
+
 ## Guiding principles
 
 1. **All logic lives in Rust, and the frontends are thin.** Anything other than
@@ -411,6 +417,9 @@ The desktop app uses GTK 4 and libadwaita through gtk4-rs. It targets Linux
 first and also runs on macOS with Homebrew's GTK. It uses the shared crates
 directly.
 
+![The parts of the desktop app on the main thread, the session and scheduler
+they share, and the background threads](desktop.drawio.svg)
+
 The page view is a custom scrollable widget that draws each frame's tiles as
 textures. The rest of the window uses stock widgets: a split view with a list
 of thumbnails and a tree for the outline, the file dialog, and the zoom gesture
@@ -423,6 +432,9 @@ within it, and PDFs can be dropped on it to insert them.
 ### Android
 
 The Android app is written in Kotlin with Jetpack Compose.
+
+![The Kotlin side of the Android app, its two paths into the native library,
+and the threads there](android.drawio.svg)
 
 - The FFI crate exposes a coarse API through UniFFI, over the same session as
   on the desktop. It avoids chatty calls across the boundary.
