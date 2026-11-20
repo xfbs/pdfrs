@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: specto\n"
 "Report-Msgid-Bugs-To: https://github.com/xfbs/specto/issues\n"
-"PO-Revision-Date: 2026-11-17 23:16\n"
+"PO-Revision-Date: 2026-11-20 22:35\n"
 "Last-Translator: \n"
 "Language-Team: Estonian\n"
 "Language: et_EE\n"
@@ -22,1047 +22,1048 @@ msgstr ""
 #, rust-format
 msgid "Specto is licensed under either of the {apache} or the {mit}, at your option.\n\n"
 "It comes with no warranty of any kind."
-msgstr ""
+msgstr "Sinu valikul on Specto litsentseerimiseks kasutusel kas „{apache}“ või „{mit}“.\n\n"
+"Selle rakendusega ei kaasne mitte mingisugust garantiid."
 
 #: src/main.rs:163
 msgid "The Specto contributors"
-msgstr ""
+msgstr "Specto kaasautorid"
 
 #: src/main.rs:164
 msgid "© 2026 The Specto contributors"
-msgstr ""
+msgstr "© 2026 Specto kaasautorid"
 
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:173
 msgid "hayro (rendering)"
-msgstr ""
+msgstr "hayro (renderdamine)"
 
 #. Translators: what the library is used for stays in brackets.
 #: src/main.rs:175
 msgid "lopdf (saving)"
-msgstr ""
+msgstr "lopdf (salvestamine)"
 
 #: src/main.rs:177
 msgid "Built with"
-msgstr ""
+msgstr "Loomiseks oli kasutusel"
 
 #: src/main.rs:207
 #, rust-format
 msgid "Quit {app}"
-msgstr ""
+msgstr "Sulge {app}"
 
 #: src/main.rs:208 src/window.rs:251
 #, rust-format
 msgid "About {app}"
-msgstr ""
+msgstr "Rakenduse teave: {app}"
 
 #: src/main.rs:225 src/window.rs:152
 msgid "Open…"
-msgstr ""
+msgstr "Ava…"
 
 #: src/main.rs:227 src/window.rs:213
 msgid "Save"
-msgstr ""
+msgstr "Salvesta"
 
 #: src/main.rs:228 src/window.rs:214
 msgid "Save As…"
-msgstr ""
+msgstr "Salvesta kui…"
 
 #: src/main.rs:229 src/window.rs:216
 msgid "Export Selected Pages…"
-msgstr ""
+msgstr "Ekspordi valitud lehed…"
 
 #: src/main.rs:232 src/window.rs:219
 msgid "Print…"
-msgstr ""
+msgstr "Prindi…"
 
 #: src/main.rs:233 src/properties.rs:201 src/window.rs:220
 msgid "Properties"
-msgstr ""
+msgstr "Omadused"
 
 #: src/main.rs:235
 msgid "Close Window"
-msgstr ""
+msgstr "Sulge aken"
 
 #: src/main.rs:240 src/window/actions.rs:93
 msgid "Undo"
-msgstr ""
+msgstr "Pööra tegevus tagasi"
 
 #: src/main.rs:241 src/window/actions.rs:97
 msgid "Redo"
-msgstr ""
+msgstr "Korda tegevust"
 
 #: src/main.rs:244
 msgid "Copy"
-msgstr ""
+msgstr "Kopeeri"
 
 #: src/main.rs:245
 msgid "Select All"
-msgstr ""
+msgstr "Vali kõik"
 
 #: src/main.rs:248 src/window.rs:234
 msgid "Insert Pages from File…"
-msgstr ""
+msgstr "Lisa lehed failist…"
 
 #: src/main.rs:249 src/window.rs:228
 msgid "Delete Pages"
-msgstr ""
+msgstr "Kustuta lehed"
 
 #: src/main.rs:252
 msgid "Find…"
-msgstr ""
+msgstr "Otsi…"
 
 #: src/main.rs:253
 msgid "Find Next"
-msgstr ""
+msgstr "Leia järgmine"
 
 #: src/main.rs:254
 msgid "Find Previous"
-msgstr ""
+msgstr "Leia eelmine"
 
 #: src/main.rs:259 src/window.rs:267
 msgid "Single Page"
-msgstr ""
+msgstr "Üks leht"
 
 #: src/main.rs:260 src/window.rs:268
 msgid "Continuous"
-msgstr ""
+msgstr "Pidev"
 
 #: src/main.rs:261 src/window.rs:269
 msgid "Two Pages"
-msgstr ""
+msgstr "Kaks lehte"
 
 #: src/main.rs:263 src/window.rs:270
 msgid "Two Pages, Continuous"
-msgstr ""
+msgstr "Kaks lehte, pidev"
 
 #: src/main.rs:268 src/window.rs:278
 msgid "Show Cover Page Alone"
-msgstr ""
+msgstr "Näita vaid kaanepilti"
 
 #: src/main.rs:269 src/window.rs:281
 msgid "Trim Margins"
-msgstr ""
+msgstr "Kärbi veerised"
 
 #: src/main.rs:272 src/window.rs:296
 msgid "Actual Size"
-msgstr ""
+msgstr "Tegelik suurus"
 
 #: src/main.rs:273 src/window.rs:294
 msgid "Fit Width"
-msgstr ""
+msgstr "Sobita laiusele"
 
 #: src/main.rs:274 src/window.rs:295
 msgid "Fit Page"
-msgstr ""
+msgstr "Sobita lehele"
 
 #: src/main.rs:275 src/window.rs:301
 msgid "Zoom In"
-msgstr ""
+msgstr "Suumi sisse"
 
 #: src/main.rs:276 src/window.rs:302
 msgid "Zoom Out"
-msgstr ""
+msgstr "Suumi välja"
 
 #: src/main.rs:279
 msgid "Show Sidebar"
-msgstr ""
+msgstr "Näita külgriba"
 
 #: src/main.rs:280 src/window.rs:764
 msgid "Thumbnails"
-msgstr ""
+msgstr "Pisipildid"
 
 #: src/main.rs:281 src/window.rs:789
 msgid "Contents"
-msgstr ""
+msgstr "Sisu"
 
 #: src/main.rs:282 src/window.rs:805 src/window/markup.rs:200
 msgid "Markup"
-msgstr ""
+msgstr "Märgistus"
 
 #: src/main.rs:287
 msgid "Previous Page"
-msgstr ""
+msgstr "Eelmine leht"
 
 #: src/main.rs:288
 msgid "Next Page"
-msgstr ""
+msgstr "Järgmine leht"
 
 #: src/main.rs:291
 msgid "First Page"
-msgstr ""
+msgstr "Esimene leht"
 
 #: src/main.rs:292
 msgid "Last Page"
-msgstr ""
+msgstr "Viimane leht"
 
 #: src/main.rs:294
 msgid "Go to Page…"
-msgstr ""
+msgstr "Ava leht…"
 
 #: src/main.rs:296
 msgid "Back"
-msgstr ""
+msgstr "Tagasi"
 
 #: src/main.rs:297
 msgid "Forward"
-msgstr ""
+msgstr "Edasi"
 
 #: src/main.rs:303 src/window.rs:226
 msgid "Rotate Left"
-msgstr ""
+msgstr "Pööra vasakule"
 
 #: src/main.rs:304 src/window.rs:227
 msgid "Rotate Right"
-msgstr ""
+msgstr "Pööra paremale"
 
 #: src/main.rs:307
 msgid "Show Markup Toolbar"
-msgstr ""
+msgstr "Näita märgistuse tööriistariba"
 
 #: src/main.rs:308 src/markup_list.rs:43 src/window/markup.rs:27
 msgid "Highlight"
-msgstr ""
+msgstr "Tõsta esile"
 
 #: src/main.rs:309 src/markup_list.rs:44 src/window/markup.rs:28
 msgid "Underline"
-msgstr ""
+msgstr "Jooni alla"
 
 #: src/main.rs:310 src/markup_list.rs:45 src/window/markup.rs:29
 msgid "Strikethrough"
-msgstr ""
+msgstr "Kriipsuta läbi"
 
 #: src/main.rs:313 src/window.rs:242
 msgid "Highlight Form Fields"
-msgstr ""
+msgstr "Tõsta vormi väljad esile"
 
 #: src/main.rs:314 src/window.rs:245
 msgid "Reset Form"
-msgstr ""
+msgstr "Lähtesta vorm"
 
 #: src/main.rs:319
 msgid "File"
-msgstr ""
+msgstr "Fail"
 
 #: src/main.rs:320
 msgid "Edit"
-msgstr ""
+msgstr "Muuda"
 
 #: src/main.rs:321
 msgid "View"
-msgstr ""
+msgstr "Vaata"
 
 #: src/main.rs:322
 msgid "Go"
-msgstr ""
+msgstr "Mine"
 
 #: src/main.rs:323
 msgid "Tools"
-msgstr ""
+msgstr "Tarvikud"
 
 #: src/main.rs:325
 msgid "Help"
-msgstr ""
+msgstr "Abiteave"
 
 #: src/markup_list.rs:47
 msgid "Drawing"
-msgstr ""
+msgstr "Joonistus"
 
 #: src/markup_list.rs:48
 msgid "Rectangle"
-msgstr ""
+msgstr "Ristkülik"
 
 #: src/markup_list.rs:49
 msgid "Ellipse"
-msgstr ""
+msgstr "Ellips"
 
 #: src/markup_list.rs:50
 msgid "Line"
-msgstr ""
+msgstr "Joon"
 
 #: src/markup_list.rs:51 src/markup_list.rs:56
 msgid "Note"
-msgstr ""
+msgstr "Märkus"
 
 #: src/markup_list.rs:52 src/markup_list.rs:57
 msgid "Text"
-msgstr ""
+msgstr "Tekst"
 
 #: src/markup_list.rs:53 src/markup_list.rs:58
 msgid "Stamp"
-msgstr ""
+msgstr "Tempel"
 
 #: src/markup_list.rs:59
 msgid "Shape"
-msgstr ""
+msgstr "Kujund"
 
 #: src/markup_list.rs:60
 msgid "Attachment"
-msgstr ""
+msgstr "Kaasatud fail"
 
 #: src/markup_list.rs:96
 msgid "No Markup"
-msgstr ""
+msgstr "Märgistust pole"
 
 #: src/markup_list.rs:97
 msgid "Highlights, drawings and notes are listed here"
-msgstr ""
+msgstr "Esiletõstmised, joonistused ja märkmed on kirjas siin"
 
 #: src/print.rs:135
 msgid "printing failed"
-msgstr ""
+msgstr "printimine ei õnnestunud"
 
 #: src/print.rs:267
 msgid "couldn't open the file"
-msgstr ""
+msgstr "selle faili avamine ei õnnestunud"
 
 #: src/properties.rs:36
 msgid "File Name"
-msgstr ""
+msgstr "Failinimi"
 
 #: src/properties.rs:37
 msgid "Folder"
-msgstr ""
+msgstr "Kaust"
 
 #: src/properties.rs:38
 msgid "Title"
-msgstr ""
+msgstr "Pealkiri"
 
 #: src/properties.rs:39
 msgid "Author"
-msgstr ""
+msgstr "Autor"
 
 #: src/properties.rs:40
 msgid "Subject"
-msgstr ""
+msgstr "Teema"
 
 #: src/properties.rs:41
 msgid "Keywords"
-msgstr ""
+msgstr "Märksõnad"
 
 #. Translators: the program a document was written in.
 #: src/properties.rs:43
 msgid "Created With"
-msgstr ""
+msgstr "Loomiseks oli kasutusel"
 
 #. Translators: the program that turned a document into a PDF.
 #: src/properties.rs:45
 msgid "PDF Producer"
-msgstr ""
+msgstr "PDF-faili loomisel oli kasutusel"
 
 #: src/properties.rs:46
 msgid "Created"
-msgstr ""
+msgstr "Loodud"
 
 #: src/properties.rs:47
 msgid "Modified"
-msgstr ""
+msgstr "Muudetud"
 
 #: src/properties.rs:48
 msgid "Pages"
-msgstr ""
+msgstr "Lehed"
 
 #: src/properties.rs:49
 msgid "Page Size"
-msgstr ""
+msgstr "Lehe suurus"
 
 #: src/properties.rs:51
 msgid "File Size"
-msgstr ""
+msgstr "Faili suurus"
 
 #: src/properties.rs:54
 msgid "PDF Version"
-msgstr ""
+msgstr "PDF-vormingu versioon"
 
 #: src/properties.rs:56
 msgid "Protection"
-msgstr ""
+msgstr "Kaitse"
 
 #: src/properties.rs:58
 msgid "Password to open"
-msgstr ""
+msgstr "Avamiseks vajalik salasõna"
 
 #: src/properties.rs:59
 msgid "Encrypted, opens without a password"
-msgstr ""
+msgstr "Krüptitud, avaneb ilma salasõnata"
 
 #: src/properties.rs:60
 msgid "None"
-msgstr ""
+msgstr "Puudub"
 
 #: src/properties.rs:65
 msgid "Not Allowed"
-msgstr ""
+msgstr "Pole lubatud"
 
 #: src/properties.rs:73
 msgid "Printing"
-msgstr ""
+msgstr "Prindin"
 
 #: src/properties.rs:74
 msgid "Copying text and pictures"
-msgstr ""
+msgstr "Kopeerin teksti ja pilti"
 
 #: src/properties.rs:75
 msgid "Changing the pages"
-msgstr ""
+msgstr "Muudan lehti"
 
 #: src/properties.rs:78
 msgid "Marking up and filling in forms"
-msgstr ""
+msgstr "Märgistan sisu ja täidan vorme"
 
 #. Translators: a page size in inches, "8.5 × 11 in".
 #: src/properties.rs:140
 #, rust-format
 msgid "{width} × {height} in"
-msgstr ""
+msgstr "{width} × {height} tolli"
 
 #. Translators: a page size in millimeters, "210 × 297 mm".
 #: src/properties.rs:147
 #, rust-format
 msgid "{width} × {height} mm"
-msgstr ""
+msgstr "{width} × {height} mm"
 
 #. Translators: a page size and the name of the paper, "297 × 210 mm (A4,
 #. landscape)".
 #: src/properties.rs:158
 #, rust-format
 msgid "{size} ({paper}, landscape)"
-msgstr ""
+msgstr "{size} ({paper}, rõhtvaates)"
 
 #. Translators: a page size and the name of the paper, "210 × 297 mm (A4)".
 #: src/properties.rs:163
 #, rust-format
 msgid "{size} ({paper})"
-msgstr ""
+msgstr "{size} ({paper})"
 
 #. Translators: {size} is the size of the first page, "210 × 297 mm (A4)".
 #: src/properties.rs:179
 #, rust-format
 msgid "{size}, other pages differ"
-msgstr ""
+msgstr "{size}; muud lehed erinevad"
 
 #: src/signatures.rs:344
 msgid "Clear"
-msgstr ""
+msgstr "Tühjenda"
 
 #: src/signatures.rs:356
 msgid "Sign with the mouse or the touchpad"
-msgstr ""
+msgstr "Allkirja saad tekitada hiire või puuteplaadiga"
 
 #: src/signatures.rs:364
 msgid "Draw"
-msgstr ""
+msgstr "Joonista"
 
 #: src/signatures.rs:381
 msgid "Sign on white paper, take a picture of it, and choose that picture. The paper is taken away, and the ink stays."
-msgstr ""
+msgstr "Kirjuta allkiri valgele paberile, pildista seda ja lisa see pilt siia. Paberi osa eraldame siin välja ja tint jääb alles."
 
 #: src/signatures.rs:388
 msgid "Choose Picture…"
-msgstr ""
+msgstr "Vali pilt…"
 
 #: src/signatures.rs:395
 msgid "To the left, faint strokes are kept, and more of the paper's shadows. To the right, only what is dark."
-msgstr ""
+msgstr "Vasakul säilivad nõrgad jooned ja rohkem paberi varje. Paremal on alles ainult tumedad osad."
 
 #: src/signatures.rs:398
 msgid "Ink as in the picture"
-msgstr ""
+msgstr "Selline tint, nagu pildil on"
 
 #: src/signatures.rs:399
 msgid "Black ink"
-msgstr ""
+msgstr "Must tint"
 
 #: src/signatures.rs:400
 msgid "Blue ink"
-msgstr ""
+msgstr "Sinine tint"
 
 #: src/signatures.rs:403
 msgid "Faint"
-msgstr ""
+msgstr "Ähmane"
 
 #: src/signatures.rs:405
 msgid "Dark"
-msgstr ""
+msgstr "Tume"
 
 #: src/signatures.rs:416
 msgid "From a Picture"
-msgstr ""
+msgstr "Pildist"
 
 #: src/signatures.rs:439
 msgid "Move the slider until the paper is gone and the strokes are whole."
-msgstr ""
+msgstr "Liiguta liugurnuppu seni, kuni paberit pole näha ja allkirja jooned on terviklikud."
 
 #: src/signatures.rs:441
 msgid "No ink found in this picture. Move the slider to the left."
-msgstr ""
+msgstr "Sellelt pildilt ei leidu tinti. Liiguta liugurnuppu vasakule."
 
 #: src/signatures.rs:458
 msgid "Pictures"
-msgstr ""
+msgstr "Pildid"
 
 #: src/signatures.rs:463
 msgid "Choose a Picture of a Signature"
-msgstr ""
+msgstr "Vali pilt allkirjaga"
 
 #: src/signatures.rs:480 src/window/files.rs:422 src/window/files.rs:527
 #: src/window/files.rs:756
 msgid "_Cancel"
-msgstr ""
+msgstr "_Katkesta"
 
 #: src/signatures.rs:482 src/window/files.rs:758
 msgid "_Save"
-msgstr ""
+msgstr "_Salvesta"
 
 #: src/signatures.rs:510
 msgid "New Signature"
-msgstr ""
+msgstr "Uus allkiri"
 
 #: src/window.rs:148
 msgid "Open a PDF"
-msgstr ""
+msgstr "Ava PDF-fail"
 
 #: src/window.rs:149
 msgid "Drop a file here or choose one"
-msgstr ""
+msgstr "Lohista siia fail või vali mõni"
 
 #: src/window.rs:162
 msgid "Recent"
-msgstr ""
+msgstr "Hiljutised"
 
 #: src/window.rs:188
 msgid "Thumbnails (F9)"
-msgstr ""
+msgstr "Pisipildid (F9)"
 
 #: src/window.rs:200
 #, rust-format
 msgid "Open ({shortcut})"
-msgstr ""
+msgstr "Ava ({shortcut})"
 
 #: src/window.rs:258
 msgid "Main Menu"
-msgstr ""
+msgstr "Põhimenüü"
 
 #: src/window.rs:286
 msgid "Page Layout"
-msgstr ""
+msgstr "Lehe paigutus"
 
 #: src/window.rs:307
 msgid "Zoom"
-msgstr ""
+msgstr "Suumi"
 
 #: src/window.rs:318
 #, rust-format
 msgid "Go to Page ({shortcut})"
-msgstr ""
+msgstr "Ava leht ({shortcut})"
 
 #: src/window.rs:331
 msgid "Search"
-msgstr ""
+msgstr "Otsi"
 
 #: src/window.rs:343
 msgid "Previous Match (Shift+Enter)"
-msgstr ""
+msgstr "Eelmine vaste (Shift+Enter)"
 
 #: src/window.rs:350
 msgid "Next Match (Enter)"
-msgstr ""
+msgstr "Järgmine vaste (Enter)"
 
 #: src/window.rs:372
 #, rust-format
 msgid "Search ({shortcut})"
-msgstr ""
+msgstr "Otsi ({shortcut})"
 
 #: src/window.rs:910
 #, rust-format
 msgid "Links of this kind aren't opened: {address}"
-msgstr ""
+msgstr "Sellist tüüpi linke ei saa avada: {address}"
 
 #: src/window.rs:919
 #, rust-format
 msgid "Couldn't open link: {error}"
-msgstr ""
+msgstr "Lingi avamine ei õnnestunud: {error}"
 
 #. Translators: a keyboard shortcut as tooltips show it, the
 #. Control key with another.
 #: src/window.rs:970
 #, rust-format
 msgid "Ctrl+{key}"
-msgstr ""
+msgstr "Ctrl+{key}"
 
 #: src/window/actions.rs:103
 #, rust-format
 msgid "{n} page — Edited"
 msgid_plural "{n} pages — Edited"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Muudetud: {n} leht"
+msgstr[1] "Muudetud: {n} lehte"
 
 #: src/window/actions.rs:105 src/window/pages.rs:133
 #, rust-format
 msgid "{n} page"
 msgid_plural "{n} pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{n} leht"
+msgstr[1] "{n} lehte"
 
 #. Translators: follows the box with the page number: "3 of 120".
 #: src/window/actions.rs:111
 #, rust-format
 msgid "of {pages}"
-msgstr ""
+msgstr "/ {pages}"
 
 #. Translators: follows the box with a printed page number:
 #. "iv (4 of 120)".
 #: src/window/actions.rs:535
 #, rust-format
 msgid "({position} of {pages})"
-msgstr ""
+msgstr "({position}/{pages})"
 
 #: src/window/files.rs:8
 #, rust-format
 msgid "Couldn't read “{name}”: {error}"
-msgstr ""
+msgstr "„{name}“ faili lugemine ei õnnestunud: {error}"
 
 #: src/window/files.rs:15
 #, rust-format
 msgid "Couldn't save “{name}”: {error}"
-msgstr ""
+msgstr "„{name}“ faili salvestamine ei õnnestunud: {error}"
 
 #: src/window/files.rs:23
 msgid "PDF documents"
-msgstr ""
+msgstr "PDF-dokumendid"
 
 #: src/window/files.rs:54
 msgid "reading failed"
-msgstr ""
+msgstr "lugemine ei õnnestunud"
 
 #: src/window/files.rs:98 src/window/files.rs:102
 msgid "saving failed"
-msgstr ""
+msgstr "salvestamine ei õnnestunud"
 
 #: src/window/files.rs:175
 msgid "the document's password is needed"
-msgstr ""
+msgstr "vaja on dokumendi salasõna"
 
 #: src/window/files.rs:177
 #, rust-format
 msgid "{app} can't save this document correctly yet"
-msgstr ""
+msgstr "{app} ei oska seda dokumenti veel korrektselt salvestada"
 
 #: src/window/files.rs:249 src/window/pages.rs:423
 #, rust-format
 msgid "Couldn't open “{name}”: {error}"
-msgstr ""
+msgstr "„{name}“ faili avamine ei õnnestunud: {error}"
 
 #: src/window/files.rs:323
 #, rust-format
 msgid "“{name}” was moved or deleted. Saving writes it again."
-msgstr ""
+msgstr "„{name}“ fail on teisaldatud või kustutatud. Salvestades tekib ta uuesti andmekandjale."
 
 #: src/window/files.rs:332
 #, rust-format
 msgid "“{name}” was changed by another program. Reloading discards your edits."
-msgstr ""
+msgstr "Teine programm on muutnud „{name}“ faili. Uuesti laadimisel lähevad sinu muudatused kaotsi."
 
 #: src/window/files.rs:335
 msgid "_Reload"
-msgstr ""
+msgstr "_Laadi uuesti"
 
 #: src/window/files.rs:415
 msgid "File Changed on Disk"
-msgstr ""
+msgstr "Fail on andmekandjal muutunud"
 
 #: src/window/files.rs:417
 #, rust-format
 msgid "“{name}” was changed by another program after it was opened. Saving replaces those changes with this document."
-msgstr ""
+msgstr "Teine programm on pärast avamist muutnud „{name}“ faili. Salvestamisel asenduvad need muutused selles failis leiduvatega."
 
 #: src/window/files.rs:423
 msgid "_Save Anyway"
-msgstr ""
+msgstr "_Salvesta ikkagi"
 
 #: src/window/files.rs:519
 #, rust-format
 msgid "The password was incorrect. Enter the password for “{name}”."
-msgstr ""
+msgstr "Salasõna polnud õige. Palun sisesta „{name}“ faili salasõna."
 
 #: src/window/files.rs:523
 #, rust-format
 msgid "“{name}” is protected with a password."
-msgstr ""
+msgstr "„{name}“ fail on kaitstud salasõnaga."
 
 #: src/window/files.rs:525
 msgid "Password Required"
-msgstr ""
+msgstr "Salasõna on vajalik"
 
 #: src/window/files.rs:528
 msgid "_Unlock"
-msgstr ""
+msgstr "Ava l_ukustus"
 
 #: src/window/files.rs:616
 #, rust-format
 msgid "Couldn't print: {error}"
-msgstr ""
+msgstr "Printimine ei õnnestunud: {error}"
 
 #: src/window/files.rs:661
 msgid "Save As"
-msgstr ""
+msgstr "Salvesta kui"
 
 #: src/window/files.rs:749
 msgid "Save Changes?"
-msgstr ""
+msgstr "Kas soovid muudatused salvestada?"
 
 #: src/window/files.rs:751
 #, rust-format
 msgid "“{name}” has unsaved changes. Changes that aren't saved will be lost."
-msgstr ""
+msgstr "Failis „{name}“ on salvestamata muudatusi, mis lähevad kaotsi."
 
 #: src/window/files.rs:757
 msgid "_Discard"
-msgstr ""
+msgstr "_Loobu"
 
 #: src/window/files.rs:779
 msgid "Open PDF"
-msgstr ""
+msgstr "Ava PDF-fail"
 
 #: src/window/markup.rs:36
 #, rust-format
 msgid "{tool}: marks the selected text, and what is selected from now on ({shortcut} marks once)"
-msgstr ""
+msgstr "{tool}: märgistab juba valitud teksti või selle, mille sa järgnevalt valid ({shortcut} märgistab ühe korra)"
 
 #: src/window/markup.rs:50
 msgid "Draw freehand"
-msgstr ""
+msgstr "Joonista vaba käega"
 
 #: src/window/markup.rs:51
 msgid "Draw rectangles"
-msgstr ""
+msgstr "Joonista ristkülikuid"
 
 #: src/window/markup.rs:52
 msgid "Draw ellipses"
-msgstr ""
+msgstr "Joonista ellipseid"
 
 #: src/window/markup.rs:53
 msgid "Draw lines"
-msgstr ""
+msgstr "Tõmba jooni"
 
 #: src/window/markup.rs:54
 msgid "Add text: click where it goes"
-msgstr ""
+msgstr "Lisa tekst: kõpsa soovitud kohta"
 
 #: src/window/markup.rs:55
 msgid "Add notes: click where one goes"
-msgstr ""
+msgstr "Lisa märkus: kõpsa soovitud kohta"
 
 #: src/window/markup.rs:98
 msgid "Color"
-msgstr ""
+msgstr "Värv"
 
 #: src/window/markup.rs:113
 msgid "Signature"
-msgstr ""
+msgstr "Allkiri"
 
 #: src/window/markup.rs:121
 msgid "Sans-serif"
-msgstr ""
+msgstr "Seriifideta kiri"
 
 #: src/window/markup.rs:122
 msgid "Serif"
-msgstr ""
+msgstr "Seriifidega kiri"
 
 #: src/window/markup.rs:123
 msgid "Monospace"
-msgstr ""
+msgstr "Püsisammkiri"
 
 #: src/window/markup.rs:149
 msgid "Font"
-msgstr ""
+msgstr "Kirjatüüp"
 
 #: src/window/markup.rs:153
 msgid "Bold"
-msgstr ""
+msgstr "Paks kiri"
 
 #: src/window/markup.rs:157
 msgid "Italic"
-msgstr ""
+msgstr "Kaldkiri"
 
 #: src/window/markup.rs:167
 msgid "Text size in points"
-msgstr ""
+msgstr "Teksti suurus punktides"
 
 #: src/window/markup.rs:228
 msgid "Yellow"
-msgstr ""
+msgstr "Kollane"
 
 #: src/window/markup.rs:229
 msgid "Green"
-msgstr ""
+msgstr "Roheline"
 
 #: src/window/markup.rs:230
 msgid "Blue"
-msgstr ""
+msgstr "Sinine"
 
 #: src/window/markup.rs:231
 msgid "Pink"
-msgstr ""
+msgstr "Roosa"
 
 #: src/window/markup.rs:232
 msgid "Purple"
-msgstr ""
+msgstr "Purpurpunane"
 
 #: src/window/markup.rs:233
 msgid "Red"
-msgstr ""
+msgstr "Punane"
 
 #: src/window/markup.rs:234
 msgid "Black"
-msgstr ""
+msgstr "Must"
 
 #: src/window/markup.rs:556
 msgid "Select the text to mark first"
-msgstr ""
+msgstr "Esmalt vali tekst, mida tahad märgistada"
 
 #: src/window/markup.rs:602
 msgid "Place this signature: click where it goes"
-msgstr ""
+msgstr "Leia koht allkirja jaoks: klõpsa, kuhu tahad ta lisada"
 
 #: src/window/markup.rs:614
 msgid "Delete this signature"
-msgstr ""
+msgstr "Kustuta see allkiri"
 
 #: src/window/markup.rs:630
 msgid "New Signature…"
-msgstr ""
+msgstr "Uus allkiri…"
 
 #: src/window/markup.rs:659
 msgid "Click where the signature goes"
-msgstr ""
+msgstr "Klõpsa, kuhu tahad allkirja lisada"
 
 #: src/window/markup.rs:1544 src/window/markup.rs:1571
 #: src/window/markup.rs:1664 src/window/markup.rs:1717
 #, rust-format
 msgid "Couldn't change the annotation: {error}"
-msgstr ""
+msgstr "Märke muutmine ei õnnestunud: {error}"
 
 #: src/window/pages.rs:27
 #, rust-format
 msgid "Undo Rotate Page"
 msgid_plural "Undo Rotate {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Võta lehe pööramine tagasi"
+msgstr[1] "Võta {n} lehe pööramine tagasi"
 
 #: src/window/pages.rs:30
 #, rust-format
 msgid "Undo Delete Page"
 msgid_plural "Undo Delete {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Võta lehe kustutamine tagasi"
+msgstr[1] "Võta {n} lehe kustutamine tagasi"
 
 #: src/window/pages.rs:32
 #, rust-format
 msgid "Undo Move Page"
 msgid_plural "Undo Move {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Võta lehe teisaldamine tagasi"
+msgstr[1] "Võta {n} lehe teisaldamine tagasi"
 
 #: src/window/pages.rs:34
 #, rust-format
 msgid "Undo Insert Page"
 msgid_plural "Undo Insert {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Võta lehe lisamine tagasi"
+msgstr[1] "Võta {n} lehe lisamine tagasi"
 
 #: src/window/pages.rs:36
 msgid "Undo Highlight"
-msgstr ""
+msgstr "Võta esiletõstmine tagasi"
 
 #: src/window/pages.rs:37
 msgid "Undo Underline"
-msgstr ""
+msgstr "Võta allajoonimine tagasi"
 
 #: src/window/pages.rs:38
 msgid "Undo Strikethrough"
-msgstr ""
+msgstr "Võta läbikriipsutamine tagasi"
 
 #: src/window/pages.rs:39
 msgid "Undo Drawing"
-msgstr ""
+msgstr "Võta joonistamine tagasi"
 
 #: src/window/pages.rs:40
 msgid "Undo Rectangle"
-msgstr ""
+msgstr "Võta nelinurga joonistamine tagasi"
 
 #: src/window/pages.rs:41
 msgid "Undo Ellipse"
-msgstr ""
+msgstr "Võta ellipsi joonistamine tagasi"
 
 #: src/window/pages.rs:42
 msgid "Undo Line"
-msgstr ""
+msgstr "Võta joone tõmbamine tagasi"
 
 #: src/window/pages.rs:43
 msgid "Undo Note"
-msgstr ""
+msgstr "Võta märkuse lisamine tagasi"
 
 #: src/window/pages.rs:44
 msgid "Undo Text Box"
-msgstr ""
+msgstr "Võta tekstikasti lisamine tagasi"
 
 #: src/window/pages.rs:45
 msgid "Undo Add Annotation"
-msgstr ""
+msgstr "Võta märkme lisamine tagasi"
 
 #: src/window/pages.rs:46
 msgid "Undo Delete Annotation"
-msgstr ""
+msgstr "Võta märkme kustutamine tagasi"
 
 #: src/window/pages.rs:47
 msgid "Undo Change Annotation"
-msgstr ""
+msgstr "Võta märkme muutmine tagasi"
 
 #: src/window/pages.rs:48
 msgid "Undo Fill In Field"
-msgstr ""
+msgstr "Võta välja täitmine tagasi"
 
 #: src/window/pages.rs:49
 msgid "Undo Reset Form"
-msgstr ""
+msgstr "Võta vormi lähtestamine tagasi"
 
 #: src/window/pages.rs:57
 #, rust-format
 msgid "Redo Rotate Page"
 msgid_plural "Redo Rotate {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Korda lehe pööramist"
+msgstr[1] "Korda {n} lehe pööramist"
 
 #: src/window/pages.rs:60
 #, rust-format
 msgid "Redo Delete Page"
 msgid_plural "Redo Delete {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Korda lehe kustutamist"
+msgstr[1] "Korda {n} lehe kustutamist"
 
 #: src/window/pages.rs:62
 #, rust-format
 msgid "Redo Move Page"
 msgid_plural "Redo Move {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Korda lehe teisaldamist"
+msgstr[1] "Korda {n} lehe teisaldamist"
 
 #: src/window/pages.rs:64
 #, rust-format
 msgid "Redo Insert Page"
 msgid_plural "Redo Insert {n} Pages"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Korda lehe lisamist"
+msgstr[1] "Korda {n} lehe lisamist"
 
 #: src/window/pages.rs:66
 msgid "Redo Highlight"
-msgstr ""
+msgstr "Korda esiletõstmist"
 
 #: src/window/pages.rs:67
 msgid "Redo Underline"
-msgstr ""
+msgstr "Korda allajoonimist"
 
 #: src/window/pages.rs:68
 msgid "Redo Strikethrough"
-msgstr ""
+msgstr "Korda läbikriipsutamist"
 
 #: src/window/pages.rs:69
 msgid "Redo Drawing"
-msgstr ""
+msgstr "Korda joonistamist"
 
 #: src/window/pages.rs:70
 msgid "Redo Rectangle"
-msgstr ""
+msgstr "Korda nelinurga joonistamist"
 
 #: src/window/pages.rs:71
 msgid "Redo Ellipse"
-msgstr ""
+msgstr "Korda ellipsi joonistamist"
 
 #: src/window/pages.rs:72
 msgid "Redo Line"
-msgstr ""
+msgstr "Korda joone tõmbamist"
 
 #: src/window/pages.rs:73
 msgid "Redo Note"
-msgstr ""
+msgstr "Korda märkuse lisamist"
 
 #: src/window/pages.rs:74
 msgid "Redo Text Box"
-msgstr ""
+msgstr "Korda tekstikasti lisamist"
 
 #: src/window/pages.rs:75
 msgid "Redo Add Annotation"
-msgstr ""
+msgstr "Korda märkme lisamist"
 
 #: src/window/pages.rs:76
 msgid "Redo Delete Annotation"
-msgstr ""
+msgstr "Korda märkme kustutamist"
 
 #: src/window/pages.rs:77
 msgid "Redo Change Annotation"
-msgstr ""
+msgstr "Korda märkme muutmist"
 
 #: src/window/pages.rs:78
 msgid "Redo Fill In Field"
-msgstr ""
+msgstr "Korda välja täitmist"
 
 #: src/window/pages.rs:79
 msgid "Redo Reset Form"
-msgstr ""
+msgstr "Korda vormi lähtestamist"
 
 #: src/window/pages.rs:119
 #, rust-format
 msgid "page {page}"
-msgstr ""
+msgstr "{page}. leht"
 
 #: src/window/pages.rs:131
 #, rust-format
 msgid "pages {pages}"
-msgstr ""
+msgstr "{pages} lehte"
 
 #: src/window/pages.rs:199
 #, rust-format
 msgid "Couldn't delete the annotation: {error}"
-msgstr ""
+msgstr "Märke kustutamine ei õnnestunud: {error}"
 
 #: src/window/pages.rs:260
 #, rust-format
 msgid "Couldn't copy the pages: {error}"
-msgstr ""
+msgstr "Lehtede kopeerimine ei õnnestunud: {error}"
 
 #: src/window/pages.rs:332
 msgid "Insert Pages from File"
-msgstr ""
+msgstr "Lisa lehed failist"
 
 #: src/window/pages.rs:465
 msgid "Export Selected Pages"
-msgstr ""
+msgstr "Ekspordi valitud lehed"
 
 #: src/window/pages.rs:498
 #, rust-format
 msgid "Exported {n} page to “{name}”"
 msgid_plural "Exported {n} pages to “{name}”"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Eksportisin {n} lehe „{name}“ faili"
+msgstr[1] "Eksportisin {n} lehte „{name}“ faili"
 
 #: src/window/search.rs:187
 msgid "No matches"
-msgstr ""
+msgstr "Vasteid pole"
 
 #: src/window/search.rs:188
 msgid "Searching…"
-msgstr ""
+msgstr "Otsin…"
 
 #: src/window/search.rs:193
 #, rust-format
 msgid "{current} of {total}"
-msgstr ""
+msgstr "{current}/{total}"
 
 #. Translators: the search is still running, so there may be
 #. more matches than {total}.
 #: src/window/search.rs:197
 #, rust-format
 msgid "{current} of {total}…"
-msgstr ""
+msgstr "{current}/{total}…"
 
